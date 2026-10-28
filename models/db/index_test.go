@@ -9,8 +9,8 @@ import (
 	"fmt"
 	"testing"
 
-	"gitea.dev/models/db"
-	"gitea.dev/models/unittest"
+	"branchspire/models/db"
+	"branchspire/models/unittest"
 
 	"github.com/stretchr/testify/assert"
 )

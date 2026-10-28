@@ -9,8 +9,8 @@ import (
 	"errors"
 	"strings"
 
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/git/gitcmd"
+	"branchspire/modules/git"
+	"branchspire/modules/git/gitcmd"
 
 	"golang.org/x/sync/errgroup"
 )

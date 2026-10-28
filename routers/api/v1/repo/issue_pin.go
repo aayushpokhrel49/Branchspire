@@ -6,10 +6,10 @@ package repo
 import (
 	"net/http"
 
-	issues_model "gitea.dev/models/issues"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/services/context"
-	"gitea.dev/services/convert"
+	issues_model "branchspire/models/issues"
+	api "branchspire/modules/structs"
+	"branchspire/services/context"
+	"branchspire/services/convert"
 )
 
 // PinIssue pins a issue

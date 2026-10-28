@@ -11,21 +11,21 @@ import (
 	"sync/atomic"
 	"time"
 
-	db_model "gitea.dev/models/db"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/modules/graceful"
-	"gitea.dev/modules/indexer"
-	"gitea.dev/modules/indexer/issues/bleve"
-	"gitea.dev/modules/indexer/issues/db"
-	"gitea.dev/modules/indexer/issues/elasticsearch"
-	"gitea.dev/modules/indexer/issues/internal"
-	"gitea.dev/modules/indexer/issues/meilisearch"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/optional"
-	"gitea.dev/modules/process"
-	"gitea.dev/modules/queue"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/util"
+	db_model "branchspire/models/db"
+	repo_model "branchspire/models/repo"
+	"branchspire/modules/graceful"
+	"branchspire/modules/indexer"
+	"branchspire/modules/indexer/issues/bleve"
+	"branchspire/modules/indexer/issues/db"
+	"branchspire/modules/indexer/issues/elasticsearch"
+	"branchspire/modules/indexer/issues/internal"
+	"branchspire/modules/indexer/issues/meilisearch"
+	"branchspire/modules/log"
+	"branchspire/modules/optional"
+	"branchspire/modules/process"
+	"branchspire/modules/queue"
+	"branchspire/modules/setting"
+	"branchspire/modules/util"
 )
 
 // IndexerMetadata is used to send data to the queue, so it contains only the ids.
@@ -87,7 +87,7 @@ func InitIssueIndexer(syncReindex bool) {
 				if err := recover(); err != nil {
 					log.Error("PANIC whilst initializing issue indexer: %v\nStacktrace: %s", err, log.Stack(2))
 					log.Error("The indexer files are likely corrupted and may need to be deleted")
-					log.Error("You can completely remove the %q directory to make Gitea recreate the indexes", setting.Indexer.IssuePath)
+					log.Error("You can completely remove the %q directory to make BranchSpire recreate the indexes", setting.Indexer.IssuePath)
 					globalIndexer.Store(dummyIndexer)
 					log.Fatal("PID: %d Unable to initialize the Bleve Issue Indexer at path: %s Error: %v", os.Getpid(), setting.Indexer.IssuePath, err)
 				}

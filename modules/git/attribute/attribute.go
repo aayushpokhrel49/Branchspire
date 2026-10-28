@@ -6,7 +6,7 @@ package attribute
 import (
 	"strings"
 
-	"gitea.dev/modules/optional"
+	"branchspire/modules/optional"
 )
 
 type Attribute string

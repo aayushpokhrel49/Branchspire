@@ -6,16 +6,16 @@ package uinotification
 import (
 	"context"
 
-	activities_model "gitea.dev/models/activities"
-	"gitea.dev/models/db"
-	issues_model "gitea.dev/models/issues"
-	repo_model "gitea.dev/models/repo"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/container"
-	"gitea.dev/modules/graceful"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/queue"
-	notify_service "gitea.dev/services/notify"
+	activities_model "branchspire/models/activities"
+	"branchspire/models/db"
+	issues_model "branchspire/models/issues"
+	repo_model "branchspire/models/repo"
+	user_model "branchspire/models/user"
+	"branchspire/modules/container"
+	"branchspire/modules/graceful"
+	"branchspire/modules/log"
+	"branchspire/modules/queue"
+	notify_service "branchspire/services/notify"
 )
 
 type (

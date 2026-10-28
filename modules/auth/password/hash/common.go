@@ -6,8 +6,8 @@ package hash
 import (
 	"strconv"
 
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/util"
+	"branchspire/modules/log"
+	"branchspire/modules/util"
 )
 
 func parseIntParam(value, param, algorithmName, config string, previousErr error) (int, error) {

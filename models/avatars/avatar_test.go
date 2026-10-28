@@ -7,11 +7,11 @@ import (
 	"strconv"
 	"testing"
 
-	avatars_model "gitea.dev/models/avatars"
-	system_model "gitea.dev/models/system"
-	"gitea.dev/models/unittest"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/setting/config"
+	avatars_model "branchspire/models/avatars"
+	system_model "branchspire/models/system"
+	"branchspire/models/unittest"
+	"branchspire/modules/setting"
+	"branchspire/modules/setting/config"
 
 	"github.com/stretchr/testify/assert"
 )
@@ -22,7 +22,7 @@ func TestEmailAvatarLink(t *testing.T) {
 	setting.AppSubURL = "/testsuburl"
 	setting.GravatarSource = "https://secure.gravatar.com/avatar/"
 
-	assert.Equal(t, emailHash, avatars_model.HashEmail(" Gitea@Example.com "))
+	assert.Equal(t, emailHash, avatars_model.HashEmail(" BranchSpire@Example.com "))
 
 	setAvatarConfig := func(disableGravatar, enableFederatedAvatar bool) {
 		assert.NoError(t, system_model.SetSettings(t.Context(), map[string]string{

@@ -6,7 +6,7 @@ package v1_19
 import (
 	"context"
 
-	"gitea.dev/modelmigration/base"
+	"branchspire/modelmigration/base"
 )
 
 func AddIndexForHookTask(_ context.Context, x base.EngineMigration) error {

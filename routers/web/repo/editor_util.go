@@ -10,16 +10,16 @@ import (
 	"strconv"
 	"strings"
 
-	git_model "gitea.dev/models/git"
-	repo_model "gitea.dev/models/repo"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/markup"
-	repo_module "gitea.dev/modules/repository"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/util"
-	context_service "gitea.dev/services/context"
+	git_model "branchspire/models/git"
+	repo_model "branchspire/models/repo"
+	user_model "branchspire/models/user"
+	"branchspire/modules/git"
+	"branchspire/modules/log"
+	"branchspire/modules/markup"
+	repo_module "branchspire/modules/repository"
+	"branchspire/modules/setting"
+	"branchspire/modules/util"
+	context_service "branchspire/services/context"
 )
 
 // getUniquePatchBranchName Gets a unique branch name for a new patch branch

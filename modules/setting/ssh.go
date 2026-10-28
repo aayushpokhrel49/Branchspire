@@ -9,9 +9,9 @@ import (
 	"text/template"
 	"time"
 
-	"gitea.dev/modules/consts"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/util"
+	"branchspire/modules/consts"
+	"branchspire/modules/log"
+	"branchspire/modules/util"
 
 	gossh "golang.org/x/crypto/ssh"
 )
@@ -130,7 +130,7 @@ func loadSSHFrom(rootCfg ConfigProvider) {
 		SSH.StartBuiltinServer = false
 	}
 
-	SSH.TrustedUserCAKeysFile = sec.Key("SSH_TRUSTED_USER_CA_KEYS_FILENAME").MustString(filepath.Join(SSH.RootPath, "gitea-trusted-user-ca-keys.pem"))
+	SSH.TrustedUserCAKeysFile = sec.Key("SSH_TRUSTED_USER_CA_KEYS_FILENAME").MustString(filepath.Join(SSH.RootPath, "branchspire-trusted-user-ca-keys.pem"))
 
 	for _, caKey := range SSH.TrustedUserCAKeys {
 		pubKey, _, _, _, err := gossh.ParseAuthorizedKey([]byte(caKey))

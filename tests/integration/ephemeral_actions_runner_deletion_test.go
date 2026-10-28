@@ -6,13 +6,13 @@ package integration
 import (
 	"testing"
 
-	actions_model "gitea.dev/models/actions"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/util"
-	repo_service "gitea.dev/services/repository"
-	user_service "gitea.dev/services/user"
-	"gitea.dev/tests"
+	actions_model "branchspire/models/actions"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
+	"branchspire/modules/util"
+	repo_service "branchspire/services/repository"
+	user_service "branchspire/services/user"
+	"branchspire/tests"
 
 	"github.com/stretchr/testify/assert"
 )

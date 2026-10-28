@@ -1,7 +1,7 @@
 // Copyright 2023 The Gitea Authors. All rights reserved.
 // SPDX-License-Identifier: MIT
 
-// This artifact server is inspired by the Gitea runner artifact server implementation.
+// This artifact server is inspired by the BranchSpire runner artifact server implementation.
 // It updates url setting and uses ObjectStore to handle artifacts persistence.
 
 package actions
@@ -10,10 +10,10 @@ import (
 	"context"
 	"slices"
 
-	"gitea.dev/models/db"
-	"gitea.dev/modules/optional"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/timeutil"
+	"branchspire/models/db"
+	"branchspire/modules/optional"
+	"branchspire/modules/setting"
+	"branchspire/modules/timeutil"
 
 	"xorm.io/builder"
 )

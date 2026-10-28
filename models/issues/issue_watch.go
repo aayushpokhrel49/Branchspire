@@ -6,11 +6,11 @@ package issues
 import (
 	"context"
 
-	"gitea.dev/models/db"
-	repo_model "gitea.dev/models/repo"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/timeutil"
-	"gitea.dev/modules/util"
+	"branchspire/models/db"
+	repo_model "branchspire/models/repo"
+	user_model "branchspire/models/user"
+	"branchspire/modules/timeutil"
+	"branchspire/modules/util"
 )
 
 // IssueWatch is connection request for receiving issue notification.

@@ -8,7 +8,7 @@ import (
 	"encoding/hex"
 	"fmt"
 
-	"gitea.dev/modules/util"
+	"branchspire/modules/util"
 )
 
 type ObjectID interface {

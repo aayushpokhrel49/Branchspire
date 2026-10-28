@@ -6,10 +6,10 @@ package repo
 import (
 	"net/http"
 
-	issues_model "gitea.dev/models/issues"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/modules/web"
-	"gitea.dev/services/context"
+	issues_model "branchspire/models/issues"
+	api "branchspire/modules/structs"
+	"branchspire/modules/web"
+	"branchspire/services/context"
 )
 
 // LockIssue lock an issue

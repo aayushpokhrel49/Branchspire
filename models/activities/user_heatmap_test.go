@@ -7,11 +7,11 @@ import (
 	"testing"
 	"time"
 
-	activities_model "gitea.dev/models/activities"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/json"
-	"gitea.dev/modules/timeutil"
+	activities_model "branchspire/models/activities"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
+	"branchspire/modules/json"
+	"branchspire/modules/timeutil"
 
 	"github.com/stretchr/testify/assert"
 )

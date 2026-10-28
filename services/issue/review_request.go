@@ -6,15 +6,15 @@ package issue
 import (
 	"context"
 
-	issues_model "gitea.dev/models/issues"
-	"gitea.dev/models/organization"
-	"gitea.dev/models/perm"
-	access_model "gitea.dev/models/perm/access"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/models/unit"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/log"
-	notify_service "gitea.dev/services/notify"
+	issues_model "branchspire/models/issues"
+	"branchspire/models/organization"
+	"branchspire/models/perm"
+	access_model "branchspire/models/perm/access"
+	repo_model "branchspire/models/repo"
+	"branchspire/models/unit"
+	user_model "branchspire/models/user"
+	"branchspire/modules/log"
+	notify_service "branchspire/services/notify"
 )
 
 // ReviewRequest add or remove a review request from a user for this PR, and make comment for it.

@@ -11,10 +11,10 @@ import (
 	"strconv"
 	"strings"
 
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/git/gitcmd"
-	"gitea.dev/modules/git/pipeline"
-	"gitea.dev/modules/util"
+	"branchspire/modules/git"
+	"branchspire/modules/git/gitcmd"
+	"branchspire/modules/git/pipeline"
+	"branchspire/modules/util"
 
 	"golang.org/x/sync/errgroup"
 )

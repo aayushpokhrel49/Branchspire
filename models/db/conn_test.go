@@ -88,7 +88,7 @@ func TestMakePgSQLConnStr(t *testing.T) {
 		{
 			Host:    "localhost",
 			User:    "pgsqlusername",
-			Passwd:  "I love Gitea!",
+			Passwd:  "I love BranchSpire!",
 			Name:    "gitea",
 			SSLMode: "true",
 			Output:  "postgres://pgsqlusername:I%20love%20Gitea%21@localhost:5432/gitea?sslmode=true",

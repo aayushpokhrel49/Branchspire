@@ -7,9 +7,9 @@ import (
 	"context"
 	"fmt"
 
-	"gitea.dev/models/db"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/container"
+	"branchspire/models/db"
+	user_model "branchspire/models/user"
+	"branchspire/modules/container"
 )
 
 // LFSLockList is a list of LFSLock

@@ -2,9 +2,9 @@
 // Copyright 2016 The Gitea Authors. All rights reserved.
 // SPDX-License-Identifier: MIT
 
-// Package v1 Gitea API
+// Package v1 BranchSpire API
 //
-// This documentation describes the Gitea API.
+// This documentation describes the BranchSpire API.
 //
 //	Schemes: https, http
 //	License: MIT http://opensource.org/licenses/MIT
@@ -31,12 +31,12 @@
 //	     type: apiKey
 //	     name: token
 //	     in: query
-//	     description: This authentication option is deprecated for removal in Gitea 1.23. Please use AuthorizationHeaderToken instead.
+//	     description: This authentication option is deprecated. Please use AuthorizationHeaderToken instead.
 //	AccessToken:
 //	     type: apiKey
 //	     name: access_token
 //	     in: query
-//	     description: This authentication option is deprecated for removal in Gitea 1.23. Please use AuthorizationHeaderToken instead.
+//	     description: This authentication option is deprecated. Please use AuthorizationHeaderToken instead.
 //	AuthorizationHeaderToken:
 //	     type: apiKey
 //	     name: Authorization
@@ -68,41 +68,41 @@ import (
 	"net/http"
 	"strings"
 
-	audit_model "gitea.dev/models/audit"
-	auth_model "gitea.dev/models/auth"
-	"gitea.dev/models/organization"
-	"gitea.dev/models/perm"
-	access_model "gitea.dev/models/perm/access"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/models/unit"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/httplib"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/setting"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/modules/util"
-	"gitea.dev/modules/validation"
-	"gitea.dev/modules/web"
-	"gitea.dev/modules/web/middleware"
-	"gitea.dev/routers/api/v1/activitypub"
-	"gitea.dev/routers/api/v1/admin"
-	"gitea.dev/routers/api/v1/misc"
-	"gitea.dev/routers/api/v1/notify"
-	"gitea.dev/routers/api/v1/org"
-	"gitea.dev/routers/api/v1/packages"
-	"gitea.dev/routers/api/v1/repo"
-	"gitea.dev/routers/api/v1/settings"
-	"gitea.dev/routers/api/v1/shared"
-	"gitea.dev/routers/api/v1/token"
-	"gitea.dev/routers/api/v1/user"
-	"gitea.dev/routers/common"
-	"gitea.dev/services/actions"
-	"gitea.dev/services/audit"
-	"gitea.dev/services/auth"
-	"gitea.dev/services/context"
-	"gitea.dev/services/forms"
+	audit_model "branchspire/models/audit"
+	auth_model "branchspire/models/auth"
+	"branchspire/models/organization"
+	"branchspire/models/perm"
+	access_model "branchspire/models/perm/access"
+	repo_model "branchspire/models/repo"
+	"branchspire/models/unit"
+	user_model "branchspire/models/user"
+	"branchspire/modules/httplib"
+	"branchspire/modules/log"
+	"branchspire/modules/setting"
+	api "branchspire/modules/structs"
+	"branchspire/modules/util"
+	"branchspire/modules/validation"
+	"branchspire/modules/web"
+	"branchspire/modules/web/middleware"
+	"branchspire/routers/api/v1/activitypub"
+	"branchspire/routers/api/v1/admin"
+	"branchspire/routers/api/v1/misc"
+	"branchspire/routers/api/v1/notify"
+	"branchspire/routers/api/v1/org"
+	"branchspire/routers/api/v1/packages"
+	"branchspire/routers/api/v1/repo"
+	"branchspire/routers/api/v1/settings"
+	"branchspire/routers/api/v1/shared"
+	"branchspire/routers/api/v1/token"
+	"branchspire/routers/api/v1/user"
+	"branchspire/routers/common"
+	"branchspire/services/actions"
+	"branchspire/services/audit"
+	"branchspire/services/auth"
+	"branchspire/services/context"
+	"branchspire/services/forms"
 
-	_ "gitea.dev/routers/api/v1/swagger" // for swagger generation
+	_ "branchspire/routers/api/v1/swagger" // for swagger generation
 
 	chi_middleware "github.com/go-chi/chi/v5/middleware"
 	"github.com/go-chi/cors"
@@ -1749,7 +1749,7 @@ func Routes() *web.Router {
 			}, repoAssignment(), checkTokenPublicOnly())
 		}, tokenRequiresScopes(auth_model.AccessTokenScopeCategoryIssue))
 
-		// NOTE: these are Gitea package management API - see packages.CommonRoutes and packages.DockerContainerRoutes for endpoints that implement package manager APIs
+		// NOTE: these are BranchSpire package management API - see packages.CommonRoutes and packages.DockerContainerRoutes for endpoints that implement package manager APIs
 		m.Group("/packages/{username}", func() {
 			m.Group("/{type}/{name}", func() {
 				m.Get("/", packages.ListPackageVersions)

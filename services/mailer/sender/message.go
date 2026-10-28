@@ -11,9 +11,9 @@ import (
 	"strings"
 	"time"
 
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/util"
+	"branchspire/modules/log"
+	"branchspire/modules/setting"
+	"branchspire/modules/util"
 
 	"github.com/Necoro/html2text"
 	gomail "github.com/wneessen/go-mail"

@@ -8,8 +8,8 @@ import (
 	"strings"
 	"testing"
 
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/test"
+	"branchspire/modules/setting"
+	"branchspire/modules/test"
 
 	"github.com/stretchr/testify/assert"
 )
@@ -49,7 +49,7 @@ func TestIsValid(t *testing.T) {
 }
 
 func TestGeneratePointer(t *testing.T) {
-	p, err := GeneratePointer(strings.NewReader("Gitea"))
+	p, err := GeneratePointer(strings.NewReader("BranchSpire"))
 	assert.NoError(t, err)
 	assert.True(t, p.IsValid())
 	assert.Equal(t, "94cb57646c54a297c9807697e80a30946f79a4b82cb079d2606847825b1812cc", p.Oid)

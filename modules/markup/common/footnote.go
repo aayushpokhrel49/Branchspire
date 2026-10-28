@@ -462,10 +462,10 @@ func (r *FootnoteHTMLRenderer) renderFootnoteList(w util.BufWriter, source []byt
 
 type footnoteExtension struct{}
 
-// FootnoteExtension represents the Gitea Footnote
+// FootnoteExtension represents the BranchSpire Footnote
 var FootnoteExtension = &footnoteExtension{}
 
-// Extend extends the markdown converter with the Gitea Footnote parser
+// Extend extends the markdown converter with the BranchSpire Footnote parser
 func (e *footnoteExtension) Extend(m goldmark.Markdown) {
 	m.Parser().AddOptions(
 		parser.WithBlockParsers(

@@ -14,15 +14,15 @@ import (
 	"strings"
 	"time"
 
-	actions_model "gitea.dev/models/actions"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/templates"
-	"gitea.dev/modules/timeutil"
-	"gitea.dev/modules/util"
-	"gitea.dev/modules/web"
-	"gitea.dev/routers/web/repo/actions"
-	"gitea.dev/services/context"
+	actions_model "branchspire/models/actions"
+	user_model "branchspire/models/user"
+	"branchspire/modules/setting"
+	"branchspire/modules/templates"
+	"branchspire/modules/timeutil"
+	"branchspire/modules/util"
+	"branchspire/modules/web"
+	"branchspire/routers/web/repo/actions"
+	"branchspire/services/context"
 )
 
 const (
@@ -478,7 +478,7 @@ func MockActionsRunsJobs(ctx *context.Context) {
 				ID: localCallerID, Link: jobLink(localCallerID), JobID: "local_caller", Name: "local caller",
 				Status: actions_model.StatusRunning.String(), Duration: "5m",
 				Needs:            []string{"prepare"},
-				IsReusableCaller: true, CallUses: "./.gitea/workflows/lib.yml",
+				IsReusableCaller: true, CallUses: "./.branchspire/workflows/lib.yml",
 			},
 			{
 				ID: libStepID, Link: jobLink(libStepID), JobID: "lib_step", Name: "lib step",
@@ -489,7 +489,7 @@ func MockActionsRunsJobs(ctx *context.Context) {
 				ID: innerCallerID, Link: jobLink(innerCallerID), JobID: "inner_caller", Name: "inner caller (nested)",
 				Status: actions_model.StatusRunning.String(), Duration: "4m",
 				ParentJobID:      localCallerID,
-				IsReusableCaller: true, CallUses: "./.gitea/workflows/inner.yml",
+				IsReusableCaller: true, CallUses: "./.branchspire/workflows/inner.yml",
 			},
 			{
 				ID: deepJobID, Link: jobLink(deepJobID), JobID: "deep_job", Name: "deep job",
@@ -500,7 +500,7 @@ func MockActionsRunsJobs(ctx *context.Context) {
 				ID: crossCallerID, Link: jobLink(crossCallerID), JobID: "cross_caller", Name: "cross-repo caller",
 				Status: actions_model.StatusWaiting.String(), Duration: "0s",
 				Needs:            []string{"prepare"},
-				IsReusableCaller: true, CallUses: "user2/lib-repo/.gitea/workflows/external.yml@main",
+				IsReusableCaller: true, CallUses: "user2/lib-repo/.branchspire/workflows/external.yml@main",
 			},
 			{
 				ID: externalJobID, Link: jobLink(externalJobID), JobID: "external_job", Name: "external job",
@@ -529,7 +529,7 @@ func MockActionsRunsJobs(ctx *context.Context) {
 			{
 				ID: buildCallLinuxID, Link: jobLink(buildCallLinuxID), JobID: "build-call", Name: "build-call (linux)",
 				Status: actions_model.StatusSuccess.String(), Duration: "1m", Needs: []string{"prepare"},
-				IsReusableCaller: true, CallUses: "./.gitea/workflows/build.yml",
+				IsReusableCaller: true, CallUses: "./.branchspire/workflows/build.yml",
 			},
 			{
 				ID: buildCallLinuxJobID, Link: jobLink(buildCallLinuxJobID), JobID: "bc_linux_build", Name: "build",
@@ -538,7 +538,7 @@ func MockActionsRunsJobs(ctx *context.Context) {
 			{
 				ID: buildCallWindowsID, Link: jobLink(buildCallWindowsID), JobID: "build-call", Name: "build-call (windows)",
 				Status: actions_model.StatusSuccess.String(), Duration: "2m", Needs: []string{"prepare"},
-				IsReusableCaller: true, CallUses: "./.gitea/workflows/build.yml",
+				IsReusableCaller: true, CallUses: "./.branchspire/workflows/build.yml",
 			},
 			{
 				ID: buildCallWinJobID, Link: jobLink(buildCallWinJobID), JobID: "bc_windows_build", Name: "build",
@@ -547,7 +547,7 @@ func MockActionsRunsJobs(ctx *context.Context) {
 			{
 				ID: buildCallMacosID, Link: jobLink(buildCallMacosID), JobID: "build-call", Name: "build-call (macos)",
 				Status: actions_model.StatusSuccess.String(), Duration: "90s", Needs: []string{"prepare"},
-				IsReusableCaller: true, CallUses: "./.gitea/workflows/build.yml",
+				IsReusableCaller: true, CallUses: "./.branchspire/workflows/build.yml",
 			},
 			{
 				ID: buildCallMacJobID, Link: jobLink(buildCallMacJobID), JobID: "bc_macos_build", Name: "build",

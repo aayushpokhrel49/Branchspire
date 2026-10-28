@@ -6,16 +6,16 @@ package indexer
 import (
 	"context"
 
-	issues_model "gitea.dev/models/issues"
-	repo_model "gitea.dev/models/repo"
-	user_model "gitea.dev/models/user"
-	code_indexer "gitea.dev/modules/indexer/code"
-	issue_indexer "gitea.dev/modules/indexer/issues"
-	stats_indexer "gitea.dev/modules/indexer/stats"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/repository"
-	"gitea.dev/modules/setting"
-	notify_service "gitea.dev/services/notify"
+	issues_model "branchspire/models/issues"
+	repo_model "branchspire/models/repo"
+	user_model "branchspire/models/user"
+	code_indexer "branchspire/modules/indexer/code"
+	issue_indexer "branchspire/modules/indexer/issues"
+	stats_indexer "branchspire/modules/indexer/stats"
+	"branchspire/modules/log"
+	"branchspire/modules/repository"
+	"branchspire/modules/setting"
+	notify_service "branchspire/services/notify"
 )
 
 type indexerNotifier struct {

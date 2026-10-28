@@ -10,10 +10,10 @@ import (
 	"io"
 	"strings"
 
-	"gitea.dev/modules/json"
-	"gitea.dev/modules/util"
-	"gitea.dev/modules/validation"
-	"gitea.dev/modules/zstd"
+	"branchspire/modules/json"
+	"branchspire/modules/util"
+	"branchspire/modules/validation"
+	"branchspire/modules/zstd"
 )
 
 var (

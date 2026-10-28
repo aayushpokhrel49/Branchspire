@@ -6,7 +6,7 @@ package repository
 import (
 	"testing"
 
-	"gitea.dev/models/unittest"
+	"branchspire/models/unittest"
 )
 
 func TestMain(m *testing.M) {

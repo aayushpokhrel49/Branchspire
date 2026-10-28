@@ -9,11 +9,11 @@ import (
 	"strings"
 	"testing"
 
-	repo_model "gitea.dev/models/repo"
-	user_model "gitea.dev/models/user"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/modules/util"
-	files_service "gitea.dev/services/repository/files"
+	repo_model "branchspire/models/repo"
+	user_model "branchspire/models/user"
+	api "branchspire/modules/structs"
+	"branchspire/modules/util"
+	files_service "branchspire/services/repository/files"
 
 	"github.com/stretchr/testify/require"
 )

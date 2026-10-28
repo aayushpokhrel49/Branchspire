@@ -6,10 +6,10 @@ package admin
 import (
 	"net/http"
 
-	user_model "gitea.dev/models/user"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/modules/web"
-	"gitea.dev/services/context"
+	user_model "branchspire/models/user"
+	api "branchspire/modules/structs"
+	"branchspire/modules/web"
+	"branchspire/services/context"
 )
 
 // ListUserBadges lists all badges belonging to a user

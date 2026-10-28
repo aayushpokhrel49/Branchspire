@@ -8,14 +8,14 @@ import (
 	"net/http"
 	"slices"
 
-	audit_model "gitea.dev/models/audit"
-	"gitea.dev/models/db"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/templates"
-	"gitea.dev/modules/util"
-	"gitea.dev/services/audit"
-	"gitea.dev/services/context"
+	audit_model "branchspire/models/audit"
+	"branchspire/models/db"
+	user_model "branchspire/models/user"
+	"branchspire/modules/setting"
+	"branchspire/modules/templates"
+	"branchspire/modules/util"
+	"branchspire/services/audit"
+	"branchspire/services/context"
 )
 
 // ViewOptions configures a scoped audit log listing. The admin view leaves

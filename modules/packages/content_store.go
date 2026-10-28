@@ -11,10 +11,10 @@ import (
 	"path"
 	"strings"
 
-	"gitea.dev/modules/optional"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/storage"
-	"gitea.dev/modules/util"
+	"branchspire/modules/optional"
+	"branchspire/modules/setting"
+	"branchspire/modules/storage"
+	"branchspire/modules/util"
 )
 
 // BlobHash256Key is the key to address a blob content

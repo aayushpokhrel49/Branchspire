@@ -6,10 +6,10 @@ package git
 import (
 	"context"
 
-	"gitea.dev/models/db"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/container"
-	"gitea.dev/modules/optional"
+	"branchspire/models/db"
+	user_model "branchspire/models/user"
+	"branchspire/modules/container"
+	"branchspire/modules/optional"
 
 	"xorm.io/builder"
 )

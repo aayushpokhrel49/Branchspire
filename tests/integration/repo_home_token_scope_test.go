@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"testing"
 
-	auth_model "gitea.dev/models/auth"
-	"gitea.dev/tests"
+	auth_model "branchspire/models/auth"
+	"branchspire/tests"
 )
 
 func TestRepoWebTokenScopes(t *testing.T) {

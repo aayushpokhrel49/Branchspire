@@ -7,13 +7,13 @@ import (
 	"context"
 	"fmt"
 
-	"gitea.dev/models/db"
-	git_model "gitea.dev/models/git"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/modules/container"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/timeutil"
+	"branchspire/models/db"
+	git_model "branchspire/models/git"
+	repo_model "branchspire/models/repo"
+	"branchspire/modules/container"
+	"branchspire/modules/git"
+	"branchspire/modules/log"
+	"branchspire/modules/timeutil"
 )
 
 // SyncResult describes a reference update detected during sync.

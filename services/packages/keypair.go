@@ -8,9 +8,9 @@ import (
 	"errors"
 	"fmt"
 
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/globallock"
-	"gitea.dev/modules/util"
+	user_model "branchspire/models/user"
+	"branchspire/modules/globallock"
+	"branchspire/modules/util"
 )
 
 // GetOrCreateKeyPair gets the owner's key pair used to sign repository files,

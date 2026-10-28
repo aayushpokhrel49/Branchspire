@@ -7,9 +7,9 @@ import (
 	"context"
 	"fmt"
 
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/git/gitrepo"
-	"gitea.dev/modules/setting"
+	"branchspire/modules/git"
+	"branchspire/modules/git/gitrepo"
+	"branchspire/modules/setting"
 )
 
 // CreateTemporaryGitRepo creates a temporary Git repository empty directory (not initialized)

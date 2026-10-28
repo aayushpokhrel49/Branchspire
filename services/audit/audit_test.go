@@ -7,13 +7,13 @@ import (
 	"context"
 	"testing"
 
-	audit_model "gitea.dev/models/audit"
-	repository_model "gitea.dev/models/repo"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/reqctx"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/test"
-	"gitea.dev/modules/web/middleware"
+	audit_model "branchspire/models/audit"
+	repository_model "branchspire/models/repo"
+	user_model "branchspire/models/user"
+	"branchspire/modules/reqctx"
+	"branchspire/modules/setting"
+	"branchspire/modules/test"
+	"branchspire/modules/web/middleware"
 
 	"github.com/stretchr/testify/assert"
 )

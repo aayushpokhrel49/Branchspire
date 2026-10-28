@@ -9,8 +9,8 @@ import (
 	"fmt"
 	"strings"
 
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/private"
+	"branchspire/modules/log"
+	"branchspire/modules/private"
 
 	"github.com/urfave/cli/v3"
 )
@@ -21,7 +21,7 @@ func NewKeysCommand() *cli.Command {
 		Name:        "keys",
 		Usage:       "(internal) Should only be called by SSH server",
 		Hidden:      true, // internal commands shouldn't be visible
-		Description: "Queries the Gitea database to get the authorized command for a given ssh key fingerprint",
+		Description: "Queries the BranchSpire database to get the authorized command for a given ssh key fingerprint",
 		Before:      PrepareConsoleLoggerLevel(log.FATAL),
 		Action:      runKeys,
 		Flags: []cli.Flag{

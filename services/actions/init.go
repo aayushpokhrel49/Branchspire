@@ -10,13 +10,13 @@ import (
 	"os"
 	"strings"
 
-	actions_model "gitea.dev/models/actions"
-	"gitea.dev/modules/graceful"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/queue"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/util"
-	notify_service "gitea.dev/services/notify"
+	actions_model "branchspire/models/actions"
+	"branchspire/modules/graceful"
+	"branchspire/modules/log"
+	"branchspire/modules/queue"
+	"branchspire/modules/setting"
+	"branchspire/modules/util"
+	notify_service "branchspire/services/notify"
 )
 
 func initGlobalRunnerToken(ctx context.Context) error {

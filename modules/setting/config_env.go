@@ -10,7 +10,7 @@ import (
 	"strconv"
 	"strings"
 
-	"gitea.dev/modules/log"
+	"branchspire/modules/log"
 )
 
 const (
@@ -168,11 +168,11 @@ func EnvironmentToConfig(cfg ConfigProvider, envs []string) (changed bool) {
 }
 
 func UnsetUnnecessaryEnvVars() {
-	// Ideally Gitea should only accept the environment variables which it clearly knows instead of unsetting the ones it doesn't want,
+	// Ideally BranchSpire should only accept the environment variables which it clearly knows instead of unsetting the ones it doesn't want,
 	// but the ideal behavior would be a breaking change, and it seems not bringing enough benefits to end users.
 	// So at the moment we just keep "unsetting the unnecessary environment variables".
 
-	// HOME is managed by Gitea, Gitea's git should use "HOME/.gitconfig".
+	// HOME is managed by BranchSpire, BranchSpire's git should use "HOME/.gitconfig".
 	// But git would try "XDG_CONFIG_HOME/git/config" first if "HOME/.gitconfig" does not exist,
 	// then our git.InitFull would still write to "XDG_CONFIG_HOME/git/config" if XDG_CONFIG_HOME is set.
 	_ = os.Unsetenv("XDG_CONFIG_HOME")

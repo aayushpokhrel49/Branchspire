@@ -6,8 +6,8 @@ package oauth2
 import (
 	"html/template"
 
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/svg"
+	"branchspire/modules/log"
+	"branchspire/modules/svg"
 )
 
 // BaseProvider represents a common base for Provider

@@ -9,16 +9,16 @@ import (
 	"net/url"
 	"strings"
 
-	issues_model "gitea.dev/models/issues"
-	access_model "gitea.dev/models/perm/access"
-	repo_model "gitea.dev/models/repo"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/cache"
-	"gitea.dev/modules/label"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/setting"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/modules/util"
+	issues_model "branchspire/models/issues"
+	access_model "branchspire/models/perm/access"
+	repo_model "branchspire/models/repo"
+	user_model "branchspire/models/user"
+	"branchspire/modules/cache"
+	"branchspire/modules/label"
+	"branchspire/modules/log"
+	"branchspire/modules/setting"
+	api "branchspire/modules/structs"
+	"branchspire/modules/util"
 )
 
 func ToIssue(ctx context.Context, doer *user_model.User, issue *issues_model.Issue) *api.Issue {

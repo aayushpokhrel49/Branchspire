@@ -10,17 +10,17 @@ import (
 	"net/url"
 	"strconv"
 
-	"gitea.dev/models/db"
-	packages_model "gitea.dev/models/packages"
-	"gitea.dev/modules/optional"
-	packages_module "gitea.dev/modules/packages"
-	composer_module "gitea.dev/modules/packages/composer"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/util"
-	"gitea.dev/routers/api/packages/helper"
-	"gitea.dev/services/context"
-	"gitea.dev/services/convert"
-	packages_service "gitea.dev/services/packages"
+	"branchspire/models/db"
+	packages_model "branchspire/models/packages"
+	"branchspire/modules/optional"
+	packages_module "branchspire/modules/packages"
+	composer_module "branchspire/modules/packages/composer"
+	"branchspire/modules/setting"
+	"branchspire/modules/util"
+	"branchspire/routers/api/packages/helper"
+	"branchspire/services/context"
+	"branchspire/services/convert"
+	packages_service "branchspire/services/packages"
 )
 
 func apiError(ctx *context.Context, status int, obj any) {

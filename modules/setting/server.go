@@ -12,8 +12,8 @@ import (
 	"strings"
 	"time"
 
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/util"
+	"branchspire/modules/log"
+	"branchspire/modules/util"
 )
 
 // Scheme describes protocol types
@@ -60,7 +60,7 @@ var (
 	// This value is empty if site does not have sub-url.
 	AppSubURL string
 
-	// UseSubURLPath makes Gitea handle requests with sub-path like "/sub-path/owner/repo/...",
+	// UseSubURLPath makes BranchSpire handle requests with sub-path like "/sub-path/owner/repo/...",
 	// to make it easier to debug sub-path related problems without a reverse proxy.
 	UseSubURLPath bool
 
@@ -68,7 +68,7 @@ var (
 	// It maps to ini:"APP_DATA_PATH" in [server] and defaults to AppWorkPath + "/data"
 	AppDataPath string
 
-	// LocalURL is the url for locally running applications to contact Gitea. It always has a '/' suffix
+	// LocalURL is the url for locally running applications to contact BranchSpire. It always has a '/' suffix
 	// It maps to ini:"LOCAL_ROOT_URL" in [server]
 	LocalURL string
 
@@ -146,7 +146,7 @@ func loadServerDomainAndURL(sec ConfigSection, protocol string) {
 
 func loadServerFrom(rootCfg ConfigProvider) {
 	sec := rootCfg.Section("server")
-	AppName = rootCfg.Section("").Key("APP_NAME").MustString("Gitea: Git with a cup of tea")
+	AppName = rootCfg.Section("").Key("APP_NAME").MustString("BranchSpire")
 
 	HTTPAddr = sec.Key("HTTP_ADDR").MustString("0.0.0.0")
 	HTTPPort = sec.Key("HTTP_PORT").MustString("3000")

@@ -8,13 +8,13 @@ import (
 	"context"
 	"fmt"
 
-	audit_model "gitea.dev/models/audit"
-	"gitea.dev/models/db"
-	"gitea.dev/models/organization"
-	access_model "gitea.dev/models/perm/access"
-	repo_model "gitea.dev/models/repo"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/services/audit"
+	audit_model "branchspire/models/audit"
+	"branchspire/models/db"
+	"branchspire/models/organization"
+	access_model "branchspire/models/perm/access"
+	repo_model "branchspire/models/repo"
+	user_model "branchspire/models/user"
+	"branchspire/services/audit"
 )
 
 // RemoveOrgUser removes user from given organization.

@@ -11,13 +11,13 @@ import (
 	"time"
 
 	runnerv1 "gitea.dev/actionslib/runner/v1"
-	actions_model "gitea.dev/models/actions"
-	"gitea.dev/models/db"
-	secret_model "gitea.dev/models/secret"
-	"gitea.dev/modules/actions/jobparser"
-	"gitea.dev/modules/graceful"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/setting"
+	actions_model "branchspire/models/actions"
+	"branchspire/models/db"
+	secret_model "branchspire/models/secret"
+	"branchspire/modules/actions/jobparser"
+	"branchspire/modules/graceful"
+	"branchspire/modules/log"
+	"branchspire/modules/setting"
 
 	"go.yaml.in/yaml/v4"
 	"google.golang.org/protobuf/types/known/structpb"
@@ -173,7 +173,7 @@ func buildRunnerTask(ctx context.Context, t *actions_model.ActionTask) (*runnerv
 	}, job, nil
 }
 
-// runnerWorkflowPayload sets the job `if:` to `always()`, as Gitea has decided it and a runner must not re-evaluate it.
+// runnerWorkflowPayload sets the job `if:` to `always()`, as BranchSpire has decided it and a runner must not re-evaluate it.
 func runnerWorkflowPayload(job *actions_model.ActionRunJob) ([]byte, error) {
 	swf, parsedJob, err := jobparser.ParseRawSingleWorkflow(job.WorkflowPayload)
 	if err != nil {

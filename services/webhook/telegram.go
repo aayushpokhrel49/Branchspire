@@ -11,14 +11,14 @@ import (
 	"net/url"
 	"strings"
 
-	webhook_model "gitea.dev/models/webhook"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/json"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/markup"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/modules/util"
-	webhook_module "gitea.dev/modules/webhook"
+	webhook_model "branchspire/models/webhook"
+	"branchspire/modules/git"
+	"branchspire/modules/json"
+	"branchspire/modules/log"
+	"branchspire/modules/markup"
+	api "branchspire/modules/structs"
+	"branchspire/modules/util"
+	webhook_module "branchspire/modules/webhook"
 )
 
 type (

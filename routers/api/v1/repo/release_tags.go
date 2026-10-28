@@ -6,11 +6,11 @@ package repo
 import (
 	"net/http"
 
-	repo_model "gitea.dev/models/repo"
-	unit_model "gitea.dev/models/unit"
-	"gitea.dev/services/context"
-	"gitea.dev/services/convert"
-	release_service "gitea.dev/services/release"
+	repo_model "branchspire/models/repo"
+	unit_model "branchspire/models/unit"
+	"branchspire/services/context"
+	"branchspire/services/convert"
+	release_service "branchspire/services/release"
 )
 
 // GetReleaseByTag get a single release of a repository by tag name

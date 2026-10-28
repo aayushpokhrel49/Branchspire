@@ -6,14 +6,14 @@ package actions
 import (
 	"context"
 
-	"gitea.dev/models/db"
-	repo_model "gitea.dev/models/repo"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/container"
-	"gitea.dev/modules/optional"
-	"gitea.dev/modules/timeutil"
-	"gitea.dev/modules/translation"
-	webhook_module "gitea.dev/modules/webhook"
+	"branchspire/models/db"
+	repo_model "branchspire/models/repo"
+	user_model "branchspire/models/user"
+	"branchspire/modules/container"
+	"branchspire/modules/optional"
+	"branchspire/modules/timeutil"
+	"branchspire/modules/translation"
+	webhook_module "branchspire/modules/webhook"
 
 	"xorm.io/builder"
 )

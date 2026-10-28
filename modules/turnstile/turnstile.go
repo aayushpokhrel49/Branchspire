@@ -11,13 +11,13 @@ import (
 	"net/url"
 	"strings"
 
-	"gitea.dev/modules/json"
-	"gitea.dev/modules/proxy"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/util"
+	"branchspire/modules/json"
+	"branchspire/modules/proxy"
+	"branchspire/modules/setting"
+	"branchspire/modules/util"
 )
 
-// httpClient returns an HTTP client that honors Gitea's proxy configuration.
+// httpClient returns an HTTP client that honors BranchSpire's proxy configuration.
 var httpClient = util.OnceValue[*http.Client]{
 	Func: func() *http.Client {
 		transport := http.DefaultTransport.(*http.Transport).Clone() //nolint:forcetypeassert // Golang stdlib

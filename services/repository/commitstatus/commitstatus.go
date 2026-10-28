@@ -9,17 +9,17 @@ import (
 	"fmt"
 	"slices"
 
-	"gitea.dev/models/db"
-	git_model "gitea.dev/models/git"
-	repo_model "gitea.dev/models/repo"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/cache"
-	"gitea.dev/modules/commitstatus"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/json"
-	"gitea.dev/modules/log"
-	repo_module "gitea.dev/modules/repository"
-	"gitea.dev/services/notify"
+	"branchspire/models/db"
+	git_model "branchspire/models/git"
+	repo_model "branchspire/models/repo"
+	user_model "branchspire/models/user"
+	"branchspire/modules/cache"
+	"branchspire/modules/commitstatus"
+	"branchspire/modules/git"
+	"branchspire/modules/json"
+	"branchspire/modules/log"
+	repo_module "branchspire/modules/repository"
+	"branchspire/services/notify"
 )
 
 func getCacheKey(repoID int64, brancheName string) string {

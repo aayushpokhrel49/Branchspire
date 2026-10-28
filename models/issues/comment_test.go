@@ -7,11 +7,11 @@ import (
 	"testing"
 	"time"
 
-	"gitea.dev/models/db"
-	issues_model "gitea.dev/models/issues"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
+	"branchspire/models/db"
+	issues_model "branchspire/models/issues"
+	repo_model "branchspire/models/repo"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

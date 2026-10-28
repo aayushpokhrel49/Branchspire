@@ -6,10 +6,10 @@ package doctor
 import (
 	"context"
 
-	"gitea.dev/models/db"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/storage"
-	repo_service "gitea.dev/services/repository"
+	"branchspire/models/db"
+	"branchspire/modules/log"
+	"branchspire/modules/storage"
+	repo_service "branchspire/services/repository"
 
 	"xorm.io/builder"
 )

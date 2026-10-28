@@ -7,12 +7,12 @@ import (
 	"bytes"
 	"testing"
 
-	packages_model "gitea.dev/models/packages"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
-	packages_module "gitea.dev/modules/packages"
-	packages_service "gitea.dev/services/packages"
-	"gitea.dev/tests"
+	packages_model "branchspire/models/packages"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
+	packages_module "branchspire/modules/packages"
+	packages_service "branchspire/services/packages"
+	"branchspire/tests"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

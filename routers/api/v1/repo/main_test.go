@@ -6,9 +6,9 @@ package repo
 import (
 	"testing"
 
-	"gitea.dev/models/unittest"
-	"gitea.dev/modules/setting"
-	webhook_service "gitea.dev/services/webhook"
+	"branchspire/models/unittest"
+	"branchspire/modules/setting"
+	webhook_service "branchspire/services/webhook"
 )
 
 func TestMain(m *testing.M) {

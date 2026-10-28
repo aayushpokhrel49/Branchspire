@@ -9,13 +9,13 @@ import (
 	"os"
 	"time"
 
-	repo_model "gitea.dev/models/repo"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/git/gitcmd"
-	"gitea.dev/modules/git/gitrepo"
-	"gitea.dev/modules/log"
-	asymkey_service "gitea.dev/services/asymkey"
+	repo_model "branchspire/models/repo"
+	user_model "branchspire/models/user"
+	"branchspire/modules/git"
+	"branchspire/modules/git/gitcmd"
+	"branchspire/modules/git/gitrepo"
+	"branchspire/modules/log"
+	asymkey_service "branchspire/services/asymkey"
 )
 
 // initRepoCommit temporarily changes with work directory.

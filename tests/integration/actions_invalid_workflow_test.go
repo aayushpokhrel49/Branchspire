@@ -9,15 +9,15 @@ import (
 	"net/url"
 	"testing"
 
-	actions_model "gitea.dev/models/actions"
-	auth_model "gitea.dev/models/auth"
-	"gitea.dev/models/db"
-	git_model "gitea.dev/models/git"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/commitstatus"
-	"gitea.dev/modules/json"
-	"gitea.dev/routers/web/repo/actions"
+	actions_model "branchspire/models/actions"
+	auth_model "branchspire/models/auth"
+	"branchspire/models/db"
+	git_model "branchspire/models/git"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
+	"branchspire/modules/commitstatus"
+	"branchspire/modules/json"
+	"branchspire/routers/web/repo/actions"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -38,7 +38,7 @@ func TestActionsInvalidWorkflowPush(t *testing.T) {
 		} {
 			t.Run(testCase.name, func(t *testing.T) {
 				repo := createActionsTestRepo(t, token, "invalid-workflow-"+testCase.name, false)
-				createWorkflowFile(t, token, user.Name, repo.Name, ".gitea/workflows/invalid.yml",
+				createWorkflowFile(t, token, user.Name, repo.Name, ".branchspire/workflows/invalid.yml",
 					getWorkflowCreateFileOptions(user, repo.DefaultBranch, "invalid workflow", testCase.content))
 
 				runs, err := db.Find[actions_model.ActionRun](t.Context(), actions_model.FindRunOptions{RepoID: repo.ID})
@@ -60,7 +60,7 @@ func TestActionsInvalidWorkflowPush(t *testing.T) {
 				assert.Equal(t, "invalid.yml", viewResponse.State.Run.JobSummaries[0].JobName)
 				assert.Contains(t, string(viewResponse.State.Run.JobSummaries[0].SummaryHTML), "Invalid workflow file: invalid.yml")
 				actionsPage := session.MakeRequest(t, NewRequest(t, "GET", fmt.Sprintf("/%s/%s/actions", user.Name, repo.Name)), http.StatusOK)
-				filePage := session.MakeRequest(t, NewRequest(t, "GET", fmt.Sprintf("/%s/%s/src/branch/%s/.gitea/workflows/invalid.yml", user.Name, repo.Name, repo.DefaultBranch)), http.StatusOK)
+				filePage := session.MakeRequest(t, NewRequest(t, "GET", fmt.Sprintf("/%s/%s/src/branch/%s/.branchspire/workflows/invalid.yml", user.Name, repo.Name, repo.DefaultBranch)), http.StatusOK)
 				for _, wantError := range testCase.wantErrors {
 					assert.Contains(t, string(viewResponse.State.Run.JobSummaries[0].SummaryHTML), wantError)
 					assert.Contains(t, actionsPage.Body.String(), wantError)

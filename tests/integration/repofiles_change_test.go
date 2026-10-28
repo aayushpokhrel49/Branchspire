@@ -12,12 +12,12 @@ import (
 	"testing"
 	"time"
 
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/setting"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/services/contexttest"
-	files_service "gitea.dev/services/repository/files"
+	repo_model "branchspire/models/repo"
+	"branchspire/modules/git"
+	"branchspire/modules/setting"
+	api "branchspire/modules/structs"
+	"branchspire/services/contexttest"
+	files_service "branchspire/services/repository/files"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

@@ -7,14 +7,14 @@ import (
 	"context"
 	"testing"
 
-	actions_model "gitea.dev/models/actions"
-	"gitea.dev/models/db"
-	git_model "gitea.dev/models/git"
-	"gitea.dev/models/organization"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
-	repo_service "gitea.dev/services/repository"
+	actions_model "branchspire/models/actions"
+	"branchspire/models/db"
+	git_model "branchspire/models/git"
+	"branchspire/models/organization"
+	repo_model "branchspire/models/repo"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
+	repo_service "branchspire/services/repository"
 
 	"github.com/stretchr/testify/assert"
 )

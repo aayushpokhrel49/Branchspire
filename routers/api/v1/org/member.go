@@ -7,15 +7,15 @@ import (
 	"net/http"
 	"net/url"
 
-	"gitea.dev/models/organization"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/setting"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/routers/api/v1/user"
-	"gitea.dev/routers/api/v1/utils"
-	"gitea.dev/services/context"
-	"gitea.dev/services/convert"
-	org_service "gitea.dev/services/org"
+	"branchspire/models/organization"
+	user_model "branchspire/models/user"
+	"branchspire/modules/setting"
+	api "branchspire/modules/structs"
+	"branchspire/routers/api/v1/user"
+	"branchspire/routers/api/v1/utils"
+	"branchspire/services/context"
+	"branchspire/services/convert"
+	org_service "branchspire/services/org"
 )
 
 // listMembers list an organization's members

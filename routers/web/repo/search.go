@@ -6,14 +6,14 @@ package repo
 import (
 	"net/http"
 
-	"gitea.dev/models/db"
-	"gitea.dev/modules/git"
-	code_indexer "gitea.dev/modules/indexer/code"
-	"gitea.dev/modules/indexer/code/gitgrep"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/templates"
-	"gitea.dev/routers/common"
-	"gitea.dev/services/context"
+	"branchspire/models/db"
+	"branchspire/modules/git"
+	code_indexer "branchspire/modules/indexer/code"
+	"branchspire/modules/indexer/code/gitgrep"
+	"branchspire/modules/setting"
+	"branchspire/modules/templates"
+	"branchspire/routers/common"
+	"branchspire/services/context"
 )
 
 const tplSearch templates.TplName = "repo/search"

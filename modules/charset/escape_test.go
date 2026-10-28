@@ -7,10 +7,10 @@ import (
 	"strings"
 	"testing"
 
-	"gitea.dev/modules/htmlutil"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/test"
-	"gitea.dev/modules/translation"
+	"branchspire/modules/htmlutil"
+	"branchspire/modules/setting"
+	"branchspire/modules/test"
+	"branchspire/modules/translation"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -129,7 +129,7 @@ then resh (ר), and finally heh (ה) (which should appear leftmost).`,
 	},
 	{
 		// UTF-8/16/32 all use the same codepoint for BOM
-		// Gitea could read UTF-16/32 content and convert into UTF-8 internally then render it, so we only process UTF-8 internally
+		// BranchSpire could read UTF-16/32 content and convert into UTF-8 internally then render it, so we only process UTF-8 internally
 		name:   "UTF BOM",
 		text:   "\xef\xbb\xbftest",
 		result: "\xef\xbb\xbftest",

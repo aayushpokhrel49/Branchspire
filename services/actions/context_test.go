@@ -8,17 +8,17 @@ import (
 	"testing"
 
 	act_model "gitea.dev/actionslib/pkg/model"
-	actions_model "gitea.dev/models/actions"
-	"gitea.dev/models/db"
-	git_model "gitea.dev/models/git"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
-	actions_module "gitea.dev/modules/actions"
-	"gitea.dev/modules/json"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/modules/test"
-	webhook_module "gitea.dev/modules/webhook"
+	actions_model "branchspire/models/actions"
+	"branchspire/models/db"
+	git_model "branchspire/models/git"
+	repo_model "branchspire/models/repo"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
+	actions_module "branchspire/modules/actions"
+	"branchspire/modules/json"
+	api "branchspire/modules/structs"
+	"branchspire/modules/test"
+	webhook_module "branchspire/modules/webhook"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -117,7 +117,7 @@ jobs:
       - run: echo
   skip-caller:
     if: false
-    uses: ./.gitea/workflows/callee.yml
+    uses: ./.branchspire/workflows/callee.yml
   invalid:
     if: fromJSON('{')
     runs-on: ubuntu-latest
@@ -319,7 +319,7 @@ func TestComputeReusableCallerOutputs(t *testing.T) {
       target:
         value: ${{ inputs.target }}
 `, string(payload))
-		caller.WorkflowPayload = []byte("on: {workflow_dispatch: {inputs: {target: {type: string}}}}\njobs:\n  caller:\n    uses: ./.gitea/workflows/callee.yml\n")
+		caller.WorkflowPayload = []byte("on: {workflow_dispatch: {inputs: {target: {type: string}}}}\njobs:\n  caller:\n    uses: ./.branchspire/workflows/callee.yml\n")
 		_, err = actions_model.UpdateRunJob(ctx, caller, nil, "workflow_payload")
 		require.NoError(t, err)
 

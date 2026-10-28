@@ -6,7 +6,7 @@ package pubsub
 import (
 	"fmt"
 
-	"gitea.dev/modules/setting"
+	"branchspire/modules/setting"
 )
 
 // Init replaces DefaultBroker according to setting.Websocket. Called from

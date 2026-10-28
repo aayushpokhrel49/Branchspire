@@ -8,16 +8,16 @@ import (
 	"net/http"
 	"strings"
 
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/setting"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/modules/util"
-	"gitea.dev/modules/web"
-	attachment_service "gitea.dev/services/attachment"
-	"gitea.dev/services/context"
-	"gitea.dev/services/context/upload"
-	"gitea.dev/services/convert"
+	repo_model "branchspire/models/repo"
+	"branchspire/modules/log"
+	"branchspire/modules/setting"
+	api "branchspire/modules/structs"
+	"branchspire/modules/util"
+	"branchspire/modules/web"
+	attachment_service "branchspire/services/attachment"
+	"branchspire/services/context"
+	"branchspire/services/context/upload"
+	"branchspire/services/convert"
 )
 
 func checkReleaseMatchRepo(ctx *context.APIContext, releaseID int64) bool {

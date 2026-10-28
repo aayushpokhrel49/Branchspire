@@ -9,12 +9,12 @@ import (
 	"html/template"
 	"strings"
 
-	"gitea.dev/models/db"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/modules/optional"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/modules/timeutil"
-	"gitea.dev/modules/util"
+	"branchspire/models/db"
+	repo_model "branchspire/models/repo"
+	"branchspire/modules/optional"
+	api "branchspire/modules/structs"
+	"branchspire/modules/timeutil"
+	"branchspire/modules/util"
 
 	"xorm.io/builder"
 )

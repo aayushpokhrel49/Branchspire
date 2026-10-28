@@ -6,11 +6,11 @@ package actions
 import (
 	"testing"
 
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/setting"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/modules/test"
-	webhook_module "gitea.dev/modules/webhook"
+	"branchspire/modules/git"
+	"branchspire/modules/setting"
+	api "branchspire/modules/structs"
+	"branchspire/modules/test"
+	webhook_module "branchspire/modules/webhook"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -45,7 +45,7 @@ func TestReadWorkflowEventsStaticErrors(t *testing.T) {
 	for _, content := range []string{
 		"on: push\njobs: {test: {runs-on: x, steps: [{run: echo}]}}",
 		"on: push\nrun-name: ${{ github.ref }}\njobs: {test: {runs-on: x}}",
-		"on: push\njobs: {call: {uses: ./.gitea/workflows/called.yml}}",
+		"on: push\njobs: {call: {uses: ./.branchspire/workflows/called.yml}}",
 	} {
 		_, _, err := readWorkflowEvents([]byte(content))
 		assert.NoError(t, err, content)
@@ -63,26 +63,26 @@ func TestIsWorkflow(t *testing.T) {
 	}{
 		{
 			name:     "default with yml extension",
-			dirs:     []string{".gitea/workflows", ".github/workflows"},
-			path:     ".gitea/workflows/test.yml",
+			dirs:     []string{".branchspire/workflows", ".github/workflows"},
+			path:     ".branchspire/workflows/test.yml",
 			expected: true,
 		},
 		{
 			name:     "default with yaml extension",
-			dirs:     []string{".gitea/workflows", ".github/workflows"},
+			dirs:     []string{".branchspire/workflows", ".github/workflows"},
 			path:     ".github/workflows/test.yaml",
 			expected: true,
 		},
 		{
 			name:     "only gitea configured, github path rejected",
-			dirs:     []string{".gitea/workflows"},
+			dirs:     []string{".branchspire/workflows"},
 			path:     ".github/workflows/test.yml",
 			expected: false,
 		},
 		{
 			name:     "only github configured, gitea path rejected",
 			dirs:     []string{".github/workflows"},
-			path:     ".gitea/workflows/test.yml",
+			path:     ".branchspire/workflows/test.yml",
 			expected: false,
 		},
 		{
@@ -93,19 +93,19 @@ func TestIsWorkflow(t *testing.T) {
 		},
 		{
 			name:     "non-workflow file",
-			dirs:     []string{".gitea/workflows", ".github/workflows"},
-			path:     ".gitea/workflows/readme.md",
+			dirs:     []string{".branchspire/workflows", ".github/workflows"},
+			path:     ".branchspire/workflows/readme.md",
 			expected: false,
 		},
 		{
 			name:     "directory boundary",
-			dirs:     []string{".gitea/workflows"},
-			path:     ".gitea/workflows2/test.yml",
+			dirs:     []string{".branchspire/workflows"},
+			path:     ".branchspire/workflows2/test.yml",
 			expected: false,
 		},
 		{
 			name:     "unrelated path",
-			dirs:     []string{".gitea/workflows", ".github/workflows"},
+			dirs:     []string{".branchspire/workflows", ".github/workflows"},
 			path:     "src/main.go",
 			expected: false,
 		},

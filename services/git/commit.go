@@ -6,14 +6,14 @@ package git
 import (
 	"context"
 
-	asymkey_model "gitea.dev/models/asymkey"
-	git_model "gitea.dev/models/git"
-	"gitea.dev/models/gituser"
-	repo_model "gitea.dev/models/repo"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/container"
-	"gitea.dev/modules/git"
-	asymkey_service "gitea.dev/services/asymkey"
+	asymkey_model "branchspire/models/asymkey"
+	git_model "branchspire/models/git"
+	"branchspire/models/gituser"
+	repo_model "branchspire/models/repo"
+	user_model "branchspire/models/user"
+	"branchspire/modules/container"
+	"branchspire/modules/git"
+	asymkey_service "branchspire/services/asymkey"
 )
 
 // ParseCommitsWithSignature checks if signaute of commits are corresponding to users gpg keys.

@@ -8,13 +8,13 @@ import (
 	"strconv"
 	"strings"
 
-	"gitea.dev/modules/httplib"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/references"
-	"gitea.dev/modules/regexplru"
-	"gitea.dev/modules/templates/vars"
-	"gitea.dev/modules/translation"
-	"gitea.dev/modules/util"
+	"branchspire/modules/httplib"
+	"branchspire/modules/log"
+	"branchspire/modules/references"
+	"branchspire/modules/regexplru"
+	"branchspire/modules/templates/vars"
+	"branchspire/modules/translation"
+	"branchspire/modules/util"
 
 	"golang.org/x/net/html"
 	"golang.org/x/net/html/atom"
@@ -166,7 +166,7 @@ func issueIndexPatternProcessor(ctx *RenderContext, node *html.Node) {
 		} else {
 			// Path determines the type of link that will be rendered. It's unknown at this point whether
 			// the linked item is actually a PR or an issue. Luckily it's of no real consequence because
-			// Gitea will redirect on click as appropriate.
+			// BranchSpire will redirect on click as appropriate.
 			issueOwner := util.Iif(ref.Owner == "", ctx.RenderOptions.Metas["user"], ref.Owner)
 			issueRepo := util.Iif(ref.Owner == "", ctx.RenderOptions.Metas["repo"], ref.Name)
 			issuePath := util.Iif(ref.IsPull, "pulls", "issues")

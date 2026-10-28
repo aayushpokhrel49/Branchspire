@@ -10,8 +10,8 @@ import (
 	"regexp"
 	"sync"
 
-	"gitea.dev/modules/util"
-	"gitea.dev/modules/validation"
+	"branchspire/modules/util"
+	"branchspire/modules/validation"
 
 	"go.yaml.in/yaml/v4"
 )

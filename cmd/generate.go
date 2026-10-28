@@ -10,8 +10,8 @@ import (
 	"fmt"
 	"os"
 
-	"gitea.dev/modules/generate"
-	"gitea.dev/modules/ssh"
+	"branchspire/modules/generate"
+	"branchspire/modules/ssh"
 
 	"github.com/mattn/go-isatty"
 	"github.com/urfave/cli/v3"
@@ -20,7 +20,7 @@ import (
 func newGenerateCommand() *cli.Command {
 	return &cli.Command{
 		Name:  "generate",
-		Usage: "Generate Gitea's secrets/keys/tokens",
+		Usage: "Generate BranchSpire's secrets/keys/tokens",
 		Commands: []*cli.Command{
 			newGenerateSecretCommand(),
 			newGenerateSSHCommand(),

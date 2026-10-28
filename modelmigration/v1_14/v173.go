@@ -7,7 +7,7 @@ import (
 	"context"
 	"fmt"
 
-	"gitea.dev/modelmigration/base"
+	"branchspire/modelmigration/base"
 )
 
 func AddTimeIDCommentColumn(_ context.Context, x base.EngineMigration) error {

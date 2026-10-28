@@ -10,13 +10,13 @@ import (
 	"strings"
 	"time"
 
-	"gitea.dev/models/db"
-	"gitea.dev/modules/base"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/optional"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/util"
-	"gitea.dev/modules/validation"
+	"branchspire/models/db"
+	"branchspire/modules/base"
+	"branchspire/modules/log"
+	"branchspire/modules/optional"
+	"branchspire/modules/setting"
+	"branchspire/modules/util"
+	"branchspire/modules/validation"
 
 	"xorm.io/builder"
 )

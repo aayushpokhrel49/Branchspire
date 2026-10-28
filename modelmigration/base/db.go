@@ -11,9 +11,9 @@ import (
 	"regexp"
 	"strings"
 
-	"gitea.dev/models/db" //nolint:depguard // allow to access db in migration
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/setting"
+	"branchspire/models/db" //nolint:depguard // allow to access db in migration
+	"branchspire/modules/log"
+	"branchspire/modules/setting"
 
 	"xorm.io/builder"
 	"xorm.io/xorm/schemas"

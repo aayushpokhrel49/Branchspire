@@ -7,7 +7,7 @@ import (
 	"bytes"
 	"strings"
 
-	"gitea.dev/modules/json"
+	"branchspire/modules/json"
 )
 
 // Level is the level of the logger

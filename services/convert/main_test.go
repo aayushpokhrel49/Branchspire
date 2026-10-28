@@ -6,9 +6,9 @@ package convert
 import (
 	"testing"
 
-	"gitea.dev/models/unittest"
+	"branchspire/models/unittest"
 
-	_ "gitea.dev/models/actions"
+	_ "branchspire/models/actions"
 )
 
 func TestMain(m *testing.M) {

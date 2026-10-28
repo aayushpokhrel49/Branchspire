@@ -9,7 +9,7 @@ import (
 	"strings"
 	"testing"
 
-	"gitea.dev/modules/git/gitcmd"
+	"branchspire/modules/git/gitcmd"
 
 	"github.com/stretchr/testify/require"
 )

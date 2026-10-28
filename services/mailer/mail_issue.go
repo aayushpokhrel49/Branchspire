@@ -7,16 +7,16 @@ import (
 	"context"
 	"fmt"
 
-	activities_model "gitea.dev/models/activities"
-	issues_model "gitea.dev/models/issues"
-	access_model "gitea.dev/models/perm/access"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/models/unit"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/container"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/util"
+	activities_model "branchspire/models/activities"
+	issues_model "branchspire/models/issues"
+	access_model "branchspire/models/perm/access"
+	repo_model "branchspire/models/repo"
+	"branchspire/models/unit"
+	user_model "branchspire/models/user"
+	"branchspire/modules/container"
+	"branchspire/modules/log"
+	"branchspire/modules/setting"
+	"branchspire/modules/util"
 )
 
 const MailBatchSize = 100 // batch size used in mailIssueCommentBatch

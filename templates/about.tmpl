@@ -1,0 +1,119 @@
+{{template "base/head" .}}
+<div role="main" aria-label="{{ctx.Locale.Tr "about"}}" class="page-content about-page">
+	<div class="about-container">
+		<header class="about-hero">
+			<div class="about-brand-wrap">
+				<img class="about-logo" width="72" height="72" src="{{AssetUrlPrefix}}/img/logo.svg" alt="{{AppName}}">
+				{{if .AppVer}}
+					<span class="about-version-badge">v{{.AppVer}}</span>
+				{{end}}
+			</div>
+			<h1 class="about-title">{{ctx.Locale.Tr "about.title"}}</h1>
+			<p class="about-lede">{{ctx.Locale.Tr "about.lede"}}</p>
+			<div class="about-actions">
+				<a class="ui primary button" href="{{AppSubUrl}}/explore/repos">{{svg "octicon-telescope"}} {{ctx.Locale.Tr "explore_title"}}</a>
+				{{if .ShowRegistrationButton}}
+					<a class="ui button" href="{{AppSubUrl}}/user/sign_up">{{ctx.Locale.Tr "sign_up"}}</a>
+				{{else}}
+					<a class="ui button" href="{{AppSubUrl}}/user/login">{{ctx.Locale.Tr "sign_in"}}</a>
+				{{end}}
+			</div>
+		</header>
+
+		{{if and .NumUsers .NumRepos}}
+		<section class="about-stats" aria-label="{{ctx.Locale.Tr "about.stats_heading"}}">
+			<h2 class="about-section-title">{{ctx.Locale.Tr "about.stats_heading"}}</h2>
+			<div class="about-stats-grid">
+				<div class="about-stat-card">
+					<span class="about-stat-number">{{.NumUsers}}</span>
+					<span class="about-stat-label">{{ctx.Locale.Tr "startpage.stats_users"}}</span>
+				</div>
+				<div class="about-stat-card">
+					<span class="about-stat-number">{{.NumRepos}}</span>
+					<span class="about-stat-label">{{ctx.Locale.Tr "startpage.stats_repos"}}</span>
+				</div>
+				<div class="about-stat-card">
+					<span class="about-stat-number">{{.NumOrgs}}</span>
+					<span class="about-stat-label">{{ctx.Locale.Tr "startpage.stats_orgs"}}</span>
+				</div>
+			</div>
+		</section>
+		{{end}}
+
+		<div class="about-sections">
+			<section class="about-section">
+				<h2 class="about-section-title">{{ctx.Locale.Tr "about.features_heading"}}</h2>
+				<ul class="about-features-grid">
+					<li class="about-feature-card">
+						<div class="about-feature-icon">{{svg "octicon-repo" 24}}</div>
+						<div>
+							<h3>{{ctx.Locale.Tr "about.feature_repos_title"}}</h3>
+							<p>{{ctx.Locale.Tr "about.feature_repos_desc"}}</p>
+						</div>
+					</li>
+					<li class="about-feature-card">
+						<div class="about-feature-icon">{{svg "octicon-git-pull-request" 24}}</div>
+						<div>
+							<h3>{{ctx.Locale.Tr "about.feature_review_title"}}</h3>
+							<p>{{ctx.Locale.Tr "about.feature_review_desc"}}</p>
+						</div>
+					</li>
+					<li class="about-feature-card">
+						<div class="about-feature-icon">{{svg "octicon-issue-opened" 24}}</div>
+						<div>
+							<h3>{{ctx.Locale.Tr "about.feature_issues_title"}}</h3>
+							<p>{{ctx.Locale.Tr "about.feature_issues_desc"}}</p>
+						</div>
+					</li>
+					<li class="about-feature-card">
+						<div class="about-feature-icon">{{svg "octicon-play" 24}}</div>
+						<div>
+							<h3>{{ctx.Locale.Tr "about.feature_actions_title"}}</h3>
+							<p>{{ctx.Locale.Tr "about.feature_actions_desc"}}</p>
+						</div>
+					</li>
+					<li class="about-feature-card">
+						<div class="about-feature-icon">{{svg "octicon-package" 24}}</div>
+						<div>
+							<h3>{{ctx.Locale.Tr "about.feature_packages_title"}}</h3>
+							<p>{{ctx.Locale.Tr "about.feature_packages_desc"}}</p>
+						</div>
+					</li>
+					<li class="about-feature-card">
+						<div class="about-feature-icon">{{svg "octicon-people" 24}}</div>
+						<div>
+							<h3>{{ctx.Locale.Tr "about.feature_teams_title"}}</h3>
+							<p>{{ctx.Locale.Tr "about.feature_teams_desc"}}</p>
+						</div>
+					</li>
+				</ul>
+			</section>
+
+			<section class="about-section about-runs-card">
+				<div class="about-runs-icon">{{svg "octicon-server" 32}}</div>
+				<div>
+					<h2>{{ctx.Locale.Tr "about.runs_heading"}}</h2>
+					<p>{{ctx.Locale.Tr "about.runs_desc"}}</p>
+				</div>
+			</section>
+
+			<section class="about-section about-developer-section">
+				<div class="about-developer-card">
+					<div class="about-developer-avatar">
+						{{svg "octicon-person" 36}}
+					</div>
+					<div class="about-developer-info">
+						<h2>{{ctx.Locale.Tr "about.developer_heading"}}</h2>
+						<p>{{ctx.Locale.Tr "about.developer_text"}}</p>
+						<div class="about-developer-links">
+							<a href="https://aayushhpokhrel.com.np" target="_blank" rel="noopener noreferrer">{{svg "octicon-globe"}} aayushhpokhrel.com.np</a>
+							<a href="https://github.com/aayushpokhrel49" target="_blank" rel="noopener noreferrer">{{svg "octicon-mark-github"}} GitHub</a>
+							<a href="https://x.com/aayushpokhrel49" target="_blank" rel="noopener noreferrer">{{svg "octicon-link-external"}} @aayushpokhrel49</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+</div>
+{{template "base/footer" .}}

@@ -4,9 +4,9 @@
 package setting
 
 import (
-	audit_model "gitea.dev/models/audit"
-	shared_audit "gitea.dev/routers/web/shared/audit"
-	"gitea.dev/services/context"
+	audit_model "branchspire/models/audit"
+	shared_audit "branchspire/routers/web/shared/audit"
+	"branchspire/services/context"
 )
 
 func ViewAuditLogs(ctx *context.Context) {

@@ -58,6 +58,7 @@
 @import "./base.css";
 @import "./avatar.css";
 @import "./home.css";
+@import "./about.css";
 @import "./install.css";
 
 @import "./repo.css";
@@ -84,6 +85,7 @@
 @import "./explore.css";
 @import "./review.css";
 @import "./actions.css";
+@import "./brand.css";
 
 @import "./helpers.css";
 

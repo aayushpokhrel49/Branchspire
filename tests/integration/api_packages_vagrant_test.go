@@ -14,13 +14,13 @@ import (
 	"strings"
 	"testing"
 
-	auth_model "gitea.dev/models/auth"
-	"gitea.dev/models/packages"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/json"
-	vagrant_module "gitea.dev/modules/packages/vagrant"
-	"gitea.dev/tests"
+	auth_model "branchspire/models/auth"
+	"branchspire/models/packages"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
+	"branchspire/modules/json"
+	vagrant_module "branchspire/modules/packages/vagrant"
+	"branchspire/tests"
 
 	"github.com/stretchr/testify/assert"
 )

@@ -8,11 +8,11 @@ import (
 	"path/filepath"
 	"testing"
 
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
+	repo_model "branchspire/models/repo"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
 
-	_ "gitea.dev/models/actions"
+	_ "branchspire/models/actions"
 
 	"github.com/stretchr/testify/assert"
 )

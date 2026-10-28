@@ -18,17 +18,17 @@ import (
 	"strings"
 	"time"
 
-	user_model "gitea.dev/models/user"
-	webhook_model "gitea.dev/models/webhook"
-	"gitea.dev/modules/egress"
-	"gitea.dev/modules/graceful"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/process"
-	"gitea.dev/modules/queue"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/timeutil"
-	"gitea.dev/modules/util"
-	webhook_module "gitea.dev/modules/webhook"
+	user_model "branchspire/models/user"
+	webhook_model "branchspire/models/webhook"
+	"branchspire/modules/egress"
+	"branchspire/modules/graceful"
+	"branchspire/modules/log"
+	"branchspire/modules/process"
+	"branchspire/modules/queue"
+	"branchspire/modules/setting"
+	"branchspire/modules/timeutil"
+	"branchspire/modules/util"
+	webhook_module "branchspire/modules/webhook"
 )
 
 func newDefaultRequest(ctx context.Context, w *webhook_model.Webhook, t *webhook_model.HookTask) (req *http.Request, body []byte, err error) {

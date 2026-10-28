@@ -7,13 +7,13 @@ import (
 	"fmt"
 	"testing"
 
-	"gitea.dev/models/db"
-	issues_model "gitea.dev/models/issues"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/models/unit"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/references"
+	"branchspire/models/db"
+	issues_model "branchspire/models/issues"
+	repo_model "branchspire/models/repo"
+	"branchspire/models/unit"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
+	"branchspire/modules/references"
 
 	"github.com/stretchr/testify/assert"
 )

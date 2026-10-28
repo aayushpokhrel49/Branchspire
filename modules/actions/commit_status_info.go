@@ -8,19 +8,19 @@ import (
 	"maps"
 	"slices"
 
-	actions_model "gitea.dev/models/actions"
-	"gitea.dev/models/db"
-	git_model "gitea.dev/models/git"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/modules/log"
+	actions_model "branchspire/models/actions"
+	"branchspire/models/db"
+	git_model "branchspire/models/git"
+	repo_model "branchspire/models/repo"
+	"branchspire/modules/log"
 )
 
 // CommitActionsStatusMap maps CommitStatus.ID to the live ActionRunJob status
-// for Gitea Actions rows.
+// for BranchSpire Actions rows.
 type CommitActionsStatusMap map[int64]actions_model.Status
 
 // IconStatus returns the action status name to route the icon through
-// repo/icons/action_status, or "" when the row isn't from Gitea Actions.
+// repo/icons/action_status, or "" when the row isn't from BranchSpire Actions.
 func (m CommitActionsStatusMap) IconStatus(s *git_model.CommitStatus) string {
 	if status, ok := m[s.ID]; ok {
 		return status.String()
@@ -29,7 +29,7 @@ func (m CommitActionsStatusMap) IconStatus(s *git_model.CommitStatus) string {
 }
 
 // GetCommitActionsStatusMap resolves the live ActionRunJob.Status for every
-// CommitStatus row backed by Gitea Actions. Rows from other sources (external
+// CommitStatus row backed by BranchSpire Actions. Rows from other sources (external
 // CIs, API) are left untouched and rendered from their stored State.
 func GetCommitActionsStatusMap(ctx context.Context, statuses []*git_model.CommitStatus) CommitActionsStatusMap {
 	if len(statuses) == 0 {

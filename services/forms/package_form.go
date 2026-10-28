@@ -3,7 +3,7 @@
 
 package forms
 
-import "gitea.dev/modules/web/middleware"
+import "branchspire/modules/web/middleware"
 
 type PackageCleanupRuleForm struct {
 	middleware.FormDefaultValidator

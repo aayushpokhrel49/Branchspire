@@ -25,8 +25,8 @@ func TestShellEscape(t *testing.T) {
 			"~/src/go/gitea/gitea",
 		}, {
 			"Typical windows path with spaces - should get doublequote escaped",
-			`C:\Program Files\Gitea v1.13 - I like lots of spaces\gitea`,
-			`"C:\\Program Files\\Gitea v1.13 - I like lots of spaces\\gitea"`,
+			`C:\Program Files\BranchSpire v1.13 - I like lots of spaces\gitea`,
+			`"C:\\Program Files\\BranchSpire v1.13 - I like lots of spaces\\gitea"`,
 		}, {
 			"Forward-slashed windows path with spaces - should get doublequote escaped",
 			"C:/Program Files/Gitea v1.13 - I like lots of spaces/gitea",
@@ -34,7 +34,7 @@ func TestShellEscape(t *testing.T) {
 		}, {
 			"Prefixed tilde - but then a space filled path",
 			"~git/Gitea v1.13/gitea",
-			`~git/"Gitea v1.13/gitea"`,
+			`~git/"BranchSpire v1.13/gitea"`,
 		}, {
 			"Bangs are unfortunately not predictable so need to be singlequoted",
 			"C:/Program Files/Gitea!/gitea",

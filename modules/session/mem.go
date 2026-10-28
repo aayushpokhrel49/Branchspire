@@ -9,7 +9,7 @@ import (
 	"sync"
 	"time"
 
-	"gitea.dev/modules/util"
+	"branchspire/modules/util"
 )
 
 type memoryBackend struct {

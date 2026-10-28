@@ -1,4 +1,4 @@
-// Copyright 2019 Gitea. All rights reserved.
+// Copyright 2019 BranchSpire. All rights reserved.
 // SPDX-License-Identifier: MIT
 
 package admin
@@ -7,17 +7,17 @@ import (
 	"context"
 	"fmt"
 
-	"gitea.dev/models/db"
-	repo_model "gitea.dev/models/repo"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/json"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/migration"
-	"gitea.dev/modules/secret"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/structs"
-	"gitea.dev/modules/timeutil"
-	"gitea.dev/modules/util"
+	"branchspire/models/db"
+	repo_model "branchspire/models/repo"
+	user_model "branchspire/models/user"
+	"branchspire/modules/json"
+	"branchspire/modules/log"
+	"branchspire/modules/migration"
+	"branchspire/modules/secret"
+	"branchspire/modules/setting"
+	"branchspire/modules/structs"
+	"branchspire/modules/timeutil"
+	"branchspire/modules/util"
 
 	"xorm.io/builder"
 )

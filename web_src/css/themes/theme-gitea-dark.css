@@ -65,7 +65,7 @@ gitea-theme-meta-info {
   /* console colors - used for actions console and console files */
   --color-console-fg: #f8f8f8;
   --color-console-fg-subtle: #c1c3c8;
-  --color-console-bg: #191a1c;
+  --color-console-bg: #0d1117;
   --color-console-hover-bg: #2a2c30;
   --color-console-active-bg: #313338;
   --color-console-link: #969aa1;
@@ -172,7 +172,7 @@ gitea-theme-meta-info {
   --color-diff-removed-row-bg: #301e1e;
   --color-diff-removed-row-border: #634343;
   --color-diff-removed-word-bg: #6f3333;
-  --color-diff-inactive: #25272a;
+  --color-diff-inactive: #161b22;
   --color-error-border: #763232;
   --color-error-bg: #322226;
   --color-error-bg-active: #49262a;
@@ -205,10 +205,10 @@ gitea-theme-meta-info {
   --color-git: #f05133;
   --color-logo: #609926;
   /* target-based colors */
-  --color-body: #1e1f20;
-  --color-box-header: #1b1c1e;
-  --color-box-body: #161718;
-  --color-box-body-highlight: #202124;
+  --color-body: #0d1117;
+  --color-box-header: #161b22;
+  --color-box-body: #0d1117;
+  --color-box-body-highlight: #1c2128;
   --color-text-dark: #f8f8f8;
   --color-text: #d2d4d8;
   --color-text-light: #c0c2c7;
@@ -218,39 +218,39 @@ gitea-theme-meta-info {
   --color-footer: var(--color-nav-bg);
   --color-timeline: #383b40;
   --color-input-text: var(--color-text-dark);
-  --color-input-background: #191a1c;
-  --color-input-toggle-background: #323438;
+  --color-input-background: #0d1117;
+  --color-input-toggle-background: #21262d;
   --color-input-border: var(--color-secondary-dark-1);
   --color-light: #0b0b0c28;
   --color-light-border: #f3f3f428;
   --color-hover: #f3f3f419;
-  --color-hover-opaque: #232528; /* TODO: color-mix(in srgb, var(--color-body), var(--color-hover)); */
+  --color-hover-opaque: #161b22; /* TODO: color-mix(in srgb, var(--color-body), var(--color-hover)); */
   --color-active: #f3f3f424;
-  --color-menu: #191a1c;
-  --color-card: #191a1c;
+  --color-menu: #161b22;
+  --color-card: #0d1117;
   --color-markup-table-row: #f3f3f40f;
   --color-markup-code-block: #f3f3f412;
   --color-markup-code-inline: #f3f3f428;
-  --color-button: #191a1c;
-  --color-code-bg: #161718;
+  --color-button: #21262d;
+  --color-code-bg: #161b22;
   --color-shadow: #0b0b0c58;
   --color-shadow-opaque: #0b0b0c;
-  --color-secondary-bg: #2e3033;
-  --color-expand-button: #333539;
+  --color-secondary-bg: #21262d;
+  --color-expand-button: #21262d;
   --color-placeholder-text: var(--color-text-light-3);
   --color-editor-line-highlight: var(--color-secondary-alpha-40);
   --color-editor-selection: var(--color-primary-alpha-50);
-  --color-project-column-bg: var(--color-secondary-light-2);
+  --color-project-column-bg: #161b22;
   --color-caret: var(--color-text); /* should ideally be --color-text-dark, see #15651 */
   --color-reaction-bg: #f3f3f412;
   --color-reaction-hover-bg: var(--color-primary-light-4);
   --color-reaction-active-bg: var(--color-primary-light-5);
   --color-tooltip-text: #fafafa;
   --color-tooltip-bg: #2b2e33;
-  --color-nav-bg: #18191b;
+  --color-nav-bg: #0d1117;
   --color-nav-hover-bg: var(--color-secondary-light-1);
   --color-nav-text: var(--color-text);
-  --color-secondary-nav-bg: #1a1b1e;
+  --color-secondary-nav-bg: #0d1117;
   --color-label-text: var(--color-text);
   --color-label-bg: #7a7f8a4b;
   --color-label-hover-bg: #7a7f8aa0;

@@ -6,8 +6,8 @@ package audit
 import (
 	"context"
 
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/web/middleware"
+	user_model "branchspire/models/user"
+	"branchspire/modules/web/middleware"
 )
 
 type doerContextKeyType struct{}

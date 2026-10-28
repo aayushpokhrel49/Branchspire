@@ -6,7 +6,7 @@ package setting
 import (
 	"strconv"
 
-	"gitea.dev/modules/log"
+	"branchspire/modules/log"
 )
 
 var Camo = struct {

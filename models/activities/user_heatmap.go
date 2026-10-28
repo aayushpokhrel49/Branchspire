@@ -6,11 +6,11 @@ package activities
 import (
 	"context"
 
-	"gitea.dev/models/db"
-	"gitea.dev/models/organization"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/timeutil"
+	"branchspire/models/db"
+	"branchspire/models/organization"
+	user_model "branchspire/models/user"
+	"branchspire/modules/setting"
+	"branchspire/modules/timeutil"
 )
 
 // UserHeatmapData represents the data needed to create a heatmap

@@ -9,10 +9,10 @@ import (
 	"strings"
 	"sync"
 
-	repo_model "gitea.dev/models/repo"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/util"
+	repo_model "branchspire/models/repo"
+	user_model "branchspire/models/user"
+	"branchspire/modules/git"
+	"branchspire/modules/util"
 )
 
 type CompareRouterReq struct {

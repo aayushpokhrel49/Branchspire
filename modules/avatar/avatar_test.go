@@ -11,7 +11,7 @@ import (
 	"os"
 	"testing"
 
-	"gitea.dev/modules/setting"
+	"branchspire/modules/setting"
 
 	"github.com/stretchr/testify/assert"
 )

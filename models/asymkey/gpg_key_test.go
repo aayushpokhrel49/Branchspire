@@ -7,10 +7,10 @@ import (
 	"testing"
 	"time"
 
-	"gitea.dev/models/db"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/timeutil"
+	"branchspire/models/db"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
+	"branchspire/modules/timeutil"
 
 	"github.com/ProtonMail/go-crypto/openpgp"
 	"github.com/ProtonMail/go-crypto/openpgp/packet"

@@ -8,10 +8,10 @@ import (
 	"fmt"
 
 	act_model "gitea.dev/actionslib/pkg/model"
-	actions_model "gitea.dev/models/actions"
-	"gitea.dev/modules/actions/jobparser"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/util"
+	actions_model "branchspire/models/actions"
+	"branchspire/modules/actions/jobparser"
+	"branchspire/modules/setting"
+	"branchspire/modules/util"
 
 	"go.yaml.in/yaml/v4"
 )

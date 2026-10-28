@@ -11,12 +11,12 @@ import (
 	"regexp"
 	"strings"
 
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/reqctx"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/util"
-	"gitea.dev/services/context"
+	repo_model "branchspire/models/repo"
+	"branchspire/modules/log"
+	"branchspire/modules/reqctx"
+	"branchspire/modules/setting"
+	"branchspire/modules/util"
+	"branchspire/services/context"
 )
 
 // ErrFileTypeForbidden not allowed file type error

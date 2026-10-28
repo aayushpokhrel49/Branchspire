@@ -16,8 +16,8 @@ import (
 	"sync"
 	"time"
 
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/setting"
+	"branchspire/modules/log"
+	"branchspire/modules/setting"
 )
 
 const (

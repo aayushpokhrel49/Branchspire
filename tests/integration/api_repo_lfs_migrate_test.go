@@ -8,14 +8,14 @@ import (
 	"path"
 	"testing"
 
-	auth_model "gitea.dev/models/auth"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/lfs"
-	"gitea.dev/modules/setting"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/modules/test"
-	"gitea.dev/tests"
+	auth_model "branchspire/models/auth"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
+	"branchspire/modules/lfs"
+	"branchspire/modules/setting"
+	api "branchspire/modules/structs"
+	"branchspire/modules/test"
+	"branchspire/tests"
 
 	"github.com/stretchr/testify/assert"
 )

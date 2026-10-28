@@ -6,12 +6,12 @@ package admin
 import (
 	"net/http"
 
-	packages_model "gitea.dev/models/packages"
-	"gitea.dev/modules/optional"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/routers/api/v1/utils"
-	"gitea.dev/services/context"
-	"gitea.dev/services/convert"
+	packages_model "branchspire/models/packages"
+	"branchspire/modules/optional"
+	api "branchspire/modules/structs"
+	"branchspire/routers/api/v1/utils"
+	"branchspire/services/context"
+	"branchspire/services/convert"
 )
 
 // ListPackages lists every package version on the instance.

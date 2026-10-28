@@ -9,14 +9,14 @@ import (
 	"html/template"
 	"strconv"
 
-	activities_model "gitea.dev/models/activities"
-	"gitea.dev/models/avatars"
-	"gitea.dev/models/organization"
-	repo_model "gitea.dev/models/repo"
-	user_model "gitea.dev/models/user"
-	gitea_html "gitea.dev/modules/htmlutil"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/util"
+	activities_model "branchspire/models/activities"
+	"branchspire/models/avatars"
+	"branchspire/models/organization"
+	repo_model "branchspire/models/repo"
+	user_model "branchspire/models/user"
+	gitea_html "branchspire/modules/htmlutil"
+	"branchspire/modules/setting"
+	"branchspire/modules/util"
 )
 
 type AvatarUtils struct {

@@ -11,7 +11,7 @@ import (
 	"slices"
 	"sync"
 
-	"gitea.dev/modules/setting"
+	"branchspire/modules/setting"
 
 	"xorm.io/builder"
 	"xorm.io/xorm"

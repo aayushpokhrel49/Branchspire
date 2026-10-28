@@ -12,13 +12,13 @@ import (
 
 	runnerv1 "gitea.dev/actionslib/runner/v1"
 	"gitea.dev/actionslib/runner/v1/runnerv1connect"
-	actions_model "gitea.dev/models/actions"
-	repo_model "gitea.dev/models/repo"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/actions"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/util"
-	actions_service "gitea.dev/services/actions"
+	actions_model "branchspire/models/actions"
+	repo_model "branchspire/models/repo"
+	user_model "branchspire/models/user"
+	"branchspire/modules/actions"
+	"branchspire/modules/log"
+	"branchspire/modules/util"
+	actions_service "branchspire/services/actions"
 
 	"connectrpc.com/connect"
 	"google.golang.org/grpc/codes"
@@ -180,7 +180,7 @@ func (s *Service) FetchTask(
 		}
 		// if we don't increase the value of `latestVersion` here,
 		// the response of FetchTask will return tasksVersion as zero.
-		// and the runner will treat it as an old version of Gitea.
+		// and the runner will treat it as an old version of BranchSpire.
 		latestVersion++
 	}
 

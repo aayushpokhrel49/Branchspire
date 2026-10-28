@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"sync"
 
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/util"
+	"branchspire/modules/log"
+	"branchspire/modules/util"
 )
 
 type Store interface {

@@ -10,7 +10,7 @@ import (
 
 	pingv1 "gitea.dev/actionslib/ping/v1"
 	"gitea.dev/actionslib/ping/v1/pingv1connect"
-	"gitea.dev/modules/log"
+	"branchspire/modules/log"
 
 	"connectrpc.com/connect"
 )

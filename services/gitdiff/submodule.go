@@ -7,10 +7,10 @@ import (
 	"context"
 	"html/template"
 
-	"gitea.dev/modules/base"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/htmlutil"
-	"gitea.dev/modules/log"
+	"branchspire/modules/base"
+	"branchspire/modules/git"
+	"branchspire/modules/htmlutil"
+	"branchspire/modules/log"
 )
 
 type SubmoduleDiffInfo struct {

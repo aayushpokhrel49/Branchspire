@@ -9,9 +9,11 @@ import (
 	"fmt"
 	"io"
 	"os"
+	"path/filepath"
+	"strings"
 
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/setting"
+	"branchspire/modules/log"
+	"branchspire/modules/setting"
 
 	"github.com/urfave/cli/v3"
 )
@@ -23,13 +25,13 @@ func init() {
 }
 
 // cliHelpPrinterNew helps to print "DEFAULT CONFIGURATION" for the following cases ( "-c" can apper in any position):
-// * ./gitea -c /dev/null -h
-// * ./gitea -c help /dev/null help
-// * ./gitea help -c /dev/null
-// * ./gitea help -c /dev/null web
-// * ./gitea help web -c /dev/null
-// * ./gitea web help -c /dev/null
-// * ./gitea web -h -c /dev/null
+// * ./branchspire -c /dev/null -h
+// * ./branchspire -c help /dev/null help
+// * ./branchspire help -c /dev/null
+// * ./branchspire help -c /dev/null web
+// * ./branchspire help web -c /dev/null
+// * ./branchspire web help -c /dev/null
+// * ./branchspire web -h -c /dev/null
 func cliHelpPrinterNew(out io.Writer, templ string, data any) {
 	cmd, _ := data.(*cli.Command)
 	if cmd != nil {
@@ -86,9 +88,9 @@ type AppVersion struct {
 
 func NewMainApp(appVer AppVersion) *cli.Command {
 	app := &cli.Command{}
-	app.Name = "gitea" // must be lower-cased because it appears in the "USAGE" section like "gitea doctor [command [command options]]"
+	app.Name = strings.ToLower(strings.TrimSuffix(filepath.Base(os.Args[0]), ".exe")) // must be lower-cased because it appears in the "USAGE" section like "branchspire doctor [command [command options]]"
 	app.Usage = "A painless self-hosted Git service"
-	app.Description = `Gitea program contains "web" and other subcommands. If no subcommand is given, it starts the web server by default. Use "web" subcommand for more web server arguments, use other subcommands for other purposes.`
+	app.Description = `BranchSpire program contains "web" and other subcommands. If no subcommand is given, it starts the web server by default. Use "web" subcommand for more web server arguments, use other subcommands for other purposes.`
 	app.Version = appVer.Version + appVer.Extra
 	app.EnableShellCompletion = true
 	app.Flags = []cli.Flag{
@@ -96,7 +98,7 @@ func NewMainApp(appVer AppVersion) *cli.Command {
 			Name:      "work-path",
 			Aliases:   []string{"w"},
 			TakesFile: true,
-			Usage:     "Set Gitea's working path (defaults to the Gitea's binary directory)",
+			Usage:     "Set BranchSpire's working path (defaults to the BranchSpire's binary directory)",
 		},
 		&cli.StringFlag{
 			Name:      "config",

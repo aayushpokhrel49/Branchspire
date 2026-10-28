@@ -10,9 +10,9 @@ import (
 	"strings"
 	"time"
 
-	"gitea.dev/modules/json"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/setting"
+	"branchspire/modules/json"
+	"branchspire/modules/log"
+	"branchspire/modules/setting"
 
 	"github.com/golang-jwt/jwt/v5"
 )

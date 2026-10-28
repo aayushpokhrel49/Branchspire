@@ -6,11 +6,11 @@ package admin
 import (
 	"net/http"
 
-	user_model "gitea.dev/models/user"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/routers/api/v1/utils"
-	"gitea.dev/services/context"
-	"gitea.dev/services/convert"
+	user_model "branchspire/models/user"
+	api "branchspire/modules/structs"
+	"branchspire/routers/api/v1/utils"
+	"branchspire/services/context"
+	"branchspire/services/convert"
 )
 
 // GetAllEmails

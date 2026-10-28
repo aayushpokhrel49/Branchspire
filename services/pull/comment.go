@@ -7,13 +7,13 @@ import (
 	"context"
 	"slices"
 
-	"gitea.dev/models/db"
-	issues_model "gitea.dev/models/issues"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/container"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/json"
-	"gitea.dev/modules/log"
+	"branchspire/models/db"
+	issues_model "branchspire/models/issues"
+	user_model "branchspire/models/user"
+	"branchspire/modules/container"
+	"branchspire/modules/git"
+	"branchspire/modules/json"
+	"branchspire/modules/log"
 )
 
 const maxPushCommitsInCommentCount = 1000

@@ -7,16 +7,16 @@ import (
 	"errors"
 	"html/template"
 
-	pull_model "gitea.dev/models/pull"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/models/unit"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/svg"
-	"gitea.dev/modules/templates"
-	"gitea.dev/modules/util"
-	"gitea.dev/services/context"
-	pull_service "gitea.dev/services/pull"
+	pull_model "branchspire/models/pull"
+	repo_model "branchspire/models/repo"
+	"branchspire/models/unit"
+	"branchspire/modules/git"
+	"branchspire/modules/log"
+	"branchspire/modules/svg"
+	"branchspire/modules/templates"
+	"branchspire/modules/util"
+	"branchspire/services/context"
+	pull_service "branchspire/services/pull"
 )
 
 func (prInfo *pullRequestViewInfo) prepareMergeBoxFormProps(ctx *context.Context) {
@@ -159,7 +159,7 @@ func (prInfo *pullRequestViewInfo) prepareMergeBoxFormProps(ctx *context.Context
 	// To test it:
 	//  Enable "Manually Merged" feature in the Repository Settings
 	//  Create a pull request, either:
-	//  - Merge the pull request branch locally and push the merged commit to Gitea
+	//  - Merge the pull request branch locally and push the merged commit to BranchSpire
 	//  - Make some conflicts between the base branch and the pull request branch
 	//  Then the Manually Merged form will be shown in the merge form
 	canUseManualMerge := !pull.IsWorkInProgress(ctx) && !pull.IsChecking() && prConfig.AllowManualMerge

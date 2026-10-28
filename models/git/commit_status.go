@@ -1,4 +1,4 @@
-// Copyright 2017 Gitea. All rights reserved.
+// Copyright 2017 BranchSpire. All rights reserved.
 // SPDX-License-Identifier: MIT
 
 package git
@@ -14,21 +14,21 @@ import (
 	"strings"
 	"time"
 
-	asymkey_model "gitea.dev/models/asymkey"
-	"gitea.dev/models/db"
-	access_model "gitea.dev/models/perm/access"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/models/unit"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/cache"
-	"gitea.dev/modules/cachegroup"
-	"gitea.dev/modules/commitstatus"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/timeutil"
-	"gitea.dev/modules/translation"
-	"gitea.dev/modules/util"
+	asymkey_model "branchspire/models/asymkey"
+	"branchspire/models/db"
+	access_model "branchspire/models/perm/access"
+	repo_model "branchspire/models/repo"
+	"branchspire/models/unit"
+	user_model "branchspire/models/user"
+	"branchspire/modules/cache"
+	"branchspire/modules/cachegroup"
+	"branchspire/modules/commitstatus"
+	"branchspire/modules/git"
+	"branchspire/modules/log"
+	"branchspire/modules/setting"
+	"branchspire/modules/timeutil"
+	"branchspire/modules/translation"
+	"branchspire/modules/util"
 
 	"xorm.io/builder"
 )
@@ -43,7 +43,7 @@ type CommitStatus struct {
 	State  commitstatus.CommitStatusState `xorm:"VARCHAR(7) NOT NULL"`
 
 	// TargetURL points to the commit status page reported by a CI system
-	// If Gitea Actions is used, it is a relative link like "{RepoLink}/actions/runs/{RunID}/jobs{JobID}"
+	// If BranchSpire Actions is used, it is a relative link like "{RepoLink}/actions/runs/{RunID}/jobs{JobID}"
 	TargetURL string `xorm:"TEXT"`
 
 	Description string           `xorm:"TEXT"`
@@ -218,7 +218,7 @@ func (status *CommitStatus) LocaleString(lang translation.Locale) string {
 	return lang.TrString("repo.commitstatus." + status.State.String())
 }
 
-// hideActionsURL set `TargetURL` to an empty string if the status comes from Gitea Actions
+// hideActionsURL set `TargetURL` to an empty string if the status comes from BranchSpire Actions
 func (status *CommitStatus) hideActionsURL(ctx context.Context) {
 	if _, ok := status.cutTargetURLGiteaActionsPrefix(ctx); ok {
 		status.TargetURL = ""
@@ -241,7 +241,7 @@ func (status *CommitStatus) cutTargetURLGiteaActionsPrefix(ctx context.Context) 
 	return strings.CutPrefix(status.TargetURL, prefix)
 }
 
-// ParseGiteaActionsTargetURL parses the commit status target URL as Gitea Actions link
+// ParseGiteaActionsTargetURL parses the commit status target URL as BranchSpire Actions link
 func (status *CommitStatus) ParseGiteaActionsTargetURL(ctx context.Context) (runID, jobID int64, ok bool) {
 	s, ok := status.cutTargetURLGiteaActionsPrefix(ctx)
 	if !ok {
@@ -551,7 +551,7 @@ func HashCommitStatusContext(context string) string {
 	return fmt.Sprintf("%x", sha1.Sum([]byte(context)))
 }
 
-// CommitStatusesApplyDoerPermission hides the Gitea Actions url of every status whose repository
+// CommitStatusesApplyDoerPermission hides the BranchSpire Actions url of every status whose repository
 // the doer cannot read the Actions unit of, so the "Details" link does not lead to a 404.
 func CommitStatusesApplyDoerPermission(ctx context.Context, doer *user_model.User, statuses []*CommitStatus) {
 	for _, status := range statuses {

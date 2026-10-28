@@ -7,12 +7,12 @@ package pull
 import (
 	"testing"
 
-	actions_model "gitea.dev/models/actions"
-	"gitea.dev/models/db"
-	git_model "gitea.dev/models/git"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/models/unittest"
-	"gitea.dev/modules/commitstatus"
+	actions_model "branchspire/models/actions"
+	"branchspire/models/db"
+	git_model "branchspire/models/git"
+	repo_model "branchspire/models/repo"
+	"branchspire/models/unittest"
+	"branchspire/modules/commitstatus"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

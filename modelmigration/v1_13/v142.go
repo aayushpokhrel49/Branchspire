@@ -6,8 +6,8 @@ package v1_13
 import (
 	"context"
 
-	"gitea.dev/modelmigration/base"
-	"gitea.dev/modules/log"
+	"branchspire/modelmigration/base"
+	"branchspire/modules/log"
 
 	"xorm.io/builder"
 )

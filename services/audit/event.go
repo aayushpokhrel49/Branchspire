@@ -7,12 +7,12 @@ import (
 	"context"
 	"time"
 
-	audit_model "gitea.dev/models/audit"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/reqctx"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/timeutil"
+	audit_model "branchspire/models/audit"
+	user_model "branchspire/models/user"
+	"branchspire/modules/log"
+	"branchspire/modules/reqctx"
+	"branchspire/modules/setting"
+	"branchspire/modules/timeutil"
 )
 
 // RecordParams describes an audit event. Callers (or domain-specific helpers)

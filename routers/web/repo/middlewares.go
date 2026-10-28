@@ -6,14 +6,14 @@ package repo
 import (
 	"strconv"
 
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/optional"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/util"
-	"gitea.dev/services/context"
-	"gitea.dev/services/gitdiff"
-	user_service "gitea.dev/services/user"
+	user_model "branchspire/models/user"
+	"branchspire/modules/log"
+	"branchspire/modules/optional"
+	"branchspire/modules/setting"
+	"branchspire/modules/util"
+	"branchspire/services/context"
+	"branchspire/services/gitdiff"
+	user_service "branchspire/services/user"
 )
 
 // SetEditorconfigIfExists set editor config as render variable

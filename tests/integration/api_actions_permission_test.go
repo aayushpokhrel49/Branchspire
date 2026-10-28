@@ -7,10 +7,10 @@ import (
 	"net/http"
 	"testing"
 
-	"gitea.dev/modules/setting"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/modules/test"
-	"gitea.dev/tests"
+	"branchspire/modules/setting"
+	api "branchspire/modules/structs"
+	"branchspire/modules/test"
+	"branchspire/tests"
 
 	"github.com/stretchr/testify/assert"
 )

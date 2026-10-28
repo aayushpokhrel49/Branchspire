@@ -6,10 +6,10 @@ package integration
 import (
 	"testing"
 
-	"gitea.dev/models/db"
-	"gitea.dev/models/unittest"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/test"
+	"branchspire/models/db"
+	"branchspire/models/unittest"
+	"branchspire/modules/setting"
+	"branchspire/modules/test"
 
 	"github.com/stretchr/testify/assert"
 )

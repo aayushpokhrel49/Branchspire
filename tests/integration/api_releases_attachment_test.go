@@ -8,13 +8,13 @@ import (
 	"net/http"
 	"testing"
 
-	auth_model "gitea.dev/models/auth"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/setting"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/modules/test"
+	auth_model "branchspire/models/auth"
+	repo_model "branchspire/models/repo"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
+	"branchspire/modules/setting"
+	api "branchspire/modules/structs"
+	"branchspire/modules/test"
 
 	"github.com/stretchr/testify/assert"
 )

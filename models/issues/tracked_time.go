@@ -9,11 +9,11 @@ import (
 	"fmt"
 	"time"
 
-	"gitea.dev/models/db"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/optional"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/util"
+	"branchspire/models/db"
+	user_model "branchspire/models/user"
+	"branchspire/modules/optional"
+	"branchspire/modules/setting"
+	"branchspire/modules/util"
 
 	"xorm.io/builder"
 )

@@ -1,4 +1,4 @@
-// Copyright 2019 Gitea. All rights reserved.
+// Copyright 2019 BranchSpire. All rights reserved.
 // SPDX-License-Identifier: MIT
 
 package task
@@ -8,20 +8,20 @@ import (
 	"errors"
 	"fmt"
 
-	admin_model "gitea.dev/models/admin"
-	repo_model "gitea.dev/models/repo"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/graceful"
-	"gitea.dev/modules/json"
-	"gitea.dev/modules/log"
-	base "gitea.dev/modules/migration"
-	"gitea.dev/modules/queue"
-	"gitea.dev/modules/secret"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/structs"
-	"gitea.dev/modules/timeutil"
-	"gitea.dev/modules/util"
-	repo_service "gitea.dev/services/repository"
+	admin_model "branchspire/models/admin"
+	repo_model "branchspire/models/repo"
+	user_model "branchspire/models/user"
+	"branchspire/modules/graceful"
+	"branchspire/modules/json"
+	"branchspire/modules/log"
+	base "branchspire/modules/migration"
+	"branchspire/modules/queue"
+	"branchspire/modules/secret"
+	"branchspire/modules/setting"
+	"branchspire/modules/structs"
+	"branchspire/modules/timeutil"
+	"branchspire/modules/util"
+	repo_service "branchspire/services/repository"
 )
 
 // taskQueue is a global queue of tasks

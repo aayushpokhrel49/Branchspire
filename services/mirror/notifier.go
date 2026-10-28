@@ -6,10 +6,10 @@ package mirror
 import (
 	"context"
 
-	repo_model "gitea.dev/models/repo"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/repository"
-	notify_service "gitea.dev/services/notify"
+	repo_model "branchspire/models/repo"
+	user_model "branchspire/models/user"
+	"branchspire/modules/repository"
+	notify_service "branchspire/services/notify"
 )
 
 func init() {

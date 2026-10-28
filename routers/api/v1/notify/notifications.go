@@ -7,11 +7,11 @@ import (
 	"net/http"
 	"strings"
 
-	activities_model "gitea.dev/models/activities"
-	"gitea.dev/models/db"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/routers/api/v1/utils"
-	"gitea.dev/services/context"
+	activities_model "branchspire/models/activities"
+	"branchspire/models/db"
+	api "branchspire/modules/structs"
+	"branchspire/routers/api/v1/utils"
+	"branchspire/services/context"
 )
 
 // NewAvailable check if unread notifications exist

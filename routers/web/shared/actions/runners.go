@@ -10,16 +10,16 @@ import (
 	"net/http"
 	"net/url"
 
-	actions_model "gitea.dev/models/actions"
-	"gitea.dev/models/db"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/templates"
-	"gitea.dev/modules/util"
-	"gitea.dev/modules/web"
-	shared_user "gitea.dev/routers/web/shared/user"
-	"gitea.dev/services/context"
-	"gitea.dev/services/forms"
+	actions_model "branchspire/models/actions"
+	"branchspire/models/db"
+	"branchspire/modules/log"
+	"branchspire/modules/setting"
+	"branchspire/modules/templates"
+	"branchspire/modules/util"
+	"branchspire/modules/web"
+	shared_user "branchspire/routers/web/shared/user"
+	"branchspire/services/context"
+	"branchspire/services/forms"
 )
 
 const (

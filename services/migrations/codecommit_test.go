@@ -10,8 +10,8 @@ import (
 	"testing"
 	"time"
 
-	"gitea.dev/models/unittest"
-	base "gitea.dev/modules/migration"
+	"branchspire/models/unittest"
+	base "branchspire/modules/migration"
 
 	"github.com/stretchr/testify/require"
 )
@@ -36,7 +36,7 @@ func TestCodeCommitDownloadRepo(t *testing.T) {
 		Name:          "test_repo",
 		Owner:         "123456789012",
 		IsPrivate:     true,
-		Description:   "Test repository for Gitea migrations",
+		Description:   "Test repository for BranchSpire migrations",
 		CloneURL:      "https://git-codecommit.us-east-1.amazonaws.com/v1/repos/test_repo",
 		DefaultBranch: "main",
 	}, repo)

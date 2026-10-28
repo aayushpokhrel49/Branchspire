@@ -7,18 +7,18 @@ import (
 	"testing"
 	"time"
 
-	packages_model "gitea.dev/models/packages"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/json"
-	npm_module "gitea.dev/modules/packages/npm"
-	"gitea.dev/modules/timeutil"
+	packages_model "branchspire/models/packages"
+	user_model "branchspire/models/user"
+	"branchspire/modules/json"
+	npm_module "branchspire/modules/packages/npm"
+	"branchspire/modules/timeutil"
 
 	"github.com/hashicorp/go-version"
 	"github.com/stretchr/testify/assert"
 )
 
 func TestCreatePackageMetadataResponse(t *testing.T) {
-	repository := npm_module.Repository{Type: "git", URL: "https://gitea.dev/alice/test.git"}
+	repository := npm_module.Repository{Type: "git", URL: "https://branchspire/alice/test.git"}
 	descriptor := func(v string, publishedUnix int64, repo npm_module.Repository, tarballPath string) *packages_model.PackageDescriptor {
 		return &packages_model.PackageDescriptor{
 			Package:  &packages_model.Package{Name: "@scope/test"},
@@ -33,7 +33,7 @@ func TestCreatePackageMetadataResponse(t *testing.T) {
 		}
 	}
 
-	result := createPackageMetadataResponse("https://gitea.dev/api/packages/alice/npm", []*packages_model.PackageDescriptor{
+	result := createPackageMetadataResponse("https://branchspire/api/packages/alice/npm", []*packages_model.PackageDescriptor{
 		descriptor("1.1.0", 1000, npm_module.Repository{}, "@scope/test/-/test-1.1.0.tgz"),
 		descriptor("2.0.0-rc.1", 1500, repository, ""),
 		descriptor("1.0.0", 2000, repository, ""),
@@ -54,11 +54,11 @@ func TestCreatePackageMetadataResponse(t *testing.T) {
 	assert.Equal(t, []string{"gitea"}, result.Versions["1.0.0"].Keywords)
 	assert.Equal(t, []npm_module.User{{Name: "alice"}}, result.Versions["1.0.0"].Maintainers)
 	assert.Equal(t,
-		"https://gitea.dev/api/packages/alice/npm/%40scope%2Ftest/-/1.0.0/test-1.0.0.tgz",
+		"https://branchspire/api/packages/alice/npm/%40scope%2Ftest/-/1.0.0/test-1.0.0.tgz",
 		result.Versions["1.0.0"].Dist.Tarball,
 	)
 	assert.Equal(t,
-		"https://gitea.dev/api/packages/alice/npm/@scope/test/-/test-1.1.0.tgz",
+		"https://branchspire/api/packages/alice/npm/@scope/test/-/test-1.1.0.tgz",
 		result.Versions["1.1.0"].Dist.Tarball,
 	)
 	assert.Equal(t, repository, result.Versions["1.0.0"].Repository)

@@ -1,0 +1,1745 @@
+{
+ "url": "http://localhost:3000",
+ "at": "2026-10-28T04:34:16.229Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 5,
+   "filled": [
+    0.82,
+    0.28,
+    0.65,
+    0.51,
+    0.58
+   ],
+   "motion": {
+    "elements": 20,
+    "css": 20,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 3796,
+     "screens": 4.2,
+     "words": 417,
+     "img": 2,
+     "video": 0,
+     "canvas": 0,
+     "svg": 11,
+     "sections": 5,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 4,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 4,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Where your branches converge.",
+     "words": 4,
+     "chars": 29,
+     "lines": 2,
+     "size": 66.5,
+     "vw": 4.6,
+     "font": "-apple-system",
+     "weight": 700,
+     "tracking": -0.03,
+     "leading": 1.02,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.43,
+     "top": 240,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Where your branches converge.",
+     "words": 4,
+     "lines": 2,
+     "size": 66.5,
+     "font": "-apple-system"
+    },
+    "headings": [
+     {
+      "text": "Where your branches converge.",
+      "words": 4,
+      "chars": 29,
+      "lines": 2,
+      "size": 66.5,
+      "vw": 4.6,
+      "font": "-apple-system",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.43,
+      "top": 240,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Everything you need, on your server",
+      "words": 6,
+      "chars": 35,
+      "lines": 2,
+      "size": 38.5,
+      "vw": 2.7,
+      "font": "-apple-system",
+      "weight": 700,
+      "tracking": -0.025,
+      "leading": 1.08,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.37,
+      "top": 849,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Code moves end to end",
+      "words": 5,
+      "chars": 21,
+      "lines": 1,
+      "size": 38.5,
+      "vw": 2.7,
+      "font": "-apple-system",
+      "weight": 700,
+      "tracking": -0.025,
+      "leading": 1.08,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.4,
+      "top": 1612,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Built lean, kept complete",
+      "words": 4,
+      "chars": 25,
+      "lines": 1,
+      "size": 38.5,
+      "vw": 2.7,
+      "font": "-apple-system",
+      "weight": 700,
+      "tracking": -0.025,
+      "leading": 1.08,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.48,
+      "top": 2290,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "25+ registries",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 29.4,
+      "vw": 2,
+      "font": "-apple-system",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 0.68,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.22,
+      "top": 2404,
+      "tag": "dt",
+      "kind": "heading"
+     },
+     {
+      "text": "Every platform",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 29.4,
+      "vw": 2,
+      "font": "-apple-system",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 0.68,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.22,
+      "top": 2404,
+      "tag": "dt",
+      "kind": "heading"
+     },
+     {
+      "text": "Actions-native",
+      "words": 1,
+      "chars": 14,
+      "lines": 1,
+      "size": 29.4,
+      "vw": 2,
+      "font": "-apple-system",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 0.68,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.22,
+      "top": 2404,
+      "tag": "dt",
+      "kind": "heading"
+     },
+     {
+      "text": "One binary",
+      "words": 2,
+      "chars": 10,
+      "lines": 1,
+      "size": 29.4,
+      "vw": 2,
+      "font": "-apple-system",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 0.68,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.22,
+      "top": 2404,
+      "tag": "dt",
+      "kind": "heading"
+     },
+     {
+      "text": "Your repositories. Your rules.",
+      "words": 4,
+      "chars": 30,
+      "lines": 1,
+      "size": 38.5,
+      "vw": 2.7,
+      "font": "-apple-system",
+      "weight": 700,
+      "tracking": -0.025,
+      "leading": 1.08,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.48,
+      "top": 3087,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 9,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": 4,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "-apple-system",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      29,
+      39,
+      67
+     ],
+     "sizeCount": 9,
+     "notLoaded": [],
+     "body": {
+      "font": "-apple-system",
+      "size": 16,
+      "leading": 1.55,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 18.9
+     },
+     "measureChars": 67,
+     "max": {
+      "size": 66.5,
+      "vw": 4.6,
+      "font": "-apple-system",
+      "text": "Where your branches converge."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.06,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ffffff",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 1
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#0d1117",
+       "top": 49,
+       "hsl": {
+        "h": 216,
+        "s": 0.28,
+        "l": 0.07
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#0c1118",
+       "share": 0.44
+      },
+      {
+       "color": "#0d1117",
+       "share": 0.23
+      },
+      {
+       "color": "#181c21",
+       "share": 0.11
+      },
+      {
+       "color": "#f4f4f4",
+       "share": 0.11
+      },
+      {
+       "color": "#0d1018",
+       "share": 0.03
+      }
+     ],
+     "button": {
+      "bg": "#ffffff",
+      "hsl": {
+       "h": 0,
+       "s": 0,
+       "l": 1
+      },
+      "fg": "#0d1117"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 8,
+     "inHero": 5,
+     "radius": 10,
+     "height": 46,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Login",
+      "Register",
+      "Register",
+      "Sign In",
+      "Explore"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 4,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 4,
+     "boxRadius": 12,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "svg",
+      "ratio": 0.16
+     }
+    ],
+    "nav": {
+     "links": 5,
+     "fixed": false,
+     "height": 49,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 3796,
+    "margins": {
+     "left": 24,
+     "right": 43
+    },
+    "sections": [
+     {
+      "sel": "section.home-hero",
+      "tag": "section",
+      "top": 49,
+      "height": 680,
+      "words": 24,
+      "media": 1,
+      "middle": 68,
+      "heading": {
+       "text": "Where your branches converge.",
+       "size": 67,
+       "tag": "h1"
+      },
+      "left": 160,
+      "right": 160,
+      "textLeft": 160,
+      "textRight": 668,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#features.home-section.home-features",
+      "tag": "section",
+      "top": 729,
+      "height": 707,
+      "words": 132,
+      "media": 0,
+      "middle": 17,
+      "heading": {
+       "text": "Everything you need, on your server",
+       "size": 39,
+       "tag": "h2"
+      },
+      "left": 24,
+      "right": 164,
+      "textLeft": 24,
+      "textRight": 164,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#workflow.home-section.home-workflow",
+      "tag": "section",
+      "top": 1436,
+      "height": 734,
+      "words": 118,
+      "media": 0,
+      "middle": 97,
+      "heading": {
+       "text": "Code moves end to end",
+       "size": 39,
+       "tag": "h2"
+      },
+      "left": 160,
+      "right": 189,
+      "textLeft": 160,
+      "textRight": 189,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#facts.home-section.home-band--ink",
+      "tag": "section",
+      "top": 2170,
+      "height": 796,
+      "words": 93,
+      "media": 0,
+      "middle": 73,
+      "heading": {
+       "text": "Built lean, kept complete",
+       "size": 39,
+       "tag": "h2"
+      },
+      "left": 24,
+      "right": 35,
+      "textLeft": 24,
+      "textRight": 35,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#start.home-section.home-finish",
+      "tag": "section",
+      "top": 2967,
+      "height": 433,
+      "words": 22,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Your repositories. Your rules.",
+       "size": 39,
+       "tag": "h2"
+      },
+      "left": 456,
+      "right": 456,
+      "textLeft": 456,
+      "textRight": 456,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer#footer.home-footer",
+      "tag": "footer",
+      "top": 3400,
+      "height": 360,
+      "words": 24,
+      "media": 0,
+      "middle": 182,
+      "heading": {
+       "text": "Product",
+       "size": 13,
+       "tag": "h3"
+      },
+      "left": 160,
+      "right": 160,
+      "textLeft": 160,
+      "textRight": 160,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Where your branches converge.",
+      "size": 67,
+      "top": 240,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 160,
+      "n": 5
+     },
+     {
+      "x": 24,
+      "n": 1
+     },
+     {
+      "x": 744,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 7,
+    "bodySize": 16,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0.2,
+    "voidBox": {
+     "x": 0,
+     "y": 660,
+     "w": 1440,
+     "h": 180
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 5,
+   "filled": [
+    0.75,
+    0.33,
+    0.81,
+    0.65,
+    0.65
+   ],
+   "motion": {
+    "elements": 20,
+    "css": 20,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 4097,
+     "screens": 4,
+     "words": 417,
+     "img": 2,
+     "video": 0,
+     "canvas": 0,
+     "svg": 11,
+     "sections": 5,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 4,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 2,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Where your branches converge.",
+     "words": 4,
+     "chars": 29,
+     "lines": 1,
+     "size": 42,
+     "vw": 5.5,
+     "font": "-apple-system",
+     "weight": 700,
+     "tracking": -0.03,
+     "leading": 1.06,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.82,
+     "top": 105,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Where your branches converge.",
+     "words": 4,
+     "lines": 1,
+     "size": 42,
+     "font": "-apple-system"
+    },
+    "headings": [
+     {
+      "text": "Where your branches converge.",
+      "words": 4,
+      "chars": 29,
+      "lines": 1,
+      "size": 42,
+      "vw": 5.5,
+      "font": "-apple-system",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.82,
+      "top": 105,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Everything you need, on your server",
+      "words": 6,
+      "chars": 35,
+      "lines": 1,
+      "size": 26.6,
+      "vw": 3.5,
+      "font": "-apple-system",
+      "weight": 700,
+      "tracking": -0.025,
+      "leading": 1.08,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.62,
+      "top": 871,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Code moves end to end",
+      "words": 5,
+      "chars": 21,
+      "lines": 1,
+      "size": 26.6,
+      "vw": 3.5,
+      "font": "-apple-system",
+      "weight": 700,
+      "tracking": -0.025,
+      "leading": 1.08,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.47,
+      "top": 1692,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Built lean, kept complete",
+      "words": 4,
+      "chars": 25,
+      "lines": 1,
+      "size": 26.6,
+      "vw": 3.5,
+      "font": "-apple-system",
+      "weight": 700,
+      "tracking": -0.025,
+      "leading": 1.08,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.62,
+      "top": 2478,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Your repositories. Your rules.",
+      "words": 4,
+      "chars": 30,
+      "lines": 1,
+      "size": 26.6,
+      "vw": 3.5,
+      "font": "-apple-system",
+      "weight": 700,
+      "tracking": -0.025,
+      "leading": 1.08,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.62,
+      "top": 3374,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 5,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": 5,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "-apple-system",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      20,
+      27,
+      42
+     ],
+     "sizeCount": 9,
+     "notLoaded": [],
+     "body": {
+      "font": "-apple-system",
+      "size": 16,
+      "leading": 1.55,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 18.9
+     },
+     "measureChars": 76,
+     "max": {
+      "size": 42,
+      "vw": 5.5,
+      "font": "-apple-system",
+      "text": "Where your branches converge."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.06,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ffffff",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 1
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#0d1117",
+       "top": 49,
+       "hsl": {
+        "h": 216,
+        "s": 0.28,
+        "l": 0.07
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#0c1118",
+       "share": 0.44
+      },
+      {
+       "color": "#0d1117",
+       "share": 0.23
+      },
+      {
+       "color": "#181c21",
+       "share": 0.11
+      },
+      {
+       "color": "#f4f4f4",
+       "share": 0.11
+      },
+      {
+       "color": "#0d1018",
+       "share": 0.03
+      }
+     ],
+     "button": {
+      "bg": "#ffffff",
+      "hsl": {
+       "h": 0,
+       "s": 0,
+       "l": 1
+      },
+      "fg": "#0d1117"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 8,
+     "inHero": 5,
+     "radius": 10,
+     "height": 46,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Login",
+      "Register",
+      "Register",
+      "Sign In",
+      "Explore"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 4,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 4,
+     "boxRadius": 12,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "svg",
+      "ratio": 0.15
+     }
+    ],
+    "nav": {
+     "links": 5,
+     "fixed": false,
+     "height": 49,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 4097,
+    "margins": {
+     "left": 24,
+     "right": 33
+    },
+    "sections": [
+     {
+      "sel": "section.home-hero",
+      "tag": "section",
+      "top": 49,
+      "height": 702,
+      "words": 24,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Where your branches converge.",
+       "size": 42,
+       "tag": "h1"
+      },
+      "left": 70,
+      "right": 70,
+      "textLeft": 70,
+      "textRight": 70,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#features.home-section.home-features",
+      "tag": "section",
+      "top": 751,
+      "height": 793,
+      "words": 132,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Everything you need, on your server",
+       "size": 27,
+       "tag": "h2"
+      },
+      "left": 24,
+      "right": 32,
+      "textLeft": 24,
+      "textRight": 32,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#workflow.home-section.home-workflow",
+      "tag": "section",
+      "top": 1544,
+      "height": 814,
+      "words": 118,
+      "media": 0,
+      "middle": 87,
+      "heading": {
+       "text": "Code moves end to end",
+       "size": 27,
+       "tag": "h2"
+      },
+      "left": 24,
+      "right": 58,
+      "textLeft": 24,
+      "textRight": 58,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#facts.home-section.home-band--ink",
+      "tag": "section",
+      "top": 2358,
+      "height": 896,
+      "words": 93,
+      "media": 0,
+      "middle": 28,
+      "heading": {
+       "text": "Built lean, kept complete",
+       "size": 27,
+       "tag": "h2"
+      },
+      "left": 24,
+      "right": 39,
+      "textLeft": 24,
+      "textRight": 39,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#start.home-section.home-finish",
+      "tag": "section",
+      "top": 3254,
+      "height": 420,
+      "words": 22,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Your repositories. Your rules.",
+       "size": 27,
+       "tag": "h2"
+      },
+      "left": 133,
+      "right": 133,
+      "textLeft": 133,
+      "textRight": 133,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer#footer.home-footer",
+      "tag": "footer",
+      "top": 3675,
+      "height": 360,
+      "words": 24,
+      "media": 0,
+      "middle": 101,
+      "heading": {
+       "text": "Product",
+       "size": 13,
+       "tag": "h3"
+      },
+      "left": 24,
+      "right": 24,
+      "textLeft": 24,
+      "textRight": 24,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Where your branches converge.",
+      "size": 42,
+      "top": 105,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 24,
+      "n": 5
+     },
+     {
+      "x": 70,
+      "n": 2
+     }
+    ],
+    "leftBlocks": 7,
+    "bodySize": 16,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 7,
+   "filled": [
+    0.88,
+    0.51,
+    0.34,
+    0.57,
+    0.74,
+    0.62,
+    0.81
+   ],
+   "motion": {
+    "elements": 20,
+    "css": 20,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 408,
+     "h": 883
+    },
+    "page": {
+     "height": 5350,
+     "screens": 6.1,
+     "words": 412,
+     "img": 2,
+     "video": 0,
+     "canvas": 0,
+     "svg": 11,
+     "sections": 5,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 4,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 4,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Where your branches converge.",
+     "words": 4,
+     "chars": 29,
+     "lines": 2,
+     "size": 32.8,
+     "vw": 8,
+     "font": "-apple-system",
+     "weight": 700,
+     "tracking": -0.03,
+     "leading": 1.06,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.86,
+     "top": 105,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Where your branches converge.",
+     "words": 4,
+     "lines": 2,
+     "size": 32.8,
+     "font": "-apple-system"
+    },
+    "headings": [
+     {
+      "text": "Where your branches converge.",
+      "words": 4,
+      "chars": 29,
+      "lines": 2,
+      "size": 32.8,
+      "vw": 8,
+      "font": "-apple-system",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.86,
+      "top": 105,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Everything you need, on your server",
+      "words": 6,
+      "chars": 35,
+      "lines": 2,
+      "size": 26.6,
+      "vw": 6.5,
+      "font": "-apple-system",
+      "weight": 700,
+      "tracking": -0.025,
+      "leading": 1.08,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.86,
+      "top": 848,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Code moves end to end",
+      "words": 5,
+      "chars": 21,
+      "lines": 1,
+      "size": 26.6,
+      "vw": 6.5,
+      "font": "-apple-system",
+      "weight": 700,
+      "tracking": -0.025,
+      "leading": 1.08,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.86,
+      "top": 1950,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Built lean, kept complete",
+      "words": 4,
+      "chars": 25,
+      "lines": 1,
+      "size": 26.6,
+      "vw": 6.5,
+      "font": "-apple-system",
+      "weight": 700,
+      "tracking": -0.025,
+      "leading": 1.08,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.86,
+      "top": 3259,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Your repositories. Your rules.",
+      "words": 4,
+      "chars": 30,
+      "lines": 2,
+      "size": 26.6,
+      "vw": 6.5,
+      "font": "-apple-system",
+      "weight": 700,
+      "tracking": -0.025,
+      "leading": 1.08,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.86,
+      "top": 4425,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 5,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": 5,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "-apple-system",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      20,
+      27,
+      33
+     ],
+     "sizeCount": 9,
+     "notLoaded": [],
+     "body": {
+      "font": "-apple-system",
+      "size": 16,
+      "leading": 1.55,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 18.9
+     },
+     "measureChars": 44,
+     "max": {
+      "size": 32.8,
+      "vw": 8,
+      "font": "-apple-system",
+      "text": "Where your branches converge."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.06,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ffffff",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 1
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#0d1117",
+       "top": 49,
+       "hsl": {
+        "h": 216,
+        "s": 0.28,
+        "l": 0.07
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 3728,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#0c1118",
+       "share": 0.45
+      },
+      {
+       "color": "#0d1117",
+       "share": 0.23
+      },
+      {
+       "color": "#f4f4f4",
+       "share": 0.11
+      },
+      {
+       "color": "#181c21",
+       "share": 0.11
+      },
+      {
+       "color": "#0d1018",
+       "share": 0.03
+      }
+     ],
+     "button": {
+      "bg": "#f4f4f4",
+      "hsl": {
+       "h": 0,
+       "s": 0,
+       "l": 0.96
+      },
+      "fg": "#0d1117"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 6,
+     "inHero": 3,
+     "radius": 10,
+     "height": 46,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Register",
+      "Sign In",
+      "Explore"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 4,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 4,
+     "boxRadius": 12,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "svg",
+      "ratio": 0.32
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": false,
+     "height": 49,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 408,
+     "h": 883
+    },
+    "pageH": 5350,
+    "margins": {
+     "left": 20,
+     "right": 32
+    },
+    "sections": [
+     {
+      "sel": "section.home-hero",
+      "tag": "section",
+      "top": 49,
+      "height": 727,
+      "words": 24,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Where your branches converge.",
+       "size": 33,
+       "tag": "h1"
+      },
+      "left": 20,
+      "right": 43,
+      "textLeft": 20,
+      "textRight": 43,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#features.home-section.home-features",
+      "tag": "section",
+      "top": 776,
+      "height": 1102,
+      "words": 132,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Everything you need, on your server",
+       "size": 27,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 39,
+      "textLeft": 20,
+      "textRight": 39,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#workflow.home-section.home-workflow",
+      "tag": "section",
+      "top": 1878,
+      "height": 1309,
+      "words": 118,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Code moves end to end",
+       "size": 27,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 40,
+      "textLeft": 20,
+      "textRight": 40,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#facts.home-section.home-band--ink",
+      "tag": "section",
+      "top": 3187,
+      "height": 1166,
+      "words": 93,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Built lean, kept complete",
+       "size": 27,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 32,
+      "textLeft": 20,
+      "textRight": 32,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#start.home-section.home-finish",
+      "tag": "section",
+      "top": 4353,
+      "height": 378,
+      "words": 22,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Your repositories. Your rules.",
+       "size": 27,
+       "tag": "h2"
+      },
+      "left": 31,
+      "right": 49,
+      "textLeft": 31,
+      "textRight": 49,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer#footer.home-footer",
+      "tag": "footer",
+      "top": 4731,
+      "height": 530,
+      "words": 24,
+      "media": 0,
+      "middle": 45,
+      "heading": {
+       "text": "Product",
+       "size": 13,
+       "tag": "h3"
+      },
+      "left": 24,
+      "right": 42,
+      "textLeft": 24,
+      "textRight": 42,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Where your branches converge.",
+      "size": 33,
+      "top": 105,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 20,
+      "n": 7
+     }
+    ],
+    "leftBlocks": 7,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "no-real-pictures",
+   "width": 1440,
+   "message": "Only 0 real photograph(s) or clip(s); the rest are interface fragments.",
+   "fix": "Add two or more real pictures of the customer's world from scripts/assets.mjs, not stock of people at laptops."
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "off-centre",
+   "width": 1440,
+   "message": "The margins differ: 24px on the left, 43px on the right, at 1440px.",
+   "fix": "Put the navigation and the content on one pair of margins; check for padding on one side only, a scrollbar gutter, or a header on another inset than the page.",
+   "alsoAt": [
+    390
+   ]
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/media/aayushyy/vol-2/gitea/.taste-skill/after/desktop-fold.jpg",
+   "pages": [
+    "/media/aayushyy/vol-2/gitea/.taste-skill/after/desktop-page-01.jpg",
+    "/media/aayushyy/vol-2/gitea/.taste-skill/after/desktop-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "/media/aayushyy/vol-2/gitea/.taste-skill/after/tablet-fold.jpg",
+   "pages": [
+    "/media/aayushyy/vol-2/gitea/.taste-skill/after/tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/media/aayushyy/vol-2/gitea/.taste-skill/after/mobile-fold.jpg",
+   "pages": [
+    "/media/aayushyy/vol-2/gitea/.taste-skill/after/mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

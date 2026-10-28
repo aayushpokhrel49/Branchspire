@@ -9,10 +9,10 @@ import (
 	"sync"
 	"time"
 
-	"gitea.dev/models/db"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/setting/config"
-	"gitea.dev/modules/timeutil"
+	"branchspire/models/db"
+	"branchspire/modules/log"
+	"branchspire/modules/setting/config"
+	"branchspire/modules/timeutil"
 
 	"xorm.io/builder"
 )

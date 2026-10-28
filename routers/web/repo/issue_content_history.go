@@ -8,13 +8,13 @@ import (
 	"net/http"
 	"strings"
 
-	"gitea.dev/models/avatars"
-	issues_model "gitea.dev/models/issues"
-	"gitea.dev/modules/htmlutil"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/templates"
-	"gitea.dev/modules/util"
-	"gitea.dev/services/context"
+	"branchspire/models/avatars"
+	issues_model "branchspire/models/issues"
+	"branchspire/modules/htmlutil"
+	"branchspire/modules/log"
+	"branchspire/modules/templates"
+	"branchspire/modules/util"
+	"branchspire/services/context"
 
 	"github.com/sergi/go-diff/diffmatchpatch"
 )

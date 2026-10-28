@@ -1,0 +1,15 @@
+#!/bin/bash
+
+###############################################################
+# This script sets defaults for BranchSpire to run in the container #
+###############################################################
+
+# It assumes that you place this script as branchspire in /usr/local/bin
+#
+# And place the original in /app/branchspire with working files in /data/branchspire
+BRANCHSPIRE="/app/branchspire/branchspire"
+WORK_DIR="/data/branchspire"
+CUSTOM_PATH="/data/branchspire"
+
+# Provide docker defaults
+GITEA_WORK_DIR="${GITEA_WORK_DIR:-$WORK_DIR}" GITEA_CUSTOM="${GITEA_CUSTOM:-$CUSTOM_PATH}" exec -a "$0" "$BRANCHSPIRE" $CONF_ARG "$@"

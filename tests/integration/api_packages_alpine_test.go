@@ -14,12 +14,12 @@ import (
 	"net/http"
 	"testing"
 
-	"gitea.dev/models/packages"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
-	alpine_module "gitea.dev/modules/packages/alpine"
-	alpine_service "gitea.dev/services/packages/alpine"
-	"gitea.dev/tests"
+	"branchspire/models/packages"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
+	alpine_module "branchspire/modules/packages/alpine"
+	alpine_service "branchspire/services/packages/alpine"
+	"branchspire/tests"
 
 	"github.com/stretchr/testify/assert"
 )
@@ -223,7 +223,7 @@ AACAX/AKARNTyAAoAAA=`
 					assert.Contains(t, content, "V:"+packageVersion+"\n")
 					assert.Contains(t, content, "A:x86_64\n")
 					assert.NotContains(t, content, "A:noarch\n")
-					assert.Contains(t, content, "T:Gitea Test Package\n")
+					assert.Contains(t, content, "T:BranchSpire Test Package\n")
 					assert.Contains(t, content, "U:https://gitea.io/\n")
 					assert.Contains(t, content, "L:MIT\n")
 					assert.Contains(t, content, "S:1353\n")

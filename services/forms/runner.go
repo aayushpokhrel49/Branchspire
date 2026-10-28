@@ -3,7 +3,7 @@
 
 package forms
 
-import "gitea.dev/modules/web/middleware"
+import "branchspire/modules/web/middleware"
 
 // EditRunnerForm form for admin to create runner
 type EditRunnerForm struct {

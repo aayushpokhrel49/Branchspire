@@ -6,8 +6,8 @@ package languagestats
 import (
 	"testing"
 
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/setting"
+	"branchspire/modules/git"
+	"branchspire/modules/setting"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

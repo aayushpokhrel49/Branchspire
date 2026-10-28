@@ -17,19 +17,19 @@ import (
 	"strings"
 	"testing"
 
-	auth_model "gitea.dev/models/auth"
-	"gitea.dev/models/db"
-	git_model "gitea.dev/models/git"
-	issues_model "gitea.dev/models/issues"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/structs"
-	"gitea.dev/modules/test"
-	"gitea.dev/services/migrations"
-	"gitea.dev/tests"
+	auth_model "branchspire/models/auth"
+	"branchspire/models/db"
+	git_model "branchspire/models/git"
+	issues_model "branchspire/models/issues"
+	repo_model "branchspire/models/repo"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
+	"branchspire/modules/git"
+	"branchspire/modules/setting"
+	"branchspire/modules/structs"
+	"branchspire/modules/test"
+	"branchspire/services/migrations"
+	"branchspire/tests"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -60,7 +60,7 @@ func TestMigrateLocalPath(t *testing.T) {
 
 func TestMigrateGiteaForm(t *testing.T) {
 	onGiteaRun(t, func(t *testing.T, u *url.URL) {
-		// Gitea SDK (go-sdk) need to parse the AppVer from server response, so we must set it to a valid version string.
+		// BranchSpire SDK (go-sdk) need to parse the AppVer from server response, so we must set it to a valid version string.
 		defer test.MockVariableValue(&setting.AppVer, "1.16.0")()
 
 		ownerName := "user2"
@@ -72,7 +72,7 @@ func TestMigrateGiteaForm(t *testing.T) {
 		// Step 0: verify the repo is available
 		req := NewRequestf(t, "GET", "/%s/%s", ownerName, repoName)
 		_ = session.MakeRequest(t, req, http.StatusOK)
-		// Step 1: get the Gitea migration form
+		// Step 1: get the BranchSpire migration form
 		req = NewRequestf(t, "GET", "/repo/migrate/?service_type=%d", structs.GiteaService)
 		resp := session.MakeRequest(t, req, http.StatusOK)
 		// Step 2: load the form

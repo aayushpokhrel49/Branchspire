@@ -12,9 +12,9 @@ import (
 	"slices"
 	"strings"
 
-	"gitea.dev/modules/container"
-	"gitea.dev/modules/optional"
-	"gitea.dev/modules/paginator"
+	"branchspire/modules/container"
+	"branchspire/modules/optional"
+	"branchspire/modules/paginator"
 )
 
 type PagerBuilder struct {

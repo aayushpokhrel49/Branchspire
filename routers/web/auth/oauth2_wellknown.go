@@ -7,12 +7,12 @@ import (
 	"net/http"
 	"strings"
 
-	"gitea.dev/modules/setting"
-	"gitea.dev/services/context"
-	"gitea.dev/services/oauth2_provider"
+	"branchspire/modules/setting"
+	"branchspire/services/context"
+	"branchspire/services/oauth2_provider"
 )
 
-// OIDCWellKnown generates JSON so OIDC clients know Gitea's capabilities
+// OIDCWellKnown generates JSON so OIDC clients know BranchSpire's capabilities
 func OIDCWellKnown(ctx *context.Context) {
 	if !setting.OAuth2.Enabled {
 		http.NotFound(ctx.Resp, ctx.Req)

@@ -13,15 +13,15 @@ import (
 	"strings"
 	"unicode"
 
-	packages_model "gitea.dev/models/packages"
-	"gitea.dev/modules/globallock"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/optional"
-	packages_module "gitea.dev/modules/packages"
-	terraform_module "gitea.dev/modules/packages/terraform"
-	"gitea.dev/routers/api/packages/helper"
-	"gitea.dev/services/context"
-	packages_service "gitea.dev/services/packages"
+	packages_model "branchspire/models/packages"
+	"branchspire/modules/globallock"
+	"branchspire/modules/log"
+	"branchspire/modules/optional"
+	packages_module "branchspire/modules/packages"
+	terraform_module "branchspire/modules/packages/terraform"
+	"branchspire/routers/api/packages/helper"
+	"branchspire/services/context"
+	packages_service "branchspire/services/packages"
 )
 
 var packageNameRegex = regexp.MustCompile(`\A[-_+.\w]+\z`)

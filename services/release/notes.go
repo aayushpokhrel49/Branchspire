@@ -10,13 +10,13 @@ import (
 	"slices"
 	"strings"
 
-	"gitea.dev/models/db"
-	issues_model "gitea.dev/models/issues"
-	repo_model "gitea.dev/models/repo"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/container"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/util"
+	"branchspire/models/db"
+	issues_model "branchspire/models/issues"
+	repo_model "branchspire/models/repo"
+	user_model "branchspire/models/user"
+	"branchspire/modules/container"
+	"branchspire/modules/git"
+	"branchspire/modules/util"
 )
 
 // GenerateReleaseNotesOptions describes how to build release notes content.

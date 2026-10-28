@@ -7,16 +7,16 @@ import (
 	"net/http"
 	"testing"
 
-	auth_model "gitea.dev/models/auth"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/test"
-	"gitea.dev/modules/web"
-	"gitea.dev/routers/web/auth"
-	"gitea.dev/services/auth/source/oauth2"
-	"gitea.dev/services/context"
-	"gitea.dev/tests"
+	auth_model "branchspire/models/auth"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
+	"branchspire/modules/setting"
+	"branchspire/modules/test"
+	"branchspire/modules/web"
+	"branchspire/routers/web/auth"
+	"branchspire/services/auth/source/oauth2"
+	"branchspire/services/context"
+	"branchspire/tests"
 
 	"github.com/markbates/goth"
 	"github.com/markbates/goth/gothic"
@@ -60,7 +60,7 @@ func TestOAuth2AvatarFromPicture(t *testing.T) {
 		emptyTestSession(t).MakeRequest(t, req, http.StatusSeeOther)
 
 		user := unittest.AssertExistsAndLoadBean(t, &user_model.User{LoginName: "oidc-user-ua-pic"})
-		assert.True(t, user.UseCustomAvatar, "avatar must sync (requires Gitea UA)")
+		assert.True(t, user.UseCustomAvatar, "avatar must sync (requires BranchSpire UA)")
 		assert.NotEmpty(t, user.Avatar)
 	})
 

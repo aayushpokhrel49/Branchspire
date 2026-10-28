@@ -6,13 +6,13 @@ package repo
 import (
 	"testing"
 
-	"gitea.dev/models/unit"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/markup"
-	"gitea.dev/modules/optional"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/test"
+	"branchspire/models/unit"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
+	"branchspire/modules/markup"
+	"branchspire/modules/optional"
+	"branchspire/modules/setting"
+	"branchspire/modules/test"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

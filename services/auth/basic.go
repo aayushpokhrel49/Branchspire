@@ -8,16 +8,16 @@ import (
 	"errors"
 	"net/http"
 
-	actions_model "gitea.dev/models/actions"
-	audit_model "gitea.dev/models/audit"
-	auth_model "gitea.dev/models/auth"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/auth/httpauth"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/timeutil"
-	"gitea.dev/modules/util"
-	"gitea.dev/services/audit"
+	actions_model "branchspire/models/actions"
+	audit_model "branchspire/models/audit"
+	auth_model "branchspire/models/auth"
+	user_model "branchspire/models/user"
+	"branchspire/modules/auth/httpauth"
+	"branchspire/modules/log"
+	"branchspire/modules/setting"
+	"branchspire/modules/timeutil"
+	"branchspire/modules/util"
+	"branchspire/services/audit"
 )
 
 // Ensure the struct implements the interface.

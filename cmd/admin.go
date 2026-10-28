@@ -8,11 +8,11 @@ import (
 	"context"
 	"fmt"
 
-	"gitea.dev/models/db"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/log"
-	repo_module "gitea.dev/modules/repository"
+	"branchspire/models/db"
+	repo_model "branchspire/models/repo"
+	"branchspire/modules/git"
+	"branchspire/modules/log"
+	repo_module "branchspire/modules/repository"
 
 	"github.com/urfave/cli/v3"
 )

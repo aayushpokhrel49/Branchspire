@@ -12,16 +12,16 @@ import (
 	"path/filepath"
 	"strings"
 
-	repo_model "gitea.dev/models/repo"
-	system_model "gitea.dev/models/system"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/container"
-	"gitea.dev/modules/egress"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/log"
-	base "gitea.dev/modules/migration"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/util"
+	repo_model "branchspire/models/repo"
+	system_model "branchspire/models/system"
+	user_model "branchspire/models/user"
+	"branchspire/modules/container"
+	"branchspire/modules/egress"
+	"branchspire/modules/git"
+	"branchspire/modules/log"
+	base "branchspire/modules/migration"
+	"branchspire/modules/setting"
+	"branchspire/modules/util"
 )
 
 // MigrateOptions is equal to base.MigrateOptions

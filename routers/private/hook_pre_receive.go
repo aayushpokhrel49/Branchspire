@@ -8,17 +8,17 @@ import (
 	"net/http"
 	"os"
 
-	git_model "gitea.dev/models/git"
-	issues_model "gitea.dev/models/issues"
-	"gitea.dev/models/unit"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/git/gitcmd"
-	"gitea.dev/modules/private"
-	"gitea.dev/modules/util"
-	"gitea.dev/modules/web"
-	"gitea.dev/services/agit"
-	gitea_context "gitea.dev/services/context"
-	pull_service "gitea.dev/services/pull"
+	git_model "branchspire/models/git"
+	issues_model "branchspire/models/issues"
+	"branchspire/models/unit"
+	"branchspire/modules/git"
+	"branchspire/modules/git/gitcmd"
+	"branchspire/modules/private"
+	"branchspire/modules/util"
+	"branchspire/modules/web"
+	"branchspire/services/agit"
+	gitea_context "branchspire/services/context"
+	pull_service "branchspire/services/pull"
 )
 
 type preReceiveContext struct {

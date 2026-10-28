@@ -6,7 +6,7 @@ package v1_16
 import (
 	"context"
 
-	"gitea.dev/modelmigration/base"
+	"branchspire/modelmigration/base"
 )
 
 func UseBase32HexForCredIDInWebAuthnCredential(_ context.Context, x base.EngineMigration) error {

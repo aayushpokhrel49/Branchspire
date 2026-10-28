@@ -7,11 +7,11 @@ import (
 	"html/template"
 	"strings"
 
-	issues_model "gitea.dev/models/issues"
-	"gitea.dev/modules/htmlutil"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/svg"
-	"gitea.dev/modules/util"
+	issues_model "branchspire/models/issues"
+	"branchspire/modules/htmlutil"
+	"branchspire/modules/setting"
+	"branchspire/modules/svg"
+	"branchspire/modules/util"
 )
 
 func commentTimelineEventIsWipToggle(c *issues_model.Comment) (isToggle, isWip bool) {

@@ -7,9 +7,9 @@ import (
 	"context"
 	"fmt"
 
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/modules/markup"
-	"gitea.dev/modules/util"
+	repo_model "branchspire/models/repo"
+	"branchspire/modules/markup"
+	"branchspire/modules/util"
 )
 
 type RepoComment struct {

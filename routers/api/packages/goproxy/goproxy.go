@@ -11,14 +11,14 @@ import (
 	"sort"
 	"time"
 
-	packages_model "gitea.dev/models/packages"
-	"gitea.dev/modules/optional"
-	packages_module "gitea.dev/modules/packages"
-	goproxy_module "gitea.dev/modules/packages/goproxy"
-	"gitea.dev/modules/util"
-	"gitea.dev/routers/api/packages/helper"
-	"gitea.dev/services/context"
-	packages_service "gitea.dev/services/packages"
+	packages_model "branchspire/models/packages"
+	"branchspire/modules/optional"
+	packages_module "branchspire/modules/packages"
+	goproxy_module "branchspire/modules/packages/goproxy"
+	"branchspire/modules/util"
+	"branchspire/routers/api/packages/helper"
+	"branchspire/services/context"
+	packages_service "branchspire/services/packages"
 )
 
 func apiError(ctx *context.Context, status int, obj any) {

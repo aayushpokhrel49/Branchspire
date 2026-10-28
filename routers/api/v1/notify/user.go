@@ -7,12 +7,12 @@ import (
 	"net/http"
 	"time"
 
-	activities_model "gitea.dev/models/activities"
-	"gitea.dev/models/db"
-	"gitea.dev/modules/structs"
-	"gitea.dev/services/context"
-	"gitea.dev/services/convert"
-	"gitea.dev/services/notifications"
+	activities_model "branchspire/models/activities"
+	"branchspire/models/db"
+	"branchspire/modules/structs"
+	"branchspire/services/context"
+	"branchspire/services/convert"
+	"branchspire/services/notifications"
 )
 
 // ListNotifications list users's notification threads

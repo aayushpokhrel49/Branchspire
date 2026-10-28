@@ -8,12 +8,12 @@ import (
 	"fmt"
 	"strings"
 
-	"gitea.dev/models/organization"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/container"
-	"gitea.dev/modules/log"
-	"gitea.dev/services/audit"
-	org_service "gitea.dev/services/org"
+	"branchspire/models/organization"
+	user_model "branchspire/models/user"
+	"branchspire/modules/container"
+	"branchspire/modules/log"
+	"branchspire/services/audit"
+	org_service "branchspire/services/org"
 )
 
 type syncType int

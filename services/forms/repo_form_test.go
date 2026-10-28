@@ -6,7 +6,7 @@ package forms
 import (
 	"testing"
 
-	"gitea.dev/modules/json"
+	"branchspire/modules/json"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

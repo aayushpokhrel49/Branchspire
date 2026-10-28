@@ -8,11 +8,11 @@ import (
 	"testing"
 	"time"
 
-	system_model "gitea.dev/models/system"
-	"gitea.dev/modules/json"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/setting/config"
-	"gitea.dev/tests"
+	system_model "branchspire/models/system"
+	"branchspire/modules/json"
+	"branchspire/modules/setting"
+	"branchspire/modules/setting/config"
+	"branchspire/tests"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

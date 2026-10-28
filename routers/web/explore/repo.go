@@ -6,13 +6,13 @@ package explore
 import (
 	"net/http"
 
-	"gitea.dev/models/db"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/sitemap"
-	"gitea.dev/modules/templates"
-	"gitea.dev/services/context"
+	"branchspire/models/db"
+	repo_model "branchspire/models/repo"
+	"branchspire/modules/log"
+	"branchspire/modules/setting"
+	"branchspire/modules/sitemap"
+	"branchspire/modules/templates"
+	"branchspire/services/context"
 )
 
 const (

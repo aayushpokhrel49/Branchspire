@@ -11,13 +11,13 @@ import (
 	"regexp"
 	"testing"
 
-	auth_model "gitea.dev/models/auth"
-	"gitea.dev/models/perm"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/models/unit"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/tests"
+	auth_model "branchspire/models/auth"
+	"branchspire/models/perm"
+	repo_model "branchspire/models/repo"
+	"branchspire/models/unit"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
+	"branchspire/tests"
 
 	"github.com/stretchr/testify/assert"
 )

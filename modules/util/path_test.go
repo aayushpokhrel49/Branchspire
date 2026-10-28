@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"gitea.dev/modules/consts"
+	"branchspire/modules/consts"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

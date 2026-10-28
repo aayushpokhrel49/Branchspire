@@ -6,13 +6,13 @@ package auth_test
 import (
 	"testing"
 
-	"gitea.dev/models/unittest"
+	"branchspire/models/unittest"
 
-	_ "gitea.dev/models"
-	_ "gitea.dev/models/actions"
-	_ "gitea.dev/models/activities"
-	_ "gitea.dev/models/auth"
-	_ "gitea.dev/models/perm/access"
+	_ "branchspire/models"
+	_ "branchspire/models/actions"
+	_ "branchspire/models/activities"
+	_ "branchspire/models/auth"
+	_ "branchspire/models/perm/access"
 )
 
 func TestMain(m *testing.M) {

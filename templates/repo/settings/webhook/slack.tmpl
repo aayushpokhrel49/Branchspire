@@ -1,5 +1,5 @@
 {{if eq .HookType "slack"}}
-	<p>{{ctx.Locale.Tr "repo.settings.add_web_hook_desc" "https://slack.com" (ctx.Locale.Tr "repo.settings.web_hook_name_slack")}}</p>
+	<p>{{ctx.Locale.Tr "repo.settings.add_web_hook_desc" (ctx.Locale.Tr "repo.settings.web_hook_name_slack")}}</p>
 	<form class="ui form" action="{{.BaseLink}}/slack/{{or .Webhook.ID "new"}}" method="post">
 		<div class="required field {{if .Err_PayloadURL}}error{{end}}">
 			<label for="payload_url">{{ctx.Locale.Tr "repo.settings.payload_url"}}</label>
@@ -12,7 +12,7 @@
 
 		<div class="field">
 			<label for="username">{{ctx.Locale.Tr "repo.settings.slack_username"}}</label>
-			<input id="username" name="username" value="{{.SlackHook.Username}}" placeholder="Gitea">
+			<input id="username" name="username" value="{{.SlackHook.Username}}" placeholder="BranchSpire">
 		</div>
 		<div class="field">
 			<label for="icon_url">{{ctx.Locale.Tr "repo.settings.slack_icon_url"}}</label>

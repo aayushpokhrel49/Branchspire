@@ -7,15 +7,15 @@ import (
 	"fmt"
 	"net/http"
 
-	"gitea.dev/models/auth"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/templates"
-	"gitea.dev/modules/util"
-	"gitea.dev/modules/web"
-	shared_user "gitea.dev/routers/web/shared/user"
-	"gitea.dev/services/audit"
-	"gitea.dev/services/context"
-	"gitea.dev/services/forms"
+	"branchspire/models/auth"
+	user_model "branchspire/models/user"
+	"branchspire/modules/templates"
+	"branchspire/modules/util"
+	"branchspire/modules/web"
+	shared_user "branchspire/routers/web/shared/user"
+	"branchspire/services/audit"
+	"branchspire/services/context"
+	"branchspire/services/forms"
 )
 
 type OAuth2CommonHandlers struct {

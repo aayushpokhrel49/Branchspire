@@ -6,8 +6,8 @@ package admin
 import (
 	"net/http"
 
-	"gitea.dev/modules/tailmsg"
-	"gitea.dev/services/context"
+	"branchspire/modules/tailmsg"
+	"branchspire/services/context"
 )
 
 func PerfTrace(ctx *context.Context) {

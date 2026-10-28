@@ -11,12 +11,12 @@ import (
 	"testing"
 	"time"
 
-	actions_model "gitea.dev/models/actions"
-	auth_model "gitea.dev/models/auth"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
-	api "gitea.dev/modules/structs"
+	actions_model "branchspire/models/actions"
+	auth_model "branchspire/models/auth"
+	repo_model "branchspire/models/repo"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
+	api "branchspire/modules/structs"
 
 	"github.com/stretchr/testify/assert"
 )
@@ -41,7 +41,7 @@ func TestApproveAllRunsOnPullRequestPage(t *testing.T) {
 		runner.registerAsRepoRunner(t, baseRepo.OwnerName, baseRepo.Name, "mock-runner", []string{"ubuntu-latest"}, false)
 
 		// init workflows
-		wf1TreePath := ".gitea/workflows/pull_1.yml"
+		wf1TreePath := ".branchspire/workflows/pull_1.yml"
 		wf1FileContent := `name: Pull 1
 on: pull_request
 jobs:
@@ -52,7 +52,7 @@ jobs:
 `
 		opts1 := getWorkflowCreateFileOptions(user2, baseRepo.DefaultBranch, "create %s"+wf1TreePath, wf1FileContent)
 		createWorkflowFile(t, user2Token, baseRepo.OwnerName, baseRepo.Name, wf1TreePath, opts1)
-		wf2TreePath := ".gitea/workflows/pull_2.yml"
+		wf2TreePath := ".branchspire/workflows/pull_2.yml"
 		wf2FileContent := `name: Pull 2
 on: pull_request
 jobs:
@@ -173,7 +173,7 @@ func TestForkPullRequestApprovalNotBypassedByPriorApproval(t *testing.T) {
 		user2APICtx := NewAPITestContext(t, baseRepo.OwnerName, baseRepo.Name, auth_model.AccessTokenScopeWriteRepository)
 		defer doAPIDeleteRepository(user2APICtx)(t)
 
-		wfTreePath := ".gitea/workflows/ci.yml"
+		wfTreePath := ".branchspire/workflows/ci.yml"
 		wfContent := `name: CI
 on: pull_request
 jobs:

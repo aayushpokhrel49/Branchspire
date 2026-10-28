@@ -6,11 +6,11 @@ package files
 import (
 	"testing"
 
-	"gitea.dev/models/unittest"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/services/contexttest"
+	"branchspire/models/unittest"
+	api "branchspire/modules/structs"
+	"branchspire/services/contexttest"
 
-	_ "gitea.dev/models/actions"
+	_ "branchspire/models/actions"
 
 	"github.com/stretchr/testify/assert"
 )

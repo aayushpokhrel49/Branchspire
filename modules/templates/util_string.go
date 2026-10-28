@@ -8,7 +8,7 @@ import (
 	"html/template"
 	"strings"
 
-	"gitea.dev/modules/util"
+	"branchspire/modules/util"
 )
 
 type StringUtils struct{}

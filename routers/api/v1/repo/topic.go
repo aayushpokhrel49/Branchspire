@@ -7,14 +7,14 @@ import (
 	"net/http"
 	"strings"
 
-	"gitea.dev/models/db"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/modules/log"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/modules/web"
-	"gitea.dev/routers/api/v1/utils"
-	"gitea.dev/services/context"
-	"gitea.dev/services/convert"
+	"branchspire/models/db"
+	repo_model "branchspire/models/repo"
+	"branchspire/modules/log"
+	api "branchspire/modules/structs"
+	"branchspire/modules/web"
+	"branchspire/routers/api/v1/utils"
+	"branchspire/services/context"
+	"branchspire/services/convert"
 )
 
 // ListTopics returns list of current topics for repo

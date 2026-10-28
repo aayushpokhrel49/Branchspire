@@ -9,10 +9,10 @@ import (
 	"strconv"
 	"strings"
 
-	"gitea.dev/models/db"
-	"gitea.dev/models/packages"
-	"gitea.dev/modules/container"
-	conan_module "gitea.dev/modules/packages/conan"
+	"branchspire/models/db"
+	"branchspire/models/packages"
+	"branchspire/modules/container"
+	conan_module "branchspire/modules/packages/conan"
 
 	"xorm.io/builder"
 )

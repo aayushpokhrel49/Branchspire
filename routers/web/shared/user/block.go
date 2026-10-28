@@ -6,13 +6,13 @@ package user
 import (
 	"errors"
 
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/util"
-	"gitea.dev/modules/web"
-	"gitea.dev/services/context"
-	"gitea.dev/services/forms"
-	user_service "gitea.dev/services/user"
+	user_model "branchspire/models/user"
+	"branchspire/modules/setting"
+	"branchspire/modules/util"
+	"branchspire/modules/web"
+	"branchspire/services/context"
+	"branchspire/services/forms"
+	user_service "branchspire/services/user"
 )
 
 func BlockedUsers(ctx *context.Context, blocker *user_model.User) {

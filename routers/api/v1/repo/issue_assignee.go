@@ -7,16 +7,16 @@ import (
 	"errors"
 	"net/http"
 
-	issues_model "gitea.dev/models/issues"
-	access_model "gitea.dev/models/perm/access"
-	repo_model "gitea.dev/models/repo"
-	user_model "gitea.dev/models/user"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/modules/util"
-	"gitea.dev/modules/web"
-	"gitea.dev/services/context"
-	"gitea.dev/services/convert"
-	issue_service "gitea.dev/services/issue"
+	issues_model "branchspire/models/issues"
+	access_model "branchspire/models/perm/access"
+	repo_model "branchspire/models/repo"
+	user_model "branchspire/models/user"
+	api "branchspire/modules/structs"
+	"branchspire/modules/util"
+	"branchspire/modules/web"
+	"branchspire/services/context"
+	"branchspire/services/convert"
+	issue_service "branchspire/services/issue"
 )
 
 // AddIssueAssignees add assignees to an issue

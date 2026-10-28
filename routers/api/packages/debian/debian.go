@@ -11,16 +11,16 @@ import (
 	"net/http"
 	"strings"
 
-	"gitea.dev/models/db"
-	packages_model "gitea.dev/models/packages"
-	packages_module "gitea.dev/modules/packages"
-	debian_module "gitea.dev/modules/packages/debian"
-	"gitea.dev/modules/util"
-	"gitea.dev/routers/api/packages/helper"
-	"gitea.dev/services/context"
-	notify_service "gitea.dev/services/notify"
-	packages_service "gitea.dev/services/packages"
-	debian_service "gitea.dev/services/packages/debian"
+	"branchspire/models/db"
+	packages_model "branchspire/models/packages"
+	packages_module "branchspire/modules/packages"
+	debian_module "branchspire/modules/packages/debian"
+	"branchspire/modules/util"
+	"branchspire/routers/api/packages/helper"
+	"branchspire/services/context"
+	notify_service "branchspire/services/notify"
+	packages_service "branchspire/services/packages"
+	debian_service "branchspire/services/packages/debian"
 )
 
 func apiError(ctx *context.Context, status int, obj any) {

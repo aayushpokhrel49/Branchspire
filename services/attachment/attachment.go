@@ -12,12 +12,12 @@ import (
 	"net/http"
 	"uuid"
 
-	"gitea.dev/models/db"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/storage"
-	"gitea.dev/modules/util"
-	"gitea.dev/services/context/upload"
+	"branchspire/models/db"
+	repo_model "branchspire/models/repo"
+	"branchspire/modules/setting"
+	"branchspire/modules/storage"
+	"branchspire/modules/util"
+	"branchspire/services/context/upload"
 )
 
 // NewAttachment creates a new attachment object, but do not verify.

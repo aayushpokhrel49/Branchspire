@@ -7,19 +7,19 @@ package repo
 import (
 	"net/http"
 
-	"gitea.dev/models/db"
-	"gitea.dev/models/perm"
-	access_model "gitea.dev/models/perm/access"
-	"gitea.dev/models/webhook"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/setting"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/modules/web"
-	webhook_module "gitea.dev/modules/webhook"
-	"gitea.dev/routers/api/v1/utils"
-	"gitea.dev/services/context"
-	"gitea.dev/services/convert"
-	webhook_service "gitea.dev/services/webhook"
+	"branchspire/models/db"
+	"branchspire/models/perm"
+	access_model "branchspire/models/perm/access"
+	"branchspire/models/webhook"
+	"branchspire/modules/git"
+	"branchspire/modules/setting"
+	api "branchspire/modules/structs"
+	"branchspire/modules/web"
+	webhook_module "branchspire/modules/webhook"
+	"branchspire/routers/api/v1/utils"
+	"branchspire/services/context"
+	"branchspire/services/convert"
+	webhook_service "branchspire/services/webhook"
 )
 
 // ListHooks list all hooks of a repository

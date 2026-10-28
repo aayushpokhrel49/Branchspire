@@ -8,9 +8,9 @@ import (
 	"io"
 	"testing"
 
-	"gitea.dev/modules/markup"
-	"gitea.dev/modules/markup/markdown"
-	"gitea.dev/modules/setting"
+	"branchspire/modules/markup"
+	"branchspire/modules/markup/markdown"
+	"branchspire/modules/setting"
 )
 
 func TestMain(m *testing.M) {

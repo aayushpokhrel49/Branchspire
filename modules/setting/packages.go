@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"math"
 
-	"gitea.dev/modules/util"
+	"branchspire/modules/util"
 )
 
 // Package registry settings

@@ -8,13 +8,13 @@ import (
 	"fmt"
 	"time"
 
-	"gitea.dev/models/db"
-	repo_model "gitea.dev/models/repo"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/timeutil"
-	"gitea.dev/modules/util"
-	webhook_module "gitea.dev/modules/webhook"
+	"branchspire/models/db"
+	repo_model "branchspire/models/repo"
+	user_model "branchspire/models/user"
+	"branchspire/modules/git"
+	"branchspire/modules/timeutil"
+	"branchspire/modules/util"
+	webhook_module "branchspire/modules/webhook"
 )
 
 // ActionSchedule represents a schedule of a workflow file

@@ -7,8 +7,8 @@ import (
 	"context"
 	"time"
 
-	"gitea.dev/modelmigration/base"
-	"gitea.dev/modules/timeutil"
+	"branchspire/modelmigration/base"
+	"branchspire/modules/timeutil"
 )
 
 func AddExpiredUnixColumnInActionArtifactTable(_ context.Context, x base.EngineMigration) error {

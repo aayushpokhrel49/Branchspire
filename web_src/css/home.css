@@ -1,106 +1,361 @@
-.home .logo {
-  max-width: 220px;
+/* Home landing page — a fixed poster world (ink on paper), so it reads identically
+in every UI theme. The landing is the hero plus this instance's live stats; app footer
+chrome lives in base.css. */
+body:has(.page-content.home) {
+  --home-ink: #0d1117;
+  --home-paper: #f4f4f4;
+  --home-ink-muted: rgb(244 244 244 / 72%); /* running text on ink */
+  --home-paper-muted: rgb(13 17 23 / 72%); /* running text on paper */
+}
+
+/* the landing sits flush under the navbar and on the footer utility bar */
+.page-content.home > .home-hero:first-child {
+  margin-top: 0;
+}
+
+.full.height:has(> .page-content.home) {
+  padding-bottom: 0;
+  background-color: var(--home-ink);
+}
+
+/* landing-scoped chrome: no hairline borders or shadows on this page */
+body:has(.page-content.home) #navbar {
+  border-bottom: none;
+}
+
+body:has(.page-content.home) .navbar-auth-button {
+  box-shadow: none;
+}
+
+/* the landing is one ink field: any stretch space under the stats blends into it */
+body:has(.page-content.home) .page-content {
+  background-color: var(--home-ink);
+}
+
+/* ==== buttons ==== */
+.home-btn-primary,
+.home-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: var(--font-weight-semibold);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s;
+}
+
+.home-btn-primary {
+  background: var(--home-paper);
+  color: var(--home-ink);
+}
+
+.home-btn-primary:hover,
+.home-btn-primary:focus-visible {
+  transform: translateY(-1px);
+}
+
+.home-btn-primary:active {
+  transform: none;
+}
+
+.home-btn-secondary {
+  border: 1px solid rgb(244 244 244 / 40%);
+  color: var(--home-paper);
+}
+
+.home-btn-secondary:hover,
+.home-btn-secondary:focus-visible {
+  background: rgb(244 244 244 / 10%);
+}
+
+/* ==== hero: the claim and the self-drawing branch graph (the authored moment) ==== */
+.home-hero {
+  background-color: var(--home-ink);
+  color: var(--home-paper);
+  padding: 96px 24px 110px;
+  min-height: 680px;
+  display: flex;
+  align-items: center;
+}
+
+.home-hero ::selection {
+  background: var(--home-paper);
+  color: var(--home-ink);
+}
+
+.home-hero a:focus-visible {
+  outline: 2px solid var(--home-paper);
+  outline-offset: 3px;
+}
+
+.home-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: 64px;
+  align-items: center;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.home-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.home-brand img {
+  border-radius: 12px;
+}
+
+.home-brand-name {
+  font-size: 1.2rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: -0.02em;
+}
+
+.home-display {
+  margin-top: 18px;
+  font-size: clamp(2.4rem, 6.2vw, 4.75rem);
+  line-height: 1.02;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.03em;
+  color: var(--home-paper);
+}
+
+.home-lede {
+  margin-top: 18px;
+  max-width: 34em;
+  font-size: 16.5px;
+  line-height: 1.55;
+  color: var(--home-ink-muted);
+}
+
+.home-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.home-graph {
+  display: block;
+  width: 100%;
+  max-width: 440px;
+  height: auto;
+}
+
+.home-hero .home-graph-lines path {
+  stroke-dasharray: 560;
+  animation: home-draw 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.home-hero .home-graph circle {
+  animation: home-pop 0.45s 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.home-hero .hl-2,
+.home-hero .hn-2 { animation-delay: 0.12s; }
+
+.home-hero .hl-3,
+.home-hero .hn-3 { animation-delay: 0.24s; }
+
+.home-hero .hl-4,
+.home-hero .hn-4 { animation-delay: 0.36s; }
+
+/* lower branches recede so growth reads upward */
+.home-hero .hl-4 {
+  opacity: 0.55;
+}
+
+@keyframes home-draw {
+  from { stroke-dashoffset: 560; }
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes home-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.4);
+    transform-box: fill-box;
+    transform-origin: center;
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ==== stats: live figures from this instance's database, on one ink field ==== */
+.home-stats-bar {
+  background: var(--home-ink);
+  color: var(--home-paper);
+  padding: 0 24px 88px;
+}
+
+.home-stats-row {
+  max-width: 1120px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.home-stat {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.home-stat-number {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: var(--font-weight-bold);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.03em;
+  color: var(--home-paper);
+  line-height: 1;
+}
+
+.home-stat-label {
+  margin-top: 6px;
+  font-size: 13.5px;
+  color: var(--home-ink-muted);
+}
+
+/* ==== footer: quick links on paper, on every page ==== */
+.home-footer {
+  --home-paper-muted: rgb(244 244 244 / 72%); /* running text on ink */
+  background: var(--home-ink);
+  padding: 88px 24px 40px;
+}
+
+.home-footer-grid {
+  max-width: 1120px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+}
+
+.home-footer-brand p {
+  margin-top: 12px;
+  max-width: 24em;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--home-paper-muted);
+}
+
+.home-footer .home-brand-name {
+  font-size: 1.05rem;
+  color: var(--home-paper);
+}
+
+.home-footer h3 {
+  font-size: 0.95rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: -0.02em;
+  color: var(--home-paper);
+}
+
+.home-footer nav ul {
+  margin-top: 14px;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.home-footer nav a {
+  font-size: 16px;
+  color: rgb(244 244 244 / 78%);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.home-footer nav a:hover,
+.home-footer nav a:focus-visible {
+  color: var(--home-paper);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.home-footer nav a:focus-visible {
+  outline: 2px solid var(--home-paper);
+  outline-offset: 3px;
+}
+
+.home-footer-base {
+  max-width: 1120px;
+  margin: 56px auto 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  color: rgb(244 244 244 / 60%);
+  font-size: 0.95rem;
+}
+
+.home-footer-base a {
+  color: inherit;
+}
+
+/* ==== responsive: one plan per width ==== */
+@media (max-width: 899px) {
+  .home-hero {
+    padding: 56px 20px 64px;
+    min-height: 0;
+  }
+
+  .home-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .home-hero-figure {
+    justify-self: start;
+  }
+
+  .home-graph {
+    max-width: 330px;
+  }
+
+  .home-display {
+    font-size: clamp(2.2rem, 8.4vw, 3rem);
+    line-height: 1.06;
+  }
+
+  .home-stats-bar {
+    padding-bottom: 64px;
+  }
+
+  .home-stats-row {
+    grid-template-columns: repeat(3, minmax(0, auto));
+  }
 }
 
 @media (max-width: 767.98px) {
-  .home .hero h1 {
-    font-size: 3.5em;
+  .home-hero {
+    padding: 48px 20px 56px;
   }
-  .home .hero h2 {
-    font-size: 2em;
-  }
-}
 
-@media (min-width: 768px) {
-  .home .hero h1 {
-    font-size: 5.5em;
+  .home-footer {
+    padding: 64px 20px 32px;
   }
-  .home .hero h2 {
-    font-size: 3em;
+
+  .home-footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
   }
 }
 
-.home .hero .svg {
-  color: var(--color-logo);
-  height: 40px;
-  width: 50px;
-  vertical-align: bottom;
-}
+@media (prefers-reduced-motion: reduce) {
+  .home-hero .home-graph-lines path,
+  .home-hero .home-graph circle {
+    animation: none;
+  }
 
-.home .hero.header {
-  font-size: 20px;
-}
-
-.home p.large {
-  font-size: 16px;
-}
-
-.home .stackable {
-  padding-top: 30px;
-}
-
-.home a {
-  color: var(--color-logo);
-}
-
-.page-footer {
-  display: flex;
-  justify-content: space-between;
-  background-color: var(--color-footer);
-  border-top: 1px solid var(--color-secondary);
-  padding: 8px 20px;
-}
-
-.page-footer .left-links {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5em;
-}
-
-.page-footer .right-links {
-  min-width: 180px; /* make sure the menu dropdown doesn't overflow horizontally when language name is short */
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 1em;
-}
-
-.page-footer .right-links > a {
-  border-left: 1px solid var(--color-secondary-dark-1);
-  padding-left: 1em;
-}
-
-/* the theme item is also used for the menu's "default text" display */
-.page-footer .ui.dropdown .theme-menu-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-}
-
-/* Fomantic UI dropdown "remote items by API" can't change parent "item" element,
-so we use "theme-menu-item" in the "item" and add tooltip to the inner one.
-Then the inner one needs to get padding and parent "item" padding needs to be removed */
-.page-footer .menu.theme-menu > .item {
-  padding: 0 !important;
-}
-
-.page-footer .menu.theme-menu > .item > .theme-menu-item {
-  padding: 11px 16px;
-}
-
-.page-footer .ui.dropdown .menu.language-menu,
-.page-footer .ui.dropdown .menu.theme-menu {
-  max-height: min(500px, calc(100vh - 60px));
-  overflow-y: auto;
-  margin-bottom: 10px;
-}
-
-@media (max-width: 880px) {
-  .page-footer {
-    flex-direction: column;
-    gap: 0.5em;
+  .home-hero .hl-4 {
+    opacity: 1;
   }
 }

@@ -8,7 +8,7 @@ import (
 	"crypto/sha1"
 	"fmt"
 
-	"gitea.dev/modelmigration/base"
+	"branchspire/modelmigration/base"
 )
 
 func hashContext(context string) string {

@@ -11,10 +11,10 @@ import (
 	"runtime"
 	"strings"
 
-	"gitea.dev/modules/auth/password/hash"
-	"gitea.dev/modules/consts"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/util"
+	"branchspire/modules/auth/password/hash"
+	"branchspire/modules/consts"
+	"branchspire/modules/log"
+	"branchspire/modules/util"
 
 	"github.com/kballard/go-shellquote"
 )
@@ -65,7 +65,7 @@ func SetupGiteaTestEnv() {
 	initGiteaPaths := func() {
 		// need to load assets (options, public) from the source code directory for testing
 		StaticRootPath = giteaRoot
-		// during testing, the AppPath must point to the pre-built Gitea binary in the source root
+		// during testing, the AppPath must point to the pre-built BranchSpire binary in the source root
 		// it needs to be called by git hooks
 		AppPath = filepath.Join(giteaRoot, "gitea") + util.Iif(consts.IsWindows, ".exe", "")
 	}
@@ -82,7 +82,7 @@ func SetupGiteaTestEnv() {
 			_ = os.Remove(CustomConf)
 		} else {
 			// CustomConf must be absolute path to make tests pass.
-			// At the moment, GITEA_TEST_CONF is always in Gitea's source root
+			// At the moment, GITEA_TEST_CONF is always in BranchSpire's source root
 			CustomConf = filepath.Join(giteaRoot, giteaConf)
 		}
 		return giteaConf

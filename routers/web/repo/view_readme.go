@@ -13,14 +13,14 @@ import (
 	"path"
 	"strings"
 
-	"gitea.dev/models/renderhelper"
-	"gitea.dev/modules/base"
-	"gitea.dev/modules/charset"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/util"
-	"gitea.dev/services/context"
+	"branchspire/models/renderhelper"
+	"branchspire/modules/base"
+	"branchspire/modules/charset"
+	"branchspire/modules/git"
+	"branchspire/modules/log"
+	"branchspire/modules/setting"
+	"branchspire/modules/util"
+	"branchspire/services/context"
 )
 
 // locate a README for a tree in one of the supported paths.

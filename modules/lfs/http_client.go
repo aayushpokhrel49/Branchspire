@@ -13,10 +13,10 @@ import (
 	"net/url"
 	"strings"
 
-	"gitea.dev/modules/json"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/proxy"
-	"gitea.dev/modules/setting"
+	"branchspire/modules/json"
+	"branchspire/modules/log"
+	"branchspire/modules/proxy"
+	"branchspire/modules/setting"
 
 	"golang.org/x/sync/errgroup"
 )

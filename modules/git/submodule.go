@@ -8,8 +8,8 @@ import (
 	"context"
 	"fmt"
 
-	"gitea.dev/modules/git/gitcmd"
-	"gitea.dev/modules/log"
+	"branchspire/modules/git/gitcmd"
+	"branchspire/modules/log"
 )
 
 type TemplateSubmoduleCommit struct {

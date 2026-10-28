@@ -4,8 +4,8 @@
 package forms
 
 import (
-	"gitea.dev/modules/optional"
-	"gitea.dev/modules/web/middleware"
+	"branchspire/modules/optional"
+	"branchspire/modules/web/middleware"
 )
 
 type CommitCommonForm struct {

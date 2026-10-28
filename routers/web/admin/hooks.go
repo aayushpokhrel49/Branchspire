@@ -6,12 +6,12 @@ package admin
 import (
 	"net/http"
 
-	"gitea.dev/models/webhook"
-	"gitea.dev/modules/optional"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/templates"
-	"gitea.dev/services/audit"
-	"gitea.dev/services/context"
+	"branchspire/models/webhook"
+	"branchspire/modules/optional"
+	"branchspire/modules/setting"
+	"branchspire/modules/templates"
+	"branchspire/services/audit"
+	"branchspire/services/context"
 )
 
 const (

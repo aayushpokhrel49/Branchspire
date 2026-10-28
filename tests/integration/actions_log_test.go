@@ -12,14 +12,14 @@ import (
 	"time"
 
 	runnerv1 "gitea.dev/actionslib/runner/v1"
-	actions_model "gitea.dev/models/actions"
-	auth_model "gitea.dev/models/auth"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/storage"
-	"gitea.dev/modules/test"
+	actions_model "branchspire/models/actions"
+	auth_model "branchspire/models/auth"
+	repo_model "branchspire/models/repo"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
+	"branchspire/modules/setting"
+	"branchspire/modules/storage"
+	"branchspire/modules/test"
 
 	"github.com/stretchr/testify/assert"
 	"google.golang.org/protobuf/types/known/timestamppb"
@@ -34,12 +34,12 @@ func TestDownloadTaskLogs(t *testing.T) {
 		zstdEnabled bool
 	}{
 		{
-			treePath: ".gitea/workflows/download-task-logs-zstd.yml",
+			treePath: ".branchspire/workflows/download-task-logs-zstd.yml",
 			fileContent: `name: download-task-logs-zstd
 on:
   push:
     paths:
-      - '.gitea/workflows/download-task-logs-zstd.yml'
+      - '.branchspire/workflows/download-task-logs-zstd.yml'
 jobs:
     job1:
       runs-on: ubuntu-latest
@@ -89,12 +89,12 @@ jobs:
 			zstdEnabled: true,
 		},
 		{
-			treePath: ".gitea/workflows/download-task-logs-no-zstd.yml",
+			treePath: ".branchspire/workflows/download-task-logs-no-zstd.yml",
 			fileContent: `name: download-task-logs-no-zstd
 on:
   push:
     paths:
-      - '.gitea/workflows/download-task-logs-no-zstd.yml'
+      - '.branchspire/workflows/download-task-logs-no-zstd.yml'
 jobs:
     job1:
       runs-on: ubuntu-latest
@@ -217,12 +217,12 @@ jobs:
 		}
 
 		t.Run("DownloadRerunTaskLogs", func(t *testing.T) {
-			treePath := ".gitea/workflows/download-rerun-logs.yml"
+			treePath := ".branchspire/workflows/download-rerun-logs.yml"
 			fileContent := `name: download-rerun-logs
 on:
   push:
     paths:
-      - '.gitea/workflows/download-rerun-logs.yml'
+      - '.branchspire/workflows/download-rerun-logs.yml'
 jobs:
     job1:
       runs-on: ubuntu-latest

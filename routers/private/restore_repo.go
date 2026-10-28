@@ -7,9 +7,9 @@ import (
 	"io"
 	"net/http"
 
-	"gitea.dev/modules/json"
-	myCtx "gitea.dev/services/context"
-	"gitea.dev/services/migrations"
+	"branchspire/modules/json"
+	myCtx "branchspire/services/context"
+	"branchspire/services/migrations"
 )
 
 // RestoreRepo restore a repository from data

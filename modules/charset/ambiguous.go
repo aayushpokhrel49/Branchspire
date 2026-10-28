@@ -8,7 +8,7 @@ import (
 	"strings"
 	"unicode"
 
-	"gitea.dev/modules/translation"
+	"branchspire/modules/translation"
 )
 
 // AmbiguousTablesForLocale provides the table of ambiguous characters for this locale.

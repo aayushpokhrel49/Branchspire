@@ -15,16 +15,16 @@ import (
 	"sync"
 	"testing"
 
-	auth_model "gitea.dev/models/auth"
-	packages_model "gitea.dev/models/packages"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
-	container_module "gitea.dev/modules/packages/container"
-	"gitea.dev/modules/setting"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/modules/test"
-	package_service "gitea.dev/services/packages"
-	"gitea.dev/tests"
+	auth_model "branchspire/models/auth"
+	packages_model "branchspire/models/packages"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
+	container_module "branchspire/modules/packages/container"
+	"branchspire/modules/setting"
+	api "branchspire/modules/structs"
+	"branchspire/modules/test"
+	package_service "branchspire/services/packages"
+	"branchspire/tests"
 
 	oci "github.com/opencontainers/image-spec/specs-go/v1"
 	"github.com/stretchr/testify/assert"
@@ -93,7 +93,7 @@ func TestPackageContainer(t *testing.T) {
 		}
 		wwwAuthenticateForRequiredSignIn := []string{
 			`Bearer realm="` + setting.AppURL + `v2/token",service="container_registry",scope="*"`,
-			`Basic realm="Gitea Container Registry"`,
+			`Basic realm="BranchSpire Container Registry"`,
 		}
 		t.Run("Anonymous", func(t *testing.T) {
 			defer tests.PrintCurrentTest(t)()

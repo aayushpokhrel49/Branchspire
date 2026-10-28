@@ -7,10 +7,10 @@ import (
 	"net/url"
 	"testing"
 
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/models/unittest"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/test"
+	repo_model "branchspire/models/repo"
+	"branchspire/models/unittest"
+	"branchspire/modules/setting"
+	"branchspire/modules/test"
 )
 
 func TestRepoWatch(t *testing.T) {

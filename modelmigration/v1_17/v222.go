@@ -8,8 +8,8 @@ import (
 	"errors"
 	"fmt"
 
-	"gitea.dev/modelmigration/base"
-	"gitea.dev/modules/timeutil"
+	"branchspire/modelmigration/base"
+	"branchspire/modules/timeutil"
 )
 
 func DropOldCredentialIDColumn(ctx context.Context, x base.EngineMigration) error {

@@ -1,7 +1,7 @@
-# Gitea - Docker
+# BranchSpire - Docker
 
 Dockerfile is found in the root of the repository.
 
-Docker image can be found on [docker hub](https://hub.docker.com/r/gitea/gitea).
+Docker image publishes are handled by the release workflows; build locally with `docker build -t branchspire:latest .`
 
-Documentation on using docker image can be found on [Gitea Docs site](https://docs.gitea.com/installation/install-with-docker-rootless).
+Documentation on using the Gitea Docker image applies to BranchSpire: https://docs.gitea.com/installation/install-with-docker-rootless

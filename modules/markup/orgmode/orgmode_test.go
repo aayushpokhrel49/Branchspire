@@ -8,9 +8,9 @@ import (
 	"strings"
 	"testing"
 
-	"gitea.dev/modules/markup"
-	"gitea.dev/modules/markup/orgmode"
-	"gitea.dev/modules/setting"
+	"branchspire/modules/markup"
+	"branchspire/modules/markup/orgmode"
+	"branchspire/modules/setting"
 
 	"github.com/stretchr/testify/assert"
 )

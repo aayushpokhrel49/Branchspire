@@ -4,8 +4,8 @@
 package org
 
 import (
-	"gitea.dev/routers/api/v1/shared"
-	"gitea.dev/services/context"
+	"branchspire/routers/api/v1/shared"
+	"branchspire/services/context"
 )
 
 func ListBlocks(ctx *context.APIContext) {

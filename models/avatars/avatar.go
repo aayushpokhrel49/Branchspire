@@ -10,12 +10,12 @@ import (
 	"strconv"
 	"strings"
 
-	"gitea.dev/models/db"
-	"gitea.dev/modules/avatar"
-	"gitea.dev/modules/base"
-	"gitea.dev/modules/cache"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/setting"
+	"branchspire/models/db"
+	"branchspire/modules/avatar"
+	"branchspire/modules/base"
+	"branchspire/modules/cache"
+	"branchspire/modules/log"
+	"branchspire/modules/setting"
 
 	"xorm.io/builder"
 )

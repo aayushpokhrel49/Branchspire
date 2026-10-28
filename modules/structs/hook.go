@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"gitea.dev/modules/json"
+	"branchspire/modules/json"
 )
 
 // ErrInvalidReceiveHook FIXME

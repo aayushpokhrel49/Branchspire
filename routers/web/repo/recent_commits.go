@@ -6,8 +6,8 @@ package repo
 import (
 	"net/http"
 
-	"gitea.dev/modules/templates"
-	"gitea.dev/services/context"
+	"branchspire/modules/templates"
+	"branchspire/services/context"
 )
 
 const (

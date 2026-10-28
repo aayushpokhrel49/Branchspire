@@ -10,8 +10,8 @@ import (
 	"testing"
 	"time"
 
-	"gitea.dev/modules/indexer/issues/internal/tests"
-	"gitea.dev/modules/test"
+	"branchspire/modules/indexer/issues/internal/tests"
+	"branchspire/modules/test"
 
 	"github.com/stretchr/testify/require"
 )

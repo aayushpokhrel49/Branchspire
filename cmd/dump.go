@@ -11,12 +11,12 @@ import (
 	"path/filepath"
 	"strings"
 
-	"gitea.dev/models/db"
-	"gitea.dev/modules/dump"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/storage"
-	"gitea.dev/modules/util"
+	"branchspire/models/db"
+	"branchspire/modules/dump"
+	"branchspire/modules/log"
+	"branchspire/modules/setting"
+	"branchspire/modules/storage"
+	"branchspire/modules/util"
 
 	"github.com/urfave/cli/v3"
 )
@@ -24,8 +24,8 @@ import (
 func newDumpCommand() *cli.Command {
 	return &cli.Command{
 		Name:        "dump",
-		Usage:       "Dump Gitea files and database",
-		Description: `Dump compresses all related files and database into zip file. It can be used for backup and capture Gitea server image to send to maintainer`,
+		Usage:       "Dump BranchSpire files and database",
+		Description: `Dump compresses all related files and database into zip file. It can be used for backup and capture BranchSpire server image to send to maintainer`,
 		Action:      runDump,
 		Flags: []cli.Flag{
 			&cli.StringFlag{

@@ -6,12 +6,12 @@ package setting
 import (
 	"net/http"
 
-	git_model "gitea.dev/models/git"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/setting"
-	"gitea.dev/routers/web/repo"
-	"gitea.dev/services/context"
-	repo_service "gitea.dev/services/repository"
+	git_model "branchspire/models/git"
+	"branchspire/modules/log"
+	"branchspire/modules/setting"
+	"branchspire/routers/web/repo"
+	"branchspire/services/context"
+	repo_service "branchspire/services/repository"
 )
 
 // SetDefaultBranchPost set default branch

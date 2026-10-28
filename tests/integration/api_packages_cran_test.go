@@ -11,12 +11,12 @@ import (
 	"net/http"
 	"testing"
 
-	"gitea.dev/models/packages"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
-	cran_module "gitea.dev/modules/packages/cran"
-	"gitea.dev/modules/test"
-	"gitea.dev/tests"
+	"branchspire/models/packages"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
+	cran_module "branchspire/modules/packages/cran"
+	"branchspire/modules/test"
+	"branchspire/tests"
 
 	"github.com/stretchr/testify/assert"
 )
@@ -29,7 +29,7 @@ func TestPackageCran(t *testing.T) {
 	packageName := "test.package"
 	packageVersion := "1.0.3"
 	packageAuthor := "KN4CK3R"
-	packageDescription := "Gitea Test Package"
+	packageDescription := "BranchSpire Test Package"
 
 	createDescription := func(name, version string) []byte {
 		var buf bytes.Buffer

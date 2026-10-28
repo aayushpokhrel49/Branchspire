@@ -12,7 +12,7 @@ import (
 	"path"
 	"sync"
 
-	"gitea.dev/modules/assetfs"
+	"branchspire/modules/assetfs"
 
 	_ "embed"
 

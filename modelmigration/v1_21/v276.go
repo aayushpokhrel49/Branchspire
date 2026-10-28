@@ -6,9 +6,9 @@ package v1_21
 import (
 	"context"
 
-	"gitea.dev/modelmigration/base"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/setting"
+	"branchspire/modelmigration/base"
+	"branchspire/modules/git"
+	"branchspire/modules/setting"
 )
 
 func AddRemoteAddressToMirrors(ctx context.Context, x base.EngineMigration) error {

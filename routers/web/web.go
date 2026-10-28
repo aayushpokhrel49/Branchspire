@@ -7,48 +7,48 @@ import (
 	"net/http"
 	"strings"
 
-	audit_model "gitea.dev/models/audit"
-	auth_model "gitea.dev/models/auth"
-	"gitea.dev/models/perm"
-	"gitea.dev/models/unit"
-	"gitea.dev/modules/consts"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/graceful"
-	"gitea.dev/modules/imagecaptcha"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/metrics"
-	"gitea.dev/modules/public"
-	"gitea.dev/modules/reqctx"
-	"gitea.dev/modules/session"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/storage"
-	"gitea.dev/modules/structs"
-	"gitea.dev/modules/web"
-	"gitea.dev/modules/web/middleware"
-	"gitea.dev/modules/web/routing"
-	"gitea.dev/modules/web/types"
-	"gitea.dev/routers/common"
-	"gitea.dev/routers/web/admin"
-	"gitea.dev/routers/web/auth"
-	"gitea.dev/routers/web/devtest"
-	"gitea.dev/routers/web/explore"
-	"gitea.dev/routers/web/feed"
-	"gitea.dev/routers/web/healthcheck"
-	"gitea.dev/routers/web/misc"
-	"gitea.dev/routers/web/org"
-	org_setting "gitea.dev/routers/web/org/setting"
-	"gitea.dev/routers/web/repo"
-	"gitea.dev/routers/web/repo/actions"
-	repo_setting "gitea.dev/routers/web/repo/setting"
-	shared_actions "gitea.dev/routers/web/shared/actions"
-	"gitea.dev/routers/web/shared/project"
-	"gitea.dev/routers/web/user"
-	user_setting "gitea.dev/routers/web/user/setting"
-	"gitea.dev/routers/web/user/setting/security"
-	gitea_websocket "gitea.dev/routers/web/websocket"
-	auth_service "gitea.dev/services/auth"
-	"gitea.dev/services/context"
-	"gitea.dev/services/forms"
+	audit_model "branchspire/models/audit"
+	auth_model "branchspire/models/auth"
+	"branchspire/models/perm"
+	"branchspire/models/unit"
+	"branchspire/modules/consts"
+	"branchspire/modules/git"
+	"branchspire/modules/graceful"
+	"branchspire/modules/imagecaptcha"
+	"branchspire/modules/log"
+	"branchspire/modules/metrics"
+	"branchspire/modules/public"
+	"branchspire/modules/reqctx"
+	"branchspire/modules/session"
+	"branchspire/modules/setting"
+	"branchspire/modules/storage"
+	"branchspire/modules/structs"
+	"branchspire/modules/web"
+	"branchspire/modules/web/middleware"
+	"branchspire/modules/web/routing"
+	"branchspire/modules/web/types"
+	"branchspire/routers/common"
+	"branchspire/routers/web/admin"
+	"branchspire/routers/web/auth"
+	"branchspire/routers/web/devtest"
+	"branchspire/routers/web/explore"
+	"branchspire/routers/web/feed"
+	"branchspire/routers/web/healthcheck"
+	"branchspire/routers/web/misc"
+	"branchspire/routers/web/org"
+	org_setting "branchspire/routers/web/org/setting"
+	"branchspire/routers/web/repo"
+	"branchspire/routers/web/repo/actions"
+	repo_setting "branchspire/routers/web/repo/setting"
+	shared_actions "branchspire/routers/web/shared/actions"
+	"branchspire/routers/web/shared/project"
+	"branchspire/routers/web/user"
+	user_setting "branchspire/routers/web/user/setting"
+	"branchspire/routers/web/user/setting/security"
+	gitea_websocket "branchspire/routers/web/websocket"
+	auth_service "branchspire/services/auth"
+	"branchspire/services/context"
+	"branchspire/services/forms"
 
 	chi_middleware "github.com/go-chi/chi/v5/middleware"
 	"github.com/go-chi/cors"
@@ -521,6 +521,9 @@ func registerWebRoutes(m *web.Router, webAuth *AuthMiddleware) {
 	// Especially some AJAX requests, we can reduce middleware number to improve performance.
 
 	m.Get("/", optSignInHome, Home)
+	m.Get("/about", optSignInHome, About)
+	m.Get("/legal/{page}", optSignInHome, Legal)
+	m.Get("/docs", optSignInHome, Docs)
 	m.Get("/sitemap.xml", sitemapEnabled, optExploreSignIn, HomeSitemap)
 	m.Group("/.well-known", func() {
 		m.Get("/openid-configuration", auth.OIDCWellKnown)
@@ -1763,7 +1766,7 @@ func registerWebRoutes(m *web.Router, webAuth *AuthMiddleware) {
 	// pattern: "/{username}/{reponame}/{lfs-paths}": git-lfs support, see also addOwnerRepoGitHTTPRouters
 	common.AddOwnerRepoGitLFSRoutes(m, lfsServerEnabled, webAuth.AllowBasic, webAuth.AllowDeployToken, repo.CorsHandler(), optSignInFromAnyOrigin)
 
-	// Some users want to use "web-based git client" to access Gitea's repositories,
+	// Some users want to use "web-based git client" to access BranchSpire's repositories,
 	// so the CORS handler and OPTIONS method are used.
 	// pattern: "/{username}/{reponame}/{git-paths}": git http support
 	addOwnerRepoGitHTTPRouters(m, repo.HTTPGitEnabledHandler, webAuth.AllowBasic, webAuth.AllowOAuth2, webAuth.AllowDeployToken, repo.CorsHandler(), optSignInFromAnyOrigin, context.UserAssignmentWeb())

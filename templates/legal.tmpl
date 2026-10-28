@@ -1,0 +1,64 @@
+{{template "base/head" .}}
+<div role="main" class="page-content about-page legal-page">
+	<div class="about-container">
+		<header class="about-hero">
+			{{if eq .PageIsLegal "terms"}}
+				<h1 class="about-title">{{ctx.Locale.Tr "legal.terms.title"}}</h1>
+				<p class="about-lede">{{ctx.Locale.Tr "legal.intro"}}</p>
+			{{else}}
+				<h1 class="about-title">{{ctx.Locale.Tr "legal.privacy.title"}}</h1>
+				<p class="about-lede">{{ctx.Locale.Tr "legal.intro"}}</p>
+			{{end}}
+		</header>
+		<div class="about-sections">
+			{{if eq .PageIsLegal "terms"}}
+				<section class="about-section">
+					<h2 class="about-section-title">{{ctx.Locale.Tr "legal.terms.agreement.title"}}</h2>
+					<p>{{ctx.Locale.Tr "legal.terms.agreement.desc"}}</p>
+				</section>
+				<section class="about-section">
+					<h2 class="about-section-title">{{ctx.Locale.Tr "legal.terms.accounts.title"}}</h2>
+					<p>{{ctx.Locale.Tr "legal.terms.accounts.desc"}}</p>
+				</section>
+				<section class="about-section">
+					<h2 class="about-section-title">{{ctx.Locale.Tr "legal.terms.content.title"}}</h2>
+					<p>{{ctx.Locale.Tr "legal.terms.content.desc"}}</p>
+				</section>
+				<section class="about-section">
+					<h2 class="about-section-title">{{ctx.Locale.Tr "legal.terms.usage.title"}}</h2>
+					<p>{{ctx.Locale.Tr "legal.terms.usage.desc"}}</p>
+				</section>
+				<section class="about-section">
+					<h2 class="about-section-title">{{ctx.Locale.Tr "legal.terms.availability.title"}}</h2>
+					<p>{{ctx.Locale.Tr "legal.terms.availability.desc"}}</p>
+				</section>
+				<section class="about-section">
+					<h2 class="about-section-title">{{ctx.Locale.Tr "legal.terms.changes.title"}}</h2>
+					<p>{{ctx.Locale.Tr "legal.terms.changes.desc"}}</p>
+				</section>
+			{{else}}
+				<section class="about-section">
+					<h2 class="about-section-title">{{ctx.Locale.Tr "legal.privacy.stored.title"}}</h2>
+					<p>{{ctx.Locale.Tr "legal.privacy.stored.desc"}}</p>
+				</section>
+				<section class="about-section">
+					<h2 class="about-section-title">{{ctx.Locale.Tr "legal.privacy.visibility.title"}}</h2>
+					<p>{{ctx.Locale.Tr "legal.privacy.visibility.desc"}}</p>
+				</section>
+				<section class="about-section">
+					<h2 class="about-section-title">{{ctx.Locale.Tr "legal.privacy.tracking.title"}}</h2>
+					<p>{{ctx.Locale.Tr "legal.privacy.tracking.desc"}}</p>
+				</section>
+				<section class="about-section">
+					<h2 class="about-section-title">{{ctx.Locale.Tr "legal.privacy.logs.title"}}</h2>
+					<p>{{ctx.Locale.Tr "legal.privacy.logs.desc"}}</p>
+				</section>
+				<section class="about-section">
+					<h2 class="about-section-title">{{ctx.Locale.Tr "legal.privacy.questions.title"}}</h2>
+					<p>{{ctx.Locale.Tr "legal.privacy.questions.desc"}}</p>
+				</section>
+			{{end}}
+		</div>
+	</div>
+</div>
+{{template "base/footer" .}}

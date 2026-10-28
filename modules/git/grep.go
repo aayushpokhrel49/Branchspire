@@ -13,8 +13,8 @@ import (
 	"strings"
 	"time"
 
-	"gitea.dev/modules/git/gitcmd"
-	"gitea.dev/modules/util"
+	"branchspire/modules/git/gitcmd"
+	"branchspire/modules/util"
 )
 
 type GrepResult struct {

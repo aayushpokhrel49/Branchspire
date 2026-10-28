@@ -14,11 +14,11 @@ import (
 	"sync"
 	"time"
 
-	"gitea.dev/modules/httplib"
-	"gitea.dev/modules/json"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/proxyprotocol"
-	"gitea.dev/modules/setting"
+	"branchspire/modules/httplib"
+	"branchspire/modules/json"
+	"branchspire/modules/log"
+	"branchspire/modules/proxyprotocol"
+	"branchspire/modules/setting"
 )
 
 // Response is used for internal request response (for user message and error message)

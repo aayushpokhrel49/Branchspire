@@ -10,15 +10,15 @@ import (
 	"slices"
 	"strconv"
 
-	actions_model "gitea.dev/models/actions"
-	repo_model "gitea.dev/models/repo"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/base"
-	"gitea.dev/modules/container"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/templates"
-	"gitea.dev/modules/util"
-	"gitea.dev/services/context"
+	actions_model "branchspire/models/actions"
+	repo_model "branchspire/models/repo"
+	user_model "branchspire/models/user"
+	"branchspire/modules/base"
+	"branchspire/modules/container"
+	"branchspire/modules/setting"
+	"branchspire/modules/templates"
+	"branchspire/modules/util"
+	"branchspire/services/context"
 )
 
 // JobQueue renders the instance-wide Actions job queue on the admin settings page.

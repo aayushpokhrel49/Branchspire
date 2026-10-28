@@ -9,13 +9,13 @@ import (
 	"path"
 	"strings"
 
-	pull_model "gitea.dev/models/pull"
-	"gitea.dev/modules/base"
-	"gitea.dev/modules/fileicon"
-	"gitea.dev/modules/git"
-	"gitea.dev/services/context"
-	"gitea.dev/services/gitdiff"
-	files_service "gitea.dev/services/repository/files"
+	pull_model "branchspire/models/pull"
+	"branchspire/modules/base"
+	"branchspire/modules/fileicon"
+	"branchspire/modules/git"
+	"branchspire/services/context"
+	"branchspire/services/gitdiff"
+	files_service "branchspire/services/repository/files"
 
 	"github.com/go-enry/go-enry/v2"
 )

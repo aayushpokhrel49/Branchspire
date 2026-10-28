@@ -12,18 +12,18 @@ import (
 	"time"
 
 	runnerv1 "gitea.dev/actionslib/runner/v1"
-	actions_model "gitea.dev/models/actions"
-	auth_model "gitea.dev/models/auth"
-	perm_model "gitea.dev/models/perm"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/models/unit"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
-	actions_module "gitea.dev/modules/actions"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/json"
-	"gitea.dev/modules/queue"
-	api "gitea.dev/modules/structs"
+	actions_model "branchspire/models/actions"
+	auth_model "branchspire/models/auth"
+	perm_model "branchspire/models/perm"
+	repo_model "branchspire/models/repo"
+	"branchspire/models/unit"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
+	actions_module "branchspire/modules/actions"
+	"branchspire/modules/git"
+	"branchspire/modules/json"
+	"branchspire/modules/queue"
+	api "branchspire/modules/structs"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -60,7 +60,7 @@ func TestActionsReusableWorkflow(t *testing.T) {
 			}).AddTokenAuth(user2Token)
 			MakeRequest(t, req, http.StatusCreated)
 
-			createRepoWorkflowFile(t, user2, user2Token, repo, ".gitea/workflows/reusable1.yaml",
+			createRepoWorkflowFile(t, user2, user2Token, repo, ".branchspire/workflows/reusable1.yaml",
 				`name: Reusable1
 on:
   workflow_call:
@@ -101,12 +101,12 @@ jobs:
 
   reusable1_job3:
     needs: [reusable1_job2]
-    uses: ./.gitea/workflows/reusable2.yaml
+    uses: ./.branchspire/workflows/reusable2.yaml
     with:
       msg: ${{ inputs.str_input }}
 `)
 
-			createRepoWorkflowFile(t, user2, user2Token, repo, ".gitea/workflows/reusable2.yaml",
+			createRepoWorkflowFile(t, user2, user2Token, repo, ".branchspire/workflows/reusable2.yaml",
 				`name: Reusable2
 on:
   workflow_call:
@@ -121,12 +121,12 @@ jobs:
       - run: echo ${{ inputs.msg }}
 `)
 
-			createRepoWorkflowFile(t, user2, user2Token, repo, ".gitea/workflows/caller.yaml",
+			createRepoWorkflowFile(t, user2, user2Token, repo, ".branchspire/workflows/caller.yaml",
 				`name: Caller
 on:
   push:
     paths:
-      - '.gitea/workflows/caller.yaml'
+      - '.branchspire/workflows/caller.yaml'
 jobs:
   caller_job1:
     runs-on: ubuntu-latest
@@ -141,7 +141,7 @@ jobs:
     needs: [caller_job1]
     permissions:
       contents: read
-    uses: './.gitea/workflows/reusable1.yaml'
+    uses: './.branchspire/workflows/reusable1.yaml'
     with:
       str_input: 'from_caller_job2'
       num_input: ${{ 2.3e2 }}
@@ -373,7 +373,7 @@ jobs:
 			// libRepo: private, owned by user2.
 			libAPIRepo := createActionsTestRepo(t, user2Token, "reusable-lib-private", true)
 			libRepo := unittest.AssertExistsAndLoadBean(t, &repo_model.Repository{ID: libAPIRepo.ID})
-			createRepoWorkflowFile(t, user2, user2Token, libRepo, ".gitea/workflows/reusable_lib.yaml",
+			createRepoWorkflowFile(t, user2, user2Token, libRepo, ".branchspire/workflows/reusable_lib.yaml",
 				`name: ReusableLib
 on:
   workflow_call:
@@ -395,12 +395,12 @@ jobs:
 			runner := newMockRunner()
 			runner.registerAsRepoRunner(t, consumerRepo.OwnerName, consumerRepo.Name, "mock-cross-runner", []string{"ubuntu-latest"}, false)
 
-			createRepoWorkflowFile(t, user4, user4Token, consumerRepo, ".gitea/workflows/cross-caller.yaml",
+			createRepoWorkflowFile(t, user4, user4Token, consumerRepo, ".branchspire/workflows/cross-caller.yaml",
 				`name: CrossCaller
 on: push
 jobs:
   cross_job:
-    uses: user2/reusable-lib-private/.gitea/workflows/reusable_lib.yaml@main
+    uses: user2/reusable-lib-private/.branchspire/workflows/reusable_lib.yaml@main
     with:
       from: 'consumer'
 `)
@@ -450,7 +450,7 @@ jobs:
 			// libRepo: private, owned by user2.
 			libAPIRepo := createActionsTestRepo(t, user2Token, "reusable-lib-public-denied", true)
 			libRepo := unittest.AssertExistsAndLoadBean(t, &repo_model.Repository{ID: libAPIRepo.ID})
-			createRepoWorkflowFile(t, user2, user2Token, libRepo, ".gitea/workflows/reusable_lib.yaml",
+			createRepoWorkflowFile(t, user2, user2Token, libRepo, ".branchspire/workflows/reusable_lib.yaml",
 				`name: ReusableLib
 on:
   workflow_call:
@@ -476,12 +476,12 @@ jobs:
 			runner := newMockRunner()
 			runner.registerAsRepoRunner(t, consumerRepo.OwnerName, consumerRepo.Name, "mock-public-denied-runner", []string{"ubuntu-latest"}, false)
 
-			createRepoWorkflowFile(t, user4, user4Token, consumerRepo, ".gitea/workflows/cross-caller.yaml",
+			createRepoWorkflowFile(t, user4, user4Token, consumerRepo, ".branchspire/workflows/cross-caller.yaml",
 				`name: CrossCaller
 on: push
 jobs:
   cross_job:
-    uses: user2/reusable-lib-public-denied/.gitea/workflows/reusable_lib.yaml@main
+    uses: user2/reusable-lib-public-denied/.branchspire/workflows/reusable_lib.yaml@main
 `)
 
 			assertInvalidWorkflowRun(t, consumerRepo.ID, "cross-caller.yaml", "reusable workflow repository user2/reusable-lib-public-denied does not exist or is not readable")
@@ -495,7 +495,7 @@ jobs:
 
 			libAPIRepo := createActionsTestRepo(t, user2Token, "reusable-lib-nested", false)
 			libRepo := unittest.AssertExistsAndLoadBean(t, &repo_model.Repository{ID: libAPIRepo.ID})
-			createRepoWorkflowFile(t, user2, user2Token, libRepo, ".gitea/workflows/util.yaml",
+			createRepoWorkflowFile(t, user2, user2Token, libRepo, ".branchspire/workflows/util.yaml",
 				`name: UtilLib
 on:
   workflow_call:
@@ -506,21 +506,21 @@ jobs:
     steps:
       - run: echo from-lib
 `)
-			createRepoWorkflowFile(t, user2, user2Token, libRepo, ".gitea/workflows/lib.yaml",
+			createRepoWorkflowFile(t, user2, user2Token, libRepo, ".branchspire/workflows/lib.yaml",
 				`name: LibNested
 on:
   workflow_call:
 
 jobs:
   call_util_in_lib:
-    uses: ./.gitea/workflows/util.yaml
+    uses: ./.branchspire/workflows/util.yaml
 `)
 
 			consumerAPIRepo := createActionsTestRepo(t, user4Token, "consumer-nested-uses", false)
 			consumerRepo := unittest.AssertExistsAndLoadBean(t, &repo_model.Repository{ID: consumerAPIRepo.ID})
 
 			// A *different* util.yaml in the consumer repo: if `./` mis-resolves we'd see this job's name.
-			createRepoWorkflowFile(t, user4, user4Token, consumerRepo, ".gitea/workflows/util.yaml",
+			createRepoWorkflowFile(t, user4, user4Token, consumerRepo, ".branchspire/workflows/util.yaml",
 				`name: UtilConsumer
 on:
   workflow_call:
@@ -535,12 +535,12 @@ jobs:
 			runner := newMockRunner()
 			runner.registerAsRepoRunner(t, consumerRepo.OwnerName, consumerRepo.Name, "mock-nested-runner", []string{"ubuntu-latest"}, false)
 
-			createRepoWorkflowFile(t, user4, user4Token, consumerRepo, ".gitea/workflows/caller.yaml",
+			createRepoWorkflowFile(t, user4, user4Token, consumerRepo, ".branchspire/workflows/caller.yaml",
 				`name: NestedCaller
 on: push
 jobs:
   cross_job:
-    uses: user2/reusable-lib-nested/.gitea/workflows/lib.yaml@main
+    uses: user2/reusable-lib-nested/.branchspire/workflows/lib.yaml@main
 `)
 
 			run := unittest.AssertExistsAndLoadBean(t, &actions_model.ActionRun{RepoID: consumerRepo.ID})
@@ -556,7 +556,7 @@ jobs:
 			assert.Equal(t, libRepo.ID, callUtilJob.WorkflowSourceRepoID)
 			assert.Equal(t, libHead, callUtilJob.WorkflowSourceCommitSHA)
 
-			// call_util_in_lib has `uses: ./.gitea/workflows/util.yaml`, so its children should come from libRepo/util.yaml
+			// call_util_in_lib has `uses: ./.branchspire/workflows/util.yaml`, so its children should come from libRepo/util.yaml
 			assert.True(t, callUtilJob.IsExpanded)
 			unittest.AssertExistsAndLoadBean(t, &actions_model.ActionRunJob{RunID: run.ID, JobID: "util_lib_job", ParentJobID: callUtilJob.ID})
 			unittest.AssertNotExistsBean(t, &actions_model.ActionRunJob{RunID: run.ID, JobID: "util_consumer_job"})
@@ -565,15 +565,15 @@ jobs:
 		t.Run("Missing or invalid callee fails the run as an invalid workflow file", func(t *testing.T) {
 			for name, testCase := range map[string]struct{ callee, want string }{
 				"missing":    {"", "job call: read user2/caller-missing-callee@"},
-				"no-runs-on": {"on: workflow_call\njobs:\n  inner:\n    steps:\n      - run: echo\n", "job call: Error from called workflow ./.gitea/workflows/callee.yml: job inner: Required property is missing: runs-on"},
+				"no-runs-on": {"on: workflow_call\njobs:\n  inner:\n    steps:\n      - run: echo\n", "job call: Error from called workflow ./.branchspire/workflows/callee.yml: job inner: Required property is missing: runs-on"},
 			} {
 				apiRepo := createActionsTestRepo(t, user2Token, "caller-"+name+"-callee", false)
 				repo := unittest.AssertExistsAndLoadBean(t, &repo_model.Repository{ID: apiRepo.ID})
 				if testCase.callee != "" {
-					createRepoWorkflowFile(t, user2, user2Token, repo, ".gitea/workflows/callee.yml", testCase.callee)
+					createRepoWorkflowFile(t, user2, user2Token, repo, ".branchspire/workflows/callee.yml", testCase.callee)
 				}
-				createRepoWorkflowFile(t, user2, user2Token, repo, ".gitea/workflows/caller.yaml",
-					"on: push\njobs:\n  plain_job:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo\n  call:\n    needs: plain_job\n    uses: ./.gitea/workflows/callee.yml\n")
+				createRepoWorkflowFile(t, user2, user2Token, repo, ".branchspire/workflows/caller.yaml",
+					"on: push\njobs:\n  plain_job:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo\n  call:\n    needs: plain_job\n    uses: ./.branchspire/workflows/callee.yml\n")
 				assertInvalidWorkflowRun(t, repo.ID, "caller.yaml", testCase.want)
 			}
 		})
@@ -586,9 +586,9 @@ jobs:
 			runner := newMockRunner()
 			runner.registerAsRepoRunner(t, repo.OwnerName, repo.Name, "mock-runner", []string{"ubuntu-latest"}, false)
 
-			createRepoWorkflowFile(t, user2, user2Token, repo, ".gitea/workflows/lib.yml",
+			createRepoWorkflowFile(t, user2, user2Token, repo, ".branchspire/workflows/lib.yml",
 				"on:\n  workflow_call:\n    secrets:\n      token:\n        required: true\njobs:\n  inner:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo\n")
-			createRepoWorkflowFile(t, user2, user2Token, repo, ".gitea/workflows/caller.yaml",
+			createRepoWorkflowFile(t, user2, user2Token, repo, ".branchspire/workflows/caller.yaml",
 				`name: Caller
 on: push
 jobs:
@@ -598,7 +598,7 @@ jobs:
       - run: echo 'job'
   bad_caller:
     needs: plain_job
-    uses: ./.gitea/workflows/lib.yml
+    uses: ./.branchspire/workflows/lib.yml
 `)
 
 			plainTask := runner.fetchTask(t)
@@ -641,7 +641,7 @@ jobs:
 			runner := newMockRunner()
 			runner.registerAsRepoRunner(t, baseRepo.OwnerName, baseRepo.Name, "mock-fork-runner", []string{"ubuntu-latest"}, false)
 
-			createRepoWorkflowFile(t, user2, user2Token, baseRepo, ".gitea/workflows/reusable.yaml",
+			createRepoWorkflowFile(t, user2, user2Token, baseRepo, ".branchspire/workflows/reusable.yaml",
 				`name: Reusable
 on:
   workflow_call:
@@ -654,12 +654,12 @@ jobs:
     steps:
       - run: echo
 `)
-			createRepoWorkflowFile(t, user2, user2Token, baseRepo, ".gitea/workflows/caller.yaml",
+			createRepoWorkflowFile(t, user2, user2Token, baseRepo, ".branchspire/workflows/caller.yaml",
 				`name: Caller
 on: pull_request
 jobs:
   call_reusable:
-    uses: ./.gitea/workflows/reusable.yaml
+    uses: ./.branchspire/workflows/reusable.yaml
     secrets: inherit
 `)
 
@@ -714,7 +714,7 @@ jobs:
 			runner := newMockRunner()
 			runner.registerAsRepoRunner(t, baseRepo.OwnerName, baseRepo.Name, "mock-prt-runner", []string{"ubuntu-latest"}, false)
 
-			reusablePath := ".gitea/workflows/reusable.yaml"
+			reusablePath := ".branchspire/workflows/reusable.yaml"
 			// A pull_request_target run's workflow should always come from the base branch.
 			createRepoWorkflowFile(t, user2, user2Token, baseRepo, reusablePath, `name: Reusable
 on:
@@ -725,12 +725,12 @@ jobs:
     steps:
       - run: echo trusted
 `)
-			baseFile := createWorkflowFile(t, user2Token, baseRepo.OwnerName, baseRepo.Name, ".gitea/workflows/prt.yaml",
+			baseFile := createWorkflowFile(t, user2Token, baseRepo.OwnerName, baseRepo.Name, ".branchspire/workflows/prt.yaml",
 				getWorkflowCreateFileOptions(user2, baseRepo.DefaultBranch, "create prt.yaml", `name: PRT
 on: pull_request_target
 jobs:
   call_reusable:
-    uses: ./.gitea/workflows/reusable.yaml
+    uses: ./.branchspire/workflows/reusable.yaml
     secrets: inherit
 `))
 			baseSHA := baseFile.Commit.SHA
@@ -813,7 +813,7 @@ jobs:
 			//   attempt 2: rerun gate, mock Failure -> caller is Skipped without expanding (no children inserted)
 			//   attempt 3: rerun gate, mock Success -> caller expands again -> inner.AttemptJobID must equal N
 
-			createRepoWorkflowFile(t, user2, user2Token, repo, ".gitea/workflows/lib.yaml",
+			createRepoWorkflowFile(t, user2, user2Token, repo, ".branchspire/workflows/lib.yaml",
 				`name: Lib
 on:
   workflow_call:
@@ -824,12 +824,12 @@ jobs:
     steps:
       - run: echo inner
 `)
-			createRepoWorkflowFile(t, user2, user2Token, repo, ".gitea/workflows/main.yaml",
+			createRepoWorkflowFile(t, user2, user2Token, repo, ".branchspire/workflows/main.yaml",
 				`name: Main
 on:
   push:
     paths:
-      - '.gitea/workflows/main.yaml'
+      - '.branchspire/workflows/main.yaml'
 jobs:
   gate:
     runs-on: ubuntu-latest
@@ -838,7 +838,7 @@ jobs:
 
   caller:
     needs: [gate]
-    uses: ./.gitea/workflows/lib.yaml
+    uses: ./.branchspire/workflows/lib.yaml
 `)
 
 			run := unittest.AssertExistsAndLoadBean(t, &actions_model.ActionRun{RepoID: repo.ID})
@@ -916,7 +916,7 @@ jobs:
 			apiRepo := createActionsTestRepo(t, user2Token, "caller-inline-if-test", false)
 			repo := unittest.AssertExistsAndLoadBean(t, &repo_model.Repository{ID: apiRepo.ID})
 
-			createRepoWorkflowFile(t, user2, user2Token, repo, ".gitea/workflows/lib.yaml",
+			createRepoWorkflowFile(t, user2, user2Token, repo, ".branchspire/workflows/lib.yaml",
 				`name: Lib
 on:
   workflow_call:
@@ -929,23 +929,23 @@ jobs:
     steps:
       - run: echo inner
 `)
-			createRepoWorkflowFile(t, user2, user2Token, repo, ".gitea/workflows/caller.yaml",
+			createRepoWorkflowFile(t, user2, user2Token, repo, ".branchspire/workflows/caller.yaml",
 				`name: Caller
 on:
   push:
     paths:
-      - '.gitea/workflows/caller.yaml'
+      - '.branchspire/workflows/caller.yaml'
 jobs:
   will_skip:
     if: ${{ false }}
-    uses: ./.gitea/workflows/lib.yaml
+    uses: ./.branchspire/workflows/lib.yaml
 
   will_run:
     if: ${{ true }}
-    uses: ./.gitea/workflows/lib.yaml
+    uses: ./.branchspire/workflows/lib.yaml
 
   will_run_too:
-    uses: ./.gitea/workflows/lib.yaml
+    uses: ./.branchspire/workflows/lib.yaml
 
   after_skip:
     needs: [will_skip]

@@ -7,17 +7,17 @@ import (
 	"context"
 	"strings"
 
-	asymkey_model "gitea.dev/models/asymkey"
-	audit_model "gitea.dev/models/audit"
-	"gitea.dev/models/auth"
-	user_model "gitea.dev/models/user"
-	auth_module "gitea.dev/modules/auth"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/optional"
-	asymkey_service "gitea.dev/services/asymkey"
-	"gitea.dev/services/audit"
-	source_service "gitea.dev/services/auth/source"
-	user_service "gitea.dev/services/user"
+	asymkey_model "branchspire/models/asymkey"
+	audit_model "branchspire/models/audit"
+	"branchspire/models/auth"
+	user_model "branchspire/models/user"
+	auth_module "branchspire/modules/auth"
+	"branchspire/modules/log"
+	"branchspire/modules/optional"
+	asymkey_service "branchspire/services/asymkey"
+	"branchspire/services/audit"
+	source_service "branchspire/services/auth/source"
+	user_service "branchspire/services/user"
 )
 
 // Authenticate queries if login/password is valid against the LDAP directory pool,

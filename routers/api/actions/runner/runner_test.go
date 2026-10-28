@@ -7,7 +7,7 @@ import (
 	"testing"
 
 	runnerv1 "gitea.dev/actionslib/runner/v1"
-	actions_model "gitea.dev/models/actions"
+	actions_model "branchspire/models/actions"
 
 	"github.com/stretchr/testify/assert"
 )

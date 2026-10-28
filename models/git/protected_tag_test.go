@@ -6,8 +6,8 @@ package git_test
 import (
 	"testing"
 
-	git_model "gitea.dev/models/git"
-	"gitea.dev/models/unittest"
+	git_model "branchspire/models/git"
+	"branchspire/models/unittest"
 
 	"github.com/stretchr/testify/assert"
 )

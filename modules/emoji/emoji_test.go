@@ -7,9 +7,9 @@ package emoji
 import (
 	"testing"
 
-	"gitea.dev/modules/container"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/test"
+	"branchspire/modules/container"
+	"branchspire/modules/setting"
+	"branchspire/modules/test"
 
 	"github.com/stretchr/testify/assert"
 )

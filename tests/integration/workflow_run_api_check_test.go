@@ -9,12 +9,12 @@ import (
 	"net/url"
 	"testing"
 
-	actions_model "gitea.dev/models/actions"
-	auth_model "gitea.dev/models/auth"
-	"gitea.dev/models/db"
-	api "gitea.dev/modules/structs"
-	webhook_module "gitea.dev/modules/webhook"
-	"gitea.dev/tests"
+	actions_model "branchspire/models/actions"
+	auth_model "branchspire/models/auth"
+	"branchspire/models/db"
+	api "branchspire/modules/structs"
+	webhook_module "branchspire/modules/webhook"
+	"branchspire/tests"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

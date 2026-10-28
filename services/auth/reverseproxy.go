@@ -9,13 +9,13 @@ import (
 	"strings"
 	"uuid"
 
-	audit_model "gitea.dev/models/audit"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/optional"
-	"gitea.dev/modules/session"
-	"gitea.dev/modules/setting"
-	"gitea.dev/services/audit"
+	audit_model "branchspire/models/audit"
+	user_model "branchspire/models/user"
+	"branchspire/modules/log"
+	"branchspire/modules/optional"
+	"branchspire/modules/session"
+	"branchspire/modules/setting"
+	"branchspire/services/audit"
 )
 
 // Ensure the struct implements the interface.

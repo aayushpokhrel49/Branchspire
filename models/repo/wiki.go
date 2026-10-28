@@ -8,8 +8,8 @@ import (
 	"context"
 	"fmt"
 
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/util"
+	user_model "branchspire/models/user"
+	"branchspire/modules/util"
 )
 
 // ErrWikiAlreadyExist represents a "WikiAlreadyExist" kind of error.

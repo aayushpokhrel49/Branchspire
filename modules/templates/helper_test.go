@@ -9,7 +9,7 @@ import (
 	"strings"
 	"testing"
 
-	"gitea.dev/modules/util"
+	"branchspire/modules/util"
 
 	"github.com/stretchr/testify/assert"
 )

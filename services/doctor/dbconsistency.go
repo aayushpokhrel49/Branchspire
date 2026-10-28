@@ -6,16 +6,16 @@ package doctor
 import (
 	"context"
 
-	modelmigration "gitea.dev/modelmigration"
-	actions_model "gitea.dev/models/actions"
-	activities_model "gitea.dev/models/activities"
-	"gitea.dev/models/db"
-	issues_model "gitea.dev/models/issues"
-	repo_model "gitea.dev/models/repo"
-	secret_model "gitea.dev/models/secret"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/setting"
-	issue_service "gitea.dev/services/issue"
+	modelmigration "branchspire/modelmigration"
+	actions_model "branchspire/models/actions"
+	activities_model "branchspire/models/activities"
+	"branchspire/models/db"
+	issues_model "branchspire/models/issues"
+	repo_model "branchspire/models/repo"
+	secret_model "branchspire/models/secret"
+	"branchspire/modules/log"
+	"branchspire/modules/setting"
+	issue_service "branchspire/services/issue"
 )
 
 type consistencyCheck struct {
@@ -231,7 +231,7 @@ func prepareDBConsistencyChecks() []consistencyCheck {
 func checkDBConsistency(ctx context.Context, logger log.Logger, autofix bool) error {
 	// make sure DB version is uptodate
 	if err := db.InitEngineWithMigration(ctx, modelmigration.EnsureUpToDate); err != nil {
-		logger.Critical("Model version on the database does not match the current Gitea version. Model consistency will not be checked until the database is upgraded")
+		logger.Critical("Model version on the database does not match the current BranchSpire version. Model consistency will not be checked until the database is upgraded")
 		return err
 	}
 	consistencyChecks := prepareDBConsistencyChecks()

@@ -8,10 +8,10 @@ import (
 	"fmt"
 	"testing"
 
-	issues_model "gitea.dev/models/issues"
-	"gitea.dev/models/unittest"
-	"gitea.dev/modules/git/gitcmd"
-	"gitea.dev/modules/git/gitrepo"
+	issues_model "branchspire/models/issues"
+	"branchspire/models/unittest"
+	"branchspire/modules/git/gitcmd"
+	"branchspire/modules/git/gitrepo"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

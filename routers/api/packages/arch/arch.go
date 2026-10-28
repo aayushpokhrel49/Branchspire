@@ -12,15 +12,15 @@ import (
 	"net/http"
 	"strings"
 
-	packages_model "gitea.dev/models/packages"
-	"gitea.dev/modules/json"
-	packages_module "gitea.dev/modules/packages"
-	arch_module "gitea.dev/modules/packages/arch"
-	"gitea.dev/modules/util"
-	"gitea.dev/routers/api/packages/helper"
-	"gitea.dev/services/context"
-	packages_service "gitea.dev/services/packages"
-	arch_service "gitea.dev/services/packages/arch"
+	packages_model "branchspire/models/packages"
+	"branchspire/modules/json"
+	packages_module "branchspire/modules/packages"
+	arch_module "branchspire/modules/packages/arch"
+	"branchspire/modules/util"
+	"branchspire/routers/api/packages/helper"
+	"branchspire/services/context"
+	packages_service "branchspire/services/packages"
+	arch_service "branchspire/services/packages/arch"
 )
 
 func apiError(ctx *context.Context, status int, obj any) {

@@ -8,13 +8,13 @@ import (
 	"fmt"
 	"net/http"
 
-	"gitea.dev/models/organization"
-	packages_model "gitea.dev/models/packages"
-	"gitea.dev/models/perm"
-	"gitea.dev/models/unit"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/templates"
+	"branchspire/models/organization"
+	packages_model "branchspire/models/packages"
+	"branchspire/models/perm"
+	"branchspire/models/unit"
+	user_model "branchspire/models/user"
+	"branchspire/modules/setting"
+	"branchspire/modules/templates"
 )
 
 // Package contains owner, access mode and optional the package descriptor

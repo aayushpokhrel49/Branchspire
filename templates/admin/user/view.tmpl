@@ -32,7 +32,9 @@
 		{{ctx.Locale.Tr "admin.repositories"}} ({{ctx.Locale.Tr "admin.total" .ReposTotal}})
 	</h4>
 	<div class="ui attached segment">
-		{{template "shared/repo/list" .}}
+		<div class="repo-cards">
+			{{template "shared/repo/list" .}}
+		</div>
 	</div>
 
 	{{template "admin/user/view_orgs" dict "User" .User "UserOrgs" .UserOrgs}}

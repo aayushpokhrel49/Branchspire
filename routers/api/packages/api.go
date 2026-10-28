@@ -6,37 +6,37 @@ package packages
 import (
 	"net/http"
 
-	auth_model "gitea.dev/models/auth"
-	"gitea.dev/models/perm"
-	"gitea.dev/modules/log"
-	npm_module "gitea.dev/modules/packages/npm"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/web"
-	"gitea.dev/routers/api/packages/alpine"
-	"gitea.dev/routers/api/packages/arch"
-	"gitea.dev/routers/api/packages/cargo"
-	"gitea.dev/routers/api/packages/chef"
-	"gitea.dev/routers/api/packages/composer"
-	"gitea.dev/routers/api/packages/conan"
-	"gitea.dev/routers/api/packages/conda"
-	"gitea.dev/routers/api/packages/container"
-	"gitea.dev/routers/api/packages/cran"
-	"gitea.dev/routers/api/packages/debian"
-	"gitea.dev/routers/api/packages/generic"
-	"gitea.dev/routers/api/packages/goproxy"
-	"gitea.dev/routers/api/packages/helm"
-	"gitea.dev/routers/api/packages/maven"
-	"gitea.dev/routers/api/packages/npm"
-	"gitea.dev/routers/api/packages/nuget"
-	"gitea.dev/routers/api/packages/pub"
-	"gitea.dev/routers/api/packages/pypi"
-	"gitea.dev/routers/api/packages/rpm"
-	"gitea.dev/routers/api/packages/rubygems"
-	"gitea.dev/routers/api/packages/swift"
-	"gitea.dev/routers/api/packages/terraform"
-	"gitea.dev/routers/api/packages/vagrant"
-	"gitea.dev/services/auth"
-	"gitea.dev/services/context"
+	auth_model "branchspire/models/auth"
+	"branchspire/models/perm"
+	"branchspire/modules/log"
+	npm_module "branchspire/modules/packages/npm"
+	"branchspire/modules/setting"
+	"branchspire/modules/web"
+	"branchspire/routers/api/packages/alpine"
+	"branchspire/routers/api/packages/arch"
+	"branchspire/routers/api/packages/cargo"
+	"branchspire/routers/api/packages/chef"
+	"branchspire/routers/api/packages/composer"
+	"branchspire/routers/api/packages/conan"
+	"branchspire/routers/api/packages/conda"
+	"branchspire/routers/api/packages/container"
+	"branchspire/routers/api/packages/cran"
+	"branchspire/routers/api/packages/debian"
+	"branchspire/routers/api/packages/generic"
+	"branchspire/routers/api/packages/goproxy"
+	"branchspire/routers/api/packages/helm"
+	"branchspire/routers/api/packages/maven"
+	"branchspire/routers/api/packages/npm"
+	"branchspire/routers/api/packages/nuget"
+	"branchspire/routers/api/packages/pub"
+	"branchspire/routers/api/packages/pypi"
+	"branchspire/routers/api/packages/rpm"
+	"branchspire/routers/api/packages/rubygems"
+	"branchspire/routers/api/packages/swift"
+	"branchspire/routers/api/packages/terraform"
+	"branchspire/routers/api/packages/vagrant"
+	"branchspire/services/auth"
+	"branchspire/services/context"
 )
 
 func reqPackageAccess(accessMode perm.AccessMode) func(ctx *context.Context) {
@@ -61,7 +61,7 @@ func reqPackageAccess(accessMode perm.AccessMode) func(ctx *context.Context) {
 					}
 				}
 				if !scopeMatched {
-					ctx.Resp.Header().Set("WWW-Authenticate", `Basic realm="Gitea Package API"`)
+					ctx.Resp.Header().Set("WWW-Authenticate", `Basic realm="BranchSpire Package API"`)
 					ctx.HTTPError(http.StatusUnauthorized, "reqPackageAccess", "user should have specific permission or be a site admin")
 					return
 				}
@@ -85,7 +85,7 @@ func reqPackageAccess(accessMode perm.AccessMode) func(ctx *context.Context) {
 		}
 
 		if ctx.Package.AccessMode < accessMode && !ctx.IsUserSiteAdmin() {
-			ctx.Resp.Header().Set("WWW-Authenticate", `Basic realm="Gitea Package API"`)
+			ctx.Resp.Header().Set("WWW-Authenticate", `Basic realm="BranchSpire Package API"`)
 			ctx.HTTPError(http.StatusUnauthorized, "reqPackageAccess", "user should have specific permission or be a site admin")
 			return
 		}

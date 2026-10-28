@@ -5,6 +5,19 @@ export function initUserCheckAppUrl() {
   checkAppUrlScheme();
 }
 
+export function initUserAuthPasswordToggle() {
+  for (const btn of document.querySelectorAll<HTMLButtonElement>('.auth-password-toggle')) {
+    btn.addEventListener('click', () => {
+      const input = document.querySelector(`#${CSS.escape(btn.getAttribute('data-target')!)}`);
+      if (!(input instanceof HTMLInputElement)) return;
+      const show = input.type === 'password';
+      input.type = show ? 'text' : 'password';
+      btn.classList.toggle('is-visible', show);
+      btn.setAttribute('aria-label', show ? btn.getAttribute('data-hide-label')! : btn.getAttribute('data-show-label')!);
+    });
+  }
+}
+
 export function initUserExternalLogins() {
   const container = document.querySelector('#external-login-navigator');
   if (!container) return;

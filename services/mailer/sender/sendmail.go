@@ -8,10 +8,10 @@ import (
 	"io"
 	"strings"
 
-	"gitea.dev/modules/graceful"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/process"
-	"gitea.dev/modules/setting"
+	"branchspire/modules/graceful"
+	"branchspire/modules/log"
+	"branchspire/modules/process"
+	"branchspire/modules/setting"
 )
 
 // SendmailSender Sender sendmail mail sender

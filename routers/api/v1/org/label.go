@@ -8,13 +8,13 @@ import (
 	"strconv"
 	"strings"
 
-	issues_model "gitea.dev/models/issues"
-	"gitea.dev/modules/label"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/modules/web"
-	"gitea.dev/routers/api/v1/utils"
-	"gitea.dev/services/context"
-	"gitea.dev/services/convert"
+	issues_model "branchspire/models/issues"
+	"branchspire/modules/label"
+	api "branchspire/modules/structs"
+	"branchspire/modules/web"
+	"branchspire/routers/api/v1/utils"
+	"branchspire/services/context"
+	"branchspire/services/convert"
 )
 
 // ListLabels list all the labels of an organization

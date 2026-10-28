@@ -7,14 +7,14 @@ import (
 	"net/http"
 	"testing"
 
-	auth_model "gitea.dev/models/auth"
-	org_model "gitea.dev/models/organization"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
-	api "gitea.dev/modules/structs"
-	org_service "gitea.dev/services/org"
-	"gitea.dev/tests"
+	auth_model "branchspire/models/auth"
+	org_model "branchspire/models/organization"
+	repo_model "branchspire/models/repo"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
+	api "branchspire/modules/structs"
+	org_service "branchspire/services/org"
+	"branchspire/tests"
 
 	"github.com/stretchr/testify/assert"
 )

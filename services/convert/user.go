@@ -6,10 +6,10 @@ package convert
 import (
 	"context"
 
-	"gitea.dev/models/perm"
-	user_model "gitea.dev/models/user"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/modules/util"
+	"branchspire/models/perm"
+	user_model "branchspire/models/user"
+	api "branchspire/modules/structs"
+	"branchspire/modules/util"
 )
 
 func UserTypeToString(t user_model.UserType) api.UserTypeString {

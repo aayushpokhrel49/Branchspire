@@ -9,9 +9,9 @@ import (
 	"strings"
 	"testing"
 
-	repo_module "gitea.dev/modules/repository"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/tests"
+	repo_module "branchspire/modules/repository"
+	api "branchspire/modules/structs"
+	"branchspire/tests"
 
 	"github.com/stretchr/testify/assert"
 )
@@ -32,7 +32,7 @@ func TestAPIListLabelTemplates(t *testing.T) {
 func TestAPIGetLabelTemplateInfo(t *testing.T) {
 	defer tests.PrepareTestEnv(t)()
 
-	// If Gitea has for some reason no Label templates, we need to skip this test
+	// If BranchSpire has for some reason no Label templates, we need to skip this test
 	if len(repo_module.LabelTemplateFiles) == 0 {
 		return
 	}

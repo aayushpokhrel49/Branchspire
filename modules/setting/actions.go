@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"gitea.dev/modules/log"
+	"branchspire/modules/log"
 )
 
 const (
@@ -40,7 +40,7 @@ var (
 		ScopedWorkflowDirs    []string          `ini:"SCOPED_WORKFLOW_DIRS"`
 		MaxRerunAttempts      int64             `ini:"MAX_RERUN_ATTEMPTS"`
 		// MaxConcurrentTaskPicks bounds how many runners may run the task-assignment
-		// transaction at once per Gitea instance, to avoid a thundering herd when many
+		// transaction at once per BranchSpire instance, to avoid a thundering herd when many
 		// runners poll together. It is a per-process limit, not a cluster-wide one.
 		MaxConcurrentTaskPicks int `ini:"MAX_CONCURRENT_TASK_PICKS"`
 
@@ -49,8 +49,8 @@ var (
 		Enabled:                true,
 		DefaultActionsURL:      defaultActionsURLGitHub,
 		SkipWorkflowStrings:    []string{"[skip ci]", "[ci skip]", "[no ci]", "[skip actions]", "[actions skip]"},
-		WorkflowDirs:           []string{".gitea/workflows", ".github/workflows"},
-		ScopedWorkflowDirs:     []string{".gitea/scoped_workflows"},
+		WorkflowDirs:           []string{".branchspire/workflows", ".github/workflows"},
+		ScopedWorkflowDirs:     []string{".branchspire/scoped_workflows"},
 		MaxRerunAttempts:       defaultMaxRerunAttempts,
 		MaxConcurrentTaskPicks: defaultMaxConcurrentTaskPicks,
 		ArtifactPreviewMaxSize: 10 * 1024 * 1024,
@@ -76,8 +76,8 @@ func (url defaultActionsURL) URL() string {
 
 const (
 	defaultActionsURLGitHub = "github" // https://github.com
-	defaultActionsURLSelf   = "self"   // the root URL of the self-hosted Gitea instance
-	// DefaultActionsURL only supports GitHub and the self-hosted Gitea.
+	defaultActionsURLSelf   = "self"   // the root URL of the self-hosted BranchSpire instance
+	// DefaultActionsURL only supports GitHub and the self-hosted BranchSpire.
 	// It's intentionally not supported more, so please be cautious before adding more like "gitea" or "gitlab".
 	// If you get some trouble with `uses: username/action_name@version` in your workflow,
 	// please consider to use `uses: https://the_url_you_want_to_use/username/action_name@version` instead.

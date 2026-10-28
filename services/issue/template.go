@@ -10,12 +10,12 @@ import (
 	"path"
 	"strings"
 
-	"gitea.dev/models/repo"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/issue/template"
-	"gitea.dev/modules/log"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/modules/util"
+	"branchspire/models/repo"
+	"branchspire/modules/git"
+	"branchspire/modules/issue/template"
+	"branchspire/modules/log"
+	api "branchspire/modules/structs"
+	"branchspire/modules/util"
 
 	"go.yaml.in/yaml/v4"
 )

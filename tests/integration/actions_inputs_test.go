@@ -9,11 +9,11 @@ import (
 	"net/url"
 	"testing"
 
-	actions_model "gitea.dev/models/actions"
-	auth_model "gitea.dev/models/auth"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
+	actions_model "branchspire/models/actions"
+	auth_model "branchspire/models/auth"
+	repo_model "branchspire/models/repo"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
 
 	"github.com/stretchr/testify/assert"
 )
@@ -34,7 +34,7 @@ func TestWorkflowWithInputsContext(t *testing.T) {
 		lRunner := newMockRunner()
 		lRunner.registerAsRepoRunner(t, user2.Name, repo.Name, "linux-runner", []string{"linux-runner"}, false)
 
-		wf1TreePath := ".gitea/workflows/test-inputs-context.yml"
+		wf1TreePath := ".branchspire/workflows/test-inputs-context.yml"
 		wf1FileContent := `name: Test Inputs Context
 on:
   workflow_dispatch:

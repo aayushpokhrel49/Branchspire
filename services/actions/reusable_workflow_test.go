@@ -8,15 +8,15 @@ import (
 	"testing"
 
 	"gitea.dev/actionslib/pkg/model"
-	actions_model "gitea.dev/models/actions"
-	"gitea.dev/models/db"
-	"gitea.dev/models/unittest"
-	actions_module "gitea.dev/modules/actions"
-	"gitea.dev/modules/json"
-	"gitea.dev/modules/setting"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/modules/test"
-	webhook_module "gitea.dev/modules/webhook"
+	actions_model "branchspire/models/actions"
+	"branchspire/models/db"
+	"branchspire/models/unittest"
+	actions_module "branchspire/modules/actions"
+	"branchspire/modules/json"
+	"branchspire/modules/setting"
+	api "branchspire/modules/structs"
+	"branchspire/modules/test"
+	webhook_module "branchspire/modules/webhook"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -27,8 +27,8 @@ func TestCheckCallerChain_Cycle(t *testing.T) {
 		require.NoError(t, unittest.PrepareTestDatabase())
 		// A -> A: leaf's CallUses matches its direct parent's.
 		chain := buildCallerChain(t,
-			"./.gitea/workflows/a.yml",
-			"./.gitea/workflows/a.yml",
+			"./.branchspire/workflows/a.yml",
+			"./.branchspire/workflows/a.yml",
 		)
 		err := checkCallerChain(t.Context(), chain[len(chain)-1])
 		assert.ErrorContains(t, err, "cycle detected")
@@ -38,9 +38,9 @@ func TestCheckCallerChain_Cycle(t *testing.T) {
 		require.NoError(t, unittest.PrepareTestDatabase())
 		// A -> B -> A: leaf's CallUses matches its grandparent's.
 		chain := buildCallerChain(t,
-			"./.gitea/workflows/a.yml",
-			"./.gitea/workflows/b.yml",
-			"./.gitea/workflows/a.yml",
+			"./.branchspire/workflows/a.yml",
+			"./.branchspire/workflows/b.yml",
+			"./.branchspire/workflows/a.yml",
 		)
 		err := checkCallerChain(t.Context(), chain[len(chain)-1])
 		assert.ErrorContains(t, err, "cycle detected")
@@ -50,21 +50,21 @@ func TestCheckCallerChain_Cycle(t *testing.T) {
 		require.NoError(t, unittest.PrepareTestDatabase())
 		// A -> A written with both same-repo prefixes: they name the same file.
 		chain := buildCallerChain(t,
-			"./.gitea/workflows/a.yml",
-			"$/.gitea/workflows/a.yml",
+			"./.branchspire/workflows/a.yml",
+			"$/.branchspire/workflows/a.yml",
 		)
 		err := checkCallerChain(t.Context(), chain[len(chain)-1])
 		assert.ErrorContains(t, err, "cycle detected")
-		assert.Equal(t, canonicalCallUses(&actions_model.ActionRunJob{CallUses: "owner/repo/.gitea/workflows/a.yml@v1"}), canonicalCallUses(&actions_model.ActionRunJob{CallUses: "self:owner/repo/.gitea/workflows/a.yml@v1"}))
+		assert.Equal(t, canonicalCallUses(&actions_model.ActionRunJob{CallUses: "owner/repo/.branchspire/workflows/a.yml@v1"}), canonicalCallUses(&actions_model.ActionRunJob{CallUses: "self:owner/repo/.branchspire/workflows/a.yml@v1"}))
 	})
 
 	t.Run("NoCycle", func(t *testing.T) {
 		require.NoError(t, unittest.PrepareTestDatabase())
 		// Sanity: linear chain with distinct CallUses must not trip cycle detection.
 		chain := buildCallerChain(t,
-			"./.gitea/workflows/a.yml",
-			"./.gitea/workflows/b.yml",
-			"./.gitea/workflows/c.yml",
+			"./.branchspire/workflows/a.yml",
+			"./.branchspire/workflows/b.yml",
+			"./.branchspire/workflows/c.yml",
 		)
 		require.NoError(t, checkCallerChain(t.Context(), chain[len(chain)-1]))
 	})
@@ -72,9 +72,9 @@ func TestCheckCallerChain_Cycle(t *testing.T) {
 	t.Run("SameLocalPathInOtherRepo", func(t *testing.T) {
 		require.NoError(t, unittest.PrepareTestDatabase())
 		chain := buildCallerChain(t,
-			"./.gitea/workflows/a.yml",
-			"owner/lib/.gitea/workflows/lib.yml@v1",
-			"./.gitea/workflows/a.yml",
+			"./.branchspire/workflows/a.yml",
+			"owner/lib/.branchspire/workflows/lib.yml@v1",
+			"./.branchspire/workflows/a.yml",
 		)
 		leaf := chain[len(chain)-1]
 		leaf.WorkflowSourceRepoID = 2
@@ -84,9 +84,9 @@ func TestCheckCallerChain_Cycle(t *testing.T) {
 	t.Run("ResolvedIdentityCycle", func(t *testing.T) {
 		require.NoError(t, unittest.PrepareTestDatabase())
 		chain := buildCallerChain(t,
-			"./.gitea/workflows/a.yml",
-			"owner/repo/.gitea/workflows/b.yml@v1",
-			"owner/repo/.gitea/workflows/a.yml@v1",
+			"./.branchspire/workflows/a.yml",
+			"owner/repo/.branchspire/workflows/b.yml@v1",
+			"owner/repo/.branchspire/workflows/a.yml@v1",
 		)
 		chain[1].WorkflowSourceRepoID = 4
 		chain[1].WorkflowSourceCommitSHA = "first-commit"
@@ -96,8 +96,8 @@ func TestCheckCallerChain_Cycle(t *testing.T) {
 		chain[2].WorkflowSourceCommitSHA = "second-commit"
 
 		require.NoError(t, checkCallerChain(t.Context(), chain[2]))
-		require.ErrorContains(t, checkResolvedCallerCycle(t.Context(), chain[2], 4, "first-commit", ".gitea/workflows/a.yml"), "cycle detected")
-		require.NoError(t, checkResolvedCallerCycle(t.Context(), chain[2], 4, "other-commit", ".gitea/workflows/a.yml"))
+		require.ErrorContains(t, checkResolvedCallerCycle(t.Context(), chain[2], 4, "first-commit", ".branchspire/workflows/a.yml"), "cycle detected")
+		require.NoError(t, checkResolvedCallerCycle(t.Context(), chain[2], 4, "other-commit", ".branchspire/workflows/a.yml"))
 	})
 }
 
@@ -106,7 +106,7 @@ func TestCheckCallerChain_DepthLimit(t *testing.T) {
 	makeDistinctUses := func(n int) []string {
 		out := make([]string, n)
 		for i := range out {
-			out[i] = fmt.Sprintf("./.gitea/workflows/level%d.yml", i)
+			out[i] = fmt.Sprintf("./.branchspire/workflows/level%d.yml", i)
 		}
 		return out
 	}
@@ -186,34 +186,34 @@ func buildCallerChain(t *testing.T, callerUses ...string) []*actions_model.Actio
 func TestResolveUses(t *testing.T) {
 	defer test.MockVariableValue(&setting.AppURL, "https://gitea.example.com/sub/")()
 	defer test.MockVariableValue(&setting.AppSubURL, "/sub")()
-	defer test.MockVariableValue(&setting.Actions.WorkflowDirs, []string{".gitea/workflows", ".github/workflows"})()
-	defer test.MockVariableValue(&setting.Actions.ScopedWorkflowDirs, []string{".gitea/scoped_workflows"})()
+	defer test.MockVariableValue(&setting.Actions.WorkflowDirs, []string{".branchspire/workflows", ".github/workflows"})()
+	defer test.MockVariableValue(&setting.Actions.ScopedWorkflowDirs, []string{".branchspire/scoped_workflows"})()
 	ctx := t.Context()
 
 	t.Run("LocalForms", func(t *testing.T) {
 		// Same-repo and cross-repo forms are not URLs and are parsed as-is.
-		ref, err := ResolveUses(ctx, "./.gitea/workflows/build.yml")
+		ref, err := ResolveUses(ctx, "./.branchspire/workflows/build.yml")
 		require.NoError(t, err)
-		assert.Equal(t, model.ReusableWorkflowUses{Path: ".gitea/workflows/build.yml"}, *ref)
+		assert.Equal(t, model.ReusableWorkflowUses{Path: ".branchspire/workflows/build.yml"}, *ref)
 
-		ref, err = ResolveUses(ctx, "owner/repo/.gitea/workflows/build.yml@v1")
+		ref, err = ResolveUses(ctx, "owner/repo/.branchspire/workflows/build.yml@v1")
 		require.NoError(t, err)
-		assert.Equal(t, model.ReusableWorkflowUses{Owner: "owner", Repo: "repo", Path: ".gitea/workflows/build.yml", Ref: "v1"}, *ref)
+		assert.Equal(t, model.ReusableWorkflowUses{Owner: "owner", Repo: "repo", Path: ".branchspire/workflows/build.yml", Ref: "v1"}, *ref)
 	})
 
 	t.Run("DirectoryAllowlist", func(t *testing.T) {
 		// SCOPED_WORKFLOW_DIRS is allowed (local and cross-repo).
-		ref, err := ResolveUses(ctx, "./.gitea/scoped_workflows/lib.yml")
+		ref, err := ResolveUses(ctx, "./.branchspire/scoped_workflows/lib.yml")
 		require.NoError(t, err)
-		assert.Equal(t, ".gitea/scoped_workflows/lib.yml", ref.Path)
+		assert.Equal(t, ".branchspire/scoped_workflows/lib.yml", ref.Path)
 
-		ref, err = ResolveUses(ctx, "owner/repo/.gitea/scoped_workflows/lib.yml@v1")
+		ref, err = ResolveUses(ctx, "owner/repo/.branchspire/scoped_workflows/lib.yml@v1")
 		require.NoError(t, err)
-		assert.Equal(t, ".gitea/scoped_workflows/lib.yml", ref.Path)
+		assert.Equal(t, ".branchspire/scoped_workflows/lib.yml", ref.Path)
 
-		ref, err = ResolveUses(ctx, "self:owner/repo/.gitea/scoped_workflows/lib.yml@v1")
+		ref, err = ResolveUses(ctx, "self:owner/repo/.branchspire/scoped_workflows/lib.yml@v1")
 		require.NoError(t, err)
-		assert.Equal(t, ".gitea/scoped_workflows/lib.yml", ref.Path)
+		assert.Equal(t, ".branchspire/scoped_workflows/lib.yml", ref.Path)
 
 		// A directory that is neither WORKFLOW_DIRS nor SCOPED_WORKFLOW_DIRS parses but is rejected by the allowlist.
 		_, err = ResolveUses(ctx, "./not-workflows/build.yml")
@@ -225,28 +225,28 @@ func TestResolveUses(t *testing.T) {
 	})
 
 	t.Run("ConfigurableWorkflowDirs", func(t *testing.T) {
-		// A non-default WORKFLOW_DIRS is honored (the hardcoded ".gitea/workflows" is no longer special).
+		// A non-default WORKFLOW_DIRS is honored (the default ".branchspire/workflows" is not special).
 		defer test.MockVariableValue(&setting.Actions.WorkflowDirs, []string{".gitea/ci"})()
 		ref, err := ResolveUses(ctx, "./.gitea/ci/build.yml")
 		require.NoError(t, err)
 		assert.Equal(t, ".gitea/ci/build.yml", ref.Path)
 
-		_, err = ResolveUses(ctx, "./.gitea/workflows/build.yml") // no longer a configured dir
+		_, err = ResolveUses(ctx, "./.branchspire/workflows/build.yml") // no longer a configured dir
 		require.Error(t, err)
 	})
 
 	t.Run("LocalInstanceURL", func(t *testing.T) {
 		// An absolute URL on this instance (incl. AppSubURL) resolves to the equivalent cross-repo ref.
-		ref, err := ResolveUses(ctx, "https://gitea.example.com/sub/owner/repo/.gitea/workflows/ci.yml@refs/heads/main")
+		ref, err := ResolveUses(ctx, "https://gitea.example.com/sub/owner/repo/.branchspire/workflows/ci.yml@refs/heads/main")
 		require.NoError(t, err)
-		assert.Equal(t, model.ReusableWorkflowUses{Owner: "owner", Repo: "repo", Path: ".gitea/workflows/ci.yml", Ref: "refs/heads/main"}, *ref)
+		assert.Equal(t, model.ReusableWorkflowUses{Owner: "owner", Repo: "repo", Path: ".branchspire/workflows/ci.yml", Ref: "refs/heads/main"}, *ref)
 	})
 
 	t.Run("InvalidSyntax", func(t *testing.T) {
 		for _, in := range []string{
-			"owner/.gitea/workflows/foo.yml",                                             // missing repo segment
-			"owner/repo/.gitea/workflows/foo.yml",                                        // missing @ref
-			"https://gitea.example.com/sub/repo/.gitea/workflows/ci.yml@refs/heads/main", // local absolute URL but missing owner
+			"owner/.branchspire/workflows/foo.yml",                                             // missing repo segment
+			"owner/repo/.branchspire/workflows/foo.yml",                                        // missing @ref
+			"https://gitea.example.com/sub/repo/.branchspire/workflows/ci.yml@refs/heads/main", // local absolute URL but missing owner
 			"not a valid uses at all",
 		} {
 			_, err := ResolveUses(ctx, in)
@@ -255,8 +255,8 @@ func TestResolveUses(t *testing.T) {
 	})
 
 	t.Run("ForeignURL", func(t *testing.T) {
-		_, err := ResolveUses(ctx, "https://other.gitea-example.com/owner/repo/.gitea/workflows/ci.yaml@v1")
-		assert.ErrorContains(t, err, "must point to this Gitea instance")
+		_, err := ResolveUses(ctx, "https://other.gitea-example.com/owner/repo/.branchspire/workflows/ci.yaml@v1")
+		assert.ErrorContains(t, err, "must point to this BranchSpire instance")
 	})
 }
 
@@ -265,7 +265,7 @@ func TestLoadReusableWorkflowSourceFailsAlikeForMissingAndPrivateRepo(t *testing
 
 	run := &actions_model.ActionRun{RepoID: 4, TriggerUserID: 1}
 	for _, repoName := range []string{"missing", "repo3"} {
-		_, _, _, err := loadReusableWorkflowSource(t.Context(), run, nil, &model.ReusableWorkflowUses{Owner: "org3", Repo: repoName, Path: ".gitea/workflows/build.yml", Ref: "main"})
+		_, _, _, err := loadReusableWorkflowSource(t.Context(), run, nil, &model.ReusableWorkflowUses{Owner: "org3", Repo: repoName, Path: ".branchspire/workflows/build.yml", Ref: "main"})
 		assert.EqualError(t, err, "reusable workflow repository org3/"+repoName+" does not exist or is not readable")
 	}
 }

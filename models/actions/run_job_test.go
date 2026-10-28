@@ -8,9 +8,9 @@ import (
 	"testing"
 
 	runnerv1 "gitea.dev/actionslib/runner/v1"
-	"gitea.dev/models/db"
-	"gitea.dev/models/unittest"
-	"gitea.dev/modules/timeutil"
+	"branchspire/models/db"
+	"branchspire/models/unittest"
+	"branchspire/modules/timeutil"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -182,8 +182,8 @@ func TestCancelJobs_NestedBlockedReusableCaller(t *testing.T) {
 	}
 
 	// outer: a valid top-level caller that expanded; inner: a nested caller stuck Blocked (invalid uses, never expands).
-	outer := newJob("outer", 1, 0, "./.gitea/workflows/lib.yml")
-	inner := newJob("inner", 2, outer.ID, "https://other.example.com/o/r/.gitea/workflows/ci.yml@v1")
+	outer := newJob("outer", 1, 0, "./.branchspire/workflows/lib.yml")
+	inner := newJob("inner", 2, outer.ID, "https://other.example.com/o/r/.branchspire/workflows/ci.yml@v1")
 
 	// Cancel all jobs of the attempt, ordered by id (parent before child).
 	jobs, err := GetRunJobsByRunAndAttemptID(ctx, run.ID, attempt.ID)

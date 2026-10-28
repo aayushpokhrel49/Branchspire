@@ -11,11 +11,11 @@ import (
 	"net/url"
 	"testing"
 
-	auth_model "gitea.dev/models/auth"
-	"gitea.dev/models/db"
-	git_model "gitea.dev/models/git"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/tests"
+	auth_model "branchspire/models/auth"
+	"branchspire/models/db"
+	git_model "branchspire/models/git"
+	api "branchspire/modules/structs"
+	"branchspire/tests"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -141,7 +141,7 @@ func testAPICreateBranches(t *testing.T, giteaURL *url.URL) {
 		},
 		// Trying to create from other branch (not default branch)
 		// ps: it can't test the case-sensitive behavior here: the "BRANCH_2" can't be created by git on a case-insensitive filesystem, it makes the test fail quickly before the database code.
-		// Suppose some users are running Gitea on a case-insensitive filesystem, it seems that it's unable to support case-sensitive branch names.
+		// Suppose some users are running BranchSpire on a case-insensitive filesystem, it seems that it's unable to support case-sensitive branch names.
 		{
 			OldBranch:          "new_branch_from_master_1",
 			NewBranch:          "branch_2",

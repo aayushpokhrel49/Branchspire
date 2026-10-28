@@ -25,13 +25,13 @@ import (
 	"testing"
 	"time"
 
-	"gitea.dev/models/packages"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
-	chef_module "gitea.dev/modules/packages/chef"
-	"gitea.dev/modules/setting"
-	chef_router "gitea.dev/routers/api/packages/chef"
-	"gitea.dev/tests"
+	"branchspire/models/packages"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
+	chef_module "branchspire/modules/packages/chef"
+	"branchspire/modules/setting"
+	chef_router "branchspire/routers/api/packages/chef"
+	"branchspire/tests"
 
 	"github.com/stretchr/testify/assert"
 )

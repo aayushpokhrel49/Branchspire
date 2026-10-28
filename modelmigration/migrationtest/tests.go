@@ -8,12 +8,12 @@ import (
 	"path/filepath"
 	"testing"
 
-	"gitea.dev/modelmigration/base"
-	"gitea.dev/models/db"       //nolint:depguard // allow to access db in migration tests
-	"gitea.dev/models/unittest" //nolint:depguard // allow to access db in migration tests
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/testlogger"
+	"branchspire/modelmigration/base"
+	"branchspire/models/db"       //nolint:depguard // allow to access db in migration tests
+	"branchspire/models/unittest" //nolint:depguard // allow to access db in migration tests
+	"branchspire/modules/git"
+	"branchspire/modules/setting"
+	"branchspire/modules/testlogger"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

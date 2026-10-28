@@ -10,9 +10,9 @@ import (
 	"syscall"
 	"time"
 
-	"gitea.dev/modules/graceful"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/setting"
+	"branchspire/modules/graceful"
+	"branchspire/modules/log"
+	"branchspire/modules/setting"
 
 	gossh "golang.org/x/crypto/ssh"
 )

@@ -30,7 +30,7 @@ func TestSystemUser(t *testing.T) {
 
 	u = GetSystemUserByName("Gitea-actionS")
 	require.NotNil(t, u)
-	assert.Equal(t, "Gitea Actions", u.FullName)
+	assert.Equal(t, "BranchSpire Actions", u.FullName)
 
 	uid, u, err = GetPossibleUserByID(t.Context(), 999999)
 	require.NoError(t, err)

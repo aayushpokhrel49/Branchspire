@@ -17,7 +17,9 @@
 						<p>{{ctx.Locale.Tr "org.repos.empty_description"}}</p>
 					</div>
 				{{else}}
-					{{template "shared/repo/list" .}}
+					<div class="repo-cards">
+						{{template "shared/repo/list" .}}
+					</div>
 					{{template "base/paginate" .}}
 				{{end}}
 			</div>

@@ -6,9 +6,9 @@ package issues_test
 import (
 	"testing"
 
-	"gitea.dev/models/db"
-	issues_model "gitea.dev/models/issues"
-	"gitea.dev/models/unittest"
+	"branchspire/models/db"
+	issues_model "branchspire/models/issues"
+	"branchspire/models/unittest"
 
 	"github.com/stretchr/testify/assert"
 )

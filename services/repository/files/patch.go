@@ -8,16 +8,16 @@ import (
 	"fmt"
 	"strings"
 
-	git_model "gitea.dev/models/git"
-	"gitea.dev/models/perm/access"
-	repo_model "gitea.dev/models/repo"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/git/gitcmd"
-	"gitea.dev/modules/reqctx"
-	"gitea.dev/modules/structs"
-	"gitea.dev/modules/util"
-	asymkey_service "gitea.dev/services/asymkey"
+	git_model "branchspire/models/git"
+	"branchspire/models/perm/access"
+	repo_model "branchspire/models/repo"
+	user_model "branchspire/models/user"
+	"branchspire/modules/git"
+	"branchspire/modules/git/gitcmd"
+	"branchspire/modules/reqctx"
+	"branchspire/modules/structs"
+	"branchspire/modules/util"
+	asymkey_service "branchspire/services/asymkey"
 )
 
 // ErrUserCannotCommit represents "UserCannotCommit" kind of error.

@@ -7,9 +7,9 @@ import (
 	"net/http"
 	"strconv"
 
-	"gitea.dev/modules/queue"
-	"gitea.dev/modules/setting"
-	"gitea.dev/services/context"
+	"branchspire/modules/queue"
+	"branchspire/modules/setting"
+	"branchspire/services/context"
 )
 
 func Queues(ctx *context.Context) {
@@ -69,7 +69,7 @@ func QueueSet(ctx *context.Context) {
 }
 
 func QueueRemoveAllItems(ctx *context.Context) {
-	// Gitea's queue doesn't have transaction support
+	// BranchSpire's queue doesn't have transaction support
 	// So in rare cases, the queue could be corrupted/out-of-sync
 	// Site admin could remove all items from the queue to make it work again
 	qid := ctx.PathParamInt64("qid")

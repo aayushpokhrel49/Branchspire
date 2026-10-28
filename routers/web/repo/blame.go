@@ -12,16 +12,16 @@ import (
 	"path"
 	"strconv"
 
-	"gitea.dev/models/gituser"
-	"gitea.dev/modules/charset"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/git/languagestats"
-	"gitea.dev/modules/highlight"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/templates"
-	"gitea.dev/modules/util"
-	"gitea.dev/services/context"
+	"branchspire/models/gituser"
+	"branchspire/modules/charset"
+	"branchspire/modules/git"
+	"branchspire/modules/git/languagestats"
+	"branchspire/modules/highlight"
+	"branchspire/modules/log"
+	"branchspire/modules/setting"
+	"branchspire/modules/templates"
+	"branchspire/modules/util"
+	"branchspire/services/context"
 )
 
 type blameRow struct {

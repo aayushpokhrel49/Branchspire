@@ -11,13 +11,13 @@ import (
 	"sort"
 	"strings"
 
-	packages_model "gitea.dev/models/packages"
-	packages_module "gitea.dev/modules/packages"
-	vagrant_module "gitea.dev/modules/packages/vagrant"
-	"gitea.dev/modules/setting"
-	"gitea.dev/routers/api/packages/helper"
-	"gitea.dev/services/context"
-	packages_service "gitea.dev/services/packages"
+	packages_model "branchspire/models/packages"
+	packages_module "branchspire/modules/packages"
+	vagrant_module "branchspire/modules/packages/vagrant"
+	"branchspire/modules/setting"
+	"branchspire/routers/api/packages/helper"
+	"branchspire/services/context"
+	packages_service "branchspire/services/packages"
 
 	"github.com/hashicorp/go-version"
 )

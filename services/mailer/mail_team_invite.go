@@ -10,13 +10,13 @@ import (
 	"fmt"
 	"net/url"
 
-	org_model "gitea.dev/models/organization"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/templates"
-	"gitea.dev/modules/translation"
-	sender_service "gitea.dev/services/mailer/sender"
+	org_model "branchspire/models/organization"
+	user_model "branchspire/models/user"
+	"branchspire/modules/log"
+	"branchspire/modules/setting"
+	"branchspire/modules/templates"
+	"branchspire/modules/translation"
+	sender_service "branchspire/services/mailer/sender"
 )
 
 const tplTeamInviteMail templates.TplName = "mail/org/team_invite"

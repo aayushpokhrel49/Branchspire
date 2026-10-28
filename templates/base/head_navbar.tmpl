@@ -1,6 +1,7 @@
 <nav id="navbar" aria-label="{{ctx.Locale.Tr "aria.navbar"}}">
 	<a class="item" id="navbar-logo" href="{{AppSubUrl}}/" aria-label="{{if .IsSigned}}{{ctx.Locale.Tr "dashboard"}}{{else}}{{ctx.Locale.Tr "home_title"}}{{end}}">
 		<img width="30" height="30" src="{{AssetUrlPrefix}}/img/logo.svg" alt="{{ctx.Locale.Tr "logo"}}" aria-hidden="true">
+		<span class="navbar-brand-name not-mobile">{{AppName}}</span>
 	</a>
 
 	<button type="button" class="item btn only-mobile" id="navbar-expand-toggle" aria-label="{{ctx.Locale.Tr "home.nav_menu"}}">{{svg "octicon-three-bars"}}</button>
@@ -27,11 +28,11 @@
 			<a class="item{{if .PageIsExplore}} active{{end}}" href="{{AppSubUrl}}/explore/repos">{{ctx.Locale.Tr "explore_title"}}</a>
 		{{end}}
 
-		{{template "custom/extra_links" .}}
-
-		{{if not .IsSigned}}
-			<a class="item" target="_blank" href="https://docs.gitea.com">{{ctx.Locale.Tr "help"}}</a>
+		{{if not (and .IsSigned .MustChangePassword)}}
+			<a class="item{{if .PageIsAbout}} active{{end}}" href="{{AppSubUrl}}/about">{{ctx.Locale.Tr "about"}}</a>
 		{{end}}
+
+		{{template "custom/extra_links" .}}
 	</div>
 
 	{{template "base/head_navbar_icons"}}
@@ -113,10 +114,6 @@
 						{{svg "octicon-tools"}}
 						{{ctx.Locale.Tr "your_settings"}}
 					</a>
-					<a class="item" target="_blank" href="https://docs.gitea.com">
-						{{svg "octicon-question"}}
-						{{ctx.Locale.Tr "help"}}
-					</a>
 					{{if .IsAdmin}}
 					<div class="divider"></div>
 					<a class="{{if .PageIsAdmin}}active {{end}}item" href="{{AppSubUrl}}/-/admin">
@@ -132,16 +129,10 @@
 				</div><!-- end content avatar menu -->
 			</div><!-- end dropdown avatar menu -->
 		{{else}}
-			{{if .ShowRegistrationButton}}
-				<a class="item{{if .PageIsSignUp}} active{{end}}" href="{{AppSubUrl}}/user/sign_up">
-					{{svg "octicon-person"}}
-					<span class="tw-ml-1">{{ctx.Locale.Tr "register"}}</span>
-				</a>
-			{{end}}
-			<a class="item{{if .PageIsSignIn}} active{{end}}" rel="nofollow" href="{{AppSubUrl}}/user/login">
-				{{svg "octicon-sign-in"}}
-				<span class="tw-ml-1">{{ctx.Locale.Tr "sign_in"}}</span>
-			</a>
+			<div class="navbar-auth-buttons">
+				<a class="navbar-auth-button" rel="nofollow" href="{{AppSubUrl}}/user/login">{{ctx.Locale.Tr "login"}}</a>
+				<a class="navbar-auth-button" href="{{AppSubUrl}}/user/sign_up">{{ctx.Locale.Tr "register"}}</a>
+			</div>
 		{{end}}
 	</div>
 </nav>

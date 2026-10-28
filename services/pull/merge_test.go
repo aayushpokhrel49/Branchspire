@@ -6,7 +6,7 @@ package pull
 import (
 	"testing"
 
-	"gitea.dev/modules/git"
+	"branchspire/modules/git"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

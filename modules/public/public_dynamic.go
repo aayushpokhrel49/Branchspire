@@ -6,8 +6,8 @@
 package public
 
 import (
-	"gitea.dev/modules/assetfs"
-	"gitea.dev/modules/setting"
+	"branchspire/modules/assetfs"
+	"branchspire/modules/setting"
 )
 
 func BuiltinAssets() *assetfs.Layer {

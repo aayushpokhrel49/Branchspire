@@ -21,7 +21,7 @@ load_rc_config $name
 : ${gitea_enable:="NO"}
 : ${gitea_directory:="/var/lib/gitea"}
 
-command="/usr/local/bin/gitea web -c /etc/gitea/app.ini"
+command="/usr/local/bin/branchspire web -c /etc/gitea/app.ini"
 procname="$(echo $command |cut -d' ' -f1)"
 
 pidfile="${gitea_directory}/${name}.pid"

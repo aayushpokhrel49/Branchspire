@@ -6,10 +6,10 @@ package user_test
 import (
 	"testing"
 
-	"gitea.dev/models/db"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/util"
+	"branchspire/models/db"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
+	"branchspire/modules/util"
 
 	"github.com/stretchr/testify/assert"
 )

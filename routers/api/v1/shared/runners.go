@@ -6,14 +6,14 @@ package shared
 import (
 	"net/http"
 
-	actions_model "gitea.dev/models/actions"
-	"gitea.dev/models/db"
-	"gitea.dev/modules/setting"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/modules/web"
-	"gitea.dev/routers/api/v1/utils"
-	"gitea.dev/services/context"
-	"gitea.dev/services/convert"
+	actions_model "branchspire/models/actions"
+	"branchspire/models/db"
+	"branchspire/modules/setting"
+	api "branchspire/modules/structs"
+	"branchspire/modules/web"
+	"branchspire/routers/api/v1/utils"
+	"branchspire/services/context"
+	"branchspire/services/convert"
 )
 
 // RegistrationToken is response related to registration token

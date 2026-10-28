@@ -4,8 +4,8 @@
 package smtp
 
 import (
-	"gitea.dev/models/auth"
-	"gitea.dev/modules/json"
+	"branchspire/models/auth"
+	"branchspire/modules/json"
 )
 
 //   _________   __________________________

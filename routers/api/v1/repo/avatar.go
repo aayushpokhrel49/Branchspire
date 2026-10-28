@@ -7,10 +7,10 @@ import (
 	"encoding/base64"
 	"net/http"
 
-	api "gitea.dev/modules/structs"
-	"gitea.dev/modules/web"
-	"gitea.dev/services/context"
-	repo_service "gitea.dev/services/repository"
+	api "branchspire/modules/structs"
+	"branchspire/modules/web"
+	"branchspire/services/context"
+	repo_service "branchspire/services/repository"
 )
 
 // UpdateAvatar updates the Avatar of a Repo

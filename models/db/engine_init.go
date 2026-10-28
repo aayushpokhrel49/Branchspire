@@ -9,8 +9,8 @@ import (
 	"fmt"
 	"time"
 
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/setting"
+	"branchspire/modules/log"
+	"branchspire/modules/setting"
 
 	"xorm.io/xorm"
 	"xorm.io/xorm/names"

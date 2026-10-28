@@ -6,11 +6,11 @@ package asymkey
 import (
 	"testing"
 
-	asymkey_model "gitea.dev/models/asymkey"
-	"gitea.dev/models/auth"
-	"gitea.dev/models/db"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
+	asymkey_model "branchspire/models/asymkey"
+	"branchspire/models/auth"
+	"branchspire/models/db"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
 
 	"github.com/stretchr/testify/assert"
 )

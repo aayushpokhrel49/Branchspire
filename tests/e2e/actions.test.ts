@@ -7,7 +7,7 @@ test('job queue refreshes with filter open', async ({page, request}) => {
   const repo = `e2e-queue-${randomString(8)}`;
   await apiCreateRepo(request, {name: repo, autoInit: false});
   await apiCreateFiles(request, owner, repo, [{
-    path: '.gitea/workflows/queue.yml',
+    path: '.branchspire/workflows/queue.yml',
     content: 'on: workflow_dispatch\njobs:\n  queued:\n    runs-on: no-runner\n    steps:\n      - run: exit 0\n',
   }]);
   const dispatch = async () => {

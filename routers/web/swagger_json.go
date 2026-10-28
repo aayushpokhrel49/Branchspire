@@ -8,10 +8,10 @@ import (
 	"net/http"
 	"strings"
 
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/templates"
-	"gitea.dev/modules/util"
-	"gitea.dev/services/context"
+	"branchspire/modules/setting"
+	"branchspire/modules/templates"
+	"branchspire/modules/util"
+	"branchspire/services/context"
 )
 
 func swaggerJsonServe(ctx *context.Context, file string) {

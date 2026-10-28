@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"maps"
 
-	"gitea.dev/models/db"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/timeutil"
+	"branchspire/models/db"
+	"branchspire/modules/log"
+	"branchspire/modules/timeutil"
 
 	"xorm.io/builder"
 )

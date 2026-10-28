@@ -7,9 +7,9 @@ import (
 	"path/filepath"
 	"testing"
 
-	"gitea.dev/modules/git/gitrepo"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/test"
+	"branchspire/modules/git/gitrepo"
+	"branchspire/modules/setting"
+	"branchspire/modules/test"
 
 	"github.com/stretchr/testify/assert"
 )

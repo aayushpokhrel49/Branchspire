@@ -6,8 +6,8 @@ package agit
 import (
 	"testing"
 
-	"gitea.dev/models/unittest"
-	"gitea.dev/modules/util"
+	"branchspire/models/unittest"
+	"branchspire/modules/util"
 
 	"github.com/stretchr/testify/assert"
 )

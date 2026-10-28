@@ -51,6 +51,12 @@ async function main() {
   const gitea = argv.slice(2).includes('gitea');
   const logoSvg = await readFile(new URL('../assets/logo.svg', import.meta.url), 'utf8');
   const faviconSvg = await readFile(new URL('../assets/favicon.svg', import.meta.url), 'utf8');
+  // the default avatar must stay neutral: it appears next to commit authors and elsewhere,
+  // it should not carry the brand mark (person glyph centered in a 200px box)
+  const avatarSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">` +
+    `<g fill="#8c959f" transform="translate(24 26) scale(6.33)">${(await readFile(
+      new URL(import.meta.resolve('@primer/octicons/build/svg/person-fill-24.svg')), 'utf8',
+    )).replace(/<\/?svg[^>]*>/g, '')}</g></svg>`;
   await initWasm(await readFile(new URL(import.meta.resolve('@resvg/resvg-wasm/index_bg.wasm'))));
   await mkdir(new URL('../services/mailer/icons/', import.meta.url), {recursive: true});
 
@@ -63,7 +69,7 @@ async function main() {
     generate(logoSvg, '../public/assets/img/logo.png', {size: 512}),
     generate(faviconSvg, '../public/assets/img/favicon.svg', {size: 32}),
     generate(faviconSvg, '../public/assets/img/favicon.png', {size: 180}),
-    generate(logoSvg, '../public/assets/img/avatar_default.png', {size: 200}),
+    generate(avatarSvg, '../public/assets/img/avatar_default.png', {size: 200}),
     generate(logoSvg, '../public/assets/img/apple-touch-icon.png', {size: 180, bg: true}),
     gitea && generate(logoSvg, '../public/assets/img/gitea.svg', {size: 32}),
   ]);

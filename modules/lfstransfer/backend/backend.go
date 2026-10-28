@@ -12,9 +12,9 @@ import (
 	"net/url"
 	"strconv"
 
-	"gitea.dev/modules/json"
-	"gitea.dev/modules/lfs"
-	"gitea.dev/modules/setting"
+	"branchspire/modules/json"
+	"branchspire/modules/lfs"
+	"branchspire/modules/setting"
 
 	"github.com/charmbracelet/git-lfs-transfer/transfer"
 )
@@ -30,7 +30,7 @@ var Capabilities = []string{
 
 var _ transfer.Backend = (*GiteaBackend)(nil)
 
-// GiteaBackend is an adapter between git-lfs-transfer library and Gitea's internal LFS API
+// GiteaBackend is an adapter between git-lfs-transfer library and BranchSpire's internal LFS API
 type GiteaBackend struct {
 	ctx          context.Context
 	server       *url.URL

@@ -4,10 +4,10 @@
 package repo
 
 import (
-	issues_model "gitea.dev/models/issues"
-	access_model "gitea.dev/models/perm/access"
-	"gitea.dev/modules/setting"
-	"gitea.dev/services/context"
+	issues_model "branchspire/models/issues"
+	access_model "branchspire/models/perm/access"
+	"branchspire/modules/setting"
+	"branchspire/services/context"
 )
 
 // AddDependency adds new dependencies

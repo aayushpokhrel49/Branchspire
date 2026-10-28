@@ -6,12 +6,12 @@ package user
 import (
 	"net/http"
 
-	"gitea.dev/models/db"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/optional"
-	"gitea.dev/modules/setting"
-	"gitea.dev/services/context"
-	"gitea.dev/services/convert"
+	"branchspire/models/db"
+	user_model "branchspire/models/user"
+	"branchspire/modules/optional"
+	"branchspire/modules/setting"
+	"branchspire/services/context"
+	"branchspire/services/convert"
 )
 
 // SearchCandidates searches candidate users for dropdown list

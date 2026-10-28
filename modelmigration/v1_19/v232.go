@@ -6,8 +6,8 @@ package v1_19
 import (
 	"context"
 
-	"gitea.dev/modelmigration/base"
-	"gitea.dev/modules/setting"
+	"branchspire/modelmigration/base"
+	"branchspire/modules/setting"
 )
 
 func AlterPackageVersionMetadataToLongText(_ context.Context, x base.EngineMigration) error {

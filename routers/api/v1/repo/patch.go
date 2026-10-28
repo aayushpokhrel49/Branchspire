@@ -6,10 +6,10 @@ package repo
 import (
 	"net/http"
 
-	api "gitea.dev/modules/structs"
-	"gitea.dev/modules/util"
-	"gitea.dev/services/context"
-	"gitea.dev/services/repository/files"
+	api "branchspire/modules/structs"
+	"branchspire/modules/util"
+	"branchspire/services/context"
+	"branchspire/services/repository/files"
 )
 
 // ApplyDiffPatch handles API call for applying a patch

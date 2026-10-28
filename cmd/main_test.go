@@ -7,7 +7,7 @@ import (
 	"context"
 	"testing"
 
-	"gitea.dev/models/unittest"
+	"branchspire/models/unittest"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/urfave/cli/v3"
@@ -38,8 +38,8 @@ func TestDefaultCommand(t *testing.T) {
 		assert.NoError(t, cmd.Run(t.Context(), args))
 		assert.True(t, called)
 	}
-	test(t, []string{"./gitea"}, "", true)
-	test(t, []string{"./gitea", "test"}, "", true)
-	test(t, []string{"./gitea", "other"}, "other", false)
-	test(t, []string{"./gitea", "test", "extra"}, "extra", false)
+	test(t, []string{"./branchspire"}, "", true)
+	test(t, []string{"./branchspire", "test"}, "", true)
+	test(t, []string{"./branchspire", "other"}, "other", false)
+	test(t, []string{"./branchspire", "test", "extra"}, "extra", false)
 }

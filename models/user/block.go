@@ -6,10 +6,10 @@ package user
 import (
 	"context"
 
-	"gitea.dev/models/db"
-	"gitea.dev/modules/container"
-	"gitea.dev/modules/timeutil"
-	"gitea.dev/modules/util"
+	"branchspire/models/db"
+	"branchspire/modules/container"
+	"branchspire/modules/timeutil"
+	"branchspire/modules/util"
 
 	"xorm.io/builder"
 )

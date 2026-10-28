@@ -8,10 +8,10 @@ import (
 	"context"
 	"io"
 
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/git/gitcmd"
-	"gitea.dev/modules/log"
-	asymkey_service "gitea.dev/services/asymkey"
+	"branchspire/modules/git"
+	"branchspire/modules/git/gitcmd"
+	"branchspire/modules/log"
+	asymkey_service "branchspire/services/asymkey"
 )
 
 // This file contains commit verification functions for refs passed across in hooks

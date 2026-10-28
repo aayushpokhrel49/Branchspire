@@ -7,14 +7,14 @@ import (
 	"net/http"
 	"time"
 
-	"gitea.dev/models/db"
-	packages_model "gitea.dev/models/packages"
-	"gitea.dev/modules/optional"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/templates"
-	"gitea.dev/services/context"
-	packages_service "gitea.dev/services/packages"
-	packages_cleanup_service "gitea.dev/services/packages/cleanup"
+	"branchspire/models/db"
+	packages_model "branchspire/models/packages"
+	"branchspire/modules/optional"
+	"branchspire/modules/setting"
+	"branchspire/modules/templates"
+	"branchspire/services/context"
+	packages_service "branchspire/services/packages"
+	packages_cleanup_service "branchspire/services/packages/cleanup"
 )
 
 const (

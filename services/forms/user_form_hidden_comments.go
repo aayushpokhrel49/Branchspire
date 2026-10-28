@@ -6,9 +6,9 @@ package forms
 import (
 	"math/big"
 
-	issues_model "gitea.dev/models/issues"
-	"gitea.dev/modules/log"
-	"gitea.dev/services/context"
+	issues_model "branchspire/models/issues"
+	"branchspire/modules/log"
+	"branchspire/services/context"
 )
 
 type hiddenCommentTypeGroupsType map[string][]issues_model.CommentType

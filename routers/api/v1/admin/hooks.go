@@ -7,15 +7,15 @@ import (
 	"errors"
 	"net/http"
 
-	"gitea.dev/models/webhook"
-	"gitea.dev/modules/optional"
-	"gitea.dev/modules/setting"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/modules/util"
-	"gitea.dev/modules/web"
-	"gitea.dev/routers/api/v1/utils"
-	"gitea.dev/services/context"
-	webhook_service "gitea.dev/services/webhook"
+	"branchspire/models/webhook"
+	"branchspire/modules/optional"
+	"branchspire/modules/setting"
+	api "branchspire/modules/structs"
+	"branchspire/modules/util"
+	"branchspire/modules/web"
+	"branchspire/routers/api/v1/utils"
+	"branchspire/services/context"
+	webhook_service "branchspire/services/webhook"
 )
 
 // ListHooks list system's webhooks

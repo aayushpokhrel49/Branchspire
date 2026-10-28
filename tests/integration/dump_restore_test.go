@@ -13,15 +13,15 @@ import (
 	"strings"
 	"testing"
 
-	auth_model "gitea.dev/models/auth"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
-	base "gitea.dev/modules/migration"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/structs"
-	"gitea.dev/modules/test"
-	"gitea.dev/services/migrations"
+	auth_model "branchspire/models/auth"
+	repo_model "branchspire/models/repo"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
+	base "branchspire/modules/migration"
+	"branchspire/modules/setting"
+	"branchspire/modules/structs"
+	"branchspire/modules/test"
+	"branchspire/services/migrations"
 
 	"github.com/stretchr/testify/assert"
 	"go.yaml.in/yaml/v4"
@@ -29,7 +29,7 @@ import (
 
 func TestDumpRestore(t *testing.T) {
 	onGiteaRun(t, func(t *testing.T, u *url.URL) {
-		// Gitea SDK (go-sdk) need to parse the AppVer from server response, so we must set it to a valid version string.
+		// BranchSpire SDK (go-sdk) need to parse the AppVer from server response, so we must set it to a valid version string.
 		defer test.MockVariableValue(&setting.AppVer, "1.16.0")()
 
 		reponame := "repo1"
@@ -41,7 +41,7 @@ func TestDumpRestore(t *testing.T) {
 		token := getTokenForLoggedInUser(t, session, auth_model.AccessTokenScopeWriteIssue, auth_model.AccessTokenScopeWriteRepository, auth_model.AccessTokenScopeReadMisc)
 
 		//
-		// Phase 1: dump repo1 from the Gitea instance to the filesystem
+		// Phase 1: dump repo1 from the BranchSpire instance to the filesystem
 		//
 
 		ctx := t.Context()
@@ -68,7 +68,7 @@ func TestDumpRestore(t *testing.T) {
 		}
 
 		//
-		// Phase 2: restore from the filesystem to the Gitea instance in restoredrepo
+		// Phase 2: restore from the filesystem to the BranchSpire instance in restoredrepo
 		//
 
 		newreponame := "restored"
@@ -80,7 +80,7 @@ func TestDumpRestore(t *testing.T) {
 		newrepo := unittest.AssertExistsAndLoadBean(t, &repo_model.Repository{Name: newreponame})
 
 		//
-		// Phase 3: dump restored from the Gitea instance to the filesystem
+		// Phase 3: dump restored from the BranchSpire instance to the filesystem
 		//
 		opts.RepoName = newreponame
 		opts.CloneAddr = newrepo.CloneLinkGeneral(t.Context()).HTTPS

@@ -9,11 +9,11 @@ import (
 	"strings"
 	"testing"
 
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/test"
-	"gitea.dev/routers"
-	"gitea.dev/routers/web"
-	"gitea.dev/tests"
+	"branchspire/modules/setting"
+	"branchspire/modules/test"
+	"branchspire/routers"
+	"branchspire/routers/web"
+	"branchspire/tests"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

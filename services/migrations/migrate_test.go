@@ -10,11 +10,11 @@ import (
 	"path/filepath"
 	"testing"
 
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/git/gitcmd"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/test"
-	"gitea.dev/modules/util"
+	user_model "branchspire/models/user"
+	"branchspire/modules/git/gitcmd"
+	"branchspire/modules/setting"
+	"branchspire/modules/test"
+	"branchspire/modules/util"
 
 	"github.com/google/go-github/v92/github"
 	"github.com/stretchr/testify/assert"

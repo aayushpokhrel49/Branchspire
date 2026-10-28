@@ -8,12 +8,12 @@ import (
 	"fmt"
 	"strings"
 
-	repo_model "gitea.dev/models/repo"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/reqctx"
-	"gitea.dev/modules/structs"
-	"gitea.dev/services/pull"
+	repo_model "branchspire/models/repo"
+	user_model "branchspire/models/user"
+	"branchspire/modules/git"
+	"branchspire/modules/reqctx"
+	"branchspire/modules/structs"
+	"branchspire/services/pull"
 )
 
 // ErrCommitIDDoesNotMatch represents a "CommitIDDoesNotMatch" kind of error.

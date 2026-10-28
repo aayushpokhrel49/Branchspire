@@ -14,25 +14,25 @@ import (
 	"strings"
 	"sync"
 
-	auth_model "gitea.dev/models/auth"
-	packages_model "gitea.dev/models/packages"
-	container_model "gitea.dev/models/packages/container"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/httplib"
-	"gitea.dev/modules/json"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/optional"
-	packages_module "gitea.dev/modules/packages"
-	container_module "gitea.dev/modules/packages/container"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/storage"
-	"gitea.dev/modules/structs"
-	"gitea.dev/modules/util"
-	"gitea.dev/routers/api/packages/helper"
-	auth_service "gitea.dev/services/auth"
-	"gitea.dev/services/context"
-	packages_service "gitea.dev/services/packages"
-	container_service "gitea.dev/services/packages/container"
+	auth_model "branchspire/models/auth"
+	packages_model "branchspire/models/packages"
+	container_model "branchspire/models/packages/container"
+	user_model "branchspire/models/user"
+	"branchspire/modules/httplib"
+	"branchspire/modules/json"
+	"branchspire/modules/log"
+	"branchspire/modules/optional"
+	packages_module "branchspire/modules/packages"
+	container_module "branchspire/modules/packages/container"
+	"branchspire/modules/setting"
+	"branchspire/modules/storage"
+	"branchspire/modules/structs"
+	"branchspire/modules/util"
+	"branchspire/routers/api/packages/helper"
+	auth_service "branchspire/services/auth"
+	"branchspire/services/context"
+	packages_service "branchspire/services/packages"
+	container_service "branchspire/services/packages/container"
 
 	"github.com/opencontainers/go-digest"
 )
@@ -124,7 +124,7 @@ func APIUnauthorizedError(ctx *context.Context) {
 	requireSignIn = requireSignIn || setting.Service.RequireSignInViewStrict
 	if requireSignIn {
 		// support apple container like: container registry login <gitea-host> -u
-		ctx.Resp.Header().Add("WWW-Authenticate", `Basic realm="Gitea Container Registry"`)
+		ctx.Resp.Header().Add("WWW-Authenticate", `Basic realm="BranchSpire Container Registry"`)
 	}
 	apiErrorDefined(ctx, errUnauthorized)
 }

@@ -10,11 +10,11 @@ import (
 	"sync"
 	"uuid"
 
-	"gitea.dev/models/auth"
-	"gitea.dev/models/db"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/optional"
-	"gitea.dev/modules/setting"
+	"branchspire/models/auth"
+	"branchspire/models/db"
+	"branchspire/modules/log"
+	"branchspire/modules/optional"
+	"branchspire/modules/setting"
 
 	"github.com/gorilla/sessions"
 	"github.com/markbates/goth/gothic"

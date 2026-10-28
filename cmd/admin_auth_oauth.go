@@ -9,9 +9,9 @@ import (
 	"fmt"
 	"net/url"
 
-	auth_model "gitea.dev/models/auth"
-	"gitea.dev/modules/util"
-	"gitea.dev/services/auth/source/oauth2"
+	auth_model "branchspire/models/auth"
+	"branchspire/modules/util"
+	"branchspire/services/auth/source/oauth2"
 
 	"github.com/urfave/cli/v3"
 )

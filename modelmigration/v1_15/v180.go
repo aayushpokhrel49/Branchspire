@@ -6,9 +6,9 @@ package v1_15
 import (
 	"context"
 
-	"gitea.dev/modelmigration/base"
-	"gitea.dev/modules/json"
-	"gitea.dev/modules/util"
+	"branchspire/modelmigration/base"
+	"branchspire/modules/json"
+	"branchspire/modules/util"
 
 	"xorm.io/builder"
 )

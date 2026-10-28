@@ -14,32 +14,32 @@ import (
 	"strconv"
 	"strings"
 
-	activities_model "gitea.dev/models/activities"
-	asymkey_model "gitea.dev/models/asymkey"
-	"gitea.dev/models/db"
-	issues_model "gitea.dev/models/issues"
-	"gitea.dev/models/organization"
-	"gitea.dev/models/renderhelper"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/models/unit"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/base"
-	"gitea.dev/modules/container"
-	"gitea.dev/modules/indexer"
-	issue_indexer "gitea.dev/modules/indexer/issues"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/markup/markdown"
-	"gitea.dev/modules/optional"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/templates"
-	"gitea.dev/modules/util"
-	"gitea.dev/routers/web/feed"
-	"gitea.dev/routers/web/shared/issue"
-	"gitea.dev/routers/web/shared/user"
-	"gitea.dev/services/context"
-	feed_service "gitea.dev/services/feed"
-	issue_service "gitea.dev/services/issue"
-	pull_service "gitea.dev/services/pull"
+	activities_model "branchspire/models/activities"
+	asymkey_model "branchspire/models/asymkey"
+	"branchspire/models/db"
+	issues_model "branchspire/models/issues"
+	"branchspire/models/organization"
+	"branchspire/models/renderhelper"
+	repo_model "branchspire/models/repo"
+	"branchspire/models/unit"
+	user_model "branchspire/models/user"
+	"branchspire/modules/base"
+	"branchspire/modules/container"
+	"branchspire/modules/indexer"
+	issue_indexer "branchspire/modules/indexer/issues"
+	"branchspire/modules/log"
+	"branchspire/modules/markup/markdown"
+	"branchspire/modules/optional"
+	"branchspire/modules/setting"
+	"branchspire/modules/templates"
+	"branchspire/modules/util"
+	"branchspire/routers/web/feed"
+	"branchspire/routers/web/shared/issue"
+	"branchspire/routers/web/shared/user"
+	"branchspire/services/context"
+	feed_service "branchspire/services/feed"
+	issue_service "branchspire/services/issue"
+	pull_service "branchspire/services/pull"
 
 	"github.com/ProtonMail/go-crypto/openpgp"
 	"github.com/ProtonMail/go-crypto/openpgp/armor"
@@ -644,7 +644,7 @@ func ShowSSHKeys(ctx *context.Context) {
 
 	var buf bytes.Buffer
 	// "authorized_keys" file format: "#" followed by comment line per key
-	buf.WriteString("# Gitea isn't a key server. The keys are exported as the user uploaded and might not have been fully verified.\n")
+	buf.WriteString("# BranchSpire isn't a key server. The keys are exported as the user uploaded and might not have been fully verified.\n")
 	for i := range keys {
 		if keys[i].Type == asymkey_model.KeyTypePrincipal {
 			continue // SSH principal keys are not for signing or authentication
@@ -684,7 +684,7 @@ func ShowGPGKeys(ctx *context.Context) {
 
 	headers := make(map[string]string)
 	// https://www.rfc-editor.org/rfc/rfc4880
-	headers["Comment"] = "Gitea isn't a key server. The keys are exported as the user uploaded and might not have been fully verified."
+	headers["Comment"] = "BranchSpire isn't a key server. The keys are exported as the user uploaded and might not have been fully verified."
 	if len(failedEntitiesID) > 0 { // If some key need re-import to be exported
 		headers["Note"] = "The keys with the following IDs couldn't be exported and need to be reuploaded " + strings.Join(failedEntitiesID, ", ")
 	} else if len(entities) == 0 {

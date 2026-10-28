@@ -1,4 +1,4 @@
-// Copyright 2021 Gitea. All rights reserved.
+// Copyright 2021 BranchSpire. All rights reserved.
 // SPDX-License-Identifier: MIT
 
 package automerge
@@ -11,23 +11,23 @@ import (
 	"strings"
 	"time"
 
-	"gitea.dev/models/db"
-	git_model "gitea.dev/models/git"
-	issues_model "gitea.dev/models/issues"
-	access_model "gitea.dev/models/perm/access"
-	pull_model "gitea.dev/models/pull"
-	repo_model "gitea.dev/models/repo"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/graceful"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/process"
-	"gitea.dev/modules/queue"
-	"gitea.dev/modules/timeutil"
-	"gitea.dev/services/automergequeue"
-	notify_service "gitea.dev/services/notify"
-	pull_service "gitea.dev/services/pull"
-	repo_service "gitea.dev/services/repository"
+	"branchspire/models/db"
+	git_model "branchspire/models/git"
+	issues_model "branchspire/models/issues"
+	access_model "branchspire/models/perm/access"
+	pull_model "branchspire/models/pull"
+	repo_model "branchspire/models/repo"
+	user_model "branchspire/models/user"
+	"branchspire/modules/git"
+	"branchspire/modules/graceful"
+	"branchspire/modules/log"
+	"branchspire/modules/process"
+	"branchspire/modules/queue"
+	"branchspire/modules/timeutil"
+	"branchspire/services/automergequeue"
+	notify_service "branchspire/services/notify"
+	pull_service "branchspire/services/pull"
+	repo_service "branchspire/services/repository"
 )
 
 // Init runs the task queue to that handles auto merges
@@ -51,7 +51,7 @@ func Init(ctx context.Context) error {
 }
 
 func populateRecentAutoMergeItems(ctx context.Context) {
-	// in case Gitea's restart aborted some scheduled auto-merge pull requests, try to re-start the recent ones
+	// in case BranchSpire's restart aborted some scheduled auto-merge pull requests, try to re-start the recent ones
 	pullIDs, err := pull_model.GetScheduledMergePullIDsSince(ctx, timeutil.TimeStampNow().AddDuration(-24*time.Hour))
 	if err != nil {
 		log.Error("Failed to get recent scheduled auto-merge pull requests: %v", err)

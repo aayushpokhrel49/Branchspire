@@ -13,10 +13,10 @@ import (
 	"path/filepath"
 	"uuid"
 
-	"gitea.dev/models/db"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/util"
+	"branchspire/models/db"
+	"branchspire/modules/log"
+	"branchspire/modules/setting"
+	"branchspire/modules/util"
 )
 
 // ErrUploadNotExist represents a "UploadNotExist" kind of error.

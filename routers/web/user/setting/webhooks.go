@@ -6,12 +6,12 @@ package setting
 import (
 	"net/http"
 
-	"gitea.dev/models/db"
-	"gitea.dev/models/webhook"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/templates"
-	"gitea.dev/services/audit"
-	"gitea.dev/services/context"
+	"branchspire/models/db"
+	"branchspire/models/webhook"
+	"branchspire/modules/setting"
+	"branchspire/modules/templates"
+	"branchspire/services/audit"
+	"branchspire/services/context"
 )
 
 const (

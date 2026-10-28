@@ -8,10 +8,10 @@ import (
 	"os"
 	"strings"
 
-	"gitea.dev/modules/auth/password/hash"
-	"gitea.dev/modules/egress/policy"
-	"gitea.dev/modules/generate"
-	"gitea.dev/modules/log"
+	"branchspire/modules/auth/password/hash"
+	"branchspire/modules/egress/policy"
+	"branchspire/modules/generate"
+	"branchspire/modules/log"
 )
 
 // Security settings
@@ -205,7 +205,7 @@ func loadSecurityFrom(rootCfg ConfigProvider) {
 
 	InternalToken = loadSecret(sec, "INTERNAL_TOKEN_URI", "INTERNAL_TOKEN")
 	if InstallLock && InternalToken == "" {
-		// if Gitea has been installed but the InternalToken hasn't been generated (upgrade from an old release), we should generate
+		// if BranchSpire has been installed but the InternalToken hasn't been generated (upgrade from an old release), we should generate
 		// some users do cluster deployment, they still depend on this auto-generating behavior.
 		generateSaveInternalToken(rootCfg)
 	}

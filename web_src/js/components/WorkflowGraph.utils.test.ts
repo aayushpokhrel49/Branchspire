@@ -159,8 +159,8 @@ test('multi-level pipeline with two matrices and a converging leaf renders witho
 test('reusable callers with identical dependency signature are kept as separate nodes', () => {
   const jobs: ActionsJob[] = [
     {id: 1, link: '', jobId: 'prepare', name: 'prepare', status: 'success', canRerun: false, isReusableCaller: false, parentJobID: 0, duration: '30s'},
-    {id: 2, link: '', jobId: 'local_caller', name: 'local caller', status: 'running', canRerun: false, isReusableCaller: true, parentJobID: 0, duration: '5m', needs: ['prepare'], callUses: './.gitea/workflows/lib.yml'},
-    {id: 3, link: '', jobId: 'cross_caller', name: 'cross-repo caller', status: 'waiting', canRerun: false, isReusableCaller: true, parentJobID: 0, duration: '0s', needs: ['prepare'], callUses: 'user2/lib/.gitea/workflows/ext.yml@main'},
+    {id: 2, link: '', jobId: 'local_caller', name: 'local caller', status: 'running', canRerun: false, isReusableCaller: true, parentJobID: 0, duration: '5m', needs: ['prepare'], callUses: './.branchspire/workflows/lib.yml'},
+    {id: 3, link: '', jobId: 'cross_caller', name: 'cross-repo caller', status: 'waiting', canRerun: false, isReusableCaller: true, parentJobID: 0, duration: '0s', needs: ['prepare'], callUses: 'user2/lib/.branchspire/workflows/ext.yml@main'},
     {id: 4, link: '', jobId: 'final', name: 'final', status: 'pending', canRerun: false, isReusableCaller: false, parentJobID: 0, duration: '0s', needs: ['local_caller', 'cross_caller']},
   ];
   const graph = createWorkflowGraphModel(jobs);
@@ -172,9 +172,9 @@ test('reusable callers with identical dependency signature are kept as separate 
 test('matrix legs that call a reusable workflow are folded into a single matrix node', () => {
   const jobs: ActionsJob[] = [
     {id: 1, link: '', jobId: 'prepare', name: 'prepare', status: 'success', canRerun: false, isReusableCaller: false, parentJobID: 0, duration: '30s'},
-    {id: 2, link: '', jobId: 'build-call', name: 'build-call (linux)', status: 'success', canRerun: false, isReusableCaller: true, parentJobID: 0, duration: '1m', needs: ['prepare'], callUses: './.gitea/workflows/build.yml'},
-    {id: 3, link: '', jobId: 'build-call', name: 'build-call (windows)', status: 'success', canRerun: false, isReusableCaller: true, parentJobID: 0, duration: '2m', needs: ['prepare'], callUses: './.gitea/workflows/build.yml'},
-    {id: 4, link: '', jobId: 'build-call', name: 'build-call (macos)', status: 'success', canRerun: false, isReusableCaller: true, parentJobID: 0, duration: '90s', needs: ['prepare'], callUses: './.gitea/workflows/build.yml'},
+    {id: 2, link: '', jobId: 'build-call', name: 'build-call (linux)', status: 'success', canRerun: false, isReusableCaller: true, parentJobID: 0, duration: '1m', needs: ['prepare'], callUses: './.branchspire/workflows/build.yml'},
+    {id: 3, link: '', jobId: 'build-call', name: 'build-call (windows)', status: 'success', canRerun: false, isReusableCaller: true, parentJobID: 0, duration: '2m', needs: ['prepare'], callUses: './.branchspire/workflows/build.yml'},
+    {id: 4, link: '', jobId: 'build-call', name: 'build-call (macos)', status: 'success', canRerun: false, isReusableCaller: true, parentJobID: 0, duration: '90s', needs: ['prepare'], callUses: './.branchspire/workflows/build.yml'},
   ];
   const graph = createWorkflowGraphModel(jobs);
   const matrixNodes = graph.nodes.filter((n) => n.type === 'matrix');

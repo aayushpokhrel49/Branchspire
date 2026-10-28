@@ -14,22 +14,22 @@ import (
 	"strings"
 	"unicode"
 
-	asymkey_model "gitea.dev/models/asymkey"
-	git_model "gitea.dev/models/git"
-	"gitea.dev/models/perm"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/git/gitcmd"
-	"gitea.dev/modules/json"
-	"gitea.dev/modules/lfstransfer"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/pprof"
-	"gitea.dev/modules/private"
-	"gitea.dev/modules/process"
-	repo_module "gitea.dev/modules/repository"
-	"gitea.dev/modules/setting"
-	"gitea.dev/services/agit"
-	"gitea.dev/services/lfs"
+	asymkey_model "branchspire/models/asymkey"
+	git_model "branchspire/models/git"
+	"branchspire/models/perm"
+	repo_model "branchspire/models/repo"
+	"branchspire/modules/git"
+	"branchspire/modules/git/gitcmd"
+	"branchspire/modules/json"
+	"branchspire/modules/lfstransfer"
+	"branchspire/modules/log"
+	"branchspire/modules/pprof"
+	"branchspire/modules/private"
+	"branchspire/modules/process"
+	repo_module "branchspire/modules/repository"
+	"branchspire/modules/setting"
+	"branchspire/services/agit"
+	"branchspire/services/lfs"
 
 	"github.com/kballard/go-shellquote"
 	"github.com/urfave/cli/v3"
@@ -88,7 +88,7 @@ func fail(ctx context.Context, userMessage, logMsgFmt string, args ...any) error
 	if logMsgFmt != "" {
 		logMsg := fmt.Sprintf(logMsgFmt, args...)
 		if !setting.IsProd {
-			_, _ = fmt.Fprintln(os.Stderr, "Gitea:", logMsg)
+			_, _ = fmt.Fprintln(os.Stderr, "BranchSpire:", logMsg)
 		}
 		if unicode.IsPunct(rune(userMessage[len(userMessage)-1])) {
 			logMsg = userMessage + " " + logMsg
@@ -139,7 +139,7 @@ func runServ(ctx context.Context, c *cli.Command) error {
 	setup(ctx, c.Bool("debug"))
 
 	if setting.SSH.Disabled {
-		cprintln(c, "Gitea: SSH has been disabled")
+		cprintln(c, "BranchSpire: SSH has been disabled")
 		return nil
 	}
 
@@ -182,7 +182,7 @@ func runServ(ctx context.Context, c *cli.Command) error {
 		}
 		_, _ = fmt.Fprintf(c.ErrWriter, "%s\n%s",
 			authSuccessMsg,
-			"Gitea does not provide shell access. If this is unexpected, please setup Gitea under another SSH user or use container to deploy.",
+			"BranchSpire does not provide shell access. If this is unexpected, please setup BranchSpire under another SSH user or use container to deploy.",
 		)
 		return nil
 	} else if c.Bool("debug") {

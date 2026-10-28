@@ -10,8 +10,8 @@ import (
 	"strings"
 	"time"
 
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/util"
+	"branchspire/modules/setting"
+	"branchspire/modules/util"
 )
 
 type CacheControlOptions struct {

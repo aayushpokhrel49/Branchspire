@@ -9,7 +9,7 @@ import (
 	"strings"
 	"unicode/utf8"
 
-	"gitea.dev/modules/util"
+	"branchspire/modules/util"
 )
 
 // ErrNameReserved represents a "reserved name" error.

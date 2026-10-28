@@ -9,14 +9,14 @@ import (
 	"fmt"
 	"strings"
 
-	"gitea.dev/models/db"
-	"gitea.dev/models/perm"
-	"gitea.dev/models/unit"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/structs"
-	"gitea.dev/modules/util"
+	"branchspire/models/db"
+	"branchspire/models/perm"
+	"branchspire/models/unit"
+	user_model "branchspire/models/user"
+	"branchspire/modules/log"
+	"branchspire/modules/setting"
+	"branchspire/modules/structs"
+	"branchspire/modules/util"
 
 	"xorm.io/builder"
 )

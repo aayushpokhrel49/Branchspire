@@ -6,13 +6,13 @@ package admin
 import (
 	"net/http"
 
-	repo_model "gitea.dev/models/repo"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/git/gitrepo"
-	"gitea.dev/routers/api/v1/utils"
-	"gitea.dev/services/context"
-	repo_service "gitea.dev/services/repository"
+	repo_model "branchspire/models/repo"
+	user_model "branchspire/models/user"
+	"branchspire/modules/git"
+	"branchspire/modules/git/gitrepo"
+	"branchspire/routers/api/v1/utils"
+	"branchspire/services/context"
+	repo_service "branchspire/services/repository"
 )
 
 // ListUnadoptedRepositories lists the unadopted repositories that match the provided names

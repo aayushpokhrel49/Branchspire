@@ -13,14 +13,14 @@ import (
 	"slices"
 	"strings"
 
-	"gitea.dev/modules/highlight"
-	"gitea.dev/modules/htmlutil"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/markup"
-	"gitea.dev/modules/markup/common"
-	"gitea.dev/modules/markup/markdown/math"
-	"gitea.dev/modules/setting"
-	giteautil "gitea.dev/modules/util"
+	"branchspire/modules/highlight"
+	"branchspire/modules/htmlutil"
+	"branchspire/modules/log"
+	"branchspire/modules/markup"
+	"branchspire/modules/markup/common"
+	"branchspire/modules/markup/markdown/math"
+	"branchspire/modules/setting"
+	giteautil "branchspire/modules/util"
 
 	chromahtml "github.com/alecthomas/chroma/v2/formatters/html"
 	"github.com/yuin/goldmark"
@@ -129,7 +129,7 @@ func goldmarkDefaultParser() parser.Parser {
 	)
 }
 
-// SpecializedMarkdown sets up the Gitea specific markdown extensions
+// SpecializedMarkdown sets up the BranchSpire specific markdown extensions
 func SpecializedMarkdown(ctx *markup.RenderContext) *GoldmarkRender {
 	// TODO: it could use a pool to cache the renderers to reuse them with different contexts
 	// at the moment it is fast enough (see the benchmarks)

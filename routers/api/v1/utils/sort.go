@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"gitea.dev/models/db"
-	"gitea.dev/services/context"
+	"branchspire/models/db"
+	"branchspire/services/context"
 )
 
 // ResolveSortOrder reads "sort" and "order" query params and returns the matching

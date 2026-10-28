@@ -6,12 +6,12 @@ package repo
 import (
 	"net/http"
 
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/git"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/services/context"
-	"gitea.dev/services/convert"
-	git_service "gitea.dev/services/git"
+	user_model "branchspire/models/user"
+	"branchspire/modules/git"
+	api "branchspire/modules/structs"
+	"branchspire/services/context"
+	"branchspire/services/convert"
+	git_service "branchspire/services/git"
 )
 
 // CompareDiff compare two branches or commits

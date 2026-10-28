@@ -7,10 +7,10 @@ import (
 	"fmt"
 	"testing"
 
-	"gitea.dev/models/organization"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/setting"
+	"branchspire/models/organization"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
+	"branchspire/modules/setting"
 
 	"github.com/stretchr/testify/assert"
 )

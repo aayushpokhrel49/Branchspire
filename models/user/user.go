@@ -20,22 +20,22 @@ import (
 	"time"
 	"unicode"
 
-	"gitea.dev/models/auth"
-	"gitea.dev/models/db"
-	"gitea.dev/modules/auth/openid"
-	"gitea.dev/modules/auth/password/hash"
-	"gitea.dev/modules/base"
-	"gitea.dev/modules/container"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/htmlutil"
-	"gitea.dev/modules/httplib"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/optional"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/structs"
-	"gitea.dev/modules/timeutil"
-	"gitea.dev/modules/util"
-	"gitea.dev/modules/validation"
+	"branchspire/models/auth"
+	"branchspire/models/db"
+	"branchspire/modules/auth/openid"
+	"branchspire/modules/auth/password/hash"
+	"branchspire/modules/base"
+	"branchspire/modules/container"
+	"branchspire/modules/git"
+	"branchspire/modules/htmlutil"
+	"branchspire/modules/httplib"
+	"branchspire/modules/log"
+	"branchspire/modules/optional"
+	"branchspire/modules/setting"
+	"branchspire/modules/structs"
+	"branchspire/modules/timeutil"
+	"branchspire/modules/util"
+	"branchspire/modules/validation"
 
 	_ "image/jpeg" // Needed for jpeg support
 
@@ -131,10 +131,10 @@ type User struct {
 	// IsActive true: primary email is activated, user can access Web UI and Git SSH.
 	// false: an inactive user can only log in Web UI for account operations (ex: activate the account by email), no other access.
 	IsActive bool `xorm:"INDEX"`
-	// the user is a Gitea admin, who can access all repositories and the admin pages.
+	// the user is a BranchSpire admin, who can access all repositories and the admin pages.
 	IsAdmin bool
 	// true: the user is only allowed to see organizations/repositories that they has explicit rights to.
-	// (ex: in private Gitea instances user won't be allowed to see even organizations/repositories that are set as public)
+	// (ex: in private BranchSpire instances user won't be allowed to see even organizations/repositories that are set as public)
 	IsRestricted bool `xorm:"NOT NULL DEFAULT false"`
 
 	AllowGitHook            bool

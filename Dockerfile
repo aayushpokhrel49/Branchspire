@@ -21,7 +21,7 @@ RUN apk --no-cache add \
     build-base \
     git
 
-WORKDIR ${GOPATH}/src/gitea.dev
+WORKDIR ${GOPATH}/src/branchspire
 COPY go.mod go.sum ./
 RUN go mod download
 # Use COPY instead of bind mount as read-only one breaks makefile state tracking and read-write one needs binary to be moved as it's discarded.
@@ -29,7 +29,7 @@ RUN go mod download
 COPY --exclude=.git/ . .
 COPY --from=frontend-build /src/public/assets public/assets
 
-# Build gitea, .git mount is required for version data
+# Build BranchSpire, .git mount is required for version data
 RUN --mount=type=cache,target="/root/.cache/go-build" \
     --mount=type=bind,source=".git/",target=".git/" \
     make backend
@@ -39,12 +39,12 @@ COPY docker/root /tmp/local
 # Set permissions for builds that made under windows which strips the executable bit from file
 RUN chmod 755 /tmp/local/usr/bin/entrypoint \
               /tmp/local/usr/local/bin/* \
-              /tmp/local/etc/s6/gitea/* \
+              /tmp/local/etc/s6/branchspire/* \
               /tmp/local/etc/s6/openssh/* \
               /tmp/local/etc/s6/.s6-svscan/* \
-              /go/src/gitea.dev/gitea
+              /go/src/branchspire/branchspire
 
-FROM docker.io/library/alpine:3.24 AS gitea
+FROM docker.io/library/alpine:3.24 AS branchspire
 
 EXPOSE 22 3000
 
@@ -74,10 +74,10 @@ RUN addgroup \
   echo "git:*" | chpasswd -e
 
 COPY --from=build-env /tmp/local /
-COPY --from=build-env /go/src/gitea.dev/gitea /app/gitea/gitea
+COPY --from=build-env /go/src/branchspire/branchspire /app/branchspire/branchspire
 
 ENV USER=git
-ENV GITEA_CUSTOM=/data/gitea
+ENV GITEA_CUSTOM=/data/branchspire
 
 VOLUME ["/data"]
 

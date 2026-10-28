@@ -6,7 +6,7 @@ package cron
 import (
 	"time"
 
-	"gitea.dev/modules/translation"
+	"branchspire/modules/translation"
 )
 
 // Config represents a basic configuration interface that cron task

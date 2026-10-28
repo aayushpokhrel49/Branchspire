@@ -12,14 +12,14 @@ import (
 	"sort"
 	"strings"
 
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/modules/base"
-	"gitea.dev/modules/fileicon"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/setting"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/modules/util"
+	repo_model "branchspire/models/repo"
+	"branchspire/modules/base"
+	"branchspire/modules/fileicon"
+	"branchspire/modules/git"
+	"branchspire/modules/log"
+	"branchspire/modules/setting"
+	api "branchspire/modules/structs"
+	"branchspire/modules/util"
 )
 
 // GetTreeBySHA get the GitTreeResponse of a repository using a sha hash (id of a commit or a tree)

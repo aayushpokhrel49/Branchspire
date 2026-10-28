@@ -10,8 +10,8 @@ import (
 	"strings"
 	"sync"
 
-	"gitea.dev/modules/htmlutil"
-	"gitea.dev/modules/util"
+	"branchspire/modules/htmlutil"
+	"branchspire/modules/util"
 
 	"golang.org/x/net/html"
 )

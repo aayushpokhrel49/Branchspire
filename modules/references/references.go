@@ -13,10 +13,10 @@ import (
 	"sync"
 	"unicode/utf8"
 
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/markup/mdstripper"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/util"
+	"branchspire/modules/log"
+	"branchspire/modules/markup/mdstripper"
+	"branchspire/modules/setting"
+	"branchspire/modules/util"
 )
 
 var (

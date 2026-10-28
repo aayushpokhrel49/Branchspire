@@ -7,7 +7,7 @@ package structs
 import (
 	"time"
 
-	"gitea.dev/modules/json"
+	"branchspire/modules/json"
 )
 
 // User represents a user

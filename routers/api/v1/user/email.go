@@ -6,13 +6,13 @@ package user
 import (
 	"net/http"
 
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/setting"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/modules/web"
-	"gitea.dev/services/context"
-	"gitea.dev/services/convert"
-	user_service "gitea.dev/services/user"
+	user_model "branchspire/models/user"
+	"branchspire/modules/setting"
+	api "branchspire/modules/structs"
+	"branchspire/modules/web"
+	"branchspire/services/context"
+	"branchspire/services/convert"
+	user_service "branchspire/services/user"
 )
 
 // ListEmails list all of the authenticated user's email addresses

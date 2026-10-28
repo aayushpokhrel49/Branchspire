@@ -9,8 +9,8 @@ import (
 	"path"
 	"time"
 
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/util"
+	"branchspire/modules/log"
+	"branchspire/modules/util"
 )
 
 // CommitInfo describes the first commit with the provided entry

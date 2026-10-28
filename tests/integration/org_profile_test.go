@@ -11,10 +11,10 @@ import (
 	"testing"
 	"time"
 
-	auth_model "gitea.dev/models/auth"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/modules/util"
-	"gitea.dev/routers/web/shared/user"
+	auth_model "branchspire/models/auth"
+	api "branchspire/modules/structs"
+	"branchspire/modules/util"
+	"branchspire/routers/web/shared/user"
 
 	"github.com/stretchr/testify/assert"
 )

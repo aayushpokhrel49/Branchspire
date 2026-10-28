@@ -14,8 +14,8 @@ import (
 	"strconv"
 	"strings"
 
-	"gitea.dev/modules/httplib"
-	"gitea.dev/modules/setting"
+	"branchspire/modules/httplib"
+	"branchspire/modules/setting"
 )
 
 const (

@@ -10,16 +10,16 @@ import (
 	"net/http"
 	"strings"
 
-	audit_model "gitea.dev/models/audit"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/private"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/validation"
-	"gitea.dev/modules/web"
-	"gitea.dev/modules/web/middleware"
-	"gitea.dev/routers/common"
-	"gitea.dev/routers/web/misc"
-	"gitea.dev/services/context"
+	audit_model "branchspire/models/audit"
+	"branchspire/modules/log"
+	"branchspire/modules/private"
+	"branchspire/modules/setting"
+	"branchspire/modules/validation"
+	"branchspire/modules/web"
+	"branchspire/modules/web/middleware"
+	"branchspire/routers/common"
+	"branchspire/routers/web/misc"
+	"branchspire/services/context"
 )
 
 func authInternal(next http.Handler) http.Handler {
@@ -73,7 +73,7 @@ func Routes() *web.Router {
 	r.AfterRouting(context.PrivateContexter())
 	r.AfterRouting(authInternal)
 	// Log the real ip address of the request from SSH is really helpful for diagnosing sometimes.
-	// Since internal API will be sent only from Gitea sub commands and it's under control (checked by InternalToken), we can trust the headers.
+	// Since internal API will be sent only from BranchSpire sub commands and it's under control (checked by InternalToken), we can trust the headers.
 	r.AfterRouting(setRealIP)
 	r.AfterRouting(common.AuditOrigin(audit_model.OriginSystem))
 

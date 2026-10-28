@@ -15,13 +15,13 @@ import (
 	"strings"
 	"time"
 
-	"gitea.dev/modules/htmlutil"
-	"gitea.dev/modules/markup/common"
-	"gitea.dev/modules/markup/internal"
-	"gitea.dev/modules/public"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/typesniffer"
-	"gitea.dev/modules/util"
+	"branchspire/modules/htmlutil"
+	"branchspire/modules/markup/common"
+	"branchspire/modules/markup/internal"
+	"branchspire/modules/public"
+	"branchspire/modules/setting"
+	"branchspire/modules/typesniffer"
+	"branchspire/modules/util"
 
 	"golang.org/x/sync/errgroup"
 )
@@ -35,7 +35,7 @@ const (
 )
 
 var RenderBehaviorForTesting struct {
-	// Gitea will emit some additional attributes for various purposes, these attributes don't affect rendering.
+	// BranchSpire will emit some additional attributes for various purposes, these attributes don't affect rendering.
 	// But there are too many hard-coded test cases, to avoid changing all of them again and again, we can disable emitting these internal attributes.
 	DisableAdditionalAttributes bool
 }

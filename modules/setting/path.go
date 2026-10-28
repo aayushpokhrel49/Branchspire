@@ -10,20 +10,20 @@ import (
 	"path/filepath"
 	"strings"
 
-	"gitea.dev/modules/consts"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/tempdir"
+	"branchspire/modules/consts"
+	"branchspire/modules/log"
+	"branchspire/modules/tempdir"
 )
 
 var (
 	// AppPath represents the path to the gitea binary
 	AppPath string
 
-	// AppWorkPath is the "working directory" of Gitea. It maps to the: WORK_PATH in app.ini, "--work-path" flag, environment variable GITEA_WORK_DIR.
+	// AppWorkPath is the "working directory" of BranchSpire. It maps to the: WORK_PATH in app.ini, "--work-path" flag, environment variable GITEA_WORK_DIR.
 	// If that is not set it is the default set here by the linker or failing that the directory of AppPath.
 	// It is used as the base path for several other paths.
 	// Do remember:
-	// * Work path might not be the POSIX current working directory or the Gitea's binary directory, Gitea binary is not FHS-compliant
+	// * Work path might not be the POSIX current working directory or the BranchSpire's binary directory, BranchSpire binary is not FHS-compliant
 	// * Work path sometimes is not writable (e.g.: /usr/local/bin) or not persistent (https://github.com/go-gitea/gitea/pull/35851)
 	// * Work path, custom path and data path, some of them are the same sometimes (e.g.: docker image, some downstream packages, some manual installations)
 	AppWorkPath string
@@ -211,7 +211,7 @@ func MockBuiltinPaths(workPath, customPath, customConf string) func() {
 
 // AppDataTempDir returns a managed temporary directory for the application data.
 // Using empty sub will get the managed base temp directory, and it's safe to delete it.
-// Gitea only creates subdirectories under it, but not the APP_TEMP_PATH directory itself.
+// BranchSpire only creates subdirectories under it, but not the APP_TEMP_PATH directory itself.
 // * When APP_TEMP_PATH="/tmp": the managed temp directory is "/tmp/gitea-tmp"
 // * When APP_TEMP_PATH is not set: the managed temp directory is "/{APP_DATA_PATH}/tmp"
 func AppDataTempDir(sub string) *tempdir.TempDir {

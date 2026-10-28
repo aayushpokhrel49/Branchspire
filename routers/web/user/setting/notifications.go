@@ -6,13 +6,13 @@ package setting
 import (
 	"net/http"
 
-	"gitea.dev/models/unit"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/optional"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/templates"
-	"gitea.dev/services/context"
-	"gitea.dev/services/user"
+	"branchspire/models/unit"
+	user_model "branchspire/models/user"
+	"branchspire/modules/optional"
+	"branchspire/modules/setting"
+	"branchspire/modules/templates"
+	"branchspire/services/context"
+	"branchspire/services/user"
 )
 
 const tplSettingsNotifications templates.TplName = "user/settings/notifications"
@@ -65,7 +65,7 @@ func NotificationsEmailPost(ctx *context.Context) {
 	ctx.Redirect(setting.AppSubURL + "/user/settings/notifications")
 }
 
-// NotificationsActionsEmailPost set user's email notification preference on Gitea Actions
+// NotificationsActionsEmailPost set user's email notification preference on BranchSpire Actions
 func NotificationsActionsEmailPost(ctx *context.Context) {
 	if !setting.Actions.Enabled || unit.TypeActions.UnitGlobalDisabled() {
 		ctx.NotFound(nil)

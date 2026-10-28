@@ -9,10 +9,10 @@ import (
 	"net/http"
 	"testing"
 
-	"gitea.dev/modules/reqctx"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/test"
-	"gitea.dev/modules/util"
+	"branchspire/modules/reqctx"
+	"branchspire/modules/setting"
+	"branchspire/modules/test"
+	"branchspire/modules/util"
 
 	"github.com/stretchr/testify/assert"
 )

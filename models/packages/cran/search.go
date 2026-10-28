@@ -8,9 +8,9 @@ import (
 	"strconv"
 	"strings"
 
-	"gitea.dev/models/db"
-	"gitea.dev/models/packages"
-	cran_module "gitea.dev/modules/packages/cran"
+	"branchspire/models/db"
+	"branchspire/models/packages"
+	cran_module "branchspire/modules/packages/cran"
 
 	"xorm.io/builder"
 )

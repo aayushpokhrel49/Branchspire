@@ -7,15 +7,15 @@ import (
 	"errors"
 	"net/http"
 
-	"gitea.dev/models/packages"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/modules/optional"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/modules/util"
-	"gitea.dev/routers/api/v1/utils"
-	"gitea.dev/services/context"
-	"gitea.dev/services/convert"
-	packages_service "gitea.dev/services/packages"
+	"branchspire/models/packages"
+	repo_model "branchspire/models/repo"
+	"branchspire/modules/optional"
+	api "branchspire/modules/structs"
+	"branchspire/modules/util"
+	"branchspire/routers/api/v1/utils"
+	"branchspire/services/context"
+	"branchspire/services/convert"
+	packages_service "branchspire/services/packages"
 )
 
 // ListPackages gets all packages of an owner

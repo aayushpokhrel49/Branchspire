@@ -9,16 +9,16 @@ import (
 	"path"
 	"strings"
 
-	activities_model "gitea.dev/models/activities"
-	issues_model "gitea.dev/models/issues"
-	repo_model "gitea.dev/models/repo"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/json"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/markup/markdown"
-	"gitea.dev/modules/repository"
-	notify_service "gitea.dev/services/notify"
+	activities_model "branchspire/models/activities"
+	issues_model "branchspire/models/issues"
+	repo_model "branchspire/models/repo"
+	user_model "branchspire/models/user"
+	"branchspire/modules/git"
+	"branchspire/modules/json"
+	"branchspire/modules/log"
+	"branchspire/modules/markup/markdown"
+	"branchspire/modules/repository"
+	notify_service "branchspire/services/notify"
 )
 
 type actionNotifier struct {

@@ -10,14 +10,14 @@ import (
 	"testing"
 	"time"
 
-	auth_model "gitea.dev/models/auth"
-	issues_model "gitea.dev/models/issues"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/git/gitcmd"
-	"gitea.dev/modules/setting"
-	api "gitea.dev/modules/structs"
+	auth_model "branchspire/models/auth"
+	issues_model "branchspire/models/issues"
+	repo_model "branchspire/models/repo"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
+	"branchspire/modules/git/gitcmd"
+	"branchspire/modules/setting"
+	api "branchspire/modules/structs"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -70,7 +70,7 @@ func TestManualMergeAutodetect(t *testing.T) {
 		doGitClone(dstPath, u)(t)
 
 		// Capture each branch's expected merge commit hash from the local clone,
-		// so we can assert that Gitea recorded the correct merge commit per PR
+		// so we can assert that BranchSpire recorded the correct merge commit per PR
 		// (and not just "some merge commit" — see the regression where every PR
 		// was attributed to the last merge in the push).
 		expectedMergeCommits := make([]string, len(branchNames))

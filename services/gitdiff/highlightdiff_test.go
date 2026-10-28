@@ -9,8 +9,8 @@ import (
 	"strings"
 	"testing"
 
-	"gitea.dev/modules/highlight"
-	"gitea.dev/modules/translation"
+	"branchspire/modules/highlight"
+	"branchspire/modules/translation"
 
 	"github.com/alecthomas/chroma/v2"
 	"github.com/stretchr/testify/assert"

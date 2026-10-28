@@ -7,9 +7,9 @@ import (
 	"context"
 	"io"
 
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/log"
+	repo_model "branchspire/models/repo"
+	"branchspire/modules/git"
+	"branchspire/modules/log"
 )
 
 type commitChecker struct {

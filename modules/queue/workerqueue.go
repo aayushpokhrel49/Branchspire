@@ -11,10 +11,10 @@ import (
 	"sync/atomic"
 	"time"
 
-	"gitea.dev/modules/json"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/process"
-	"gitea.dev/modules/setting"
+	"branchspire/modules/json"
+	"branchspire/modules/log"
+	"branchspire/modules/process"
+	"branchspire/modules/setting"
 )
 
 // WorkerPoolQueue is a queue that uses a pool of workers to process items

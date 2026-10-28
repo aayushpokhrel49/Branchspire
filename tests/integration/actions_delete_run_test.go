@@ -12,12 +12,12 @@ import (
 	"time"
 
 	runnerv1 "gitea.dev/actionslib/runner/v1"
-	actions_model "gitea.dev/models/actions"
-	auth_model "gitea.dev/models/auth"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/json"
-	"gitea.dev/routers/web/repo/actions"
+	actions_model "branchspire/models/actions"
+	auth_model "branchspire/models/auth"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
+	"branchspire/modules/json"
+	"branchspire/routers/web/repo/actions"
 
 	"github.com/stretchr/testify/assert"
 	"google.golang.org/protobuf/types/known/timestamppb"
@@ -31,12 +31,12 @@ func TestActionsDeleteRun(t *testing.T) {
 		outcomes         map[string]*mockTaskOutcome
 		expectedStatuses map[string]string
 	}{
-		treePath: ".gitea/workflows/test1.yml",
+		treePath: ".branchspire/workflows/test1.yml",
 		fileContent: `name: test1
 on:
   push:
     paths:
-      - .gitea/workflows/test1.yml
+      - .branchspire/workflows/test1.yml
 jobs:
   job1:
     runs-on: ubuntu-latest

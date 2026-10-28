@@ -13,8 +13,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	"gitea.dev/modules/json"
-	"gitea.dev/modules/util"
+	"branchspire/modules/json"
+	"branchspire/modules/util"
 )
 
 type LoggerImpl struct {

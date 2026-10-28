@@ -24,8 +24,8 @@
   --octicon-x: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.75.75 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215L8 9.06l-3.22 3.22a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06"/></svg>');
   --select-arrows: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path d="m4.074 9.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.043 9H4.251a.25.25 0 0 0-.177.427m0-1.957L7.47 4.073a.25.25 0 0 1 .354 0L11.22 7.47a.25.25 0 0 1-.177.426H4.251a.25.25 0 0 1-.177-.426"/></svg>');
   /* other variables */
-  --border-radius: 4px;
-  --border-radius-medium: 6px;
+  --border-radius: 10px;
+  --border-radius-medium: 8px;
   --border-radius-full: 99999px; /* TODO: use calc(infinity * 1px) */
   --opacity-disabled: 0.55;
   --height-loading: 16rem;
@@ -879,4 +879,67 @@ table th[data-sortt-desc] .svg {
 .svg.octicon-file-symlink-file,
 .svg.octicon-file-directory-symlink {
   color: var(--color-secondary-dark-7);
+}
+
+/* ==== app footer: quick links (base/footer_links.tmpl) + a utility strip below ==== */
+.page-footer {
+  display: block;
+  background-color: var(--color-footer);
+  padding: 0;
+}
+
+.page-footer .left-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  padding: 14px 20px 0;
+}
+
+.page-footer .right-links {
+  min-width: 180px; /* make sure the menu dropdown doesn't overflow horizontally when language name is short */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  padding: 6px 20px 12px;
+}
+
+.page-footer .right-links > a {
+  border-left: 1px solid var(--color-secondary-dark-1);
+  padding-left: 1em;
+}
+
+/* the theme item is also used for the menu's "default text" display */
+.page-footer .ui.dropdown .theme-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+/* Fomantic UI dropdown "remote items by API" can't change parent "item" element,
+so we use "theme-menu-item" in the "item" and add tooltip to the inner one.
+Then the inner one needs to get padding and parent "item" padding needs to be removed */
+.page-footer .menu.theme-menu > .item {
+  padding: 0 !important;
+}
+
+.page-footer .menu.theme-menu > .item > .theme-menu-item {
+  padding: 11px 16px;
+}
+
+.page-footer .ui.dropdown .menu.language-menu,
+.page-footer .ui.dropdown .menu.theme-menu {
+  max-height: min(500px, calc(100vh - 60px));
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 880px) {
+  .page-footer .left-links,
+  .page-footer .right-links {
+    gap: 0.5em;
+  }
 }

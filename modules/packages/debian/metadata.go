@@ -13,9 +13,9 @@ import (
 	"strings"
 	"sync"
 
-	"gitea.dev/modules/util"
-	"gitea.dev/modules/validation"
-	"gitea.dev/modules/zstd"
+	"branchspire/modules/util"
+	"branchspire/modules/validation"
+	"branchspire/modules/zstd"
 
 	"github.com/blakesmith/ar"
 	"github.com/ulikunitz/xz"

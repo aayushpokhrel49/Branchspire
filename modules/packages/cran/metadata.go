@@ -13,7 +13,7 @@ import (
 	"regexp"
 	"strings"
 
-	"gitea.dev/modules/util"
+	"branchspire/modules/util"
 )
 
 const (

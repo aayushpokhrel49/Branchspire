@@ -14,8 +14,8 @@ import (
 	"testing"
 	"time"
 
-	"gitea.dev/models/unittest"
-	base "gitea.dev/modules/migration"
+	"branchspire/models/unittest"
+	base "branchspire/modules/migration"
 
 	"github.com/hashicorp/go-version"
 	"github.com/stretchr/testify/assert"

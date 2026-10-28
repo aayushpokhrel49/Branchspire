@@ -8,11 +8,11 @@ import (
 	"path"
 	"strings"
 
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/modules/git"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/modules/util"
-	"gitea.dev/services/convert"
+	repo_model "branchspire/models/repo"
+	"branchspire/modules/git"
+	api "branchspire/modules/structs"
+	"branchspire/modules/util"
+	"branchspire/services/convert"
 )
 
 // To define the wiki related concepts:

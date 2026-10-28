@@ -9,12 +9,12 @@ import (
 	"fmt"
 	"strings"
 
-	auth_model "gitea.dev/models/auth"
-	"gitea.dev/models/db"
-	user_model "gitea.dev/models/user"
-	pwd "gitea.dev/modules/auth/password"
-	"gitea.dev/modules/optional"
-	"gitea.dev/modules/setting"
+	auth_model "branchspire/models/auth"
+	"branchspire/models/db"
+	user_model "branchspire/models/user"
+	pwd "branchspire/modules/auth/password"
+	"branchspire/modules/optional"
+	"branchspire/modules/setting"
 
 	"github.com/urfave/cli/v3"
 )

@@ -8,17 +8,17 @@ import (
 	"errors"
 	"net/http"
 
-	audit_model "gitea.dev/models/audit"
-	"gitea.dev/models/db"
-	"gitea.dev/models/organization"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/templates"
-	"gitea.dev/modules/web"
-	"gitea.dev/services/audit"
-	"gitea.dev/services/context"
-	"gitea.dev/services/forms"
+	audit_model "branchspire/models/audit"
+	"branchspire/models/db"
+	"branchspire/models/organization"
+	user_model "branchspire/models/user"
+	"branchspire/modules/log"
+	"branchspire/modules/setting"
+	"branchspire/modules/templates"
+	"branchspire/modules/web"
+	"branchspire/services/audit"
+	"branchspire/services/context"
+	"branchspire/services/forms"
 )
 
 const (

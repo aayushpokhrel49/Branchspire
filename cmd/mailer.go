@@ -6,8 +6,8 @@ package cmd
 import (
 	"context"
 
-	"gitea.dev/modules/private"
-	"gitea.dev/modules/setting"
+	"branchspire/modules/private"
+	"branchspire/modules/setting"
 
 	"github.com/urfave/cli/v3"
 )

@@ -8,10 +8,10 @@ import (
 	"errors"
 	"sort"
 
-	"gitea.dev/models/db"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/util"
+	"branchspire/models/db"
+	user_model "branchspire/models/user"
+	"branchspire/modules/setting"
+	"branchspire/modules/util"
 )
 
 type IssuePin struct {

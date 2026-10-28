@@ -9,8 +9,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/util"
+	"branchspire/modules/setting"
+	"branchspire/modules/util"
 )
 
 // SyncFile synchronizes the two files. This is skipped if both files
@@ -51,7 +51,7 @@ func SyncDirs(srcPath, destPath string) error {
 		return err
 	}
 	if strings.HasPrefix(destPathAbs+string(filepath.Separator), devDataPathAbs+string(filepath.Separator)) {
-		return errors.New("destination path should not be inside Gitea data directory, otherwise your data for dev mode will be removed")
+		return errors.New("destination path should not be inside BranchSpire data directory, otherwise your data for dev mode will be removed")
 	}
 
 	err = os.MkdirAll(destPath, os.ModePerm)

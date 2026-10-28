@@ -10,14 +10,14 @@ import (
 	"reflect"
 	"strings"
 
-	"gitea.dev/modules/htmlutil"
-	"gitea.dev/modules/public"
-	"gitea.dev/modules/reqctx"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/translation"
-	"gitea.dev/modules/validation"
-	"gitea.dev/modules/web/middleware"
-	"gitea.dev/modules/web/types"
+	"branchspire/modules/htmlutil"
+	"branchspire/modules/public"
+	"branchspire/modules/reqctx"
+	"branchspire/modules/setting"
+	"branchspire/modules/translation"
+	"branchspire/modules/validation"
+	"branchspire/modules/web/middleware"
+	"branchspire/modules/web/types"
 
 	"github.com/go-chi/chi/v5"
 )
@@ -271,7 +271,7 @@ func (r *Router) normalizeRequestPath(resp http.ResponseWriter, req *http.Reques
 		normalizedPath = buf.String()
 	}
 
-	// If the config tells Gitea to use a sub-url path directly without reverse proxy,
+	// If the config tells BranchSpire to use a sub-url path directly without reverse proxy,
 	// then we need to remove the sub-url path from the request URL path.
 	// But "/v2" is special for OCI container registry, it should always be in the root of the site.
 	if setting.UseSubURLPath {

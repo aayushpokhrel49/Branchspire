@@ -12,24 +12,24 @@ import (
 	"strings"
 	"time"
 
-	auth_model "gitea.dev/models/auth"
-	"gitea.dev/models/db"
-	git_model "gitea.dev/models/git"
-	repo_model "gitea.dev/models/repo"
-	unit_model "gitea.dev/models/unit"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/citation"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/htmlutil"
-	"gitea.dev/modules/httplib"
-	"gitea.dev/modules/log"
-	repo_module "gitea.dev/modules/repository"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/svg"
-	"gitea.dev/modules/util"
-	"gitea.dev/routers/web/feed"
-	"gitea.dev/services/context"
-	repo_service "gitea.dev/services/repository"
+	auth_model "branchspire/models/auth"
+	"branchspire/models/db"
+	git_model "branchspire/models/git"
+	repo_model "branchspire/models/repo"
+	unit_model "branchspire/models/unit"
+	user_model "branchspire/models/user"
+	"branchspire/modules/citation"
+	"branchspire/modules/git"
+	"branchspire/modules/htmlutil"
+	"branchspire/modules/httplib"
+	"branchspire/modules/log"
+	repo_module "branchspire/modules/repository"
+	"branchspire/modules/setting"
+	"branchspire/modules/svg"
+	"branchspire/modules/util"
+	"branchspire/routers/web/feed"
+	"branchspire/services/context"
+	repo_service "branchspire/services/repository"
 )
 
 func checkOutdatedBranch(ctx *context.Context) {
@@ -511,7 +511,7 @@ func Home(ctx *context.Context) {
 func RedirectRepoTreeToSrc(ctx *context.Context) {
 	// Redirect "/owner/repo/tree/*" requests to "/owner/repo/src/*",
 	// then use the deprecated "/src/*" handler to guess the ref type and render a file list page.
-	// This is done intentionally so that Gitea's repo URL structure matches other forges (GitHub/GitLab) provide,
+	// This is done intentionally so that BranchSpire's repo URL structure matches other forges (GitHub/GitLab) provide,
 	// allowing us to construct submodule URLs across forges easily.
 	// For example, when viewing a submodule, we can simply construct the link as:
 	// * "https://gitea/owner/repo/tree/{CommitID}"

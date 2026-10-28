@@ -10,9 +10,9 @@ import (
 	"path/filepath"
 	"strings"
 
-	giturl "gitea.dev/modules/git/url"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/util"
+	giturl "branchspire/modules/git/url"
+	"branchspire/modules/log"
+	"branchspire/modules/util"
 )
 
 // DetermineEndpoint determines an endpoint from the clone url or uses the specified LFS url.

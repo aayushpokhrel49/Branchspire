@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"gitea.dev/modules/util"
+	"branchspire/modules/util"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -18,7 +18,7 @@ const (
 	groupID              = "org.gitea"
 	artifactID           = "my-project"
 	version              = "1.0.1"
-	name                 = "My Gitea Project"
+	name                 = "My BranchSpire Project"
 	description          = "Package Description"
 	projectURL           = "https://gitea.io"
 	license              = "MIT"

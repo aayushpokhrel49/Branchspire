@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"strings"
 
-	"gitea.dev/modelmigration/base"
+	"branchspire/modelmigration/base"
 
 	"xorm.io/xorm/schemas"
 )

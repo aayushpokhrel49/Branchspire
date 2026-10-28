@@ -6,9 +6,9 @@ package audit
 import (
 	"testing"
 
-	audit_model "gitea.dev/models/audit"
-	repository_model "gitea.dev/models/repo"
-	user_model "gitea.dev/models/user"
+	audit_model "branchspire/models/audit"
+	repository_model "branchspire/models/repo"
+	user_model "branchspire/models/user"
 
 	"github.com/stretchr/testify/assert"
 )

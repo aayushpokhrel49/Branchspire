@@ -7,14 +7,14 @@ import (
 	"context"
 	"fmt"
 
-	org_model "gitea.dev/models/organization"
-	packages_model "gitea.dev/models/packages"
-	"gitea.dev/models/perm"
-	access_model "gitea.dev/models/perm/access"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/models/unit"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/util"
+	org_model "branchspire/models/organization"
+	packages_model "branchspire/models/packages"
+	"branchspire/models/perm"
+	access_model "branchspire/models/perm/access"
+	repo_model "branchspire/models/repo"
+	"branchspire/models/unit"
+	user_model "branchspire/models/user"
+	"branchspire/modules/util"
 )
 
 func LinkToRepository(ctx context.Context, pkg *packages_model.Package, repo *repo_model.Repository, doer *user_model.User) error {

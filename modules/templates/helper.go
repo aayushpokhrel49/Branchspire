@@ -12,15 +12,15 @@ import (
 	"strings"
 	"time"
 
-	"gitea.dev/modules/base"
-	"gitea.dev/modules/htmlutil"
-	"gitea.dev/modules/markup"
-	"gitea.dev/modules/public"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/svg"
-	"gitea.dev/modules/templates/eval"
-	"gitea.dev/modules/util"
-	"gitea.dev/services/gitdiff"
+	"branchspire/modules/base"
+	"branchspire/modules/htmlutil"
+	"branchspire/modules/markup"
+	"branchspire/modules/public"
+	"branchspire/modules/setting"
+	"branchspire/modules/svg"
+	"branchspire/modules/templates/eval"
+	"branchspire/modules/util"
+	"branchspire/services/gitdiff"
 )
 
 func newFuncMapWebPage() template.FuncMap {

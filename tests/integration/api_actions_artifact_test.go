@@ -17,14 +17,14 @@ import (
 	"testing"
 
 	runnerv1 "gitea.dev/actionslib/runner/v1"
-	actions_model "gitea.dev/models/actions"
-	auth_model "gitea.dev/models/auth"
-	"gitea.dev/models/db"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/util"
-	"gitea.dev/tests"
+	actions_model "branchspire/models/actions"
+	auth_model "branchspire/models/auth"
+	"branchspire/models/db"
+	repo_model "branchspire/models/repo"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
+	"branchspire/modules/util"
+	"branchspire/tests"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -557,7 +557,7 @@ func TestActionRunAttemptArtifact(t *testing.T) {
 		runner := newMockRunner()
 		runner.registerAsRepoRunner(t, repo.OwnerName, repo.Name, "mock-runner", []string{"ubuntu-latest"}, false)
 
-		wfTreePath := ".gitea/workflows/run-attempt-artifact.yml"
+		wfTreePath := ".branchspire/workflows/run-attempt-artifact.yml"
 		wfFileContent := `name: run-attempt-artifact
 on:
   workflow_dispatch:
@@ -632,7 +632,7 @@ func testActionRunAttemptArtifactV3(t *testing.T, repo *repo_model.Repository, s
 }
 
 func testPartialRerunArtifactInheritance(t *testing.T, user *user_model.User, token string, repo *repo_model.Repository, session *TestSession, runner *mockRunner) {
-	wfTreePath := ".gitea/workflows/partial-rerun-artifact.yml"
+	wfTreePath := ".branchspire/workflows/partial-rerun-artifact.yml"
 	wfFileContent := `name: partial-rerun-artifact
 on:
   workflow_dispatch:

@@ -15,12 +15,12 @@ import (
 	"strings"
 	"time"
 
-	"gitea.dev/modules/git/gitrepo"
-	"gitea.dev/modules/git/internal" //nolint:depguard // only this file can use the internal type CmdArg, other files and packages should use AddXxx functions
-	"gitea.dev/modules/gtprof"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/process"
-	"gitea.dev/modules/util"
+	"branchspire/modules/git/gitrepo"
+	"branchspire/modules/git/internal" //nolint:depguard // only this file can use the internal type CmdArg, other files and packages should use AddXxx functions
+	"branchspire/modules/gtprof"
+	"branchspire/modules/log"
+	"branchspire/modules/process"
+	"branchspire/modules/util"
 )
 
 // TrustedCmdArgs returns the trusted arguments for git command.
@@ -230,12 +230,12 @@ func ToTrustedCmdArgs(args []string) TrustedCmdArgs {
 
 func commonBaseEnvs() []string {
 	envs := []string{
-		// Make Gitea use internal git config only, to prevent conflicts with user's git config
+		// Make BranchSpire use internal git config only, to prevent conflicts with user's git config
 		// It's better to use GIT_CONFIG_GLOBAL, but it requires git >= 2.32, so we still use HOME at the moment.
 		"HOME=" + HomeDir(),
 		// Avoid using system git config, it would cause problems (eg: use macOS osxkeychain to show a modal dialog, auto installing lfs hooks)
 		// This might be a breaking change in 1.24, because some users said that they have put some configs like "receive.certNonceSeed" in "/etc/gitconfig"
-		// For these users, they need to migrate the necessary configs to Gitea's git config file manually.
+		// For these users, they need to migrate the necessary configs to BranchSpire's git config file manually.
 		"GIT_CONFIG_NOSYSTEM=1",
 		// Ignore replace references (https://git-scm.com/docs/git-replace)
 		"GIT_NO_REPLACE_OBJECTS=1",

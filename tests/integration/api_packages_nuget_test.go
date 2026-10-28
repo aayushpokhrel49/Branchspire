@@ -17,17 +17,17 @@ import (
 	"testing"
 	"time"
 
-	auth_model "gitea.dev/models/auth"
-	"gitea.dev/models/packages"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
-	nuget_module "gitea.dev/modules/packages/nuget"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/structs"
-	"gitea.dev/modules/test"
-	"gitea.dev/routers/api/packages/nuget"
-	packageService "gitea.dev/services/packages"
-	"gitea.dev/tests"
+	auth_model "branchspire/models/auth"
+	"branchspire/models/packages"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
+	nuget_module "branchspire/modules/packages/nuget"
+	"branchspire/modules/setting"
+	"branchspire/modules/structs"
+	"branchspire/modules/test"
+	"branchspire/routers/api/packages/nuget"
+	packageService "branchspire/services/packages"
+	"branchspire/tests"
 
 	"github.com/stretchr/testify/assert"
 )
@@ -99,7 +99,7 @@ func TestPackageNuGet(t *testing.T) {
 	packageID := packageName
 	packageVersion := "1.0.3"
 	packageAuthors := "KN4CK3R"
-	packageDescription := "Gitea Test Package"
+	packageDescription := "BranchSpire Test Package"
 	isPrerelease := strings.Contains(packageVersion, "-")
 
 	symbolFilename := "test.pdb"

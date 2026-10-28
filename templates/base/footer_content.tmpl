@@ -1,17 +1,8 @@
 <footer class="page-footer" role="group" aria-label="{{ctx.Locale.Tr "aria.footer"}}">
+	{{template "base/footer_links" .}}
 	<div class="left-links" role="contentinfo" aria-label="{{ctx.Locale.Tr "aria.footer.software"}}">
 		{{if ShowFooterPoweredBy}}
-			<a target="_blank" href="https://about.gitea.com">{{ctx.Locale.Tr "powered_by" "Gitea"}}</a>
-		{{end}}
-		{{if (or .ShowFooterVersion .PageIsAdmin)}}
-			<span>
-			{{ctx.Locale.Tr "version"}}:
-			{{if .IsAdmin}}
-				<a href="{{AppSubUrl}}/-/admin/config">{{AppVer}}</a>
-			{{else}}
-				{{AppVer}}
-			{{end}}
-			</span>
+			<span>{{ctx.Locale.Tr "powered_by" "BranchSpire"}}</span>
 		{{end}}
 		{{if and .TemplateLoadTimes ShowFooterTemplateLoadTime}}
 			<span>
@@ -34,8 +25,6 @@
 				{{end -}}
 			</div>
 		</div>
-		<a href="{{AssetUrlPrefix}}/licenses.txt">{{ctx.Locale.Tr "licenses"}}</a>
-		{{if .EnableSwagger}}<a href="{{AppSubUrl}}/api/swagger">API</a>{{end}}
 		{{template "custom/extra_links_footer" .}}
 	</div>
 </footer>

@@ -11,14 +11,14 @@ import (
 	"path"
 	"strings"
 
-	auth_model "gitea.dev/models/auth"
-	access_model "gitea.dev/models/perm/access"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/models/unit"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/util"
-	"gitea.dev/services/context"
+	auth_model "branchspire/models/auth"
+	access_model "branchspire/models/perm/access"
+	repo_model "branchspire/models/repo"
+	"branchspire/models/unit"
+	user_model "branchspire/models/user"
+	"branchspire/modules/setting"
+	"branchspire/modules/util"
+	"branchspire/services/context"
 )
 
 func goGet(ctx *context.Context) {

@@ -16,23 +16,23 @@ import (
 	"time"
 
 	runnerv1 "gitea.dev/actionslib/runner/v1"
-	actions_model "gitea.dev/models/actions"
-	auth_model "gitea.dev/models/auth"
-	db_model "gitea.dev/models/db"
-	"gitea.dev/models/perm"
-	"gitea.dev/models/repo"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/models/webhook"
-	"gitea.dev/modules/commitstatus"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/json"
-	"gitea.dev/modules/setting"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/modules/test"
-	webhook_module "gitea.dev/modules/webhook"
-	"gitea.dev/services/actions"
-	"gitea.dev/tests"
+	actions_model "branchspire/models/actions"
+	auth_model "branchspire/models/auth"
+	db_model "branchspire/models/db"
+	"branchspire/models/perm"
+	"branchspire/models/repo"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
+	"branchspire/models/webhook"
+	"branchspire/modules/commitstatus"
+	"branchspire/modules/git"
+	"branchspire/modules/json"
+	"branchspire/modules/setting"
+	api "branchspire/modules/structs"
+	"branchspire/modules/test"
+	webhook_module "branchspire/modules/webhook"
+	"branchspire/services/actions"
+	"branchspire/tests"
 
 	"github.com/PuerkitoBio/goquery"
 	"github.com/stretchr/testify/assert"
@@ -1022,7 +1022,7 @@ func Test_WebhookWorkflowJob(t *testing.T) {
 
 		// add workflow file to the repo
 		// init the workflow
-		wfTreePath := ".gitea/workflows/push.yml"
+		wfTreePath := ".branchspire/workflows/push.yml"
 		wfFileContent := `name: Push
 on: push
 jobs:
@@ -1211,7 +1211,7 @@ func testWorkflowRunEvents(t *testing.T, webhookData *workflowRunWebhook) {
 
 	// add workflow file to the repo
 	// init the workflow
-	wfTreePath := ".gitea/workflows/push.yml"
+	wfTreePath := ".branchspire/workflows/push.yml"
 	wfFileContent := `on:
   push:
   workflow_dispatch:
@@ -1336,7 +1336,7 @@ func testWorkflowRunEventsOnRerun(t *testing.T, webhookData *workflowRunWebhook)
 
 	// add workflow file to the repo
 	// init the workflow
-	wfTreePath := ".gitea/workflows/push.yml"
+	wfTreePath := ".branchspire/workflows/push.yml"
 	wfFileContent := `on:
   push:
   workflow_dispatch:
@@ -1507,7 +1507,7 @@ func testWorkflowRunEventsOnCancellingAbandonedRun(t *testing.T, webhookData *wo
 	// add workflow file to the repo
 	// init the workflow
 	wfilename := "push.yml"
-	wfTreePath := ".gitea/workflows/" + wfilename
+	wfTreePath := ".branchspire/workflows/" + wfilename
 	wfFileContent := `on:
   push:
   workflow_dispatch:
@@ -1647,13 +1647,13 @@ func testWorkflowRunOnStoppingEndlessTasksForMultipleRuns(t *testing.T, webhookD
 		runners[i].registerAsRepoRunner(t, "user2", repoName, fmt.Sprintf("mock-runner-%d", i), []string{"ubuntu-latest"}, false)
 	}
 
-	workflowPath1 := ".gitea/workflows/endless-1.yml"
-	workflowPath2 := ".gitea/workflows/endless-2.yml"
+	workflowPath1 := ".branchspire/workflows/endless-1.yml"
+	workflowPath2 := ".branchspire/workflows/endless-2.yml"
 	workflowContent1 := `name: endless-1
 on:
   push:
     paths:
-      - '.gitea/workflows/endless-1.yml'
+      - '.branchspire/workflows/endless-1.yml'
 jobs:
   job-1:
     runs-on: ubuntu-latest
@@ -1664,7 +1664,7 @@ jobs:
 on:
   push:
     paths:
-      - '.gitea/workflows/endless-2.yml'
+      - '.branchspire/workflows/endless-2.yml'
 jobs:
   job-2:
     runs-on: ubuntu-latest
@@ -1737,13 +1737,13 @@ jobs:
     steps:
       - run: echo 'test the webhook'
 `)
-	createWorkflowFile(t, token, "user2", "repo1", ".gitea/workflows/dispatch.yml", opts)
+	createWorkflowFile(t, token, "user2", "repo1", ".branchspire/workflows/dispatch.yml", opts)
 
 	// 2.2 trigger the webhooks
 
 	// add workflow file to the repo
 	// init the workflow
-	wfTreePath := ".gitea/workflows/push.yml"
+	wfTreePath := ".branchspire/workflows/push.yml"
 	wfFileContent := `name: Push
 on: push
 jobs:
@@ -1825,7 +1825,7 @@ func testWebhookWorkflowRunDepthLimit(t *testing.T, webhookData *workflowRunWebh
 
 	// add workflow file to the repo
 	// init the workflow
-	wfTreePath := ".gitea/workflows/push.yml"
+	wfTreePath := ".branchspire/workflows/push.yml"
 	wfFileContent := `name: Endless Loop
 on:
   push:

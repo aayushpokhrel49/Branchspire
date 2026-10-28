@@ -6,14 +6,14 @@ package repo
 import (
 	"errors"
 
-	git_model "gitea.dev/models/git"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/util"
-	"gitea.dev/routers/utils"
-	context_service "gitea.dev/services/context"
-	files_service "gitea.dev/services/repository/files"
+	git_model "branchspire/models/git"
+	"branchspire/modules/git"
+	"branchspire/modules/log"
+	"branchspire/modules/setting"
+	"branchspire/modules/util"
+	"branchspire/routers/utils"
+	context_service "branchspire/services/context"
+	files_service "branchspire/services/repository/files"
 )
 
 func errorAs[T error](v error) (e T, ok bool) {

@@ -7,11 +7,11 @@ import (
 	"context"
 	"fmt"
 
-	"gitea.dev/models/db"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/models/webhook"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/log"
+	"branchspire/models/db"
+	repo_model "branchspire/models/repo"
+	"branchspire/models/webhook"
+	"branchspire/modules/git"
+	"branchspire/modules/log"
 
 	"xorm.io/builder"
 )

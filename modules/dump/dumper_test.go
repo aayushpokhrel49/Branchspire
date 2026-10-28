@@ -14,7 +14,7 @@ import (
 	"testing"
 	"time"
 
-	"gitea.dev/modules/timeutil"
+	"branchspire/modules/timeutil"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

@@ -6,13 +6,13 @@ package access_test
 import (
 	"testing"
 
-	"gitea.dev/models/unittest"
+	"branchspire/models/unittest"
 
-	_ "gitea.dev/models"
-	_ "gitea.dev/models/actions"
-	_ "gitea.dev/models/activities"
-	_ "gitea.dev/models/repo"
-	_ "gitea.dev/models/user"
+	_ "branchspire/models"
+	_ "branchspire/models/actions"
+	_ "branchspire/models/activities"
+	_ "branchspire/models/repo"
+	_ "branchspire/models/user"
 )
 
 func TestMain(m *testing.M) {

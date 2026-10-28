@@ -9,11 +9,11 @@ import (
 	"testing"
 	"time"
 
-	actions_model "gitea.dev/models/actions"
-	"gitea.dev/models/db"
-	"gitea.dev/models/unittest"
-	"gitea.dev/modules/setting"
-	"gitea.dev/tests"
+	actions_model "branchspire/models/actions"
+	"branchspire/models/db"
+	"branchspire/models/unittest"
+	"branchspire/modules/setting"
+	"branchspire/tests"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

@@ -1,4 +1,4 @@
-// Copyright 2019 Gitea. All rights reserved.
+// Copyright 2019 BranchSpire. All rights reserved.
 // SPDX-License-Identifier: MIT
 
 package structs

@@ -6,9 +6,9 @@ package session
 import (
 	"context"
 
-	"gitea.dev/models/auth"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/timeutil"
+	"branchspire/models/auth"
+	"branchspire/modules/log"
+	"branchspire/modules/timeutil"
 )
 
 type dbBackend struct {

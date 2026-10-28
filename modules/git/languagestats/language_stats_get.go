@@ -8,11 +8,11 @@ import (
 	"context"
 	"io"
 
-	"gitea.dev/modules/analyze"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/git/attribute"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/optional"
+	"branchspire/modules/analyze"
+	"branchspire/modules/git"
+	"branchspire/modules/git/attribute"
+	"branchspire/modules/log"
+	"branchspire/modules/optional"
 
 	"github.com/go-enry/go-enry/v2"
 )

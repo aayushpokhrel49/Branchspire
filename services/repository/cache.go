@@ -6,7 +6,7 @@ package repository
 import (
 	"context"
 
-	"gitea.dev/modules/git"
+	"branchspire/modules/git"
 )
 
 // CacheRef caches last commit information of the branch or the tag

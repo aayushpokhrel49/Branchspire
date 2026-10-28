@@ -7,10 +7,10 @@ import (
 	"context"
 	"fmt"
 
-	"gitea.dev/models/db"
-	"gitea.dev/models/perm"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/log"
+	"branchspire/models/db"
+	"branchspire/models/perm"
+	user_model "branchspire/models/user"
+	"branchspire/modules/log"
 
 	"xorm.io/builder"
 )

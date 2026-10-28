@@ -14,7 +14,7 @@ const (
 	name             = "ConanPackage"
 	version          = "1.2"
 	license          = "MIT"
-	author           = "Gitea <info@gitea.io>"
+	author           = "BranchSpire <info@gitea.io>"
 	homepage         = "https://gitea.io/"
 	url              = "https://gitea.com/"
 	description      = "Description of ConanPackage"

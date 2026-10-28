@@ -6,9 +6,9 @@ package repo
 import (
 	"net/http"
 
-	"gitea.dev/modules/templates"
-	"gitea.dev/services/context"
-	repo_service "gitea.dev/services/repository"
+	"branchspire/modules/templates"
+	"branchspire/services/context"
+	repo_service "branchspire/services/repository"
 )
 
 const tplEditorFork templates.TplName = "repo/editor/fork"

@@ -6,10 +6,10 @@ package v29
 import (
 	"context"
 
-	"gitea.dev/modelmigration/base"
-	"gitea.dev/modules/json"
-	"gitea.dev/modules/timeutil"
-	"gitea.dev/modules/util"
+	"branchspire/modelmigration/base"
+	"branchspire/modules/json"
+	"branchspire/modules/timeutil"
+	"branchspire/modules/util"
 
 	"xorm.io/xorm"
 )

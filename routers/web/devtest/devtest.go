@@ -13,17 +13,17 @@ import (
 	"time"
 	"unicode"
 
-	"gitea.dev/models/asymkey"
-	"gitea.dev/models/db"
-	"gitea.dev/models/gituser"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/badge"
-	"gitea.dev/modules/charset"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/indexer/code"
-	"gitea.dev/modules/templates"
-	"gitea.dev/modules/util"
-	"gitea.dev/services/context"
+	"branchspire/models/asymkey"
+	"branchspire/models/db"
+	"branchspire/models/gituser"
+	user_model "branchspire/models/user"
+	"branchspire/modules/badge"
+	"branchspire/modules/charset"
+	"branchspire/modules/git"
+	"branchspire/modules/indexer/code"
+	"branchspire/modules/templates"
+	"branchspire/modules/util"
+	"branchspire/services/context"
 )
 
 // List all devtest templates, they will be used for e2e tests for the UI components

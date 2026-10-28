@@ -13,10 +13,10 @@ import (
 	"time"
 
 	runnerv1 "gitea.dev/actionslib/runner/v1"
-	actions_model "gitea.dev/models/actions"
-	auth_model "gitea.dev/models/auth"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
+	actions_model "branchspire/models/actions"
+	auth_model "branchspire/models/auth"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -35,7 +35,7 @@ func TestDynamicMatrixEvaluation(t *testing.T) {
 		const workflow = `name: dynamic-matrix
 on:
   push:
-    paths: ['.gitea/workflows/dynamic-matrix.yml']
+    paths: ['.branchspire/workflows/dynamic-matrix.yml']
 jobs:
   generate:
     runs-on: ubuntu-latest
@@ -90,7 +90,7 @@ jobs:
       - run: echo '${{ toJSON(needs.build.outputs) }}'
 `
 		opts := getWorkflowCreateFileOptions(user2, apiRepo.DefaultBranch, "create dynamic-matrix.yml", workflow)
-		createWorkflowFile(t, token, user2.Name, apiRepo.Name, ".gitea/workflows/dynamic-matrix.yml", opts)
+		createWorkflowFile(t, token, user2.Name, apiRepo.Name, ".branchspire/workflows/dynamic-matrix.yml", opts)
 
 		generateTask := runner.fetchTask(t, 10*time.Second)
 		require.Equal(t, "generate", getTaskJobNameByTaskID(t, token, user2.Name, apiRepo.Name, generateTask.Id))

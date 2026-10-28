@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"gitea.dev/modules/git/gitrepo"
+	"branchspire/modules/git/gitrepo"
 )
 
 const testReposDir = "tests/repos/"

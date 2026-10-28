@@ -1,4 +1,4 @@
-// Copyright 2017 Gitea. All rights reserved.
+// Copyright 2017 BranchSpire. All rights reserved.
 // SPDX-License-Identifier: MIT
 
 package repo
@@ -7,14 +7,14 @@ import (
 	"fmt"
 	"net/http"
 
-	"gitea.dev/models/db"
-	git_model "gitea.dev/models/git"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/modules/web"
-	"gitea.dev/routers/api/v1/utils"
-	"gitea.dev/services/context"
-	"gitea.dev/services/convert"
-	commitstatus_service "gitea.dev/services/repository/commitstatus"
+	"branchspire/models/db"
+	git_model "branchspire/models/git"
+	api "branchspire/modules/structs"
+	"branchspire/modules/web"
+	"branchspire/routers/api/v1/utils"
+	"branchspire/services/context"
+	"branchspire/services/convert"
+	commitstatus_service "branchspire/services/repository/commitstatus"
 )
 
 // NewCommitStatus creates a new CommitStatus

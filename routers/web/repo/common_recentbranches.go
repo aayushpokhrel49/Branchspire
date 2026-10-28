@@ -4,12 +4,12 @@
 package repo
 
 import (
-	git_model "gitea.dev/models/git"
-	access_model "gitea.dev/models/perm/access"
-	unit_model "gitea.dev/models/unit"
-	"gitea.dev/modules/log"
-	"gitea.dev/services/context"
-	repo_service "gitea.dev/services/repository"
+	git_model "branchspire/models/git"
+	access_model "branchspire/models/perm/access"
+	unit_model "branchspire/models/unit"
+	"branchspire/modules/log"
+	"branchspire/services/context"
+	repo_service "branchspire/services/repository"
 )
 
 type RecentBranchesPromptDataStruct struct {

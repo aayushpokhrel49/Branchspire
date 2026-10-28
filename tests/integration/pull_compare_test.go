@@ -9,12 +9,12 @@ import (
 	"net/url"
 	"testing"
 
-	issues_model "gitea.dev/models/issues"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/models/unittest"
-	"gitea.dev/modules/test"
-	repo_service "gitea.dev/services/repository"
-	"gitea.dev/tests"
+	issues_model "branchspire/models/issues"
+	repo_model "branchspire/models/repo"
+	"branchspire/models/unittest"
+	"branchspire/modules/test"
+	repo_service "branchspire/services/repository"
+	"branchspire/tests"
 
 	"github.com/stretchr/testify/assert"
 )

@@ -12,17 +12,17 @@ import (
 	"strconv"
 	"time"
 
-	"gitea.dev/models/db"
-	repo_model "gitea.dev/models/repo"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/json"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/setting"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/modules/timeutil"
-	"gitea.dev/modules/util"
-	webhook_module "gitea.dev/modules/webhook"
+	"branchspire/models/db"
+	repo_model "branchspire/models/repo"
+	user_model "branchspire/models/user"
+	"branchspire/modules/git"
+	"branchspire/modules/json"
+	"branchspire/modules/log"
+	"branchspire/modules/setting"
+	api "branchspire/modules/structs"
+	"branchspire/modules/timeutil"
+	"branchspire/modules/util"
+	webhook_module "branchspire/modules/webhook"
 
 	"xorm.io/builder"
 )
@@ -359,7 +359,7 @@ func UpdateRun(ctx context.Context, run *ActionRun, cols ...string) error {
 	}
 	if affected == 0 {
 		return errors.New("run has changed")
-		// It's impossible that the run is not found, since Gitea never deletes runs.
+		// It's impossible that the run is not found, since BranchSpire never deletes runs.
 	}
 
 	return nil

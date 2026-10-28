@@ -9,11 +9,11 @@ import (
 	"math"
 	"time"
 
-	"gitea.dev/modelmigration/base"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/graceful"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/setting"
+	"branchspire/modelmigration/base"
+	"branchspire/modules/git"
+	"branchspire/modules/graceful"
+	"branchspire/modules/log"
+	"branchspire/modules/setting"
 )
 
 func AddCommitDivergenceToPulls(_ context.Context, x base.EngineMigration) error {

@@ -17,11 +17,11 @@ import (
 	"strings"
 	"time"
 
-	"gitea.dev/models/actions"
-	"gitea.dev/models/db"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/storage"
+	"branchspire/models/actions"
+	"branchspire/models/db"
+	"branchspire/modules/log"
+	"branchspire/modules/setting"
+	"branchspire/modules/storage"
 )
 
 type saveUploadChunkOptions struct {

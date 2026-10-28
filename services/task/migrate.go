@@ -1,4 +1,4 @@
-// Copyright 2019 Gitea. All rights reserved.
+// Copyright 2019 BranchSpire. All rights reserved.
 // SPDX-License-Identifier: MIT
 
 package task
@@ -9,21 +9,21 @@ import (
 	"fmt"
 	"time"
 
-	admin_model "gitea.dev/models/admin"
-	"gitea.dev/models/db"
-	repo_model "gitea.dev/models/repo"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/git/gitcmd"
-	"gitea.dev/modules/graceful"
-	"gitea.dev/modules/json"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/migration"
-	"gitea.dev/modules/process"
-	"gitea.dev/modules/structs"
-	"gitea.dev/modules/timeutil"
-	"gitea.dev/modules/util"
-	"gitea.dev/services/migrations"
-	notify_service "gitea.dev/services/notify"
+	admin_model "branchspire/models/admin"
+	"branchspire/models/db"
+	repo_model "branchspire/models/repo"
+	user_model "branchspire/models/user"
+	"branchspire/modules/git/gitcmd"
+	"branchspire/modules/graceful"
+	"branchspire/modules/json"
+	"branchspire/modules/log"
+	"branchspire/modules/migration"
+	"branchspire/modules/process"
+	"branchspire/modules/structs"
+	"branchspire/modules/timeutil"
+	"branchspire/modules/util"
+	"branchspire/services/migrations"
+	notify_service "branchspire/services/notify"
 )
 
 func handleCreateError(owner *user_model.User, err error) error {

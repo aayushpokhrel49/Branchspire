@@ -6,9 +6,9 @@ package metrics
 import (
 	"runtime"
 
-	activities_model "gitea.dev/models/activities"
-	"gitea.dev/modules/graceful"
-	"gitea.dev/modules/setting"
+	activities_model "branchspire/models/activities"
+	"branchspire/modules/graceful"
+	"branchspire/modules/setting"
 
 	"github.com/prometheus/client_golang/prometheus"
 )

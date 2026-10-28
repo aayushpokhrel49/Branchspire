@@ -6,16 +6,16 @@ package auth
 import (
 	"fmt"
 
-	asymkey_model "gitea.dev/models/asymkey"
-	"gitea.dev/models/auth"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/util"
-	asymkey_service "gitea.dev/services/asymkey"
-	"gitea.dev/services/audit"
-	"gitea.dev/services/auth/source/oauth2"
-	"gitea.dev/services/context"
-	user_service "gitea.dev/services/user"
+	asymkey_model "branchspire/models/asymkey"
+	"branchspire/models/auth"
+	user_model "branchspire/models/user"
+	"branchspire/modules/log"
+	"branchspire/modules/util"
+	asymkey_service "branchspire/services/asymkey"
+	"branchspire/services/audit"
+	"branchspire/services/auth/source/oauth2"
+	"branchspire/services/context"
+	user_service "branchspire/services/user"
 
 	"github.com/markbates/goth"
 )

@@ -8,7 +8,7 @@ import (
 	"slices"
 	"testing"
 
-	"gitea.dev/modules/test"
+	"branchspire/modules/test"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -115,7 +115,7 @@ func Test_WorkflowDirs(t *testing.T) {
 		{
 			name:     "default",
 			iniStr:   `[actions]`,
-			wantDirs: []string{".gitea/workflows", ".github/workflows"},
+			wantDirs: []string{".branchspire/workflows", ".github/workflows"},
 		},
 		{
 			name:     "single dir",
@@ -124,18 +124,18 @@ func Test_WorkflowDirs(t *testing.T) {
 		},
 		{
 			name:     "custom order",
-			iniStr:   "[actions]\nWORKFLOW_DIRS = .github/workflows,.gitea/workflows",
-			wantDirs: []string{".github/workflows", ".gitea/workflows"},
+			iniStr:   "[actions]\nWORKFLOW_DIRS = .github/workflows,.branchspire/workflows",
+			wantDirs: []string{".github/workflows", ".branchspire/workflows"},
 		},
 		{
 			name:     "whitespace trimming",
-			iniStr:   "[actions]\nWORKFLOW_DIRS = .gitea/workflows , .github/workflows ",
-			wantDirs: []string{".gitea/workflows", ".github/workflows"},
+			iniStr:   "[actions]\nWORKFLOW_DIRS = .branchspire/workflows , .github/workflows ",
+			wantDirs: []string{".branchspire/workflows", ".github/workflows"},
 		},
 		{
 			name:     "trailing slash normalization",
-			iniStr:   "[actions]\nWORKFLOW_DIRS = .gitea/workflows/,.github/workflows/",
-			wantDirs: []string{".gitea/workflows", ".github/workflows"},
+			iniStr:   "[actions]\nWORKFLOW_DIRS = .branchspire/workflows/,.github/workflows/",
+			wantDirs: []string{".branchspire/workflows", ".github/workflows"},
 		},
 		{
 			name:    "only commas and whitespace",
@@ -245,8 +245,8 @@ DEFAULT_ACTIONS_URL = gitea
 func Test_ScopedWorkflowDirs(t *testing.T) {
 	defer test.MockVariableValue(&Actions)()
 
-	defaultWorkflowDirs := []string{".gitea/workflows", ".github/workflows"}
-	defaultScopedDirs := []string{".gitea/scoped_workflows"}
+	defaultWorkflowDirs := []string{".branchspire/workflows", ".github/workflows"}
+	defaultScopedDirs := []string{".branchspire/scoped_workflows"}
 
 	tests := []struct {
 		name       string
@@ -271,17 +271,17 @@ func Test_ScopedWorkflowDirs(t *testing.T) {
 		},
 		{
 			name:    "overlap equal with workflow dir",
-			iniStr:  "[actions]\nWORKFLOW_DIRS = .gitea/workflows\nSCOPED_WORKFLOW_DIRS = .gitea/workflows",
+			iniStr:  "[actions]\nWORKFLOW_DIRS = .branchspire/workflows\nSCOPED_WORKFLOW_DIRS = .branchspire/workflows",
 			wantErr: true,
 		},
 		{
 			name:    "scoped dir nested under workflow dir",
-			iniStr:  "[actions]\nWORKFLOW_DIRS = .gitea/workflows\nSCOPED_WORKFLOW_DIRS = .gitea/workflows/scoped",
+			iniStr:  "[actions]\nWORKFLOW_DIRS = .branchspire/workflows\nSCOPED_WORKFLOW_DIRS = .branchspire/workflows/scoped",
 			wantErr: true,
 		},
 		{
 			name:    "workflow dir nested under scoped dir",
-			iniStr:  "[actions]\nWORKFLOW_DIRS = .gitea/workflows/ci\nSCOPED_WORKFLOW_DIRS = .gitea/workflows",
+			iniStr:  "[actions]\nWORKFLOW_DIRS = .branchspire/workflows/ci\nSCOPED_WORKFLOW_DIRS = .branchspire/workflows",
 			wantErr: true,
 		},
 		{

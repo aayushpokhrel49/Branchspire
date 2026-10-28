@@ -6,11 +6,11 @@ package markup
 import (
 	"testing"
 
-	"gitea.dev/models/unittest"
-	"gitea.dev/modules/markup"
-	"gitea.dev/modules/templates"
-	"gitea.dev/modules/util"
-	"gitea.dev/services/contexttest"
+	"branchspire/models/unittest"
+	"branchspire/modules/markup"
+	"branchspire/modules/templates"
+	"branchspire/modules/util"
+	"branchspire/services/contexttest"
 
 	"github.com/stretchr/testify/assert"
 )

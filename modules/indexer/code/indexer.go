@@ -11,19 +11,19 @@ import (
 	"sync/atomic"
 	"time"
 
-	"gitea.dev/models/db"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/graceful"
-	"gitea.dev/modules/indexer"
-	"gitea.dev/modules/indexer/code/bleve"
-	"gitea.dev/modules/indexer/code/elasticsearch"
-	"gitea.dev/modules/indexer/code/internal"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/process"
-	"gitea.dev/modules/queue"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/util"
+	"branchspire/models/db"
+	repo_model "branchspire/models/repo"
+	"branchspire/modules/git"
+	"branchspire/modules/graceful"
+	"branchspire/modules/indexer"
+	"branchspire/modules/indexer/code/bleve"
+	"branchspire/modules/indexer/code/elasticsearch"
+	"branchspire/modules/indexer/code/internal"
+	"branchspire/modules/log"
+	"branchspire/modules/process"
+	"branchspire/modules/queue"
+	"branchspire/modules/setting"
+	"branchspire/modules/util"
 )
 
 var (
@@ -161,7 +161,7 @@ func Init() {
 				if err := recover(); err != nil {
 					log.Error("PANIC whilst initializing repository indexer: %v\nStacktrace: %s", err, log.Stack(2))
 					log.Error("The indexer files are likely corrupted and may need to be deleted")
-					log.Error("You can completely remove the \"%s\" directory to make Gitea recreate the indexes", setting.Indexer.RepoPath)
+					log.Error("You can completely remove the \"%s\" directory to make BranchSpire recreate the indexes", setting.Indexer.RepoPath)
 				}
 			}()
 
@@ -179,7 +179,7 @@ func Init() {
 				if err := recover(); err != nil {
 					log.Error("PANIC whilst initializing repository indexer: %v\nStacktrace: %s", err, log.Stack(2))
 					log.Error("The indexer files are likely corrupted and may need to be deleted")
-					log.Error("You can completely remove the \"%s\" index to make Gitea recreate the indexes", util.SanitizeCredentialURLs(setting.Indexer.RepoConnStr))
+					log.Error("You can completely remove the \"%s\" index to make BranchSpire recreate the indexes", util.SanitizeCredentialURLs(setting.Indexer.RepoConnStr))
 				}
 			}()
 

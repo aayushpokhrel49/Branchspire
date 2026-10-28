@@ -8,12 +8,12 @@ import (
 	"slices"
 	"testing"
 
-	actions_model "gitea.dev/models/actions"
-	"gitea.dev/models/db"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/util"
+	actions_model "branchspire/models/actions"
+	"branchspire/models/db"
+	repo_model "branchspire/models/repo"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
+	"branchspire/modules/util"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -662,7 +662,7 @@ func Test_checkJobsOfCurrentRunAttempt_SkippedCallerIsUpdated(t *testing.T) {
 	caller := &actions_model.ActionRunJob{
 		RunID: run.ID, RunAttemptID: attempt.ID, AttemptJobID: 1,
 		RepoID: 4, OwnerID: 1, JobID: "caller", Name: "caller", Status: actions_model.StatusBlocked,
-		IsReusableCaller: true, WorkflowPayload: []byte("jobs: {caller: {if: false, uses: ./.gitea/workflows/called.yml}}"),
+		IsReusableCaller: true, WorkflowPayload: []byte("jobs: {caller: {if: false, uses: ./.branchspire/workflows/called.yml}}"),
 	}
 	assert.NoError(t, db.Insert(ctx, caller))
 
@@ -686,14 +686,14 @@ func Test_checkJobsOfCurrentRunAttempt_SkippedCallerIsUpdated(t *testing.T) {
 	caller2 := &actions_model.ActionRunJob{
 		RunID: run2.ID, RunAttemptID: attempt2.ID, RepoID: 4, OwnerID: 1,
 		JobID: "deploy", Name: "deploy", Status: actions_model.StatusRunning, IsReusableCaller: true, IsExpanded: true,
-		WorkflowPayload:         []byte("jobs: {deploy: {uses: ./.gitea/workflows/mid.yml}}"),
-		ReusableWorkflowContent: []byte("on: {workflow_call: {}}\njobs: {inner: {uses: ./.gitea/workflows/leaf.yml}}"),
+		WorkflowPayload:         []byte("jobs: {deploy: {uses: ./.branchspire/workflows/mid.yml}}"),
+		ReusableWorkflowContent: []byte("on: {workflow_call: {}}\njobs: {inner: {uses: ./.branchspire/workflows/leaf.yml}}"),
 	}
 	assert.NoError(t, db.Insert(ctx, caller2))
 	inner := &actions_model.ActionRunJob{
 		RunID: run2.ID, RunAttemptID: attempt2.ID, RepoID: 4, OwnerID: 1, ParentJobID: caller2.ID,
 		JobID: "inner", Name: "inner", Status: actions_model.StatusRunning, IsReusableCaller: true, IsExpanded: true,
-		WorkflowPayload: []byte("jobs: {inner: {uses: ./.gitea/workflows/leaf.yml}}"),
+		WorkflowPayload: []byte("jobs: {inner: {uses: ./.branchspire/workflows/leaf.yml}}"),
 	}
 	assert.NoError(t, db.Insert(ctx, inner))
 	assert.NoError(t, db.Insert(ctx, &actions_model.ActionRunJob{

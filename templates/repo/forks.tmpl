@@ -5,7 +5,9 @@
 		<h2 class="ui dividing header">
 			{{ctx.Locale.Tr "repo.forks"}}
 		</h2>
-		{{template "shared/repo/list" .}}
+		<div class="repo-cards">
+			{{template "shared/repo/list" .}}
+		</div>
 		{{template "base/paginate" .}}
 	</div>
 </div>

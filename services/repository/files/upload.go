@@ -10,9 +10,9 @@ import (
 	"path"
 	"sync"
 
-	repo_model "gitea.dev/models/repo"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/log"
+	repo_model "branchspire/models/repo"
+	user_model "branchspire/models/user"
+	"branchspire/modules/log"
 )
 
 // UploadRepoFileOptions contains the uploaded repository file options

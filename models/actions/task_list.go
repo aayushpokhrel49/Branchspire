@@ -6,9 +6,9 @@ package actions
 import (
 	"context"
 
-	"gitea.dev/models/db"
-	"gitea.dev/modules/container"
-	"gitea.dev/modules/timeutil"
+	"branchspire/models/db"
+	"branchspire/modules/container"
+	"branchspire/modules/timeutil"
 
 	"xorm.io/builder"
 )

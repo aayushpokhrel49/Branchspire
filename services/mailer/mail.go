@@ -16,15 +16,15 @@ import (
 	"regexp"
 	"strings"
 
-	repo_model "gitea.dev/models/repo"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/httplib"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/storage"
-	"gitea.dev/modules/templates"
-	"gitea.dev/modules/typesniffer"
-	sender_service "gitea.dev/services/mailer/sender"
+	repo_model "branchspire/models/repo"
+	user_model "branchspire/models/user"
+	"branchspire/modules/httplib"
+	"branchspire/modules/log"
+	"branchspire/modules/setting"
+	"branchspire/modules/storage"
+	"branchspire/modules/templates"
+	"branchspire/modules/typesniffer"
+	sender_service "branchspire/services/mailer/sender"
 
 	"golang.org/x/net/html"
 )
@@ -43,7 +43,7 @@ func SendTestMail(email string) error {
 		// No mail service configured
 		return nil
 	}
-	return sender_service.Send(sender, sender_service.NewMessage(email, "Gitea Test Email!", "Gitea Test Email!"))
+	return sender_service.Send(sender, sender_service.NewMessage(email, "BranchSpire Test Email!", "BranchSpire Test Email!"))
 }
 
 func sanitizeSubject(subject string) string {
@@ -185,7 +185,7 @@ func generateMetadataHeaders(repo *repo_model.Repository) map[string]string {
 		// https://datatracker.ietf.org/doc/html/rfc2369
 		"List-Archive": fmt.Sprintf("<%s>", repo.HTMLURL()),
 
-		"X-Mailer": "Gitea",
+		"X-Mailer": "BranchSpire",
 
 		"X-Gitea-Repository":      repo.Name,
 		"X-Gitea-Repository-Path": repo.FullName(),

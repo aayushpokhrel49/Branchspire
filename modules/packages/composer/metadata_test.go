@@ -12,7 +12,7 @@ import (
 	"strings"
 	"testing"
 
-	"gitea.dev/modules/json"
+	"branchspire/modules/json"
 
 	"github.com/dsnet/compress/bzip2"
 	"github.com/stretchr/testify/assert"
@@ -46,7 +46,7 @@ func buildComposerContent(version string) string {
     ],
     "homepage": "` + homepage + `",
     "autoload": {
-        "psr-4": {"Gitea\\ComposerPackage\\": "src/"}
+        "psr-4": {"BranchSpire\\ComposerPackage\\": "src/"}
     },
     "require": {
         "php": ">=7.2 || ^8.0"

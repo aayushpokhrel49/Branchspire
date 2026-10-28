@@ -9,12 +9,12 @@ import (
 	"time"
 	"uuid"
 
-	"gitea.dev/models/db"
-	"gitea.dev/models/unittest"
-	"gitea.dev/modules/json"
-	"gitea.dev/modules/optional"
-	"gitea.dev/modules/timeutil"
-	webhook_module "gitea.dev/modules/webhook"
+	"branchspire/models/db"
+	"branchspire/models/unittest"
+	"branchspire/modules/json"
+	"branchspire/modules/optional"
+	"branchspire/modules/timeutil"
+	webhook_module "branchspire/modules/webhook"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

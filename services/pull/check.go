@@ -11,26 +11,26 @@ import (
 	"strings"
 	"time"
 
-	"gitea.dev/models/db"
-	git_model "gitea.dev/models/git"
-	issues_model "gitea.dev/models/issues"
-	access_model "gitea.dev/models/perm/access"
-	"gitea.dev/models/pull"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/models/unit"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/container"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/git/gitcmd"
-	"gitea.dev/modules/globallock"
-	"gitea.dev/modules/graceful"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/process"
-	"gitea.dev/modules/queue"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/timeutil"
-	asymkey_service "gitea.dev/services/asymkey"
-	"gitea.dev/services/automergequeue"
+	"branchspire/models/db"
+	git_model "branchspire/models/git"
+	issues_model "branchspire/models/issues"
+	access_model "branchspire/models/perm/access"
+	"branchspire/models/pull"
+	repo_model "branchspire/models/repo"
+	"branchspire/models/unit"
+	user_model "branchspire/models/user"
+	"branchspire/modules/container"
+	"branchspire/modules/git"
+	"branchspire/modules/git/gitcmd"
+	"branchspire/modules/globallock"
+	"branchspire/modules/graceful"
+	"branchspire/modules/log"
+	"branchspire/modules/process"
+	"branchspire/modules/queue"
+	"branchspire/modules/setting"
+	"branchspire/modules/timeutil"
+	asymkey_service "branchspire/services/asymkey"
+	"branchspire/services/automergequeue"
 )
 
 // prPatchCheckerQueue represents a queue to handle update pull request tests
@@ -133,10 +133,10 @@ const (
 
 // CheckPullMergeable check if the pull mergeable based on all conditions (branch protection, merge options, ...)
 // mergeStyle tailors the "require signed commits" prechecks:
-//   - fast-forward-only: no Gitea commit is produced, so Gitea's merge-signing check is skipped;
+//   - fast-forward-only: no BranchSpire commit is produced, so BranchSpire's merge-signing check is skipped;
 //     only the user's head commits are verified.
-//   - merge: both the head commits must be verified and Gitea must sign the merge commit.
-//   - rebase, rebase-merge, squash: Gitea rewrites the commits and signs each, so only Gitea's
+//   - merge: both the head commits must be verified and BranchSpire must sign the merge commit.
+//   - rebase, rebase-merge, squash: BranchSpire rewrites the commits and signs each, so only BranchSpire's
 //     signing ability is checked.
 func CheckPullMergeable(stdCtx context.Context, doer *user_model.User, perm *access_model.Permission, pr *issues_model.PullRequest, mergeCheckType MergeCheckType, mergeStyle repo_model.MergeStyle, forceMerge bool) error {
 	return db.WithTx(stdCtx, func(ctx context.Context) error {
@@ -230,9 +230,9 @@ func CheckPullMergeable(stdCtx context.Context, doer *user_model.User, perm *acc
 //   - fast-forward-only and merge keep the user's commits on the base branch, so
 //     those commits must all be verified, or the pre-receive hook will reject the
 //     push with a generic error.
-//   - fast-forward-only creates no Gitea commit, so Gitea's signing key is not used.
+//   - fast-forward-only creates no BranchSpire commit, so BranchSpire's signing key is not used.
 //   - merge, rebase, rebase-merge and squash produce a Gitea-signed commit, so
-//     Gitea must be configured to sign it.
+//     BranchSpire must be configured to sign it.
 func checkSigningRequirements(ctx context.Context, pr *issues_model.PullRequest, doer *user_model.User, mergeStyle repo_model.MergeStyle) error {
 	pb, err := git_model.GetFirstMatchProtectedBranchRule(ctx, pr.BaseRepoID, pr.BaseBranch)
 	if err != nil {

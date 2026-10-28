@@ -6,8 +6,8 @@ package issue
 import (
 	"context"
 
-	issues_model "gitea.dev/models/issues"
-	user_model "gitea.dev/models/user"
+	issues_model "branchspire/models/issues"
+	user_model "branchspire/models/user"
 )
 
 // CreateIssueReaction creates a reaction on an issue.

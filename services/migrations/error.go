@@ -8,7 +8,7 @@ import (
 	"errors"
 	"net/http"
 
-	"gitea.dev/modules/git/gitcmd"
+	"branchspire/modules/git/gitcmd"
 
 	"github.com/google/go-github/v92/github"
 )

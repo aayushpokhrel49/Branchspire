@@ -7,9 +7,9 @@ import (
 	"context"
 	"fmt"
 
-	"gitea.dev/modelmigration/base"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/timeutil"
+	"branchspire/modelmigration/base"
+	"branchspire/modules/setting"
+	"branchspire/modules/timeutil"
 )
 
 func RenameCredentialIDBytes(ctx context.Context, x base.EngineMigration) error {

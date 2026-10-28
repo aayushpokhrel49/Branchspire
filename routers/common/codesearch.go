@@ -4,10 +4,10 @@
 package common
 
 import (
-	"gitea.dev/modules/indexer"
-	code_indexer "gitea.dev/modules/indexer/code"
-	"gitea.dev/modules/setting"
-	"gitea.dev/services/context"
+	"branchspire/modules/indexer"
+	code_indexer "branchspire/modules/indexer/code"
+	"branchspire/modules/setting"
+	"branchspire/services/context"
 )
 
 func PrepareCodeSearch(ctx *context.Context) (ret struct {

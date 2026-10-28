@@ -25,11 +25,11 @@ func Test_getLicense(t *testing.T) {
 			name: "regular",
 			args: args{
 				name:   "MIT",
-				values: &LicenseValues{Owner: "Gitea", Year: "2023"},
+				values: &LicenseValues{Owner: "BranchSpire", Year: "2023"},
 			},
 			want: `MIT License
 
-Copyright (c) 2023 Gitea
+Copyright (c) 2023 BranchSpire
 
 Permission is hereby granted`,
 			wantErr: assert.NoError,
@@ -68,7 +68,7 @@ func Test_fillLicensePlaceholder(t *testing.T) {
 			name: "owner",
 			args: args{
 				name:   "regular",
-				values: &LicenseValues{Year: "2023", Owner: "Gitea", Email: "teabot@gitea.io", Repo: "gitea"},
+				values: &LicenseValues{Year: "2023", Owner: "BranchSpire", Email: "teabot@gitea.io", Repo: "gitea"},
 				origin: `
 <name of author>
 <owner>
@@ -83,23 +83,23 @@ func Test_fillLicensePlaceholder(t *testing.T) {
 `,
 			},
 			want: `
-Gitea
-Gitea
-Gitea
-Gitea
-Gitea
-Gitea
-Gitea
-Gitea
-Gitea
-Gitea
+BranchSpire
+BranchSpire
+BranchSpire
+BranchSpire
+BranchSpire
+BranchSpire
+BranchSpire
+BranchSpire
+BranchSpire
+BranchSpire
 `,
 		},
 		{
 			name: "email",
 			args: args{
 				name:   "regular",
-				values: &LicenseValues{Year: "2023", Owner: "Gitea", Email: "teabot@gitea.io", Repo: "gitea"},
+				values: &LicenseValues{Year: "2023", Owner: "BranchSpire", Email: "teabot@gitea.io", Repo: "gitea"},
 				origin: `
 [EMAIL]
 `,
@@ -112,7 +112,7 @@ teabot@gitea.io
 			name: "repo",
 			args: args{
 				name:   "regular",
-				values: &LicenseValues{Year: "2023", Owner: "Gitea", Email: "teabot@gitea.io", Repo: "gitea"},
+				values: &LicenseValues{Year: "2023", Owner: "BranchSpire", Email: "teabot@gitea.io", Repo: "gitea"},
 				origin: `
 <program>
 <one line to give the program's name and a brief idea of what it does.>
@@ -127,7 +127,7 @@ gitea
 			name: "year",
 			args: args{
 				name:   "regular",
-				values: &LicenseValues{Year: "2023", Owner: "Gitea", Email: "teabot@gitea.io", Repo: "gitea"},
+				values: &LicenseValues{Year: "2023", Owner: "BranchSpire", Email: "teabot@gitea.io", Repo: "gitea"},
 				origin: `
 <year>
 [YEAR]
@@ -150,7 +150,7 @@ gitea
 			name: "0BSD",
 			args: args{
 				name:   "0BSD",
-				values: &LicenseValues{Year: "2023", Owner: "Gitea", Email: "teabot@gitea.io", Repo: "gitea"},
+				values: &LicenseValues{Year: "2023", Owner: "BranchSpire", Email: "teabot@gitea.io", Repo: "gitea"},
 				origin: `
 Copyright (C) YEAR by AUTHOR EMAIL
 
@@ -160,7 +160,7 @@ Copyright (C) YEAR by AUTHOR EMAIL
 `,
 			},
 			want: `
-Copyright (C) 2023 by Gitea teabot@gitea.io
+Copyright (C) 2023 by BranchSpire teabot@gitea.io
 
 ...
 

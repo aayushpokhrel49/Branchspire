@@ -7,10 +7,10 @@ import (
 	"net/http"
 	"testing"
 
-	auth_model "gitea.dev/models/auth"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/tests"
+	auth_model "branchspire/models/auth"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
+	"branchspire/tests"
 
 	"github.com/stretchr/testify/assert"
 )

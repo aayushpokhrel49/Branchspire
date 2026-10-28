@@ -52,7 +52,7 @@ When packages from different layers share a name, use a snake_case import alias 
 disambiguate:
 
 ```go
-import user_service "gitea.dev/services/user"
+import user_service "branchspire/services/user"
 ```
 
 ### Database transactions

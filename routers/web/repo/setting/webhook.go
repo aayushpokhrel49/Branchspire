@@ -12,25 +12,25 @@ import (
 	"path"
 	"strings"
 
-	"gitea.dev/models/db"
-	"gitea.dev/models/perm"
-	access_model "gitea.dev/models/perm/access"
-	repo_model "gitea.dev/models/repo"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/models/webhook"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/json"
-	"gitea.dev/modules/setting"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/modules/templates"
-	"gitea.dev/modules/util"
-	"gitea.dev/modules/web"
-	webhook_module "gitea.dev/modules/webhook"
-	"gitea.dev/services/audit"
-	"gitea.dev/services/context"
-	"gitea.dev/services/convert"
-	"gitea.dev/services/forms"
-	webhook_service "gitea.dev/services/webhook"
+	"branchspire/models/db"
+	"branchspire/models/perm"
+	access_model "branchspire/models/perm/access"
+	repo_model "branchspire/models/repo"
+	user_model "branchspire/models/user"
+	"branchspire/models/webhook"
+	"branchspire/modules/git"
+	"branchspire/modules/json"
+	"branchspire/modules/setting"
+	api "branchspire/modules/structs"
+	"branchspire/modules/templates"
+	"branchspire/modules/util"
+	"branchspire/modules/web"
+	webhook_module "branchspire/modules/webhook"
+	"branchspire/services/audit"
+	"branchspire/services/context"
+	"branchspire/services/convert"
+	"branchspire/services/forms"
+	webhook_service "branchspire/services/webhook"
 )
 
 const (
@@ -162,7 +162,7 @@ func WebhooksNew(ctx *context.Context) {
 	}
 	if hookType == "discord" {
 		ctx.Data["DiscordHook"] = map[string]any{
-			"Username": "Gitea",
+			"Username": "BranchSpire",
 		}
 	}
 	ctx.Data["BaseLink"] = orCtx.LinkNew
@@ -334,12 +334,12 @@ func editWebhook(ctx *context.Context, params webhookParams) {
 	ctx.Redirect(fmt.Sprintf("%s/%d", orCtx.Link, w.ID))
 }
 
-// GiteaHooksNewPost response for creating Gitea webhook
+// GiteaHooksNewPost response for creating BranchSpire webhook
 func GiteaHooksNewPost(ctx *context.Context) {
 	createWebhook(ctx, giteaHookParams(ctx))
 }
 
-// GiteaHooksEditPost response for editing Gitea webhook
+// GiteaHooksEditPost response for editing BranchSpire webhook
 func GiteaHooksEditPost(ctx *context.Context) {
 	editWebhook(ctx, giteaHookParams(ctx))
 }

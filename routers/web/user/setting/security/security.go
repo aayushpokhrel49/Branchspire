@@ -8,16 +8,16 @@ import (
 	"net/http"
 	"sort"
 
-	audit_model "gitea.dev/models/audit"
-	auth_model "gitea.dev/models/auth"
-	"gitea.dev/models/db"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/optional"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/templates"
-	"gitea.dev/services/audit"
-	"gitea.dev/services/auth/source/oauth2"
-	"gitea.dev/services/context"
+	audit_model "branchspire/models/audit"
+	auth_model "branchspire/models/auth"
+	"branchspire/models/db"
+	user_model "branchspire/models/user"
+	"branchspire/modules/optional"
+	"branchspire/modules/setting"
+	"branchspire/modules/templates"
+	"branchspire/services/audit"
+	"branchspire/services/auth/source/oauth2"
+	"branchspire/services/context"
 )
 
 const (

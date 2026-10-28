@@ -8,8 +8,8 @@ package private
 import (
 	"net/http"
 
-	"gitea.dev/modules/graceful"
-	"gitea.dev/services/context"
+	"branchspire/modules/graceful"
+	"branchspire/services/context"
 )
 
 // Restart is not implemented for Windows based servers as they can't fork

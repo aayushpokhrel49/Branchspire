@@ -7,14 +7,14 @@ import (
 	"context"
 	"fmt"
 
-	actions_model "gitea.dev/models/actions"
-	activities_model "gitea.dev/models/activities"
-	issues_model "gitea.dev/models/issues"
-	repo_model "gitea.dev/models/repo"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/log"
-	issue_service "gitea.dev/services/issue"
-	notify_service "gitea.dev/services/notify"
+	actions_model "branchspire/models/actions"
+	activities_model "branchspire/models/activities"
+	issues_model "branchspire/models/issues"
+	repo_model "branchspire/models/repo"
+	user_model "branchspire/models/user"
+	"branchspire/modules/log"
+	issue_service "branchspire/services/issue"
+	notify_service "branchspire/services/notify"
 )
 
 type mailNotifier struct {

@@ -7,12 +7,12 @@ import (
 	"errors"
 	"net/http"
 
-	issues_model "gitea.dev/models/issues"
-	repo_model "gitea.dev/models/repo"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/util"
-	shared_mention "gitea.dev/routers/web/shared/mention"
-	"gitea.dev/services/context"
+	issues_model "branchspire/models/issues"
+	repo_model "branchspire/models/repo"
+	user_model "branchspire/models/user"
+	"branchspire/modules/util"
+	shared_mention "branchspire/routers/web/shared/mention"
+	"branchspire/services/context"
 )
 
 // GetMentionsInRepo returns JSON data for mention autocomplete (assignees, participants, mentionable teams).

@@ -9,14 +9,14 @@ import (
 	"net/http"
 	"time"
 
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/graceful"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/private"
-	"gitea.dev/modules/process"
-	"gitea.dev/modules/reqctx"
-	"gitea.dev/modules/web"
-	web_types "gitea.dev/modules/web/types"
+	user_model "branchspire/models/user"
+	"branchspire/modules/graceful"
+	"branchspire/modules/log"
+	"branchspire/modules/private"
+	"branchspire/modules/process"
+	"branchspire/modules/reqctx"
+	"branchspire/modules/web"
+	web_types "branchspire/modules/web/types"
 )
 
 // PrivateContext represents a context for private routes

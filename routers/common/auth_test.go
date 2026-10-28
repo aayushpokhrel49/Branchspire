@@ -6,10 +6,10 @@ package common
 import (
 	"testing"
 
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/session"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/test"
+	user_model "branchspire/models/user"
+	"branchspire/modules/session"
+	"branchspire/modules/setting"
+	"branchspire/modules/test"
 
 	"github.com/stretchr/testify/assert"
 )

@@ -42,7 +42,7 @@ func TestIsVendor(t *testing.T) {
 		{".gitmodules", false},
 		{"src/.gitignore", false},
 		{".github/workflows/ci.yml", false},
-		{".gitea/workflows/ci.yml", false},
+		{".branchspire/workflows/ci.yml", false},
 	}
 	for _, tt := range tests {
 		t.Run(tt.path, func(t *testing.T) {

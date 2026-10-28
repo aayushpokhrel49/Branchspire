@@ -13,15 +13,15 @@ import (
 	"strings"
 	"time"
 
-	packages_model "gitea.dev/models/packages"
-	"gitea.dev/modules/json"
-	packages_module "gitea.dev/modules/packages"
-	pub_module "gitea.dev/modules/packages/pub"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/util"
-	"gitea.dev/routers/api/packages/helper"
-	"gitea.dev/services/context"
-	packages_service "gitea.dev/services/packages"
+	packages_model "branchspire/models/packages"
+	"branchspire/modules/json"
+	packages_module "branchspire/modules/packages"
+	pub_module "branchspire/modules/packages/pub"
+	"branchspire/modules/setting"
+	"branchspire/modules/util"
+	"branchspire/routers/api/packages/helper"
+	"branchspire/services/context"
+	packages_service "branchspire/services/packages"
 )
 
 func jsonResponse(ctx *context.Context, status int, obj any) {

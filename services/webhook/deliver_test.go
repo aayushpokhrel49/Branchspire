@@ -11,10 +11,10 @@ import (
 	"testing"
 	"time"
 
-	"gitea.dev/models/unittest"
-	webhook_model "gitea.dev/models/webhook"
-	"gitea.dev/modules/util"
-	webhook_module "gitea.dev/modules/webhook"
+	"branchspire/models/unittest"
+	webhook_model "branchspire/models/webhook"
+	"branchspire/modules/util"
+	webhook_module "branchspire/modules/webhook"
 
 	"github.com/stretchr/testify/assert"
 )

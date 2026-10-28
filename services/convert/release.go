@@ -6,9 +6,9 @@ package convert
 import (
 	"context"
 
-	repo_model "gitea.dev/models/repo"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/modules/util"
+	repo_model "branchspire/models/repo"
+	api "branchspire/modules/structs"
+	"branchspire/modules/util"
 )
 
 // ToAPIRelease convert a repo_model.Release to api.Release

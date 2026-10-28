@@ -13,9 +13,9 @@ import (
 	"sort"
 	"strings"
 
-	"gitea.dev/modules/container"
-	"gitea.dev/modules/git/gitcmd"
-	"gitea.dev/modules/log"
+	"branchspire/modules/container"
+	"branchspire/modules/git/gitcmd"
+	"branchspire/modules/log"
 )
 
 // logNameStatusRepo opens git log --raw in the provided repo and returns a parser

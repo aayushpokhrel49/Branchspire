@@ -9,15 +9,15 @@ import (
 	"net/http"
 	"net/url"
 
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/setting"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/modules/web"
-	"gitea.dev/services/context"
-	"gitea.dev/services/convert"
-	notify_service "gitea.dev/services/notify"
-	wiki_service "gitea.dev/services/wiki"
+	repo_model "branchspire/models/repo"
+	"branchspire/modules/git"
+	"branchspire/modules/setting"
+	api "branchspire/modules/structs"
+	"branchspire/modules/web"
+	"branchspire/services/context"
+	"branchspire/services/convert"
+	notify_service "branchspire/services/notify"
+	wiki_service "branchspire/services/wiki"
 )
 
 // NewWikiPage response for wiki create request

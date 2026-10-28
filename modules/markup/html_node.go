@@ -6,8 +6,8 @@ package markup
 import (
 	"strings"
 
-	"gitea.dev/modules/htmlutil"
-	"gitea.dev/modules/markup/common"
+	"branchspire/modules/htmlutil"
+	"branchspire/modules/markup/common"
 
 	"golang.org/x/net/html"
 )

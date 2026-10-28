@@ -24,7 +24,7 @@ import (
 	"sort"
 	"strings"
 
-	"gitea.dev/build/openapi3gen"
+	"branchspire/build/openapi3gen"
 )
 
 const (

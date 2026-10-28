@@ -6,11 +6,11 @@ package explore
 import (
 	"net/http"
 
-	"gitea.dev/models/db"
-	repo_model "gitea.dev/models/repo"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/services/context"
-	"gitea.dev/services/convert"
+	"branchspire/models/db"
+	repo_model "branchspire/models/repo"
+	api "branchspire/modules/structs"
+	"branchspire/services/context"
+	"branchspire/services/convert"
 )
 
 // TopicSearch search for creating topic

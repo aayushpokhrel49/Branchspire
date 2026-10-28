@@ -8,9 +8,9 @@ import (
 	"reflect"
 	"sync"
 
-	"gitea.dev/modules/json"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/util"
+	"branchspire/modules/json"
+	"branchspire/modules/log"
+	"branchspire/modules/util"
 )
 
 type CfgSecKey struct {

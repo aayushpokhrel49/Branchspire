@@ -8,9 +8,9 @@ import (
 	"net/http"
 	"slices"
 
-	auth_model "gitea.dev/models/auth"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/models/unit"
+	auth_model "branchspire/models/auth"
+	repo_model "branchspire/models/repo"
+	"branchspire/models/unit"
 )
 
 // isOwnerHidden reports whether repo's owner is not publicly visible (a limited or private owner), so

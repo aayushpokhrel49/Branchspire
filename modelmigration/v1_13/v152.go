@@ -6,7 +6,7 @@ package v1_13
 import (
 	"context"
 
-	"gitea.dev/modelmigration/base"
+	"branchspire/modelmigration/base"
 )
 
 func AddTrustModelToRepository(_ context.Context, x base.EngineMigration) error {

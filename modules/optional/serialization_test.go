@@ -7,8 +7,8 @@ import (
 	std_json "encoding/json" //nolint:depguard // for testing purpose
 	"testing"
 
-	"gitea.dev/modules/json"
-	"gitea.dev/modules/optional"
+	"branchspire/modules/json"
+	"branchspire/modules/optional"
 
 	"github.com/stretchr/testify/assert"
 	"go.yaml.in/yaml/v4"
@@ -20,7 +20,7 @@ type testSerializationStruct struct {
 	OptBool      optional.Option[bool] `json:"optional_bool,omitempty" yaml:"optional_bool,omitempty"`
 
 	// It causes an undefined behavior: should the "omitempty" tag only omit "null", or also the empty string?
-	// The behavior is inconsistent between json and v2 packages, and there is no such use case in Gitea.
+	// The behavior is inconsistent between json and v2 packages, and there is no such use case in BranchSpire.
 	// If anyone really needs it, they can use json.MarshalKeepOptionalEmpty to revert the v1 behavior
 	OptString optional.Option[string] `json:"optional_string,omitempty" yaml:"optional_string,omitempty"`
 

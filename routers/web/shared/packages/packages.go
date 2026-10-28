@@ -8,16 +8,16 @@ import (
 	"net/http"
 	"time"
 
-	packages_model "gitea.dev/models/packages"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/optional"
-	"gitea.dev/modules/templates"
-	"gitea.dev/modules/web"
-	"gitea.dev/services/context"
-	"gitea.dev/services/forms"
-	cargo_service "gitea.dev/services/packages/cargo"
-	container_service "gitea.dev/services/packages/container"
+	packages_model "branchspire/models/packages"
+	user_model "branchspire/models/user"
+	"branchspire/modules/log"
+	"branchspire/modules/optional"
+	"branchspire/modules/templates"
+	"branchspire/modules/web"
+	"branchspire/services/context"
+	"branchspire/services/forms"
+	cargo_service "branchspire/services/packages/cargo"
+	container_service "branchspire/services/packages/container"
 )
 
 func SetPackagesContext(ctx *context.Context, owner *user_model.User) {

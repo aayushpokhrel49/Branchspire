@@ -8,17 +8,18 @@ import (
 	"net/http"
 	"strconv"
 
-	"gitea.dev/models/db"
-	repo_model "gitea.dev/models/repo"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/optional"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/sitemap"
-	"gitea.dev/modules/structs"
-	"gitea.dev/modules/templates"
-	"gitea.dev/routers/web/user"
-	"gitea.dev/services/context"
+	"branchspire/models/db"
+	"branchspire/models/organization"
+	repo_model "branchspire/models/repo"
+	user_model "branchspire/models/user"
+	"branchspire/modules/log"
+	"branchspire/modules/optional"
+	"branchspire/modules/setting"
+	"branchspire/modules/sitemap"
+	"branchspire/modules/structs"
+	"branchspire/modules/templates"
+	"branchspire/routers/web/user"
+	"branchspire/services/context"
 )
 
 const tplHome templates.TplName = "home"
@@ -41,7 +42,42 @@ func Home(ctx *context.Context) {
 
 	ctx.Data["PageIsHome"] = true
 	ctx.Data["IsRepoIndexerEnabled"] = setting.Indexer.RepoIndexerEnabled
+	ctx.Data["AppVer"] = setting.AppVer
+	ctx.Data["NumUsers"] = user_model.CountUsers(ctx, &user_model.CountUserFilter{IsActive: optional.Some(true)})
+	numRepos, _ := repo_model.CountRepositories(ctx, repo_model.CountRepositoryOptions{})
+	ctx.Data["NumRepos"] = numRepos
+	numOrgs, _ := db.Count[organization.Organization](ctx, organization.FindOrgOptions{IncludeVisibility: structs.VisibleTypePrivate})
+	ctx.Data["NumOrgs"] = numOrgs
 	ctx.HTML(http.StatusOK, tplHome)
+}
+
+func About(ctx *context.Context) {
+	ctx.Data["PageIsAbout"] = true
+	ctx.Data["AppVer"] = setting.AppVer
+	ctx.Data["NumUsers"] = user_model.CountUsers(ctx, &user_model.CountUserFilter{IsActive: optional.Some(true)})
+	numRepos, _ := repo_model.CountRepositories(ctx, repo_model.CountRepositoryOptions{})
+	ctx.Data["NumRepos"] = numRepos
+	numOrgs, _ := db.Count[organization.Organization](ctx, organization.FindOrgOptions{IncludeVisibility: structs.VisibleTypePrivate})
+	ctx.Data["NumOrgs"] = numOrgs
+	ctx.HTML(http.StatusOK, "about")
+}
+
+// Legal renders the terms and privacy pages for this instance.
+func Legal(ctx *context.Context) {
+	page := ctx.PathParam("page")
+	switch page {
+	case "terms", "privacy":
+		ctx.Data["PageIsLegal"] = page
+	default:
+		ctx.NotFound(nil)
+		return
+	}
+	ctx.HTML(http.StatusOK, "legal")
+}
+
+// Docs renders the BranchSpire documentation page for this instance.
+func Docs(ctx *context.Context) {
+	ctx.HTML(http.StatusOK, "docs")
 }
 
 // HomeSitemap renders the main sitemap

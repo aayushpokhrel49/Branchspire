@@ -6,7 +6,7 @@ package v1_25
 import (
 	"context"
 
-	"gitea.dev/modelmigration/base"
+	"branchspire/modelmigration/base"
 
 	"xorm.io/xorm/schemas"
 )

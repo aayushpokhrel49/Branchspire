@@ -6,12 +6,12 @@ package misc
 import (
 	"io"
 
-	"gitea.dev/modules/setting"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/modules/util"
-	"gitea.dev/modules/web"
-	"gitea.dev/routers/common"
-	"gitea.dev/services/context"
+	"branchspire/modules/setting"
+	api "branchspire/modules/structs"
+	"branchspire/modules/util"
+	"branchspire/modules/web"
+	"branchspire/routers/common"
+	"branchspire/services/context"
 )
 
 // Markup render markup document to HTML

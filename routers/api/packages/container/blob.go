@@ -10,14 +10,14 @@ import (
 	"fmt"
 	"strings"
 
-	"gitea.dev/models/db"
-	packages_model "gitea.dev/models/packages"
-	container_model "gitea.dev/models/packages/container"
-	"gitea.dev/modules/globallock"
-	"gitea.dev/modules/log"
-	packages_module "gitea.dev/modules/packages"
-	container_module "gitea.dev/modules/packages/container"
-	packages_service "gitea.dev/services/packages"
+	"branchspire/models/db"
+	packages_model "branchspire/models/packages"
+	container_model "branchspire/models/packages/container"
+	"branchspire/modules/globallock"
+	"branchspire/modules/log"
+	packages_module "branchspire/modules/packages"
+	container_module "branchspire/modules/packages/container"
+	packages_service "branchspire/services/packages"
 
 	"github.com/opencontainers/go-digest"
 )

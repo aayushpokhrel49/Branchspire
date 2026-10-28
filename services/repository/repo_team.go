@@ -8,14 +8,14 @@ import (
 	"errors"
 	"fmt"
 
-	audit_model "gitea.dev/models/audit"
-	"gitea.dev/models/db"
-	issues_model "gitea.dev/models/issues"
-	"gitea.dev/models/organization"
-	access_model "gitea.dev/models/perm/access"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/modules/setting"
-	"gitea.dev/services/audit"
+	audit_model "branchspire/models/audit"
+	"branchspire/models/db"
+	issues_model "branchspire/models/issues"
+	"branchspire/models/organization"
+	access_model "branchspire/models/perm/access"
+	repo_model "branchspire/models/repo"
+	"branchspire/modules/setting"
+	"branchspire/services/audit"
 )
 
 // TeamAddRepository adds new repository to team of organization.

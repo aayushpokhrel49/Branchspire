@@ -13,10 +13,10 @@ import (
 	"time"
 
 	runnerv1 "gitea.dev/actionslib/runner/v1"
-	"gitea.dev/models/dbfs"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/storage"
-	"gitea.dev/modules/zstd"
+	"branchspire/models/dbfs"
+	"branchspire/modules/log"
+	"branchspire/modules/storage"
+	"branchspire/modules/zstd"
 
 	"google.golang.org/protobuf/types/known/timestamppb"
 )

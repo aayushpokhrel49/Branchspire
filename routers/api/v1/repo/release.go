@@ -6,17 +6,17 @@ package repo
 import (
 	"net/http"
 
-	auth_model "gitea.dev/models/auth"
-	"gitea.dev/models/db"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/models/unit"
-	"gitea.dev/modules/git"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/modules/web"
-	"gitea.dev/routers/api/v1/utils"
-	"gitea.dev/services/context"
-	"gitea.dev/services/convert"
-	release_service "gitea.dev/services/release"
+	auth_model "branchspire/models/auth"
+	"branchspire/models/db"
+	repo_model "branchspire/models/repo"
+	"branchspire/models/unit"
+	"branchspire/modules/git"
+	api "branchspire/modules/structs"
+	"branchspire/modules/web"
+	"branchspire/routers/api/v1/utils"
+	"branchspire/services/context"
+	"branchspire/services/convert"
+	release_service "branchspire/services/release"
 )
 
 func canAccessReleaseDraft(ctx *context.APIContext) bool {

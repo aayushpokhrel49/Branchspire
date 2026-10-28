@@ -8,12 +8,12 @@ import (
 	"errors"
 	"strings"
 
-	audit_model "gitea.dev/models/audit"
-	"gitea.dev/models/db"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/util"
-	"gitea.dev/services/audit"
+	audit_model "branchspire/models/audit"
+	"branchspire/models/db"
+	user_model "branchspire/models/user"
+	"branchspire/modules/setting"
+	"branchspire/modules/util"
+	"branchspire/services/audit"
 )
 
 // ReplacePrimaryEmailAddress replaces the user's primary email address with the given email address.

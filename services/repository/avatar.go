@@ -9,11 +9,11 @@ import (
 	"io"
 	"strconv"
 
-	"gitea.dev/models/db"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/modules/avatar"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/storage"
+	"branchspire/models/db"
+	repo_model "branchspire/models/repo"
+	"branchspire/modules/avatar"
+	"branchspire/modules/log"
+	"branchspire/modules/storage"
 )
 
 // UploadAvatar saves custom avatar for repository.

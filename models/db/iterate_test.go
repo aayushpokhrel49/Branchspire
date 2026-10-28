@@ -7,9 +7,9 @@ import (
 	"context"
 	"testing"
 
-	"gitea.dev/models/db"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/models/unittest"
+	"branchspire/models/db"
+	repo_model "branchspire/models/repo"
+	"branchspire/models/unittest"
 
 	"github.com/stretchr/testify/assert"
 )

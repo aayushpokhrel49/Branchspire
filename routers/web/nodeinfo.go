@@ -6,8 +6,8 @@ package web
 import (
 	"net/http"
 
-	"gitea.dev/modules/setting"
-	"gitea.dev/services/context"
+	"branchspire/modules/setting"
+	"branchspire/services/context"
 )
 
 type nodeInfoLinks struct {

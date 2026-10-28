@@ -6,9 +6,9 @@ package secret
 import (
 	"testing"
 
-	actions_model "gitea.dev/models/actions"
-	"gitea.dev/models/db"
-	"gitea.dev/models/unittest"
+	actions_model "branchspire/models/actions"
+	"branchspire/models/db"
+	"branchspire/models/unittest"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

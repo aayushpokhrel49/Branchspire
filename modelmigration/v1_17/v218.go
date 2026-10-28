@@ -6,9 +6,9 @@ package v1_17
 import (
 	"context"
 
-	"gitea.dev/modelmigration/base"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/timeutil"
+	"branchspire/modelmigration/base"
+	"branchspire/modules/setting"
+	"branchspire/modules/timeutil"
 
 	"xorm.io/xorm/schemas"
 )

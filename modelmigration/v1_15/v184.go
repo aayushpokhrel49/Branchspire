@@ -7,8 +7,8 @@ import (
 	"context"
 	"fmt"
 
-	"gitea.dev/modelmigration/base"
-	"gitea.dev/modules/setting"
+	"branchspire/modelmigration/base"
+	"branchspire/modules/setting"
 )
 
 func RenameTaskErrorsToMessage(ctx context.Context, x base.EngineMigration) error {

@@ -10,21 +10,21 @@ import (
 	"strings"
 	"testing"
 
-	actions_model "gitea.dev/models/actions"
-	auth_model "gitea.dev/models/auth"
-	git_model "gitea.dev/models/git"
-	issues_model "gitea.dev/models/issues"
-	repo_model "gitea.dev/models/repo"
-	unit_model "gitea.dev/models/unit"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/migration"
-	api "gitea.dev/modules/structs"
-	actions_service "gitea.dev/services/actions"
-	mirror_service "gitea.dev/services/mirror"
-	repo_service "gitea.dev/services/repository"
-	files_service "gitea.dev/services/repository/files"
+	actions_model "branchspire/models/actions"
+	auth_model "branchspire/models/auth"
+	git_model "branchspire/models/git"
+	issues_model "branchspire/models/issues"
+	repo_model "branchspire/models/repo"
+	unit_model "branchspire/models/unit"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
+	"branchspire/modules/git"
+	"branchspire/modules/migration"
+	api "branchspire/modules/structs"
+	actions_service "branchspire/services/actions"
+	mirror_service "branchspire/services/mirror"
+	repo_service "branchspire/services/repository"
+	files_service "branchspire/services/repository/files"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -52,7 +52,7 @@ func testScheduleUpdatePush(t *testing.T) {
 
 func testScheduleUpdatePullMerge(t *testing.T) {
 	newBranchName := "feat1"
-	workflowTreePath := ".gitea/workflows/actions-schedule.yml"
+	workflowTreePath := ".branchspire/workflows/actions-schedule.yml"
 	workflowContent := `name: actions-schedule
 on:
   schedule:
@@ -283,7 +283,7 @@ func doTestScheduleUpdate(t *testing.T, updateTrigger scheduleUpdateTrigger) {
 		httpContext := NewAPITestContext(t, user2.Name, repo.Name, auth_model.AccessTokenScopeWriteRepository)
 		defer doAPIDeleteRepository(httpContext)(t)
 
-		wfTreePath := ".gitea/workflows/actions-schedule.yml"
+		wfTreePath := ".branchspire/workflows/actions-schedule.yml"
 		wfFileContent := `name: actions-schedule
 on:
   schedule:
@@ -328,7 +328,7 @@ func assertRunStatus(t *testing.T, run *actions_model.ActionRun, status actions_
 }
 
 func pushScheduleChange(t *testing.T, u *url.URL, repo *repo_model.Repository, newCron string) {
-	workflowTreePath := ".gitea/workflows/actions-schedule.yml"
+	workflowTreePath := ".branchspire/workflows/actions-schedule.yml"
 	workflowContent := `name: actions-schedule
 on:
   schedule:

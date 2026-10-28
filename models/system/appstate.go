@@ -6,13 +6,13 @@ package system
 import (
 	"context"
 
-	"gitea.dev/models/db"
+	"branchspire/models/db"
 
 	"xorm.io/builder"
 )
 
 // AppState represents a state record in database
-// if one day we would make Gitea run as a cluster,
+// if one day we would make BranchSpire run as a cluster,
 // we can introduce a new field `Scope` here to store different states for different nodes
 type AppState struct {
 	ID       string `xorm:"pk varchar(200)"`

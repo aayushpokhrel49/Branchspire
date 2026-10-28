@@ -6,10 +6,10 @@ package gituser
 import (
 	"context"
 
-	"gitea.dev/models/user"
-	"gitea.dev/modules/container"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/log"
+	"branchspire/models/user"
+	"branchspire/modules/container"
+	"branchspire/modules/git"
+	"branchspire/modules/log"
 )
 
 // AvatarStackData is the view-model for the AvatarStack render helpers. Participants[0] is
@@ -41,7 +41,7 @@ func BuildAvatarStackData(ctx context.Context, allParticipants []*git.CommitIden
 			giteaUser = emailUserMap.GetByEmail(p.Email)
 		}
 		if giteaUser != nil {
-			// identities without a Gitea account can only be compared by their git identity
+			// identities without a BranchSpire account can only be compared by their git identity
 			if !uniqueUserIDs.Add(giteaUser.ID) {
 				continue
 			}

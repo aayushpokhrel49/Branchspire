@@ -13,8 +13,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"gitea.dev/modules/packages"
-	"gitea.dev/modules/util"
+	"branchspire/modules/packages"
+	"branchspire/modules/util"
 )
 
 var (

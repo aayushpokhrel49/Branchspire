@@ -20,15 +20,15 @@ import (
 	"io"
 	"strings"
 
-	packages_model "gitea.dev/models/packages"
-	alpine_model "gitea.dev/models/packages/alpine"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/container"
-	"gitea.dev/modules/json"
-	packages_module "gitea.dev/modules/packages"
-	alpine_module "gitea.dev/modules/packages/alpine"
-	"gitea.dev/modules/util"
-	packages_service "gitea.dev/services/packages"
+	packages_model "branchspire/models/packages"
+	alpine_model "branchspire/models/packages/alpine"
+	user_model "branchspire/models/user"
+	"branchspire/modules/container"
+	"branchspire/modules/json"
+	packages_module "branchspire/modules/packages"
+	alpine_module "branchspire/modules/packages/alpine"
+	"branchspire/modules/util"
+	packages_service "branchspire/services/packages"
 )
 
 const (

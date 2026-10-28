@@ -11,9 +11,9 @@ import (
 	"testing"
 	"time"
 
-	issues_model "gitea.dev/models/issues"
-	"gitea.dev/models/unittest"
-	issues_service "gitea.dev/services/issue"
+	issues_model "branchspire/models/issues"
+	"branchspire/models/unittest"
+	issues_service "branchspire/services/issue"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

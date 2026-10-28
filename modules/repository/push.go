@@ -4,7 +4,7 @@
 package repository
 
 import (
-	"gitea.dev/modules/git"
+	"branchspire/modules/git"
 )
 
 // PushUpdateOptions defines the push update options

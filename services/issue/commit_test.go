@@ -6,13 +6,13 @@ package issue
 import (
 	"testing"
 
-	activities_model "gitea.dev/models/activities"
-	issues_model "gitea.dev/models/issues"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/repository"
-	"gitea.dev/modules/setting"
+	activities_model "branchspire/models/activities"
+	issues_model "branchspire/models/issues"
+	repo_model "branchspire/models/repo"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
+	"branchspire/modules/repository"
+	"branchspire/modules/setting"
 
 	"github.com/stretchr/testify/assert"
 )

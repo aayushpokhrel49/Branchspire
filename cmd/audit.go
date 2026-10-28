@@ -6,9 +6,9 @@ package cmd
 import (
 	"context"
 
-	audit_model "gitea.dev/models/audit"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/services/audit"
+	audit_model "branchspire/models/audit"
+	user_model "branchspire/models/user"
+	"branchspire/services/audit"
 )
 
 func cliAuditContext(ctx context.Context) context.Context {

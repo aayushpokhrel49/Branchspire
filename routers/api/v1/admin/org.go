@@ -7,16 +7,16 @@ package admin
 import (
 	"net/http"
 
-	audit_model "gitea.dev/models/audit"
-	"gitea.dev/models/db"
-	"gitea.dev/models/organization"
-	user_model "gitea.dev/models/user"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/modules/web"
-	"gitea.dev/routers/api/v1/utils"
-	"gitea.dev/services/audit"
-	"gitea.dev/services/context"
-	"gitea.dev/services/convert"
+	audit_model "branchspire/models/audit"
+	"branchspire/models/db"
+	"branchspire/models/organization"
+	user_model "branchspire/models/user"
+	api "branchspire/modules/structs"
+	"branchspire/modules/web"
+	"branchspire/routers/api/v1/utils"
+	"branchspire/services/audit"
+	"branchspire/services/context"
+	"branchspire/services/convert"
 )
 
 // CreateOrg api for create organization

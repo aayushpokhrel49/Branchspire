@@ -8,8 +8,8 @@ import (
 	"os"
 	"testing"
 
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/setting"
+	"branchspire/modules/git"
+	"branchspire/modules/setting"
 )
 
 func testRun(m *testing.M) error {

@@ -8,8 +8,8 @@ import (
 	"slices"
 	"testing"
 
-	"gitea.dev/modelmigration/migrationtest"
-	"gitea.dev/modules/timeutil"
+	"branchspire/modelmigration/migrationtest"
+	"branchspire/modules/timeutil"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

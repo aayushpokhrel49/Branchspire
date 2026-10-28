@@ -7,10 +7,10 @@ import (
 	"context"
 	"errors"
 
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/queue"
-	"gitea.dev/modules/setting"
+	repo_model "branchspire/models/repo"
+	"branchspire/modules/log"
+	"branchspire/modules/queue"
+	"branchspire/modules/setting"
 )
 
 // doMirrorSync causes this request to mirror itself

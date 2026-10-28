@@ -13,8 +13,8 @@ import (
 	"regexp"
 	"strings"
 
-	"gitea.dev/modules/util"
-	"gitea.dev/modules/validation"
+	"branchspire/modules/util"
+	"branchspire/modules/validation"
 
 	"github.com/hashicorp/go-version"
 )

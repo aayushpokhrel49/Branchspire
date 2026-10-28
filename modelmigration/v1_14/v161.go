@@ -6,7 +6,7 @@ package v1_14
 import (
 	"context"
 
-	"gitea.dev/modelmigration/base"
+	"branchspire/modelmigration/base"
 )
 
 func ConvertTaskTypeToString(ctx context.Context, x base.EngineMigration) error {

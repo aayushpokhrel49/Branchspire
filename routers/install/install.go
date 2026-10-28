@@ -16,26 +16,26 @@ import (
 	"strings"
 	"time"
 
-	audit_model "gitea.dev/models/audit"
-	"gitea.dev/models/db"
-	db_install "gitea.dev/models/db/install"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/generate"
-	"gitea.dev/modules/graceful"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/optional"
-	"gitea.dev/modules/session"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/templates"
-	"gitea.dev/modules/timeutil"
-	"gitea.dev/modules/web"
-	"gitea.dev/modules/web/middleware"
-	"gitea.dev/routers/common"
-	"gitea.dev/services/audit"
-	auth_service "gitea.dev/services/auth"
-	"gitea.dev/services/context"
-	"gitea.dev/services/forms"
-	"gitea.dev/services/versioned_migration"
+	audit_model "branchspire/models/audit"
+	"branchspire/models/db"
+	db_install "branchspire/models/db/install"
+	user_model "branchspire/models/user"
+	"branchspire/modules/generate"
+	"branchspire/modules/graceful"
+	"branchspire/modules/log"
+	"branchspire/modules/optional"
+	"branchspire/modules/session"
+	"branchspire/modules/setting"
+	"branchspire/modules/templates"
+	"branchspire/modules/timeutil"
+	"branchspire/modules/web"
+	"branchspire/modules/web/middleware"
+	"branchspire/routers/common"
+	"branchspire/services/audit"
+	auth_service "branchspire/services/auth"
+	"branchspire/services/context"
+	"branchspire/services/forms"
+	"branchspire/services/versioned_migration"
 )
 
 const (
@@ -152,7 +152,7 @@ func checkDatabase(ctx *context.Context, form *forms.InstallForm) bool {
 	}
 
 	if hasPostInstallationUser && dbMigrationVersion > 0 {
-		log.Error("The database is likely to have been used by Gitea before, database migration version=%d", dbMigrationVersion)
+		log.Error("The database is likely to have been used by BranchSpire before, database migration version=%d", dbMigrationVersion)
 		confirmed := form.ReinstallConfirmFirst && form.ReinstallConfirmSecond && form.ReinstallConfirmThird
 		if !confirmed {
 			ctx.Data["Err_DbInstalledBefore"] = true
@@ -160,7 +160,7 @@ func checkDatabase(ctx *context.Context, form *forms.InstallForm) bool {
 			return false
 		}
 
-		log.Info("User confirmed re-installation of Gitea into a pre-existing database")
+		log.Info("User confirmed re-installation of BranchSpire into a pre-existing database")
 	}
 
 	if hasPostInstallationUser {
@@ -180,7 +180,7 @@ func checkDatabase(ctx *context.Context, form *forms.InstallForm) bool {
 	}
 
 	if hasPostInstallationUser || dbMigrationVersion > 0 {
-		log.Info("Gitea will be installed in a database with: hasPostInstallationUser=%v, dbMigrationVersion=%v", hasPostInstallationUser, dbMigrationVersion)
+		log.Info("BranchSpire will be installed in a database with: hasPostInstallationUser=%v, dbMigrationVersion=%v", hasPostInstallationUser, dbMigrationVersion)
 	}
 
 	return true
@@ -227,7 +227,7 @@ func SubmitInstall(ctx *context.Context) {
 	setting.Database.Path = form.DbPath
 	setting.Database.LogSQL = !setting.IsProd
 
-	// Prepare AppDataPath, it is very important for Gitea
+	// Prepare AppDataPath, it is very important for BranchSpire
 	// old code replaced "\\" to "/", it's questionable whether it's worth to do so
 	form.AppDataPath = strings.ReplaceAll(form.AppDataPath, "\\", "/")
 	setting.AppDataPath = form.AppDataPath
@@ -498,7 +498,7 @@ func restartServer(ctx *context.Context) {
 
 	go func() {
 		// Sleep for a while to make sure the user's browser has loaded the post-install page and its assets (images, css, js)
-		// What if this duration is not long enough? That's impossible -- if the user can't load the simple page in time, how could they install or use Gitea in the future ....
+		// What if this duration is not long enough? That's impossible -- if the user can't load the simple page in time, how could they install or use BranchSpire in the future ....
 		time.Sleep(3 * time.Second)
 
 		if err := srv.Shutdown(graceful.GetManager().HammerContext()); err != nil {

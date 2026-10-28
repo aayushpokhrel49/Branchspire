@@ -9,10 +9,10 @@ import (
 	"os"
 	"path/filepath"
 
-	"gitea.dev/modules/consts"
-	"gitea.dev/modules/git/gitrepo"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/util"
+	"branchspire/modules/consts"
+	"branchspire/modules/git/gitrepo"
+	"branchspire/modules/setting"
+	"branchspire/modules/util"
 )
 
 func getHookTemplates() (hookNames, hookTpls, giteaHookTpls []string) {

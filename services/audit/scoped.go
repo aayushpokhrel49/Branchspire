@@ -6,10 +6,10 @@ package audit
 import (
 	"context"
 
-	audit_model "gitea.dev/models/audit"
-	repository_model "gitea.dev/models/repo"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/log"
+	audit_model "branchspire/models/audit"
+	repository_model "branchspire/models/repo"
+	user_model "branchspire/models/user"
+	"branchspire/modules/log"
 )
 
 // ScopedActions holds the action variants for a resource that can be owned by a

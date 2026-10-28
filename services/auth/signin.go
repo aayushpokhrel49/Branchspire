@@ -7,18 +7,18 @@ import (
 	"context"
 	"strings"
 
-	"gitea.dev/models/auth"
-	"gitea.dev/models/db"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/optional"
-	"gitea.dev/services/auth/source/oauth2"
-	"gitea.dev/services/auth/source/smtp"
+	"branchspire/models/auth"
+	"branchspire/models/db"
+	user_model "branchspire/models/user"
+	"branchspire/modules/log"
+	"branchspire/modules/optional"
+	"branchspire/services/auth/source/oauth2"
+	"branchspire/services/auth/source/smtp"
 
-	_ "gitea.dev/services/auth/source/db"   // register the sources (and below)
-	_ "gitea.dev/services/auth/source/ldap" // register the ldap source
-	_ "gitea.dev/services/auth/source/pam"  // register the pam source
-	_ "gitea.dev/services/auth/source/sspi" // register the sspi source
+	_ "branchspire/services/auth/source/db"   // register the sources (and below)
+	_ "branchspire/services/auth/source/ldap" // register the ldap source
+	_ "branchspire/services/auth/source/pam"  // register the pam source
+	_ "branchspire/services/auth/source/sspi" // register the sspi source
 
 	"xorm.io/builder"
 )

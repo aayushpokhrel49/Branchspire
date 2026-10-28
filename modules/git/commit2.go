@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"gitea.dev/modules/git/gitcmd"
+	"branchspire/modules/git/gitcmd"
 )
 
 // CommitsCountOptions the options when counting commits

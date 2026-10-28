@@ -4,9 +4,9 @@
 package utils
 
 import (
-	"gitea.dev/models/db"
-	"gitea.dev/services/context"
-	"gitea.dev/services/convert"
+	"branchspire/models/db"
+	"branchspire/services/context"
+	"branchspire/services/convert"
 )
 
 // GetListOptions returns list options using the page and limit parameters

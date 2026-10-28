@@ -14,8 +14,8 @@ import (
 	"regexp"
 	"strings"
 
-	"gitea.dev/modules/git/gitcmd"
-	"gitea.dev/modules/git/gitrepo"
+	"branchspire/modules/git/gitcmd"
+	"branchspire/modules/git/gitrepo"
 )
 
 type lineCountWriter struct {

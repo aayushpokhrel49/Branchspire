@@ -9,11 +9,11 @@ import (
 	"io"
 	"strconv"
 
-	"gitea.dev/modules/csv"
-	"gitea.dev/modules/markup"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/translation"
-	"gitea.dev/modules/util"
+	"branchspire/modules/csv"
+	"branchspire/modules/markup"
+	"branchspire/modules/setting"
+	"branchspire/modules/translation"
+	"branchspire/modules/util"
 )
 
 func init() {

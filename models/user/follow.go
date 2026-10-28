@@ -6,8 +6,8 @@ package user
 import (
 	"context"
 
-	"gitea.dev/models/db"
-	"gitea.dev/modules/timeutil"
+	"branchspire/models/db"
+	"branchspire/modules/timeutil"
 
 	"xorm.io/builder"
 )

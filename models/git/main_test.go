@@ -6,11 +6,11 @@ package git_test
 import (
 	"testing"
 
-	"gitea.dev/models/unittest"
+	"branchspire/models/unittest"
 
-	_ "gitea.dev/models"
-	_ "gitea.dev/models/actions"
-	_ "gitea.dev/models/activities"
+	_ "branchspire/models"
+	_ "branchspire/models/actions"
+	_ "branchspire/models/activities"
 )
 
 func TestMain(m *testing.M) {

@@ -6,16 +6,16 @@ package misc
 import (
 	"net/http"
 
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/structs"
-	"gitea.dev/services/context"
+	"branchspire/modules/setting"
+	"branchspire/modules/structs"
+	"branchspire/services/context"
 )
 
-// Version shows the version of the Gitea server
+// Version shows the version of the BranchSpire server
 func Version(ctx *context.APIContext) {
 	// swagger:operation GET /version miscellaneous getVersion
 	// ---
-	// summary: Returns the version of the Gitea application
+	// summary: Returns the version of the BranchSpire application
 	// produces:
 	// - application/json
 	// responses:

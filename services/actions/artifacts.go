@@ -7,12 +7,12 @@ import (
 	"net/http"
 	"strings"
 
-	actions_model "gitea.dev/models/actions"
-	"gitea.dev/modules/httplib"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/storage"
-	"gitea.dev/services/context"
+	actions_model "branchspire/models/actions"
+	"branchspire/modules/httplib"
+	"branchspire/modules/log"
+	"branchspire/modules/setting"
+	"branchspire/modules/storage"
+	"branchspire/services/context"
 )
 
 // IsArtifactV4 detects whether the artifact is likely from v4.

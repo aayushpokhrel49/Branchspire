@@ -8,18 +8,18 @@ import (
 	"strings"
 	"testing"
 
-	asymkey_model "gitea.dev/models/asymkey"
-	auth_model "gitea.dev/models/auth"
-	"gitea.dev/models/db"
-	issues_model "gitea.dev/models/issues"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/setting"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/modules/test"
-	"gitea.dev/modules/translation"
-	"gitea.dev/tests"
+	asymkey_model "branchspire/models/asymkey"
+	auth_model "branchspire/models/auth"
+	"branchspire/models/db"
+	issues_model "branchspire/models/issues"
+	repo_model "branchspire/models/repo"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
+	"branchspire/modules/setting"
+	api "branchspire/modules/structs"
+	"branchspire/modules/test"
+	"branchspire/modules/translation"
+	"branchspire/tests"
 
 	"github.com/stretchr/testify/assert"
 )
@@ -43,7 +43,7 @@ func testViewUser(t *testing.T) {
 
 	req = NewRequest(t, "GET", "/user2.keys")
 	resp := MakeRequest(t, req, http.StatusOK)
-	assert.Equal(t, `# Gitea isn't a key server. The keys are exported as the user uploaded and might not have been fully verified.
+	assert.Equal(t, `# BranchSpire isn't a key server. The keys are exported as the user uploaded and might not have been fully verified.
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDWVj0fQ5N8wNc0LVNA41wDLYJ89ZIbejrPfg/avyj3u/ZohAKsQclxG4Ju0VirduBFF9EOiuxoiFBRr3xRpqzpsZtnMPkWVWb+akZwBFAx8p+jKdy4QXR/SZqbVobrGwip2UjSrri1CtBxpJikojRIZfCnDaMOyd9Jp6KkujvniFzUWdLmCPxUE9zhTaPu0JsEP7MW0m6yx7ZUhHyfss+NtqmFTaDO+QlMR7L2QkDliN2Jl3Xa3PhuWnKJfWhdAq1Cw4oraKUOmIgXLkuiuxVQ6mD3AiFupkmfqdHq6h+uHHmyQqv3gU+/sD8GbGAhf6ftqhTsXjnv1Aj4R8NoDf9BS6KRkzkeun5UisSzgtfQzjOMEiJtmrep2ZQrMGahrXa+q4VKr0aKJfm+KlLfwm/JztfsBcqQWNcTURiCFqz+fgZw0Ey/de0eyMzldYTdXXNRYCKjs9bvBK+6SSXRM7AhftfQ0ZuoW5+gtinPrnmoOaSCEJbAiEiTO/BzOHgowiM=
 `, resp.Body.String())
 
@@ -61,7 +61,7 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDWVj0fQ5N8wNc0LVNA41wDLYJ89ZIbejrPfg/avyj3
 	})
 	req = NewRequest(t, "GET", "/user2.keys")
 	resp = MakeRequest(t, req, http.StatusOK)
-	assert.Equal(t, `# Gitea isn't a key server. The keys are exported as the user uploaded and might not have been fully verified.
+	assert.Equal(t, `# BranchSpire isn't a key server. The keys are exported as the user uploaded and might not have been fully verified.
 ssh-rsa AAAA
 `, resp.Body.String())
 }
@@ -243,7 +243,7 @@ func testExportUserGPGKeys(t *testing.T) {
 
 	// Export empty key list
 	testExportUserGPGKeys(t, "user1", `-----BEGIN PGP PUBLIC KEY BLOCK-----
-Comment: Gitea isn't a key server. The keys are exported as the user uploaded and might not have been fully verified.
+Comment: BranchSpire isn't a key server. The keys are exported as the user uploaded and might not have been fully verified.
 Note: This user hasn't uploaded any GPG keys.
 
 
@@ -285,7 +285,7 @@ GrE0MHOxUbc9tbtyk0F1SuzREUBH
 -----END PGP PUBLIC KEY BLOCK-----`)
 	// Export new key
 	testExportUserGPGKeys(t, "user1", `-----BEGIN PGP PUBLIC KEY BLOCK-----
-Comment: Gitea isn't a key server. The keys are exported as the user uploaded and might not have been fully verified.
+Comment: BranchSpire isn't a key server. The keys are exported as the user uploaded and might not have been fully verified.
 
 xsBNBFyy/VUBCADJ7zbM20Z1RWmFoVgp5WkQfI2rU1Vj9cQHes9i42wVLLtcbPeo
 QzubgzvMPITDy7nfWxgSf83E23DoHQ1ACFbQh/6eFSRrjsusp3YQ/08NSfPPbcu8

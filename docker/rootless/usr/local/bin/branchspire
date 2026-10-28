@@ -1,15 +1,15 @@
 #!/bin/bash
 
 ###############################################################
-# This script sets defaults for gitea to run in the container #
+# This script sets defaults for BranchSpire to run in the container #
 ###############################################################
 
-# It assumes that you place this script as gitea in /usr/local/bin
+# It assumes that you place this script as branchspire in /usr/local/bin
 #
-# And place the original in /usr/lib/gitea with working files in /data/gitea
-GITEA="/app/gitea/gitea"
-WORK_DIR="/var/lib/gitea"
-APP_INI="/etc/gitea/app.ini"
+# And place the original in /app/branchspire with working files in $WORK_DIR
+BRANCHSPIRE="/app/branchspire/branchspire"
+WORK_DIR="/var/lib/branchspire"
+APP_INI="/etc/branchspire/app.ini"
 
 APP_INI_SET=""
 for i in "$@"; do
@@ -37,4 +37,4 @@ fi
 
 
 # Provide docker defaults
-GITEA_WORK_DIR="${GITEA_WORK_DIR:-$WORK_DIR}" exec -a "$0" "$GITEA" "${CONF_ARG[@]}" "$@"
+GITEA_WORK_DIR="${GITEA_WORK_DIR:-$WORK_DIR}" exec -a "$0" "$BRANCHSPIRE" "${CONF_ARG[@]}" "$@"

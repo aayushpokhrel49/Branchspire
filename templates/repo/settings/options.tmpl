@@ -71,24 +71,20 @@
 					{{if $newMirrorsEntirelyEnabled}}
 						<p>
 							{{ctx.Locale.Tr "repo.settings.mirror_settings.docs"}}
-							<a target="_blank" href="https://docs.gitea.com/usage/repo-mirror#pushing-to-a-remote-repository">{{ctx.Locale.Tr "repo.settings.mirror_settings.docs.doc_link_title"}}</a>
 						</p>
 						<p>
 							{{ctx.Locale.Tr "repo.settings.mirror_settings.docs.pull_mirror_instructions"}}
-							<a target="_blank" href="https://docs.gitea.com/usage/repo-mirror#pulling-from-a-remote-repository">{{ctx.Locale.Tr "repo.settings.mirror_settings.docs.doc_link_pull_section"}}</a>
 						</p>
 					{{else if $onlyNewPushMirrorsEnabled}}
 						<p>
 							{{ctx.Locale.Tr "repo.settings.mirror_settings.docs.disabled_pull_mirror.instructions"}}
 							{{ctx.Locale.Tr "repo.settings.mirror_settings.docs.more_information_if_disabled"}}
-							<a target="_blank" href="https://docs.gitea.com/usage/repo-mirror#pulling-from-a-remote-repository">{{ctx.Locale.Tr "repo.settings.mirror_settings.docs.doc_link_title"}}</a>
 						</p>
 					{{else if $onlyNewPullMirrorsEnabled}}
 						<p>
 							{{ctx.Locale.Tr "repo.settings.mirror_settings.docs.disabled_push_mirror.instructions"}}
 							{{ctx.Locale.Tr "repo.settings.mirror_settings.docs.disabled_push_mirror.pull_mirror_warning"}}
 							{{ctx.Locale.Tr "repo.settings.mirror_settings.docs.more_information_if_disabled"}}
-							<a target="_blank" href="https://docs.gitea.com/usage/repo-mirror#pulling-from-a-remote-repository">{{ctx.Locale.Tr "repo.settings.mirror_settings.docs.doc_link_title"}}</a>
 						</p>
 						<p>
 							{{ctx.Locale.Tr "repo.settings.mirror_settings.docs.disabled_push_mirror.info"}}

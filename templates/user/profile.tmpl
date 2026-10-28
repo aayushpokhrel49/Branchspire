@@ -16,10 +16,30 @@
 					{{template "user/heatmap" .}}
 					{{template "user/dashboard/feeds" .}}
 				{{else if eq .TabName "stars"}}
+					<div class="tw-text-center profile-follow-row"> stars first: indent is deeper (line 20-23): `					<div class="stars">` block indent 5 tabs. oldString for stars:
+```
 					<div class="stars">
 						{{template "shared/repo/search" .}}
 						<div class="divider"></div>
 						{{template "shared/repo/list" .}}
+						{{template "base/paginate" .}}
+					</div>
+```
+new:
+```
+					<div class="stars">
+						{{template "shared/repo/search" .}}
+						<div class="divider"></div>
+						<div class="repo-cards">
+							{{template "shared/repo/list" .}}
+						</div>
+						{{template "base/paginate" .}}
+					</div></think><tool_call>edit<arg_key>newString</arg_key><arg_value>					<div class="stars">
+						{{template "shared/repo/search" .}}
+						<div class="divider"></div>
+						<div class="repo-cards">
+							{{template "shared/repo/list" .}}
+						</div>
 						{{template "base/paginate" .}}
 					</div>
 				{{else if eq .TabName "following"}}
@@ -33,7 +53,9 @@
 				{{else}}
 					{{template "shared/repo/search" .}}
 					<div class="divider"></div>
-					{{template "shared/repo/list" .}}
+					<div class="repo-cards">
+						{{template "shared/repo/list" .}}
+					</div>
 					{{template "base/paginate" .}}
 				{{end}}
 			</div>

@@ -6,8 +6,8 @@ package cache
 import (
 	"time"
 
-	"gitea.dev/modules/graceful"
-	"gitea.dev/modules/nosql"
+	"branchspire/modules/graceful"
+	"branchspire/modules/nosql"
 
 	"github.com/redis/go-redis/v9"
 )

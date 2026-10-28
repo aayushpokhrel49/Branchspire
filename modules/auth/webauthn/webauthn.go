@@ -8,10 +8,10 @@ import (
 	"encoding/binary"
 	"encoding/gob"
 
-	"gitea.dev/models/auth"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/util"
+	"branchspire/models/auth"
+	user_model "branchspire/models/user"
+	"branchspire/modules/setting"
+	"branchspire/modules/util"
 
 	"github.com/go-webauthn/webauthn/protocol"
 	"github.com/go-webauthn/webauthn/webauthn"
@@ -31,7 +31,7 @@ func Init() {
 			RPDisplayName:         setting.AppName,
 			RPID:                  setting.AppDomain,
 			RPOrigins:             []string{appURL},
-			AttestationPreference: protocol.PreferNoAttestation, // Gitea never verifies attestation
+			AttestationPreference: protocol.PreferNoAttestation, // BranchSpire never verifies attestation
 		},
 	}
 }

@@ -7,8 +7,8 @@ import (
 	"context"
 	"testing"
 
-	"gitea.dev/modules/log"
-	"gitea.dev/services/doctor"
+	"branchspire/modules/log"
+	"branchspire/services/doctor"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/urfave/cli/v3"
@@ -25,10 +25,10 @@ func TestDoctorRun(t *testing.T) {
 	app := &cli.Command{
 		Commands: []*cli.Command{newDoctorCheckCommand()},
 	}
-	err := app.Run(t.Context(), []string{"./gitea", "check", "--run", "test-check"})
+	err := app.Run(t.Context(), []string{"./branchspire", "check", "--run", "test-check"})
 	assert.NoError(t, err)
-	err = app.Run(t.Context(), []string{"./gitea", "check", "--run", "no-such"})
+	err = app.Run(t.Context(), []string{"./branchspire", "check", "--run", "no-such"})
 	assert.ErrorContains(t, err, `unknown checks: "no-such"`)
-	err = app.Run(t.Context(), []string{"./gitea", "check", "--run", "test-check,no-such"})
+	err = app.Run(t.Context(), []string{"./branchspire", "check", "--run", "test-check,no-such"})
 	assert.ErrorContains(t, err, `unknown checks: "no-such"`)
 }

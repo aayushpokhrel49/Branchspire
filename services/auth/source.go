@@ -6,11 +6,11 @@ package auth
 import (
 	"context"
 
-	audit_model "gitea.dev/models/audit"
-	"gitea.dev/models/auth"
-	"gitea.dev/models/db"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/services/audit"
+	audit_model "branchspire/models/audit"
+	"branchspire/models/auth"
+	"branchspire/models/db"
+	user_model "branchspire/models/user"
+	"branchspire/services/audit"
 )
 
 // CreateSource creates a AuthSource record in DB.

@@ -8,10 +8,10 @@ import (
 	"strconv"
 	"testing"
 
-	auth_model "gitea.dev/models/auth"
-	"gitea.dev/models/db"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
+	auth_model "branchspire/models/auth"
+	"branchspire/models/db"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
 
 	"github.com/go-webauthn/webauthn/webauthn"
 	"github.com/stretchr/testify/assert"

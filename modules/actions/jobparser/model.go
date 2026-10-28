@@ -12,7 +12,7 @@ import (
 	"gitea.dev/actionslib/pkg/expreval"
 	"gitea.dev/actionslib/pkg/exprparser"
 	"gitea.dev/actionslib/pkg/model"
-	"gitea.dev/modules/util"
+	"branchspire/modules/util"
 
 	"github.com/robfig/cron/v3"
 	"go.yaml.in/yaml/v4"
@@ -182,7 +182,7 @@ func (j *Job) RunsOnProblem() string {
 	return runsOnProblem(&j.RawRunsOn)
 }
 
-// RunsOn returns the labels Gitea matches runners against, unescaped like DisplayName.
+// RunsOn returns the labels BranchSpire matches runners against, unescaped like DisplayName.
 func (j *Job) RunsOn() []string {
 	runsOn := model.RunsOnFromNode(j.RawRunsOn)
 	for i, label := range runsOn {
@@ -191,7 +191,7 @@ func (j *Job) RunsOn() []string {
 	return runsOn
 }
 
-// DisplayName is the name Gitea stores, without the escaping the payload keeps for runners.
+// DisplayName is the name BranchSpire stores, without the escaping the payload keeps for runners.
 func (j *Job) DisplayName() string {
 	return util.EllipsisDisplayString(unescapeExpressions(j.Name), 255)
 }
@@ -451,7 +451,7 @@ func ParseRawOn(rawOn *yaml.Node) ([]*Event, error) {
 					schedules: schedules,
 				})
 			case yaml.MappingNode:
-				// Keep combined include and ignore filters for existing Gitea workflows, although GitHub rejects them.
+				// Keep combined include and ignore filters for existing BranchSpire workflows, although GitHub rejects them.
 				acts := make(map[string][]string, len(v.Content)/2)
 				expectedKey := true
 				var act string

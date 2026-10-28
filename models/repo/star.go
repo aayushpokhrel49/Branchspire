@@ -6,9 +6,9 @@ package repo
 import (
 	"context"
 
-	"gitea.dev/models/db"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/timeutil"
+	"branchspire/models/db"
+	user_model "branchspire/models/user"
+	"branchspire/modules/timeutil"
 
 	"xorm.io/builder"
 )

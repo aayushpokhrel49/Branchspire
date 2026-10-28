@@ -69,7 +69,9 @@
 			{{else}}
 				{{template "shared/repo/search" .}}
 				<div class="divider"></div>
-				{{template "shared/repo/list" .}}
+				<div class="repo-cards">
+					{{template "shared/repo/list" .}}
+				</div>
 				{{template "base/paginate" .}}
 			{{end}}
 		</div>

@@ -8,9 +8,9 @@ import (
 	"os"
 	"path/filepath"
 
-	"gitea.dev/modelmigration/base"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/setting"
+	"branchspire/modelmigration/base"
+	"branchspire/modules/log"
+	"branchspire/modules/setting"
 
 	"xorm.io/builder"
 )

@@ -8,14 +8,14 @@ import (
 	"fmt"
 	"strings"
 
-	"gitea.dev/models/db"
-	git_model "gitea.dev/models/git"
-	issues_model "gitea.dev/models/issues"
-	repo_model "gitea.dev/models/repo"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/log"
-	notify_service "gitea.dev/services/notify"
+	"branchspire/models/db"
+	git_model "branchspire/models/git"
+	issues_model "branchspire/models/issues"
+	repo_model "branchspire/models/repo"
+	user_model "branchspire/models/user"
+	"branchspire/modules/git"
+	"branchspire/modules/log"
+	notify_service "branchspire/services/notify"
 )
 
 // GenerateIssueLabels generates issue labels from a template repository

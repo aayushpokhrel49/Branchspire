@@ -12,8 +12,8 @@ import (
 	"sync"
 	"unicode/utf8"
 
-	"gitea.dev/modules/glob"
-	"gitea.dev/modules/setting"
+	"branchspire/modules/glob"
+	"branchspire/modules/setting"
 )
 
 type globalVarsStruct struct {

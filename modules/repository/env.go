@@ -8,10 +8,10 @@ import (
 	"strconv"
 	"strings"
 
-	repo_model "gitea.dev/models/repo"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/util"
+	repo_model "branchspire/models/repo"
+	user_model "branchspire/models/user"
+	"branchspire/modules/setting"
+	"branchspire/modules/util"
 )
 
 // env keys for git hooks need
@@ -29,7 +29,7 @@ const (
 	EnvPusherExtDoerData = "GITEA_PUSHER_EXT_DOER_DATA"
 
 	EnvPRID    = "GITEA_PR_ID"
-	EnvPRIndex = "GITEA_PR_INDEX" // not used by Gitea at the moment, it is for custom git hooks
+	EnvPRIndex = "GITEA_PR_INDEX" // not used by BranchSpire at the moment, it is for custom git hooks
 	EnvAppURL  = "GITEA_ROOT_URL"
 )
 

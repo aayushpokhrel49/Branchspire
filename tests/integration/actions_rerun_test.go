@@ -12,18 +12,18 @@ import (
 	"time"
 
 	runnerv1 "gitea.dev/actionslib/runner/v1"
-	actions_model "gitea.dev/models/actions"
-	auth_model "gitea.dev/models/auth"
-	"gitea.dev/models/db"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/actions/jobparser"
-	"gitea.dev/modules/setting"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/modules/test"
-	"gitea.dev/modules/timeutil"
-	actions_web "gitea.dev/routers/web/repo/actions"
+	actions_model "branchspire/models/actions"
+	auth_model "branchspire/models/auth"
+	"branchspire/models/db"
+	repo_model "branchspire/models/repo"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
+	"branchspire/modules/actions/jobparser"
+	"branchspire/modules/setting"
+	api "branchspire/modules/structs"
+	"branchspire/modules/test"
+	"branchspire/modules/timeutil"
+	actions_web "branchspire/routers/web/repo/actions"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -46,12 +46,12 @@ func TestActionsRerun(t *testing.T) {
 		runner := newMockRunner()
 		runner.registerAsRepoRunner(t, repo.OwnerName, repo.Name, "mock-runner", []string{"ubuntu-latest"}, false)
 
-		wfTreePath := ".gitea/workflows/actions-rerun-workflow-1.yml"
+		wfTreePath := ".branchspire/workflows/actions-rerun-workflow-1.yml"
 		wfFileContent := `name: actions-rerun-workflow-1
 on:
   push:
     paths:
-      - '.gitea/workflows/actions-rerun-workflow-1.yml'
+      - '.branchspire/workflows/actions-rerun-workflow-1.yml'
 jobs:
   job1:
     runs-on: ubuntu-latest
@@ -230,7 +230,7 @@ func TestActionsRerunLegacyNoAttemptRun(t *testing.T) {
 		runner := newMockRunner()
 		runner.registerAsRepoRunner(t, repo.OwnerName, repo.Name, "mock-runner", []string{"ubuntu-latest"}, false)
 
-		wfTreePath := ".gitea/workflows/actions-rerun-legacy.yml"
+		wfTreePath := ".branchspire/workflows/actions-rerun-legacy.yml"
 		wfFileContent := `name: actions-rerun-legacy
 on:
   workflow_dispatch:

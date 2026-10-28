@@ -10,13 +10,13 @@ import (
 	"maps"
 	"strings"
 
-	actions_model "gitea.dev/models/actions"
-	actions_module "gitea.dev/modules/actions"
-	"gitea.dev/modules/actions/jobparser"
-	"gitea.dev/modules/json"
-	"gitea.dev/modules/log"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/modules/util"
+	actions_model "branchspire/models/actions"
+	actions_module "branchspire/modules/actions"
+	"branchspire/modules/actions/jobparser"
+	"branchspire/modules/json"
+	"branchspire/modules/log"
+	api "branchspire/modules/structs"
+	"branchspire/modules/util"
 )
 
 // dispatchInputsForJob types a top-level job's `inputs.*` from EventPayload, empty for other events.

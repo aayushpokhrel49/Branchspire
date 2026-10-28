@@ -4,13 +4,13 @@
 package common
 
 import (
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/session"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/web/middleware"
-	auth_service "gitea.dev/services/auth"
-	"gitea.dev/services/context"
+	user_model "branchspire/models/user"
+	"branchspire/modules/log"
+	"branchspire/modules/session"
+	"branchspire/modules/setting"
+	"branchspire/modules/web/middleware"
+	auth_service "branchspire/services/auth"
+	"branchspire/services/context"
 )
 
 type AuthResult struct {

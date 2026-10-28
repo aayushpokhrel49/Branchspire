@@ -6,9 +6,9 @@ package oauth2
 import (
 	"html/template"
 
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/svg"
+	"branchspire/modules/log"
+	"branchspire/modules/setting"
+	"branchspire/modules/svg"
 
 	"github.com/markbates/goth"
 	"github.com/markbates/goth/providers/openidConnect"

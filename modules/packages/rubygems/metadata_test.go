@@ -6,7 +6,7 @@ package rubygems
 import (
 	"testing"
 
-	"gitea.dev/modules/test"
+	"branchspire/modules/test"
 
 	"github.com/stretchr/testify/assert"
 )
@@ -52,7 +52,7 @@ version: !ruby/object:Gem::Version
   version: 1.0.5
 platform: ruby
 authors:
-- Gitea
+- BranchSpire
 autorequire:
 bindir: bin
 cert_chain: []
@@ -122,7 +122,7 @@ rubyforge_project:
 rubygems_version: 2.7.6.2
 signing_key:
 specification_version: 4
-summary: Gitea package
+summary: BranchSpire package
 test_files: []
 `)
 	rp, err := parseMetadataFile(content)
@@ -132,9 +132,9 @@ test_files: []
 	assert.Equal(t, "gitea", rp.Name)
 	assert.Equal(t, "1.0.5", rp.Version)
 	assert.Equal(t, "ruby", rp.Metadata.Platform)
-	assert.Equal(t, "Gitea package", rp.Metadata.Summary)
+	assert.Equal(t, "BranchSpire package", rp.Metadata.Summary)
 	assert.Equal(t, "RubyGems package test", rp.Metadata.Description)
-	assert.Equal(t, []string{"Gitea"}, rp.Metadata.Authors)
+	assert.Equal(t, []string{"BranchSpire"}, rp.Metadata.Authors)
 	assert.Equal(t, "https://gitea.io/", rp.Metadata.ProjectURL)
 	assert.Equal(t, []string{"MIT"}, rp.Metadata.Licenses)
 	assert.Empty(t, rp.Metadata.RequiredRubygemsVersion)

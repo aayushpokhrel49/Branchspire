@@ -7,14 +7,14 @@ import (
 	"testing"
 	"time"
 
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/models/unittest"
-	"gitea.dev/modules/queue"
-	"gitea.dev/modules/setting"
+	repo_model "branchspire/models/repo"
+	"branchspire/models/unittest"
+	"branchspire/modules/queue"
+	"branchspire/modules/setting"
 
-	_ "gitea.dev/models"
-	_ "gitea.dev/models/actions"
-	_ "gitea.dev/models/activities"
+	_ "branchspire/models"
+	_ "branchspire/models/actions"
+	_ "branchspire/models/activities"
 
 	"github.com/stretchr/testify/assert"
 )

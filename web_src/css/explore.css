@@ -1,3 +1,336 @@
+/* BranchSpire explore pages: header, search toolbar, repository cards, empty and list states */
+
+/* ---- page hero (repositories tab) ---- */
+.explore.repositories .explore-hero {
+  margin: 18px 0 0;
+}
+
+.explore-hero-title {
+  margin: 0;
+  font-size: 1.55rem;
+  line-height: 1.25;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+}
+
+.explore-hero-lede {
+  margin: 6px 0 0;
+  max-width: 62ch;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--color-text-light-2);
+  text-wrap: balance;
+}
+
+.explore-quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  margin-top: 14px;
+}
+
+.explore-quick-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 12px;
+  border-radius: var(--border-radius-full);
+  color: var(--color-text-light-2);
+  font-size: 13px;
+  transition: color 0.18s ease, background-color 0.18s ease;
+}
+
+.explore-quick-links a:hover {
+  color: var(--color-text);
+  background: var(--color-hover);
+}
+
+.explore-quick-links a:hover .svg {
+  color: var(--color-primary);
+}
+
+/* ---- search / filter / sort toolbar (shared: explore, profile, org home, admin, notifications) ---- */
+:is(.explore, .user.profile, .organization.profile) .repo-search-filter {
+  margin: 20px 0 14px;
+}
+
+.repo-search-filter form {
+  gap: 10px;
+}
+
+.repo-search-filter .ui.action.input input {
+  padding: 9px 14px;
+  border-radius: 10px 0 0 10px;
+}
+
+.repo-search-filter .ui.action.input .button {
+  padding: 9px 16px;
+  border-radius: 0 10px 10px 0;
+}
+
+.repo-search-filter .item.ui.dropdown {
+  padding: 9px 12px;
+  border: 1px solid var(--color-input-border);
+  border-radius: 10px;
+  background: var(--color-input-background);
+  color: var(--color-text-light-1);
+  font-weight: var(--font-weight-normal);
+  transition: border-color 0.18s ease;
+}
+
+.repo-search-filter .item.ui.dropdown:hover,
+.repo-search-filter .item.ui.dropdown.active {
+  border-color: var(--color-secondary-dark-2);
+}
+
+/* results summary line above the repository grid */
+.explore-results-count {
+  margin: 0 0 10px;
+  font-size: 12px;
+  color: var(--color-text-light-2);
+}
+
+/* ---- repository cards (shared: explore, profile, org home, forks, admin view, subscriptions) ---- */
+.repo-cards .flex-divided-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr));
+  gap: 16px;
+  min-width: 0;
+}
+
+.repo-cards .flex-divided-list > .item {
+  align-items: stretch;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid var(--color-secondary);
+  border-radius: 12px;
+  background: var(--color-card);
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.repo-cards .flex-divided-list > .item:focus-within {
+  border-color: var(--color-primary);
+}
+
+@media (hover: hover) {
+  .repo-cards .flex-divided-list > .item:hover {
+    border-color: var(--color-secondary-dark-1);
+    box-shadow: 0 8px 24px -14px var(--color-shadow);
+    transform: translateY(-2px);
+  }
+}
+
+.repo-cards .flex-divided-list > .item .item-leading {
+  padding-top: 2px;
+}
+
+.repo-cards .flex-divided-list > .item .item-leading img {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+}
+
+.repo-cards .flex-divided-list > .item .item-leading .svg {
+  width: 36px;
+  height: 36px;
+  padding: 6px;
+  border-radius: 9px;
+  color: var(--color-text-light-2);
+  background: var(--color-hover);
+}
+
+.repo-cards .flex-divided-list > .item .item-main {
+  gap: 10px;
+}
+
+.repo-cards .flex-divided-list > .item .item-title {
+  gap: 6px;
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.repo-cards .flex-divided-list > .item .item-title .name:first-child {
+  color: var(--color-text-light-2);
+  font-weight: var(--font-weight-normal);
+}
+
+.repo-cards .flex-divided-list > .item .item-title .ui.label {
+  margin: 0;
+  padding: 1px 8px;
+  border: none;
+  border-radius: var(--border-radius-full);
+  background: var(--color-label-bg);
+  color: var(--color-text-light-1);
+  font-size: 11px;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.7;
+}
+
+.repo-cards .flex-divided-list > .item .item-main > .item-body:not(:last-child) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--color-text-light-2);
+}
+
+.repo-cards .flex-divided-list > .item .item-main > .label-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.repo-cards .flex-divided-list > .item .item-main > .label-list .ui.label {
+  margin: 0;
+  padding: 2px 10px;
+  border: none;
+  border-radius: var(--border-radius-full);
+  background: var(--color-label-bg);
+  color: var(--color-text-light-1);
+  font-size: 11.5px;
+  line-height: 1.7;
+  transition: background-color 0.18s ease, color 0.18s ease;
+}
+
+.repo-cards .flex-divided-list > .item .item-main > .label-list .ui.label:hover {
+  background: var(--color-primary-alpha-20);
+  color: var(--color-primary);
+}
+
+.repo-cards .flex-divided-list > .item .item-main > .item-updated {
+  gap: 5px;
+  margin-top: auto;
+  padding-top: 12px;
+  font-size: 12px;
+  color: var(--color-text-light-2);
+}
+
+.repo-cards .flex-divided-list > .item .item-updated .svg {
+  opacity: 0.85;
+}
+
+.repo-cards .flex-divided-list > .item .item-trailing {
+  flex-basis: 100%; /* always its own row: keeps every card's title line and meta line aligned */
+  gap: 14px;
+  color: var(--color-text-light-2);
+  font-size: 12.5px;
+  justify-content: flex-start;
+}
+
+.repo-cards .flex-divided-list > .item .item-trailing .color-icon {
+  width: 10px;
+  height: 10px;
+}
+
+/* ---- empty state of the repository grid ---- */
+.explore-empty-list {
+  margin-top: 8px;
+  padding: 52px 24px;
+  border: 1px dashed var(--color-secondary);
+  border-radius: 14px;
+  background: var(--color-box-header);
+  color: var(--color-text-light-2);
+  text-align: center;
+}
+
+.explore-empty-list .explore-empty-icon {
+  color: var(--color-text-light-3);
+}
+
+.explore-empty-list h2 {
+  margin: 14px 0 0;
+  font-size: 1.05rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+}
+
+.explore-empty-list p {
+  margin: 6px auto 0;
+  max-width: 46ch;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--color-text-light-2);
+}
+
+/* empty state of the shared repo list (bare "no results" div rendered inside the grid) */
+.repo-cards .flex-divided-list > div:not([class]) {
+  padding: 48px 20px;
+  border: 1px dashed var(--color-secondary);
+  border-radius: 12px;
+  color: var(--color-text-light-2);
+  text-align: center;
+}
+
+/* empty states of the other explore lists (users, organizations) */
+.explore.users .flex-divided-list > .item:not(:has(.item-main)) {
+  padding: 48px 16px;
+  border: 1px dashed var(--color-secondary);
+  border-radius: 12px;
+  color: var(--color-text-light-2);
+  text-align: center;
+}
+
+/* ---- pagination ---- */
+:is(.explore, .user.profile, .organization.profile) div.center.page.buttons {
+  margin: 24px 0 8px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .repo-cards .flex-divided-list > .item,
+  .explore-quick-links a,
+  .repo-search-filter .item.ui.dropdown,
+  .repo-cards .flex-divided-list > .item .item-main > .label-list .ui.label {
+    transition: none;
+  }
+
+  .repo-cards .flex-divided-list > .item:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .repo-search-filter .ui.action.input {
+    /* !important: tw-flex-1 emits flex utilities !important, the stacked mobile layout must win over it */
+    flex-basis: 100% !important;
+  }
+
+  .repo-search-filter .item.ui.dropdown {
+    flex: 1 1 calc(50% - 5px);
+    min-width: 0;
+  }
+
+  .repo-cards .flex-divided-list {
+    gap: 10px;
+  }
+
+  .repo-cards .flex-divided-list > .item {
+    padding: 14px;
+    gap: 10px;
+  }
+
+  .repo-cards .flex-divided-list > .item .item-leading img,
+  .repo-cards .flex-divided-list > .item .item-leading .svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .repo-cards .flex-divided-list > .item .item-main > .item-updated {
+    padding-top: 10px;
+  }
+
+  .repo-cards .flex-divided-list > .item .item-header {
+    row-gap: 8px;
+  }
+
+  .explore-empty-list {
+    padding: 40px 16px;
+  }
+}
+
 /* FIXME: need to refactor the repo branches list page and move these styles to proper place */
 .ui.repository.branches .info {
   font-size: 12px;

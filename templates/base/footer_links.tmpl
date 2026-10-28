@@ -1,0 +1,38 @@
+<div class="home-footer">
+	<div class="home-footer-grid">
+	<div class="home-footer-brand">
+		<div class="home-brand">
+			<img width="40" height="40" src="{{AssetUrlPrefix}}/img/logo.svg" alt="{{AppName}}">
+			<span class="home-brand-name">{{AppName}}</span>
+		</div>
+		<p>{{ctx.Locale.Tr "startpage.footer_tagline"}}</p>
+	</div>
+	<nav aria-label="Product">
+		<h3>Product</h3>
+		<ul>
+			<li><a href="{{AppSubUrl}}/explore/repos">{{ctx.Locale.Tr "explore_title"}}</a></li>
+			<li><a href="{{AppSubUrl}}/explore/users">{{ctx.Locale.Tr "explore.users"}}</a></li>
+			<li><a href="{{AppSubUrl}}/explore/organizations">{{ctx.Locale.Tr "explore.organizations"}}</a></li>
+			<li><a href="{{AppSubUrl}}/about">About</a></li>
+		</ul>
+	</nav>
+	<nav aria-label="Resources">
+		<h3>Resources</h3>
+		<ul>
+			<li><a href="{{AppSubUrl}}/docs">Documentation</a></li>
+			<li><a href="{{AppSubUrl}}/api/swagger" target="_blank" rel="noopener noreferrer">API reference</a></li>
+		</ul>
+	</nav>
+	<nav aria-label="Legal">
+		<h3>Legal</h3>
+		<ul>
+			<li><a href="{{AppSubUrl}}/legal/terms">Terms of Service</a></li>
+			<li><a href="{{AppSubUrl}}/legal/privacy">Privacy Policy</a></li>
+			<li><a href="{{AppSubUrl}}/assets/licenses.txt" target="_blank" rel="noopener noreferrer">Licenses</a></li>
+		</ul>
+	</nav>
+</div>
+<div class="home-footer-base">
+	<span>© {{AppName}}</span>
+</div>
+</div>

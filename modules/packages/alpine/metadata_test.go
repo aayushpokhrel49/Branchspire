@@ -29,7 +29,7 @@ pkgdesc = ` + packageDescription + `
 url = ` + packageProjectURL + `
 # comment
 builddate = 1678834800
-packager = Gitea <pack@ag.er>
+packager = BranchSpire <pack@ag.er>
 size = 123456
 arch = aarch64
 origin = origin
@@ -140,7 +140,7 @@ func TestParsePackageInfo(t *testing.T) {
 		assert.Equal(t, packageProjectURL, p.VersionMetadata.ProjectURL)
 		assert.Equal(t, "MIT", p.VersionMetadata.License)
 		assert.Empty(t, p.FileMetadata.Checksum)
-		assert.Equal(t, "Gitea <pack@ag.er>", p.FileMetadata.Packager)
+		assert.Equal(t, "BranchSpire <pack@ag.er>", p.FileMetadata.Packager)
 		assert.EqualValues(t, 1678834800, p.FileMetadata.BuildDate)
 		assert.EqualValues(t, 123456, p.FileMetadata.Size)
 		assert.Equal(t, "aarch64", p.FileMetadata.Architecture)

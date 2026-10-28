@@ -6,8 +6,8 @@ package v1_17
 import (
 	"context"
 
-	"gitea.dev/modelmigration/base"
-	"gitea.dev/modules/timeutil"
+	"branchspire/modelmigration/base"
+	"branchspire/modules/timeutil"
 )
 
 func AddReviewViewedFiles(_ context.Context, x base.EngineMigration) error {

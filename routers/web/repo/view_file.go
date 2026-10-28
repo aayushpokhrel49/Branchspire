@@ -11,21 +11,21 @@ import (
 	"path"
 	"strings"
 
-	git_model "gitea.dev/models/git"
-	issue_model "gitea.dev/models/issues"
-	"gitea.dev/models/renderhelper"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/actions"
-	"gitea.dev/modules/charset"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/git/attribute"
-	"gitea.dev/modules/highlight"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/markup"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/util"
-	"gitea.dev/services/context"
-	issue_service "gitea.dev/services/issue"
+	git_model "branchspire/models/git"
+	issue_model "branchspire/models/issues"
+	"branchspire/models/renderhelper"
+	user_model "branchspire/models/user"
+	"branchspire/modules/actions"
+	"branchspire/modules/charset"
+	"branchspire/modules/git"
+	"branchspire/modules/git/attribute"
+	"branchspire/modules/highlight"
+	"branchspire/modules/log"
+	"branchspire/modules/markup"
+	"branchspire/modules/setting"
+	"branchspire/modules/util"
+	"branchspire/services/context"
+	issue_service "branchspire/services/issue"
 )
 
 func prepareLatestCommitInfo(ctx *context.Context) bool {
@@ -109,7 +109,7 @@ func handleFileViewRenderSource(ctx *context.Context, attrs *attribute.Attribute
 	buf, _ := io.ReadAll(utf8Reader)
 	// The Open Group Base Specification: https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap03.html
 	//   empty: 0 lines; "a": 1 incomplete-line; "a\n": 1 line; "a\nb": 1 line, 1 incomplete-line;
-	// Gitea uses the definition (like most modern editors):
+	// BranchSpire uses the definition (like most modern editors):
 	//   empty: 0 lines; "a": 1 line; "a\n": 2 lines; "a\nb": 2 lines;
 	//   When rendering, the last empty line is not rendered in UI, while the line-number is still counted, to tell users that the file contains a trailing EOL.
 	//   To make the UI more consistent, it could use an icon mark to indicate that there is no trailing EOL, and show line-number as the rendered lines.

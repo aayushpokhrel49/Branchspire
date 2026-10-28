@@ -6,10 +6,10 @@ package repo
 import (
 	"net/http"
 
-	"gitea.dev/modules/git"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/services/context"
-	"gitea.dev/services/convert"
+	"branchspire/modules/git"
+	api "branchspire/modules/structs"
+	"branchspire/services/context"
+	"branchspire/services/convert"
 )
 
 // GetNote Get a note corresponding to a single commit from a repository

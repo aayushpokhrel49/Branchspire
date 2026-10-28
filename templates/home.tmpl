@@ -1,51 +1,70 @@
 {{template "base/head" .}}
-<div role="main" aria-label="{{if .IsSigned}}{{ctx.Locale.Tr "dashboard"}}{{else}}{{ctx.Locale.Tr "home_title"}}{{end}}" class="page-content home">
-	<div class="tw-mb-8 tw-px-8">
-		<div class="center">
-			<img class="logo" width="220" height="220" src="{{AssetUrlPrefix}}/img/logo.svg" alt="{{ctx.Locale.Tr "logo"}}">
-			<div class="hero">
-				<h1 class="ui icon header title tw-text-balance">
-					{{AppName}}
-				</h1>
-				<h2 class="tw-text-balance">{{ctx.Locale.Tr "startpage.app_desc"}}</h2>
+<div role="main" aria-label="{{ctx.Locale.Tr "home_title"}}" class="page-content home">
+	{{/* hero */}}
+	<section class="home-hero">
+		<div class="home-hero-grid">
+			<div class="home-hero-copy">
+				<h1 class="home-display">{{ctx.Locale.Tr "startpage.hero_statement"}}</h1>
+				<p class="home-lede">{{ctx.Locale.Tr "startpage.app_desc"}}</p>
+				<div class="home-cta">
+					{{if .ShowRegistrationButton}}
+						<a class="home-btn-primary" href="{{AppSubUrl}}/user/sign_up">{{ctx.Locale.Tr "sign_up"}}</a>
+						<a class="home-btn-secondary" href="{{AppSubUrl}}/user/login">{{ctx.Locale.Tr "sign_in"}}</a>
+					{{else}}
+						<a class="home-btn-primary" href="{{AppSubUrl}}/user/login">{{ctx.Locale.Tr "sign_in"}}</a>
+					{{end}}
+					<a class="home-btn-secondary" href="{{AppSubUrl}}/explore/repos">{{svg "octicon-telescope"}} {{ctx.Locale.Tr "explore_title"}}</a>
+				</div>
+			</div>
+			<div class="home-hero-figure" aria-hidden="true">
+				<svg class="home-graph" viewBox="0 0 440 470" width="440" height="470">
+					<g class="home-graph-lines" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+						<path class="hl-0" d="M220 28V440"/>
+						<path class="hl-1" d="M220 128H296L332 92"/>
+						<path class="hl-2" d="M220 158H142L106 122"/>
+						<path class="hl-3" d="M220 252H128L92 216"/>
+						<path class="hl-3" d="M220 252H314L350 216"/>
+						<path class="hl-4" d="M220 344H158V214"/>
+						<path class="hl-4" d="M220 344H294L330 380"/>
+						<path class="hl-4" d="M220 388H166L146 408"/>
+					</g>
+					<g fill="currentColor">
+						<circle class="hn-1" cx="296" cy="128" r="5.5"/>
+						<circle class="hn-2" cx="142" cy="158" r="5.5"/>
+						<circle class="hn-3" cx="128" cy="252" r="5.5"/>
+						<circle class="hn-3" cx="314" cy="252" r="5.5"/>
+						<circle class="hn-4" cx="332" cy="92" r="6.5"/>
+						<circle class="hn-4" cx="106" cy="122" r="6.5"/>
+						<circle class="hn-4" cx="92" cy="216" r="6.5"/>
+						<circle class="hn-4" cx="350" cy="216" r="6.5"/>
+						<circle class="hn-4" cx="330" cy="380" r="6.5"/>
+						<circle class="hn-4" cx="146" cy="408" r="6.5"/>
+					</g>
+				</svg>
 			</div>
 		</div>
-	</div>
-	<div class="ui stackable middle very relaxed page grid">
-		<div class="eight wide center column">
-			<h1 class="hero ui icon header">
-				{{svg "octicon-flame"}} {{ctx.Locale.Tr "startpage.install"}}
-			</h1>
-			<p class="large tw-text-balance">
-				{{ctx.Locale.Tr "startpage.install_desc" "https://docs.gitea.com/installation/install-from-binary" "https://github.com/go-gitea/gitea/tree/master/docker" "https://docs.gitea.com/installation/install-from-package"}}
-			</p>
+	</section>
+
+	{{/* live stats banner */}}
+	{{if and .NumUsers .NumRepos}}
+	<section class="home-stats-bar" aria-label="Platform statistics">
+		<div class="home-stats-row">
+			<div class="home-stat">
+				<span class="home-stat-number">{{.NumUsers}}</span>
+				<span class="home-stat-label">{{ctx.Locale.Tr "startpage.stats_users"}}</span>
+			</div>
+			<div class="home-stat">
+				<span class="home-stat-number">{{.NumRepos}}</span>
+				<span class="home-stat-label">{{ctx.Locale.Tr "startpage.stats_repos"}}</span>
+			</div>
+			<div class="home-stat">
+				<span class="home-stat-number">{{.NumOrgs}}</span>
+				<span class="home-stat-label">{{ctx.Locale.Tr "startpage.stats_orgs"}}</span>
+			</div>
 		</div>
-		<div class="eight wide center column">
-			<h1 class="hero ui icon header">
-				{{svg "octicon-device-desktop"}} {{ctx.Locale.Tr "startpage.platform"}}
-			</h1>
-			<p class="large tw-text-balance">
-				{{ctx.Locale.Tr "startpage.platform_desc" "https://go.dev/"}}
-			</p>
-		</div>
-	</div>
-	<div class="ui stackable middle very relaxed page grid">
-		<div class="eight wide center column">
-			<h1 class="hero ui icon header">
-				{{svg "octicon-rocket"}} {{ctx.Locale.Tr "startpage.lightweight"}}
-			</h1>
-			<p class="large tw-text-balance">
-				{{ctx.Locale.Tr "startpage.lightweight_desc"}}
-			</p>
-		</div>
-		<div class="eight wide center column">
-			<h1 class="hero ui icon header">
-				{{svg "octicon-code"}} {{ctx.Locale.Tr "startpage.license"}}
-			</h1>
-			<p class="large tw-text-balance">
-				{{ctx.Locale.Tr "startpage.license_desc" "https://gitea.dev" "gitea.dev" "https://github.com/go-gitea/gitea"}}
-			</p>
-		</div>
-	</div>
+	</section>
+	{{end}}
+
+
 </div>
 {{template "base/footer" .}}

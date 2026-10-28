@@ -12,15 +12,15 @@ import (
 	"testing"
 	"time"
 
-	auth_model "gitea.dev/models/auth"
-	"gitea.dev/models/db"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/json"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/test"
-	"gitea.dev/services/auth/source/oauth2"
-	"gitea.dev/tests"
+	auth_model "branchspire/models/auth"
+	"branchspire/models/db"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
+	"branchspire/modules/json"
+	"branchspire/modules/setting"
+	"branchspire/modules/test"
+	"branchspire/services/auth/source/oauth2"
+	"branchspire/tests"
 
 	"github.com/go-webauthn/webauthn/webauthn"
 	"github.com/pquerna/otp/totp"
@@ -44,7 +44,7 @@ import (
 func TestMigrateAzureADV2ToOIDC(t *testing.T) {
 	defer tests.PrepareTestEnv(t)()
 	defer test.MockVariableValue(&setting.OAuth2Client.EnableAutoRegistration, true)()
-	// Use UserID (gothUser.UserID) as the Gitea username so that different ExternalID values produce different, non-conflicting usernames.
+	// Use UserID (gothUser.UserID) as the BranchSpire username so that different ExternalID values produce different, non-conflicting usernames.
 	defer test.MockVariableValue(&setting.OAuth2Client.Username, setting.OAuth2UsernameUserid)()
 
 	const (
@@ -348,7 +348,7 @@ func doOIDCSignIn(t *testing.T, sourceName string) {
 	// Step 1: initiate login
 	resp := session.MakeRequest(t, NewRequest(t, "GET", "/user/oauth2/"+sourceName), http.StatusTemporaryRedirect)
 
-	// Step 2: extract the UUID state that Gitea embedded in the redirect URL.
+	// Step 2: extract the UUID state that BranchSpire embedded in the redirect URL.
 	location := resp.Header().Get("Location")
 	u, err := url.Parse(location)
 	require.NoError(t, err)

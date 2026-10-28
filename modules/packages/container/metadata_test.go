@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"gitea.dev/modules/packages/container/helm"
+	"branchspire/modules/packages/container/helm"
 
 	oci "github.com/opencontainers/image-spec/specs-go/v1"
 	"github.com/stretchr/testify/assert"
@@ -16,7 +16,7 @@ import (
 
 func TestParseImageConfig(t *testing.T) {
 	description := "Image Description"
-	author := "Gitea"
+	author := "BranchSpire"
 	license := "MIT"
 	projectURL := "https://gitea.com"
 	repositoryURL := "https://gitea.com/gitea"

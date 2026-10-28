@@ -6,12 +6,12 @@ package admin
 import (
 	"net/http"
 
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/structs"
-	"gitea.dev/modules/util"
-	"gitea.dev/routers/api/v1/utils"
-	"gitea.dev/services/context"
-	"gitea.dev/services/cron"
+	"branchspire/modules/log"
+	"branchspire/modules/structs"
+	"branchspire/modules/util"
+	"branchspire/routers/api/v1/utils"
+	"branchspire/services/context"
+	"branchspire/services/cron"
 )
 
 // ListCronTasks api for getting cron tasks

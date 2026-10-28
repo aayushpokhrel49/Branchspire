@@ -6,9 +6,9 @@ package repo
 import (
 	"net/http"
 
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/modules/log"
-	"gitea.dev/services/context"
+	repo_model "branchspire/models/repo"
+	"branchspire/modules/log"
+	"branchspire/services/context"
 )
 
 // GetLicenses returns licenses

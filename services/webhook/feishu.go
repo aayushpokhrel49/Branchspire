@@ -13,10 +13,10 @@ import (
 	"strings"
 	"time"
 
-	webhook_model "gitea.dev/models/webhook"
-	"gitea.dev/modules/git"
-	api "gitea.dev/modules/structs"
-	webhook_module "gitea.dev/modules/webhook"
+	webhook_model "branchspire/models/webhook"
+	"branchspire/modules/git"
+	api "branchspire/modules/structs"
+	webhook_module "branchspire/modules/webhook"
 )
 
 type (

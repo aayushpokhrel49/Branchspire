@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"gitea.dev/modelmigration/migrationtest"
+	"branchspire/modelmigration/migrationtest"
 
 	"github.com/stretchr/testify/require"
 )

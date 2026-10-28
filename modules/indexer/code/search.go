@@ -9,9 +9,9 @@ import (
 	"html/template"
 	"strings"
 
-	"gitea.dev/modules/highlight"
-	"gitea.dev/modules/indexer/code/internal"
-	"gitea.dev/modules/timeutil"
+	"branchspire/modules/highlight"
+	"branchspire/modules/indexer/code/internal"
+	"branchspire/modules/timeutil"
 )
 
 // Result a search result to display

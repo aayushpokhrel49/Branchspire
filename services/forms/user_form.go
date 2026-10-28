@@ -8,12 +8,12 @@ import (
 	"mime/multipart"
 	"strings"
 
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/structs"
-	"gitea.dev/modules/util"
-	"gitea.dev/modules/validation"
-	"gitea.dev/modules/web/middleware"
+	user_model "branchspire/models/user"
+	"branchspire/modules/setting"
+	"branchspire/modules/structs"
+	"branchspire/modules/util"
+	"branchspire/modules/validation"
+	"branchspire/modules/web/middleware"
 )
 
 // InstallForm form for installation page

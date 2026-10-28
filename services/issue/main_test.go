@@ -6,10 +6,10 @@ package issue
 import (
 	"testing"
 
-	"gitea.dev/models/unittest"
+	"branchspire/models/unittest"
 
-	_ "gitea.dev/models"
-	_ "gitea.dev/models/actions"
+	_ "branchspire/models"
+	_ "branchspire/models/actions"
 )
 
 func TestMain(m *testing.M) {

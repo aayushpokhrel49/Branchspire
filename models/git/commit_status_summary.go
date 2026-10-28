@@ -1,4 +1,4 @@
-// Copyright 2024 Gitea. All rights reserved.
+// Copyright 2024 BranchSpire. All rights reserved.
 // SPDX-License-Identifier: MIT
 
 package git
@@ -6,9 +6,9 @@ package git
 import (
 	"context"
 
-	"gitea.dev/models/db"
-	"gitea.dev/modules/commitstatus"
-	"gitea.dev/modules/setting"
+	"branchspire/models/db"
+	"branchspire/modules/commitstatus"
+	"branchspire/modules/setting"
 
 	"xorm.io/builder"
 )

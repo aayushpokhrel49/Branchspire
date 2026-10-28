@@ -14,8 +14,8 @@ import (
 	"sync"
 	"time"
 
-	"gitea.dev/modules/graceful/releasereopen"
-	"gitea.dev/modules/util"
+	"branchspire/modules/graceful/releasereopen"
+	"branchspire/modules/util"
 )
 
 type Options struct {

@@ -4,11 +4,11 @@
 package private
 
 import (
-	"gitea.dev/models/perm/access"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/models/user"
-	"gitea.dev/modules/git"
-	gitea_context "gitea.dev/services/context"
+	"branchspire/models/perm/access"
+	repo_model "branchspire/models/repo"
+	"branchspire/models/user"
+	"branchspire/modules/git"
+	gitea_context "branchspire/services/context"
 )
 
 // This file contains common functions relating to setting the Repository for the internal routes

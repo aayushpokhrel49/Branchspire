@@ -9,10 +9,10 @@ import (
 	"path/filepath"
 	"testing"
 
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/test"
-	"gitea.dev/routers"
-	"gitea.dev/tests"
+	"branchspire/modules/setting"
+	"branchspire/modules/test"
+	"branchspire/routers"
+	"branchspire/tests"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

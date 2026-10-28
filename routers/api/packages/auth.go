@@ -6,10 +6,10 @@ package packages
 import (
 	"net/http"
 
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/log"
-	"gitea.dev/services/auth"
-	"gitea.dev/services/packages"
+	user_model "branchspire/models/user"
+	"branchspire/modules/log"
+	"branchspire/services/auth"
+	"branchspire/services/packages"
 )
 
 var _ auth.Method = &Auth{}

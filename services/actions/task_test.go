@@ -6,10 +6,10 @@ package actions
 import (
 	"testing"
 
-	actions_model "gitea.dev/models/actions"
-	"gitea.dev/models/db"
-	"gitea.dev/models/unittest"
-	"gitea.dev/modules/actions/jobparser"
+	actions_model "branchspire/models/actions"
+	"branchspire/models/db"
+	"branchspire/models/unittest"
+	"branchspire/modules/actions/jobparser"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

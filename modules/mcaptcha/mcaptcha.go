@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: MIT
 
 // https://github.com/go-gitea/gitea/pull/37492#issuecomment-4355482585
-// End users need it "since it is the only one open-source option in Gitea besides the image captcha"
+// End users need it "since it is the only one open-source option in BranchSpire besides the image captcha"
 
 package mcaptcha
 
@@ -14,9 +14,9 @@ import (
 	"net/http"
 	"strings"
 
-	"gitea.dev/modules/json"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/util"
+	"branchspire/modules/json"
+	"branchspire/modules/setting"
+	"branchspire/modules/util"
 )
 
 func Verify(ctx context.Context, token string) (bool, error) {

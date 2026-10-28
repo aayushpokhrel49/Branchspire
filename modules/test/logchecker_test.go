@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"gitea.dev/modules/log"
+	"branchspire/modules/log"
 
 	"github.com/stretchr/testify/assert"
 )

@@ -12,30 +12,30 @@ import (
 	"testing"
 	"time"
 
-	actions_model "gitea.dev/models/actions"
-	auth_model "gitea.dev/models/auth"
-	"gitea.dev/models/db"
-	git_model "gitea.dev/models/git"
-	issues_model "gitea.dev/models/issues"
-	"gitea.dev/models/perm"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
-	actions_module "gitea.dev/modules/actions"
-	"gitea.dev/modules/commitstatus"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/json"
-	"gitea.dev/modules/setting"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/modules/test"
-	"gitea.dev/modules/timeutil"
-	webhook_module "gitea.dev/modules/webhook"
-	issue_service "gitea.dev/services/issue"
-	pull_service "gitea.dev/services/pull"
-	release_service "gitea.dev/services/release"
-	repo_service "gitea.dev/services/repository"
-	commitstatus_service "gitea.dev/services/repository/commitstatus"
-	files_service "gitea.dev/services/repository/files"
+	actions_model "branchspire/models/actions"
+	auth_model "branchspire/models/auth"
+	"branchspire/models/db"
+	git_model "branchspire/models/git"
+	issues_model "branchspire/models/issues"
+	"branchspire/models/perm"
+	repo_model "branchspire/models/repo"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
+	actions_module "branchspire/modules/actions"
+	"branchspire/modules/commitstatus"
+	"branchspire/modules/git"
+	"branchspire/modules/json"
+	"branchspire/modules/setting"
+	api "branchspire/modules/structs"
+	"branchspire/modules/test"
+	"branchspire/modules/timeutil"
+	webhook_module "branchspire/modules/webhook"
+	issue_service "branchspire/services/issue"
+	pull_service "branchspire/services/pull"
+	release_service "branchspire/services/release"
+	repo_service "branchspire/services/repository"
+	commitstatus_service "branchspire/services/repository/commitstatus"
+	files_service "branchspire/services/repository/files"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -78,7 +78,7 @@ func TestPullRequestTargetEvent(t *testing.T) {
 			Files: []*files_service.ChangeRepoFile{
 				{
 					Operation: "create",
-					TreePath:  ".gitea/workflows/pr.yml",
+					TreePath:  ".branchspire/workflows/pr.yml",
 					ContentReader: strings.NewReader(`name: test
 on:
   pull_request_target:
@@ -312,7 +312,7 @@ func TestSkipCI(t *testing.T) {
 			Files: []*files_service.ChangeRepoFile{
 				{
 					Operation: "create",
-					TreePath:  ".gitea/workflows/pr.yml",
+					TreePath:  ".branchspire/workflows/pr.yml",
 					ContentReader: strings.NewReader(`name: test
 on:
   push:
@@ -445,7 +445,7 @@ func TestCreateDeleteRefEvent(t *testing.T) {
 			Files: []*files_service.ChangeRepoFile{
 				{
 					Operation: "create",
-					TreePath:  ".gitea/workflows/createdelete.yml",
+					TreePath:  ".branchspire/workflows/createdelete.yml",
 					ContentReader: strings.NewReader(`name: test
 on:
   [create,delete]
@@ -567,7 +567,7 @@ func TestPullRequestCommitStatusEvent(t *testing.T) {
 			Files: []*files_service.ChangeRepoFile{
 				{
 					Operation: "create",
-					TreePath:  ".gitea/workflows/pr.yml",
+					TreePath:  ".branchspire/workflows/pr.yml",
 					ContentReader: strings.NewReader(`name: test
 on:
   pull_request:
@@ -796,7 +796,7 @@ func TestPullRequestReviewCommitStatusEvent(t *testing.T) {
 			Files: []*files_service.ChangeRepoFile{
 				{
 					Operation: "create",
-					TreePath:  ".gitea/workflows/pr-review.yml",
+					TreePath:  ".branchspire/workflows/pr-review.yml",
 					ContentReader: strings.NewReader(`name: test
 on:
   pull_request_review:
@@ -919,7 +919,7 @@ func TestWorkflowDispatchPublicApi(t *testing.T) {
 			Files: []*files_service.ChangeRepoFile{
 				{
 					Operation: "create",
-					TreePath:  ".gitea/workflows/dispatch.yml",
+					TreePath:  ".branchspire/workflows/dispatch.yml",
 					ContentReader: strings.NewReader(`
 on:
   workflow_dispatch
@@ -1018,7 +1018,7 @@ func TestWorkflowDispatchPublicApiRequiresWorkflowDispatchTrigger(t *testing.T) 
 			Files: []*files_service.ChangeRepoFile{
 				{
 					Operation: "create",
-					TreePath:  ".gitea/workflows/push-only.yml",
+					TreePath:  ".branchspire/workflows/push-only.yml",
 					ContentReader: strings.NewReader(`
 on:
   push:
@@ -1090,7 +1090,7 @@ func TestWorkflowDispatchPublicApiWithInputs(t *testing.T) {
 			Files: []*files_service.ChangeRepoFile{
 				{
 					Operation: "create",
-					TreePath:  ".gitea/workflows/dispatch.yml",
+					TreePath:  ".branchspire/workflows/dispatch.yml",
 					ContentReader: strings.NewReader(`
 on:
   workflow_dispatch: { inputs: { myinput: { default: def }, myinput2: { default: def2 }, myinput3: { type: boolean, default: false } } }
@@ -1181,7 +1181,7 @@ func TestWorkflowDispatchPublicApiJSON(t *testing.T) {
 			Files: []*files_service.ChangeRepoFile{
 				{
 					Operation: "create",
-					TreePath:  ".gitea/workflows/dispatch.yml",
+					TreePath:  ".branchspire/workflows/dispatch.yml",
 					ContentReader: strings.NewReader(`
 on:
   workflow_dispatch: { inputs: { myinput: { default: def }, myinput2: { default: def2 }, myinput3: { type: boolean, default: false } } }
@@ -1267,7 +1267,7 @@ func TestWorkflowDispatchPublicApiWithInputsJSON(t *testing.T) {
 			Files: []*files_service.ChangeRepoFile{
 				{
 					Operation: "create",
-					TreePath:  ".gitea/workflows/dispatch.yml",
+					TreePath:  ".branchspire/workflows/dispatch.yml",
 					ContentReader: strings.NewReader(`
 on:
   workflow_dispatch: { inputs: { myinput: { default: def }, myinput2: { default: def2 }, myinput3: { type: boolean, default: false } } }
@@ -1361,7 +1361,7 @@ func TestWorkflowDispatchPublicApiWithInputsNonDefaultBranchJSON(t *testing.T) {
 			Files: []*files_service.ChangeRepoFile{
 				{
 					Operation: "create",
-					TreePath:  ".gitea/workflows/dispatch.yml",
+					TreePath:  ".branchspire/workflows/dispatch.yml",
 					ContentReader: strings.NewReader(`
 on:
   workflow_dispatch
@@ -1397,7 +1397,7 @@ jobs:
 			Files: []*files_service.ChangeRepoFile{
 				{
 					Operation: "update",
-					TreePath:  ".gitea/workflows/dispatch.yml",
+					TreePath:  ".branchspire/workflows/dispatch.yml",
 					ContentReader: strings.NewReader(`
 on:
   workflow_dispatch: { inputs: { myinput: { default: def }, myinput2: { default: def2 }, myinput3: { type: boolean, default: false } } }
@@ -1499,7 +1499,7 @@ func TestWorkflowApi(t *testing.T) {
 			Files: []*files_service.ChangeRepoFile{
 				{
 					Operation: "create",
-					TreePath:  ".gitea/workflows/dispatch.yml",
+					TreePath:  ".branchspire/workflows/dispatch.yml",
 					ContentReader: strings.NewReader(`
 on:
   workflow_dispatch: { inputs: { myinput: { default: def }, myinput2: { default: def2 }, myinput3: { type: boolean, default: false } } }
@@ -1536,8 +1536,8 @@ jobs:
 		json.NewDecoder(resp.Body).Decode(workflows)
 		assert.Len(t, workflows.Workflows, 1)
 		assert.Equal(t, "dispatch.yml", workflows.Workflows[0].Name)
-		assert.Equal(t, ".gitea/workflows/dispatch.yml", workflows.Workflows[0].Path)
-		assert.Equal(t, ".gitea/workflows/dispatch.yml", workflows.Workflows[0].Path)
+		assert.Equal(t, ".branchspire/workflows/dispatch.yml", workflows.Workflows[0].Path)
+		assert.Equal(t, ".branchspire/workflows/dispatch.yml", workflows.Workflows[0].Path)
 		assert.Equal(t, "active", workflows.Workflows[0].State)
 
 		// Use a hardcoded api path
@@ -1679,7 +1679,7 @@ func TestClosePullRequestWithPath(t *testing.T) {
 		user2APICtx := NewAPITestContext(t, baseRepo.OwnerName, baseRepo.Name, auth_model.AccessTokenScopeWriteRepository)
 
 		// init the workflow
-		wfTreePath := ".gitea/workflows/pull.yml"
+		wfTreePath := ".branchspire/workflows/pull.yml"
 		wfFileContent := `name: Pull Request
 on:
   pull_request:
@@ -1764,7 +1764,7 @@ func TestActionRunNameWithContextVariables(t *testing.T) {
 			Files: []*files_service.ChangeRepoFile{
 				{
 					Operation: "create",
-					TreePath:  ".gitea/workflows/runname.yml",
+					TreePath:  ".branchspire/workflows/runname.yml",
 					ContentReader: strings.NewReader(`name: test
 on:
   [create,delete]
@@ -1842,7 +1842,7 @@ func TestActionRunName(t *testing.T) {
 			Files: []*files_service.ChangeRepoFile{
 				{
 					Operation: "create",
-					TreePath:  ".gitea/workflows/runname.yml",
+					TreePath:  ".branchspire/workflows/runname.yml",
 					ContentReader: strings.NewReader(`name: test
 on:
   [create,delete]
@@ -1924,7 +1924,7 @@ jobs:
     steps:
       - run: echo 'ci'
 `
-		testCreateFile(t, session, "user2", repoName, repo.DefaultBranch, "", ".gitea/workflows/ci.yml", wfFileContent)
+		testCreateFile(t, session, "user2", repoName, repo.DefaultBranch, "", ".branchspire/workflows/ci.yml", wfFileContent)
 
 		// create a PR to modify "dir1/dir1.txt", the workflow will be triggered
 		testEditFileToNewBranch(t, session, "user2", repoName, repo.DefaultBranch, "update-dir1", "dir1/dir1.txt", "11")

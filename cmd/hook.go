@@ -14,12 +14,12 @@ import (
 	"strings"
 	"time"
 
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/git/gitcmd"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/private"
-	repo_module "gitea.dev/modules/repository"
-	"gitea.dev/modules/setting"
+	"branchspire/modules/git"
+	"branchspire/modules/git/gitcmd"
+	"branchspire/modules/log"
+	"branchspire/modules/private"
+	repo_module "branchspire/modules/repository"
+	"branchspire/modules/setting"
 
 	"github.com/urfave/cli/v3"
 )
@@ -173,9 +173,9 @@ func runHookPreReceive(ctx context.Context, c *cli.Command) error {
 
 	if len(os.Getenv("SSH_ORIGINAL_COMMAND")) == 0 {
 		if setting.OnlyAllowPushIfGiteaEnvironmentSet {
-			return fail(ctx, `Rejecting changes as Gitea environment not set.
+			return fail(ctx, `Rejecting changes as BranchSpire environment not set.
 If you are pushing over SSH you must push with a key managed by
-Gitea or set your environment appropriately.`, "")
+BranchSpire or set your environment appropriately.`, "")
 		}
 		return nil
 	}
@@ -298,9 +298,9 @@ func runHookPostReceive(ctx context.Context, c *cli.Command) error {
 
 	if len(os.Getenv("SSH_ORIGINAL_COMMAND")) == 0 {
 		if setting.OnlyAllowPushIfGiteaEnvironmentSet {
-			return fail(ctx, `Rejecting changes as Gitea environment not set.
+			return fail(ctx, `Rejecting changes as BranchSpire environment not set.
 If you are pushing over SSH you must push with a key managed by
-Gitea or set your environment appropriately.`, "")
+BranchSpire or set your environment appropriately.`, "")
 		}
 		return nil
 	}
@@ -436,9 +436,9 @@ func runHookProcReceive(ctx context.Context, c *cli.Command) error {
 
 	if len(os.Getenv("SSH_ORIGINAL_COMMAND")) == 0 {
 		if setting.OnlyAllowPushIfGiteaEnvironmentSet {
-			return fail(ctx, `Rejecting changes as Gitea environment not set.
+			return fail(ctx, `Rejecting changes as BranchSpire environment not set.
 If you are pushing over SSH you must push with a key managed by
-Gitea or set your environment appropriately.`, "")
+BranchSpire or set your environment appropriately.`, "")
 		}
 		return nil
 	}

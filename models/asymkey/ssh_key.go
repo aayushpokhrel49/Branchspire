@@ -10,14 +10,14 @@ import (
 	"strings"
 	"time"
 
-	"gitea.dev/models/auth"
-	"gitea.dev/models/db"
-	"gitea.dev/models/perm"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/timeutil"
-	"gitea.dev/modules/util"
+	"branchspire/models/auth"
+	"branchspire/models/db"
+	"branchspire/models/perm"
+	user_model "branchspire/models/user"
+	"branchspire/modules/log"
+	"branchspire/modules/setting"
+	"branchspire/modules/timeutil"
+	"branchspire/modules/util"
 
 	"golang.org/x/crypto/ssh"
 	"xorm.io/builder"
@@ -352,7 +352,7 @@ func AddPublicKeysBySource(ctx context.Context, usr *user_model.User, s *auth.So
 	loop:
 		for len(keys) > 0 && err == nil {
 			var out ssh.PublicKey
-			// We ignore options as they are not relevant to Gitea
+			// We ignore options as they are not relevant to BranchSpire
 			out, _, _, keys, err = ssh.ParseAuthorizedKey(keys)
 			if err != nil {
 				break loop

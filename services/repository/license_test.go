@@ -8,9 +8,9 @@ import (
 	"strings"
 	"testing"
 
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/modules/git"
-	repo_module "gitea.dev/modules/repository"
+	repo_model "branchspire/models/repo"
+	"branchspire/modules/git"
+	repo_module "branchspire/modules/repository"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -31,7 +31,7 @@ func Test_detectLicense(t *testing.T) {
 		},
 		{
 			name: "no detected license",
-			arg:  "Copyright (c) 2023 Gitea",
+			arg:  "Copyright (c) 2023 BranchSpire",
 			want: nil,
 		},
 	}
@@ -39,7 +39,7 @@ func Test_detectLicense(t *testing.T) {
 	require.NoError(t, repo_module.LoadRepoConfig())
 	for _, licenseName := range repo_module.Licenses {
 		license, err := repo_module.GetLicense(licenseName, &repo_module.LicenseValues{
-			Owner: "Gitea",
+			Owner: "BranchSpire",
 			Email: "teabot@gitea.io",
 			Repo:  "gitea",
 			Year:  "2024",
@@ -68,7 +68,7 @@ func Test_detectLicense(t *testing.T) {
 	var multiWant []string
 	for _, name := range repo_module.Licenses[:3] {
 		lic, err := repo_module.GetLicense(name, &repo_module.LicenseValues{
-			Owner: "Gitea", Email: "teabot@gitea.io", Repo: "gitea", Year: "2024",
+			Owner: "BranchSpire", Email: "teabot@gitea.io", Repo: "gitea", Year: "2024",
 		})
 		require.NoError(t, err)
 		multiContent.Write(lic)

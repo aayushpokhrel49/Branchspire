@@ -6,9 +6,9 @@ package actions
 import (
 	"net/http"
 
-	"gitea.dev/modules/web"
-	"gitea.dev/routers/api/actions/ping"
-	"gitea.dev/routers/api/actions/runner"
+	"branchspire/modules/web"
+	"branchspire/routers/api/actions/ping"
+	"branchspire/routers/api/actions/runner"
 )
 
 func Routes(prefix string) *web.Router {

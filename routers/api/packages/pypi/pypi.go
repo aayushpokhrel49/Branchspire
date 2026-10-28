@@ -12,14 +12,14 @@ import (
 	"strings"
 	"unicode"
 
-	packages_model "gitea.dev/models/packages"
-	packages_module "gitea.dev/modules/packages"
-	pypi_module "gitea.dev/modules/packages/pypi"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/validation"
-	"gitea.dev/routers/api/packages/helper"
-	"gitea.dev/services/context"
-	packages_service "gitea.dev/services/packages"
+	packages_model "branchspire/models/packages"
+	packages_module "branchspire/modules/packages"
+	pypi_module "branchspire/modules/packages/pypi"
+	"branchspire/modules/setting"
+	"branchspire/modules/validation"
+	"branchspire/routers/api/packages/helper"
+	"branchspire/services/context"
+	packages_service "branchspire/services/packages"
 )
 
 // https://peps.python.org/pep-0426/#name

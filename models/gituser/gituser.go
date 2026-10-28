@@ -7,16 +7,16 @@ import (
 	"context"
 	"net/url"
 
-	"gitea.dev/models/user"
-	"gitea.dev/modules/container"
-	"gitea.dev/modules/git"
+	"branchspire/models/user"
+	"branchspire/modules/container"
+	"branchspire/modules/git"
 )
 
 // CommitParticipant is one participant of a commit (its author or a co-author):
-// a git identity, optionally matched to a Gitea user.
+// a git identity, optionally matched to a BranchSpire user.
 type CommitParticipant struct {
 	GitIdentity *git.CommitIdentity // git identity (name/email), never nil
-	GiteaUser   *user.User          // matched Gitea user, nil if unmatched
+	GiteaUser   *user.User          // matched BranchSpire user, nil if unmatched
 }
 
 // UserCommit represents a commit with matched of database "author" user.

@@ -6,8 +6,8 @@ package repo
 import (
 	"testing"
 
-	issues_model "gitea.dev/models/issues"
-	"gitea.dev/modules/references"
+	issues_model "branchspire/models/issues"
+	"branchspire/modules/references"
 
 	"github.com/stretchr/testify/assert"
 )

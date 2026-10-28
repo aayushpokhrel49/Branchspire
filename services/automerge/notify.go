@@ -6,15 +6,15 @@ package automerge
 import (
 	"context"
 
-	git_model "gitea.dev/models/git"
-	issues_model "gitea.dev/models/issues"
-	repo_model "gitea.dev/models/repo"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/repository"
-	"gitea.dev/services/automergequeue"
-	notify_service "gitea.dev/services/notify"
-	pull_service "gitea.dev/services/pull"
+	git_model "branchspire/models/git"
+	issues_model "branchspire/models/issues"
+	repo_model "branchspire/models/repo"
+	user_model "branchspire/models/user"
+	"branchspire/modules/log"
+	"branchspire/modules/repository"
+	"branchspire/services/automergequeue"
+	notify_service "branchspire/services/notify"
+	pull_service "branchspire/services/pull"
 )
 
 type automergeNotifier struct {

@@ -7,8 +7,8 @@ import (
 	"context"
 	"fmt"
 
-	"gitea.dev/models/auth"
-	"gitea.dev/models/db"
+	"branchspire/models/auth"
+	"branchspire/models/db"
 )
 
 // UserList is a list of user.

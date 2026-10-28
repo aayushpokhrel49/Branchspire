@@ -15,11 +15,11 @@ import (
 	"strings"
 	"testing"
 
-	"gitea.dev/cmd"
-	"gitea.dev/models/unittest"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/test"
-	"gitea.dev/modules/util"
+	"branchspire/cmd"
+	"branchspire/models/unittest"
+	"branchspire/modules/setting"
+	"branchspire/modules/test"
+	"branchspire/modules/util"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/urfave/cli/v3"
@@ -82,80 +82,80 @@ func TestCliCmd(t *testing.T) {
 	}{
 		// help commands
 		{
-			cmd: "./gitea -h",
+			cmd: "./branchspire -h",
 			exp: "DEFAULT CONFIGURATION:",
 		},
 		{
-			cmd: "./gitea help",
+			cmd: "./branchspire help",
 			exp: "DEFAULT CONFIGURATION:",
 		},
 
 		{
-			cmd: "./gitea -c /dev/null -h",
+			cmd: "./branchspire -c /dev/null -h",
 			exp: "ConfigFile: /dev/null",
 		},
 
 		{
-			cmd: "./gitea -c /dev/null help",
+			cmd: "./branchspire -c /dev/null help",
 			exp: "ConfigFile: /dev/null",
 		},
 		{
-			cmd: "./gitea help -c /dev/null",
-			exp: "ConfigFile: /dev/null",
-		},
-
-		{
-			cmd: "./gitea -c /dev/null test-cmd -h",
-			exp: "ConfigFile: /dev/null",
-		},
-		{
-			cmd: "./gitea test-cmd -c /dev/null -h",
-			exp: "ConfigFile: /dev/null",
-		},
-		{
-			cmd: "./gitea test-cmd -h -c /dev/null",
+			cmd: "./branchspire help -c /dev/null",
 			exp: "ConfigFile: /dev/null",
 		},
 
 		{
-			cmd: "./gitea -c /dev/null test-cmd help",
+			cmd: "./branchspire -c /dev/null test-cmd -h",
 			exp: "ConfigFile: /dev/null",
 		},
 		{
-			cmd: "./gitea test-cmd -c /dev/null help",
+			cmd: "./branchspire test-cmd -c /dev/null -h",
 			exp: "ConfigFile: /dev/null",
 		},
 		{
-			cmd: "./gitea test-cmd help -c /dev/null",
+			cmd: "./branchspire test-cmd -h -c /dev/null",
+			exp: "ConfigFile: /dev/null",
+		},
+
+		{
+			cmd: "./branchspire -c /dev/null test-cmd help",
+			exp: "ConfigFile: /dev/null",
+		},
+		{
+			cmd: "./branchspire test-cmd -c /dev/null help",
+			exp: "ConfigFile: /dev/null",
+		},
+		{
+			cmd: "./branchspire test-cmd help -c /dev/null",
 			exp: "ConfigFile: /dev/null",
 		},
 
 		// parse paths
 		{
-			cmd: "./gitea test-cmd",
+			cmd: "./branchspire test-cmd",
 			exp: makePathOutput(defaultWorkPath, defaultCustomPath, defaultCustomConf),
 		},
 		{
-			cmd: "./gitea -c /tmp/app.ini test-cmd",
+			cmd: "./branchspire -c /tmp/app.ini test-cmd",
 			exp: makePathOutput(defaultWorkPath, defaultCustomPath, "/tmp/app.ini"),
 		},
 		{
-			cmd: "./gitea test-cmd -c /tmp/app.ini",
+			cmd: "./branchspire test-cmd -c /tmp/app.ini",
 			exp: makePathOutput(defaultWorkPath, defaultCustomPath, "/tmp/app.ini"),
 		},
 		{
 			env: map[string]string{"GITEA_WORK_DIR": "/tmp"},
-			cmd: "./gitea test-cmd",
+			cmd: "./branchspire test-cmd",
 			exp: makePathOutput("/tmp", "/tmp/custom", "/tmp/custom/conf/app.ini"),
 		},
 		{
 			env: map[string]string{"GITEA_WORK_DIR": "/tmp"},
-			cmd: "./gitea test-cmd --work-path /tmp/other",
+			cmd: "./branchspire test-cmd --work-path /tmp/other",
 			exp: makePathOutput("/tmp/other", "/tmp/other/custom", "/tmp/other/custom/conf/app.ini"),
 		},
 		{
 			env: map[string]string{"GITEA_WORK_DIR": "/tmp"},
-			cmd: "./gitea test-cmd --config /tmp/app-other.ini",
+			cmd: "./branchspire test-cmd --config /tmp/app-other.ini",
 			exp: makePathOutput("/tmp", "/tmp/custom", "/tmp/app-other.ini"),
 		},
 	}
@@ -185,28 +185,28 @@ func TestCliCmd(t *testing.T) {
 
 func TestCliCmdError(t *testing.T) {
 	app := newTestApp(cli.Command{Action: func(ctx context.Context, cmd *cli.Command) error { return errors.New("normal error") }})
-	r, err := runTestApp(app, "./gitea", "test-cmd")
+	r, err := runTestApp(app, "./branchspire", "test-cmd")
 	assert.Error(t, err)
 	assert.Equal(t, 1, r.ExitCode)
 	assert.Empty(t, r.Stdout)
 	assert.Equal(t, "Command error: normal error\n", r.Stderr)
 
 	app = newTestApp(cli.Command{Action: func(ctx context.Context, cmd *cli.Command) error { return cli.Exit("exit error", 2) }})
-	r, err = runTestApp(app, "./gitea", "test-cmd")
+	r, err = runTestApp(app, "./branchspire", "test-cmd")
 	assert.Error(t, err)
 	assert.Equal(t, 2, r.ExitCode)
 	assert.Empty(t, r.Stdout)
 	assert.Equal(t, "exit error\n", r.Stderr)
 
 	app = newTestApp(cli.Command{Action: func(ctx context.Context, cmd *cli.Command) error { return nil }})
-	r, err = runTestApp(app, "./gitea", "test-cmd", "--no-such")
+	r, err = runTestApp(app, "./branchspire", "test-cmd", "--no-such")
 	assert.Error(t, err)
 	assert.Equal(t, 1, r.ExitCode)
 	assert.Empty(t, r.Stdout)
 	assert.Equal(t, "Incorrect Usage: flag provided but not defined: -no-such\n", r.Stderr)
 
 	app = newTestApp(cli.Command{Action: func(ctx context.Context, cmd *cli.Command) error { return nil }})
-	r, err = runTestApp(app, "./gitea", "test-cmd")
+	r, err = runTestApp(app, "./branchspire", "test-cmd")
 	assert.NoError(t, err)
 	assert.Equal(t, -1, r.ExitCode) // the cli.OsExiter is not called
 	assert.Empty(t, r.Stdout)
@@ -229,7 +229,7 @@ func TestCliCmdBefore(t *testing.T) {
 			return nil
 		},
 	})
-	_, err := runTestApp(app, "./gitea", "--config", "/dev/null", "test-cmd")
+	_, err := runTestApp(app, "./branchspire", "--config", "/dev/null", "test-cmd")
 	assert.NoError(t, err)
 	assert.Equal(t, ctxNew, actionCtx)
 	assert.Equal(t, "/tmp/any.ini", configValues["before"], "BeforeFunc must be called before preparing config")
@@ -240,7 +240,7 @@ func TestCliCmdCompletion(t *testing.T) {
 	app := newTestApp(cli.Command{
 		Action: func(ctx context.Context, cmd *cli.Command) error { return nil },
 	})
-	res, err := runTestApp(app, "./gitea", "completion", "bash", "--nonexist")
+	res, err := runTestApp(app, "./branchspire", "completion", "bash", "--nonexist")
 	assert.Error(t, err)
 	assert.Equal(t, 1, res.ExitCode)
 	assert.Equal(t, "", res.Stdout)

@@ -14,8 +14,8 @@ import (
 	"os"
 	"strings"
 
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/setting"
+	"branchspire/modules/log"
+	"branchspire/modules/setting"
 )
 
 // SMTPSender Sender SMTP mail sender

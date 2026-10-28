@@ -8,12 +8,12 @@ import (
 	"slices"
 	"strconv"
 
-	"gitea.dev/models/perm"
-	"gitea.dev/models/repo"
-	"gitea.dev/models/unit"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/templates"
-	"gitea.dev/services/context"
+	"branchspire/models/perm"
+	"branchspire/models/repo"
+	"branchspire/models/unit"
+	"branchspire/modules/setting"
+	"branchspire/modules/templates"
+	"branchspire/services/context"
 )
 
 const tplRepoSettingsPublicAccess templates.TplName = "repo/settings/public_access"

@@ -11,14 +11,14 @@ import (
 	"net/http"
 	"strings"
 
-	packages_model "gitea.dev/models/packages"
-	cran_model "gitea.dev/models/packages/cran"
-	packages_module "gitea.dev/modules/packages"
-	cran_module "gitea.dev/modules/packages/cran"
-	"gitea.dev/modules/util"
-	"gitea.dev/routers/api/packages/helper"
-	"gitea.dev/services/context"
-	packages_service "gitea.dev/services/packages"
+	packages_model "branchspire/models/packages"
+	cran_model "branchspire/models/packages/cran"
+	packages_module "branchspire/modules/packages"
+	cran_module "branchspire/modules/packages/cran"
+	"branchspire/modules/util"
+	"branchspire/routers/api/packages/helper"
+	"branchspire/services/context"
+	packages_service "branchspire/services/packages"
 )
 
 func apiError(ctx *context.Context, status int, obj any) {

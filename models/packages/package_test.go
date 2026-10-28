@@ -6,13 +6,13 @@ package packages_test
 import (
 	"testing"
 
-	packages_model "gitea.dev/models/packages"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
+	packages_model "branchspire/models/packages"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
 
-	_ "gitea.dev/models"
-	_ "gitea.dev/models/actions"
-	_ "gitea.dev/models/activities"
+	_ "branchspire/models"
+	_ "branchspire/models/actions"
+	_ "branchspire/models/activities"
 
 	"github.com/stretchr/testify/assert"
 )

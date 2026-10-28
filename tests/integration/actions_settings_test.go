@@ -9,10 +9,10 @@ import (
 	"net/url"
 	"testing"
 
-	auth_model "gitea.dev/models/auth"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/models/unittest"
-	user_model "gitea.dev/models/user"
+	auth_model "branchspire/models/auth"
+	repo_model "branchspire/models/repo"
+	"branchspire/models/unittest"
+	user_model "branchspire/models/user"
 
 	"github.com/stretchr/testify/assert"
 )
@@ -37,7 +37,7 @@ func TestActionsCollaborativeOwner(t *testing.T) {
 		runner.registerAsRepoRunner(t, callerRepo.OwnerName, callerRepo.Name, "mock-runner", []string{"ubuntu-latest"}, false)
 
 		// init the workflow for caller
-		wfTreePath := ".gitea/workflows/test_collaborative_owner.yml"
+		wfTreePath := ".branchspire/workflows/test_collaborative_owner.yml"
 		wfFileContent := `name: Test Collaborative Owner
 on: push
 jobs:

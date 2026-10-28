@@ -6,11 +6,11 @@ package audit
 import (
 	"context"
 
-	audit_model "gitea.dev/models/audit"
-	repository_model "gitea.dev/models/repo"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/setting"
+	audit_model "branchspire/models/audit"
+	repository_model "branchspire/models/repo"
+	user_model "branchspire/models/user"
+	"branchspire/modules/log"
+	"branchspire/modules/setting"
 )
 
 // actorRef builds the actor reference of an event. An unresolvable actor means

@@ -10,11 +10,11 @@ import (
 	"sort"
 	"strings"
 
-	"gitea.dev/models/db"
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/storage"
+	"branchspire/models/db"
+	"branchspire/modules/git"
+	"branchspire/modules/log"
+	"branchspire/modules/setting"
+	"branchspire/modules/storage"
 )
 
 // Check represents a Doctor check

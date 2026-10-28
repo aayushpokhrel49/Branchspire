@@ -13,11 +13,11 @@ import (
 	"testing"
 	"time"
 
-	auth_model "gitea.dev/models/auth"
-	"gitea.dev/models/db"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/test"
-	"gitea.dev/modules/timeutil"
+	auth_model "branchspire/models/auth"
+	"branchspire/models/db"
+	"branchspire/modules/setting"
+	"branchspire/modules/test"
+	"branchspire/modules/timeutil"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

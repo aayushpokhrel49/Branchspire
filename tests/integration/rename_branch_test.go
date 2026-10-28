@@ -8,10 +8,10 @@ import (
 	"net/url"
 	"testing"
 
-	git_model "gitea.dev/models/git"
-	repo_model "gitea.dev/models/repo"
-	"gitea.dev/models/unittest"
-	"gitea.dev/tests"
+	git_model "branchspire/models/git"
+	repo_model "branchspire/models/repo"
+	"branchspire/models/unittest"
+	"branchspire/tests"
 
 	"github.com/stretchr/testify/assert"
 )

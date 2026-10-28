@@ -6,7 +6,7 @@ package public
 import (
 	"testing"
 
-	"gitea.dev/modules/container"
+	"branchspire/modules/container"
 
 	"github.com/stretchr/testify/assert"
 )

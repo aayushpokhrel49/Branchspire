@@ -14,10 +14,10 @@ import (
 	"strings"
 	"time"
 
-	"gitea.dev/modules/git"
-	"gitea.dev/modules/log"
-	base "gitea.dev/modules/migration"
-	"gitea.dev/modules/structs"
+	"branchspire/modules/git"
+	"branchspire/modules/log"
+	base "branchspire/modules/migration"
+	"branchspire/modules/structs"
 
 	"github.com/google/go-github/v92/github"
 	"golang.org/x/oauth2"

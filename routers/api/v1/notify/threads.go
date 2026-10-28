@@ -7,12 +7,12 @@ import (
 	"fmt"
 	"net/http"
 
-	activities_model "gitea.dev/models/activities"
-	"gitea.dev/models/db"
-	issues_model "gitea.dev/models/issues"
-	"gitea.dev/services/context"
-	"gitea.dev/services/convert"
-	"gitea.dev/services/notifications"
+	activities_model "branchspire/models/activities"
+	"branchspire/models/db"
+	issues_model "branchspire/models/issues"
+	"branchspire/services/context"
+	"branchspire/services/convert"
+	"branchspire/services/notifications"
 )
 
 // GetThread get notification by ID

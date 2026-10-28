@@ -8,16 +8,16 @@ import (
 	"net/http"
 	"strings"
 
-	"gitea.dev/modules/cache"
-	"gitea.dev/modules/gtprof"
-	"gitea.dev/modules/httplib"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/public"
-	"gitea.dev/modules/reqctx"
-	"gitea.dev/modules/session"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/web/routing"
-	"gitea.dev/services/context"
+	"branchspire/modules/cache"
+	"branchspire/modules/gtprof"
+	"branchspire/modules/httplib"
+	"branchspire/modules/log"
+	"branchspire/modules/public"
+	"branchspire/modules/reqctx"
+	"branchspire/modules/session"
+	"branchspire/modules/setting"
+	"branchspire/modules/web/routing"
+	"branchspire/services/context"
 
 	"github.com/chi-middleware/proxy"
 	"github.com/go-chi/chi/v5"
@@ -47,7 +47,7 @@ func ProtocolMiddlewares() (handlers []any) {
 	return handlers
 }
 
-// SecurityHeadersHandler sets headers globally for every response that leaves Gitea.
+// SecurityHeadersHandler sets headers globally for every response that leaves BranchSpire.
 func SecurityHeadersHandler() func(http.Handler) http.Handler {
 	return func(next http.Handler) http.Handler {
 		return http.HandlerFunc(func(resp http.ResponseWriter, req *http.Request) {

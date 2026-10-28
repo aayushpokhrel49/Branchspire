@@ -8,11 +8,11 @@ import (
 	"net/url"
 	"testing"
 
-	"gitea.dev/modules/options"
-	repo_module "gitea.dev/modules/repository"
-	"gitea.dev/modules/setting"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/tests"
+	"branchspire/modules/options"
+	repo_module "branchspire/modules/repository"
+	"branchspire/modules/setting"
+	api "branchspire/modules/structs"
+	"branchspire/tests"
 
 	"github.com/stretchr/testify/assert"
 )
@@ -34,7 +34,7 @@ func TestAPIListLicenseTemplates(t *testing.T) {
 func TestAPIGetLicenseTemplateInfo(t *testing.T) {
 	defer tests.PrepareTestEnv(t)()
 
-	// If Gitea has for some reason no License templates, we need to skip this test
+	// If BranchSpire has for some reason no License templates, we need to skip this test
 	if len(repo_module.Licenses) == 0 {
 		return
 	}

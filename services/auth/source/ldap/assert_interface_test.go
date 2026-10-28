@@ -4,9 +4,9 @@
 package ldap_test
 
 import (
-	auth_model "gitea.dev/models/auth"
-	"gitea.dev/services/auth"
-	"gitea.dev/services/auth/source/ldap"
+	auth_model "branchspire/models/auth"
+	"branchspire/services/auth"
+	"branchspire/services/auth/source/ldap"
 )
 
 // This test file exists to assert that our Source exposes the interfaces that we expect

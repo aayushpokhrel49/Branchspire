@@ -8,14 +8,14 @@ import (
 	"fmt"
 	"time"
 
-	actions_model "gitea.dev/models/actions"
-	"gitea.dev/models/db"
-	actions_module "gitea.dev/modules/actions"
-	"gitea.dev/modules/container"
-	"gitea.dev/modules/log"
-	"gitea.dev/modules/setting"
-	"gitea.dev/modules/storage"
-	"gitea.dev/modules/timeutil"
+	actions_model "branchspire/models/actions"
+	"branchspire/models/db"
+	actions_module "branchspire/modules/actions"
+	"branchspire/modules/container"
+	"branchspire/modules/log"
+	"branchspire/modules/setting"
+	"branchspire/modules/storage"
+	"branchspire/modules/timeutil"
 
 	"xorm.io/builder"
 )

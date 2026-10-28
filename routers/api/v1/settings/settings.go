@@ -6,9 +6,9 @@ package settings
 import (
 	"net/http"
 
-	"gitea.dev/modules/setting"
-	api "gitea.dev/modules/structs"
-	"gitea.dev/services/context"
+	"branchspire/modules/setting"
+	api "branchspire/modules/structs"
+	"branchspire/services/context"
 )
 
 // GetGeneralUISettings returns instance's global settings for ui

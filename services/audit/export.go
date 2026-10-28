@@ -6,8 +6,8 @@ package audit
 import (
 	"io"
 
-	audit_model "gitea.dev/models/audit"
-	"gitea.dev/modules/json"
+	audit_model "branchspire/models/audit"
+	"branchspire/modules/json"
 )
 
 // WriteEventsAsJSON writes one JSON object per line.

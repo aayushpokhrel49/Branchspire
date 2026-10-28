@@ -10,9 +10,9 @@ import (
 	"os"
 	"text/tabwriter"
 
-	auth_model "gitea.dev/models/auth"
-	"gitea.dev/models/db"
-	auth_service "gitea.dev/services/auth"
+	auth_model "branchspire/models/auth"
+	"branchspire/models/db"
+	auth_service "branchspire/services/auth"
 
 	"github.com/urfave/cli/v3"
 )

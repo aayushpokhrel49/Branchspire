@@ -4,9 +4,9 @@
 package repo
 
 import (
-	issues_model "gitea.dev/models/issues"
-	"gitea.dev/services/context"
-	notify_service "gitea.dev/services/notify"
+	issues_model "branchspire/models/issues"
+	"branchspire/services/context"
+	notify_service "branchspire/services/notify"
 )
 
 // IssueStartStopwatch creates a stopwatch for the given issue.

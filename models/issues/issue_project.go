@@ -6,10 +6,10 @@ package issues
 import (
 	"context"
 
-	"gitea.dev/models/db"
-	project_model "gitea.dev/models/project"
-	user_model "gitea.dev/models/user"
-	"gitea.dev/modules/util"
+	"branchspire/models/db"
+	project_model "branchspire/models/project"
+	user_model "branchspire/models/user"
+	"branchspire/modules/util"
 )
 
 // LoadProjects loads all projects the issue is assigned to

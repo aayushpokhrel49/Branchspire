@@ -12,7 +12,7 @@ import (
 	"strings"
 	"time"
 
-	"gitea.dev/modules/git/gitcmd"
+	"branchspire/modules/git/gitcmd"
 )
 
 // CommitTreeOpts represents the possible options to CommitTree
