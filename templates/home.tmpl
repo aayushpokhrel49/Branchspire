@@ -65,6 +65,232 @@
 	</section>
 	{{end}}
 
+	{{/* workflow section */}}
+	<section class="home-workflow" aria-labelledby="home-workflow-heading">
+		<div class="home-section-wrap">
+			<div class="home-section-header">
+				<h2 id="home-workflow-heading" class="home-section-title">{{ctx.Locale.Tr "startpage.workflow_heading"}}</h2>
+				<p class="home-section-desc">{{ctx.Locale.Tr "startpage.workflow_desc"}}</p>
+			</div>
+			<div class="home-workflow-pipeline">
+				<div class="home-workflow-step">
+					<div class="home-workflow-step-num">01</div>
+					<div class="home-workflow-step-body">
+						<span class="home-workflow-step-tag">{{svg "octicon-git-commit" 14}} {{ctx.Locale.Tr "startpage.workflow_push_title"}}</span>
+						<p>{{ctx.Locale.Tr "startpage.workflow_push_desc"}}</p>
+					</div>
+				</div>
+				<div class="home-workflow-step">
+					<div class="home-workflow-step-num">02</div>
+					<div class="home-workflow-step-body">
+						<span class="home-workflow-step-tag">{{svg "octicon-git-pull-request" 14}} {{ctx.Locale.Tr "startpage.workflow_review_title"}}</span>
+						<p>{{ctx.Locale.Tr "startpage.workflow_review_desc"}}</p>
+					</div>
+				</div>
+				<div class="home-workflow-step">
+					<div class="home-workflow-step-num">03</div>
+					<div class="home-workflow-step-body">
+						<span class="home-workflow-step-tag">{{svg "octicon-play" 14}} {{ctx.Locale.Tr "startpage.workflow_build_title"}}</span>
+						<p>{{ctx.Locale.Tr "startpage.workflow_build_desc"}}</p>
+					</div>
+				</div>
+				<div class="home-workflow-step">
+					<div class="home-workflow-step-num">04</div>
+					<div class="home-workflow-step-body">
+						<span class="home-workflow-step-tag">{{svg "octicon-package" 14}} {{ctx.Locale.Tr "startpage.workflow_ship_title"}}</span>
+						<p>{{ctx.Locale.Tr "startpage.workflow_ship_desc"}}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
+	{{/* features section with authentic product UI fragments (taste-skill product-performs) */}}
+	<section class="home-features" aria-labelledby="home-features-heading">
+		<div class="home-section-wrap">
+			<div class="home-section-header">
+				<h2 id="home-features-heading" class="home-section-title">{{ctx.Locale.Tr "startpage.features_heading"}}</h2>
+				<p class="home-section-desc">{{ctx.Locale.Tr "startpage.features_desc"}}</p>
+			</div>
+
+			<div class="home-feature-list">
+				{{/* Feature 1: Repositories */}}
+				<article class="home-feature-row">
+					<div class="home-feature-copy">
+						<h3>{{ctx.Locale.Tr "startpage.feature_repos_title"}}</h3>
+						<p>{{ctx.Locale.Tr "startpage.feature_repos_desc"}}</p>
+					</div>
+					<div class="home-feature-stage" aria-hidden="true">
+						<div class="home-ui home-ui-repo" data-ui>
+							<div class="home-ui-head">
+								<span class="home-ui-branch">{{svg "octicon-git-branch" 12}} main</span>
+								<span class="home-ui-commit-info">{{svg "octicon-git-commit" 12}} <b>2f4c1a</b> · {{ctx.Locale.Tr "startpage.files_commit"}}</span>
+								<span class="home-ui-time">{{ctx.Locale.Tr "startpage.files_meta"}}</span>
+							</div>
+							<div class="home-ui-file-list">
+								<div class="home-ui-file-row">
+									<span class="home-ui-file-name">{{svg "octicon-file-directory" 14}} {{ctx.Locale.Tr "startpage.files_row_actions"}}</span>
+									<span class="home-ui-file-msg">Dispatch workflow on push and schedule</span>
+									<span class="home-ui-file-age">2h</span>
+								</div>
+								<div class="home-ui-file-row">
+									<span class="home-ui-file-name">{{svg "octicon-file" 14}} {{ctx.Locale.Tr "startpage.files_row_css"}}</span>
+									<span class="home-ui-file-msg">Harmonize poster ground and typography</span>
+									<span class="home-ui-file-age">5h</span>
+								</div>
+								<div class="home-ui-file-row">
+									<span class="home-ui-file-name">{{svg "octicon-file" 14}} {{ctx.Locale.Tr "startpage.files_row_tmpl"}}</span>
+									<span class="home-ui-file-msg">Live product fragments at real size</span>
+									<span class="home-ui-file-age">1d</span>
+								</div>
+								<div class="home-ui-file-row">
+									<span class="home-ui-file-name">{{svg "octicon-file" 14}} {{ctx.Locale.Tr "startpage.files_row_readme"}}</span>
+									<span class="home-ui-file-msg">Single-binary setup & quick start guide</span>
+									<span class="home-ui-file-age">3d</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+
+				{{/* Feature 2: Pull Requests & Code Review */}}
+				<article class="home-feature-row">
+					<div class="home-feature-copy">
+						<h3>{{ctx.Locale.Tr "startpage.feature_review_title"}}</h3>
+						<p>{{ctx.Locale.Tr "startpage.feature_review_desc"}}</p>
+					</div>
+					<div class="home-feature-stage" aria-hidden="true">
+						<div class="home-ui home-ui-pr" data-ui>
+							<div class="home-ui-head">
+								<span class="home-ui-badge is-open">{{svg "octicon-git-pull-request" 13}} Open</span>
+								<strong>{{ctx.Locale.Tr "startpage.workflow_merge_title"}}</strong>
+								<span class="home-ui-pr-meta">#284</span>
+							</div>
+							<div class="home-ui-pr-flow">
+								<span class="home-ui-branch">{{svg "octicon-git-branch" 12}} {{ctx.Locale.Tr "startpage.workflow_merge_branch"}}</span>
+								<span class="home-ui-arrow">→</span>
+								<span class="home-ui-branch">main</span>
+								<span class="home-ui-diff-stat"><span class="is-add">+48</span> <span class="is-del">−12</span></span>
+							</div>
+							<div class="home-ui-checks-row">
+								<span class="is-ok">{{svg "octicon-check-circle-fill" 13}} build / unit tests</span>
+								<span class="is-ok">{{svg "octicon-check-circle-fill" 13}} checks / merge-queue</span>
+								<span class="is-ok">{{svg "octicon-check-circle-fill" 13}} approvals 2/2</span>
+							</div>
+						</div>
+					</div>
+				</article>
+
+				{{/* Feature 3: Actions CI */}}
+				<article class="home-feature-row">
+					<div class="home-feature-copy">
+						<h3>{{ctx.Locale.Tr "startpage.feature_actions_title"}}</h3>
+						<p>{{ctx.Locale.Tr "startpage.feature_actions_desc"}}</p>
+					</div>
+					<div class="home-feature-stage" aria-hidden="true">
+						<div class="home-ui home-ui-actions" data-ui>
+							<div class="home-ui-head">
+								<span class="home-ui-badge is-passing">{{svg "octicon-play" 12}} Active</span>
+								<span class="home-ui-actions-title">{{ctx.Locale.Tr "startpage.actions_run_id"}}</span>
+							</div>
+							<div class="home-ui-jobs-list">
+								<div class="home-ui-job is-done">
+									{{svg "octicon-check" 14}}
+									<span>{{ctx.Locale.Tr "startpage.actions_job_build"}}</span>
+								</div>
+								<div class="home-ui-job is-done">
+									{{svg "octicon-check" 14}}
+									<span>{{ctx.Locale.Tr "startpage.actions_job_e2e"}}</span>
+								</div>
+								<div class="home-ui-job is-done">
+									{{svg "octicon-check" 14}}
+									<span>{{ctx.Locale.Tr "startpage.actions_job_docs"}}</span>
+								</div>
+								<div class="home-ui-job is-done">
+									{{svg "octicon-check" 14}}
+									<span>{{ctx.Locale.Tr "startpage.actions_job_lint"}}</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+
+				{{/* Feature 4: Package Registry */}}
+				<article class="home-feature-row">
+					<div class="home-feature-copy">
+						<h3>{{ctx.Locale.Tr "startpage.feature_packages_title"}}</h3>
+						<p>{{ctx.Locale.Tr "startpage.feature_packages_desc"}}</p>
+					</div>
+					<div class="home-feature-stage" aria-hidden="true">
+						<div class="home-ui home-ui-packages" data-ui>
+							<div class="home-ui-head">
+								<span>{{svg "octicon-package" 14}} {{ctx.Locale.Tr "startpage.packages_upload"}}</span>
+							</div>
+							<div class="home-ui-pkg-grid">
+								<div class="home-ui-pkg-card">
+									<span class="home-ui-pkg-tag">npm</span>
+									<code>{{ctx.Locale.Tr "startpage.packages_row_1"}}</code>
+								</div>
+								<div class="home-ui-pkg-card">
+									<span class="home-ui-pkg-tag">PyPI</span>
+									<code>{{ctx.Locale.Tr "startpage.packages_row_2"}}</code>
+								</div>
+								<div class="home-ui-pkg-card">
+									<span class="home-ui-pkg-tag">OCI</span>
+									<code>{{ctx.Locale.Tr "startpage.packages_row_3"}}</code>
+								</div>
+								<div class="home-ui-pkg-card">
+									<span class="home-ui-pkg-tag">Generic</span>
+									<code>{{ctx.Locale.Tr "startpage.packages_row_4"}}</code>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+			</div>
+		</div>
+	</section>
+
+	{{/* facts section */}}
+	<section class="home-facts" aria-labelledby="home-facts-heading">
+		<div class="home-section-wrap">
+			<h2 id="home-facts-heading" class="home-facts-title">{{ctx.Locale.Tr "startpage.facts_heading"}}</h2>
+			<div class="home-facts-grid">
+				<div class="home-fact">
+					<span class="home-fact-line">{{ctx.Locale.Tr "startpage.fact_registries_line"}}</span>
+					<span class="home-fact-desc">{{ctx.Locale.Tr "startpage.fact_registries_desc"}}</span>
+				</div>
+				<div class="home-fact">
+					<span class="home-fact-line">{{ctx.Locale.Tr "startpage.fact_platforms_line"}}</span>
+					<span class="home-fact-desc">{{ctx.Locale.Tr "startpage.fact_platforms_desc"}}</span>
+				</div>
+				<div class="home-fact">
+					<span class="home-fact-line">{{ctx.Locale.Tr "startpage.fact_actions_line"}}</span>
+					<span class="home-fact-desc">{{ctx.Locale.Tr "startpage.fact_actions_desc"}}</span>
+				</div>
+				<div class="home-fact">
+					<span class="home-fact-line">{{ctx.Locale.Tr "startpage.fact_weight_line"}}</span>
+					<span class="home-fact-desc">{{ctx.Locale.Tr "startpage.fact_weight_desc"}}</span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	{{/* closing CTA */}}
+	<section class="home-cta-section" aria-labelledby="home-cta-heading">
+		<div class="home-section-wrap home-cta-inner">
+			<h2 id="home-cta-heading" class="home-cta-title">{{ctx.Locale.Tr "startpage.cta_heading"}}</h2>
+			<p class="home-cta-lede">{{ctx.Locale.Tr "startpage.cta_lede"}}</p>
+			<div class="home-cta-actions">
+				{{if .ShowRegistrationButton}}
+					<a class="home-btn-primary" href="{{AppSubUrl}}/user/sign_up">{{ctx.Locale.Tr "sign_up"}}</a>
+					<a class="home-btn-secondary" href="{{AppSubUrl}}/user/login">{{ctx.Locale.Tr "sign_in"}}</a>
+				{{else}}
+					<a class="home-btn-primary" href="{{AppSubUrl}}/user/login">{{ctx.Locale.Tr "sign_in"}}</a>
+				{{end}}
+				<a class="home-btn-secondary" href="{{AppSubUrl}}/explore/repos">{{ctx.Locale.Tr "explore_title"}}</a>
+			</div>
+		</div>
+	</section>
 </div>
 {{template "base/footer" .}}

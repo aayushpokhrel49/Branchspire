@@ -6,64 +6,72 @@
 
 /* sign in / register pages */
 .auth-page {
-  padding: 28px 20px 48px;
-  background-image: radial-gradient(640px 360px at 50% 0%, rgb(128 128 128 / 6%), transparent 70%);
+  padding: 40px 20px 64px;
+  background-image: radial-gradient(640px 360px at 50% 0%, var(--color-primary-alpha-10, rgb(128 128 128 / 6%)), transparent 70%);
 }
 
 .auth-brand {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 14px;
-  color: inherit;
+  gap: 12px;
+  color: var(--color-text);
+  margin-bottom: 8px;
+  transition: transform 0.2s ease;
 }
 
 .auth-brand:hover {
   text-decoration: none;
+  transform: translateY(-1px);
 }
 
 .auth-brand img {
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
   border-radius: 12px;
 }
 
 .auth-brand-name {
-  font-size: 1.5rem;
+  font-size: 1.45rem;
   font-weight: var(--font-weight-bold);
   letter-spacing: -0.02em;
+  color: var(--color-text);
 }
 
 .auth-page .ui.attached.header {
-  padding: 18px 26px 16px;
-  border-color: var(--color-secondary);
+  padding: 24px 28px 16px;
+  border: 1px solid var(--color-secondary);
+  border-bottom: 0;
   border-radius: 14px 14px 0 0;
-  background: var(--color-box-header);
-  font-size: 1.05rem;
-  font-weight: var(--font-weight-semibold);
+  background: var(--color-box-body);
+  text-align: center;
 }
 
 .auth-title {
   display: block;
-  font-size: 1.2rem;
-  font-weight: var(--font-weight-semibold);
-  letter-spacing: -0.01em;
+  font-size: 1.35rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  line-height: 1.25;
 }
 
 .auth-subtitle {
   display: block;
-  margin-top: 4px;
-  font-size: 0.85rem;
+  margin-top: 6px;
+  font-size: 0.9rem;
   font-weight: var(--font-weight-normal);
   color: var(--color-text-light-2);
+  line-height: 1.4;
 }
 
 .auth-page .ui.attached.segment {
-  padding: 26px;
-  border-color: var(--color-secondary);
+  padding: 12px 28px 28px;
+  border: 1px solid var(--color-secondary);
+  border-top: 0;
   border-radius: 0 0 14px 14px;
   background: var(--color-box-body);
-  box-shadow: 0 30px 70px -50px var(--color-shadow-opaque);
+  box-shadow: 0 1px 3px var(--color-shadow), 0 24px 48px -12px var(--color-shadow);
 }
 
 .auth-page .ui.attached.segment.header.top {
@@ -84,7 +92,7 @@
 }
 
 .auth-prompt-footer {
-  margin-top: 18px;
+  margin-top: 22px;
   text-align: center;
   font-size: 0.95rem;
   color: var(--color-text-light-1);
@@ -94,18 +102,41 @@
   margin-left: 6px;
   font-weight: var(--font-weight-semibold);
   color: var(--color-primary);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
   transition: color 0.15s ease;
 }
 
 .auth-prompt-footer a:hover {
-  text-decoration: underline;
-  color: var(--color-primary-dark-1);
+  color: var(--color-primary-hover);
+  text-decoration-thickness: 2px;
+}
+
+#external-login-navigator .external-login-link {
+  padding: 11px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--color-secondary);
+  background: var(--color-box-header);
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: var(--font-weight-medium);
+  transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+
+#external-login-navigator .external-login-link:hover {
+  background: var(--color-hover);
+  border-color: var(--color-secondary-dark-1);
+  transform: translateY(-1px);
 }
 
 .auth-passkey-row .signin-passkey {
-  padding: 10px 16px;
-  border-radius: 9px;
+  padding: 11px 16px;
+  border-radius: 8px;
   border-color: var(--color-secondary);
+  background: var(--color-box-header);
+  color: var(--color-text);
+  font-size: 14px;
   font-weight: var(--font-weight-medium);
   transition: background-color 0.15s ease, border-color 0.15s ease;
 }
@@ -115,21 +146,32 @@
   border-color: var(--color-secondary-dark-1);
 }
 
+.auth-page .ui.form .field {
+  margin-bottom: 18px;
+}
+
 .auth-page .ui.form label {
-  font-size: 0.9rem;
-  color: var(--color-text-light-1);
+  font-size: 13.5px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+  margin-bottom: 6px;
 }
 
 .auth-page .ui.form input[type="text"],
 .auth-page .ui.form input[type="email"],
 .auth-page .ui.form input[type="password"] {
-  padding: 12px 14px;
-  border-radius: 9px;
+  padding: 11px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--color-secondary);
+  background-color: var(--color-input-background, var(--color-box-body));
+  color: var(--color-text);
+  font-size: 14px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
 .auth-page .ui.form input:focus {
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 20%, transparent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 18%, transparent);
 }
 
 .auth-password-field {
@@ -152,11 +194,12 @@
   height: 30px;
   padding: 0;
   border: none;
-  border-radius: 7px;
+  border-radius: 6px;
   transform: translateY(-50%);
   color: var(--color-text-light-2);
   background: none;
   cursor: pointer;
+  transition: color 0.15s ease, background-color 0.15s ease;
 }
 
 .auth-password-toggle:hover,
@@ -184,7 +227,7 @@
 
 .auth-hint {
   margin-top: 6px;
-  font-size: 0.85rem;
+  font-size: 12px;
   color: var(--color-text-light-2);
 }
 
@@ -205,6 +248,8 @@
 }
 
 .auth-page .ui.grid .column {
+  max-width: 440px;
+  margin-inline: auto;
   animation: auth-page-rise 0.35s ease both;
 }
 
@@ -215,23 +260,26 @@
 }
 
 .auth-page .ui.primary.button {
-  padding: 13px 18px;
-  border-radius: 9px;
-  background: var(--color-text-dark);
-  color: var(--color-body);
+  padding: 12px 18px;
+  border-radius: 8px;
+  background: var(--color-primary);
+  color: var(--color-primary-contrast);
+  font-size: 14.5px;
   font-weight: var(--font-weight-semibold);
-  transition: opacity 0.18s ease, transform 0.18s ease;
+  transition: background-color 0.18s ease, transform 0.15s ease, box-shadow 0.18s ease;
+  box-shadow: 0 1px 2px var(--color-shadow);
 }
 
 .auth-page .ui.primary.button:hover,
 .auth-page .ui.primary.button:focus {
-  background: var(--color-text-dark);
-  color: var(--color-body);
-  opacity: 0.88;
+  background: var(--color-primary-hover);
+  color: var(--color-primary-contrast);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px var(--color-shadow);
 }
 
 .auth-page .ui.primary.button:active {
-  transform: translateY(1px);
+  transform: none;
 }
 
 @media (max-width: 767.98px) {
