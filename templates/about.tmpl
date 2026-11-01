@@ -1,119 +1,345 @@
 {{template "base/head" .}}
-<div role="main" aria-label="{{ctx.Locale.Tr "about"}}" class="page-content about-page">
-	<div class="about-container">
-		<header class="about-hero">
-			<div class="about-brand-wrap">
-				<img class="about-logo" width="72" height="72" src="{{AssetUrlPrefix}}/img/logo.svg" alt="{{AppName}}">
-				{{if .AppVer}}
-					<span class="about-version-badge">v{{.AppVer}}</span>
-				{{end}}
-			</div>
-			<h1 class="about-title">{{ctx.Locale.Tr "about.title"}}</h1>
-			<p class="about-lede">{{ctx.Locale.Tr "about.lede"}}</p>
-			<div class="about-actions">
-				<a class="ui primary button" href="{{AppSubUrl}}/explore/repos">{{svg "octicon-telescope"}} {{ctx.Locale.Tr "explore_title"}}</a>
-				{{if .ShowRegistrationButton}}
-					<a class="ui button" href="{{AppSubUrl}}/user/sign_up">{{ctx.Locale.Tr "sign_up"}}</a>
-				{{else}}
-					<a class="ui button" href="{{AppSubUrl}}/user/login">{{ctx.Locale.Tr "sign_in"}}</a>
-				{{end}}
-			</div>
-		</header>
-
-		{{if and .NumUsers .NumRepos}}
-		<section class="about-stats" aria-label="{{ctx.Locale.Tr "about.stats_heading"}}">
-			<h2 class="about-section-title">{{ctx.Locale.Tr "about.stats_heading"}}</h2>
-			<div class="about-stats-grid">
-				<div class="about-stat-card">
-					<span class="about-stat-number">{{.NumUsers}}</span>
-					<span class="about-stat-label">{{ctx.Locale.Tr "startpage.stats_users"}}</span>
-				</div>
-				<div class="about-stat-card">
-					<span class="about-stat-number">{{.NumRepos}}</span>
-					<span class="about-stat-label">{{ctx.Locale.Tr "startpage.stats_repos"}}</span>
-				</div>
-				<div class="about-stat-card">
-					<span class="about-stat-number">{{.NumOrgs}}</span>
-					<span class="about-stat-label">{{ctx.Locale.Tr "startpage.stats_orgs"}}</span>
+<div role="main" aria-label="{{ctx.Locale.Tr "about"}}" class="page-content about-page about-home">
+	<section class="about-hero" aria-labelledby="about-hero-title">
+		<div class="about-wrap about-hero-grid">
+			<div class="about-hero-copy">
+				<h1 id="about-hero-title" class="about-hero-title">{{ctx.Locale.Tr "about.title"}}</h1>
+				<p class="about-hero-lede">{{ctx.Locale.Tr "about.lede"}}</p>
+				<div class="about-hero-actions">
+					<a class="about-button" href="{{AppSubUrl}}/explore/repos">{{ctx.Locale.Tr "about.cta_explore"}}</a>
+					{{if .ShowRegistrationButton}}
+						<a class="about-link" href="{{AppSubUrl}}/user/sign_up">{{ctx.Locale.Tr "sign_up"}}</a>
+					{{else}}
+						<a class="about-link" href="{{AppSubUrl}}/user/login">{{ctx.Locale.Tr "sign_in"}}</a>
+					{{end}}
 				</div>
 			</div>
-		</section>
-		{{end}}
 
-		<div class="about-sections">
-			<section class="about-section">
-				<h2 class="about-section-title">{{ctx.Locale.Tr "about.features_heading"}}</h2>
-				<ul class="about-features-grid">
-					<li class="about-feature-card">
-						<div class="about-feature-icon">{{svg "octicon-repo" 24}}</div>
-						<div>
-							<h3>{{ctx.Locale.Tr "about.feature_repos_title"}}</h3>
-							<p>{{ctx.Locale.Tr "about.feature_repos_desc"}}</p>
+			<div class="about-hero-ui" aria-hidden="true">
+				<div class="about-ui about-ui-repo" data-ui>
+					<div class="about-ui-repo-head">
+						<img class="about-ui-repo-logo" width="26" height="26" src="{{AssetUrlPrefix}}/img/logo.svg" alt="">
+						<div class="about-ui-repo-id">
+							<strong>branchspire / branchspire</strong>
+							<span>Public repository</span>
 						</div>
-					</li>
-					<li class="about-feature-card">
-						<div class="about-feature-icon">{{svg "octicon-git-pull-request" 24}}</div>
-						<div>
-							<h3>{{ctx.Locale.Tr "about.feature_review_title"}}</h3>
-							<p>{{ctx.Locale.Tr "about.feature_review_desc"}}</p>
-						</div>
-					</li>
-					<li class="about-feature-card">
-						<div class="about-feature-icon">{{svg "octicon-issue-opened" 24}}</div>
-						<div>
-							<h3>{{ctx.Locale.Tr "about.feature_issues_title"}}</h3>
-							<p>{{ctx.Locale.Tr "about.feature_issues_desc"}}</p>
-						</div>
-					</li>
-					<li class="about-feature-card">
-						<div class="about-feature-icon">{{svg "octicon-play" 24}}</div>
-						<div>
-							<h3>{{ctx.Locale.Tr "about.feature_actions_title"}}</h3>
-							<p>{{ctx.Locale.Tr "about.feature_actions_desc"}}</p>
-						</div>
-					</li>
-					<li class="about-feature-card">
-						<div class="about-feature-icon">{{svg "octicon-package" 24}}</div>
-						<div>
-							<h3>{{ctx.Locale.Tr "about.feature_packages_title"}}</h3>
-							<p>{{ctx.Locale.Tr "about.feature_packages_desc"}}</p>
-						</div>
-					</li>
-					<li class="about-feature-card">
-						<div class="about-feature-icon">{{svg "octicon-people" 24}}</div>
-						<div>
-							<h3>{{ctx.Locale.Tr "about.feature_teams_title"}}</h3>
-							<p>{{ctx.Locale.Tr "about.feature_teams_desc"}}</p>
-						</div>
-					</li>
-				</ul>
-			</section>
-
-			<section class="about-section about-runs-card">
-				<div class="about-runs-icon">{{svg "octicon-server" 32}}</div>
-				<div>
-					<h2>{{ctx.Locale.Tr "about.runs_heading"}}</h2>
-					<p>{{ctx.Locale.Tr "about.runs_desc"}}</p>
-				</div>
-			</section>
-
-			<section class="about-section about-developer-section">
-				<div class="about-developer-card">
-					<div class="about-developer-avatar">
-						{{svg "octicon-person" 36}}
+						<span class="about-ui-branch">{{svg "octicon-git-branch" 13}} main</span>
 					</div>
-					<div class="about-developer-info">
-						<h2>{{ctx.Locale.Tr "about.developer_heading"}}</h2>
-						<p>{{ctx.Locale.Tr "about.developer_text"}}</p>
-						<div class="about-developer-links">
-							<a href="https://aayushhpokhrel.com.np" target="_blank" rel="noopener noreferrer">{{svg "octicon-globe"}} aayushhpokhrel.com.np</a>
-							<a href="https://github.com/aayushpokhrel49" target="_blank" rel="noopener noreferrer">{{svg "octicon-mark-github"}} GitHub</a>
-							<a href="https://x.com/aayushpokhrel49" target="_blank" rel="noopener noreferrer">{{svg "octicon-link-external"}} @aayushpokhrel49</a>
+					<div class="about-ui-tabs">
+						<span class="is-active">{{svg "octicon-code" 13}} Code</span>
+						<span>{{svg "octicon-issue-opened" 13}} Issues <b>12</b></span>
+						<span>{{svg "octicon-git-pull-request" 13}} Pull requests <b>4</b></span>
+						<span>{{svg "octicon-play" 13}} Actions</span>
+						<span>{{svg "octicon-package" 13}} Packages</span>
+					</div>
+					<div class="about-ui-repo-body">
+						<div class="about-ui-files">
+							<div class="about-ui-file-head">
+								<span>main</span>
+								<span>Latest commit <b>2f4c1a</b> · Update install flow</span>
+							</div>
+							<div class="about-ui-file is-selected">{{svg "octicon-file-directory" 15}}<span>cmd</span><span>Add web command</span><span>2h</span></div>
+							<div class="about-ui-file">{{svg "octicon-file-directory" 15}}<span>modules</span><span>Split install loader</span><span>5h</span></div>
+							<div class="about-ui-file">{{svg "octicon-file-directory" 15}}<span>routers</span><span>Rebrand API docs</span><span>1d</span></div>
+							<div class="about-ui-file">{{svg "octicon-file-directory" 15}}<span>services</span><span>Harden auth flow</span><span>2d</span></div>
+							<div class="about-ui-file">{{svg "octicon-file-directory" 15}}<span>web_src</span><span>Refine about page</span><span>3d</span></div>
+							<div class="about-ui-file">{{svg "octicon-file" 15}}<span>README.md</span><span>Document self-hosting</span><span>1w</span></div>
 						</div>
+						<aside class="about-ui-side">
+							<span class="about-ui-side-label">About</span>
+							<p>A self-hosted Git service for repositories, review, issues, CI, and packages.</p>
+							<span class="about-ui-side-label">Releases</span>
+							<span class="about-ui-release">{{svg "octicon-tag" 13}} v29.0.0</span>
+							<span class="about-ui-side-label">Contributors</span>
+							<div class="about-ui-avatars"><span>AP</span><span>+3</span></div>
+						</aside>
 					</div>
 				</div>
-			</section>
+			</div>
 		</div>
-	</div>
+	</section>
+
+	{{if and .NumUsers .NumRepos}}
+	<section class="about-numbers" aria-labelledby="about-numbers-heading">
+		<div class="about-wrap">
+			<div class="about-section-head">
+				<h2 id="about-numbers-heading">{{ctx.Locale.Tr "about.stats_heading"}}</h2>
+			</div>
+			<dl class="about-numbers-grid">
+				<div class="about-number">
+					<dt>{{ctx.Locale.Tr "startpage.stats_users"}}</dt>
+					<dd>{{.NumUsers}}</dd>
+				</div>
+				<div class="about-number">
+					<dt>{{ctx.Locale.Tr "startpage.stats_repos"}}</dt>
+					<dd>{{.NumRepos}}</dd>
+				</div>
+				<div class="about-number">
+					<dt>{{ctx.Locale.Tr "startpage.stats_orgs"}}</dt>
+					<dd>{{.NumOrgs}}</dd>
+				</div>
+			</dl>
+		</div>
+	</section>
+	{{end}}
+
+	<section class="about-capabilities" aria-labelledby="about-capabilities-heading">
+		<div class="about-wrap">
+			<div class="about-section-head">
+				<h2 id="about-capabilities-heading">{{ctx.Locale.Tr "about.features_heading"}}</h2>
+				<p>{{ctx.Locale.Tr "about.features_desc"}}</p>
+			</div>
+
+			<div class="about-feature-list">
+				<article class="about-feature">
+					<div class="about-feature-copy">
+						<h3>{{ctx.Locale.Tr "about.feature_repos_title"}}</h3>
+						<p>{{ctx.Locale.Tr "about.feature_repos_desc"}}</p>
+					</div>
+					<div class="about-feature-ui">
+     						<div class="about-ui about-ui-code" data-ui aria-hidden="true">
+     							<div class="about-ui-code-head">
+     								<span>routers/install/install.go</span>
+     								<span class="about-ui-branch">{{svg "octicon-git-branch" 13}} main</span>
+     							</div>
+     							<div class="about-ui-code-body">
+     								<div class="about-ui-code-line"><span class="about-ui-ln">142</span><code><span class="about-code-keyword">func</span> <span class="about-code-name">SubmitInstall</span>(ctx *context.Context) {</code></div>
+     								<div class="about-ui-code-line"><span class="about-ui-ln">143</span><code>    form := web.GetForm(ctx).(*forms.InstallForm)</code></div>
+     								<div class="about-ui-code-line"><span class="about-ui-ln">144</span><code>    <span class="about-code-keyword">if</span> !installFormReady(ctx, form) {</code></div>
+     								<div class="about-ui-code-line"><span class="about-ui-ln">145</span><code>        <span class="about-code-keyword">return</span></code></div>
+     								<div class="about-ui-code-line"><span class="about-ui-ln">146</span><code>    }</code></div>
+     								<div class="about-ui-code-line"><span class="about-ui-ln">147</span><code>    install(ctx, form)</code></div>
+     								<div class="about-ui-code-line"><span class="about-ui-ln">148</span><code>}</code></div>
+     							</div>
+     						</div>
+					
+					</div>
+				</article>
+
+				<article class="about-feature">
+					<div class="about-feature-copy">
+						<h3>{{ctx.Locale.Tr "about.feature_review_title"}}</h3>
+						<p>{{ctx.Locale.Tr "about.feature_review_desc"}}</p>
+					</div>
+					<div class="about-feature-ui">
+     						<div class="about-ui about-ui-review" data-ui aria-hidden="true">
+     							<div class="about-ui-review-head">
+     								<span class="about-ui-status">Open</span>
+     								<strong>Refine install loading screen</strong>
+     								<span>#128</span>
+     							</div>
+     							<div class="about-ui-review-branches">
+     								<span>{{svg "octicon-git-branch" 13}} feat/install-loader</span>
+     								<span>→</span>
+     								<span>main</span>
+     							</div>
+     							<div class="about-ui-checks">
+     								<span>{{svg "octicon-check-circle-fill" 13}} Tests</span>
+     								<span>{{svg "octicon-check-circle-fill" 13}} Build</span>
+     								<span>{{svg "octicon-check-circle-fill" 13}} Lint</span>
+     							</div>
+     							<div class="about-ui-diff">
+     								<div><span class="about-diff-del">−</span><code>public/assets/img/loading.png</code></div>
+     								<div class="is-add"><span class="about-diff-add">+</span><code>templates/base/branchspire_loader.tmpl</code></div>
+     								<div class="is-add"><span class="about-diff-add">+</span><code>web_src/css/loader.css</code></div>
+     							</div>
+     							<div class="about-ui-comment">
+     								<span class="about-ui-avatar">AP</span>
+     								<p><strong>Aayush</strong> The loader now uses the BranchSpire mark.</p>
+     							</div>
+     						</div>
+					
+					</div>
+				</article>
+
+				<article class="about-feature">
+					<div class="about-feature-copy">
+						<h3>{{ctx.Locale.Tr "about.feature_issues_title"}}</h3>
+						<p>{{ctx.Locale.Tr "about.feature_issues_desc"}}</p>
+					</div>
+					<div class="about-feature-ui">
+     						<div class="about-ui about-ui-issues" data-ui aria-hidden="true">
+     							<div class="about-ui-toolbar">
+     								<span>{{svg "octicon-issue-opened" 14}} Issues</span>
+     								<span class="about-ui-pill">12 open</span>
+     							</div>
+     							<div class="about-ui-issue">
+     								<span class="about-ui-dot"></span>
+     								<div><strong>Improve repository search</strong><span>#42 opened 2h ago by aayush</span></div>
+     								<span class="about-ui-label">enhancement</span>
+     							</div>
+     							<div class="about-ui-issue">
+     								<span class="about-ui-dot"></span>
+     								<div><strong>Add ARM install notes</strong><span>#41 opened 1d ago by aayush</span></div>
+     								<span class="about-ui-label is-blue">docs</span>
+     							</div>
+     							<div class="about-ui-issue">
+     								<span class="about-ui-dot"></span>
+     								<div><strong>Package registry retry</strong><span>#39 opened 3d ago by aayush</span></div>
+     								<span class="about-ui-label is-blue">bug</span>
+     							</div>
+     						</div>
+					
+					</div>
+				</article>
+
+				<article class="about-feature">
+					<div class="about-feature-copy">
+						<h3>{{ctx.Locale.Tr "about.feature_actions_title"}}</h3>
+						<p>{{ctx.Locale.Tr "about.feature_actions_desc"}}</p>
+					</div>
+					<div class="about-feature-ui">
+     						<div class="about-ui about-ui-actions" data-ui aria-hidden="true">
+     							<div class="about-ui-toolbar">
+     								<span>{{svg "octicon-play" 14}} Actions</span>
+     								<span class="about-ui-pill is-ok">Passing</span>
+     							</div>
+     							<div class="about-ui-run">
+     								<span class="about-ui-dot"></span>
+     								<div><strong>Build and test</strong><span>main · 1m 42s</span></div>
+     								<span class="about-ui-muted">#482</span>
+     							</div>
+     							<div class="about-ui-steps">
+     								<div class="is-done">{{svg "octicon-check" 14}} Set up job</div>
+     								<div class="is-done">{{svg "octicon-check" 14}} Run make test</div>
+     								<div class="is-done">{{svg "octicon-check" 14}} Build frontend</div>
+     								<div class="is-active"><span class="about-ui-spinner"></span> Publish release</div>
+     							</div>
+     						</div>
+					
+					</div>
+				</article>
+
+				<article class="about-feature">
+					<div class="about-feature-copy">
+						<h3>{{ctx.Locale.Tr "about.feature_packages_title"}}</h3>
+						<p>{{ctx.Locale.Tr "about.feature_packages_desc"}}</p>
+					</div>
+					<div class="about-feature-ui">
+     						<div class="about-ui about-ui-packages" data-ui aria-hidden="true">
+     							<div class="about-ui-toolbar">
+     								<span>{{svg "octicon-package" 14}} Packages</span>
+     								<span class="about-ui-muted">3 registries</span>
+     							</div>
+     							<div class="about-ui-package">
+     								<span class="about-ui-pkg-icon">{{svg "octicon-package" 16}}</span>
+     								<div><strong>branchspire</strong><span>Container · v29.0.0</span></div>
+     								<span class="about-ui-muted">1.2k pulls</span>
+     							</div>
+     							<div class="about-ui-package">
+     								<span class="about-ui-pkg-icon">{{svg "octicon-package" 16}}</span>
+     								<div><strong>@branchspire/ui</strong><span>npm · v2.4.1</span></div>
+     								<span class="about-ui-muted">843 installs</span>
+     							</div>
+     							<div class="about-ui-package">
+     								<span class="about-ui-pkg-icon">{{svg "octicon-package" 16}}</span>
+     								<div><strong>branchspire-cli</strong><span>Cargo · v1.8.0</span></div>
+     								<span class="about-ui-muted">516 installs</span>
+     							</div>
+     						</div>
+					
+					</div>
+				</article>
+
+				<article class="about-feature">
+					<div class="about-feature-copy">
+						<h3>{{ctx.Locale.Tr "about.feature_teams_title"}}</h3>
+						<p>{{ctx.Locale.Tr "about.feature_teams_desc"}}</p>
+					</div>
+					<div class="about-feature-ui">
+     						<div class="about-ui about-ui-teams" data-ui aria-hidden="true">
+     							<div class="about-ui-toolbar">
+     								<span>{{svg "octicon-people" 14}} People</span>
+     								<span class="about-ui-muted">3 members</span>
+     							</div>
+     							<div class="about-ui-member">
+     								<span class="about-ui-avatar">AP</span>
+     								<div><strong>Aayush Pokhrel</strong><span>@aayush</span></div>
+     								<span class="about-ui-role">Owner</span>
+     							</div>
+     							<div class="about-ui-member">
+     								<span class="about-ui-avatar">BS</span>
+     								<div><strong>BranchSpire Bot</strong><span>@branchspire</span></div>
+     								<span class="about-ui-role">Maintainer</span>
+     							</div>
+     							<div class="about-ui-member">
+     								<span class="about-ui-avatar">+</span>
+     								<div><strong>3 collaborators</strong><span>Read access</span></div>
+     								<span class="about-ui-role">Team</span>
+     							</div>
+     						</div>
+					
+					</div>
+				</article>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="about-anywhere" aria-labelledby="about-anywhere-heading">
+		<div class="about-wrap about-anywhere-grid">
+			<div class="about-anywhere-copy">
+				<h2 id="about-anywhere-heading">{{ctx.Locale.Tr "about.runs_heading"}}</h2>
+				<p>{{ctx.Locale.Tr "about.runs_desc"}}</p>
+			</div>
+			<div class="about-anywhere-panel">
+				<div class="about-ui about-ui-terminal" data-ui aria-hidden="true">
+					<div class="about-ui-terminal-label">Terminal</div>
+					<pre><code><span class="about-terminal-prompt">$</span> ./branchspire web
+<span class="about-terminal-ok">[ok]</span> server listening on http://localhost:3000
+<span class="about-terminal-ok">[ok]</span> database: sqlite3<span class="about-terminal-cursor"></span></code></pre>
+				</div>
+				<dl class="about-anywhere-list">
+					<div>
+						<dt>{{ctx.Locale.Tr "about.runs_platforms_label"}}</dt>
+						<dd>{{ctx.Locale.Tr "about.runs_platforms"}}</dd>
+					</div>
+					<div>
+						<dt>{{ctx.Locale.Tr "about.runs_databases_label"}}</dt>
+						<dd>{{ctx.Locale.Tr "about.runs_databases"}}</dd>
+					</div>
+					<div>
+						<dt>{{ctx.Locale.Tr "about.runs_install_label"}}</dt>
+						<dd>{{ctx.Locale.Tr "about.runs_install"}}</dd>
+					</div>
+				</dl>
+			</div>
+		</div>
+	</section>
+
+	<section class="about-colophon" aria-labelledby="about-colophon-heading">
+		<div class="about-wrap about-colophon-grid">
+			<div class="about-colophon-note">
+				<h2 id="about-colophon-heading">{{ctx.Locale.Tr "about.developer_heading"}}</h2>
+				<p>{{ctx.Locale.Tr "about.developer_text"}}</p>
+			</div>
+			<div class="about-colophon-meta">
+				<nav class="about-colophon-links" aria-label="{{ctx.Locale.Tr "about.developer_heading"}}">
+					<a href="https://gitlab.com/aayushpokhrel49/branchspire" target="_blank" rel="noopener noreferrer">{{svg "octicon-code" 16}} {{ctx.Locale.Tr "about.developer_source"}}</a>
+					<a href="https://aayushhpokhrel.com.np" target="_blank" rel="noopener noreferrer">{{svg "octicon-globe" 16}} aayushhpokhrel.com.np</a>
+					<a href="https://github.com/aayushpokhrel49" target="_blank" rel="noopener noreferrer">{{svg "octicon-mark-github" 16}} GitHub</a>
+					<a href="https://x.com/aayushpokhrel49" target="_blank" rel="noopener noreferrer">{{svg "octicon-link-external" 16}} @aayushpokhrel49</a>
+				</nav>
+				{{if and .AppVer (ne .AppVer "development")}}
+					<p class="about-colophon-version">{{ctx.Locale.Tr "about.version_label"}} <span>v{{.AppVer}}</span></p>
+				{{end}}
+			</div>
+		</div>
+	</section>
+
+	<section class="about-cta" aria-labelledby="about-cta-heading">
+		<div class="about-wrap about-cta-inner">
+			<h2 id="about-cta-heading">{{ctx.Locale.Tr "about.cta_heading"}}</h2>
+			<p>{{ctx.Locale.Tr "about.cta_desc"}}</p>
+			<div class="about-cta-actions">
+				<a class="about-button" href="{{AppSubUrl}}/explore/repos">{{ctx.Locale.Tr "about.cta_explore"}}</a>
+				{{if .ShowRegistrationButton}}
+					<a class="about-link" href="{{AppSubUrl}}/user/sign_up">{{ctx.Locale.Tr "sign_up"}}</a>
+				{{else}}
+					<a class="about-link" href="{{AppSubUrl}}/user/login">{{ctx.Locale.Tr "sign_in"}}</a>
+				{{end}}
+			</div>
+		</div>
+	</section>
 </div>
 {{template "base/footer" .}}

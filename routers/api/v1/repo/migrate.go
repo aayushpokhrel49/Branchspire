@@ -32,7 +32,7 @@ import (
 	repo_service "branchspire/services/repository"
 )
 
-// Migrate migrate remote git repository to gitea
+// Migrate migrate remote git repository to BranchSpire
 func Migrate(ctx *context.APIContext) {
 	// swagger:operation POST /repos/migrate repository repoMigrate
 	// ---

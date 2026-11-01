@@ -9,7 +9,7 @@
 					<div class="ui stackable middle very relaxed page grid">
 						<div id="repo_migrating" class="sixteen wide tw-text-center centered column" data-migrating-repo-link="{{.Link}}">
 							<div>
-								<img alt src="{{AssetUrlPrefix}}/img/loading.png">
+								{{template "base/branchspire_loader" .}}
 							</div>
 						</div>
 						<div id="repo_migrating_failed_image" class="sixteen wide tw-text-center centered column tw-hidden">

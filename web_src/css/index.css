@@ -60,6 +60,7 @@
 @import "./home.css";
 @import "./about.css";
 @import "./install.css";
+@import "./loader.css";
 
 @import "./repo.css";
 @import "./repo/release-tag.css";

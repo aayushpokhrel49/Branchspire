@@ -14,8 +14,8 @@ export function initInstall() {
 }
 
 function initPreInstall() {
-  const defaultDbUser = 'gitea';
-  const defaultDbName = 'gitea';
+  const defaultDbUser = 'branchspire';
+  const defaultDbName = 'branchspire';
 
   const defaultDbHosts: Record<string, string> = {
     mysql: '127.0.0.1:3306',

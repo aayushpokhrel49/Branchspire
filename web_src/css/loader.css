@@ -1,0 +1,89 @@
+/* BranchSpire loading mark, shared by the install and repository-migration screens. */
+.branchspire-loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.branchspire-loader-mark {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 104px;
+  height: 104px;
+}
+
+.branchspire-loader-mark img {
+  width: 68px;
+  height: 68px;
+  animation: branchspire-loader-breathe 2.4s ease-in-out infinite;
+}
+
+.branchspire-loader-ring {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.branchspire-loader-track,
+.branchspire-loader-arc {
+  fill: none;
+  stroke-width: 2.5;
+}
+
+.branchspire-loader-track {
+  stroke: var(--color-secondary-alpha-50);
+}
+
+.branchspire-loader-arc {
+  stroke: var(--color-primary);
+  stroke-linecap: round;
+  stroke-dasharray: 18 82;
+  animation: branchspire-loader-spin 1.4s linear infinite;
+}
+
+.branchspire-loader-name {
+  color: var(--color-text-light-2);
+  font-size: 13px;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+@keyframes branchspire-loader-spin {
+  from {
+    stroke-dashoffset: 0;
+  }
+
+  to {
+    stroke-dashoffset: -100;
+  }
+}
+
+@keyframes branchspire-loader-breathe {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.9;
+    transform: scale(1.04);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .branchspire-loader-mark img {
+    animation: none;
+  }
+
+  .branchspire-loader-arc {
+    animation: none;
+    stroke-dasharray: 100 0;
+    opacity: 0.35;
+  }
+}

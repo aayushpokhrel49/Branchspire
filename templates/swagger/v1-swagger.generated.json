@@ -17,9 +17,9 @@
       "name": "MIT",
       "url": "http://opensource.org/licenses/MIT"
     },
-    "version": "0.0.0+GITEA-API-APP-VERSION"
+    "version": "0.0.0+BRANCHSPIRE-API-APP-VERSION"
   },
-  "basePath": "/GITEA-API-APP-SUBURL/api/v1",
+  "basePath": "/BRANCHSPIRE-API-APP-SUBURL/api/v1",
   "paths": {
     "/admin/actions/jobs": {
       "get": {
@@ -33785,7 +33785,7 @@
           "x-go-name": "FullName"
         },
         "html_url": {
-          "description": "URL to the user's gitea page",
+          "description": "URL to the user's BranchSpire page",
           "type": "string",
           "x-go-name": "HTMLURL"
         },

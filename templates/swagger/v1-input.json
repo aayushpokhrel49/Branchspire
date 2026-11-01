@@ -1,8 +1,8 @@
 {
   "info": {
-    "version": "0.0.0+GITEA-API-APP-VERSION"
+    "version": "0.0.0+BRANCHSPIRE-API-APP-VERSION"
   },
-  "basePath": "/GITEA-API-APP-SUBURL/api/v1",
+  "basePath": "/BRANCHSPIRE-API-APP-SUBURL/api/v1",
   "tags": [
     {"name": "admin", "description": "Site administration"},
     {"name": "issue", "description": "Issues, pull requests, comments, labels and milestones"},

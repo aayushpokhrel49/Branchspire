@@ -21,8 +21,8 @@ func swaggerJsonServe(ctx *context.Context, file string) {
 		return
 	}
 	r := strings.NewReplacer(
-		"0.0.0+GITEA-API-APP-VERSION", template.JSEscapeString(setting.AppVer),
-		"/GITEA-API-APP-SUBURL/", template.JSEscapeString(setting.AppSubURL)+"/",
+		"0.0.0+BRANCHSPIRE-API-APP-VERSION", template.JSEscapeString(setting.AppVer),
+		"/BRANCHSPIRE-API-APP-SUBURL/", template.JSEscapeString(setting.AppSubURL)+"/",
 	)
 	ctx.Resp.Header().Set("Content-Type", "application/json")
 	_, _ = r.WriteString(ctx.Resp, util.UnsafeBytesToString(buf))
