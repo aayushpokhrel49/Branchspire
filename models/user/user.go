@@ -282,7 +282,7 @@ func (u *User) MaxCreationLimit() int {
 // It ONLY checks the repo number LIMIT or whether owner user is real. If new checks are added, those functions should be revised.
 // TODO: the callers can only return ErrReachLimitOfRepo, need to fine tune to support other error types in the future.
 func (u *User) CanCreateRepoIn(owner *User) bool {
-	if u.ID <= 0 || owner.ID <= 0 {
+	if u == nil || owner == nil || u.ID <= 0 || owner.ID <= 0 {
 		return false // fake user like Ghost or Actions user
 	}
 	if u.IsAdmin {
@@ -294,6 +294,13 @@ func (u *User) CanCreateRepoIn(owner *User) bool {
 		return true
 	}
 	return owner.NumRepos < limit
+}
+
+func (u *User) CanCreateRepo() bool {
+	if u == nil {
+		return false
+	}
+	return u.CanCreateRepoIn(u)
 }
 
 // CanCreateOrganization returns true if user can create organisation.

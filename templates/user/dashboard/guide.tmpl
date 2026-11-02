@@ -13,7 +13,7 @@
 			{{svg "octicon-person" 16}}
 			{{ctx.Locale.Tr "home.explore_users"}}
 		</a>
-		{{if .SignedUser.CanCreateRepo}}
+		{{if and .SignedUser .SignedUser.CanCreateRepo}}
 			<a class="ui basic button" href="{{AppSubUrl}}/repo/create">
 				{{svg "octicon-plus" 16}}
 				{{ctx.Locale.Tr "new_repo"}}

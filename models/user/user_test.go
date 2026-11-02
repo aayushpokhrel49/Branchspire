@@ -732,4 +732,15 @@ func TestCanCreateRepo(t *testing.T) {
 		// per-org override bypasses the global org limit
 		assert.True(t, doerNormal.CanCreateRepoIn(orgOwner(10, 100)))
 	})
+
+	t.Run("CanCreateRepo", func(t *testing.T) {
+		setting.Repository.UserMaxCreationLimit = noLimit
+		assert.True(t, doerNormal.CanCreateRepo())
+		assert.True(t, doerAdmin.CanCreateRepo())
+		assert.False(t, doerActions.CanCreateRepo())
+		assert.False(t, (*user_model.User)(nil).CanCreateRepo())
+
+		limitedUser := &user_model.User{ID: 4, NumRepos: 5, MaxRepoCreation: 5}
+		assert.False(t, limitedUser.CanCreateRepo())
+	})
 }
