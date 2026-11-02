@@ -1,10 +1,23 @@
-<div class="tw-text-center tw-p-8">
-	{{svg "octicon-package" 24 "tw-text-placeholder-text"}}
-	<h3 class="tw-my-4">{{ctx.Locale.Tr "home.guide_title"}}</h3>
-	<p class="tw-text-placeholder-text">{{ctx.Locale.Tr "home.guide_desc"}}</p>
-	<div>
-		<a href="{{AppSubUrl}}/explore/repos">{{ctx.Locale.Tr "home.explore_repos"}}</a>
-		<span>·</span>
-		<a href="{{AppSubUrl}}/explore/users">{{ctx.Locale.Tr "home.explore_users"}}</a>
+<div class="dashboard-guide-card">
+	<div class="dashboard-guide-icon">
+		{{svg "octicon-git-branch" 32}}
+	</div>
+	<h3 class="dashboard-guide-title">{{ctx.Locale.Tr "home.guide_title"}}</h3>
+	<p class="dashboard-guide-desc">{{ctx.Locale.Tr "home.guide_desc"}}</p>
+	<div class="dashboard-guide-actions">
+		<a class="ui primary button" href="{{AppSubUrl}}/explore/repos">
+			{{svg "octicon-repo" 16}}
+			{{ctx.Locale.Tr "home.explore_repos"}}
+		</a>
+		<a class="ui basic button" href="{{AppSubUrl}}/explore/users">
+			{{svg "octicon-person" 16}}
+			{{ctx.Locale.Tr "home.explore_users"}}
+		</a>
+		{{if .SignedUser.CanCreateRepo}}
+			<a class="ui basic button" href="{{AppSubUrl}}/repo/create">
+				{{svg "octicon-plus" 16}}
+				{{ctx.Locale.Tr "new_repo"}}
+			</a>
+		{{end}}
 	</div>
 </div>

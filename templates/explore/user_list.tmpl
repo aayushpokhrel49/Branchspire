@@ -1,6 +1,6 @@
 <div class="flex-divided-list items-with-main">
 	{{range .Users}}
-		<div class="item tw-items-center">
+		<div class="item">
 			<div class="item-leading">
 				{{ctx.AvatarUtils.Avatar . 48}}
 			</div>
@@ -11,7 +11,10 @@
 						<span class="ui basic tiny label">{{ctx.Locale.Tr "repo.desc.private"}}</span>
 					{{end}}
 				</div>
-				<div class="item-body">
+				{{if .Description}}
+					<div class="item-body user-desc">{{.Description}}</div>
+				{{end}}
+				<div class="item-body item-meta">
 					{{if .Location}}
 						<span class="flex-text-inline">{{svg "octicon-location"}}{{.Location}}</span>
 					{{end}}

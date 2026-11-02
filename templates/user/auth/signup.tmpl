@@ -1,15 +1,25 @@
 {{template "base/head" .}}
+<link rel="stylesheet" href="{{AssetUrlPrefix}}/auth-preview.css">
 <div role="main" aria-label="{{.Title}}" class="page-content user signin{{if .LinkAccountMode}} icon{{else}} auth-page{{end}}">
+	{{if .LinkAccountMode}}
 	<div class="ui middle very relaxed page grid">
 		<div class="column tw-flex tw-flex-col tw-gap-5 tw-max-w-lg tw-m-auto">
-			{{if not .LinkAccountMode}}
-				<a class="auth-brand" href="{{AppSubUrl}}/">
-					<img width="48" height="48" src="{{AssetUrlPrefix}}/img/logo.svg" alt="">
-					<span class="auth-brand-name">{{AppName}}</span>
-				</a>
-			{{end}}
 			{{template "user/auth/signup_inner" .}}
 		</div>
 	</div>
+	{{else}}
+	<div class="auth-shell">
+		<aside class="auth-stage">
+			<p class="auth-stage-claim">{{ctx.Locale.Tr "startpage.cta_heading"}}</p>
+			<p class="auth-stage-desc">{{ctx.Locale.Tr "startpage.cta_lede"}}</p>
+			{{template "user/auth/stage_fragments" .}}
+		</aside>
+		<div class="auth-panel">
+			<div class="auth-panel-inner">
+				{{template "user/auth/signup_inner" .}}
+			</div>
+		</div>
+	</div>
+	{{end}}
 </div>
 {{template "base/footer" .}}

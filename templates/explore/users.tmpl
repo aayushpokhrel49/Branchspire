@@ -1,9 +1,42 @@
 {{template "base/head" .}}
-<div role="main" aria-label="{{.Title}}" class="page-content explore users">
+<div role="main" aria-label="{{.Title}}" class="page-content explore users{{if .PageIsExploreOrganizations}} organizations{{end}}">
 	{{template "explore/navbar" .}}
 	<div class="ui container">
+		<header class="explore-hero">
+			<h1 class="explore-hero-title">{{if .PageIsExploreOrganizations}}{{ctx.Locale.Tr "explore.tab_orgs"}}{{else}}{{ctx.Locale.Tr "explore.tab_users"}}{{end}}</h1>
+			<p class="explore-hero-lede">{{if .PageIsExploreOrganizations}}{{ctx.Locale.Tr "explore.brand_desc"}}{{else}}{{ctx.Locale.Tr "explore.hero_desc"}}{{end}}</p>
+			<nav class="explore-quick-links" aria-label="{{ctx.Locale.Tr "explore.quick_links"}}">
+				<a href="{{AppSubUrl}}/explore/repos">{{svg "octicon-repo" 16}}{{ctx.Locale.Tr "explore.tab_repos"}}</a>
+				{{if .PageIsExploreOrganizations}}
+					<a href="{{AppSubUrl}}/explore/users">{{svg "octicon-person" 16}}{{ctx.Locale.Tr "explore.tab_users"}}</a>
+					{{if .SignedUser.CanCreateOrganization}}
+						<a href="{{AppSubUrl}}/org/create">{{svg "octicon-plus" 16}}{{ctx.Locale.Tr "new_org"}}</a>
+					{{end}}
+				{{else}}
+					<a href="{{AppSubUrl}}/explore/organizations">{{svg "octicon-organization" 16}}{{ctx.Locale.Tr "explore.tab_orgs"}}</a>
+				{{end}}
+				<a href="{{AppSubUrl}}/about">{{svg "octicon-info" 16}}{{ctx.Locale.Tr "explore.about_link"}}</a>
+			</nav>
+		</header>
 		{{template "explore/search" .}}
-		{{template "explore/user_list" .}}
+		{{if .Users}}
+			<div class="explore-results-count">
+				{{if .PageIsExploreOrganizations}}
+					{{ctx.Locale.TrN .Page.Paginator.Total "explore.orgs_count_1" "explore.orgs_count_n" (CountFmt .Page.Paginator.Total)}}
+				{{else}}
+					{{ctx.Locale.TrN .Page.Paginator.Total "explore.people_count_1" "explore.people_count_n" (CountFmt .Page.Paginator.Total)}}
+				{{end}}
+			</div>
+			<div class="user-cards">
+				{{template "explore/user_list" .}}
+			</div>
+		{{else}}
+			<div class="explore-empty-list">
+				<div class="explore-empty-icon">{{if .PageIsExploreOrganizations}}{{svg "octicon-organization" 40}}{{else}}{{svg "octicon-person" 40}}{{end}}</div>
+				<h2>{{if .PageIsExploreOrganizations}}{{ctx.Locale.Tr "explore.no_orgs_title"}}{{else}}{{ctx.Locale.Tr "explore.no_users_title"}}{{end}}</h2>
+				<p>{{if .PageIsExploreOrganizations}}{{ctx.Locale.Tr "explore.no_orgs_desc"}}{{else}}{{ctx.Locale.Tr "explore.no_users_desc"}}{{end}}</p>
+			</div>
+		{{end}}
 		{{template "base/paginate" .}}
 	</div>
 </div>

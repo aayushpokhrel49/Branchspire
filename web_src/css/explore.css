@@ -265,6 +265,93 @@
   text-align: center;
 }
 
+/* ---- user & organization cards (explore tab) ---- */
+.user-cards .flex-divided-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr));
+  gap: 16px;
+  min-width: 0;
+}
+
+.user-cards .flex-divided-list > .item {
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px;
+  border: 1px solid var(--color-secondary);
+  border-radius: 12px;
+  background: var(--color-card);
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.user-cards .flex-divided-list > .item:focus-within {
+  border-color: var(--color-primary);
+}
+
+@media (hover: hover) {
+  .user-cards .flex-divided-list > .item:hover {
+    border-color: var(--color-secondary-dark-1);
+    box-shadow: 0 8px 24px -14px var(--color-shadow);
+    transform: translateY(-2px);
+  }
+}
+
+.user-cards .flex-divided-list > .item .item-leading img {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--border-radius-full);
+}
+
+.explore.organizations .user-cards .flex-divided-list > .item .item-leading img {
+  border-radius: 10px;
+}
+
+.user-cards .flex-divided-list > .item .item-title {
+  gap: 6px;
+  font-size: 15px;
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.4;
+  flex-wrap: wrap;
+}
+
+.user-cards .flex-divided-list > .item .item-title a {
+  color: var(--color-text);
+}
+
+.user-cards .flex-divided-list > .item .item-title a:hover {
+  color: var(--color-primary);
+}
+
+.user-cards .flex-divided-list > .item .user-desc {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--color-text-light-2);
+  margin-top: 4px;
+}
+
+.user-cards .flex-divided-list > .item .item-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--color-text-light-2);
+}
+
+.user-cards .flex-divided-list > .item .item-meta .flex-text-inline {
+  gap: 4px;
+}
+
+.user-cards .flex-divided-list > .item .item-meta .svg {
+  width: 14px;
+  height: 14px;
+  opacity: 0.8;
+}
+
 /* empty states of the other explore lists (users, organizations) */
 .explore.users .flex-divided-list > .item:not(:has(.item-main)) {
   padding: 48px 16px;
@@ -281,13 +368,15 @@
 
 @media (prefers-reduced-motion: reduce) {
   .repo-cards .flex-divided-list > .item,
+  .user-cards .flex-divided-list > .item,
   .explore-quick-links a,
   .repo-search-filter .item.ui.dropdown,
   .repo-cards .flex-divided-list > .item .item-main > .label-list .ui.label {
     transition: none;
   }
 
-  .repo-cards .flex-divided-list > .item:hover {
+  .repo-cards .flex-divided-list > .item:hover,
+  .user-cards .flex-divided-list > .item:hover {
     transform: none;
   }
 }
@@ -303,19 +392,22 @@
     min-width: 0;
   }
 
-  .repo-cards .flex-divided-list {
+  .repo-cards .flex-divided-list,
+  .user-cards .flex-divided-list {
     gap: 10px;
   }
 
-  .repo-cards .flex-divided-list > .item {
+  .repo-cards .flex-divided-list > .item,
+  .user-cards .flex-divided-list > .item {
     padding: 14px;
     gap: 10px;
   }
 
   .repo-cards .flex-divided-list > .item .item-leading img,
-  .repo-cards .flex-divided-list > .item .item-leading .svg {
-    width: 32px;
-    height: 32px;
+  .repo-cards .flex-divided-list > .item .item-leading .svg,
+  .user-cards .flex-divided-list > .item .item-leading img {
+    width: 36px;
+    height: 36px;
   }
 
   .repo-cards .flex-divided-list > .item .item-main > .item-updated {

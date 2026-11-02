@@ -1,5 +1,6 @@
-/* BranchSpire polish: repository view and settings pages.
-   Roundness follows the raised --border-radius from base.css. */
+/* BranchSpire polish: repository view, settings, and user dashboard pages.
+   Follows the "product performs" aesthetic: high precision, subtle borders,
+   crafted elevations, and refined micro-interactions. */
 
 /* ---- repository page: header row ---- */
 .secondary-nav .repo-header {
@@ -12,13 +13,53 @@
 }
 
 .secondary-nav .repo-header .ui.basic.label {
+  padding: 2px 10px;
   border-radius: var(--border-radius-full);
+  border-color: var(--color-secondary);
+  background: var(--color-secondary-alpha-20);
+  color: var(--color-text-light-1);
+  font-size: 11.5px;
   font-weight: var(--font-weight-medium);
+}
+
+.secondary-nav .repo-header .ui.basic.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: 1px solid var(--color-secondary);
+  border-radius: 8px;
+  background: var(--color-card);
+  color: var(--color-text);
+  font-size: 13px;
+  font-weight: var(--font-weight-medium);
+  box-shadow: 0 1px 2px var(--color-shadow);
+  transition: border-color 0.16s ease, background-color 0.16s ease, box-shadow 0.16s ease;
+}
+
+.secondary-nav .repo-header .ui.basic.button:hover {
+  border-color: var(--color-secondary-dark-1);
+  background: var(--color-hover);
+  color: var(--color-text);
+}
+
+.secondary-nav .repo-header .ui.basic.button .ui.label {
+  margin-left: 4px;
+  padding: 1px 8px;
+  border-radius: var(--border-radius-full);
+  background: var(--color-secondary-alpha-40);
+  color: var(--color-text-light-1);
+  font-size: 11.5px;
+  font-weight: var(--font-weight-semibold);
+  font-variant-numeric: tabular-nums;
 }
 
 /* ---- repository page: section tabs ---- */
 .secondary-nav .ui.secondary.pointing.menu .item {
   padding: 10px 14px;
+  font-weight: var(--font-weight-medium);
+  font-size: 13.5px;
+  transition: color 0.15s ease, border-color 0.15s ease;
 }
 
 .secondary-nav .ui.secondary.pointing.menu .item .ui.small.label {
@@ -31,6 +72,7 @@
   font-size: 11px;
   font-weight: var(--font-weight-medium);
   line-height: 1.7;
+  font-variant-numeric: tabular-nums;
 }
 
 .secondary-nav .ui.secondary.pointing.menu .item.active .ui.small.label {
@@ -38,10 +80,106 @@
   color: var(--color-primary);
 }
 
+/* ---- repository page: summary ribbon (commits, branches, tags) ---- */
+.repository .repository-summary {
+  margin: 12px 0 6px !important;
+  border: 1px solid var(--color-secondary-alpha-50) !important;
+  border-radius: 10px !important;
+  background: var(--color-card) !important;
+  box-shadow: 0 1px 3px -1px var(--color-shadow);
+  overflow: hidden;
+}
+
+.repository .repository-summary .segment.sub-menu {
+  padding: 0;
+  background: transparent;
+}
+
+.repository .repository-summary .sub-menu .item {
+  height: 38px;
+  padding: 0 16px;
+  font-size: 13px;
+  color: var(--color-text-light-1);
+  gap: 6px;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.repository .repository-summary .sub-menu .item:not(:last-child) {
+  border-right: 1px solid var(--color-secondary-alpha-40);
+}
+
+.repository .repository-summary .sub-menu .item:hover {
+  background: var(--color-hover);
+  color: var(--color-text);
+}
+
+.repository .repository-summary .sub-menu .item b {
+  color: var(--color-text);
+  font-weight: var(--font-weight-semibold);
+  font-variant-numeric: tabular-nums;
+}
+
+.repository .repository-summary .sub-menu .item .svg {
+  color: var(--color-text-light-2);
+  width: 15px;
+  height: 15px;
+}
+
+.repository .repository-summary .sub-menu .item:hover .svg {
+  color: var(--color-primary);
+}
+
+/* ---- repository page: button row / action bar ---- */
+.repository .repo-button-row {
+  margin: 12px 0 10px;
+  gap: 10px;
+}
+
+.repository .repo-button-row .ui.button {
+  border-radius: 8px;
+  border: 1px solid var(--color-secondary);
+  background: var(--color-card);
+  font-size: 13px;
+  font-weight: var(--font-weight-medium);
+  padding: 7px 12px;
+  min-height: 34px;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.repository .repo-button-row .ui.button:hover {
+  border-color: var(--color-secondary-dark-1);
+  background: var(--color-hover);
+}
+
+.repository .repo-button-row .repo-file-search-container .ui.input {
+  height: 34px;
+}
+
+.repository .repo-button-row .repo-file-search-container .ui.input input {
+  border-radius: 8px;
+  border: 1px solid var(--color-secondary);
+  background: var(--color-input-background);
+  padding: 6px 36px 6px 12px;
+  font-size: 13px;
+}
+
+.repository .repo-button-row .repo-file-search-container .ui.input kbd {
+  border-radius: 5px;
+  border: 1px solid var(--color-secondary);
+  background: var(--color-card);
+  color: var(--color-text-light-2);
+  font-size: 11px;
+  font-weight: var(--font-weight-medium);
+  padding: 2px 6px;
+}
+
 /* ---- repository page: file list ---- */
 #repo-files-table {
   border-color: var(--color-secondary-alpha-50);
   background: var(--color-card);
+  border-radius: 10px;
+  box-shadow: 0 1px 3px -1px var(--color-shadow);
+  overflow: hidden;
 }
 
 #repo-files-table .repo-file-line,
@@ -50,7 +188,19 @@
 }
 
 #repo-files-table .repo-file-last-commit {
+  background: var(--color-box-header);
   font-size: 13.5px;
+  font-weight: var(--font-weight-medium);
+}
+
+#repo-files-table .repo-file-cell.name .svg.octicon-file-directory-fill,
+#repo-files-table .repo-file-cell.name .svg.octicon-file-directory {
+  color: var(--color-primary);
+}
+
+#repo-files-table .repo-file-cell.name .svg.octicon-file,
+#repo-files-table .repo-file-cell.name .svg.octicon-file-code {
+  color: var(--color-text-light-2);
 }
 
 #repo-files-table .repo-file-cell.message {
@@ -60,6 +210,7 @@
 #repo-files-table .repo-file-cell.age {
   color: var(--color-text-light-2);
   font-size: 12.5px;
+  font-variant-numeric: tabular-nums;
 }
 
 #repo-files-table .repo-file-item,
@@ -68,24 +219,67 @@
   transition: background-color 0.14s ease;
 }
 
-.repository .repo-button-row {
+/* ---- repository page: right sidebar ---- */
+.repo-home-sidebar-header {
+  font-size: 12px;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text-light-1);
+}
+
+#repo-topics .repo-topic {
+  padding: 3px 10px;
+  border-radius: var(--border-radius-full);
+  background: var(--color-primary-alpha-10);
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary-alpha-20);
+  font-size: 12px;
+  font-weight: var(--font-weight-medium);
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+#repo-topics .repo-topic:hover {
+  background: var(--color-primary-alpha-20);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.repo-home-sidebar-top a.flex-text-block.muted,
+.repo-home-sidebar-bottom a.flex-text-block.muted {
+  font-size: 13px;
   gap: 8px;
+  transition: color 0.15s ease;
+}
+
+.repo-home-sidebar-top a.flex-text-block.muted:hover,
+.repo-home-sidebar-bottom a.flex-text-block.muted:hover {
+  color: var(--color-primary);
+}
+
+.repo-home-sidebar-top .flex-text-block b {
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text);
 }
 
 /* ---- repository page: readme and single-file views ---- */
 .non-diff-file-content {
   border: 1px solid var(--color-secondary-alpha-50);
-  border-radius: var(--border-radius);
+  border-radius: 10px;
   background: var(--color-card);
+  box-shadow: 0 1px 3px -1px var(--color-shadow);
   overflow: hidden;
 }
 
 .non-diff-file-content .header {
-  padding: 12px 16px;
+  padding: 12px 18px;
   background: var(--color-box-header);
+  border-bottom: 1px solid var(--color-secondary-alpha-50);
+  font-size: 13.5px;
+  font-weight: var(--font-weight-semibold);
 }
 
-/* ---- settings pages (user + org) ---- */
+/* ---- user & organization settings pages ---- */
 .user.settings .flex-container,
 .org.settings .flex-container {
   gap: 28px;
@@ -115,10 +309,217 @@
   font-weight: var(--font-weight-medium);
 }
 
+/* ---- user dashboard ---- */
+.dashboard .secondary-nav .ui.secondary.menu .item {
+  border-radius: 8px;
+  font-weight: var(--font-weight-medium);
+}
+
+.dashboard .activity-heatmap-container {
+  padding: 18px 20px;
+  border: 1px solid var(--color-secondary-alpha-50);
+  border-radius: 12px;
+  background: var(--color-card);
+  box-shadow: 0 1px 3px -1px var(--color-shadow);
+  margin-bottom: 16px;
+}
+
+.dashboard .activity-heatmap-container + .divider {
+  display: none;
+}
+
+.dashboard #activity-feed {
+  gap: 12px;
+}
+
+.dashboard #activity-feed > .item {
+  padding: 14px 18px;
+  border: 1px solid var(--color-secondary-alpha-50);
+  border-radius: 12px;
+  background: var(--color-card);
+  box-shadow: 0 1px 3px -1px var(--color-shadow);
+  transition: border-color 0.16s ease, box-shadow 0.16s ease;
+}
+
+@media (hover: hover) {
+  .dashboard #activity-feed > .item:hover {
+    border-color: var(--color-secondary-dark-1);
+    box-shadow: 0 6px 20px -10px var(--color-shadow);
+  }
+}
+
+.dashboard #activity-feed > .item .item-leading img {
+  border-radius: var(--border-radius-full);
+}
+
+.dashboard #activity-feed > .item .item-trailing .svg {
+  width: 20px;
+  height: 20px;
+  padding: 6px;
+  box-sizing: content-box;
+  border-radius: var(--border-radius-full);
+  background: var(--color-secondary-alpha-20);
+  color: var(--color-text-light-2);
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.dashboard #activity-feed > .item:hover .item-trailing .svg {
+  background: var(--color-primary-alpha-20);
+  color: var(--color-primary);
+}
+
+.dashboard #activity-feed .ui.sha.label {
+  font-family: var(--fonts-monospace);
+  font-size: 11.5px;
+  font-weight: var(--font-weight-medium);
+  padding: 2px 7px;
+  border-radius: 6px;
+  border: 1px solid var(--color-secondary-alpha-60);
+  background: var(--color-secondary-alpha-20);
+  color: var(--color-text);
+  font-variant-numeric: tabular-nums;
+}
+
+.dashboard #activity-feed .issue.title {
+  font-weight: var(--font-weight-semibold);
+  font-size: 14px;
+  color: var(--color-text);
+}
+
+.dashboard #activity-feed .issue.title:hover {
+  color: var(--color-primary);
+}
+
+.dashboard #activity-feed .render-content.markup {
+  margin-top: 6px;
+  padding: 8px 14px;
+  border-left: 3px solid var(--color-primary-alpha-40);
+  border-radius: 0 8px 8px 0;
+  background: var(--color-hover);
+  font-size: 13px;
+  color: var(--color-text-light-1);
+}
+
+/* dashboard guide empty state */
+.dashboard-guide-card {
+  padding: 48px 24px;
+  border: 1px dashed var(--color-secondary);
+  border-radius: 14px;
+  background: var(--color-card);
+  text-align: center;
+}
+
+.dashboard-guide-card .dashboard-guide-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: var(--border-radius-full);
+  background: var(--color-primary-alpha-10);
+  color: var(--color-primary);
+  margin-bottom: 16px;
+}
+
+.dashboard-guide-card .dashboard-guide-title {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+}
+
+.dashboard-guide-card .dashboard-guide-desc {
+  margin: 8px auto 20px;
+  max-width: 48ch;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--color-text-light-2);
+  text-wrap: balance;
+}
+
+.dashboard-guide-card .dashboard-guide-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.dashboard-guide-card .dashboard-guide-actions .ui.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: var(--font-weight-medium);
+}
+
+/* dashboard sidebar repo and org list */
+.dashboard .dashboard-repos,
+.dashboard .dashboard-orgs {
+  border: 1px solid var(--color-secondary-alpha-50);
+  border-radius: 12px;
+  background: var(--color-card);
+  box-shadow: 0 1px 3px -1px var(--color-shadow);
+  overflow: hidden;
+}
+
+.dashboard .dashboard-repos .ui.attached.header,
+.dashboard .dashboard-orgs .ui.attached.header {
+  padding: 12px 16px;
+  background: var(--color-box-header);
+  border-bottom: 1px solid var(--color-secondary-alpha-50);
+  font-size: 13.5px;
+  font-weight: var(--font-weight-semibold);
+}
+
+.dashboard .dashboard-repos .ui.attached.header .ui.label,
+.dashboard .dashboard-orgs .ui.attached.header .ui.label {
+  background: var(--color-secondary-alpha-40);
+  border-radius: var(--border-radius-full);
+  font-weight: var(--font-weight-semibold);
+  font-variant-numeric: tabular-nums;
+  padding: 1px 8px;
+}
+
+.dashboard .dashboard-repos .ui.attached.segment,
+.dashboard .dashboard-orgs .ui.attached.segment {
+  background: var(--color-card);
+  border-color: var(--color-secondary-alpha-40);
+}
+
+.dashboard .repo-owner-name-list li {
+  transition: background-color 0.14s ease;
+  padding: 8px 12px;
+}
+
+.dashboard .repo-owner-name-list li:hover {
+  background: var(--color-hover);
+}
+
+.dashboard .repo-list-link {
+  font-size: 13.5px;
+  font-weight: var(--font-weight-medium);
+}
+
+.dashboard .repo-list-link .svg {
+  color: var(--color-text-light-2);
+  transition: color 0.14s ease;
+}
+
+.dashboard .repo-owner-name-list li:hover .repo-list-link .svg {
+  color: var(--color-primary);
+}
+
 @media (prefers-reduced-motion: reduce) {
   #repo-files-table .repo-file-item,
   #repo-files-table .repo-file-line,
-  #repo-files-table .parent-link {
+  #repo-files-table .parent-link,
+  .dashboard #activity-feed > .item,
+  .secondary-nav .repo-header .ui.basic.button,
+  .repository .repository-summary .sub-menu .item,
+  .repository .repo-button-row .ui.button {
     transition: none;
   }
 }
@@ -133,53 +534,16 @@
   .org.settings .flex-container {
     gap: 18px;
   }
-}
 
-/* ---- dashboard ---- */
-.dashboard .secondary-nav .ui.secondary.menu .item {
-  border-radius: var(--border-radius);
-}
-
-.dashboard .activity-heatmap-container {
-  padding: 16px;
-  border: 1px solid var(--color-secondary-alpha-50);
-  border-radius: var(--border-radius);
-  background: var(--color-card);
-  margin-bottom: 16px;
-}
-
-.dashboard .activity-heatmap-container + .divider {
-  display: none;
-}
-
-.dashboard #activity-feed {
-  gap: 12px;
-}
-
-.dashboard #activity-feed > .item {
-  padding: 14px 16px;
-  border: 1px solid var(--color-secondary-alpha-50);
-  border-radius: var(--border-radius);
-  background: var(--color-card);
-}
-
-.dashboard .dashboard-repos .ui.attached.header,
-.dashboard .dashboard-orgs .ui.attached.header {
-  padding: 12px 16px;
-  background: var(--color-box-header);
-}
-
-.dashboard .dashboard-repos .ui.attached.segment,
-.dashboard .dashboard-orgs .ui.attached.segment {
-  background: var(--color-card);
-}
-
-@media (max-width: 767.98px) {
   .dashboard .activity-heatmap-container {
     padding: 12px;
   }
 
   .dashboard #activity-feed > .item {
     padding: 12px 14px;
+  }
+
+  .dashboard-guide-card {
+    padding: 32px 16px;
   }
 }

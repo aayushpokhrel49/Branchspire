@@ -1,0 +1,60 @@
+<div class="auth-fragments" aria-hidden="true">
+	<div class="auth-fragment auth-fragment-repo" data-ui>
+		<div class="auth-fragment-top">
+			<span class="auth-fragment-repo-name">{{svg "octicon-repo" 14}} branchspire / branchspire</span>
+			<span class="auth-fragment-chip">{{ctx.Locale.Tr "settings.visibility.public"}}</span>
+			<span class="auth-fragment-branch">{{svg "octicon-git-branch" 12}} main</span>
+		</div>
+		<div class="auth-fragment-commit">
+			<span>{{svg "octicon-git-commit" 13}} {{ctx.Locale.Tr "startpage.files_commit"}}</span>
+			<span class="auth-fragment-meta">{{ctx.Locale.Tr "startpage.files_meta"}}</span>
+		</div>
+		<ul class="auth-fragment-files">
+			<li>{{svg "octicon-file-code" 12}} <span>{{ctx.Locale.Tr "startpage.files_row_actions"}}</span></li>
+			<li>{{svg "octicon-file-code" 12}} <span>{{ctx.Locale.Tr "startpage.files_row_css"}}</span></li>
+			<li>{{svg "octicon-file-code" 12}} <span>{{ctx.Locale.Tr "startpage.files_row_tmpl"}}</span></li>
+			<li>{{svg "octicon-file" 12}} <span>{{ctx.Locale.Tr "startpage.files_row_readme"}}</span></li>
+		</ul>
+	</div>
+
+	<div class="auth-fragment auth-fragment-actions" data-ui>
+		<div class="auth-fragment-head">
+			<span>{{svg "octicon-play" 13}} {{ctx.Locale.Tr "startpage.actions_run_id"}}</span>
+			<span class="auth-fragment-pass">{{svg "octicon-check-circle" 13}}</span>
+		</div>
+		<ul class="auth-fragment-jobs">
+			<li>{{svg "octicon-check-circle" 13}} <span>{{ctx.Locale.Tr "startpage.actions_job_build"}}</span></li>
+			<li>{{svg "octicon-check-circle" 13}} <span>{{ctx.Locale.Tr "startpage.actions_job_e2e"}}</span></li>
+			<li>{{svg "octicon-check-circle" 13}} <span>{{ctx.Locale.Tr "startpage.actions_job_docs"}}</span></li>
+			<li>{{svg "octicon-check-circle" 13}} <span>{{ctx.Locale.Tr "startpage.actions_job_lint"}}</span></li>
+		</ul>
+	</div>
+
+	<div class="auth-fragment auth-fragment-packages" data-ui>
+		<div class="auth-fragment-head">
+			<span>{{svg "octicon-package" 13}} {{ctx.Locale.Tr "startpage.packages_upload"}}</span>
+		</div>
+		<ul class="auth-fragment-jobs">
+			<li>{{svg "octicon-tag" 12}} <span>{{ctx.Locale.Tr "startpage.packages_row_1"}}</span></li>
+			<li>{{svg "octicon-tag" 12}} <span>{{ctx.Locale.Tr "startpage.packages_row_2"}}</span></li>
+			<li>{{svg "octicon-tag" 12}} <span>{{ctx.Locale.Tr "startpage.packages_row_3"}}</span></li>
+			<li>{{svg "octicon-tag" 12}} <span>{{ctx.Locale.Tr "startpage.packages_row_4"}}</span></li>
+		</ul>
+	</div>
+
+	<div class="auth-fragment auth-fragment-commits" data-ui>
+		<div class="auth-fragment-head">
+			<span>{{svg "octicon-git-branch" 13}} {{ctx.Locale.Tr "startpage.workflow_merge_branch"}}</span>
+			<span class="auth-fragment-chip">{{ctx.Locale.Tr "startpage.workflow_review_title"}}</span>
+		</div>
+		<ol class="auth-commit-list">
+			<li><code>c2c2bfb</code><span><b>optimized for mobile devices</b><em>2026-11-01</em></span></li>
+			<li><code>b9999cf</code><span><b>created new about page</b><em>2026-11-01</em></span></li>
+			<li><code>2bbc7c3</code><span><b>branchspire</b><em>2026-10-28</em></span></li>
+			<li><code>217300f</code><span><b>fix(pull): fix code context of review comments on unchanged lines</b><em>2026-10-16</em></span></li>
+			<li><code>70a5ff7</code><span><b>enhance(oauth): pre-register a builtin OAuth2 application</b><em>2026-10-16</em></span></li>
+			<li><code>a36bb47</code><span><b>enhance(ui): use normal line-height for buttons</b><em>2026-10-16</em></span></li>
+		</ol>
+		<div class="auth-commit-status">{{svg "octicon-check-circle" 13}} <span>6 commits · all checks passed</span></div>
+	</div>
+</div>
