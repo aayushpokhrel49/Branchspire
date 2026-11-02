@@ -356,6 +356,7 @@ html.theme-arc-green {
   color: var(--color-text-light-1);
   font-size: 18px;
   line-height: 1.5;
+  animation-delay: 0.05s;
 }
 
 .auth-card > .ui.message {
@@ -375,6 +376,7 @@ html.theme-arc-green {
 
 .auth-form {
   margin-top: 26px;
+  animation-delay: 0.12s;
 }
 
 .auth-card > .ui.message + .auth-form,
@@ -664,6 +666,10 @@ body:has(.page-content.auth-page) .home-footer {
   border-top: 0;
 }
 
+body:has(.page-content.auth-page) .home-footer > .home-footer-grid > nav:last-child {
+  text-align: right;
+}
+
 body:has(.page-content.auth-page) .home-footer-base {
   border-top: 0;
   font-size: 14px;
@@ -746,14 +752,6 @@ body:has(.page-content.auth-page) .home-footer-base {
 
 .auth-fragment:nth-child(4) {
   animation-delay: 0.36s;
-}
-
-.auth-card-sub {
-  animation-delay: 0.05s;
-}
-
-.auth-form {
-  animation-delay: 0.12s;
 }
 
 .auth-alt,

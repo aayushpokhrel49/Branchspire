@@ -1,35 +1,5 @@
 /* sign in / register: ink stage + paper form */
 
-:root {
-  --auth-action-bg: #0d1117;
-  --auth-action-fg: #f4f4f4;
-  --auth-action-hover: #20262e;
-  --auth-link: var(--color-primary-dark-2);
-}
-
-:root[data-theme="gitea-dark"] {
-  --auth-action-bg: #f4f4f4;
-  --auth-action-fg: #0d1117;
-  --auth-action-hover: #fff;
-  --auth-link: var(--color-primary-light-1);
-}
-
-html.theme-arc-green {
-  --auth-action-bg: #f4f4f4;
-  --auth-action-fg: #0d1117;
-  --auth-action-hover: #fff;
-  --auth-link: var(--color-primary-light-1);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root[data-theme="gitea-auto"] {
-    --auth-action-bg: #f4f4f4;
-    --auth-action-fg: #0d1117;
-    --auth-action-hover: #fff;
-    --auth-link: var(--color-primary-light-1);
-  }
-}
-
 .auth-page {
   --auth-ink: #0d1117;
   --auth-paper: #f4f4f4;
@@ -654,16 +624,16 @@ html.theme-arc-green {
 
 /* the shared navbar and footer step back on auth pages */
 
-body:has(.page-content.auth-page) #navbar {
-  border-bottom: 0;
-}
-
 body:has(.page-content.auth-page) .navbar-auth-buttons {
   display: none;
 }
 
 body:has(.page-content.auth-page) .home-footer {
   border-top: 0;
+}
+
+body:has(.page-content.auth-page) .home-footer > .home-footer-grid > nav:last-child {
+  text-align: right;
 }
 
 body:has(.page-content.auth-page) .home-footer-base {
@@ -804,12 +774,6 @@ body:has(.page-content.auth-page) .home-footer-base {
   .auth-panel-inner {
     position: static;
     max-width: 460px;
-  }
-}
-
-@media (max-width: 767.98px) {
-  body:has(.page-content.auth-page) #navbar-logo .navbar-brand-name.not-mobile {
-    display: inline !important;
   }
 }
 

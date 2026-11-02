@@ -27,15 +27,6 @@ body:has(.page-content.home) {
   background-color: var(--home-ink);
 }
 
-/* landing-scoped chrome: no hairline borders or shadows on this page */
-body:has(.page-content.home) #navbar {
-  border-bottom: none;
-}
-
-body:has(.page-content.home) .navbar-auth-button {
-  box-shadow: none;
-}
-
 /* the landing is one ink field: any stretch space blends into it */
 body:has(.page-content.home) .page-content {
   background-color: var(--home-ink);

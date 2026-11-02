@@ -15,14 +15,21 @@ Windows on x86, amd64, ARM, RISC-V 64 and PowerPC architectures.
 
 ## Documentation
 
-BranchSpire is based on Gitea, and the Gitea documentation applies to it:
+- [docs/branchspire.md](docs/branchspire.md) — BranchSpire's own documentation:
+  what differs from upstream, configuration essentials, and build/run.
+- [docs/](docs) — developer guides (setup, development, testing, backend and
+  frontend style).
+
+Because BranchSpire is a Gitea fork, upstream Gitea documentation remains the
+full reference for everything not listed in
+[docs/branchspire.md](docs/branchspire.md):
 
 - [Installation](https://docs.gitea.com/installation/install-from-binary)
 - [Administration](https://docs.gitea.com/administration/config-cheat-sheet)
 - [Usage](https://docs.gitea.com/usage/quick-start)
 
-Instance setup starts in [custom/conf/app.example.ini](custom/conf/app.example.ini),
-which documents every supported configuration option.
+The example configuration [custom/conf/app.example.ini](custom/conf/app.example.ini)
+documents every supported option of this codebase.
 
 ## Building
 
@@ -46,8 +53,7 @@ Expected workflow is: Fork -> Patch -> Push -> Pull Request
 ## License
 
 This project is licensed under the MIT License.
-See the [LICENSE](https://github.com/go-gitea/gitea/blob/main/LICENSE) file
-for the full license text.
+See the [LICENSE](LICENSE) file for the full license text.
 
 Copyright and attribution to the original Gitea authors is preserved in the
 source files and the upstream repository.

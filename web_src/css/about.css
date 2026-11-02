@@ -39,6 +39,14 @@ body:has(.page-content.about-home) {
   background: var(--about-paper);
 }
 
+body:has(.page-content.about-home) .home-footer {
+  border-top: 0;
+}
+
+body:has(.page-content.about-home) .home-footer-base {
+  border-top: 0;
+}
+
 .about-home {
   --about-ink: #0d1117;
   --about-paper: #f4f4f4;

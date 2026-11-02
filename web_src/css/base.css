@@ -37,6 +37,12 @@
   --page-space-bottom: 64px; /* space between last page element and footer */
   --transition-hover-fade: opacity 0.2s ease; /* fade transition for elements that show on hover */
 
+  /* fixed ink action tokens: navbar register button + auth pages */
+  --auth-action-bg: #0d1117;
+  --auth-action-fg: #f4f4f4;
+  --auth-action-hover: #20262e;
+  --auth-link: var(--color-primary-dark-2);
+
   /* z-index */
   --z-index-modal: 1001; /* modal dialog */
   --z-index-toast: 1002; /* should be larger than modal */
@@ -960,5 +966,28 @@ Then the inner one needs to get padding and parent "item" padding needs to be re
   .page-footer .left-links,
   .page-footer .right-links {
     gap: 0.5em;
+  }
+}
+
+:root[data-theme="gitea-dark"] {
+  --auth-action-bg: #f4f4f4;
+  --auth-action-fg: #0d1117;
+  --auth-action-hover: #fff;
+  --auth-link: var(--color-primary-light-1);
+}
+
+html.theme-arc-green {
+  --auth-action-bg: #f4f4f4;
+  --auth-action-fg: #0d1117;
+  --auth-action-hover: #fff;
+  --auth-link: var(--color-primary-light-1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="gitea-auto"] {
+    --auth-action-bg: #f4f4f4;
+    --auth-action-fg: #0d1117;
+    --auth-action-hover: #fff;
+    --auth-link: var(--color-primary-light-1);
   }
 }
