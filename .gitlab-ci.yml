@@ -1,0 +1,81 @@
+# BranchSpire container pipeline: builds the image with BuildKit (docker:dind) and
+# publishes it to the GitLab Container Registry on main pushes and tags.
+# MR pipelines build only, they never push.
+# The Dockerfile needs BuildKit syntax (RUN --mount, COPY --exclude), so kaniko is not an option here.
+# GitLab.com SaaS Linux runners run privileged, which is what the dind service requires.
+image: docker:28-cli
+
+stages:
+  - container
+
+services:
+  - name: docker:28-dind
+    alias: docker
+
+variables:
+  DOCKER_TLS_CERTDIR: "/certs"
+
+docker-image:
+  stage: container
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+      interruptible: true
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - if: $CI_COMMIT_TAG
+  script:
+    # dind may still be bootstrapping when the job starts (bounded wait, then hard fail)
+    - |
+      ok=""
+      for _ in $(seq 1 30); do
+        if docker info >/dev/null 2>&1; then ok="1"; break; fi
+        echo "waiting for the docker daemon"
+        sleep 2
+      done
+      [ -n "$ok" ] || (echo "docker daemon did not come up"; exit 1)
+    - docker buildx version || apk add --no-cache docker-cli-buildx
+    - |
+      if [ "$CI_PIPELINE_SOURCE" = "merge_request_event" ]; then
+        REF_TYPE="branch"
+        PUBLISH="false"
+      elif [ -n "$CI_COMMIT_TAG" ]; then
+        REF_TYPE="tag"
+        PUBLISH="true"
+      else
+        REF_TYPE="branch"
+        PUBLISH="true"
+      fi
+    # job token login: needed to push on main/tags, and to pull the :buildcache cache image everywhere
+    - echo "$CI_REGISTRY_PASSWORD" | docker login "$CI_REGISTRY" -u "$CI_REGISTRY_USER" --password-stdin
+    - docker buildx create --use --name branchspire
+    - |
+      CACHE_ARGS="--cache-from type=registry,ref=$CI_REGISTRY_IMAGE:buildcache"
+      TAG_ARGS=""
+      PUSH_ARGS=""
+      if [ "$PUBLISH" = "true" ]; then
+        CACHE_ARGS="$CACHE_ARGS --cache-to type=registry,ref=$CI_REGISTRY_IMAGE:buildcache,mode=max"
+        TAG_ARGS="$TAG_ARGS --tag $CI_REGISTRY_IMAGE:$CI_COMMIT_SHORT_SHA --tag $CI_REGISTRY_IMAGE:latest"
+        PUSH_ARGS="--push"
+      fi
+      if [ -n "$CI_COMMIT_TAG" ]; then
+        TAG_ARGS="$TAG_ARGS --tag $CI_REGISTRY_IMAGE:$CI_COMMIT_TAG"
+      fi
+    # GITEA_VERSION shows in the web UI (About panel); GITHUB_REF_* drives the Makefile's ref handling
+    - |
+      if [ -n "$CI_COMMIT_TAG" ]; then
+        VERSION="$CI_COMMIT_TAG"
+      else
+        VERSION="$CI_COMMIT_SHORT_SHA"
+      fi
+    - >
+      docker buildx build
+      --platform=linux/amd64
+      --provenance=false --sbom=false
+      --build-arg GITEA_VERSION="$VERSION"
+      --build-arg GITHUB_REF_TYPE="$REF_TYPE"
+      --build-arg GITHUB_REF_NAME="$CI_COMMIT_REF_NAME"
+      $CACHE_ARGS $TAG_ARGS $PUSH_ARGS
+      .
+    - 'echo "Image is in $CI_REGISTRY_IMAGE ($CI_COMMIT_REF_NAME) - registry browser: registry.gitlab.com/$CI_PROJECT_PATH/container_registry"'
+
+# Registry housekeeping is configured via the project UI:
+# Settings > Packages and registries > Image cleanup (delete :buildcache history and stale digest tags)
