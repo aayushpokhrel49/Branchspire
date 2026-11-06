@@ -82,6 +82,10 @@ prime/
 *_source.tar.bz2
 .DS_Store
 
+# Keep the fly.io build context small: stale build output and local tooling data
+/branchspire
+/.taste-skill
+
 # Make evidence files
 /.make_evidence
 

@@ -76,7 +76,7 @@ GITHUB_REF_TYPE ?= branch
 GITHUB_REF_NAME ?= $(shell git rev-parse --abbrev-ref HEAD)
 
 # VERSION: the name for the build and filenames, e.g.: "1.2.3" for tag "v1.2.3", "main-nightly" for branch "main"
-# GITEA_VERSION: the Gitea's internal version for display, e.g. "1.28.0+dev-356-ge47d0b66ea"
+# GITEA_VERSION: BranchSpire's internal version for display, e.g. "1.28.0+dev-356-ge47d0b66ea"
 ifeq ($(GITHUB_REF_TYPE),tag)
 	# convert tag "v1.2.3" to "1.2.3"
 	VERSION ?= $(subst v,,$(GITHUB_REF_NAME))
