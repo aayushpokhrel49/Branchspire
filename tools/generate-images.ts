@@ -51,12 +51,9 @@ async function main() {
   const gitea = argv.slice(2).includes('gitea');
   const logoSvg = await readFile(new URL('../assets/logo.svg', import.meta.url), 'utf8');
   const faviconSvg = await readFile(new URL('../assets/favicon.svg', import.meta.url), 'utf8');
-  // the default avatar must stay neutral: it appears next to commit authors and elsewhere,
-  // it should not carry the brand mark (person glyph centered in a 200px box)
-  const avatarSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">` +
-    `<g fill="#8c959f" transform="translate(24 26) scale(6.33)">${(await readFile(
-      new URL(import.meta.resolve('@primer/octicons/build/svg/person-fill-24.svg')), 'utf8',
-    )).replace(/<\/?svg[^>]*>/g, '')}</g></svg>`;
+  // the default avatar uses the BranchSpire mark: it is the brand fallback shown
+  // for users without an avatar (product decision, overrides the old neutral glyph)
+  const avatarSvg = logoSvg;
   await initWasm(await readFile(new URL(import.meta.resolve('@resvg/resvg-wasm/index_bg.wasm'))));
   await mkdir(new URL('../services/mailer/icons/', import.meta.url), {recursive: true});
 
