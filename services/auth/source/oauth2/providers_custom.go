@@ -4,7 +4,7 @@
 package oauth2
 
 import (
-	"branchspire/modules/setting"
+	"gitea.dev/modules/setting"
 
 	"github.com/markbates/goth"
 	"github.com/markbates/goth/providers/azureadv2"

@@ -6,10 +6,10 @@ package activities_test
 import (
 	"testing"
 
-	"branchspire/models/unittest"
+	"gitea.dev/models/unittest"
 
-	_ "branchspire/models"
-	_ "branchspire/models/actions"
+	_ "gitea.dev/models"
+	_ "gitea.dev/models/actions"
 )
 
 func TestMain(m *testing.M) {

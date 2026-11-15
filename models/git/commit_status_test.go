@@ -1,4 +1,4 @@
-// Copyright 2017 BranchSpire. All rights reserved.
+// Copyright 2017 Gitea. All rights reserved.
 // SPDX-License-Identifier: MIT
 
 package git_test
@@ -8,13 +8,13 @@ import (
 	"testing"
 	"time"
 
-	"branchspire/models/db"
-	git_model "branchspire/models/git"
-	repo_model "branchspire/models/repo"
-	"branchspire/models/unittest"
-	user_model "branchspire/models/user"
-	"branchspire/modules/commitstatus"
-	"branchspire/modules/git"
+	"gitea.dev/models/db"
+	git_model "gitea.dev/models/git"
+	repo_model "gitea.dev/models/repo"
+	"gitea.dev/models/unittest"
+	user_model "gitea.dev/models/user"
+	"gitea.dev/modules/commitstatus"
+	"gitea.dev/modules/git"
 
 	"github.com/stretchr/testify/assert"
 )

@@ -10,7 +10,7 @@ import (
 	"errors"
 	"sync"
 
-	"branchspire/modules/setting"
+	"gitea.dev/modules/setting"
 
 	"github.com/lib/pq"
 	"xorm.io/xorm/dialects"

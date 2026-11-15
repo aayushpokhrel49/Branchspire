@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"branchspire/modules/test"
+	"gitea.dev/modules/test"
 
 	"github.com/stretchr/testify/require"
 )

@@ -15,7 +15,7 @@ import (
 	"strings"
 	"testing"
 
-	"branchspire/modules/log"
+	"gitea.dev/modules/log"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

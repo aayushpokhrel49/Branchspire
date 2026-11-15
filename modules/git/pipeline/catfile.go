@@ -10,8 +10,8 @@ import (
 	"strconv"
 	"strings"
 
-	"branchspire/modules/git"
-	"branchspire/modules/git/gitcmd"
+	"gitea.dev/modules/git"
+	"gitea.dev/modules/git/gitcmd"
 )
 
 // CatFileBatchCheck runs cat-file with --batch-check

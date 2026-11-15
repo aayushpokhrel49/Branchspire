@@ -7,9 +7,9 @@ import (
 	"strconv"
 	"strings"
 
-	"branchspire/modules/base"
-	"branchspire/modules/optional"
-	"branchspire/modules/util"
+	"gitea.dev/modules/base"
+	"gitea.dev/modules/optional"
+	"gitea.dev/modules/util"
 )
 
 // FormString returns the first value matching the provided key in the form as a string

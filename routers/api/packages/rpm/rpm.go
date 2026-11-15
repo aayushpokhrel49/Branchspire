@@ -13,18 +13,18 @@ import (
 	"strings"
 	"time"
 
-	"branchspire/models/db"
-	packages_model "branchspire/models/packages"
-	"branchspire/modules/json"
-	packages_module "branchspire/modules/packages"
-	rpm_module "branchspire/modules/packages/rpm"
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
-	"branchspire/routers/api/packages/helper"
-	"branchspire/services/context"
-	notify_service "branchspire/services/notify"
-	packages_service "branchspire/services/packages"
-	rpm_service "branchspire/services/packages/rpm"
+	"gitea.dev/models/db"
+	packages_model "gitea.dev/models/packages"
+	"gitea.dev/modules/json"
+	packages_module "gitea.dev/modules/packages"
+	rpm_module "gitea.dev/modules/packages/rpm"
+	"gitea.dev/modules/setting"
+	"gitea.dev/modules/util"
+	"gitea.dev/routers/api/packages/helper"
+	"gitea.dev/services/context"
+	notify_service "gitea.dev/services/notify"
+	packages_service "gitea.dev/services/packages"
+	rpm_service "gitea.dev/services/packages/rpm"
 )
 
 func apiError(ctx *context.Context, status int, obj any) {
@@ -43,7 +43,7 @@ func GetRepositoryConfig(ctx *context.Context) {
 
 	url := fmt.Sprintf("%sapi/packages/%s/rpm", setting.AppURL, ctx.Package.Owner.Name)
 
-	ctx.PlainText(http.StatusOK, `[branchspire-`+strings.Join(append([]string{ctx.Package.Owner.LowerName}, groupParts...), "-")+`]
+	ctx.PlainText(http.StatusOK, `[gitea-`+strings.Join(append([]string{ctx.Package.Owner.LowerName}, groupParts...), "-")+`]
 name=`+strings.Join(append([]string{ctx.Package.Owner.Name, setting.AppName}, groupParts...), " - ")+`
 baseurl=`+strings.Join(append([]string{url}, groupParts...), "/")+`
 enabled=1

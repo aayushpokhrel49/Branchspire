@@ -8,8 +8,8 @@ import (
 	"io"
 	"os"
 
-	"branchspire/modules/git/gitrepo"
-	"branchspire/modules/util"
+	"gitea.dev/modules/git/gitrepo"
+	"gitea.dev/modules/util"
 )
 
 type BufferedReader interface {
@@ -31,7 +31,7 @@ type CatFileObject struct {
 type CatFileBatch interface {
 	// QueryInfo queries the object info from the git repository by its object name using "git cat-file --batch" family commands.
 	// "git cat-file" accepts "<rev>" for the object name, it can be a ref name, object id, etc. https://git-scm.com/docs/gitrevisions
-	// In BranchSpire, we only use the simple ref name or object id, no other complex rev syntax like "suffix" or "git describe" although they are supported by git.
+	// In Gitea, we only use the simple ref name or object id, no other complex rev syntax like "suffix" or "git describe" although they are supported by git.
 	QueryInfo(obj string) (*CatFileObject, error)
 
 	// QueryContent is similar to QueryInfo, it queries the object info and additionally returns a reader for its content.

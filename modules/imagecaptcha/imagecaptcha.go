@@ -14,9 +14,9 @@ import (
 	"strconv"
 	"sync"
 
-	"branchspire/modules/cache"
-	"branchspire/modules/log"
-	"branchspire/modules/util"
+	"gitea.dev/modules/cache"
+	"gitea.dev/modules/log"
+	"gitea.dev/modules/util"
 )
 
 const (

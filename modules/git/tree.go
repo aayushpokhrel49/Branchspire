@@ -10,7 +10,7 @@ import (
 	"io"
 	"strings"
 
-	"branchspire/modules/git/gitcmd"
+	"gitea.dev/modules/git/gitcmd"
 )
 
 type TreeCommon struct {

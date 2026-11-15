@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"time"
 
-	"branchspire/modules/json"
+	"gitea.dev/modules/json"
 
 	lru "github.com/hashicorp/golang-lru/v2"
 )

@@ -4,8 +4,8 @@
 package sspi_test
 
 import (
-	"branchspire/models/auth"
-	"branchspire/services/auth/source/sspi"
+	"gitea.dev/models/auth"
+	"gitea.dev/services/auth/source/sspi"
 )
 
 // This test file exists to assert that our Source exposes the interfaces that we expect

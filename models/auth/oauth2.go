@@ -16,11 +16,11 @@ import (
 	"time"
 	"uuid"
 
-	"branchspire/models/db"
-	"branchspire/modules/container"
-	"branchspire/modules/setting"
-	"branchspire/modules/timeutil"
-	"branchspire/modules/util"
+	"gitea.dev/models/db"
+	"gitea.dev/modules/container"
+	"gitea.dev/modules/setting"
+	"gitea.dev/modules/timeutil"
+	"gitea.dev/modules/util"
 
 	"golang.org/x/crypto/bcrypt"
 	"golang.org/x/oauth2"
@@ -84,7 +84,7 @@ func BuiltinApplications() map[string]*BuiltinOAuth2Application {
 	}
 	m["b757811a-05c8-4c76-8d74-a5ee3d2073f2"] = &BuiltinOAuth2Application{
 		ConfigName:   "gitea-app",
-		DisplayName:  "BranchSpire App",
+		DisplayName:  "Gitea App",
 		RedirectURIs: []string{"com.gitea.app://oauth/callback"},
 	}
 	m["75a9ec3e-42b5-40cb-9144-9ea96ecd56a6"] = &BuiltinOAuth2Application{

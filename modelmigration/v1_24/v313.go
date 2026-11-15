@@ -6,7 +6,7 @@ package v1_24
 import (
 	"context"
 
-	"branchspire/modelmigration/base"
+	"gitea.dev/modelmigration/base"
 )
 
 func MovePinOrderToTableIssuePin(_ context.Context, x base.EngineMigration) error {

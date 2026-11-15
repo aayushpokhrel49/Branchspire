@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"branchspire/modules/setting"
+	"gitea.dev/modules/setting"
 
 	"github.com/stretchr/testify/assert"
 )
@@ -49,7 +49,7 @@ func TestToMessage(t *testing.T) {
 	m1 := Message{
 		Info:            "info",
 		FromAddress:     "test@gitea.com",
-		FromDisplayName: "Test BranchSpire",
+		FromDisplayName: "Test Gitea",
 		To:              "a@b.com",
 		Subject:         "Issue X Closed",
 		Body:            "Some Issue got closed by Y-Man",
@@ -68,7 +68,7 @@ func TestToMessage(t *testing.T) {
 	assertHeaders(t, map[string]string{
 		"Content-Type":             "multipart/alternative;",
 		"Date":                     "Mon, 01 Jan 0001 00:00:00 +0000",
-		"From":                     "\"Test BranchSpire\" <test@gitea.com>",
+		"From":                     "\"Test Gitea\" <test@gitea.com>",
 		"Message-ID":               "<autogen--6795364578871-69c000786adc60dc@localhost>",
 		"MIME-Version":             "1.0",
 		"Subject":                  "Issue X Closed",
@@ -88,7 +88,7 @@ func TestToMessage(t *testing.T) {
 	assertHeaders(t, map[string]string{
 		"Content-Type":             "multipart/alternative;",
 		"Date":                     "Mon, 01 Jan 0001 00:00:00 +0000",
-		"From":                     "\"Test BranchSpire\" <test@gitea.com>",
+		"From":                     "\"Test Gitea\" <test@gitea.com>",
 		"Message-ID":               "",
 		"MIME-Version":             "1.0",
 		"Subject":                  "Issue X Closed",

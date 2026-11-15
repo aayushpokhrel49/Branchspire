@@ -6,7 +6,7 @@ package db
 import (
 	"fmt"
 
-	"branchspire/modules/setting"
+	"gitea.dev/modules/setting"
 
 	"xorm.io/xorm"
 	"xorm.io/xorm/convert"

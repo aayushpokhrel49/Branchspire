@@ -6,7 +6,7 @@ package htmlutil
 import (
 	"testing"
 
-	"branchspire/modules/util"
+	"gitea.dev/modules/util"
 
 	"github.com/stretchr/testify/assert"
 )

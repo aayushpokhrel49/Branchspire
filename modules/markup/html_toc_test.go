@@ -7,9 +7,9 @@ import (
 	"regexp"
 	"testing"
 
-	"branchspire/modules/markup"
-	"branchspire/modules/markup/markdown"
-	"branchspire/modules/test"
+	"gitea.dev/modules/markup"
+	"gitea.dev/modules/markup/markdown"
+	"gitea.dev/modules/test"
 
 	"github.com/stretchr/testify/assert"
 )

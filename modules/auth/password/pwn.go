@@ -8,8 +8,8 @@ import (
 	"errors"
 	"fmt"
 
-	"branchspire/modules/auth/password/pwn"
-	"branchspire/modules/setting"
+	"gitea.dev/modules/auth/password/pwn"
+	"gitea.dev/modules/setting"
 )
 
 var ErrIsPwned = errors.New("password has been pwned")

@@ -8,8 +8,8 @@ import (
 	"html/template"
 	"sync"
 
-	packages_model "branchspire/models/packages"
-	user_model "branchspire/models/user"
+	packages_model "gitea.dev/models/packages"
+	user_model "gitea.dev/models/user"
 )
 
 type SpecGetViewPackageVersionData struct{}

@@ -10,9 +10,9 @@ import (
 	"strings"
 	"testing"
 
-	"branchspire/modules/setting"
-	testModule "branchspire/modules/test"
-	"branchspire/modules/util"
+	"gitea.dev/modules/setting"
+	testModule "gitea.dev/modules/test"
+	"gitea.dev/modules/util"
 
 	"github.com/stretchr/testify/assert"
 )

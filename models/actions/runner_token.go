@@ -8,11 +8,11 @@ import (
 	"errors"
 	"fmt"
 
-	"branchspire/models/db"
-	repo_model "branchspire/models/repo"
-	user_model "branchspire/models/user"
-	"branchspire/modules/timeutil"
-	"branchspire/modules/util"
+	"gitea.dev/models/db"
+	repo_model "gitea.dev/models/repo"
+	user_model "gitea.dev/models/user"
+	"gitea.dev/modules/timeutil"
+	"gitea.dev/modules/util"
 )
 
 // ActionRunnerToken represents runner tokens

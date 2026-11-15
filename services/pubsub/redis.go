@@ -8,10 +8,10 @@ import (
 	"sync"
 	"time"
 
-	"branchspire/modules/graceful"
-	"branchspire/modules/log"
-	"branchspire/modules/nosql"
-	"branchspire/modules/util"
+	"gitea.dev/modules/graceful"
+	"gitea.dev/modules/log"
+	"gitea.dev/modules/nosql"
+	"gitea.dev/modules/util"
 
 	"github.com/redis/go-redis/v9"
 )
@@ -92,7 +92,7 @@ func (b *RedisBroker) Subscribe(topic string) (<-chan []byte, func()) {
 
 	// Slow path: create the Redis subscription outside the broker mutex so
 	// other Subscribe/cancel calls aren't blocked on the network round-trip.
-	// graceful.ShutdownContext so the reader loop dies cleanly on BranchSpire
+	// graceful.ShutdownContext so the reader loop dies cleanly on Gitea
 	// shutdown even if every local subscriber has already cancelled.
 	// readLoop consumes the SUBSCRIBE ack; don't wait for it here, that would put
 	// a Redis round-trip in the WebSocket handshake to close a sub-millisecond

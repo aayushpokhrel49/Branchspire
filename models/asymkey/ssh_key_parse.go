@@ -15,9 +15,9 @@ import (
 	"math/big"
 	"strings"
 
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
+	"gitea.dev/modules/log"
+	"gitea.dev/modules/setting"
+	"gitea.dev/modules/util"
 
 	"golang.org/x/crypto/ssh"
 )

@@ -10,11 +10,11 @@ import (
 	"sync/atomic"
 	"unicode/utf8"
 
-	"branchspire/modules/json"
-	"branchspire/modules/log"
-	"branchspire/modules/public"
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
+	"gitea.dev/modules/json"
+	"gitea.dev/modules/log"
+	"gitea.dev/modules/public"
+	"gitea.dev/modules/setting"
+	"gitea.dev/modules/util"
 )
 
 // Emoji represents a single emoji and associated data.

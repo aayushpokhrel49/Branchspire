@@ -7,7 +7,7 @@ import (
 	"context"
 	"fmt"
 
-	"branchspire/modelmigration/base"
+	"gitea.dev/modelmigration/base"
 )
 
 func CreateUserSettingsTable(_ context.Context, x base.EngineMigration) error {

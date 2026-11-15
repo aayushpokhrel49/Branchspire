@@ -4,7 +4,7 @@
 package actions
 
 import (
-	webhook_module "branchspire/modules/webhook"
+	webhook_module "gitea.dev/modules/webhook"
 )
 
 const (
@@ -68,7 +68,7 @@ func IsDefaultBranchWorkflow(triggedEvent webhook_module.HookEventType) bool {
 	return false
 }
 
-// canGithubEventMatch check if the input Github event can match any BranchSpire event.
+// canGithubEventMatch check if the input Github event can match any Gitea event.
 func canGithubEventMatch(eventName string, triggedEvent webhook_module.HookEventType) bool {
 	switch eventName {
 	case GithubEventRegistryPackage:

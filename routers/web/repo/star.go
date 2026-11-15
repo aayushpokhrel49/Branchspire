@@ -6,9 +6,9 @@ package repo
 import (
 	"net/http"
 
-	repo_model "branchspire/models/repo"
-	"branchspire/modules/templates"
-	"branchspire/services/context"
+	repo_model "gitea.dev/models/repo"
+	"gitea.dev/modules/templates"
+	"gitea.dev/services/context"
 )
 
 const tplStarUnstar templates.TplName = "repo/header/star"

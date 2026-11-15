@@ -6,10 +6,10 @@ package fileicon_test
 import (
 	"testing"
 
-	"branchspire/modules/fileicon"
-	"branchspire/modules/git"
-	"branchspire/modules/setting"
-	"branchspire/modules/test"
+	"gitea.dev/modules/fileicon"
+	"gitea.dev/modules/git"
+	"gitea.dev/modules/setting"
+	"gitea.dev/modules/test"
 
 	"github.com/stretchr/testify/assert"
 )

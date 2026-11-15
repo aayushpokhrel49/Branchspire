@@ -7,10 +7,10 @@ import (
 	"os"
 	"testing"
 
-	actions_model "branchspire/models/actions"
-	"branchspire/models/db"
-	"branchspire/models/unittest"
-	"branchspire/modules/util"
+	actions_model "gitea.dev/models/actions"
+	"gitea.dev/models/db"
+	"gitea.dev/models/unittest"
+	"gitea.dev/modules/util"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

@@ -8,8 +8,8 @@ import (
 	"path/filepath"
 	"time"
 
-	"branchspire/modules/log"
-	"branchspire/modules/util"
+	"gitea.dev/modules/log"
+	"gitea.dev/modules/util"
 )
 
 type TempDir struct {

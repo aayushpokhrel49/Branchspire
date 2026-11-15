@@ -7,9 +7,9 @@ import (
 	"testing"
 	"time"
 
-	"branchspire/models/auth"
-	"branchspire/modules/timeutil"
-	"branchspire/tests"
+	"gitea.dev/models/auth"
+	"gitea.dev/modules/timeutil"
+	"gitea.dev/tests"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

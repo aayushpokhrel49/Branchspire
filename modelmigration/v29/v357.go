@@ -6,7 +6,7 @@ package v29
 import (
 	"context"
 
-	"branchspire/modelmigration/base"
+	"gitea.dev/modelmigration/base"
 )
 
 // NormalizeLegacyTeamAuthorize sets leftover read/write authorize values to none.

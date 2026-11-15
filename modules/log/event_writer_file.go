@@ -6,8 +6,8 @@ package log
 import (
 	"io"
 
-	"branchspire/modules/util"
-	"branchspire/modules/util/rotatingfilewriter"
+	"gitea.dev/modules/util"
+	"gitea.dev/modules/util/rotatingfilewriter"
 )
 
 type WriterFileOption struct {

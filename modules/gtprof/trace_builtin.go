@@ -10,7 +10,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"branchspire/modules/tailmsg"
+	"gitea.dev/modules/tailmsg"
 )
 
 type traceBuiltinStarter struct{}
@@ -28,7 +28,7 @@ func (t *traceBuiltinSpan) addEvent(name string, cfg *EventConfig) {
 
 func (t *traceBuiltinSpan) recordError(err error, cfg *EventConfig) {
 	// No-op because builtin tracer doesn't need it.
-	// Actually BranchSpire doesn't handle err this way in most cases
+	// Actually Gitea doesn't handle err this way in most cases
 }
 
 func (t *traceBuiltinSpan) toString(out *strings.Builder, indent int) {

@@ -7,9 +7,9 @@ import (
 	"context"
 	"testing"
 
-	"branchspire/models/auth"
-	"branchspire/modules/test"
-	"branchspire/services/auth/source/ldap"
+	"gitea.dev/models/auth"
+	"gitea.dev/modules/test"
+	"gitea.dev/services/auth/source/ldap"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/urfave/cli/v3"

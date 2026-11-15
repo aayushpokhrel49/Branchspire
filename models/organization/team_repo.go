@@ -6,9 +6,9 @@ package organization
 import (
 	"context"
 
-	"branchspire/models/db"
-	"branchspire/models/perm"
-	"branchspire/models/unit"
+	"gitea.dev/models/db"
+	"gitea.dev/models/perm"
+	"gitea.dev/models/unit"
 
 	"xorm.io/builder"
 )

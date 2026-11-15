@@ -11,8 +11,8 @@ import (
 	"strconv"
 	"time"
 
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
+	"gitea.dev/modules/setting"
+	"gitea.dev/modules/util"
 )
 
 var defaultCache StringCache

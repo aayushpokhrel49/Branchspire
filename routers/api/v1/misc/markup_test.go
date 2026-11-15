@@ -11,12 +11,12 @@ import (
 	"strings"
 	"testing"
 
-	"branchspire/modules/markup"
-	"branchspire/modules/setting"
-	api "branchspire/modules/structs"
-	"branchspire/modules/test"
-	"branchspire/modules/web"
-	"branchspire/services/contexttest"
+	"gitea.dev/modules/markup"
+	"gitea.dev/modules/setting"
+	api "gitea.dev/modules/structs"
+	"gitea.dev/modules/test"
+	"gitea.dev/modules/web"
+	"gitea.dev/services/contexttest"
 
 	"github.com/stretchr/testify/assert"
 )

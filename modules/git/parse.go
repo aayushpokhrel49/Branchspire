@@ -9,7 +9,7 @@ import (
 	"strconv"
 	"strings"
 
-	"branchspire/modules/optional"
+	"gitea.dev/modules/optional"
 )
 
 var sepSpace = []byte{' '}

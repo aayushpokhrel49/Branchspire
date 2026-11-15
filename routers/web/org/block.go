@@ -6,9 +6,9 @@ package org
 import (
 	"net/http"
 
-	"branchspire/modules/templates"
-	shared_user "branchspire/routers/web/shared/user"
-	"branchspire/services/context"
+	"gitea.dev/modules/templates"
+	shared_user "gitea.dev/routers/web/shared/user"
+	"gitea.dev/services/context"
 )
 
 const (

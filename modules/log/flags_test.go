@@ -6,7 +6,7 @@ package log
 import (
 	"testing"
 
-	"branchspire/modules/json"
+	"gitea.dev/modules/json"
 
 	"github.com/stretchr/testify/assert"
 )

@@ -8,8 +8,8 @@ import (
 	"io"
 	"strings"
 
-	"branchspire/modules/git/gitcmd"
-	"branchspire/modules/setting"
+	"gitea.dev/modules/git/gitcmd"
+	"gitea.dev/modules/setting"
 )
 
 // catFileBatchLegacy implements the CatFileBatch interface using the "cat-file --batch" command and "cat-file --batch-check" command

@@ -6,7 +6,7 @@ package git
 import (
 	"context"
 
-	"branchspire/modules/git/gitcmd"
+	"gitea.dev/modules/git/gitcmd"
 )
 
 // ManagedConfigAdd add a git configuration key to a specific value for the given repository.

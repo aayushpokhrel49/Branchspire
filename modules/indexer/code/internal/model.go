@@ -3,7 +3,7 @@
 
 package internal
 
-import "branchspire/modules/timeutil"
+import "gitea.dev/modules/timeutil"
 
 type FileUpdate struct {
 	Filename string

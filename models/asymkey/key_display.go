@@ -6,9 +6,9 @@ package asymkey
 import (
 	"os"
 
-	"branchspire/modules/git"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
+	"gitea.dev/modules/git"
+	"gitea.dev/modules/log"
+	"gitea.dev/modules/setting"
 )
 
 func GetDisplaySigningKey(key *git.SigningKey) string {

@@ -4,7 +4,7 @@
 package actions
 
 import (
-	actions_model "branchspire/models/actions"
+	actions_model "gitea.dev/models/actions"
 )
 
 const (

@@ -6,9 +6,9 @@ package deploykey
 import (
 	"testing"
 
-	"branchspire/models/db"
-	"branchspire/models/perm"
-	"branchspire/models/unittest"
+	"gitea.dev/models/db"
+	"gitea.dev/models/perm"
+	"gitea.dev/models/unittest"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

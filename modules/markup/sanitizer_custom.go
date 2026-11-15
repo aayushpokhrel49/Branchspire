@@ -7,7 +7,7 @@ import (
 	"regexp"
 	"strings"
 
-	"branchspire/modules/setting"
+	"gitea.dev/modules/setting"
 
 	"github.com/microcosm-cc/bluemonday"
 )

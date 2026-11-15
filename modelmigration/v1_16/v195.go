@@ -7,7 +7,7 @@ import (
 	"context"
 	"fmt"
 
-	"branchspire/modelmigration/base"
+	"gitea.dev/modelmigration/base"
 )
 
 func AddTableCommitStatusIndex(_ context.Context, x base.EngineMigration) error {

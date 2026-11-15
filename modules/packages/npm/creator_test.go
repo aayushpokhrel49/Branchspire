@@ -12,8 +12,8 @@ import (
 	"strings"
 	"testing"
 
-	"branchspire/modules/json"
-	"branchspire/modules/test"
+	"gitea.dev/modules/json"
+	"gitea.dev/modules/test"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

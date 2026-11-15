@@ -7,8 +7,8 @@ import (
 	"strings"
 	"testing"
 
-	"branchspire/modules/markup"
-	"branchspire/modules/typesniffer"
+	"gitea.dev/modules/markup"
+	"gitea.dev/modules/typesniffer"
 
 	"github.com/stretchr/testify/assert"
 )

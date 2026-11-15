@@ -6,10 +6,10 @@ package actions
 import (
 	"testing"
 
-	"branchspire/models/db"
-	"branchspire/models/unittest"
-	"branchspire/modules/optional"
-	"branchspire/modules/translation"
+	"gitea.dev/models/db"
+	"gitea.dev/models/unittest"
+	"gitea.dev/modules/optional"
+	"gitea.dev/modules/translation"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

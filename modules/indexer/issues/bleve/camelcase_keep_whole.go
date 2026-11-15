@@ -4,7 +4,7 @@
 package bleve
 
 import (
-	"branchspire/modules/util"
+	"gitea.dev/modules/util"
 
 	"github.com/blevesearch/bleve/v2/analysis"
 	"github.com/blevesearch/bleve/v2/analysis/token/camelcase"

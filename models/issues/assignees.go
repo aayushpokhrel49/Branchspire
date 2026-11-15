@@ -7,9 +7,9 @@ import (
 	"context"
 	"fmt"
 
-	"branchspire/models/db"
-	user_model "branchspire/models/user"
-	"branchspire/modules/util"
+	"gitea.dev/models/db"
+	user_model "gitea.dev/models/user"
+	"gitea.dev/modules/util"
 
 	"xorm.io/builder"
 )

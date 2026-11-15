@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"sync/atomic"
 
-	"branchspire/modules/log"
+	"gitea.dev/modules/log"
 
 	xormlog "xorm.io/xorm/log"
 )

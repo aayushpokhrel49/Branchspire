@@ -6,8 +6,8 @@ package repo
 import (
 	"context"
 
-	"branchspire/models/db"
-	"branchspire/modules/timeutil"
+	"gitea.dev/models/db"
+	"gitea.dev/modules/timeutil"
 )
 
 func init() {

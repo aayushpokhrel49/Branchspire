@@ -11,10 +11,10 @@ import (
 	"net/http"
 	"testing"
 
-	"branchspire/models/unittest"
-	user_model "branchspire/models/user"
-	"branchspire/modules/avatar"
-	"branchspire/tests"
+	"gitea.dev/models/unittest"
+	user_model "gitea.dev/models/user"
+	"gitea.dev/modules/avatar"
+	"gitea.dev/tests"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

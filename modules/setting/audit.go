@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"branchspire/modules/log"
+	"gitea.dev/modules/log"
 )
 
 type AuditRecordOutput string

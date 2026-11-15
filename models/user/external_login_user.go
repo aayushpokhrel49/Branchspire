@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"time"
 
-	"branchspire/models/db"
-	"branchspire/modules/util"
+	"gitea.dev/models/db"
+	"gitea.dev/modules/util"
 
 	"xorm.io/builder"
 )

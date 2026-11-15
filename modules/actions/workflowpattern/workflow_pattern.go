@@ -6,7 +6,7 @@ package workflowpattern
 import (
 	"strings"
 
-	"branchspire/modules/glob"
+	"gitea.dev/modules/glob"
 )
 
 type WorkflowPattern struct {

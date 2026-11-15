@@ -9,7 +9,7 @@ import (
 	"strings"
 	"sync"
 
-	"branchspire/modules/util"
+	"gitea.dev/modules/util"
 )
 
 // ObjectCache provides thread-safe cache operations.

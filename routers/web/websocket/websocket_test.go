@@ -6,7 +6,7 @@ package websocket
 import (
 	"testing"
 
-	"branchspire/services/websocket"
+	"gitea.dev/services/websocket"
 
 	"github.com/stretchr/testify/assert"
 )

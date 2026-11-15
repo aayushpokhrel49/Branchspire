@@ -6,8 +6,8 @@ package web
 import (
 	"net/http"
 
-	"branchspire/modules/setting"
-	"branchspire/services/context"
+	"gitea.dev/modules/setting"
+	"gitea.dev/services/context"
 )
 
 type passkeyEndpointsType struct {

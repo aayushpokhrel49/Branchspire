@@ -4,8 +4,8 @@
 package web
 
 import (
-	"branchspire/modules/web"
-	"branchspire/routers/web/repo"
+	"gitea.dev/modules/web"
+	"gitea.dev/routers/web/repo"
 )
 
 func addOwnerRepoGitHTTPRouters(m *web.Router, middlewares ...any) {

@@ -18,9 +18,9 @@ import (
 	"sync"
 	"time"
 
-	"branchspire/modules/json"
-	"branchspire/modules/util"
-	"branchspire/modules/validation"
+	"gitea.dev/modules/json"
+	"gitea.dev/modules/util"
+	"gitea.dev/modules/validation"
 
 	"github.com/hashicorp/go-version"
 )

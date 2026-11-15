@@ -6,7 +6,7 @@ package v1_21
 import (
 	"context"
 
-	"branchspire/modelmigration/base"
+	"gitea.dev/modelmigration/base"
 )
 
 // UpdateActionsRefIndex updates the index of actions ref field

@@ -7,7 +7,7 @@ import (
 	"bytes"
 	"io"
 
-	"branchspire/modules/log"
+	"gitea.dev/modules/log"
 )
 
 // DummySender Sender sendmail mail sender

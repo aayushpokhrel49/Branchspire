@@ -10,7 +10,7 @@ import (
 	"regexp"
 	"strings"
 
-	"branchspire/modules/options"
+	"gitea.dev/modules/options"
 )
 
 type LicenseValues struct {

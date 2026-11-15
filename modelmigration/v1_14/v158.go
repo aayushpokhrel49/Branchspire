@@ -8,9 +8,9 @@ import (
 	"errors"
 	"strconv"
 
-	"branchspire/modelmigration/base"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
+	"gitea.dev/modelmigration/base"
+	"gitea.dev/modules/log"
+	"gitea.dev/modules/setting"
 )
 
 func UpdateCodeCommentReplies(_ context.Context, x base.EngineMigration) error {

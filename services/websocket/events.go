@@ -6,9 +6,9 @@ package websocket
 import (
 	"bytes"
 
-	"branchspire/modules/json"
-	"branchspire/modules/setting"
-	"branchspire/services/pubsub"
+	"gitea.dev/modules/json"
+	"gitea.dev/modules/setting"
+	"gitea.dev/services/pubsub"
 )
 
 // Wire contract with web_src/js/user-events.sharedworker.ts — keep in sync.

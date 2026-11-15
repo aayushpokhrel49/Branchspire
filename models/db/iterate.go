@@ -7,7 +7,7 @@ import (
 	"context"
 	"fmt"
 
-	"branchspire/modules/setting"
+	"gitea.dev/modules/setting"
 
 	"xorm.io/builder"
 	"xorm.io/xorm/schemas"

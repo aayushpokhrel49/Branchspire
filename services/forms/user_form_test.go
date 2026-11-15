@@ -6,9 +6,9 @@ package forms
 import (
 	"testing"
 
-	"branchspire/modules/glob"
-	"branchspire/modules/setting"
-	"branchspire/modules/test"
+	"gitea.dev/modules/glob"
+	"gitea.dev/modules/setting"
+	"gitea.dev/modules/test"
 
 	"github.com/stretchr/testify/assert"
 )

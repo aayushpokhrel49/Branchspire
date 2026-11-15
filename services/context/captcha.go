@@ -6,14 +6,14 @@ package context
 import (
 	"fmt"
 
-	"branchspire/modules/hcaptcha"
-	"branchspire/modules/imagecaptcha"
-	"branchspire/modules/log"
-	"branchspire/modules/mcaptcha"
-	"branchspire/modules/recaptcha"
-	"branchspire/modules/setting"
-	"branchspire/modules/templates"
-	"branchspire/modules/turnstile"
+	"gitea.dev/modules/hcaptcha"
+	"gitea.dev/modules/imagecaptcha"
+	"gitea.dev/modules/log"
+	"gitea.dev/modules/mcaptcha"
+	"gitea.dev/modules/recaptcha"
+	"gitea.dev/modules/setting"
+	"gitea.dev/modules/templates"
+	"gitea.dev/modules/turnstile"
 )
 
 const (

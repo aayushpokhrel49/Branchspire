@@ -6,7 +6,7 @@ package v29
 import (
 	"testing"
 
-	"branchspire/modelmigration/migrationtest"
+	"gitea.dev/modelmigration/migrationtest"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

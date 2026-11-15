@@ -10,11 +10,11 @@ import (
 	"strconv"
 	"strings"
 
-	"branchspire/modules/indexer"
-	indexer_internal "branchspire/modules/indexer/internal"
-	inner_meilisearch "branchspire/modules/indexer/internal/meilisearch"
-	"branchspire/modules/indexer/issues/internal"
-	"branchspire/modules/json"
+	"gitea.dev/modules/indexer"
+	indexer_internal "gitea.dev/modules/indexer/internal"
+	inner_meilisearch "gitea.dev/modules/indexer/internal/meilisearch"
+	"gitea.dev/modules/indexer/issues/internal"
+	"gitea.dev/modules/json"
 
 	"github.com/meilisearch/meilisearch-go"
 )

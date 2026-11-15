@@ -8,7 +8,7 @@ import (
 	"os"
 	"time"
 
-	"branchspire/modules/private"
+	"gitea.dev/modules/private"
 
 	"github.com/urfave/cli/v3"
 )

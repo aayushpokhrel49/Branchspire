@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"testing"
 
-	"branchspire/models/unittest"
-	"branchspire/services/contexttest"
+	"gitea.dev/models/unittest"
+	"gitea.dev/services/contexttest"
 
 	"github.com/stretchr/testify/assert"
 )

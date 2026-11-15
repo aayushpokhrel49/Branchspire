@@ -6,7 +6,7 @@ package log
 import (
 	"os"
 
-	"branchspire/modules/util"
+	"gitea.dev/modules/util"
 )
 
 type WriterConsoleOption struct {

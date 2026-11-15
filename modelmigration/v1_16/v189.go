@@ -8,8 +8,8 @@ import (
 	"encoding/binary"
 	"fmt"
 
-	"branchspire/modelmigration/base"
-	"branchspire/modules/json"
+	"gitea.dev/modelmigration/base"
+	"gitea.dev/modules/json"
 )
 
 func UnwrapLDAPSourceCfg(_ context.Context, x base.EngineMigration) error {

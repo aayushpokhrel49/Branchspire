@@ -8,11 +8,11 @@ import (
 	"fmt"
 	"time"
 
-	"branchspire/models/db"
-	"branchspire/modules/graceful"
-	"branchspire/modules/log"
-	"branchspire/modules/storage"
-	"branchspire/modules/timeutil"
+	"gitea.dev/models/db"
+	"gitea.dev/modules/graceful"
+	"gitea.dev/modules/log"
+	"gitea.dev/modules/storage"
+	"gitea.dev/modules/timeutil"
 )
 
 // NoticeType describes the notice type

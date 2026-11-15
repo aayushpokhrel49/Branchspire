@@ -7,7 +7,7 @@ import (
 	"slices"
 
 	runnerv1 "gitea.dev/actionslib/runner/v1"
-	"branchspire/modules/translation"
+	"gitea.dev/modules/translation"
 )
 
 // Status represents the status of ActionRun, ActionRunJob, ActionTask, or ActionTaskStep

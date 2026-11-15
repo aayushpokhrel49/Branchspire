@@ -8,7 +8,7 @@ import (
 	"os/user"
 	"strings"
 
-	"branchspire/modules/consts"
+	"gitea.dev/modules/consts"
 )
 
 // CurrentUsername return current login OS username

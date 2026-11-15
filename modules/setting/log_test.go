@@ -8,8 +8,8 @@ import (
 	"strings"
 	"testing"
 
-	"branchspire/modules/json"
-	"branchspire/modules/log"
+	"gitea.dev/modules/json"
+	"gitea.dev/modules/log"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

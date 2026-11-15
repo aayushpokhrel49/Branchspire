@@ -17,8 +17,8 @@ import (
 	"io"
 	"time"
 
-	"branchspire/modules/consts"
-	"branchspire/modules/util"
+	"gitea.dev/modules/consts"
+	"gitea.dev/modules/util"
 
 	"github.com/golang-jwt/jwt/v5"
 	"golang.org/x/crypto/ssh"

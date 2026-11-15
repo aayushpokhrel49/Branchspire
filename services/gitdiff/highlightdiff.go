@@ -10,7 +10,7 @@ import (
 	"strings"
 	"unicode/utf8"
 
-	"branchspire/modules/util"
+	"gitea.dev/modules/util"
 
 	"github.com/sergi/go-diff/diffmatchpatch"
 )

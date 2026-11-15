@@ -4,11 +4,11 @@
 package actions
 
 import (
-	"branchspire/models/perm"
-	repo_model "branchspire/models/repo"
-	"branchspire/models/unit"
-	"branchspire/modules/actions/jobparser"
-	"branchspire/modules/setting"
+	"gitea.dev/models/perm"
+	repo_model "gitea.dev/models/repo"
+	"gitea.dev/models/unit"
+	"gitea.dev/modules/actions/jobparser"
+	"gitea.dev/modules/setting"
 
 	"go.yaml.in/yaml/v4"
 )

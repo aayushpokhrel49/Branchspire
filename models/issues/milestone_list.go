@@ -7,8 +7,8 @@ import (
 	"context"
 	"strings"
 
-	"branchspire/models/db"
-	"branchspire/modules/optional"
+	"gitea.dev/models/db"
+	"gitea.dev/modules/optional"
 
 	"xorm.io/builder"
 )

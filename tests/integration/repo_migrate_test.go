@@ -9,9 +9,9 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"branchspire/modules/structs"
-	"branchspire/modules/test"
-	"branchspire/tests"
+	"gitea.dev/modules/structs"
+	"gitea.dev/modules/test"
+	"gitea.dev/tests"
 
 	"github.com/stretchr/testify/assert"
 )

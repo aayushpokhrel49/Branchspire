@@ -13,8 +13,8 @@ import (
 	"strings"
 	"sync"
 
-	"branchspire/modules/container"
-	api "branchspire/modules/structs"
+	"gitea.dev/modules/container"
+	api "gitea.dev/modules/structs"
 )
 
 var globalVars = sync.OnceValue(func() (ret struct {

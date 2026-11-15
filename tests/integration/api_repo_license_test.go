@@ -10,15 +10,15 @@ import (
 	"testing"
 	"time"
 
-	auth_model "branchspire/models/auth"
-	api "branchspire/modules/structs"
-	"branchspire/modules/test"
+	auth_model "gitea.dev/models/auth"
+	api "gitea.dev/modules/structs"
+	"gitea.dev/modules/test"
 
 	"github.com/stretchr/testify/assert"
 )
 
 var testLicenseContent = `
-Copyright (c) 2024 BranchSpire
+Copyright (c) 2024 Gitea
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 

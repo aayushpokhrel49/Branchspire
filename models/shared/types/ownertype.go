@@ -3,7 +3,7 @@
 
 package types
 
-import "branchspire/modules/translation"
+import "gitea.dev/modules/translation"
 
 type OwnerType string
 

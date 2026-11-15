@@ -8,8 +8,8 @@ import (
 	"net/url"
 	"strings"
 
-	"branchspire/modules/references"
-	"branchspire/modules/util"
+	"gitea.dev/modules/references"
+	"gitea.dev/modules/util"
 
 	"golang.org/x/net/html"
 )

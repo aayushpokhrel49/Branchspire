@@ -11,8 +11,8 @@ import (
 	"testing"
 	"time"
 
-	"branchspire/models/unittest"
-	base "branchspire/modules/migration"
+	"gitea.dev/models/unittest"
+	base "gitea.dev/modules/migration"
 
 	"github.com/stretchr/testify/assert"
 )

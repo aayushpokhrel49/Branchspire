@@ -11,8 +11,8 @@ import (
 	"os/exec"
 	"strings"
 
-	"branchspire/modules/git/gitcmd"
-	"branchspire/modules/util"
+	"gitea.dev/modules/git/gitcmd"
+	"gitea.dev/modules/util"
 )
 
 // Commit represents a git commit.

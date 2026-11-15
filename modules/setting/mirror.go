@@ -6,7 +6,7 @@ package setting
 import (
 	"time"
 
-	"branchspire/modules/log"
+	"gitea.dev/modules/log"
 )
 
 // Mirror settings

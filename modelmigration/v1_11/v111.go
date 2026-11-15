@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"slices"
 
-	"branchspire/modelmigration/base"
+	"gitea.dev/modelmigration/base"
 )
 
 func AddBranchProtectionCanPushAndEnableWhitelist(_ context.Context, x base.EngineMigration) error {

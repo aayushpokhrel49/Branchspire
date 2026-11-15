@@ -6,9 +6,9 @@ package actions
 import (
 	"context"
 
-	"branchspire/models/db"
-	user_model "branchspire/models/user"
-	"branchspire/modules/container"
+	"gitea.dev/models/db"
+	user_model "gitea.dev/models/user"
+	"gitea.dev/modules/container"
 )
 
 type ActionRunAttemptList []*ActionRunAttempt

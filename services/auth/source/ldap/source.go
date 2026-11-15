@@ -6,11 +6,11 @@ package ldap
 import (
 	"strings"
 
-	"branchspire/models/auth"
-	"branchspire/modules/json"
-	"branchspire/modules/log"
-	"branchspire/modules/secret"
-	"branchspire/modules/setting"
+	"gitea.dev/models/auth"
+	"gitea.dev/modules/json"
+	"gitea.dev/modules/log"
+	"gitea.dev/modules/secret"
+	"gitea.dev/modules/setting"
 )
 
 // .____     ________      _____ __________

@@ -3,7 +3,7 @@
 
 package swagger
 
-import api "branchspire/modules/structs"
+import api "gitea.dev/modules/structs"
 
 // GeneralRepoSettings
 // swagger:response GeneralRepoSettings

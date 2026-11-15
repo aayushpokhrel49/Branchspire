@@ -6,7 +6,7 @@ package deploykey
 import (
 	"fmt"
 
-	"branchspire/modules/util"
+	"gitea.dev/modules/util"
 )
 
 // ErrDeployKeyNotExist represents a "DeployKeyNotExist" kind of error.

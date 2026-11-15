@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"testing"
 
-	"branchspire/tests"
+	"gitea.dev/tests"
 )
 
 // TestUpdateIssueLabelForeignLabel verifies that the web issue-label action rejects a

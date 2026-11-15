@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"time"
 
-	"branchspire/modelmigration/base"
-	"branchspire/modules/setting"
+	"gitea.dev/modelmigration/base"
+	"gitea.dev/modules/setting"
 )
 
 func AddIssueDependencies(_ context.Context, x base.EngineMigration) (err error) {

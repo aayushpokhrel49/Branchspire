@@ -9,7 +9,7 @@ import (
 	"strconv"
 	"strings"
 
-	"branchspire/modules/git/gitcmd"
+	"gitea.dev/modules/git/gitcmd"
 )
 
 // DivergeObject represents commit count diverging commits

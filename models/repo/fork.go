@@ -6,8 +6,8 @@ package repo
 import (
 	"context"
 
-	"branchspire/models/db"
-	user_model "branchspire/models/user"
+	"gitea.dev/models/db"
+	user_model "gitea.dev/models/user"
 
 	"xorm.io/builder"
 )

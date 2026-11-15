@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"strings"
 
-	"branchspire/modules/markup"
+	"gitea.dev/modules/markup"
 
 	"github.com/yuin/goldmark/ast"
 	"go.yaml.in/yaml/v4"

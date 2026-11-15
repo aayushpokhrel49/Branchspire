@@ -7,7 +7,7 @@ import (
 	"math"
 	"time"
 
-	"branchspire/modules/log"
+	"gitea.dev/modules/log"
 )
 
 // Cache represents cache settings

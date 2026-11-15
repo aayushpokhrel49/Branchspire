@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"strconv"
 
-	"branchspire/modules/setting"
+	"gitea.dev/modules/setting"
 )
 
 // ResourceIndex represents a resource index which could be used as issue/release and others

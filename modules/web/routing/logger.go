@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"time"
 
-	"branchspire/modules/log"
-	"branchspire/modules/web/types"
+	"gitea.dev/modules/log"
+	"gitea.dev/modules/web/types"
 )
 
 var (

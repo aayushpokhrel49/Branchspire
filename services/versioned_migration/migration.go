@@ -6,9 +6,9 @@ package versioned_migration
 import (
 	"context"
 
-	"branchspire/modelmigration"
-	"branchspire/models/db"
-	"branchspire/modules/globallock"
+	"gitea.dev/modelmigration"
+	"gitea.dev/models/db"
+	"gitea.dev/modules/globallock"
 )
 
 func Migrate(ctx context.Context, x db.EngineMigration) error {

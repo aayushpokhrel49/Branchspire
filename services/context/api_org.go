@@ -3,7 +3,7 @@
 
 package context
 
-import "branchspire/models/organization"
+import "gitea.dev/models/organization"
 
 // APIOrganization contains organization and team
 type APIOrganization struct {

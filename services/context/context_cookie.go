@@ -4,7 +4,7 @@
 package context
 
 import (
-	"branchspire/modules/web/middleware"
+	"gitea.dev/modules/web/middleware"
 )
 
 const CookieNameFlash = "gitea_flash"

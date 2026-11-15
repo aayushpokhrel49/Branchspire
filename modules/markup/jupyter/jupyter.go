@@ -11,14 +11,14 @@ import (
 	"strings"
 	"sync"
 
-	"branchspire/modules/highlight"
-	"branchspire/modules/htmlutil"
-	"branchspire/modules/json"
-	"branchspire/modules/log"
-	"branchspire/modules/markup"
-	"branchspire/modules/markup/markdown"
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
+	"gitea.dev/modules/highlight"
+	"gitea.dev/modules/htmlutil"
+	"gitea.dev/modules/json"
+	"gitea.dev/modules/log"
+	"gitea.dev/modules/markup"
+	"gitea.dev/modules/markup/markdown"
+	"gitea.dev/modules/setting"
+	"gitea.dev/modules/util"
 )
 
 func init() {

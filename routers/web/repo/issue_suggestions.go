@@ -6,10 +6,10 @@ package repo
 import (
 	"net/http"
 
-	"branchspire/models/unit"
-	"branchspire/modules/optional"
-	"branchspire/services/context"
-	issue_service "branchspire/services/issue"
+	"gitea.dev/models/unit"
+	"gitea.dev/modules/optional"
+	"gitea.dev/services/context"
+	issue_service "gitea.dev/services/issue"
 )
 
 // IssueSuggestions returns a list of issue suggestions

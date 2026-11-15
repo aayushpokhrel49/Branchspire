@@ -6,7 +6,7 @@ package v1_13
 import (
 	"context"
 
-	"branchspire/modelmigration/base"
+	"gitea.dev/modelmigration/base"
 )
 
 func PurgeInvalidDependenciesComments(_ context.Context, x base.EngineMigration) error {

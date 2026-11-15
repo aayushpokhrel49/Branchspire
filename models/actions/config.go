@@ -6,11 +6,11 @@ package actions
 import (
 	"context"
 
-	"branchspire/models/perm"
-	repo_model "branchspire/models/repo"
-	user_model "branchspire/models/user"
-	"branchspire/modules/json"
-	"branchspire/modules/util"
+	"gitea.dev/models/perm"
+	repo_model "gitea.dev/models/repo"
+	user_model "gitea.dev/models/user"
+	"gitea.dev/modules/json"
+	"gitea.dev/modules/util"
 
 	"xorm.io/xorm/convert"
 )

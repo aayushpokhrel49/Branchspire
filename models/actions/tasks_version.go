@@ -6,9 +6,9 @@ package actions
 import (
 	"context"
 
-	"branchspire/models/db"
-	"branchspire/modules/log"
-	"branchspire/modules/timeutil"
+	"gitea.dev/models/db"
+	"gitea.dev/modules/log"
+	"gitea.dev/modules/timeutil"
 )
 
 // ActionTasksVersion

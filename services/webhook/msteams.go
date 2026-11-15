@@ -11,11 +11,11 @@ import (
 	"strconv"
 	"strings"
 
-	webhook_model "branchspire/models/webhook"
-	"branchspire/modules/git"
-	api "branchspire/modules/structs"
-	"branchspire/modules/util"
-	webhook_module "branchspire/modules/webhook"
+	webhook_model "gitea.dev/models/webhook"
+	"gitea.dev/modules/git"
+	api "gitea.dev/modules/structs"
+	"gitea.dev/modules/util"
+	webhook_module "gitea.dev/modules/webhook"
 )
 
 type (
@@ -393,7 +393,7 @@ func createMSTeamsPayload(r *api.Repository, s *api.User, title, text, actionTar
 		PotentialAction: []MSTeamsAction{
 			{
 				Type: "OpenUri",
-				Name: "View in BranchSpire",
+				Name: "View in Gitea",
 				Targets: []MSTeamsActionTarget{
 					{
 						Os:  "default",

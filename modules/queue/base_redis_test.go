@@ -6,8 +6,8 @@ package queue
 import (
 	"testing"
 
-	"branchspire/modules/setting"
-	"branchspire/modules/test"
+	"gitea.dev/modules/setting"
+	"gitea.dev/modules/test"
 )
 
 func TestBaseRedis(t *testing.T) {

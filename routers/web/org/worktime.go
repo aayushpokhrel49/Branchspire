@@ -7,10 +7,10 @@ import (
 	"net/http"
 	"time"
 
-	"branchspire/models/organization"
-	"branchspire/modules/templates"
-	shared_user "branchspire/routers/web/shared/user"
-	"branchspire/services/context"
+	"gitea.dev/models/organization"
+	"gitea.dev/modules/templates"
+	shared_user "gitea.dev/routers/web/shared/user"
+	"gitea.dev/services/context"
 )
 
 const tplByRepos templates.TplName = "org/worktime"

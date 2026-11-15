@@ -9,11 +9,11 @@ import (
 	"path"
 	"strconv"
 
-	"branchspire/modules/git"
-	"branchspire/modules/markup/markdown"
-	"branchspire/modules/setting"
-	api "branchspire/modules/structs"
-	"branchspire/modules/util"
+	"gitea.dev/modules/git"
+	"gitea.dev/modules/markup/markdown"
+	"gitea.dev/modules/setting"
+	api "gitea.dev/modules/structs"
+	"gitea.dev/modules/util"
 
 	"go.yaml.in/yaml/v4"
 )

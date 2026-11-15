@@ -9,11 +9,11 @@ import (
 	"os/exec"
 	"syscall"
 
-	"branchspire/modules/util"
+	"gitea.dev/modules/util"
 )
 
 func setSysProcAttribute(cmd *exec.Cmd) {
-	// When BranchSpire runs SubProcessA -> SubProcessB and SubProcessA gets killed by context cancel,
+	// When Gitea runs SubProcessA -> SubProcessB and SubProcessA gets killed by context cancel,
 	// use process group to make sure the sub processes can be killed and reaped instead of leaving defunct(zombie) processes.
 	cmd.SysProcAttr = &syscall.SysProcAttr{Setpgid: true}
 }

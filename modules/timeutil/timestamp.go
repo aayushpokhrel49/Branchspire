@@ -6,7 +6,7 @@ package timeutil
 import (
 	"time"
 
-	"branchspire/modules/setting"
+	"gitea.dev/modules/setting"
 )
 
 // TimeStamp defines a timestamp

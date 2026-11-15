@@ -10,8 +10,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"branchspire/modules/log"
-	"branchspire/modules/util"
+	"gitea.dev/modules/log"
+	"gitea.dev/modules/util"
 )
 
 type LogGlobalConfig struct {

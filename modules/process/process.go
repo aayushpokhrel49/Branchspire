@@ -14,7 +14,7 @@ var (
 	NoneProcessType    = "none"
 )
 
-// process represents a working process inheriting from BranchSpire.
+// process represents a working process inheriting from Gitea.
 type process struct {
 	PID         IDType // Process ID, not system one.
 	ParentPID   IDType

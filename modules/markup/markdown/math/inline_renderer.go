@@ -6,7 +6,7 @@ package math
 import (
 	"bytes"
 
-	"branchspire/modules/markup/internal"
+	"gitea.dev/modules/markup/internal"
 
 	"github.com/yuin/goldmark/ast"
 	"github.com/yuin/goldmark/renderer"

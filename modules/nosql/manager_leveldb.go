@@ -10,7 +10,7 @@ import (
 	"strconv"
 	"strings"
 
-	"branchspire/modules/log"
+	"gitea.dev/modules/log"
 
 	"github.com/syndtr/goleveldb/leveldb"
 	"github.com/syndtr/goleveldb/leveldb/errors"

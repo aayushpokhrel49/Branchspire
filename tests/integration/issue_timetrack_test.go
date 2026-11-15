@@ -8,9 +8,9 @@ import (
 	"net/http"
 	"testing"
 
-	issues_model "branchspire/models/issues"
-	"branchspire/models/unittest"
-	"branchspire/tests"
+	issues_model "gitea.dev/models/issues"
+	"gitea.dev/models/unittest"
+	"gitea.dev/tests"
 
 	"github.com/stretchr/testify/assert"
 )

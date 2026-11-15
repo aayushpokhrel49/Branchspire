@@ -6,7 +6,7 @@ package actions
 import (
 	"testing"
 
-	actions_module "branchspire/modules/actions"
+	actions_module "gitea.dev/modules/actions"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

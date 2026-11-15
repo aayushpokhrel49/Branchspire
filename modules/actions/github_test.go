@@ -6,7 +6,7 @@ package actions
 import (
 	"testing"
 
-	webhook_module "branchspire/modules/webhook"
+	webhook_module "gitea.dev/modules/webhook"
 
 	"github.com/stretchr/testify/assert"
 )

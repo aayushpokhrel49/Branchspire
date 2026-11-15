@@ -11,14 +11,14 @@ import (
 	"time"
 
 	act_model "gitea.dev/actionslib/pkg/model"
-	"branchspire/models/db"
-	repo_model "branchspire/models/repo"
-	"branchspire/modules/actions/jobparser"
-	"branchspire/modules/container"
-	"branchspire/modules/log"
-	"branchspire/modules/timeutil"
-	"branchspire/modules/util"
-	webhook_module "branchspire/modules/webhook"
+	"gitea.dev/models/db"
+	repo_model "gitea.dev/models/repo"
+	"gitea.dev/modules/actions/jobparser"
+	"gitea.dev/modules/container"
+	"gitea.dev/modules/log"
+	"gitea.dev/modules/timeutil"
+	"gitea.dev/modules/util"
+	webhook_module "gitea.dev/modules/webhook"
 
 	"xorm.io/builder"
 )

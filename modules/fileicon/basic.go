@@ -6,8 +6,8 @@ package fileicon
 import (
 	"html/template"
 
-	"branchspire/modules/svg"
-	"branchspire/modules/util"
+	"gitea.dev/modules/svg"
+	"gitea.dev/modules/util"
 )
 
 func BasicEntryIconName(entry *EntryInfo) string {

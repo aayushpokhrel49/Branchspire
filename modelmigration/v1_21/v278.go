@@ -6,7 +6,7 @@ package v1_21
 import (
 	"context"
 
-	"branchspire/modelmigration/base"
+	"gitea.dev/modelmigration/base"
 )
 
 func AddIndexToCommentDependentIssueID(_ context.Context, x base.EngineMigration) error {

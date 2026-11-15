@@ -6,7 +6,7 @@ package models
 import (
 	"context"
 
-	"branchspire/models/unit"
+	"gitea.dev/models/unit"
 )
 
 // Init initialize model

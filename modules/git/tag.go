@@ -9,7 +9,7 @@ import (
 	"sort"
 	"time"
 
-	"branchspire/modules/util"
+	"gitea.dev/modules/util"
 )
 
 // Tag represents a Git tag.

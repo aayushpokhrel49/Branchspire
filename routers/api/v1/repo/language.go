@@ -8,9 +8,9 @@ import (
 	"net/http"
 	"strconv"
 
-	repo_model "branchspire/models/repo"
-	"branchspire/modules/log"
-	"branchspire/services/context"
+	repo_model "gitea.dev/models/repo"
+	"gitea.dev/modules/log"
+	"gitea.dev/services/context"
 )
 
 type languageResponse []*repo_model.LanguageStat

@@ -6,9 +6,9 @@ package session
 import (
 	"testing"
 
-	"branchspire/models/unittest"
+	"gitea.dev/models/unittest"
 
-	_ "branchspire/models"
+	_ "gitea.dev/models"
 )
 
 func TestMain(m *testing.M) {

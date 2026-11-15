@@ -6,7 +6,7 @@ package v1_12
 import (
 	"context"
 
-	"branchspire/modelmigration/base"
+	"gitea.dev/modelmigration/base"
 )
 
 func AddBlockOnRejectedReviews(_ context.Context, x base.EngineMigration) error {

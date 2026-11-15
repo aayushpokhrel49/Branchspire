@@ -7,8 +7,8 @@ import (
 	"context"
 	"sync/atomic"
 
-	"branchspire/modules/nosql"
-	"branchspire/modules/queue/lqinternal"
+	"gitea.dev/modules/nosql"
+	"gitea.dev/modules/queue/lqinternal"
 
 	"gitea.com/lunny/levelqueue"
 	"github.com/syndtr/goleveldb/leveldb"

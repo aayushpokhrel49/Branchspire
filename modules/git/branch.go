@@ -8,7 +8,7 @@ import (
 	"errors"
 	"strings"
 
-	"branchspire/modules/git/gitcmd"
+	"gitea.dev/modules/git/gitcmd"
 )
 
 // GetBranchesByPath returns a branch by its path

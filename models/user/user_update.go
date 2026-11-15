@@ -6,7 +6,7 @@ package user
 import (
 	"context"
 
-	"branchspire/models/db"
+	"gitea.dev/models/db"
 )
 
 func IncrUserRepoNum(ctx context.Context, userID int64) error {

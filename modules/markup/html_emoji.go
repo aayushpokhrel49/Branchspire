@@ -7,8 +7,8 @@ import (
 	"strings"
 	"unicode"
 
-	"branchspire/modules/emoji"
-	"branchspire/modules/setting"
+	"gitea.dev/modules/emoji"
+	"gitea.dev/modules/setting"
 
 	"golang.org/x/net/html"
 	"golang.org/x/net/html/atom"

@@ -8,10 +8,10 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"branchspire/models/unittest"
-	"branchspire/modules/setting"
-	"branchspire/services/contexttest"
-	"branchspire/services/forms"
+	"gitea.dev/models/unittest"
+	"gitea.dev/modules/setting"
+	"gitea.dev/services/contexttest"
+	"gitea.dev/services/forms"
 
 	"github.com/stretchr/testify/assert"
 )

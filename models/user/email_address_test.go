@@ -7,10 +7,10 @@ import (
 	"slices"
 	"testing"
 
-	"branchspire/models/db"
-	"branchspire/models/unittest"
-	user_model "branchspire/models/user"
-	"branchspire/modules/optional"
+	"gitea.dev/models/db"
+	"gitea.dev/models/unittest"
+	user_model "gitea.dev/models/user"
+	"gitea.dev/modules/optional"
 
 	"github.com/stretchr/testify/assert"
 )

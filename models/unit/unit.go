@@ -10,10 +10,10 @@ import (
 	"strings"
 	"sync/atomic"
 
-	"branchspire/models/perm"
-	"branchspire/modules/container"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
+	"gitea.dev/models/perm"
+	"gitea.dev/modules/container"
+	"gitea.dev/modules/log"
+	"gitea.dev/modules/setting"
 )
 
 // Type is Unit's Type

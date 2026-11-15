@@ -14,7 +14,7 @@ import (
 	"sync"
 	"time"
 
-	"branchspire/modules/log"
+	"gitea.dev/modules/log"
 )
 
 var (

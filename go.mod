@@ -1,4 +1,4 @@
-module branchspire
+module gitea.dev
 
 go 1.27
 

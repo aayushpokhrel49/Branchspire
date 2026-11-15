@@ -15,9 +15,9 @@ import (
 	"testing"
 	"time"
 
-	"branchspire/models/unittest"
-	"branchspire/modules/json"
-	base "branchspire/modules/migration"
+	"gitea.dev/models/unittest"
+	"gitea.dev/modules/json"
+	base "gitea.dev/modules/migration"
 
 	"github.com/stretchr/testify/assert"
 	gitlab "gitlab.com/gitlab-org/api/client-go/v3"

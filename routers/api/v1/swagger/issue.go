@@ -4,7 +4,7 @@
 package swagger
 
 import (
-	api "branchspire/modules/structs"
+	api "gitea.dev/modules/structs"
 )
 
 // Issue

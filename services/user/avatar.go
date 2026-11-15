@@ -10,11 +10,11 @@ import (
 	"io"
 	"os"
 
-	"branchspire/models/db"
-	user_model "branchspire/models/user"
-	"branchspire/modules/avatar"
-	"branchspire/modules/log"
-	"branchspire/modules/storage"
+	"gitea.dev/models/db"
+	user_model "gitea.dev/models/user"
+	"gitea.dev/modules/avatar"
+	"gitea.dev/modules/log"
+	"gitea.dev/modules/storage"
 )
 
 // UploadAvatar saves custom avatar for user.

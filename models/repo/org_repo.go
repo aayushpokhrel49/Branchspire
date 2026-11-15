@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"strings"
 
-	"branchspire/models/db"
-	org_model "branchspire/models/organization"
-	user_model "branchspire/models/user"
+	"gitea.dev/models/db"
+	org_model "gitea.dev/models/organization"
+	user_model "gitea.dev/models/user"
 
 	"xorm.io/builder"
 )

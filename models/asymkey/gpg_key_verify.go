@@ -8,10 +8,10 @@ import (
 	"strconv"
 	"time"
 
-	"branchspire/models/db"
-	user_model "branchspire/models/user"
-	"branchspire/modules/base"
-	"branchspire/modules/log"
+	"gitea.dev/models/db"
+	user_model "gitea.dev/models/user"
+	"gitea.dev/modules/base"
+	"gitea.dev/modules/log"
 )
 
 // This file provides functions relating verifying gpg keys

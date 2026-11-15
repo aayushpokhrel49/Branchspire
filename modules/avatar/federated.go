@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"branchspire/modules/cache"
+	"gitea.dev/modules/cache"
 )
 
 // LookupFederatedHost returns the avatar host from the email domain's SRV record. https://wiki.libravatar.org/api/

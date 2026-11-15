@@ -8,9 +8,9 @@ import (
 	"slices"
 	"strings"
 
-	"branchspire/modules/base"
-	"branchspire/modules/httplib"
-	"branchspire/modules/references"
+	"gitea.dev/modules/base"
+	"gitea.dev/modules/httplib"
+	"gitea.dev/modules/references"
 
 	"golang.org/x/net/html"
 	"golang.org/x/net/html/atom"

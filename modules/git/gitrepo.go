@@ -7,9 +7,9 @@ import (
 	"context"
 	"io"
 
-	"branchspire/modules/git/gitcmd"
-	"branchspire/modules/reqctx"
-	"branchspire/modules/util"
+	"gitea.dev/modules/git/gitcmd"
+	"gitea.dev/modules/reqctx"
+	"gitea.dev/modules/util"
 )
 
 // contextKey is a value for use with context.WithValue.

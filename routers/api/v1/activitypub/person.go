@@ -6,7 +6,7 @@ package activitypub
 import (
 	"net/http"
 
-	"branchspire/services/context"
+	"gitea.dev/services/context"
 )
 
 func NotImplemented(ctx *context.APIContext) {

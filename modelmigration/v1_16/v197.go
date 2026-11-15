@@ -6,7 +6,7 @@ package v1_16
 import (
 	"context"
 
-	"branchspire/modelmigration/base"
+	"gitea.dev/modelmigration/base"
 )
 
 func AddRenamedBranchTable(_ context.Context, x base.EngineMigration) error {

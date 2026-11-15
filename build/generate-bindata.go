@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"os"
 
-	"branchspire/modules/assetfs"
+	"gitea.dev/modules/assetfs"
 )
 
 func main() {

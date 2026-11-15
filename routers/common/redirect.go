@@ -6,7 +6,7 @@ package common
 import (
 	"net/http"
 
-	"branchspire/modules/httplib"
+	"gitea.dev/modules/httplib"
 )
 
 // FetchRedirectDelegate helps the "fetch" requests to redirect to the correct location

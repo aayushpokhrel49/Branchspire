@@ -6,7 +6,7 @@ package v1_15
 import (
 	"context"
 
-	"branchspire/modelmigration/base"
+	"gitea.dev/modelmigration/base"
 )
 
 func AddKeyIsVerified(_ context.Context, x base.EngineMigration) error {

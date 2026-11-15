@@ -6,7 +6,7 @@ package v1_22
 import (
 	"context"
 
-	"branchspire/modelmigration/base"
+	"gitea.dev/modelmigration/base"
 )
 
 func DropWronglyCreatedTable(_ context.Context, x base.EngineMigration) error {

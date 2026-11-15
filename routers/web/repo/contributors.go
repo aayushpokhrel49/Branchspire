@@ -7,9 +7,9 @@ import (
 	"errors"
 	"net/http"
 
-	"branchspire/modules/templates"
-	"branchspire/services/context"
-	contributors_service "branchspire/services/repository"
+	"gitea.dev/modules/templates"
+	"gitea.dev/services/context"
+	contributors_service "gitea.dev/services/repository"
 )
 
 const (

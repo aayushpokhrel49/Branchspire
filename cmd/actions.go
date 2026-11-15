@@ -6,8 +6,8 @@ package cmd
 import (
 	"context"
 
-	"branchspire/modules/private"
-	"branchspire/modules/setting"
+	"gitea.dev/modules/private"
+	"gitea.dev/modules/setting"
 
 	"github.com/urfave/cli/v3"
 )
@@ -15,7 +15,7 @@ import (
 func newActionsCommand() *cli.Command {
 	return &cli.Command{
 		Name:  "actions",
-		Usage: "Manage BranchSpire Actions",
+		Usage: "Manage Gitea Actions",
 		Commands: []*cli.Command{
 			newActionsGenerateRunnerTokenCommand(),
 		},

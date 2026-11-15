@@ -9,7 +9,7 @@ import (
 	"net/mail"
 	"strings"
 
-	"branchspire/modules/log"
+	"gitea.dev/modules/log"
 )
 
 const IncomingEmailTokenPlaceholder = "%{token}"

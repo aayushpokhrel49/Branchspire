@@ -8,11 +8,11 @@ import (
 	"slices"
 	"sort"
 
-	"branchspire/models/db"
-	organization_model "branchspire/models/organization"
-	user_model "branchspire/models/user"
-	"branchspire/modules/container"
-	"branchspire/modules/optional"
+	"gitea.dev/models/db"
+	organization_model "gitea.dev/models/organization"
+	user_model "gitea.dev/models/user"
+	"gitea.dev/modules/container"
+	"gitea.dev/modules/optional"
 
 	"xorm.io/builder"
 )

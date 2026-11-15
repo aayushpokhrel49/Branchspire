@@ -8,8 +8,8 @@ import (
 	"net/url"
 	"testing"
 
-	api "branchspire/modules/structs"
-	"branchspire/tests"
+	api "gitea.dev/modules/structs"
+	"gitea.dev/tests"
 
 	"github.com/stretchr/testify/assert"
 )

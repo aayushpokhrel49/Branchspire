@@ -3,7 +3,7 @@
 
 package forms
 
-import "branchspire/modules/web/middleware"
+import "gitea.dev/modules/web/middleware"
 
 // NewBranchForm form for creating a new branch
 type NewBranchForm struct {

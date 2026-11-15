@@ -7,7 +7,7 @@ import (
 	"context"
 	"time"
 
-	"branchspire/modelmigration/base"
+	"gitea.dev/modelmigration/base"
 
 	"xorm.io/xorm"
 )

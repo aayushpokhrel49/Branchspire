@@ -8,8 +8,8 @@ import (
 	"net/http"
 	"strings"
 
-	user_model "branchspire/models/user"
-	"branchspire/modules/session"
+	user_model "gitea.dev/models/user"
+	"gitea.dev/modules/session"
 )
 
 // UserAssignmentWeb returns a middleware to handle context-user assignment for web routes

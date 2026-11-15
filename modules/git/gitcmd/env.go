@@ -8,8 +8,8 @@ import (
 	"os/exec"
 	"sync/atomic"
 
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
+	"gitea.dev/modules/log"
+	"gitea.dev/modules/setting"
 )
 
 var GitExecutable = "git" // the command name of git, will be updated to an absolute path during initialization
@@ -35,7 +35,7 @@ func SetExecutablePath(path string) error {
 	return nil
 }
 
-// HomeDir is the home dir for git to store the global config file used by BranchSpire internally
+// HomeDir is the home dir for git to store the global config file used by Gitea internally
 func HomeDir() string {
 	if setting.Git.HomePath == "" {
 		// strict check, make sure the git module is initialized correctly.

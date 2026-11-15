@@ -8,9 +8,9 @@ import (
 	"sync"
 	"time"
 
-	"branchspire/modules/graceful"
-	"branchspire/modules/log"
-	"branchspire/modules/nosql"
+	"gitea.dev/modules/graceful"
+	"gitea.dev/modules/log"
+	"gitea.dev/modules/nosql"
 
 	"github.com/redis/go-redis/v9"
 )

@@ -7,11 +7,11 @@ import (
 	"slices"
 	"testing"
 
-	"branchspire/models/auth"
-	"branchspire/models/db"
-	"branchspire/models/unittest"
-	"branchspire/models/user"
-	"branchspire/modules/log"
+	"gitea.dev/models/auth"
+	"gitea.dev/models/db"
+	"gitea.dev/models/unittest"
+	"gitea.dev/models/user"
+	"gitea.dev/modules/log"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

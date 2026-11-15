@@ -9,8 +9,8 @@ import (
 	"html/template"
 	"io"
 
-	"branchspire/modules/git"
-	"branchspire/modules/setting"
+	"gitea.dev/modules/git"
+	"gitea.dev/modules/setting"
 
 	"github.com/alecthomas/chroma/v2"
 )

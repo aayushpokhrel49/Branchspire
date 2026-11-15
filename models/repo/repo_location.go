@@ -6,7 +6,7 @@ package repo
 import (
 	"strconv"
 
-	"branchspire/modules/git/gitrepo"
+	"gitea.dev/modules/git/gitrepo"
 )
 
 func repoCodeGitRepoManagedID(repoID int64) string {

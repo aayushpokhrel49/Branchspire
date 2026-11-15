@@ -6,8 +6,8 @@ package internal
 import (
 	"strings"
 
-	"branchspire/modules/indexer/internal"
-	"branchspire/modules/log"
+	"gitea.dev/modules/indexer/internal"
+	"gitea.dev/modules/log"
 )
 
 const filenameMatchNumberOfLines = 7 // Copied from GitHub search

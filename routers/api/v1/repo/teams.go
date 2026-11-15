@@ -7,11 +7,11 @@ import (
 	"fmt"
 	"net/http"
 
-	"branchspire/models/organization"
-	access_model "branchspire/models/perm/access"
-	"branchspire/services/context"
-	"branchspire/services/convert"
-	repo_service "branchspire/services/repository"
+	"gitea.dev/models/organization"
+	access_model "gitea.dev/models/perm/access"
+	"gitea.dev/services/context"
+	"gitea.dev/services/convert"
+	repo_service "gitea.dev/services/repository"
 )
 
 // ListTeams list a repository's teams

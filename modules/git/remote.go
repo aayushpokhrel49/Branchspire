@@ -9,8 +9,8 @@ import (
 	"net/url"
 	"strings"
 
-	"branchspire/modules/git/gitcmd"
-	"branchspire/modules/util"
+	"gitea.dev/modules/git/gitcmd"
+	"gitea.dev/modules/util"
 )
 
 // GetRemoteAddress returns remote url of git repository in the repoPath with special remote name

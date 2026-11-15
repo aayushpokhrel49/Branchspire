@@ -6,7 +6,7 @@ package git
 import (
 	"context"
 
-	"branchspire/modules/cache"
+	"gitea.dev/modules/cache"
 )
 
 func makeCommitsCountCacheKey(repo RepositoryFacade, ref RefName) string {

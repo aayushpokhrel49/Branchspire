@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"testing"
 
-	"branchspire/modules/json"
-	"branchspire/modules/setting"
+	"gitea.dev/modules/json"
+	"gitea.dev/modules/setting"
 
 	"github.com/golang-jwt/jwt/v5"
 	"github.com/stretchr/testify/assert"

@@ -4,8 +4,8 @@
 package repo
 
 import (
-	"branchspire/modules/git"
-	"branchspire/services/context"
+	"gitea.dev/modules/git"
+	"gitea.dev/services/context"
 )
 
 func HandleGitError(ctx *context.Context, msg string, err error) {

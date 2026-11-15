@@ -1,4 +1,4 @@
-# BranchSpire Package Registry
+# Gitea Package Registry
 
 This document gives a brief overview how the package registry is organized in code.
 

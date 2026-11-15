@@ -12,8 +12,8 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
+	"gitea.dev/modules/setting"
+	"gitea.dev/modules/util"
 
 	"github.com/gogs/chardet"
 	"golang.org/x/net/html/charset"

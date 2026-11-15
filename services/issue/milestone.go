@@ -8,10 +8,10 @@ import (
 	"errors"
 	"fmt"
 
-	"branchspire/models/db"
-	issues_model "branchspire/models/issues"
-	user_model "branchspire/models/user"
-	notify_service "branchspire/services/notify"
+	"gitea.dev/models/db"
+	issues_model "gitea.dev/models/issues"
+	user_model "gitea.dev/models/user"
+	notify_service "gitea.dev/services/notify"
 )
 
 func changeMilestoneAssign(ctx context.Context, doer *user_model.User, issue *issues_model.Issue, oldMilestoneID int64) error {

@@ -6,8 +6,8 @@ package paginator
 import (
 	"testing"
 
-	"branchspire/models/db"
-	"branchspire/modules/setting"
+	"gitea.dev/models/db"
+	"gitea.dev/modules/setting"
 
 	"github.com/stretchr/testify/assert"
 )

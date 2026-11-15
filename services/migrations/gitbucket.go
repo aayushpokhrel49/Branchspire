@@ -9,9 +9,9 @@ import (
 	"net/url"
 	"strings"
 
-	"branchspire/modules/log"
-	base "branchspire/modules/migration"
-	"branchspire/modules/structs"
+	"gitea.dev/modules/log"
+	base "gitea.dev/modules/migration"
+	"gitea.dev/modules/structs"
 )
 
 var (

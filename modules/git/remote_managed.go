@@ -7,9 +7,9 @@ import (
 	"context"
 	"errors"
 
-	"branchspire/modules/git/gitcmd"
-	giturl "branchspire/modules/git/url"
-	"branchspire/modules/util"
+	"gitea.dev/modules/git/gitcmd"
+	giturl "gitea.dev/modules/git/url"
+	"gitea.dev/modules/util"
 )
 
 type RemoteOption string

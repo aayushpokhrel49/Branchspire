@@ -368,7 +368,7 @@ func (gt GitServiceType) Title() string {
 	case GithubService:
 		return "GitHub"
 	case GiteaService:
-		return "BranchSpire"
+		return "Gitea"
 	case GitlabService:
 		return "GitLab"
 	case GogsService:

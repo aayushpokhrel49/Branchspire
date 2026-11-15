@@ -9,7 +9,7 @@ import (
 	"io"
 	"reflect"
 
-	"branchspire/modules/util"
+	"gitea.dev/modules/util"
 )
 
 const (

@@ -7,9 +7,9 @@ import (
 	"context"
 	"strings"
 
-	"branchspire/models/db"
-	"branchspire/models/packages"
-	conda_module "branchspire/modules/packages/conda"
+	"gitea.dev/models/db"
+	"gitea.dev/models/packages"
+	conda_module "gitea.dev/modules/packages/conda"
 
 	"xorm.io/builder"
 )

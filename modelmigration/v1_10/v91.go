@@ -6,7 +6,7 @@ package v1_10
 import (
 	"context"
 
-	"branchspire/modelmigration/base"
+	"gitea.dev/modelmigration/base"
 )
 
 func AddIndexOnRepositoryAndComment(_ context.Context, x base.EngineMigration) error {

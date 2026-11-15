@@ -10,8 +10,8 @@ import (
 	"io"
 	"sort"
 
-	"branchspire/modules/git"
-	"branchspire/modules/git/gitcmd"
+	"gitea.dev/modules/git"
+	"gitea.dev/modules/git/gitcmd"
 )
 
 // FindLFSFile finds commits that contain a provided pointer file hash

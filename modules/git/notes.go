@@ -8,10 +8,10 @@ import (
 	"path"
 	"strings"
 
-	"branchspire/modules/setting"
+	"gitea.dev/modules/setting"
 )
 
-// NotesRef is the git ref where BranchSpire will look for git-notes data.
+// NotesRef is the git ref where Gitea will look for git-notes data.
 // The value ("refs/notes/commits") is the default ref used by git-notes.
 const NotesRef = "refs/notes/commits"
 

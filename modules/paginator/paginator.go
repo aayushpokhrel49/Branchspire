@@ -4,7 +4,7 @@
 
 package paginator
 
-import "branchspire/modules/util"
+import "gitea.dev/modules/util"
 
 /*
 In template:

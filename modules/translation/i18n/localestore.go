@@ -10,8 +10,8 @@ import (
 	"html/template"
 	"slices"
 
-	"branchspire/modules/json"
-	"branchspire/modules/log"
+	"gitea.dev/modules/json"
+	"gitea.dev/modules/log"
 )
 
 // This file implements the static LocaleStore that will not watch for changes

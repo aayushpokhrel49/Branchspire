@@ -6,8 +6,8 @@ package markdown
 import (
 	"strings"
 
-	"branchspire/modules/htmlutil"
-	"branchspire/modules/svg"
+	"gitea.dev/modules/htmlutil"
+	"gitea.dev/modules/svg"
 
 	"github.com/yuin/goldmark/ast"
 	east "github.com/yuin/goldmark/extension/ast"

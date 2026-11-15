@@ -8,8 +8,8 @@ import (
 	"context"
 	"io"
 
-	"branchspire/modules/git/gitcmd"
-	"branchspire/modules/log"
+	"gitea.dev/modules/git/gitcmd"
+	"gitea.dev/modules/log"
 )
 
 // CommitFileStatus represents status of files in a commit.

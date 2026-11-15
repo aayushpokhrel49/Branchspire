@@ -7,9 +7,9 @@ import (
 	"net/http"
 	"runtime"
 
-	"branchspire/modules/process"
-	"branchspire/modules/setting"
-	"branchspire/services/context"
+	"gitea.dev/modules/process"
+	"gitea.dev/modules/setting"
+	"gitea.dev/services/context"
 )
 
 func monitorTraceCommon(ctx *context.Context) {

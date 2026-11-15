@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"strconv"
 
-	"branchspire/modules/util"
+	"gitea.dev/modules/util"
 )
 
 func timeEstimateString(timeSec any) string {

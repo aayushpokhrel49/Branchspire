@@ -6,9 +6,9 @@ package issue
 import (
 	"testing"
 
-	repo_model "branchspire/models/repo"
-	"branchspire/models/unittest"
-	"branchspire/modules/optional"
+	repo_model "gitea.dev/models/repo"
+	"gitea.dev/models/unittest"
+	"gitea.dev/modules/optional"
 
 	"github.com/stretchr/testify/assert"
 )

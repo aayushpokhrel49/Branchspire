@@ -18,11 +18,11 @@ import (
 	"net/http"
 	"testing"
 
-	"branchspire/models/packages"
-	"branchspire/models/unittest"
-	user_model "branchspire/models/user"
-	"branchspire/modules/packages/rubygems"
-	"branchspire/tests"
+	"gitea.dev/models/packages"
+	"gitea.dev/models/unittest"
+	user_model "gitea.dev/models/user"
+	"gitea.dev/modules/packages/rubygems"
+	"gitea.dev/tests"
 
 	"github.com/stretchr/testify/assert"
 )
@@ -63,7 +63,7 @@ version: !ruby/object:Gem::Version
   version: %s
 platform: ruby
 authors:
-- BranchSpire
+- Gitea
 autorequire:
 bindir: bin
 cert_chain: []
@@ -133,7 +133,7 @@ rubyforge_project:
 rubygems_version: 2.7.6.2
 signing_key:
 specification_version: 4
-summary: BranchSpire package
+summary: Gitea package
 test_files: []
 `, name, version)
 
@@ -141,7 +141,7 @@ test_files: []
 	dataTarGz := makeArchiveFileGz(makeArchiveFileTar([]*tarFile{
 		{
 			Name: "lib/gitea.rb",
-			Data: []byte("class BranchSpire\nend"),
+			Data: []byte("class Gitea\nend"),
 		},
 	}))
 

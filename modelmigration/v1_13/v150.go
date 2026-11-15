@@ -6,8 +6,8 @@ package v1_13
 import (
 	"context"
 
-	"branchspire/modelmigration/base"
-	"branchspire/modules/timeutil"
+	"gitea.dev/modelmigration/base"
+	"gitea.dev/modules/timeutil"
 )
 
 func AddPrimaryKeyToRepoTopic(_ context.Context, x base.EngineMigration) error {

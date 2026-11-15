@@ -4,8 +4,8 @@
 package forms
 
 import (
-	"branchspire/modules/structs"
-	"branchspire/modules/web/middleware"
+	"gitea.dev/modules/structs"
+	"gitea.dev/modules/web/middleware"
 )
 
 // AdminCreateUserForm form for admin to create user

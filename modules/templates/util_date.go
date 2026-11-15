@@ -10,8 +10,8 @@ import (
 	"strings"
 	"time"
 
-	"branchspire/modules/setting"
-	"branchspire/modules/timeutil"
+	"gitea.dev/modules/setting"
+	"gitea.dev/modules/timeutil"
 )
 
 type DateUtils struct{}

@@ -6,7 +6,7 @@ package db
 import (
 	"fmt"
 
-	"branchspire/modules/util"
+	"gitea.dev/modules/util"
 )
 
 // ErrCancelled represents an error due to context cancellation

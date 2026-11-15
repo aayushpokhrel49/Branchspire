@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"time"
 
-	"branchspire/models/db"
-	"branchspire/modules/util"
+	"gitea.dev/models/db"
+	"gitea.dev/modules/util"
 )
 
 // UpdateRepositoryOwnerNames updates repository owner_names (this should only be used when the ownerName has changed case)

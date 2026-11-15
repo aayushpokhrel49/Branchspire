@@ -6,8 +6,8 @@ package audit
 import (
 	"net/url"
 
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
+	"gitea.dev/modules/setting"
+	"gitea.dev/modules/util"
 )
 
 // EntityRef is a denormalized reference persisted at record time.

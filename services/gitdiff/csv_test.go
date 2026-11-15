@@ -8,8 +8,8 @@ import (
 	"strings"
 	"testing"
 
-	csv_module "branchspire/modules/csv"
-	"branchspire/modules/setting"
+	csv_module "gitea.dev/modules/csv"
+	"gitea.dev/modules/setting"
 
 	"github.com/stretchr/testify/assert"
 )

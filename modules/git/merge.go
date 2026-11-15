@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"strings"
 
-	"branchspire/modules/git/gitcmd"
-	"branchspire/modules/util"
+	"gitea.dev/modules/git/gitcmd"
+	"gitea.dev/modules/util"
 )
 
 // MergeBase checks and returns merge base of two commits.

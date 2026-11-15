@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"testing"
 
-	pull_service "branchspire/services/pull"
-	"branchspire/tests"
+	pull_service "gitea.dev/services/pull"
+	"gitea.dev/tests"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

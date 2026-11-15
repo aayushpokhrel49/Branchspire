@@ -6,12 +6,12 @@ package mailer
 import (
 	"testing"
 
-	repo_model "branchspire/models/repo"
-	"branchspire/models/unittest"
-	user_model "branchspire/models/user"
-	"branchspire/modules/setting"
-	"branchspire/modules/test"
-	sender_service "branchspire/services/mailer/sender"
+	repo_model "gitea.dev/models/repo"
+	"gitea.dev/models/unittest"
+	user_model "gitea.dev/models/user"
+	"gitea.dev/modules/setting"
+	"gitea.dev/modules/test"
+	sender_service "gitea.dev/services/mailer/sender"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -26,10 +26,10 @@ func TestMailNewReleaseFiltersUnauthorizedWatchers(t *testing.T) {
 	defer test.MockVariableValue(&setting.AppURL)()
 
 	setting.MailService = &setting.Mailer{
-		From:      "BranchSpire",
+		From:      "Gitea",
 		FromEmail: "noreply@example.com",
 	}
-	setting.AppName = "BranchSpire"
+	setting.AppName = "Gitea"
 	setting.AppURL = "https://example.com/"
 	defer mockMailTemplates(string(tplNewReleaseMail), "{{.Subject}}", "<p>{{.Release.TagName}}</p>")()
 

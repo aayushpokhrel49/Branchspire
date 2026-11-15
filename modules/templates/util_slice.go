@@ -10,7 +10,7 @@ import (
 	"strconv"
 	"strings"
 
-	"branchspire/modules/util"
+	"gitea.dev/modules/util"
 )
 
 type SliceUtils struct{}

@@ -4,8 +4,8 @@
 package admin
 
 import (
-	"branchspire/routers/api/v1/shared"
-	"branchspire/services/context"
+	"gitea.dev/routers/api/v1/shared"
+	"gitea.dev/services/context"
 )
 
 // ListWorkflowJobs Lists all jobs

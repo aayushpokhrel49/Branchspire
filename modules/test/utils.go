@@ -20,8 +20,8 @@ import (
 	"sync"
 	"time"
 
-	"branchspire/modules/json"
-	"branchspire/modules/util"
+	"gitea.dev/modules/json"
+	"gitea.dev/modules/util"
 
 	"golang.org/x/net/html"
 )

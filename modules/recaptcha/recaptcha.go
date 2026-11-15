@@ -11,8 +11,8 @@ import (
 	"net/url"
 	"strings"
 
-	"branchspire/modules/json"
-	"branchspire/modules/setting"
+	"gitea.dev/modules/json"
+	"gitea.dev/modules/setting"
 )
 
 // Response is the structure of JSON returned from API

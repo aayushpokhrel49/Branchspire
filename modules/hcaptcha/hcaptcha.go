@@ -10,8 +10,8 @@ import (
 	"net/url"
 	"strings"
 
-	"branchspire/modules/json"
-	"branchspire/modules/setting"
+	"gitea.dev/modules/json"
+	"gitea.dev/modules/setting"
 )
 
 const verifyURL = "https://hcaptcha.com/siteverify"

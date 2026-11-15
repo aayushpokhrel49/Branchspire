@@ -9,9 +9,9 @@ import (
 	"sync"
 	"time"
 
-	"branchspire/modules/gtprof"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
+	"gitea.dev/modules/gtprof"
+	"gitea.dev/modules/log"
+	"gitea.dev/modules/setting"
 )
 
 type state uint8
@@ -185,7 +185,7 @@ func (g *Manager) doTerminate() {
 	g.lock.Unlock()
 }
 
-// IsChild returns if the current process is a child of previous BranchSpire process
+// IsChild returns if the current process is a child of previous Gitea process
 func (g *Manager) IsChild() bool {
 	return g.isChild
 }

@@ -6,8 +6,8 @@ package actions
 import (
 	"context"
 
-	repo_model "branchspire/models/repo"
-	"branchspire/models/unit"
+	repo_model "gitea.dev/models/repo"
+	"gitea.dev/models/unit"
 )
 
 // ComputeTaskTokenPermissions computes the effective permissions for a job token against the target repository.

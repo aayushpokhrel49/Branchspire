@@ -7,8 +7,8 @@ import (
 	"strings"
 	"testing"
 
-	"branchspire/models/perm"
-	"branchspire/models/unit"
+	"gitea.dev/models/perm"
+	"gitea.dev/models/unit"
 
 	"github.com/stretchr/testify/assert"
 )

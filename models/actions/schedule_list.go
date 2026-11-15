@@ -4,7 +4,7 @@
 package actions
 
 import (
-	"branchspire/models/db"
+	"gitea.dev/models/db"
 
 	"xorm.io/builder"
 )

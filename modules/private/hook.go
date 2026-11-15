@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"net/url"
 
-	"branchspire/modules/git"
-	"branchspire/modules/httplib"
-	"branchspire/modules/setting"
+	"gitea.dev/modules/git"
+	"gitea.dev/modules/httplib"
+	"gitea.dev/modules/setting"
 )
 
 // Git environment variables

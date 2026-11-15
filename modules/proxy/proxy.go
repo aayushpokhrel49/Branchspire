@@ -8,9 +8,9 @@ import (
 	"net/url"
 	"sync"
 
-	"branchspire/modules/glob"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
+	"gitea.dev/modules/glob"
+	"gitea.dev/modules/log"
+	"gitea.dev/modules/setting"
 )
 
 var (

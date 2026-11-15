@@ -9,8 +9,8 @@ import (
 	"strconv"
 	"strings"
 
-	"branchspire/modules/httplib"
-	"branchspire/modules/log"
+	"gitea.dev/modules/httplib"
+	"gitea.dev/modules/log"
 
 	"golang.org/x/net/html"
 )

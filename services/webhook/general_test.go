@@ -6,7 +6,7 @@ package webhook
 import (
 	"testing"
 
-	api "branchspire/modules/structs"
+	api "gitea.dev/modules/structs"
 
 	"github.com/stretchr/testify/assert"
 )

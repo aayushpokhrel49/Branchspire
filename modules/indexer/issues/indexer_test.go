@@ -6,16 +6,16 @@ package issues
 import (
 	"testing"
 
-	"branchspire/models/db"
-	"branchspire/models/issues"
-	"branchspire/models/unittest"
-	"branchspire/modules/indexer/issues/internal"
-	"branchspire/modules/optional"
-	"branchspire/modules/setting"
+	"gitea.dev/models/db"
+	"gitea.dev/models/issues"
+	"gitea.dev/models/unittest"
+	"gitea.dev/modules/indexer/issues/internal"
+	"gitea.dev/modules/optional"
+	"gitea.dev/modules/setting"
 
-	_ "branchspire/models"
-	_ "branchspire/models/actions"
-	_ "branchspire/models/activities"
+	_ "gitea.dev/models"
+	_ "gitea.dev/models/actions"
+	_ "gitea.dev/models/activities"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

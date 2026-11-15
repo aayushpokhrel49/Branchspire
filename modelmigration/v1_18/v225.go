@@ -6,8 +6,8 @@ package v1_18
 import (
 	"context"
 
-	"branchspire/modelmigration/base"
-	"branchspire/modules/setting"
+	"gitea.dev/modelmigration/base"
+	"gitea.dev/modules/setting"
 )
 
 func AlterPublicGPGKeyContentFieldsToMediumText(_ context.Context, x base.EngineMigration) error {

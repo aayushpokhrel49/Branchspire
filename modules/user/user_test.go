@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	"branchspire/modules/consts"
+	"gitea.dev/modules/consts"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

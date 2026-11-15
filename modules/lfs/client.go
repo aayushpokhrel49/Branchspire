@@ -10,7 +10,7 @@ import (
 	"net/http"
 	"net/url"
 
-	"branchspire/modules/util"
+	"gitea.dev/modules/util"
 )
 
 // DownloadCallback gets called for every requested LFS object to process its content

@@ -6,8 +6,8 @@ package cmd
 import (
 	"testing"
 
-	"branchspire/models/perm"
-	"branchspire/modules/git"
+	"gitea.dev/models/perm"
+	"gitea.dev/modules/git"
 
 	"github.com/stretchr/testify/assert"
 )

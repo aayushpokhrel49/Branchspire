@@ -11,7 +11,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"branchspire/modules/generate"
+	"gitea.dev/modules/generate"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"testing"
 
-	"branchspire/tests"
+	"gitea.dev/tests"
 
 	"github.com/stretchr/testify/assert"
 )

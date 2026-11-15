@@ -6,8 +6,8 @@ package v1_17
 import (
 	"context"
 
-	"branchspire/modelmigration/base"
-	"branchspire/modules/timeutil"
+	"gitea.dev/modelmigration/base"
+	"gitea.dev/modules/timeutil"
 )
 
 func AddPackageTables(_ context.Context, x base.EngineMigration) error {

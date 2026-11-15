@@ -13,7 +13,7 @@ import (
 	"text/template"
 	"unicode"
 
-	"branchspire/modules/json"
+	"gitea.dev/modules/json"
 
 	"golang.org/x/text/unicode/rangetable"
 )

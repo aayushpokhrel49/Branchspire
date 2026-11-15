@@ -9,8 +9,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	"branchspire/modules/lfs"
-	"branchspire/tests"
+	"gitea.dev/modules/lfs"
+	"gitea.dev/tests"
 
 	"github.com/stretchr/testify/assert"
 )

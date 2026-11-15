@@ -4,8 +4,8 @@
 package templates
 
 import (
-	"branchspire/modules/assetfs"
-	"branchspire/modules/setting"
+	"gitea.dev/modules/assetfs"
+	"gitea.dev/modules/setting"
 )
 
 func AssetFS() *assetfs.LayeredFS {

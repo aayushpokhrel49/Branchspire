@@ -9,7 +9,7 @@ import (
 	"encoding/binary"
 	"io"
 
-	"branchspire/modules/setting"
+	"gitea.dev/modules/setting"
 )
 
 type tagType string

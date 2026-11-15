@@ -3,7 +3,7 @@
 
 package forms
 
-import "branchspire/modules/web/middleware"
+import "gitea.dev/modules/web/middleware"
 
 // AuthenticationForm form for authentication
 type AuthenticationForm struct {

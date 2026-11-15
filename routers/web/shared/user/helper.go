@@ -8,7 +8,7 @@ import (
 	"slices"
 	"strconv"
 
-	"branchspire/models/user"
+	"gitea.dev/models/user"
 )
 
 type SearchUserInfo struct {

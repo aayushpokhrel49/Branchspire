@@ -7,7 +7,7 @@ import (
 	"html/template"
 	"strings"
 
-	"branchspire/modules/setting"
+	"gitea.dev/modules/setting"
 )
 
 type RenderedIconPool struct {

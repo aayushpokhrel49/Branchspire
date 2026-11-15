@@ -7,10 +7,10 @@ import (
 	"context"
 	"fmt"
 
-	"branchspire/models/db"
-	user_model "branchspire/models/user"
-	"branchspire/modules/timeutil"
-	"branchspire/modules/util"
+	"gitea.dev/models/db"
+	user_model "gitea.dev/models/user"
+	"gitea.dev/modules/timeutil"
+	"gitea.dev/modules/util"
 )
 
 // ErrDependencyExists represents a "DependencyAlreadyExists" kind of error.

@@ -9,8 +9,8 @@ import (
 	"io"
 	"strings"
 
-	"branchspire/modules/json"
-	"branchspire/modules/validation"
+	"gitea.dev/modules/json"
+	"gitea.dev/modules/validation"
 )
 
 const (

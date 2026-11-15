@@ -6,7 +6,7 @@ package install
 import (
 	"context"
 
-	"branchspire/models/db"
+	"gitea.dev/models/db"
 )
 
 // CheckDatabaseConnection checks the database connection

@@ -7,7 +7,7 @@ import (
 	"context"
 	"fmt"
 
-	"branchspire/models/db"
+	"gitea.dev/models/db"
 
 	"golang.org/x/crypto/ssh"
 	"xorm.io/builder"

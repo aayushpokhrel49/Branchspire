@@ -6,9 +6,9 @@ package setting
 import (
 	"net/http"
 
-	"branchspire/modules/git"
-	"branchspire/routers/web/repo"
-	"branchspire/services/context"
+	"gitea.dev/modules/git"
+	"gitea.dev/routers/web/repo"
+	"gitea.dev/services/context"
 )
 
 // GitHooks hooks of a repository

@@ -8,8 +8,8 @@ import (
 	"net/url"
 	"testing"
 
-	auth_model "branchspire/models/auth"
-	"branchspire/tests"
+	auth_model "gitea.dev/models/auth"
+	"gitea.dev/tests"
 
 	"github.com/stretchr/testify/assert"
 )

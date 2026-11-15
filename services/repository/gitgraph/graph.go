@@ -9,9 +9,9 @@ import (
 	"context"
 	"strings"
 
-	"branchspire/modules/git"
-	"branchspire/modules/git/gitcmd"
-	"branchspire/modules/setting"
+	"gitea.dev/modules/git"
+	"gitea.dev/modules/git/gitcmd"
+	"gitea.dev/modules/setting"
 )
 
 const gitLogGraphFormatSep = "^" // disallowed char in git ref names

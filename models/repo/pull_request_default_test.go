@@ -6,9 +6,9 @@ package repo
 import (
 	"testing"
 
-	"branchspire/models/unit"
-	"branchspire/models/unittest"
-	"branchspire/modules/util"
+	"gitea.dev/models/unit"
+	"gitea.dev/models/unittest"
+	"gitea.dev/modules/util"
 
 	"github.com/stretchr/testify/assert"
 )

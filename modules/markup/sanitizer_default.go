@@ -9,8 +9,8 @@ import (
 	"net/url"
 	"regexp"
 
-	"branchspire/modules/markup/common"
-	"branchspire/modules/setting"
+	"gitea.dev/modules/markup/common"
+	"gitea.dev/modules/setting"
 
 	"github.com/microcosm-cc/bluemonday"
 )

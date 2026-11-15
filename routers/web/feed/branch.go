@@ -6,9 +6,9 @@ package feed
 import (
 	"time"
 
-	"branchspire/models/repo"
-	"branchspire/modules/git"
-	"branchspire/services/context"
+	"gitea.dev/models/repo"
+	"gitea.dev/modules/git"
+	"gitea.dev/services/context"
 
 	"github.com/gorilla/feeds"
 )

@@ -6,7 +6,7 @@ package v1_18
 import (
 	"context"
 
-	"branchspire/modelmigration/base"
+	"gitea.dev/modelmigration/base"
 
 	"xorm.io/builder"
 )

@@ -4,8 +4,8 @@
 package setting
 
 import (
-	"branchspire/modules/container"
-	"branchspire/modules/log"
+	"gitea.dev/modules/container"
+	"gitea.dev/modules/log"
 )
 
 // Admin settings

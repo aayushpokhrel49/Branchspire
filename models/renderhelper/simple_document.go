@@ -6,7 +6,7 @@ package renderhelper
 import (
 	"context"
 
-	"branchspire/modules/markup"
+	"gitea.dev/modules/markup"
 )
 
 type SimpleDocument struct {

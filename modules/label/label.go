@@ -9,7 +9,7 @@ import (
 	"strings"
 	"sync"
 
-	"branchspire/modules/util"
+	"gitea.dev/modules/util"
 )
 
 // Label represents label information loaded from template

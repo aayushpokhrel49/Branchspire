@@ -9,9 +9,9 @@ import (
 	"slices"
 	"testing"
 
-	auth_model "branchspire/models/auth"
-	api "branchspire/modules/structs"
-	"branchspire/tests"
+	auth_model "gitea.dev/models/auth"
+	api "gitea.dev/modules/structs"
+	"gitea.dev/tests"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

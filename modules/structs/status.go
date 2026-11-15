@@ -6,7 +6,7 @@ package structs
 import (
 	"time"
 
-	"branchspire/modules/commitstatus"
+	"gitea.dev/modules/commitstatus"
 )
 
 // CommitStatus holds a single status of a single Commit

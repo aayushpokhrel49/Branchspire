@@ -6,9 +6,9 @@ package base_test
 import (
 	"testing"
 
-	"branchspire/modelmigration/base"
-	"branchspire/modelmigration/migrationtest"
-	"branchspire/modules/timeutil"
+	"gitea.dev/modelmigration/base"
+	"gitea.dev/modelmigration/migrationtest"
+	"gitea.dev/modules/timeutil"
 
 	"xorm.io/xorm/names"
 )

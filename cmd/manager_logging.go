@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"os"
 
-	"branchspire/modules/private"
+	"gitea.dev/modules/private"
 
 	"github.com/urfave/cli/v3"
 )
@@ -20,7 +20,7 @@ func newLoggingCommand() *cli.Command {
 		Commands: []*cli.Command{
 			{
 				Name:  "pause",
-				Usage: "Pause logging (BranchSpire will buffer logs up to a certain point and will drop them after that point)",
+				Usage: "Pause logging (Gitea will buffer logs up to a certain point and will drop them after that point)",
 				Flags: []cli.Flag{
 					&cli.BoolFlag{
 						Name: "debug",
@@ -38,7 +38,7 @@ func newLoggingCommand() *cli.Command {
 				Action: runResumeLogging,
 			}, {
 				Name:  "release-and-reopen",
-				Usage: "Cause BranchSpire to release and re-open files used for logging",
+				Usage: "Cause Gitea to release and re-open files used for logging",
 				Flags: []cli.Flag{
 					&cli.BoolFlag{
 						Name: "debug",

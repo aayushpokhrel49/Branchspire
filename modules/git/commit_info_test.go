@@ -9,9 +9,9 @@ import (
 	"testing"
 	"time"
 
-	"branchspire/modules/git/gitrepo"
-	"branchspire/modules/test"
-	"branchspire/modules/util"
+	"gitea.dev/modules/git/gitrepo"
+	"gitea.dev/modules/test"
+	"gitea.dev/modules/util"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

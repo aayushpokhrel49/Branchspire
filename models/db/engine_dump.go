@@ -4,7 +4,7 @@
 package db
 
 import (
-	"branchspire/modules/setting"
+	"gitea.dev/modules/setting"
 
 	"xorm.io/xorm/schemas"
 )

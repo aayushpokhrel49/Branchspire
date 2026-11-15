@@ -10,7 +10,7 @@ package templates
 import (
 	"sync"
 
-	"branchspire/modules/assetfs"
+	"gitea.dev/modules/assetfs"
 
 	_ "embed"
 )

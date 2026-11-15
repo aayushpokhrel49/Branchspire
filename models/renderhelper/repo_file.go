@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"path"
 
-	repo_model "branchspire/models/repo"
-	"branchspire/modules/markup"
-	"branchspire/modules/util"
+	repo_model "gitea.dev/models/repo"
+	"gitea.dev/modules/markup"
+	"gitea.dev/modules/util"
 )
 
 type RepoFile struct {

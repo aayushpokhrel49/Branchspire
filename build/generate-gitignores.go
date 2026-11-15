@@ -18,7 +18,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"branchspire/modules/util"
+	"gitea.dev/modules/util"
 )
 
 func main() {

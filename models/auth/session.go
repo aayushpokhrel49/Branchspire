@@ -6,8 +6,8 @@ package auth
 import (
 	"context"
 
-	"branchspire/models/db"
-	"branchspire/modules/timeutil"
+	"gitea.dev/models/db"
+	"gitea.dev/modules/timeutil"
 
 	"xorm.io/builder"
 )

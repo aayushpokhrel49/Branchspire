@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"branchspire/modules/log"
+	"gitea.dev/modules/log"
 )
 
 // Git settings

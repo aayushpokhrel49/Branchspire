@@ -6,7 +6,7 @@ package v1_16
 import (
 	"testing"
 
-	"branchspire/modelmigration/migrationtest"
+	"gitea.dev/modelmigration/migrationtest"
 )
 
 func TestMain(m *testing.M) {

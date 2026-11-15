@@ -6,7 +6,7 @@ package git
 import (
 	"context"
 
-	"branchspire/modules/setting"
+	"gitea.dev/modules/setting"
 )
 
 // Based on https://git-scm.com/docs/git-config#Documentation/git-config.txt-gpgformat

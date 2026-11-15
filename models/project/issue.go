@@ -7,8 +7,8 @@ import (
 	"context"
 	"errors"
 
-	"branchspire/models/db"
-	"branchspire/modules/util"
+	"gitea.dev/models/db"
+	"gitea.dev/modules/util"
 )
 
 // ProjectIssue saves relation from issue to a project

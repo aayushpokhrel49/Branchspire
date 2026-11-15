@@ -14,11 +14,11 @@ import (
 	"strconv"
 	"strings"
 
-	"branchspire/modules/graceful"
-	"branchspire/modules/log"
-	"branchspire/modules/process"
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
+	"gitea.dev/modules/graceful"
+	"gitea.dev/modules/log"
+	"gitea.dev/modules/process"
+	"gitea.dev/modules/setting"
+	"gitea.dev/modules/util"
 
 	"github.com/caddyserver/certmagic"
 )

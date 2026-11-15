@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"branchspire/modules/setting"
+	"gitea.dev/modules/setting"
 
 	"github.com/jhillyerd/enmime/v2"
 	"github.com/stretchr/testify/assert"

@@ -14,8 +14,8 @@ import (
 	"sync"
 	"time"
 
-	"branchspire/modules/log"
-	"branchspire/modules/util"
+	"gitea.dev/modules/log"
+	"gitea.dev/modules/util"
 )
 
 type fileBackend struct {

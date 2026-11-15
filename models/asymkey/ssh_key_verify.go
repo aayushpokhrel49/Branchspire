@@ -7,8 +7,8 @@ import (
 	"context"
 	"strings"
 
-	"branchspire/models/db"
-	"branchspire/modules/log"
+	"gitea.dev/models/db"
+	"gitea.dev/modules/log"
 
 	"github.com/42wim/sshsig"
 )

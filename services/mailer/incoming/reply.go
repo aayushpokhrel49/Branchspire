@@ -8,7 +8,7 @@ import (
 	"strings"
 	"sync"
 
-	"branchspire/modules/util"
+	"gitea.dev/modules/util"
 )
 
 const (

@@ -12,9 +12,9 @@ import (
 	"strconv"
 	"strings"
 
-	"branchspire/modules/git/gitcmd"
-	"branchspire/modules/git/gitrepo"
-	"branchspire/modules/setting"
+	"gitea.dev/modules/git/gitcmd"
+	"gitea.dev/modules/git/gitrepo"
+	"gitea.dev/modules/setting"
 )
 
 // GetBranchCommitID returns last commit ID string of given branch.

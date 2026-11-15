@@ -6,8 +6,8 @@ package user_test
 import (
 	"testing"
 
-	"branchspire/models/unittest"
-	user_model "branchspire/models/user"
+	"gitea.dev/models/unittest"
+	user_model "gitea.dev/models/user"
 
 	"github.com/stretchr/testify/assert"
 )
@@ -16,7 +16,7 @@ func TestSettings(t *testing.T) {
 	keyName := "test_user_setting"
 	assert.NoError(t, unittest.PrepareTestDatabase())
 
-	newSetting := &user_model.Setting{UserID: 99, SettingKey: keyName, SettingValue: "BranchSpire User Setting Test"}
+	newSetting := &user_model.Setting{UserID: 99, SettingKey: keyName, SettingValue: "Gitea User Setting Test"}
 
 	// create setting
 	err := user_model.SetUserSetting(t.Context(), newSetting.UserID, newSetting.SettingKey, newSetting.SettingValue)

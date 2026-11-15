@@ -13,8 +13,8 @@ import (
 	"strconv"
 	"strings"
 
-	"branchspire/modules/util"
-	"branchspire/modules/validation"
+	"gitea.dev/modules/util"
+	"gitea.dev/modules/validation"
 )
 
 var (

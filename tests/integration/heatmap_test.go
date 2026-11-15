@@ -8,8 +8,8 @@ import (
 	"testing"
 	"time"
 
-	"branchspire/modules/timeutil"
-	"branchspire/tests"
+	"gitea.dev/modules/timeutil"
+	"gitea.dev/tests"
 
 	"github.com/stretchr/testify/assert"
 )

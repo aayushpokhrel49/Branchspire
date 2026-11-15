@@ -6,8 +6,8 @@ package v1_20
 import (
 	"context"
 
-	"branchspire/modelmigration/base"
-	"branchspire/modules/log"
+	"gitea.dev/modelmigration/base"
+	"gitea.dev/modules/log"
 )
 
 func FixIncorrectOwnerTeamUnitAccessMode(_ context.Context, x base.EngineMigration) error {

@@ -7,7 +7,7 @@ import (
 	"context"
 	"html/template"
 
-	"branchspire/modules/setting"
+	"gitea.dev/modules/setting"
 )
 
 const (

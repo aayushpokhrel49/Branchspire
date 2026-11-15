@@ -7,7 +7,7 @@ import (
 	"context"
 	"fmt"
 
-	"branchspire/models/db"
+	"gitea.dev/models/db"
 
 	"xorm.io/builder"
 	"xorm.io/xorm"

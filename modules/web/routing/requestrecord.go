@@ -8,7 +8,7 @@ import (
 	"sync"
 	"time"
 
-	"branchspire/modules/log"
+	"gitea.dev/modules/log"
 )
 
 type requestRecord struct {

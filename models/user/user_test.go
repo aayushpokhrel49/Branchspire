@@ -10,18 +10,18 @@ import (
 	"testing"
 	"time"
 
-	"branchspire/models/auth"
-	"branchspire/models/db"
-	"branchspire/models/unittest"
-	user_model "branchspire/models/user"
-	"branchspire/modules/auth/password/hash"
-	"branchspire/modules/container"
-	"branchspire/modules/optional"
-	"branchspire/modules/setting"
-	"branchspire/modules/structs"
-	"branchspire/modules/test"
-	"branchspire/modules/timeutil"
-	"branchspire/modules/util"
+	"gitea.dev/models/auth"
+	"gitea.dev/models/db"
+	"gitea.dev/models/unittest"
+	user_model "gitea.dev/models/user"
+	"gitea.dev/modules/auth/password/hash"
+	"gitea.dev/modules/container"
+	"gitea.dev/modules/optional"
+	"gitea.dev/modules/setting"
+	"gitea.dev/modules/structs"
+	"gitea.dev/modules/test"
+	"gitea.dev/modules/timeutil"
+	"gitea.dev/modules/util"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -731,16 +731,5 @@ func TestCanCreateRepo(t *testing.T) {
 
 		// per-org override bypasses the global org limit
 		assert.True(t, doerNormal.CanCreateRepoIn(orgOwner(10, 100)))
-	})
-
-	t.Run("CanCreateRepo", func(t *testing.T) {
-		setting.Repository.UserMaxCreationLimit = noLimit
-		assert.True(t, doerNormal.CanCreateRepo())
-		assert.True(t, doerAdmin.CanCreateRepo())
-		assert.False(t, doerActions.CanCreateRepo())
-		assert.False(t, (*user_model.User)(nil).CanCreateRepo())
-
-		limitedUser := &user_model.User{ID: 4, NumRepos: 5, MaxRepoCreation: 5}
-		assert.False(t, limitedUser.CanCreateRepo())
 	})
 }

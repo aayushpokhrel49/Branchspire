@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"os"
 
-	"branchspire/modules/setting"
+	"gitea.dev/modules/setting"
 
 	"github.com/urfave/cli/v3"
 )
@@ -19,7 +19,7 @@ func cmdConfig() *cli.Command {
 		Name:  "edit-ini",
 		Usage: "Load an existing INI file, apply environment variables, keep specified keys, and output to a new INI file.",
 		Description: `
-Help users to edit the BranchSpire configuration INI file.
+Help users to edit the Gitea configuration INI file.
 
 # Keep Specified Keys
 
@@ -31,7 +31,7 @@ it can use a template file (only keys take effect, values are ignored):
   [security]
   SECRET_KEY=
 
-$ ./branchspire config edit-ini --config app-old.ini --config-keep-keys app-keys.ini --out app-new.ini
+$ ./gitea config edit-ini --config app-old.ini --config-keep-keys app-keys.ini --out app-new.ini
 
 # Map Environment Variables to INI Configuration
 
@@ -54,7 +54,7 @@ $ export GITEA__git_0x2E_config__foo_0x2E_bar=val
 
 # Put All Together
 
-$ ./branchspire config edit-ini --config app.ini --config-keep-keys app-keys.ini --apply-env {--in-place|--out app-new.ini}
+$ ./gitea config edit-ini --config app.ini --config-keep-keys app-keys.ini --apply-env {--in-place|--out app-new.ini}
 `,
 		Flags: []cli.Flag{
 			// "--config" flag is provided by global flags, and this flag is also used by "environment-to-ini" script wrapper
@@ -81,7 +81,7 @@ $ ./branchspire config edit-ini --config app.ini --config-keep-keys app-keys.ini
 
 	return &cli.Command{
 		Name:  "config",
-		Usage: "Manage BranchSpire configuration",
+		Usage: "Manage Gitea configuration",
 		Commands: []*cli.Command{
 			subcmdConfigEditIni,
 		},

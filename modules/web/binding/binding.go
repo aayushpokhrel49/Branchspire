@@ -23,8 +23,8 @@ import (
 	"sync"
 	"unicode/utf8"
 
-	"branchspire/modules/json"
-	"branchspire/modules/util"
+	"gitea.dev/modules/json"
+	"gitea.dev/modules/util"
 )
 
 const (

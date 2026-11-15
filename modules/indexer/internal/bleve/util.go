@@ -9,9 +9,9 @@ import (
 	"path/filepath"
 	"unicode"
 
-	"branchspire/modules/json"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
+	"gitea.dev/modules/json"
+	"gitea.dev/modules/log"
+	"gitea.dev/modules/setting"
 
 	"github.com/blevesearch/bleve/v2"
 	unicode_tokenizer "github.com/blevesearch/bleve/v2/analysis/tokenizer/unicode"

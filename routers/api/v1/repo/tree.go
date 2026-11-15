@@ -6,8 +6,8 @@ package repo
 import (
 	"net/http"
 
-	"branchspire/services/context"
-	files_service "branchspire/services/repository/files"
+	"gitea.dev/services/context"
+	files_service "gitea.dev/services/repository/files"
 )
 
 // GetTree get the tree of a repository.

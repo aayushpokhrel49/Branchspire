@@ -8,10 +8,10 @@ import (
 	"strconv"
 	"strings"
 
-	"branchspire/models/db"
-	"branchspire/modules/optional"
-	"branchspire/modules/timeutil"
-	"branchspire/modules/util"
+	"gitea.dev/models/db"
+	"gitea.dev/modules/optional"
+	"gitea.dev/modules/timeutil"
+	"gitea.dev/modules/util"
 
 	"xorm.io/builder"
 )

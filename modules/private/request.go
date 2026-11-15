@@ -8,8 +8,8 @@ import (
 	"io"
 	"net/http"
 
-	"branchspire/modules/httplib"
-	"branchspire/modules/json"
+	"gitea.dev/modules/httplib"
+	"gitea.dev/modules/json"
 )
 
 // ResponseText is used to get the response as text, instead of parsing it as JSON.

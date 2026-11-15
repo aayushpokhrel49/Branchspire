@@ -10,9 +10,9 @@ import (
 	"strconv"
 	"strings"
 
-	"branchspire/models/actions"
-	"branchspire/modules/log"
-	"branchspire/modules/util"
+	"gitea.dev/models/actions"
+	"gitea.dev/modules/log"
+	"gitea.dev/modules/util"
 )
 
 const (

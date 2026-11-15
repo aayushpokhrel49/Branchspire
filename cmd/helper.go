@@ -13,9 +13,9 @@ import (
 	"strings"
 	"syscall"
 
-	"branchspire/models/db"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
+	"gitea.dev/models/db"
+	"gitea.dev/modules/log"
+	"gitea.dev/modules/setting"
 
 	"github.com/urfave/cli/v3"
 )
@@ -132,7 +132,7 @@ func PrepareConsoleLoggerLevel(defaultLevel log.Level) func(context.Context, *cl
 
 func isValidDefaultSubCommand(cmd *cli.Command) (string, bool) {
 	// Dirty patch for urfave/cli's strange design.
-	// "./branchspire bad-cmd" should not start the web server.
+	// "./gitea bad-cmd" should not start the web server.
 	args := cmd.Args().Slice()
 	if len(args) != 0 {
 		return args[0], false

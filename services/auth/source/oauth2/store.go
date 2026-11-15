@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"branchspire/modules/log"
-	session_module "branchspire/modules/session"
+	"gitea.dev/modules/log"
+	session_module "gitea.dev/modules/session"
 
 	"github.com/gorilla/sessions"
 )

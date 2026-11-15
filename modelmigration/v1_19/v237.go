@@ -6,7 +6,7 @@ package v1_19
 import (
 	"context"
 
-	"branchspire/modelmigration/base"
+	"gitea.dev/modelmigration/base"
 )
 
 func DropForeignReferenceTable(_ context.Context, x base.EngineMigration) error {

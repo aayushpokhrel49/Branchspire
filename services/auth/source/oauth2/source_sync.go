@@ -7,10 +7,10 @@ import (
 	"context"
 	"time"
 
-	"branchspire/models/auth"
-	"branchspire/models/db"
-	user_model "branchspire/models/user"
-	"branchspire/modules/log"
+	"gitea.dev/models/auth"
+	"gitea.dev/models/db"
+	user_model "gitea.dev/models/user"
+	"gitea.dev/modules/log"
 
 	"github.com/markbates/goth"
 	"golang.org/x/oauth2"

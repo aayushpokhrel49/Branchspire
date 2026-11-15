@@ -8,8 +8,8 @@ import (
 	"strings"
 	"testing"
 
-	"branchspire/models/unittest"
-	"branchspire/modules/markup"
+	"gitea.dev/models/unittest"
+	"gitea.dev/modules/markup"
 )
 
 func testRenderString(ctx *markup.RenderContext, content string) (string, error) {

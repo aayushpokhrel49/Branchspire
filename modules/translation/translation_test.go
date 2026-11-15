@@ -6,7 +6,7 @@ package translation
 import (
 	"testing"
 
-	"branchspire/modules/translation/i18n"
+	"gitea.dev/modules/translation/i18n"
 
 	"github.com/stretchr/testify/assert"
 )

@@ -15,9 +15,9 @@ import (
 	"syscall"
 	"time"
 
-	"branchspire/modules/log"
-	"branchspire/modules/proxyprotocol"
-	"branchspire/modules/setting"
+	"gitea.dev/modules/log"
+	"gitea.dev/modules/proxyprotocol"
+	"gitea.dev/modules/setting"
 )
 
 // GetListener returns a net listener

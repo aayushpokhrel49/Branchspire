@@ -9,9 +9,9 @@ import (
 	"strings"
 	"sync"
 
-	"branchspire/modules/container"
-	"branchspire/modules/log"
-	"branchspire/modules/util"
+	"gitea.dev/modules/container"
+	"gitea.dev/modules/log"
+	"gitea.dev/modules/util"
 
 	"mvdan.cc/xurls/v2"
 )

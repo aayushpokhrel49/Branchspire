@@ -6,8 +6,8 @@ package integration_test
 import (
 	"testing"
 
-	"branchspire/models/organization"
-	"branchspire/models/unittest"
+	"gitea.dev/models/organization"
+	"gitea.dev/models/unittest"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

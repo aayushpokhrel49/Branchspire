@@ -7,7 +7,7 @@ import (
 	"context"
 	"strings"
 
-	"branchspire/modules/structs"
+	"gitea.dev/modules/structs"
 )
 
 const (
@@ -55,7 +55,7 @@ const (
 
 // NewActionsUser creates and returns a fake user for running the actions.
 func NewActionsUser() *User {
-	return newSystemUser(ActionsUserID, "gitea-actions", "BranchSpire Actions")
+	return newSystemUser(ActionsUserID, "gitea-actions", "Gitea Actions")
 }
 
 func GetActionsUserTaskID(u *User) (int64, bool) {
@@ -94,12 +94,12 @@ func NewDeployKeyUserWithKeyID(id int64) *User {
 
 func NewCliUser() *User {
 	// for audit log only
-	return newSystemUser(CliUserID, "gitea:cli", "BranchSpire CLI")
+	return newSystemUser(CliUserID, "gitea:cli", "Gitea CLI")
 }
 
 func NewAuthSourceUser() *User {
 	// for audit log only
-	return newSystemUser(AuthSourceUserID, "gitea:auth-source", "BranchSpire Auth Source")
+	return newSystemUser(AuthSourceUserID, "gitea:auth-source", "Gitea Auth Source")
 }
 
 func GetSystemUserByName(name string) *User {

@@ -10,8 +10,8 @@ import (
 	"io"
 	"testing"
 
-	"branchspire/modules/util"
-	"branchspire/modules/zstd"
+	"gitea.dev/modules/util"
+	"gitea.dev/modules/zstd"
 
 	"github.com/blakesmith/ar"
 	"github.com/stretchr/testify/assert"

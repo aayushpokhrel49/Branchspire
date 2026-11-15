@@ -44,7 +44,7 @@ if [ ! -f ${GITEA_CUSTOM}/conf/app.ini ]; then
     LFS_START_SERVER=${LFS_START_SERVER:-"false"} \
     DB_TYPE=${DB_TYPE:-"sqlite3"} \
     DB_HOST=${DB_HOST:-"localhost:3306"} \
-    DB_NAME=${DB_NAME:-"branchspire"} \
+    DB_NAME=${DB_NAME:-"gitea"} \
     DB_USER=${DB_USER:-"root"} \
     DB_PASSWD=${DB_PASSWD:-""} \
     INSTALL_LOCK=${INSTALL_LOCK:-"false"} \
@@ -59,8 +59,8 @@ fi
 # Replace app.ini settings with env variables in the form GITEA__SECTION_NAME__KEY_NAME
 environment-to-ini --config ${GITEA_CUSTOM}/conf/app.ini
 
-# only chown if current owner is not already the ${USER}. No recursive check to save time
-if ! [[ $(ls -ld /data/branchspire | awk '{print $3}') = ${USER} ]]; then chown -R ${USER}:git /data/branchspire; fi
-if ! [[ $(ls -ld /app/branchspire  | awk '{print $3}') = ${USER} ]]; then chown -R ${USER}:git /app/branchspire;  fi
+# only chown if current owner is not already the gitea ${USER}. No recursive check to save time
+if ! [[ $(ls -ld /data/gitea | awk '{print $3}') = ${USER} ]]; then chown -R ${USER}:git /data/gitea; fi
+if ! [[ $(ls -ld /app/gitea  | awk '{print $3}') = ${USER} ]]; then chown -R ${USER}:git /app/gitea;  fi
 if ! [[ $(ls -ld /data/git   | awk '{print $3}') = ${USER} ]]; then chown -R ${USER}:git /data/git;   fi
-chmod 0755 /data/branchspire /app/branchspire /data/git
+chmod 0755 /data/gitea /app/gitea /data/git

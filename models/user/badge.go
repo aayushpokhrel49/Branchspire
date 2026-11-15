@@ -6,8 +6,8 @@ package user
 import (
 	"context"
 
-	"branchspire/models/db"
-	"branchspire/modules/util"
+	"gitea.dev/models/db"
+	"gitea.dev/modules/util"
 
 	"xorm.io/builder"
 	"xorm.io/xorm/schemas"

@@ -8,8 +8,8 @@ import (
 	"strings"
 	"sync"
 
-	"branchspire/modules/log"
-	"branchspire/modules/util"
+	"gitea.dev/modules/log"
+	"gitea.dev/modules/util"
 )
 
 // ExternalMarkupRenderers represents the external markup renderers

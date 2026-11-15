@@ -6,8 +6,8 @@ package v28
 import (
 	"context"
 
-	"branchspire/modelmigration/base"
-	"branchspire/modules/timeutil"
+	"gitea.dev/modelmigration/base"
+	"gitea.dev/modules/timeutil"
 )
 
 type AuditEvent struct {

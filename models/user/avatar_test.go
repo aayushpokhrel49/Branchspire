@@ -8,10 +8,10 @@ import (
 	"strings"
 	"testing"
 
-	"branchspire/models/unittest"
-	"branchspire/modules/setting"
-	"branchspire/modules/storage"
-	"branchspire/modules/test"
+	"gitea.dev/models/unittest"
+	"gitea.dev/modules/setting"
+	"gitea.dev/modules/storage"
+	"gitea.dev/modules/test"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

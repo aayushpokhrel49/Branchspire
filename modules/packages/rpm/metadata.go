@@ -8,8 +8,8 @@ import (
 	"io"
 	"strings"
 
-	"branchspire/modules/timeutil"
-	"branchspire/modules/validation"
+	"gitea.dev/modules/timeutil"
+	"gitea.dev/modules/validation"
 
 	"github.com/sassoftware/go-rpmutils"
 )

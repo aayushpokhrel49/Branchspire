@@ -6,8 +6,8 @@ package v1_17
 import (
 	"context"
 
-	"branchspire/modelmigration/base"
-	"branchspire/modules/setting"
+	"gitea.dev/modelmigration/base"
+	"gitea.dev/modules/setting"
 )
 
 func AlterHookTaskTextFieldsToLongText(_ context.Context, x base.EngineMigration) error {

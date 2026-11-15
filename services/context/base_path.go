@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"strings"
 
-	"branchspire/modules/setting"
+	"gitea.dev/modules/setting"
 
 	"github.com/go-chi/chi/v5"
 )

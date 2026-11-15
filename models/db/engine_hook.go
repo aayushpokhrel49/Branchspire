@@ -7,9 +7,9 @@ import (
 	"context"
 	"time"
 
-	"branchspire/modules/gtprof"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
+	"gitea.dev/modules/gtprof"
+	"gitea.dev/modules/log"
+	"gitea.dev/modules/setting"
 
 	"xorm.io/xorm/contexts"
 )

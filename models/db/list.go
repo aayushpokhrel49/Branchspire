@@ -7,7 +7,7 @@ import (
 	"context"
 	"slices"
 
-	"branchspire/modules/setting"
+	"gitea.dev/modules/setting"
 
 	"xorm.io/builder"
 )

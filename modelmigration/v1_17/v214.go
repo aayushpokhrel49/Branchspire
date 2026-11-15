@@ -6,7 +6,7 @@ package v1_17
 import (
 	"context"
 
-	"branchspire/modelmigration/base"
+	"gitea.dev/modelmigration/base"
 )
 
 func AddAutoMergeTable(_ context.Context, x base.EngineMigration) error {

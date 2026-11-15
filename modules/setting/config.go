@@ -7,8 +7,8 @@ import (
 	"strings"
 	"sync"
 
-	"branchspire/modules/log"
-	"branchspire/modules/setting/config"
+	"gitea.dev/modules/log"
+	"gitea.dev/modules/setting/config"
 )
 
 type PictureStruct struct {

@@ -6,9 +6,9 @@ package repo
 import (
 	"context"
 
-	"branchspire/models/unit"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
+	"gitea.dev/models/unit"
+	"gitea.dev/modules/log"
+	"gitea.dev/modules/setting"
 )
 
 // ___________.__             ___________                     __

@@ -6,9 +6,9 @@ package cmd
 import (
 	"context"
 
-	"branchspire/models/db"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
+	"gitea.dev/models/db"
+	"gitea.dev/modules/log"
+	"gitea.dev/modules/setting"
 
 	"github.com/urfave/cli/v3"
 )

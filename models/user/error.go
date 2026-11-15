@@ -6,7 +6,7 @@ package user
 import (
 	"fmt"
 
-	"branchspire/modules/util"
+	"gitea.dev/modules/util"
 )
 
 // ErrUserAlreadyExist represents a "user already exists" error.

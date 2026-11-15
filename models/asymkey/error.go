@@ -6,7 +6,7 @@ package asymkey
 import (
 	"fmt"
 
-	"branchspire/modules/util"
+	"gitea.dev/modules/util"
 )
 
 // ErrKeyUnableVerify represents a "KeyUnableVerify" kind of error.

@@ -8,9 +8,9 @@ import (
 	"io"
 	"strings"
 
-	"branchspire/modules/json"
-	"branchspire/modules/packages/container/helm"
-	"branchspire/modules/validation"
+	"gitea.dev/modules/json"
+	"gitea.dev/modules/packages/container/helm"
+	"gitea.dev/modules/validation"
 
 	oci "github.com/opencontainers/image-spec/specs-go/v1"
 )
