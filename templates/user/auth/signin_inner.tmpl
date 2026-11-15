@@ -54,7 +54,7 @@
 	</form>
 	{{end}}{{/*end if .EnablePasswordSignInForm*/}}
 
-	{{$showExternalAuthMethods := or .OAuth2Providers .EnableOpenIDSignIn .EnableSSPI}}
+	{{$showExternalAuthMethods := or .OAuth2Providers .EnableSSPI}}
 	{{if or $showExternalAuthMethods .EnablePasskeyAuth}}
 	<div class="auth-alt">
 		{{if and $showExternalAuthMethods .EnablePasswordSignInForm}}
