@@ -9,15 +9,15 @@ import (
 	"net/url"
 	"strings"
 
-	"branchspire/models/db"
-	user_model "branchspire/models/user"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
-	"branchspire/modules/templates"
-	"branchspire/modules/util"
-	"branchspire/modules/web"
-	"branchspire/services/context"
-	"branchspire/services/forms"
+	"code.gitea.io/gitea/models/db"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/templates"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/modules/web"
+	"code.gitea.io/gitea/services/context"
+	"code.gitea.io/gitea/services/forms"
 )
 
 const (

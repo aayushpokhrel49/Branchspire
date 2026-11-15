@@ -11,14 +11,14 @@ import (
 	"io"
 	"io/fs"
 
-	actions_model "branchspire/models/actions"
-	repo_model "branchspire/models/repo"
-	"branchspire/modules/actions"
-	"branchspire/modules/container"
-	"branchspire/modules/httplib"
-	"branchspire/modules/log"
-	"branchspire/modules/util"
-	context_module "branchspire/services/context"
+	actions_model "code.gitea.io/gitea/models/actions"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/modules/actions"
+	"code.gitea.io/gitea/modules/container"
+	"code.gitea.io/gitea/modules/httplib"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/util"
+	context_module "code.gitea.io/gitea/services/context"
 )
 
 func openTaskLogs(ctx context.Context, task *actions_model.ActionTask) (io.ReadSeekCloser, error) {

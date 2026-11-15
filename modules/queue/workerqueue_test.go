@@ -11,8 +11,8 @@ import (
 	"testing"
 	"time"
 
-	"branchspire/modules/setting"
-	"branchspire/modules/test"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/test"
 
 	"github.com/stretchr/testify/assert"
 )

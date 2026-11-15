@@ -7,9 +7,9 @@ import (
 	"context"
 	"fmt"
 
-	"branchspire/modelmigration/base"
-	"branchspire/modules/timeutil"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modelmigration/base"
+	"code.gitea.io/gitea/modules/timeutil"
+	"code.gitea.io/gitea/modules/util"
 )
 
 func AddScratchHash(_ context.Context, x base.EngineMigration) error {

@@ -6,11 +6,11 @@ package repository
 import (
 	"testing"
 
-	activities_model "branchspire/models/activities"
-	"branchspire/models/db"
-	repo_model "branchspire/models/repo"
-	"branchspire/models/unit"
-	"branchspire/models/unittest"
+	activities_model "code.gitea.io/gitea/models/activities"
+	"code.gitea.io/gitea/models/db"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/models/unit"
+	"code.gitea.io/gitea/models/unittest"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

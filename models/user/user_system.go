@@ -7,7 +7,7 @@ import (
 	"context"
 	"strings"
 
-	"branchspire/modules/structs"
+	"code.gitea.io/gitea/modules/structs"
 )
 
 const (

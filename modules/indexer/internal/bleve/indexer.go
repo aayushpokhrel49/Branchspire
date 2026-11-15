@@ -7,8 +7,8 @@ import (
 	"context"
 	"errors"
 
-	"branchspire/modules/indexer/internal"
-	"branchspire/modules/log"
+	"code.gitea.io/gitea/modules/indexer/internal"
+	"code.gitea.io/gitea/modules/log"
 
 	"github.com/blevesearch/bleve/v2"
 	"github.com/blevesearch/bleve/v2/mapping"

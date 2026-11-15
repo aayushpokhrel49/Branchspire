@@ -4,8 +4,8 @@
 package swagger
 
 import (
-	api "branchspire/modules/structs"
-	"branchspire/services/forms"
+	api "code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/services/forms"
 )
 
 // not actually a set of parameters, just a hack to get go-swagger to include

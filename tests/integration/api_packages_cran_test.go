@@ -11,12 +11,12 @@ import (
 	"net/http"
 	"testing"
 
-	"branchspire/models/packages"
-	"branchspire/models/unittest"
-	user_model "branchspire/models/user"
-	cran_module "branchspire/modules/packages/cran"
-	"branchspire/modules/test"
-	"branchspire/tests"
+	"code.gitea.io/gitea/models/packages"
+	"code.gitea.io/gitea/models/unittest"
+	user_model "code.gitea.io/gitea/models/user"
+	cran_module "code.gitea.io/gitea/modules/packages/cran"
+	"code.gitea.io/gitea/modules/test"
+	"code.gitea.io/gitea/tests"
 
 	"github.com/stretchr/testify/assert"
 )

@@ -10,9 +10,9 @@ import (
 	"os/exec"
 	"strings"
 
-	"branchspire/modules/regexplru"
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/regexplru"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/util"
 )
 
 type RunStdError interface {

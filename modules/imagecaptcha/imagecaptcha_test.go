@@ -11,7 +11,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"branchspire/modules/cache"
+	"code.gitea.io/gitea/modules/cache"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

@@ -12,19 +12,19 @@ import (
 	"strconv"
 	"testing"
 
-	actions_model "branchspire/models/actions"
-	auth_model "branchspire/models/auth"
-	"branchspire/models/db"
-	org_model "branchspire/models/organization"
-	"branchspire/models/perm"
-	repo_model "branchspire/models/repo"
-	unit_model "branchspire/models/unit"
-	"branchspire/models/unittest"
-	user_model "branchspire/models/user"
-	"branchspire/modules/lfs"
-	"branchspire/modules/structs"
-	"branchspire/modules/util"
-	"branchspire/tests"
+	actions_model "code.gitea.io/gitea/models/actions"
+	auth_model "code.gitea.io/gitea/models/auth"
+	"code.gitea.io/gitea/models/db"
+	org_model "code.gitea.io/gitea/models/organization"
+	"code.gitea.io/gitea/models/perm"
+	repo_model "code.gitea.io/gitea/models/repo"
+	unit_model "code.gitea.io/gitea/models/unit"
+	"code.gitea.io/gitea/models/unittest"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/lfs"
+	"code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/tests"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -401,12 +401,12 @@ func TestActionsTokenPermissionsPersistenceWithWorkflow(t *testing.T) {
 		session.MakeRequest(t, req, http.StatusSeeOther)
 
 		// create a workflow file with "permission" keyword for repo1
-		wfTreePath := ".branchspire/workflows/test_permissions.yml"
+		wfTreePath := ".code.gitea.io/gitea/workflows/test_permissions.yml"
 		wfFileContent := `name: Test Permissions
 on:
   push:
     paths:
-      - '.branchspire/workflows/test_permissions.yml'
+      - '.code.gitea.io/gitea/workflows/test_permissions.yml'
 
 jobs:
   job-override:

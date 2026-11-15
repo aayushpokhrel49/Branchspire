@@ -8,8 +8,8 @@ import (
 	"strings"
 	"sync"
 
-	"branchspire/modules/analyze"
-	"branchspire/modules/log"
+	"code.gitea.io/gitea/modules/analyze"
+	"code.gitea.io/gitea/modules/log"
 
 	"github.com/alecthomas/chroma/v2"
 	"github.com/alecthomas/chroma/v2/lexers"

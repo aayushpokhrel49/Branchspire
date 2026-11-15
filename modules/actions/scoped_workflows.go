@@ -6,12 +6,12 @@ package actions
 import (
 	"context"
 
-	"branchspire/modules/actions/jobparser"
-	"branchspire/modules/git"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
-	api "branchspire/modules/structs"
-	webhook_module "branchspire/modules/webhook"
+	"code.gitea.io/gitea/modules/actions/jobparser"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
+	api "code.gitea.io/gitea/modules/structs"
+	webhook_module "code.gitea.io/gitea/modules/webhook"
 )
 
 // ListScopedWorkflows lists scoped workflow files (under SCOPED_WORKFLOW_DIRS) at the given commit.

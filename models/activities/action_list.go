@@ -9,12 +9,12 @@ import (
 	"fmt"
 	"strconv"
 
-	"branchspire/models/db"
-	issues_model "branchspire/models/issues"
-	repo_model "branchspire/models/repo"
-	user_model "branchspire/models/user"
-	"branchspire/modules/container"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/models/db"
+	issues_model "code.gitea.io/gitea/models/issues"
+	repo_model "code.gitea.io/gitea/models/repo"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/container"
+	"code.gitea.io/gitea/modules/util"
 
 	"xorm.io/builder"
 )

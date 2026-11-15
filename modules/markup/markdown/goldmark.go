@@ -6,12 +6,12 @@ package markdown
 import (
 	"fmt"
 
-	"branchspire/modules/container"
-	"branchspire/modules/highlight"
-	"branchspire/modules/htmlutil"
-	"branchspire/modules/markup"
-	"branchspire/modules/markup/internal"
-	"branchspire/modules/markup/markdown/math"
+	"code.gitea.io/gitea/modules/container"
+	"code.gitea.io/gitea/modules/highlight"
+	"code.gitea.io/gitea/modules/htmlutil"
+	"code.gitea.io/gitea/modules/markup"
+	"code.gitea.io/gitea/modules/markup/internal"
+	"code.gitea.io/gitea/modules/markup/markdown/math"
 
 	"github.com/yuin/goldmark/ast"
 	east "github.com/yuin/goldmark/extension/ast"

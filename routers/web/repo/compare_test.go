@@ -7,14 +7,14 @@ import (
 	"strings"
 	"testing"
 
-	asymkey_model "branchspire/models/asymkey"
-	git_model "branchspire/models/git"
-	"branchspire/models/gituser"
-	issues_model "branchspire/models/issues"
-	"branchspire/modules/git"
-	"branchspire/modules/setting"
-	git_service "branchspire/services/git"
-	"branchspire/services/gitdiff"
+	asymkey_model "code.gitea.io/gitea/models/asymkey"
+	git_model "code.gitea.io/gitea/models/git"
+	"code.gitea.io/gitea/models/gituser"
+	issues_model "code.gitea.io/gitea/models/issues"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/setting"
+	git_service "code.gitea.io/gitea/services/git"
+	"code.gitea.io/gitea/services/gitdiff"
 
 	"github.com/stretchr/testify/assert"
 )

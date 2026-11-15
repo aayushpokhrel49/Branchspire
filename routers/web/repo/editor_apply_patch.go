@@ -7,10 +7,10 @@ import (
 	"net/http"
 	"strings"
 
-	"branchspire/modules/util"
-	"branchspire/services/context"
-	"branchspire/services/forms"
-	"branchspire/services/repository/files"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/services/context"
+	"code.gitea.io/gitea/services/forms"
+	"code.gitea.io/gitea/services/repository/files"
 )
 
 func NewDiffPatch(ctx *context.Context) {

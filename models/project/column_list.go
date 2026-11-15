@@ -6,7 +6,7 @@ package project
 import (
 	"context"
 
-	"branchspire/models/db"
+	"code.gitea.io/gitea/models/db"
 )
 
 // CountColumns returns the total number of columns for a project

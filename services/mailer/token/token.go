@@ -12,8 +12,8 @@ import (
 	"strings"
 	"time"
 
-	user_model "branchspire/models/user"
-	"branchspire/modules/util"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/util"
 )
 
 // A token is a verifiable container describing an action.

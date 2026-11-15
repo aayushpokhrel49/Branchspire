@@ -11,9 +11,9 @@ import (
 	"strings"
 	"time"
 
-	"branchspire/modules/log"
-	base "branchspire/modules/migration"
-	"branchspire/modules/structs"
+	"code.gitea.io/gitea/modules/log"
+	base "code.gitea.io/gitea/modules/migration"
+	"code.gitea.io/gitea/modules/structs"
 
 	"github.com/gogs/go-gogs-client"
 )

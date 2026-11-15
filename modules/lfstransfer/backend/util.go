@@ -11,10 +11,10 @@ import (
 	"net/url"
 	"strings"
 
-	"branchspire/modules/httplib"
-	"branchspire/modules/private"
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/httplib"
+	"code.gitea.io/gitea/modules/private"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/util"
 
 	"github.com/charmbracelet/git-lfs-transfer/transfer"
 )

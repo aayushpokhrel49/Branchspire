@@ -10,13 +10,13 @@ import (
 	"path"
 	"strings"
 
-	repo_model "branchspire/models/repo"
-	"branchspire/modules/git"
-	"branchspire/modules/lfs"
-	"branchspire/modules/setting"
-	api "branchspire/modules/structs"
-	"branchspire/modules/util"
-	"branchspire/routers/api/v1/utils"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/lfs"
+	"code.gitea.io/gitea/modules/setting"
+	api "code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/routers/api/v1/utils"
 )
 
 // ContentType repo content type

@@ -8,13 +8,13 @@ import (
 	"strings"
 	"sync"
 
-	"branchspire/models/db"
-	issue_model "branchspire/models/issues"
-	"branchspire/modules/indexer"
-	indexer_internal "branchspire/modules/indexer/internal"
-	inner_db "branchspire/modules/indexer/internal/db"
-	"branchspire/modules/indexer/issues/internal"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/models/db"
+	issue_model "code.gitea.io/gitea/models/issues"
+	"code.gitea.io/gitea/modules/indexer"
+	indexer_internal "code.gitea.io/gitea/modules/indexer/internal"
+	inner_db "code.gitea.io/gitea/modules/indexer/internal/db"
+	"code.gitea.io/gitea/modules/indexer/issues/internal"
+	"code.gitea.io/gitea/modules/util"
 
 	"xorm.io/builder"
 )

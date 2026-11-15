@@ -7,10 +7,10 @@ import (
 	"context"
 	"fmt"
 
-	"branchspire/models/db"
-	repo_model "branchspire/models/repo"
-	user_model "branchspire/models/user"
-	"branchspire/modules/timeutil"
+	"code.gitea.io/gitea/models/db"
+	repo_model "code.gitea.io/gitea/models/repo"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/timeutil"
 )
 
 // AutoMerge represents a pull request scheduled for merging when checks succeed

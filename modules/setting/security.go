@@ -8,10 +8,10 @@ import (
 	"os"
 	"strings"
 
-	"branchspire/modules/auth/password/hash"
-	"branchspire/modules/egress/policy"
-	"branchspire/modules/generate"
-	"branchspire/modules/log"
+	"code.gitea.io/gitea/modules/auth/password/hash"
+	"code.gitea.io/gitea/modules/egress/policy"
+	"code.gitea.io/gitea/modules/generate"
+	"code.gitea.io/gitea/modules/log"
 )
 
 // Security settings

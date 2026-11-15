@@ -8,11 +8,11 @@ import (
 	"testing"
 	"time"
 
-	audit_model "branchspire/models/audit"
-	repository_model "branchspire/models/repo"
-	user_model "branchspire/models/user"
-	"branchspire/modules/reqctx"
-	"branchspire/modules/timeutil"
+	audit_model "code.gitea.io/gitea/models/audit"
+	repository_model "code.gitea.io/gitea/models/repo"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/reqctx"
+	"code.gitea.io/gitea/modules/timeutil"
 
 	"github.com/stretchr/testify/assert"
 )

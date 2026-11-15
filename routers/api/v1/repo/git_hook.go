@@ -7,11 +7,11 @@ import (
 	"errors"
 	"net/http"
 
-	"branchspire/modules/git"
-	api "branchspire/modules/structs"
-	"branchspire/modules/web"
-	"branchspire/services/context"
-	"branchspire/services/convert"
+	"code.gitea.io/gitea/modules/git"
+	api "code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/modules/web"
+	"code.gitea.io/gitea/services/context"
+	"code.gitea.io/gitea/services/convert"
 )
 
 // ListGitHooks list all Git hooks of a repository

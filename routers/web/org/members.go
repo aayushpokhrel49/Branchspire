@@ -8,14 +8,14 @@ import (
 	"errors"
 	"net/http"
 
-	"branchspire/models/organization"
-	user_model "branchspire/models/user"
-	"branchspire/modules/setting"
-	"branchspire/modules/templates"
-	"branchspire/modules/util"
-	shared_user "branchspire/routers/web/shared/user"
-	"branchspire/services/context"
-	org_service "branchspire/services/org"
+	"code.gitea.io/gitea/models/organization"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/templates"
+	"code.gitea.io/gitea/modules/util"
+	shared_user "code.gitea.io/gitea/routers/web/shared/user"
+	"code.gitea.io/gitea/services/context"
+	org_service "code.gitea.io/gitea/services/org"
 )
 
 const (

@@ -6,13 +6,13 @@ package actions
 import (
 	"testing"
 
-	actions_model "branchspire/models/actions"
-	"branchspire/models/db"
-	"branchspire/models/unittest"
-	actions_module "branchspire/modules/actions"
-	"branchspire/modules/json"
-	api "branchspire/modules/structs"
-	webhook_module "branchspire/modules/webhook"
+	actions_model "code.gitea.io/gitea/models/actions"
+	"code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/models/unittest"
+	actions_module "code.gitea.io/gitea/modules/actions"
+	"code.gitea.io/gitea/modules/json"
+	api "code.gitea.io/gitea/modules/structs"
+	webhook_module "code.gitea.io/gitea/modules/webhook"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -46,7 +46,7 @@ func TestReusableChildInputs(t *testing.T) {
 		return job
 	}
 	caller := insertJob("caller", 0,
-		"on: {workflow_dispatch: {inputs: {flag: {type: boolean}, Shared: {type: string}}}}\njobs:\n  caller:\n    uses: ./.branchspire/workflows/mid.yml\n",
+		"on: {workflow_dispatch: {inputs: {flag: {type: boolean}, Shared: {type: string}}}}\njobs:\n  caller:\n    uses: ./.code.gitea.io/gitea/workflows/mid.yml\n",
 		`{"inputs":{"shared":"from-call","mid_only":"mid"}}`)
 	mid := insertJob("mid", caller.ID, "", `{"inputs":{"env":"leaf"}}`)
 	leaf := insertJob("leaf", mid.ID, "", "")

@@ -6,13 +6,13 @@ package actions
 import (
 	"testing"
 
-	actions_model "branchspire/models/actions"
-	repo_model "branchspire/models/repo"
-	"branchspire/models/unittest"
-	user_model "branchspire/models/user"
-	"branchspire/modules/container"
-	"branchspire/modules/test"
-	"branchspire/modules/util"
+	actions_model "code.gitea.io/gitea/models/actions"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/models/unittest"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/container"
+	"code.gitea.io/gitea/modules/test"
+	"code.gitea.io/gitea/modules/util"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

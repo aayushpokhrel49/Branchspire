@@ -6,10 +6,10 @@ package repo
 import (
 	"slices"
 
-	"branchspire/models/perm"
-	"branchspire/models/unit"
-	"branchspire/modules/json"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/models/perm"
+	"code.gitea.io/gitea/models/unit"
+	"code.gitea.io/gitea/modules/json"
+	"code.gitea.io/gitea/modules/util"
 )
 
 // ActionsTokenPermissionMode defines the default permission mode for Actions tokens

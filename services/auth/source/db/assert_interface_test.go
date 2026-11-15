@@ -4,9 +4,9 @@
 package db_test
 
 import (
-	auth_model "branchspire/models/auth"
-	"branchspire/services/auth"
-	"branchspire/services/auth/source/db"
+	auth_model "code.gitea.io/gitea/models/auth"
+	"code.gitea.io/gitea/services/auth"
+	"code.gitea.io/gitea/services/auth/source/db"
 )
 
 // This test file exists to assert that our Source exposes the interfaces that we expect

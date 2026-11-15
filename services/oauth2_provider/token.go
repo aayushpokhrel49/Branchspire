@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"time"
 
-	"branchspire/modules/timeutil"
+	"code.gitea.io/gitea/modules/timeutil"
 
 	"github.com/golang-jwt/jwt/v5"
 )

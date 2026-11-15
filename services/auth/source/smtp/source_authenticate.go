@@ -10,12 +10,12 @@ import (
 	"net/textproto"
 	"strings"
 
-	audit_model "branchspire/models/audit"
-	auth_model "branchspire/models/auth"
-	user_model "branchspire/models/user"
-	"branchspire/modules/optional"
-	"branchspire/modules/util"
-	"branchspire/services/audit"
+	audit_model "code.gitea.io/gitea/models/audit"
+	auth_model "code.gitea.io/gitea/models/auth"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/optional"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/services/audit"
 )
 
 // Authenticate queries if the provided login/password is authenticates against the SMTP server

@@ -7,12 +7,12 @@ import (
 	"net/http"
 	"strings"
 
-	actions_model "branchspire/models/actions"
-	repo_model "branchspire/models/repo"
-	user_model "branchspire/models/user"
-	"branchspire/modules/json"
-	"branchspire/modules/private"
-	"branchspire/services/context"
+	actions_model "code.gitea.io/gitea/models/actions"
+	repo_model "code.gitea.io/gitea/models/repo"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/json"
+	"code.gitea.io/gitea/modules/private"
+	"code.gitea.io/gitea/services/context"
 )
 
 // GenerateActionsRunnerToken generates a new runner token for a given scope

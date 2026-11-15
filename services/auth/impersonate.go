@@ -7,8 +7,8 @@ import (
 	"errors"
 	"fmt"
 
-	user_model "branchspire/models/user"
-	"branchspire/modules/session"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/session"
 )
 
 func ImpersonateUser(sess SessionStore, u *user_model.User) error {

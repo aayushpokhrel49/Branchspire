@@ -7,7 +7,7 @@ import (
 	"context"
 	"fmt"
 
-	"branchspire/modules/git/gitcmd"
+	"code.gitea.io/gitea/modules/git/gitcmd"
 )
 
 // WriteCommitGraph write commit graph to speed up repo access

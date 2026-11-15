@@ -11,10 +11,10 @@ import (
 	"strconv"
 	"strings"
 
-	"branchspire/modules/graceful"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/graceful"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/util"
 )
 
 // builtinUnused informs our cleanup routine that we will not be using a ssh port

@@ -6,16 +6,16 @@ package user
 import (
 	"testing"
 
-	audit_model "branchspire/models/audit"
-	auth_model "branchspire/models/auth"
-	"branchspire/models/unittest"
-	user_model "branchspire/models/user"
-	password_module "branchspire/modules/auth/password"
-	"branchspire/modules/optional"
-	"branchspire/modules/setting"
-	"branchspire/modules/structs"
-	"branchspire/modules/test"
-	"branchspire/modules/util"
+	audit_model "code.gitea.io/gitea/models/audit"
+	auth_model "code.gitea.io/gitea/models/auth"
+	"code.gitea.io/gitea/models/unittest"
+	user_model "code.gitea.io/gitea/models/user"
+	password_module "code.gitea.io/gitea/modules/auth/password"
+	"code.gitea.io/gitea/modules/optional"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/modules/test"
+	"code.gitea.io/gitea/modules/util"
 
 	"github.com/stretchr/testify/assert"
 )

@@ -11,10 +11,10 @@ import (
 	"runtime"
 	"strings"
 
-	"branchspire/modules/auth/password/hash"
-	"branchspire/modules/consts"
-	"branchspire/modules/log"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/auth/password/hash"
+	"code.gitea.io/gitea/modules/consts"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/util"
 
 	"github.com/kballard/go-shellquote"
 )

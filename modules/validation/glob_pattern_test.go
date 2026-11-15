@@ -6,7 +6,7 @@ package validation
 import (
 	"testing"
 
-	"branchspire/modules/glob"
+	"code.gitea.io/gitea/modules/glob"
 )
 
 func getGlobPatternErrorString(pattern string) string {

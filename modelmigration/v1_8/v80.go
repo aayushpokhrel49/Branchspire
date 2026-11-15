@@ -6,7 +6,7 @@ package v1_8
 import (
 	"context"
 
-	"branchspire/modelmigration/base"
+	"code.gitea.io/gitea/modelmigration/base"
 )
 
 func AddIsLockedToIssues(_ context.Context, x base.EngineMigration) error {

@@ -6,10 +6,10 @@ package user
 import (
 	"testing"
 
-	activities_model "branchspire/models/activities"
-	repo_model "branchspire/models/repo"
-	"branchspire/models/unittest"
-	user_model "branchspire/models/user"
+	activities_model "code.gitea.io/gitea/models/activities"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/models/unittest"
+	user_model "code.gitea.io/gitea/models/user"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

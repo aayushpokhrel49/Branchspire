@@ -7,10 +7,10 @@ import (
 	"net/http"
 	"testing"
 
-	repo_model "branchspire/models/repo"
-	"branchspire/models/unittest"
-	"branchspire/modules/test"
-	"branchspire/tests"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/models/unittest"
+	"code.gitea.io/gitea/modules/test"
+	"code.gitea.io/gitea/tests"
 
 	"github.com/stretchr/testify/assert"
 )

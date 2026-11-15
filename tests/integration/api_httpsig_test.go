@@ -9,11 +9,11 @@ import (
 	"net/url"
 	"testing"
 
-	auth_model "branchspire/models/auth"
-	"branchspire/modules/setting"
-	api "branchspire/modules/structs"
-	"branchspire/modules/test"
-	"branchspire/tests"
+	auth_model "code.gitea.io/gitea/models/auth"
+	"code.gitea.io/gitea/modules/setting"
+	api "code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/modules/test"
+	"code.gitea.io/gitea/tests"
 
 	"github.com/42wim/httpsig"
 	"github.com/stretchr/testify/require"

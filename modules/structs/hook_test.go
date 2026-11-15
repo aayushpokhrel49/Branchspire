@@ -6,7 +6,7 @@ package structs
 import (
 	"testing"
 
-	"branchspire/modules/json"
+	"code.gitea.io/gitea/modules/json"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

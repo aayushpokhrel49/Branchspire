@@ -11,19 +11,19 @@ import (
 	"testing"
 	"time"
 
+	actions_model "code.gitea.io/gitea/models/actions"
+	auth_model "code.gitea.io/gitea/models/auth"
+	"code.gitea.io/gitea/models/db"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/models/unittest"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/actions/jobparser"
+	"code.gitea.io/gitea/modules/setting"
+	api "code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/modules/test"
+	"code.gitea.io/gitea/modules/timeutil"
+	actions_web "code.gitea.io/gitea/routers/web/repo/actions"
 	runnerv1 "gitea.dev/actionslib/runner/v1"
-	actions_model "branchspire/models/actions"
-	auth_model "branchspire/models/auth"
-	"branchspire/models/db"
-	repo_model "branchspire/models/repo"
-	"branchspire/models/unittest"
-	user_model "branchspire/models/user"
-	"branchspire/modules/actions/jobparser"
-	"branchspire/modules/setting"
-	api "branchspire/modules/structs"
-	"branchspire/modules/test"
-	"branchspire/modules/timeutil"
-	actions_web "branchspire/routers/web/repo/actions"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -46,12 +46,12 @@ func TestActionsRerun(t *testing.T) {
 		runner := newMockRunner()
 		runner.registerAsRepoRunner(t, repo.OwnerName, repo.Name, "mock-runner", []string{"ubuntu-latest"}, false)
 
-		wfTreePath := ".branchspire/workflows/actions-rerun-workflow-1.yml"
+		wfTreePath := ".code.gitea.io/gitea/workflows/actions-rerun-workflow-1.yml"
 		wfFileContent := `name: actions-rerun-workflow-1
 on:
   push:
     paths:
-      - '.branchspire/workflows/actions-rerun-workflow-1.yml'
+      - '.code.gitea.io/gitea/workflows/actions-rerun-workflow-1.yml'
 jobs:
   job1:
     runs-on: ubuntu-latest
@@ -230,7 +230,7 @@ func TestActionsRerunLegacyNoAttemptRun(t *testing.T) {
 		runner := newMockRunner()
 		runner.registerAsRepoRunner(t, repo.OwnerName, repo.Name, "mock-runner", []string{"ubuntu-latest"}, false)
 
-		wfTreePath := ".branchspire/workflows/actions-rerun-legacy.yml"
+		wfTreePath := ".code.gitea.io/gitea/workflows/actions-rerun-legacy.yml"
 		wfFileContent := `name: actions-rerun-legacy
 on:
   workflow_dispatch:

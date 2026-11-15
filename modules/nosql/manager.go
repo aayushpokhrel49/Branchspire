@@ -9,7 +9,7 @@ import (
 	"sync"
 	"time"
 
-	"branchspire/modules/process"
+	"code.gitea.io/gitea/modules/process"
 
 	"github.com/redis/go-redis/v9"
 	"github.com/syndtr/goleveldb/leveldb"

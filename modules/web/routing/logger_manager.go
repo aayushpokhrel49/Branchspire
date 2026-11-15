@@ -9,9 +9,9 @@ import (
 	"sync"
 	"time"
 
-	"branchspire/modules/graceful"
-	"branchspire/modules/log"
-	"branchspire/modules/process"
+	"code.gitea.io/gitea/modules/graceful"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/process"
 )
 
 // Event indicates when the printer is triggered

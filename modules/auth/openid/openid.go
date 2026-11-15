@@ -8,7 +8,7 @@ import (
 	"sync"
 	"time"
 
-	"branchspire/modules/egress"
+	"code.gitea.io/gitea/modules/egress"
 
 	"github.com/yohcop/openid-go"
 )

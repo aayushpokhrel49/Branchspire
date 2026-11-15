@@ -10,12 +10,12 @@ import (
 	"sync/atomic"
 	"testing"
 
+	"code.gitea.io/gitea/models/db"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/models/unittest"
+	"code.gitea.io/gitea/modules/actions/jobparser"
+	"code.gitea.io/gitea/modules/timeutil"
 	runnerv1 "gitea.dev/actionslib/runner/v1"
-	"branchspire/models/db"
-	repo_model "branchspire/models/repo"
-	"branchspire/models/unittest"
-	"branchspire/modules/actions/jobparser"
-	"branchspire/modules/timeutil"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

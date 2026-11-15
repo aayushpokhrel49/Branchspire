@@ -8,14 +8,14 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	actions_model "branchspire/models/actions"
-	"branchspire/models/db"
-	repo_model "branchspire/models/repo"
-	unittest "branchspire/models/unittest"
-	"branchspire/modules/setting"
-	"branchspire/modules/test"
-	web_context "branchspire/services/context"
-	"branchspire/services/contexttest"
+	actions_model "code.gitea.io/gitea/models/actions"
+	"code.gitea.io/gitea/models/db"
+	repo_model "code.gitea.io/gitea/models/repo"
+	unittest "code.gitea.io/gitea/models/unittest"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/test"
+	web_context "code.gitea.io/gitea/services/context"
+	"code.gitea.io/gitea/services/contexttest"
 
 	"github.com/stretchr/testify/assert"
 )

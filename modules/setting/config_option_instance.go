@@ -6,7 +6,7 @@ package setting
 import (
 	"time"
 
-	"branchspire/modules/setting/config"
+	"code.gitea.io/gitea/modules/setting/config"
 )
 
 // WebBannerType fields are directly used in templates,

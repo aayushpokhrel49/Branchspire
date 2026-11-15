@@ -10,11 +10,11 @@ import (
 	"regexp"
 	"strings"
 
-	"branchspire/modules/setting"
-	"branchspire/modules/templates"
-	"branchspire/modules/util"
-	"branchspire/services/context"
-	"branchspire/services/mailer"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/templates"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/services/context"
+	"code.gitea.io/gitea/services/mailer"
 
 	"go.yaml.in/yaml/v4"
 )

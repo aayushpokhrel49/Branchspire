@@ -6,10 +6,10 @@ package files
 import (
 	"context"
 
-	"branchspire/models/asymkey"
-	"branchspire/modules/git"
-	"branchspire/modules/structs"
-	asymkey_service "branchspire/services/asymkey"
+	"code.gitea.io/gitea/models/asymkey"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/structs"
+	asymkey_service "code.gitea.io/gitea/services/asymkey"
 )
 
 // GetPayloadCommitVerification returns the verification information of a commit

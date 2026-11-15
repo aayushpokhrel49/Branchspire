@@ -11,11 +11,11 @@ import (
 	"time"
 	"unicode"
 
-	user_model "branchspire/models/user"
-	"branchspire/modules/httplib"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
-	"branchspire/modules/web/middleware"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/httplib"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/web/middleware"
 )
 
 type accessLoggerTmplData struct {

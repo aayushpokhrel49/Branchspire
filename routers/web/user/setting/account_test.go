@@ -7,11 +7,11 @@ import (
 	"net/http"
 	"testing"
 
-	"branchspire/models/unittest"
-	"branchspire/modules/setting"
-	"branchspire/modules/web"
-	"branchspire/services/contexttest"
-	"branchspire/services/forms"
+	"code.gitea.io/gitea/models/unittest"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/web"
+	"code.gitea.io/gitea/services/contexttest"
+	"code.gitea.io/gitea/services/forms"
 
 	"github.com/stretchr/testify/assert"
 )

@@ -6,10 +6,10 @@ package cmd
 import (
 	"context"
 
-	user_model "branchspire/models/user"
-	"branchspire/modules/optional"
-	"branchspire/modules/setting"
-	user_service "branchspire/services/user"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/optional"
+	"code.gitea.io/gitea/modules/setting"
+	user_service "code.gitea.io/gitea/services/user"
 
 	"github.com/urfave/cli/v3"
 )

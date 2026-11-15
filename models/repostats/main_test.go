@@ -6,14 +6,14 @@ package repostats
 import (
 	"testing"
 
-	activities_model "branchspire/models/activities"
-	"branchspire/models/organization"
-	repo_model "branchspire/models/repo"
-	"branchspire/models/unittest"
-	user_model "branchspire/models/user"
+	activities_model "code.gitea.io/gitea/models/activities"
+	"code.gitea.io/gitea/models/organization"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/models/unittest"
+	user_model "code.gitea.io/gitea/models/user"
 
-	_ "branchspire/models/actions"
-	_ "branchspire/models/system"
+	_ "code.gitea.io/gitea/models/actions"
+	_ "code.gitea.io/gitea/models/system"
 
 	"github.com/stretchr/testify/assert"
 )

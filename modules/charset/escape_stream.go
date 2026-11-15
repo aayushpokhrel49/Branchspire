@@ -12,9 +12,9 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-	"branchspire/modules/setting"
-	"branchspire/modules/translation"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/translation"
+	"code.gitea.io/gitea/modules/util"
 )
 
 type htmlChunkReader struct {

@@ -8,11 +8,11 @@ import (
 	"fmt"
 	"net/http"
 
-	webhook_model "branchspire/models/webhook"
-	"branchspire/modules/json"
-	"branchspire/modules/log"
-	api "branchspire/modules/structs"
-	webhook_module "branchspire/modules/webhook"
+	webhook_model "code.gitea.io/gitea/models/webhook"
+	"code.gitea.io/gitea/modules/json"
+	"code.gitea.io/gitea/modules/log"
+	api "code.gitea.io/gitea/modules/structs"
+	webhook_module "code.gitea.io/gitea/modules/webhook"
 )
 
 type (

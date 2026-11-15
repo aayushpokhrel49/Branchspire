@@ -8,8 +8,8 @@ import (
 	"encoding/base32"
 	"fmt"
 
-	"branchspire/modelmigration/base"
-	"branchspire/modules/timeutil"
+	"code.gitea.io/gitea/modelmigration/base"
+	"code.gitea.io/gitea/modules/timeutil"
 )
 
 func StoreWebauthnCredentialIDAsBytes(_ context.Context, x base.EngineMigration) error {

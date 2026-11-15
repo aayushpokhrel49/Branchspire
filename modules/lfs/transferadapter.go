@@ -9,8 +9,8 @@ import (
 	"io"
 	"net/http"
 
-	"branchspire/modules/json"
-	"branchspire/modules/log"
+	"code.gitea.io/gitea/modules/json"
+	"code.gitea.io/gitea/modules/log"
 )
 
 // TransferAdapter represents an adapter for downloading/uploading LFS objects.

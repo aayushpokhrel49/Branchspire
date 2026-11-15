@@ -6,8 +6,8 @@ package v1_20
 import (
 	"context"
 
-	"branchspire/modelmigration/base"
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modelmigration/base"
+	"code.gitea.io/gitea/modules/setting"
 )
 
 func RenameWebhookOrgToOwner(ctx context.Context, x base.EngineMigration) error {

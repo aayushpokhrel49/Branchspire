@@ -6,8 +6,8 @@ package middleware
 import (
 	"testing"
 
-	"branchspire/modules/translation"
-	"branchspire/modules/validation"
+	"code.gitea.io/gitea/modules/translation"
+	"code.gitea.io/gitea/modules/validation"
 
 	"github.com/stretchr/testify/assert"
 )

@@ -6,8 +6,8 @@ package templates
 import (
 	"context"
 
-	git_model "branchspire/models/git"
-	actions_module "branchspire/modules/actions"
+	git_model "code.gitea.io/gitea/models/git"
+	actions_module "code.gitea.io/gitea/modules/actions"
 )
 
 type ActionsUtils struct {

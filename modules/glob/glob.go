@@ -10,7 +10,7 @@ import (
 	"slices"
 	"strings"
 
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/util"
 )
 
 // Reference: https://github.com/gobwas/glob/blob/master/glob.go

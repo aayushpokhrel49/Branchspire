@@ -8,12 +8,12 @@ import (
 	"errors"
 	"fmt"
 
-	"branchspire/models/db"
-	repo_model "branchspire/models/repo"
-	"branchspire/modules/graceful"
-	"branchspire/modules/log"
-	"branchspire/modules/queue"
-	repo_module "branchspire/modules/repository"
+	"code.gitea.io/gitea/models/db"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/modules/graceful"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/queue"
+	repo_module "code.gitea.io/gitea/modules/repository"
 
 	"xorm.io/builder"
 )

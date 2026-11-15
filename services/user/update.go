@@ -7,15 +7,15 @@ import (
 	"context"
 	"fmt"
 
-	audit_model "branchspire/models/audit"
-	auth_model "branchspire/models/auth"
-	user_model "branchspire/models/user"
-	password_module "branchspire/modules/auth/password"
-	"branchspire/modules/optional"
-	"branchspire/modules/setting"
-	"branchspire/modules/structs"
-	"branchspire/modules/util"
-	"branchspire/services/audit"
+	audit_model "code.gitea.io/gitea/models/audit"
+	auth_model "code.gitea.io/gitea/models/auth"
+	user_model "code.gitea.io/gitea/models/user"
+	password_module "code.gitea.io/gitea/modules/auth/password"
+	"code.gitea.io/gitea/modules/optional"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/services/audit"
 )
 
 type UpdateOptionField[T any] struct {

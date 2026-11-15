@@ -11,9 +11,9 @@ import (
 	"testing"
 	"time"
 
-	"branchspire/modules/setting"
-	"branchspire/modules/tempdir"
-	"branchspire/modules/testlogger"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/tempdir"
+	"code.gitea.io/gitea/modules/testlogger"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

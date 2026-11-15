@@ -6,13 +6,13 @@ package pull
 import (
 	"fmt"
 
-	repo_model "branchspire/models/repo"
-	user_model "branchspire/models/user"
-	"branchspire/modules/container"
-	"branchspire/modules/git"
-	"branchspire/modules/git/gitcmd"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
+	repo_model "code.gitea.io/gitea/models/repo"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/container"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/git/gitcmd"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
 )
 
 // doMergeStyleSquash gets a commit author signature for squash commits

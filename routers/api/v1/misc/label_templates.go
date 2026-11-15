@@ -6,10 +6,10 @@ package misc
 import (
 	"net/http"
 
-	repo_module "branchspire/modules/repository"
-	"branchspire/modules/util"
-	"branchspire/services/context"
-	"branchspire/services/convert"
+	repo_module "code.gitea.io/gitea/modules/repository"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/services/context"
+	"code.gitea.io/gitea/services/convert"
 )
 
 // Shows a list of all Label templates

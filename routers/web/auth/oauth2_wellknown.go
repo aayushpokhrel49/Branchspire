@@ -7,9 +7,9 @@ import (
 	"net/http"
 	"strings"
 
-	"branchspire/modules/setting"
-	"branchspire/services/context"
-	"branchspire/services/oauth2_provider"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/services/context"
+	"code.gitea.io/gitea/services/oauth2_provider"
 )
 
 // OIDCWellKnown generates JSON so OIDC clients know BranchSpire's capabilities

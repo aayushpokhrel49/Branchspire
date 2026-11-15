@@ -11,11 +11,11 @@ import (
 	"strings"
 	"time"
 
-	"branchspire/modules/consts"
-	"branchspire/modules/log"
-	"branchspire/modules/optional"
-	"branchspire/modules/user"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/consts"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/optional"
+	"code.gitea.io/gitea/modules/user"
+	"code.gitea.io/gitea/modules/util"
 )
 
 var (

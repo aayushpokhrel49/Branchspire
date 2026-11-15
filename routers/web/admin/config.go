@@ -7,17 +7,17 @@ package admin
 import (
 	"net/http"
 
-	system_model "branchspire/models/system"
-	"branchspire/modules/cache"
-	"branchspire/modules/git"
-	"branchspire/modules/json"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
-	"branchspire/modules/setting/config"
-	"branchspire/modules/templates"
-	"branchspire/modules/util"
-	"branchspire/services/context"
-	"branchspire/services/mailer"
+	system_model "code.gitea.io/gitea/models/system"
+	"code.gitea.io/gitea/modules/cache"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/json"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/setting/config"
+	"code.gitea.io/gitea/modules/templates"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/services/context"
+	"code.gitea.io/gitea/services/mailer"
 )
 
 const (

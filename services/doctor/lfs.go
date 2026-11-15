@@ -8,9 +8,9 @@ import (
 	"errors"
 	"time"
 
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
-	"branchspire/services/repository"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/services/repository"
 )
 
 func init() {

@@ -9,9 +9,9 @@ import (
 	"text/template"
 	"time"
 
-	"branchspire/modules/consts"
-	"branchspire/modules/log"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/consts"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/util"
 
 	gossh "golang.org/x/crypto/ssh"
 )

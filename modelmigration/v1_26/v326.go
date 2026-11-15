@@ -11,11 +11,11 @@ import (
 	"strconv"
 	"strings"
 
-	"branchspire/modelmigration/base"
-	"branchspire/modules/json"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
-	webhook_module "branchspire/modules/webhook"
+	"code.gitea.io/gitea/modelmigration/base"
+	"code.gitea.io/gitea/modules/json"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
+	webhook_module "code.gitea.io/gitea/modules/webhook"
 )
 
 const (

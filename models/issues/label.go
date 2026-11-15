@@ -14,12 +14,12 @@ import (
 	"strconv"
 	"strings"
 
-	"branchspire/models/db"
-	"branchspire/modules/container"
-	"branchspire/modules/label"
-	"branchspire/modules/optional"
-	"branchspire/modules/timeutil"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/modules/container"
+	"code.gitea.io/gitea/modules/label"
+	"code.gitea.io/gitea/modules/optional"
+	"code.gitea.io/gitea/modules/timeutil"
+	"code.gitea.io/gitea/modules/util"
 
 	"xorm.io/builder"
 )

@@ -10,14 +10,14 @@ import (
 	"strconv"
 	"time"
 
-	issues_model "branchspire/models/issues"
-	user_model "branchspire/models/user"
-	"branchspire/modules/git"
-	"branchspire/modules/setting"
-	api "branchspire/modules/structs"
-	"branchspire/routers/api/v1/utils"
-	"branchspire/services/context"
-	"branchspire/services/convert"
+	issues_model "code.gitea.io/gitea/models/issues"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/setting"
+	api "code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/routers/api/v1/utils"
+	"code.gitea.io/gitea/services/context"
+	"code.gitea.io/gitea/services/convert"
 )
 
 // GetSingleCommit get a commit via sha

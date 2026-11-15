@@ -7,10 +7,10 @@ import (
 	"context"
 	"net/url"
 
-	git_model "branchspire/models/git"
-	user_model "branchspire/models/user"
-	"branchspire/modules/commitstatus"
-	api "branchspire/modules/structs"
+	git_model "code.gitea.io/gitea/models/git"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/commitstatus"
+	api "code.gitea.io/gitea/modules/structs"
 )
 
 // ToCommitStatus converts git_model.CommitStatus to api.CommitStatus

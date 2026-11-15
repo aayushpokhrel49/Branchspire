@@ -11,9 +11,9 @@ import (
 	"strings"
 	"testing"
 
-	"branchspire/modules/reqctx"
-	"branchspire/modules/setting"
-	"branchspire/modules/test"
+	"code.gitea.io/gitea/modules/reqctx"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/test"
 
 	"github.com/stretchr/testify/assert"
 )

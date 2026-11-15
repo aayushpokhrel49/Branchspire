@@ -13,15 +13,15 @@ import (
 	"sync"
 	"time"
 
-	"branchspire/models/avatars"
-	repo_model "branchspire/models/repo"
-	user_model "branchspire/models/user"
-	"branchspire/modules/cache"
-	"branchspire/modules/git"
-	"branchspire/modules/git/gitcmd"
-	"branchspire/modules/graceful"
-	"branchspire/modules/log"
-	api "branchspire/modules/structs"
+	"code.gitea.io/gitea/models/avatars"
+	repo_model "code.gitea.io/gitea/models/repo"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/cache"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/git/gitcmd"
+	"code.gitea.io/gitea/modules/graceful"
+	"code.gitea.io/gitea/modules/log"
+	api "code.gitea.io/gitea/modules/structs"
 )
 
 const (

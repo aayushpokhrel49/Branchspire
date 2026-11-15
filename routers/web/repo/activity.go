@@ -7,11 +7,11 @@ import (
 	"net/http"
 	"time"
 
-	activities_model "branchspire/models/activities"
-	git_model "branchspire/models/git"
-	"branchspire/models/unit"
-	"branchspire/modules/templates"
-	"branchspire/services/context"
+	activities_model "code.gitea.io/gitea/models/activities"
+	git_model "code.gitea.io/gitea/models/git"
+	"code.gitea.io/gitea/models/unit"
+	"code.gitea.io/gitea/modules/templates"
+	"code.gitea.io/gitea/services/context"
 )
 
 const (

@@ -7,8 +7,8 @@ import (
 	"context"
 	"fmt"
 
-	"branchspire/modelmigration/base"
-	"branchspire/modules/git"
+	"code.gitea.io/gitea/modelmigration/base"
+	"code.gitea.io/gitea/modules/git"
 )
 
 func FixReleaseSha1OnReleaseTable(ctx context.Context, x base.EngineMigration) error {

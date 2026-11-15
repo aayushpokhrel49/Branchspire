@@ -7,10 +7,10 @@ import (
 	"context"
 	"fmt"
 
-	"branchspire/modelmigration/base"
-	"branchspire/modules/json"
-	"branchspire/modules/secret"
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modelmigration/base"
+	"code.gitea.io/gitea/modules/json"
+	"code.gitea.io/gitea/modules/secret"
+	"code.gitea.io/gitea/modules/setting"
 
 	"xorm.io/builder"
 )

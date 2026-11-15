@@ -6,13 +6,13 @@ package git
 import (
 	"testing"
 
-	"branchspire/models/db"
-	"branchspire/models/perm"
-	access_model "branchspire/models/perm/access"
-	repo_model "branchspire/models/repo"
-	"branchspire/models/unit"
-	"branchspire/models/unittest"
-	user_model "branchspire/models/user"
+	"code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/models/perm"
+	access_model "code.gitea.io/gitea/models/perm/access"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/models/unit"
+	"code.gitea.io/gitea/models/unittest"
+	user_model "code.gitea.io/gitea/models/user"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

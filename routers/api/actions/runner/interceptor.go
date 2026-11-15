@@ -9,12 +9,12 @@ import (
 	"strings"
 	"time"
 
+	actions_model "code.gitea.io/gitea/models/actions"
+	auth_model "code.gitea.io/gitea/models/auth"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/timeutil"
+	"code.gitea.io/gitea/modules/util"
 	"gitea.dev/actionslib/pkg/protocol"
-	actions_model "branchspire/models/actions"
-	auth_model "branchspire/models/auth"
-	"branchspire/modules/log"
-	"branchspire/modules/timeutil"
-	"branchspire/modules/util"
 
 	"connectrpc.com/connect"
 	"google.golang.org/grpc/codes"

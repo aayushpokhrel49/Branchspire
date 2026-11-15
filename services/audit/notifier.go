@@ -7,12 +7,12 @@ import (
 	"context"
 	"fmt"
 
-	audit_model "branchspire/models/audit"
-	issues_model "branchspire/models/issues"
-	repo_model "branchspire/models/repo"
-	user_model "branchspire/models/user"
-	"branchspire/modules/log"
-	notify_service "branchspire/services/notify"
+	audit_model "code.gitea.io/gitea/models/audit"
+	issues_model "code.gitea.io/gitea/models/issues"
+	repo_model "code.gitea.io/gitea/models/repo"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/log"
+	notify_service "code.gitea.io/gitea/services/notify"
 )
 
 func init() {

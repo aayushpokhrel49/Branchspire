@@ -6,7 +6,7 @@ package asymkey
 import (
 	"context"
 
-	"branchspire/models/db"
+	"code.gitea.io/gitea/models/db"
 )
 
 //    __________________  ________   ____  __.

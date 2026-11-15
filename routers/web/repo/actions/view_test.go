@@ -6,11 +6,11 @@ package actions
 import (
 	"testing"
 
-	actions_model "branchspire/models/actions"
-	repo_model "branchspire/models/repo"
-	api "branchspire/modules/structs"
-	"branchspire/modules/timeutil"
-	"branchspire/modules/translation"
+	actions_model "code.gitea.io/gitea/models/actions"
+	repo_model "code.gitea.io/gitea/models/repo"
+	api "code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/modules/timeutil"
+	"code.gitea.io/gitea/modules/translation"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

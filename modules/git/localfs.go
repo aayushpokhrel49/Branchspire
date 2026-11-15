@@ -10,8 +10,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"branchspire/modules/git/gitrepo"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/git/gitrepo"
+	"code.gitea.io/gitea/modules/util"
 )
 
 // IsRepositoryExist returns true if the repository directory exists in the disk

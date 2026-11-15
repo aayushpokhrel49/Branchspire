@@ -6,10 +6,10 @@ package org
 import (
 	"net/http"
 
-	"branchspire/models/organization"
-	"branchspire/modules/util"
-	shared_mention "branchspire/routers/web/shared/mention"
-	"branchspire/services/context"
+	"code.gitea.io/gitea/models/organization"
+	"code.gitea.io/gitea/modules/util"
+	shared_mention "code.gitea.io/gitea/routers/web/shared/mention"
+	"code.gitea.io/gitea/services/context"
 )
 
 // GetMentionsInOwner returns JSON data for mention autocomplete on owner-level pages.

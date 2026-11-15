@@ -4,8 +4,8 @@
 package base
 
 import (
-	"branchspire/models/db" //nolint:depguard // allow to access db in migration
-	"branchspire/modules/git/gitrepo"
+	"code.gitea.io/gitea/models/db" //nolint:depguard // allow to access db in migration
+	"code.gitea.io/gitea/modules/git/gitrepo"
 )
 
 // HINT: MIGRATION-STRUCT-FROZEN: the structs used in migrations should not be affected by the changes happen in the future,

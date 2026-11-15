@@ -6,9 +6,9 @@ package system_test
 import (
 	"testing"
 
-	"branchspire/models/db"
-	"branchspire/models/system"
-	"branchspire/models/unittest"
+	"code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/models/system"
+	"code.gitea.io/gitea/models/unittest"
 
 	"github.com/stretchr/testify/assert"
 )

@@ -9,14 +9,14 @@ import (
 	"net/url"
 	"testing"
 
+	actions_model "code.gitea.io/gitea/models/actions"
+	auth_model "code.gitea.io/gitea/models/auth"
+	"code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/models/unittest"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/setting"
+	actions_web "code.gitea.io/gitea/routers/web/repo/actions"
 	runnerv1 "gitea.dev/actionslib/runner/v1"
-	actions_model "branchspire/models/actions"
-	auth_model "branchspire/models/auth"
-	"branchspire/models/db"
-	"branchspire/models/unittest"
-	user_model "branchspire/models/user"
-	"branchspire/modules/setting"
-	actions_web "branchspire/routers/web/repo/actions"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -41,12 +41,12 @@ func testActionsRouteForIDBasedURL(t *testing.T) {
 	runner2 := newMockRunner()
 	runner2.registerAsRepoRunner(t, user2.Name, repo2.Name, "mock-runner", []string{"ubuntu-latest"}, false)
 
-	workflowTreePath := ".branchspire/workflows/test.yml"
+	workflowTreePath := ".code.gitea.io/gitea/workflows/test.yml"
 	workflowContent := `name: test
 on:
   push:
     paths:
-      - '.branchspire/workflows/test.yml'
+      - '.code.gitea.io/gitea/workflows/test.yml'
 jobs:
   job1:
     runs-on: ubuntu-latest

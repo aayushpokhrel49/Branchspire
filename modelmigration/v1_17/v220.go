@@ -6,9 +6,9 @@ package v1_17
 import (
 	"context"
 
-	"branchspire/modelmigration/base"
-	packages_model "branchspire/models/packages" //nolint:depguard // only consts are used
-	container_module "branchspire/modules/packages/container"
+	"code.gitea.io/gitea/modelmigration/base"
+	packages_model "code.gitea.io/gitea/models/packages" //nolint:depguard // only consts are used
+	container_module "code.gitea.io/gitea/modules/packages/container"
 
 	"xorm.io/xorm/schemas"
 )

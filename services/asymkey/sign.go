@@ -9,17 +9,17 @@ import (
 	"os"
 	"strings"
 
-	asymkey_model "branchspire/models/asymkey"
-	"branchspire/models/auth"
-	"branchspire/models/db"
-	git_model "branchspire/models/git"
-	issues_model "branchspire/models/issues"
-	repo_model "branchspire/models/repo"
-	user_model "branchspire/models/user"
-	"branchspire/modules/git"
-	"branchspire/modules/log"
-	"branchspire/modules/process"
-	"branchspire/modules/setting"
+	asymkey_model "code.gitea.io/gitea/models/asymkey"
+	"code.gitea.io/gitea/models/auth"
+	"code.gitea.io/gitea/models/db"
+	git_model "code.gitea.io/gitea/models/git"
+	issues_model "code.gitea.io/gitea/models/issues"
+	repo_model "code.gitea.io/gitea/models/repo"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/process"
+	"code.gitea.io/gitea/modules/setting"
 )
 
 type signingMode string

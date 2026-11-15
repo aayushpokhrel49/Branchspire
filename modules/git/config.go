@@ -10,9 +10,9 @@ import (
 	"regexp"
 	"strings"
 
-	"branchspire/modules/consts"
-	"branchspire/modules/git/gitcmd"
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modules/consts"
+	"code.gitea.io/gitea/modules/git/gitcmd"
+	"code.gitea.io/gitea/modules/setting"
 )
 
 // syncGitConfig only modifies gitconfig, won't change global variables (otherwise there will be data-race problem)

@@ -10,7 +10,7 @@ import (
 	"runtime"
 	"runtime/pprof"
 
-	"branchspire/modules/log"
+	"code.gitea.io/gitea/modules/log"
 )
 
 func dumpMemProfileForUsername(pprofDataPath, subName string) error {

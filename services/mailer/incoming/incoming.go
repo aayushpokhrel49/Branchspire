@@ -12,10 +12,10 @@ import (
 	"strings"
 	"time"
 
-	"branchspire/modules/log"
-	"branchspire/modules/process"
-	"branchspire/modules/setting"
-	"branchspire/services/mailer/token"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/process"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/services/mailer/token"
 
 	"github.com/emersion/go-imap"
 	"github.com/emersion/go-imap/client"

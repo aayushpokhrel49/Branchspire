@@ -6,10 +6,10 @@ package repository
 import (
 	"context"
 
-	"branchspire/models/organization"
-	repo_model "branchspire/models/repo"
-	user_model "branchspire/models/user"
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/models/organization"
+	repo_model "code.gitea.io/gitea/models/repo"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/setting"
 )
 
 // CanUserForkBetweenOwners returns true if user can fork between owners.

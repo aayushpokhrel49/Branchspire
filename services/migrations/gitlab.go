@@ -15,12 +15,12 @@ import (
 	"strings"
 	"time"
 
-	issues_model "branchspire/models/issues"
-	"branchspire/models/user"
-	"branchspire/modules/container"
-	"branchspire/modules/log"
-	base "branchspire/modules/migration"
-	"branchspire/modules/structs"
+	issues_model "code.gitea.io/gitea/models/issues"
+	"code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/container"
+	"code.gitea.io/gitea/modules/log"
+	base "code.gitea.io/gitea/modules/migration"
+	"code.gitea.io/gitea/modules/structs"
 
 	gitlab "gitlab.com/gitlab-org/api/client-go/v3"
 )

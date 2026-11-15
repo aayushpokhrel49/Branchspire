@@ -7,7 +7,7 @@ import (
 	"context"
 	"fmt"
 
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modules/setting"
 )
 
 // RestoreParams structure holds a data for restore repository

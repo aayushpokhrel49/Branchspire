@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"branchspire/modelmigration/base"
+	"code.gitea.io/gitea/modelmigration/base"
 )
 
 func UpdateMigrationServiceTypes(_ context.Context, x base.EngineMigration) error {

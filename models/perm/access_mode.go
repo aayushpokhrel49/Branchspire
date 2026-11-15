@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"slices"
 
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/util"
 )
 
 // AccessMode specifies the users access mode

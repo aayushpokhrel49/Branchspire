@@ -6,8 +6,8 @@ package v1_22
 import (
 	"testing"
 
-	"branchspire/modelmigration/migrationtest"
-	"branchspire/modules/timeutil"
+	"code.gitea.io/gitea/modelmigration/migrationtest"
+	"code.gitea.io/gitea/modules/timeutil"
 
 	"github.com/stretchr/testify/assert"
 )

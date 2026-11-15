@@ -9,7 +9,7 @@ import (
 	"syscall"
 	"time"
 
-	"branchspire/modules/consts"
+	"code.gitea.io/gitea/modules/consts"
 )
 
 // On Windows, when a file or directory is in use (opened), the file or directory is not able to be removed or renamed.

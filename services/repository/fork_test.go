@@ -7,13 +7,13 @@ import (
 	"os"
 	"testing"
 
-	repo_model "branchspire/models/repo"
-	"branchspire/models/unittest"
-	user_model "branchspire/models/user"
-	"branchspire/modules/git"
-	"branchspire/modules/git/gitrepo"
-	"branchspire/modules/setting"
-	"branchspire/modules/test"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/models/unittest"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/git/gitrepo"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/test"
 
 	"github.com/stretchr/testify/assert"
 )

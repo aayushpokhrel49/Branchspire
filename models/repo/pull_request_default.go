@@ -6,8 +6,8 @@ package repo
 import (
 	"context"
 
-	"branchspire/models/unit"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/models/unit"
+	"code.gitea.io/gitea/modules/util"
 )
 
 func (repo *Repository) GetPullRequestTargetBranch(ctx context.Context) string {

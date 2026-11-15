@@ -10,10 +10,10 @@ import (
 	"strings"
 	"sync"
 
-	"branchspire/modules/auth"
-	"branchspire/modules/git"
-	"branchspire/modules/glob"
-	"branchspire/modules/web/binding"
+	"code.gitea.io/gitea/modules/auth"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/glob"
+	"code.gitea.io/gitea/modules/web/binding"
 )
 
 const (

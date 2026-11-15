@@ -13,11 +13,11 @@ import (
 	"sync/atomic"
 	"time"
 
-	"branchspire/modules/httplib"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
-	"branchspire/modules/web/routing"
+	"code.gitea.io/gitea/modules/httplib"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/modules/web/routing"
 )
 
 const viteDevPortFile = "public/assets/.vite/dev-port"

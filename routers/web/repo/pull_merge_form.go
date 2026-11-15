@@ -7,16 +7,16 @@ import (
 	"errors"
 	"html/template"
 
-	pull_model "branchspire/models/pull"
-	repo_model "branchspire/models/repo"
-	"branchspire/models/unit"
-	"branchspire/modules/git"
-	"branchspire/modules/log"
-	"branchspire/modules/svg"
-	"branchspire/modules/templates"
-	"branchspire/modules/util"
-	"branchspire/services/context"
-	pull_service "branchspire/services/pull"
+	pull_model "code.gitea.io/gitea/models/pull"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/models/unit"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/svg"
+	"code.gitea.io/gitea/modules/templates"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/services/context"
+	pull_service "code.gitea.io/gitea/services/pull"
 )
 
 func (prInfo *pullRequestViewInfo) prepareMergeBoxFormProps(ctx *context.Context) {

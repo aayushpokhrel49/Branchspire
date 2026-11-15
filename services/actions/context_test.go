@@ -7,18 +7,18 @@ import (
 	"strconv"
 	"testing"
 
+	actions_model "code.gitea.io/gitea/models/actions"
+	"code.gitea.io/gitea/models/db"
+	git_model "code.gitea.io/gitea/models/git"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/models/unittest"
+	user_model "code.gitea.io/gitea/models/user"
+	actions_module "code.gitea.io/gitea/modules/actions"
+	"code.gitea.io/gitea/modules/json"
+	api "code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/modules/test"
+	webhook_module "code.gitea.io/gitea/modules/webhook"
 	act_model "gitea.dev/actionslib/pkg/model"
-	actions_model "branchspire/models/actions"
-	"branchspire/models/db"
-	git_model "branchspire/models/git"
-	repo_model "branchspire/models/repo"
-	"branchspire/models/unittest"
-	user_model "branchspire/models/user"
-	actions_module "branchspire/modules/actions"
-	"branchspire/modules/json"
-	api "branchspire/modules/structs"
-	"branchspire/modules/test"
-	webhook_module "branchspire/modules/webhook"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -117,7 +117,7 @@ jobs:
       - run: echo
   skip-caller:
     if: false
-    uses: ./.branchspire/workflows/callee.yml
+    uses: ./.code.gitea.io/gitea/workflows/callee.yml
   invalid:
     if: fromJSON('{')
     runs-on: ubuntu-latest
@@ -319,7 +319,7 @@ func TestComputeReusableCallerOutputs(t *testing.T) {
       target:
         value: ${{ inputs.target }}
 `, string(payload))
-		caller.WorkflowPayload = []byte("on: {workflow_dispatch: {inputs: {target: {type: string}}}}\njobs:\n  caller:\n    uses: ./.branchspire/workflows/callee.yml\n")
+		caller.WorkflowPayload = []byte("on: {workflow_dispatch: {inputs: {target: {type: string}}}}\njobs:\n  caller:\n    uses: ./.code.gitea.io/gitea/workflows/callee.yml\n")
 		_, err = actions_model.UpdateRunJob(ctx, caller, nil, "workflow_payload")
 		require.NoError(t, err)
 

@@ -6,13 +6,13 @@ package issue
 import (
 	"context"
 
-	"branchspire/models/db"
-	issues_model "branchspire/models/issues"
-	access_model "branchspire/models/perm/access"
-	repo_model "branchspire/models/repo"
-	user_model "branchspire/models/user"
-	"branchspire/modules/container"
-	notify_service "branchspire/services/notify"
+	"code.gitea.io/gitea/models/db"
+	issues_model "code.gitea.io/gitea/models/issues"
+	access_model "code.gitea.io/gitea/models/perm/access"
+	repo_model "code.gitea.io/gitea/models/repo"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/container"
+	notify_service "code.gitea.io/gitea/services/notify"
 )
 
 func toBeRemovedAssignees(issue *issues_model.Issue, assignees []*user_model.User) (toBeRemovedAssignees []*user_model.User) {

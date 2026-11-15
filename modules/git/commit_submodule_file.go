@@ -9,8 +9,8 @@ import (
 	"path"
 	"strings"
 
-	giturl "branchspire/modules/git/url"
-	"branchspire/modules/util"
+	giturl "code.gitea.io/gitea/modules/git/url"
+	"code.gitea.io/gitea/modules/util"
 )
 
 // CommitSubmoduleFile represents a file with submodule type.

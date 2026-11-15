@@ -6,9 +6,9 @@ package markup
 import (
 	"context"
 
-	"branchspire/models/user"
-	"branchspire/modules/markup"
-	gitea_context "branchspire/services/context"
+	"code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/markup"
+	gitea_context "code.gitea.io/gitea/services/context"
 )
 
 func FormalRenderHelperFuncs() *markup.RenderHelperFuncs {

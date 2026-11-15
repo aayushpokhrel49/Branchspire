@@ -7,16 +7,16 @@ import (
 	"errors"
 	"fmt"
 
-	issue_model "branchspire/models/issues"
-	access_model "branchspire/models/perm/access"
-	repo_model "branchspire/models/repo"
-	"branchspire/models/unit"
-	user_model "branchspire/models/user"
-	"branchspire/modules/git"
-	repo_module "branchspire/modules/repository"
-	"branchspire/modules/reqctx"
-	"branchspire/modules/util"
-	"branchspire/services/pull"
+	issue_model "code.gitea.io/gitea/models/issues"
+	access_model "code.gitea.io/gitea/models/perm/access"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/models/unit"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/git"
+	repo_module "code.gitea.io/gitea/modules/repository"
+	"code.gitea.io/gitea/modules/reqctx"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/services/pull"
 )
 
 // MergeUpstream merges the base repository's default branch into the fork repository's current branch.

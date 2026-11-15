@@ -6,8 +6,8 @@ package convert
 import (
 	"time"
 
-	"branchspire/modules/git"
-	api "branchspire/modules/structs"
+	"code.gitea.io/gitea/modules/git"
+	api "code.gitea.io/gitea/modules/structs"
 )
 
 // ToWikiCommit convert a git commit into a WikiCommit

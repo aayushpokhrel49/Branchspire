@@ -7,7 +7,7 @@ import (
 	"context"
 	"fmt"
 
-	"branchspire/modelmigration/base"
+	"code.gitea.io/gitea/modelmigration/base"
 )
 
 // OAuth2Grant here is a snapshot of models.OAuth2Grant for this version

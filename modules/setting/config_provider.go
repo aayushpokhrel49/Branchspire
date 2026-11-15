@@ -12,8 +12,8 @@ import (
 	"strings"
 	"time"
 
-	"branchspire/modules/log"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/util"
 
 	"gopkg.in/ini.v1" //nolint:depguard // wrapper for this package
 )

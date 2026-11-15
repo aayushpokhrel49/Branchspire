@@ -9,11 +9,11 @@ import (
 	"io"
 	"unicode/utf8"
 
-	"branchspire/modules/htmlutil"
-	"branchspire/modules/markup"
-	"branchspire/modules/public"
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/htmlutil"
+	"code.gitea.io/gitea/modules/markup"
+	"code.gitea.io/gitea/modules/public"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/util"
 )
 
 type frontendRenderer struct {

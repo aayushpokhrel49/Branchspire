@@ -6,7 +6,7 @@ package templates
 import (
 	"bytes"
 
-	"branchspire/modules/json"
+	"code.gitea.io/gitea/modules/json"
 )
 
 type JsonUtils struct{}

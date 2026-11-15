@@ -8,7 +8,7 @@ import (
 	"path"
 	"strings"
 
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modules/setting"
 )
 
 // NotesRef is the git ref where BranchSpire will look for git-notes data.

@@ -9,12 +9,12 @@ import (
 	"path/filepath"
 	"strings"
 
-	actions_model "branchspire/models/actions"
-	auth_model "branchspire/models/auth"
-	"branchspire/modules/badge"
-	"branchspire/modules/git"
-	"branchspire/modules/util"
-	"branchspire/services/context"
+	actions_model "code.gitea.io/gitea/models/actions"
+	auth_model "code.gitea.io/gitea/models/auth"
+	"code.gitea.io/gitea/modules/badge"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/services/context"
 )
 
 func GetWorkflowBadge(ctx *context.Context) {

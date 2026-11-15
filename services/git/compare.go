@@ -8,9 +8,9 @@ import (
 	"errors"
 	"fmt"
 
-	repo_model "branchspire/models/repo"
-	"branchspire/modules/git"
-	"branchspire/modules/util"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/util"
 )
 
 // CompareInfo represents needed information for comparing references.

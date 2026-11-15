@@ -9,12 +9,12 @@ import (
 	"slices"
 	"time"
 
-	"branchspire/models/db"
-	user_model "branchspire/models/user"
-	"branchspire/modules/container"
-	"branchspire/modules/log"
-	"branchspire/modules/timeutil"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/models/db"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/container"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/timeutil"
+	"code.gitea.io/gitea/modules/util"
 )
 
 // ActionRunAttempt represents a single execution attempt of an ActionRun.

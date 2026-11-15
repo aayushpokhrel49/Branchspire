@@ -6,9 +6,9 @@ package context
 import (
 	"testing"
 
-	"branchspire/models/perm"
-	"branchspire/models/user"
-	"branchspire/modules/structs"
+	"code.gitea.io/gitea/models/perm"
+	"code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/structs"
 
 	"github.com/stretchr/testify/assert"
 )

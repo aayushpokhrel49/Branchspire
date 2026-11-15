@@ -8,17 +8,17 @@ import (
 	"net/http"
 	"net/url"
 
-	auth_model "branchspire/models/auth"
-	user_model "branchspire/models/user"
-	"branchspire/modules/auth/openid"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
-	"branchspire/modules/templates"
-	"branchspire/modules/util"
-	"branchspire/modules/web"
-	"branchspire/services/auth"
-	"branchspire/services/context"
-	"branchspire/services/forms"
+	auth_model "code.gitea.io/gitea/models/auth"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/auth/openid"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/templates"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/modules/web"
+	"code.gitea.io/gitea/services/auth"
+	"code.gitea.io/gitea/services/context"
+	"code.gitea.io/gitea/services/forms"
 )
 
 const (

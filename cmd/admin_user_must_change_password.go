@@ -7,8 +7,8 @@ import (
 	"context"
 	"errors"
 
-	user_model "branchspire/models/user"
-	"branchspire/modules/setting"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/setting"
 
 	"github.com/urfave/cli/v3"
 )

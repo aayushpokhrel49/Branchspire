@@ -6,7 +6,7 @@ package fileicon
 import (
 	"context"
 
-	"branchspire/modules/git"
+	"code.gitea.io/gitea/modules/git"
 )
 
 type EntryInfo struct {

@@ -9,13 +9,13 @@ import (
 	"strings"
 	"uuid"
 
-	audit_model "branchspire/models/audit"
-	"branchspire/models/auth"
-	user_model "branchspire/models/user"
-	"branchspire/modules/auth/pam"
-	"branchspire/modules/optional"
-	"branchspire/modules/setting"
-	"branchspire/services/audit"
+	audit_model "code.gitea.io/gitea/models/audit"
+	"code.gitea.io/gitea/models/auth"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/auth/pam"
+	"code.gitea.io/gitea/modules/optional"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/services/audit"
 )
 
 // Authenticate queries if login/password is valid against the PAM,

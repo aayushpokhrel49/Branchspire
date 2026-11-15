@@ -10,7 +10,7 @@ import (
 	"strings"
 	"sync/atomic"
 
-	"branchspire/modules/log"
+	"code.gitea.io/gitea/modules/log"
 )
 
 // This package takes care of hashing passwords, verifying passwords, defining

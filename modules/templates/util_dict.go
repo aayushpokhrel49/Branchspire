@@ -10,9 +10,9 @@ import (
 	"html/template"
 	"reflect"
 
-	"branchspire/modules/container"
-	"branchspire/modules/json"
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modules/container"
+	"code.gitea.io/gitea/modules/json"
+	"code.gitea.io/gitea/modules/setting"
 )
 
 // dict is a helper function for creating a map[string]any from a list of key-value pairs.

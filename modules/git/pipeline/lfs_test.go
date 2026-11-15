@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"branchspire/modules/git"
+	"code.gitea.io/gitea/modules/git"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

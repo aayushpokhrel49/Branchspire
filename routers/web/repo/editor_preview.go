@@ -6,9 +6,9 @@ package repo
 import (
 	"net/http"
 
-	"branchspire/modules/setting"
-	"branchspire/services/context"
-	files_service "branchspire/services/repository/files"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/services/context"
+	files_service "code.gitea.io/gitea/services/repository/files"
 )
 
 func DiffPreviewPost(ctx *context.Context) {

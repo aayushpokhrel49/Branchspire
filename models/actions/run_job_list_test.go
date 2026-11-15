@@ -6,9 +6,9 @@ package actions
 import (
 	"testing"
 
-	"branchspire/models/db"
-	"branchspire/models/unittest"
-	"branchspire/modules/timeutil"
+	"code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/models/unittest"
+	"code.gitea.io/gitea/modules/timeutil"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

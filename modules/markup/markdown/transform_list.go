@@ -6,7 +6,7 @@ package markdown
 import (
 	"fmt"
 
-	"branchspire/modules/markup"
+	"code.gitea.io/gitea/modules/markup"
 
 	"github.com/yuin/goldmark/ast"
 	east "github.com/yuin/goldmark/extension/ast"

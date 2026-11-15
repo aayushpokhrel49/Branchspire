@@ -6,12 +6,12 @@ package user
 import (
 	"net/http"
 
-	"branchspire/modules/optional"
-	api "branchspire/modules/structs"
-	"branchspire/modules/web"
-	"branchspire/services/context"
-	"branchspire/services/convert"
-	user_service "branchspire/services/user"
+	"code.gitea.io/gitea/modules/optional"
+	api "code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/modules/web"
+	"code.gitea.io/gitea/services/context"
+	"code.gitea.io/gitea/services/convert"
+	user_service "code.gitea.io/gitea/services/user"
 )
 
 // GetUserSettings returns user settings

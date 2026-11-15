@@ -6,16 +6,16 @@ package doctor
 import (
 	"context"
 
-	modelmigration "branchspire/modelmigration"
-	actions_model "branchspire/models/actions"
-	activities_model "branchspire/models/activities"
-	"branchspire/models/db"
-	issues_model "branchspire/models/issues"
-	repo_model "branchspire/models/repo"
-	secret_model "branchspire/models/secret"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
-	issue_service "branchspire/services/issue"
+	modelmigration "code.gitea.io/gitea/modelmigration"
+	actions_model "code.gitea.io/gitea/models/actions"
+	activities_model "code.gitea.io/gitea/models/activities"
+	"code.gitea.io/gitea/models/db"
+	issues_model "code.gitea.io/gitea/models/issues"
+	repo_model "code.gitea.io/gitea/models/repo"
+	secret_model "code.gitea.io/gitea/models/secret"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
+	issue_service "code.gitea.io/gitea/services/issue"
 )
 
 type consistencyCheck struct {

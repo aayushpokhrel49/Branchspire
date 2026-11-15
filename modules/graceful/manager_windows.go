@@ -13,8 +13,8 @@ import (
 	"strconv"
 	"time"
 
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
 
 	"golang.org/x/sys/windows/svc"
 	"golang.org/x/sys/windows/svc/debug"

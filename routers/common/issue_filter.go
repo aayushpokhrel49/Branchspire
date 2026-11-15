@@ -6,11 +6,11 @@ package common
 import (
 	"context"
 
-	"branchspire/models/organization"
-	repo_model "branchspire/models/repo"
-	user_model "branchspire/models/user"
-	"branchspire/modules/optional"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/models/organization"
+	repo_model "code.gitea.io/gitea/models/repo"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/optional"
+	"code.gitea.io/gitea/modules/util"
 )
 
 func ParseIssueFilterStateIsClosed(state string) optional.Option[bool] {

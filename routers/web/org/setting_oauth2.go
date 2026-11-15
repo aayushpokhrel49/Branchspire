@@ -7,13 +7,13 @@ import (
 	"fmt"
 	"net/http"
 
-	"branchspire/models/auth"
-	"branchspire/models/db"
-	"branchspire/modules/setting"
-	"branchspire/modules/templates"
-	shared_user "branchspire/routers/web/shared/user"
-	user_setting "branchspire/routers/web/user/setting"
-	"branchspire/services/context"
+	"code.gitea.io/gitea/models/auth"
+	"code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/templates"
+	shared_user "code.gitea.io/gitea/routers/web/shared/user"
+	user_setting "code.gitea.io/gitea/routers/web/user/setting"
+	"code.gitea.io/gitea/services/context"
 )
 
 const (

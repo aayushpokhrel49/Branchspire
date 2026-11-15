@@ -12,9 +12,9 @@ import (
 	"strconv"
 	"strings"
 
-	"branchspire/modules/git"
-	"branchspire/modules/git/gitcmd"
-	"branchspire/modules/log"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/git/gitcmd"
+	"code.gitea.io/gitea/modules/log"
 )
 
 // lsFileLine is a Quadruplet struct (+error) representing a partially parsed line from ls-files

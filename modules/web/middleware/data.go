@@ -7,9 +7,9 @@ import (
 	"context"
 	"time"
 
-	"branchspire/modules/public"
-	"branchspire/modules/reqctx"
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modules/public"
+	"code.gitea.io/gitea/modules/reqctx"
+	"code.gitea.io/gitea/modules/setting"
 )
 
 const (

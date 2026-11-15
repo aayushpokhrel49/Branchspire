@@ -7,8 +7,8 @@ import (
 	"context"
 	"fmt"
 
-	"branchspire/modules/cache"
-	"branchspire/modules/log"
+	"code.gitea.io/gitea/modules/cache"
+	"code.gitea.io/gitea/modules/log"
 )
 
 func getCacheKey(repo RepositoryFacade, commitID, entryPath string) string {

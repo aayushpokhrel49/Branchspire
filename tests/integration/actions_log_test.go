@@ -11,15 +11,15 @@ import (
 	"testing"
 	"time"
 
+	actions_model "code.gitea.io/gitea/models/actions"
+	auth_model "code.gitea.io/gitea/models/auth"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/models/unittest"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/storage"
+	"code.gitea.io/gitea/modules/test"
 	runnerv1 "gitea.dev/actionslib/runner/v1"
-	actions_model "branchspire/models/actions"
-	auth_model "branchspire/models/auth"
-	repo_model "branchspire/models/repo"
-	"branchspire/models/unittest"
-	user_model "branchspire/models/user"
-	"branchspire/modules/setting"
-	"branchspire/modules/storage"
-	"branchspire/modules/test"
 
 	"github.com/stretchr/testify/assert"
 	"google.golang.org/protobuf/types/known/timestamppb"
@@ -34,12 +34,12 @@ func TestDownloadTaskLogs(t *testing.T) {
 		zstdEnabled bool
 	}{
 		{
-			treePath: ".branchspire/workflows/download-task-logs-zstd.yml",
+			treePath: ".code.gitea.io/gitea/workflows/download-task-logs-zstd.yml",
 			fileContent: `name: download-task-logs-zstd
 on:
   push:
     paths:
-      - '.branchspire/workflows/download-task-logs-zstd.yml'
+      - '.code.gitea.io/gitea/workflows/download-task-logs-zstd.yml'
 jobs:
     job1:
       runs-on: ubuntu-latest
@@ -89,12 +89,12 @@ jobs:
 			zstdEnabled: true,
 		},
 		{
-			treePath: ".branchspire/workflows/download-task-logs-no-zstd.yml",
+			treePath: ".code.gitea.io/gitea/workflows/download-task-logs-no-zstd.yml",
 			fileContent: `name: download-task-logs-no-zstd
 on:
   push:
     paths:
-      - '.branchspire/workflows/download-task-logs-no-zstd.yml'
+      - '.code.gitea.io/gitea/workflows/download-task-logs-no-zstd.yml'
 jobs:
     job1:
       runs-on: ubuntu-latest
@@ -217,12 +217,12 @@ jobs:
 		}
 
 		t.Run("DownloadRerunTaskLogs", func(t *testing.T) {
-			treePath := ".branchspire/workflows/download-rerun-logs.yml"
+			treePath := ".code.gitea.io/gitea/workflows/download-rerun-logs.yml"
 			fileContent := `name: download-rerun-logs
 on:
   push:
     paths:
-      - '.branchspire/workflows/download-rerun-logs.yml'
+      - '.code.gitea.io/gitea/workflows/download-rerun-logs.yml'
 jobs:
     job1:
       runs-on: ubuntu-latest

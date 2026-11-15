@@ -11,13 +11,13 @@ import (
 	"os"
 	"path/filepath"
 
-	git_model "branchspire/models/git"
-	issues_model "branchspire/models/issues"
-	repo_model "branchspire/models/repo"
-	"branchspire/modules/git"
-	"branchspire/modules/git/gitcmd"
-	"branchspire/modules/git/gitrepo"
-	repo_module "branchspire/modules/repository"
+	git_model "code.gitea.io/gitea/models/git"
+	issues_model "code.gitea.io/gitea/models/issues"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/git/gitcmd"
+	"code.gitea.io/gitea/modules/git/gitrepo"
+	repo_module "code.gitea.io/gitea/modules/repository"
 )
 
 // Temporary repos created here use standard branch names to help simplify

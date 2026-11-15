@@ -7,14 +7,14 @@ package forms
 import (
 	"strings"
 
-	issues_model "branchspire/models/issues"
-	project_model "branchspire/models/project"
-	"branchspire/modules/json"
-	"branchspire/modules/structs"
-	"branchspire/modules/util"
-	"branchspire/modules/validation"
-	"branchspire/modules/web/middleware"
-	"branchspire/services/webhook"
+	issues_model "code.gitea.io/gitea/models/issues"
+	project_model "code.gitea.io/gitea/models/project"
+	"code.gitea.io/gitea/modules/json"
+	"code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/modules/validation"
+	"code.gitea.io/gitea/modules/web/middleware"
+	"code.gitea.io/gitea/services/webhook"
 )
 
 // CreateRepoForm form for creating repository

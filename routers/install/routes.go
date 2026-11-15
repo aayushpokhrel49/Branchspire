@@ -8,13 +8,13 @@ import (
 	"html"
 	"net/http"
 
-	"branchspire/modules/public"
-	"branchspire/modules/setting"
-	"branchspire/modules/web"
-	"branchspire/routers/common"
-	"branchspire/routers/web/healthcheck"
-	"branchspire/routers/web/misc"
-	"branchspire/services/forms"
+	"code.gitea.io/gitea/modules/public"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/web"
+	"code.gitea.io/gitea/routers/common"
+	"code.gitea.io/gitea/routers/web/healthcheck"
+	"code.gitea.io/gitea/routers/web/misc"
+	"code.gitea.io/gitea/services/forms"
 )
 
 // Routes registers the installation routes

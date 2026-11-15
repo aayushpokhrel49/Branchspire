@@ -14,7 +14,7 @@ import (
 	"strings"
 	"sync"
 
-	"branchspire/models/db"
+	"code.gitea.io/gitea/models/db"
 
 	"go.yaml.in/yaml/v4"
 	"xorm.io/xorm"

@@ -6,15 +6,15 @@ package org
 import (
 	"errors"
 
-	"branchspire/models/db"
-	issues_model "branchspire/models/issues"
-	"branchspire/modules/label"
-	repo_module "branchspire/modules/repository"
-	"branchspire/modules/util"
-	"branchspire/modules/web"
-	shared_label "branchspire/routers/web/shared/label"
-	"branchspire/services/context"
-	"branchspire/services/forms"
+	"code.gitea.io/gitea/models/db"
+	issues_model "code.gitea.io/gitea/models/issues"
+	"code.gitea.io/gitea/modules/label"
+	repo_module "code.gitea.io/gitea/modules/repository"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/modules/web"
+	shared_label "code.gitea.io/gitea/routers/web/shared/label"
+	"code.gitea.io/gitea/services/context"
+	"code.gitea.io/gitea/services/forms"
 )
 
 // RetrieveLabels find all the labels of an organization

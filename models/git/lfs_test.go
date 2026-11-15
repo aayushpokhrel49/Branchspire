@@ -10,14 +10,14 @@ import (
 	"testing"
 	"time"
 
-	"branchspire/models/db"
-	git_model "branchspire/models/git"
-	repo_model "branchspire/models/repo"
-	"branchspire/models/unittest"
-	"branchspire/modules/lfs"
-	"branchspire/modules/setting"
-	"branchspire/modules/test"
-	"branchspire/modules/timeutil"
+	"code.gitea.io/gitea/models/db"
+	git_model "code.gitea.io/gitea/models/git"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/models/unittest"
+	"code.gitea.io/gitea/modules/lfs"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/test"
+	"code.gitea.io/gitea/modules/timeutil"
 
 	"github.com/stretchr/testify/assert"
 )

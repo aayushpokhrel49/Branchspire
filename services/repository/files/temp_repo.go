@@ -13,15 +13,15 @@ import (
 	"strings"
 	"time"
 
-	repo_model "branchspire/models/repo"
-	user_model "branchspire/models/user"
-	"branchspire/modules/git"
-	"branchspire/modules/git/gitcmd"
-	repo_module "branchspire/modules/repository"
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
-	asymkey_service "branchspire/services/asymkey"
-	"branchspire/services/gitdiff"
+	repo_model "code.gitea.io/gitea/models/repo"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/git/gitcmd"
+	repo_module "code.gitea.io/gitea/modules/repository"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/util"
+	asymkey_service "code.gitea.io/gitea/services/asymkey"
+	"code.gitea.io/gitea/services/gitdiff"
 )
 
 // TemporaryUploadRepository is a type to wrap our upload repositories as a shallow clone

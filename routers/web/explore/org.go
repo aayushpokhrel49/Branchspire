@@ -4,13 +4,13 @@
 package explore
 
 import (
-	"branchspire/models/db"
-	user_model "branchspire/models/user"
-	"branchspire/modules/container"
-	"branchspire/modules/setting"
-	"branchspire/modules/structs"
-	"branchspire/modules/util"
-	"branchspire/services/context"
+	"code.gitea.io/gitea/models/db"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/container"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/services/context"
 )
 
 // Organizations render explore organizations page

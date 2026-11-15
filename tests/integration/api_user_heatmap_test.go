@@ -9,10 +9,10 @@ import (
 	"testing"
 	"time"
 
-	activities_model "branchspire/models/activities"
-	auth_model "branchspire/models/auth"
-	"branchspire/modules/timeutil"
-	"branchspire/tests"
+	activities_model "code.gitea.io/gitea/models/activities"
+	auth_model "code.gitea.io/gitea/models/auth"
+	"code.gitea.io/gitea/modules/timeutil"
+	"code.gitea.io/gitea/tests"
 
 	"github.com/stretchr/testify/assert"
 )

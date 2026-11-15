@@ -10,10 +10,10 @@ import (
 	"path/filepath"
 	"testing"
 
-	auth_model "branchspire/models/auth"
-	"branchspire/modules/setting"
-	api "branchspire/modules/structs"
-	"branchspire/tests"
+	auth_model "code.gitea.io/gitea/models/auth"
+	"code.gitea.io/gitea/modules/setting"
+	api "code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/tests"
 
 	"github.com/stretchr/testify/assert"
 )

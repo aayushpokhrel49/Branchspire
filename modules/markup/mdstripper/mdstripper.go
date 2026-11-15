@@ -10,9 +10,9 @@ import (
 	"strings"
 	"sync"
 
-	"branchspire/modules/log"
-	"branchspire/modules/markup/common"
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/markup/common"
+	"code.gitea.io/gitea/modules/setting"
 
 	"github.com/yuin/goldmark"
 	"github.com/yuin/goldmark/ast"

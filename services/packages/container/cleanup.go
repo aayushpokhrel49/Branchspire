@@ -7,11 +7,11 @@ import (
 	"context"
 	"time"
 
-	packages_model "branchspire/models/packages"
-	container_model "branchspire/models/packages/container"
-	"branchspire/modules/optional"
-	container_module "branchspire/modules/packages/container"
-	packages_service "branchspire/services/packages"
+	packages_model "code.gitea.io/gitea/models/packages"
+	container_model "code.gitea.io/gitea/models/packages/container"
+	"code.gitea.io/gitea/modules/optional"
+	container_module "code.gitea.io/gitea/modules/packages/container"
+	packages_service "code.gitea.io/gitea/services/packages"
 
 	"github.com/opencontainers/go-digest"
 )

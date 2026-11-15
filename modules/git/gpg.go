@@ -11,9 +11,9 @@ import (
 	"strings"
 	"sync/atomic"
 
-	"branchspire/modules/git/gitcmd"
-	"branchspire/modules/process"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/git/gitcmd"
+	"code.gitea.io/gitea/modules/process"
+	"code.gitea.io/gitea/modules/util"
 )
 
 type CommitSignSettings struct {

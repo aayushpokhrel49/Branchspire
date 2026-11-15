@@ -12,8 +12,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	"branchspire/modules/gtprof"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/gtprof"
+	"code.gitea.io/gitea/modules/util"
 )
 
 // TODO: This packages still uses a singleton for the Manager.

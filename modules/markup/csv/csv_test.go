@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"branchspire/modules/markup"
+	"code.gitea.io/gitea/modules/markup"
 
 	"github.com/stretchr/testify/assert"
 )

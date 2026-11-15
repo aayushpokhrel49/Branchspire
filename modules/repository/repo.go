@@ -10,15 +10,15 @@ import (
 	"io"
 	"strings"
 
-	"branchspire/models/db"
-	git_model "branchspire/models/git"
-	repo_model "branchspire/models/repo"
-	"branchspire/modules/git"
-	"branchspire/modules/lfs"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
-	"branchspire/modules/timeutil"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/models/db"
+	git_model "code.gitea.io/gitea/models/git"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/lfs"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/timeutil"
+	"code.gitea.io/gitea/modules/util"
 )
 
 /*

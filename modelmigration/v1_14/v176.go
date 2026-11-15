@@ -6,7 +6,7 @@ package v1_14
 import (
 	"context"
 
-	"branchspire/modelmigration/base"
+	"code.gitea.io/gitea/modelmigration/base"
 )
 
 // RemoveInvalidLabels looks through the database to look for comments and issue_labels

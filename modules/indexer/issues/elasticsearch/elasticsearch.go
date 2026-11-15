@@ -8,12 +8,12 @@ import (
 	"strconv"
 	"strings"
 
-	"branchspire/modules/graceful"
-	"branchspire/modules/indexer"
-	indexer_internal "branchspire/modules/indexer/internal"
-	es "branchspire/modules/indexer/internal/elasticsearch"
-	"branchspire/modules/indexer/issues/internal"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/graceful"
+	"code.gitea.io/gitea/modules/indexer"
+	indexer_internal "code.gitea.io/gitea/modules/indexer/internal"
+	es "code.gitea.io/gitea/modules/indexer/internal/elasticsearch"
+	"code.gitea.io/gitea/modules/indexer/issues/internal"
+	"code.gitea.io/gitea/modules/util"
 )
 
 const issueIndexerLatestVersion = 4

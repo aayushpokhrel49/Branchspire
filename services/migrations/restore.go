@@ -10,8 +10,8 @@ import (
 	"path/filepath"
 	"strconv"
 
-	base "branchspire/modules/migration"
-	"branchspire/modules/util"
+	base "code.gitea.io/gitea/modules/migration"
+	"code.gitea.io/gitea/modules/util"
 
 	"go.yaml.in/yaml/v4"
 )

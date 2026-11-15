@@ -12,12 +12,12 @@ import (
 	"strings"
 	"time"
 
-	"branchspire/modules/assetfs"
-	"branchspire/modules/container"
-	"branchspire/modules/httpcache"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/assetfs"
+	"code.gitea.io/gitea/modules/container"
+	"code.gitea.io/gitea/modules/httpcache"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/util"
 
 	"github.com/go-chi/cors"
 )

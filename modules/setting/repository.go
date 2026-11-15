@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"branchspire/modules/log"
+	"code.gitea.io/gitea/modules/log"
 )
 
 // enumerates all the policy repository creating

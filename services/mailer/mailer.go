@@ -7,13 +7,13 @@ package mailer
 import (
 	"context"
 
-	"branchspire/modules/graceful"
-	"branchspire/modules/log"
-	"branchspire/modules/queue"
-	"branchspire/modules/setting"
-	"branchspire/modules/templates"
-	sender_service "branchspire/services/mailer/sender"
-	notify_service "branchspire/services/notify"
+	"code.gitea.io/gitea/modules/graceful"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/queue"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/templates"
+	sender_service "code.gitea.io/gitea/services/mailer/sender"
+	notify_service "code.gitea.io/gitea/services/notify"
 )
 
 var mailQueue *queue.WorkerPoolQueue[*sender_service.Message]

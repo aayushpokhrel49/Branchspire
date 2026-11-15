@@ -10,17 +10,17 @@ import (
 	"html/template"
 	"strings"
 
-	"branchspire/models/perm/access"
-	"branchspire/models/repo"
-	"branchspire/models/unit"
-	"branchspire/modules/charset"
-	"branchspire/modules/git"
-	"branchspire/modules/git/languagestats"
-	"branchspire/modules/indexer/code"
-	"branchspire/modules/markup"
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
-	gitea_context "branchspire/services/context"
+	"code.gitea.io/gitea/models/perm/access"
+	"code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/models/unit"
+	"code.gitea.io/gitea/modules/charset"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/git/languagestats"
+	"code.gitea.io/gitea/modules/indexer/code"
+	"code.gitea.io/gitea/modules/markup"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/util"
+	gitea_context "code.gitea.io/gitea/services/context"
 )
 
 func renderRepoFileCodePreview(ctx context.Context, opts markup.RenderCodePreviewOptions) (template.HTML, error) {

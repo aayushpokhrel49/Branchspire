@@ -6,9 +6,9 @@ package renderhelper
 import (
 	"testing"
 
-	repo_model "branchspire/models/repo"
-	"branchspire/models/unittest"
-	"branchspire/modules/markup/markdown"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/models/unittest"
+	"code.gitea.io/gitea/modules/markup/markdown"
 
 	"github.com/stretchr/testify/assert"
 )

@@ -7,7 +7,7 @@ import (
 	"context"
 	"fmt"
 
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modules/setting"
 )
 
 func UpdatePublicKeyLastUsed(ctx context.Context, keyID, repoID int64) error {

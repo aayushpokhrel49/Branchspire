@@ -7,11 +7,11 @@ import (
 	"context"
 	"fmt"
 
-	git_model "branchspire/models/git"
-	repo_model "branchspire/models/repo"
-	actions_module "branchspire/modules/actions"
-	"branchspire/modules/git"
-	"branchspire/modules/log"
+	git_model "code.gitea.io/gitea/models/git"
+	repo_model "code.gitea.io/gitea/models/repo"
+	actions_module "code.gitea.io/gitea/modules/actions"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/log"
 
 	lru "github.com/hashicorp/golang-lru/v2"
 )

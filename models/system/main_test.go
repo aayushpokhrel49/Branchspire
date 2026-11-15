@@ -6,12 +6,12 @@ package system_test
 import (
 	"testing"
 
-	"branchspire/models/unittest"
+	"code.gitea.io/gitea/models/unittest"
 
-	_ "branchspire/models" // register models
-	_ "branchspire/models/actions"
-	_ "branchspire/models/activities"
-	_ "branchspire/models/system" // register models of system
+	_ "code.gitea.io/gitea/models" // register models
+	_ "code.gitea.io/gitea/models/actions"
+	_ "code.gitea.io/gitea/models/activities"
+	_ "code.gitea.io/gitea/models/system" // register models of system
 )
 
 func TestMain(m *testing.M) {

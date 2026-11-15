@@ -6,9 +6,9 @@ package actions
 import (
 	"context"
 
-	actions_model "branchspire/models/actions"
-	"branchspire/modules/log"
-	notify_service "branchspire/services/notify"
+	actions_model "code.gitea.io/gitea/models/actions"
+	"code.gitea.io/gitea/modules/log"
+	notify_service "code.gitea.io/gitea/services/notify"
 )
 
 // NotifyWorkflowJobsAndRunsStatusUpdate notifies status changes for a batch of jobs and the runs they affect.

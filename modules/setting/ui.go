@@ -6,8 +6,8 @@ package setting
 import (
 	"time"
 
-	"branchspire/modules/container"
-	"branchspire/modules/log"
+	"code.gitea.io/gitea/modules/container"
+	"code.gitea.io/gitea/modules/log"
 )
 
 // UI settings

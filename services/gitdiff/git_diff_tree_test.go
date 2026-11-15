@@ -9,8 +9,8 @@ import (
 	"strings"
 	"testing"
 
-	"branchspire/modules/git"
-	"branchspire/modules/git/gitcmd"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/git/gitcmd"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

@@ -8,12 +8,12 @@ import (
 	"net/http"
 	"time"
 
-	"branchspire/modules/graceful"
-	"branchspire/modules/json"
-	"branchspire/modules/log"
-	"branchspire/services/context"
-	"branchspire/services/pubsub"
-	websocket_service "branchspire/services/websocket"
+	"code.gitea.io/gitea/modules/graceful"
+	"code.gitea.io/gitea/modules/json"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/services/context"
+	"code.gitea.io/gitea/services/pubsub"
+	websocket_service "code.gitea.io/gitea/services/websocket"
 
 	gitea_ws "github.com/coder/websocket"
 )

@@ -6,7 +6,7 @@ package v1_20
 import (
 	"context"
 
-	"branchspire/modelmigration/base"
+	"code.gitea.io/gitea/modelmigration/base"
 )
 
 func AddVersionToActionRunner(_ context.Context, x base.EngineMigration) error {

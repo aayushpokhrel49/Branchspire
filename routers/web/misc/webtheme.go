@@ -6,13 +6,13 @@ package misc
 import (
 	"net/http"
 
-	"branchspire/modules/optional"
-	"branchspire/modules/templates"
-	"branchspire/modules/util"
-	"branchspire/modules/web/middleware"
-	"branchspire/services/context"
-	user_service "branchspire/services/user"
-	"branchspire/services/webtheme"
+	"code.gitea.io/gitea/modules/optional"
+	"code.gitea.io/gitea/modules/templates"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/modules/web/middleware"
+	"code.gitea.io/gitea/services/context"
+	user_service "code.gitea.io/gitea/services/user"
+	"code.gitea.io/gitea/services/webtheme"
 )
 
 func WebThemeList(ctx *context.Context) {

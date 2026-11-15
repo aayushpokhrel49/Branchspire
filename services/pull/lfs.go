@@ -11,14 +11,14 @@ import (
 	"io"
 	"strconv"
 
-	git_model "branchspire/models/git"
-	issues_model "branchspire/models/issues"
-	"branchspire/modules/git"
-	"branchspire/modules/git/gitcmd"
-	"branchspire/modules/git/pipeline"
-	"branchspire/modules/lfs"
-	"branchspire/modules/log"
-	"branchspire/modules/util"
+	git_model "code.gitea.io/gitea/models/git"
+	issues_model "code.gitea.io/gitea/models/issues"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/git/gitcmd"
+	"code.gitea.io/gitea/modules/git/pipeline"
+	"code.gitea.io/gitea/modules/lfs"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/util"
 
 	"golang.org/x/sync/errgroup"
 )

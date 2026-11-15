@@ -9,11 +9,11 @@ import (
 	"fmt"
 	"strings"
 
-	"branchspire/models/db"
-	"branchspire/modules/cache"
-	"branchspire/modules/json"
-	setting_module "branchspire/modules/setting"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/modules/cache"
+	"code.gitea.io/gitea/modules/json"
+	setting_module "code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/util"
 
 	"xorm.io/builder"
 	"xorm.io/xorm/convert"

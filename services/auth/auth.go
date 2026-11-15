@@ -9,13 +9,13 @@ import (
 	"fmt"
 	"net/http"
 
-	user_model "branchspire/models/user"
-	"branchspire/modules/auth/webauthn"
-	"branchspire/modules/log"
-	"branchspire/modules/optional"
-	"branchspire/modules/session"
-	"branchspire/modules/web/middleware"
-	user_service "branchspire/services/user"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/auth/webauthn"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/optional"
+	"code.gitea.io/gitea/modules/session"
+	"code.gitea.io/gitea/modules/web/middleware"
+	user_service "code.gitea.io/gitea/services/user"
 )
 
 type ErrUserAuthMessage string

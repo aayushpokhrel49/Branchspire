@@ -9,9 +9,9 @@ import (
 	"io"
 	"strings"
 
-	"branchspire/modules/git/gitcmd"
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/git/gitcmd"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/util"
 )
 
 // GetRefs returns all references of the repository.

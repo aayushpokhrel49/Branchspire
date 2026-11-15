@@ -7,11 +7,11 @@ import (
 	"net/http"
 	"path"
 
-	"branchspire/models/renderhelper"
-	"branchspire/modules/git"
-	"branchspire/modules/log"
-	"branchspire/modules/markup"
-	"branchspire/services/context"
+	"code.gitea.io/gitea/models/renderhelper"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/markup"
+	"code.gitea.io/gitea/services/context"
 )
 
 // RenderFile renders a file by repos path

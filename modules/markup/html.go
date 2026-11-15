@@ -12,11 +12,11 @@ import (
 	"strings"
 	"sync"
 
-	"branchspire/modules/htmlutil"
-	"branchspire/modules/log"
-	"branchspire/modules/markup/common"
-	"branchspire/modules/translation"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/htmlutil"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/markup/common"
+	"code.gitea.io/gitea/modules/translation"
+	"code.gitea.io/gitea/modules/util"
 
 	"golang.org/x/net/html"
 	"golang.org/x/net/html/atom"

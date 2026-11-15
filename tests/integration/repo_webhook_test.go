@@ -15,24 +15,24 @@ import (
 	"testing"
 	"time"
 
+	actions_model "code.gitea.io/gitea/models/actions"
+	auth_model "code.gitea.io/gitea/models/auth"
+	db_model "code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/models/perm"
+	"code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/models/unittest"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/models/webhook"
+	"code.gitea.io/gitea/modules/commitstatus"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/json"
+	"code.gitea.io/gitea/modules/setting"
+	api "code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/modules/test"
+	webhook_module "code.gitea.io/gitea/modules/webhook"
+	"code.gitea.io/gitea/services/actions"
+	"code.gitea.io/gitea/tests"
 	runnerv1 "gitea.dev/actionslib/runner/v1"
-	actions_model "branchspire/models/actions"
-	auth_model "branchspire/models/auth"
-	db_model "branchspire/models/db"
-	"branchspire/models/perm"
-	"branchspire/models/repo"
-	"branchspire/models/unittest"
-	user_model "branchspire/models/user"
-	"branchspire/models/webhook"
-	"branchspire/modules/commitstatus"
-	"branchspire/modules/git"
-	"branchspire/modules/json"
-	"branchspire/modules/setting"
-	api "branchspire/modules/structs"
-	"branchspire/modules/test"
-	webhook_module "branchspire/modules/webhook"
-	"branchspire/services/actions"
-	"branchspire/tests"
 
 	"github.com/PuerkitoBio/goquery"
 	"github.com/stretchr/testify/assert"
@@ -1022,7 +1022,7 @@ func Test_WebhookWorkflowJob(t *testing.T) {
 
 		// add workflow file to the repo
 		// init the workflow
-		wfTreePath := ".branchspire/workflows/push.yml"
+		wfTreePath := ".code.gitea.io/gitea/workflows/push.yml"
 		wfFileContent := `name: Push
 on: push
 jobs:
@@ -1211,7 +1211,7 @@ func testWorkflowRunEvents(t *testing.T, webhookData *workflowRunWebhook) {
 
 	// add workflow file to the repo
 	// init the workflow
-	wfTreePath := ".branchspire/workflows/push.yml"
+	wfTreePath := ".code.gitea.io/gitea/workflows/push.yml"
 	wfFileContent := `on:
   push:
   workflow_dispatch:
@@ -1336,7 +1336,7 @@ func testWorkflowRunEventsOnRerun(t *testing.T, webhookData *workflowRunWebhook)
 
 	// add workflow file to the repo
 	// init the workflow
-	wfTreePath := ".branchspire/workflows/push.yml"
+	wfTreePath := ".code.gitea.io/gitea/workflows/push.yml"
 	wfFileContent := `on:
   push:
   workflow_dispatch:
@@ -1507,7 +1507,7 @@ func testWorkflowRunEventsOnCancellingAbandonedRun(t *testing.T, webhookData *wo
 	// add workflow file to the repo
 	// init the workflow
 	wfilename := "push.yml"
-	wfTreePath := ".branchspire/workflows/" + wfilename
+	wfTreePath := ".code.gitea.io/gitea/workflows/" + wfilename
 	wfFileContent := `on:
   push:
   workflow_dispatch:
@@ -1647,13 +1647,13 @@ func testWorkflowRunOnStoppingEndlessTasksForMultipleRuns(t *testing.T, webhookD
 		runners[i].registerAsRepoRunner(t, "user2", repoName, fmt.Sprintf("mock-runner-%d", i), []string{"ubuntu-latest"}, false)
 	}
 
-	workflowPath1 := ".branchspire/workflows/endless-1.yml"
-	workflowPath2 := ".branchspire/workflows/endless-2.yml"
+	workflowPath1 := ".code.gitea.io/gitea/workflows/endless-1.yml"
+	workflowPath2 := ".code.gitea.io/gitea/workflows/endless-2.yml"
 	workflowContent1 := `name: endless-1
 on:
   push:
     paths:
-      - '.branchspire/workflows/endless-1.yml'
+      - '.code.gitea.io/gitea/workflows/endless-1.yml'
 jobs:
   job-1:
     runs-on: ubuntu-latest
@@ -1664,7 +1664,7 @@ jobs:
 on:
   push:
     paths:
-      - '.branchspire/workflows/endless-2.yml'
+      - '.code.gitea.io/gitea/workflows/endless-2.yml'
 jobs:
   job-2:
     runs-on: ubuntu-latest
@@ -1737,13 +1737,13 @@ jobs:
     steps:
       - run: echo 'test the webhook'
 `)
-	createWorkflowFile(t, token, "user2", "repo1", ".branchspire/workflows/dispatch.yml", opts)
+	createWorkflowFile(t, token, "user2", "repo1", ".code.gitea.io/gitea/workflows/dispatch.yml", opts)
 
 	// 2.2 trigger the webhooks
 
 	// add workflow file to the repo
 	// init the workflow
-	wfTreePath := ".branchspire/workflows/push.yml"
+	wfTreePath := ".code.gitea.io/gitea/workflows/push.yml"
 	wfFileContent := `name: Push
 on: push
 jobs:
@@ -1825,7 +1825,7 @@ func testWebhookWorkflowRunDepthLimit(t *testing.T, webhookData *workflowRunWebh
 
 	// add workflow file to the repo
 	// init the workflow
-	wfTreePath := ".branchspire/workflows/push.yml"
+	wfTreePath := ".code.gitea.io/gitea/workflows/push.yml"
 	wfFileContent := `name: Endless Loop
 on:
   push:

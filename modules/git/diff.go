@@ -12,10 +12,10 @@ import (
 	"strconv"
 	"strings"
 
-	"branchspire/modules/git/gitcmd"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/git/gitcmd"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/util"
 )
 
 // RawDiffType output format: diff or patch

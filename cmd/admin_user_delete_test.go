@@ -8,10 +8,10 @@ import (
 	"strings"
 	"testing"
 
-	auth_model "branchspire/models/auth"
-	"branchspire/models/db"
-	"branchspire/models/unittest"
-	user_model "branchspire/models/user"
+	auth_model "code.gitea.io/gitea/models/auth"
+	"code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/models/unittest"
+	user_model "code.gitea.io/gitea/models/user"
 
 	"github.com/stretchr/testify/require"
 )

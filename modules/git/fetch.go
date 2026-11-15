@@ -6,8 +6,8 @@ package git
 import (
 	"context"
 
-	"branchspire/modules/git/gitcmd"
-	"branchspire/modules/git/gitrepo"
+	"code.gitea.io/gitea/modules/git/gitcmd"
+	"code.gitea.io/gitea/modules/git/gitrepo"
 )
 
 // FetchRemoteTempCommit fetches a specific commit and its related objects from a remote repository

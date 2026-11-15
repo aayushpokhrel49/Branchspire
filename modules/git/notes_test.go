@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"branchspire/modules/git/gitrepo"
+	"code.gitea.io/gitea/modules/git/gitrepo"
 
 	"github.com/stretchr/testify/assert"
 )

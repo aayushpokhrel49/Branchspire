@@ -7,12 +7,12 @@ import (
 	"errors"
 	"net/http"
 
-	issues_model "branchspire/models/issues"
-	user_model "branchspire/models/user"
-	"branchspire/modules/private"
-	"branchspire/modules/web"
-	"branchspire/services/agit"
-	gitea_context "branchspire/services/context"
+	issues_model "code.gitea.io/gitea/models/issues"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/private"
+	"code.gitea.io/gitea/modules/web"
+	"code.gitea.io/gitea/services/agit"
+	gitea_context "code.gitea.io/gitea/services/context"
 )
 
 // HookProcReceive proc-receive hook - only handles agit Proc-Receive requests at present

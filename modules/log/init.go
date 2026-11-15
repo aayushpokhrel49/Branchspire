@@ -8,8 +8,8 @@ import (
 	"runtime"
 	"strings"
 
-	"branchspire/modules/process"
-	"branchspire/modules/util/rotatingfilewriter"
+	"code.gitea.io/gitea/modules/process"
+	"code.gitea.io/gitea/modules/util/rotatingfilewriter"
 )
 
 var projectPackagePrefix string

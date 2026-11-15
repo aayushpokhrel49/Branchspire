@@ -8,15 +8,15 @@ import (
 	"net/http"
 	"strconv"
 
-	"branchspire/models/db"
-	issues_model "branchspire/models/issues"
-	api "branchspire/modules/structs"
-	"branchspire/modules/timeutil"
-	"branchspire/modules/web"
-	"branchspire/routers/api/v1/utils"
-	"branchspire/routers/common"
-	"branchspire/services/context"
-	"branchspire/services/convert"
+	"code.gitea.io/gitea/models/db"
+	issues_model "code.gitea.io/gitea/models/issues"
+	api "code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/modules/timeutil"
+	"code.gitea.io/gitea/modules/web"
+	"code.gitea.io/gitea/routers/api/v1/utils"
+	"code.gitea.io/gitea/routers/common"
+	"code.gitea.io/gitea/services/context"
+	"code.gitea.io/gitea/services/convert"
 )
 
 // ListMilestones list milestones for a repository

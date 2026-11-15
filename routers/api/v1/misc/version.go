@@ -6,9 +6,9 @@ package misc
 import (
 	"net/http"
 
-	"branchspire/modules/setting"
-	"branchspire/modules/structs"
-	"branchspire/services/context"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/services/context"
 )
 
 // Version shows the version of the BranchSpire server

@@ -8,8 +8,8 @@ import (
 	"strings"
 	"time"
 
-	packages_model "branchspire/models/packages"
-	nuget_module "branchspire/modules/packages/nuget"
+	packages_model "code.gitea.io/gitea/models/packages"
+	nuget_module "code.gitea.io/gitea/modules/packages/nuget"
 )
 
 type AtomTitle struct {

@@ -7,7 +7,7 @@ import (
 	"context"
 	"fmt"
 
-	"branchspire/modules/log"
+	"code.gitea.io/gitea/modules/log"
 )
 
 // VersionedIndexName returns the full index name with version suffix.

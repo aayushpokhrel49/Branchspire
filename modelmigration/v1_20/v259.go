@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"strings"
 
-	"branchspire/modelmigration/base"
-	"branchspire/modules/log"
+	"code.gitea.io/gitea/modelmigration/base"
+	"code.gitea.io/gitea/modules/log"
 )
 
 // unknownAccessTokenScope represents the scope for an access token that isn't

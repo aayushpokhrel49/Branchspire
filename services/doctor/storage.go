@@ -9,15 +9,15 @@ import (
 	"io/fs"
 	"strings"
 
-	"branchspire/models/git"
-	"branchspire/models/packages"
-	"branchspire/models/repo"
-	"branchspire/models/user"
-	"branchspire/modules/log"
-	packages_module "branchspire/modules/packages"
-	"branchspire/modules/setting"
-	"branchspire/modules/storage"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/models/git"
+	"code.gitea.io/gitea/models/packages"
+	"code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/log"
+	packages_module "code.gitea.io/gitea/modules/packages"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/storage"
+	"code.gitea.io/gitea/modules/util"
 )
 
 type commonStorageCheckOptions struct {

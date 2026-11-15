@@ -9,17 +9,17 @@ import (
 	"net/http"
 	"time"
 
-	audit_model "branchspire/models/audit"
-	user_model "branchspire/models/user"
-	"branchspire/modules/auth/openid"
-	"branchspire/modules/base"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
-	"branchspire/modules/web"
-	"branchspire/services/audit"
-	"branchspire/services/context"
-	"branchspire/services/forms"
+	audit_model "code.gitea.io/gitea/models/audit"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/auth/openid"
+	"code.gitea.io/gitea/modules/base"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/modules/web"
+	"code.gitea.io/gitea/services/audit"
+	"code.gitea.io/gitea/services/context"
+	"code.gitea.io/gitea/services/forms"
 )
 
 const openIDAssociationCodeMinutes = 10

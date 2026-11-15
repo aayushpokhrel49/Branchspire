@@ -6,13 +6,13 @@ package stats
 import (
 	"fmt"
 
-	repo_model "branchspire/models/repo"
-	"branchspire/modules/git"
-	"branchspire/modules/git/languagestats"
-	"branchspire/modules/graceful"
-	"branchspire/modules/log"
-	"branchspire/modules/process"
-	"branchspire/modules/setting"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/git/languagestats"
+	"code.gitea.io/gitea/modules/graceful"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/process"
+	"code.gitea.io/gitea/modules/setting"
 )
 
 // DBIndexer implements Indexer interface to use database's like search

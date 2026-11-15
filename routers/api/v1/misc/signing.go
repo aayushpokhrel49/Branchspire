@@ -4,9 +4,9 @@
 package misc
 
 import (
-	"branchspire/modules/git"
-	asymkey_service "branchspire/services/asymkey"
-	"branchspire/services/context"
+	"code.gitea.io/gitea/modules/git"
+	asymkey_service "code.gitea.io/gitea/services/asymkey"
+	"code.gitea.io/gitea/services/context"
 )
 
 func getSigningKey(ctx *context.APIContext, expectedFormat string) {

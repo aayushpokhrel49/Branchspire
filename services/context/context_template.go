@@ -12,14 +12,14 @@ import (
 	"strings"
 	"time"
 
-	user_model "branchspire/models/user"
-	"branchspire/modules/httplib"
-	"branchspire/modules/public"
-	"branchspire/modules/reqctx"
-	"branchspire/modules/setting"
-	"branchspire/modules/translation"
-	"branchspire/modules/web/middleware"
-	"branchspire/services/webtheme"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/httplib"
+	"code.gitea.io/gitea/modules/public"
+	"code.gitea.io/gitea/modules/reqctx"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/translation"
+	"code.gitea.io/gitea/modules/web/middleware"
+	"code.gitea.io/gitea/services/webtheme"
 )
 
 type TemplateContext map[string]any

@@ -13,10 +13,10 @@ import (
 	"path/filepath"
 	"time"
 
-	"branchspire/modelmigration/base"
-	"branchspire/modules/container"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modelmigration/base"
+	"code.gitea.io/gitea/modules/container"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
 )
 
 func RenameExistingUserAvatarName(_ context.Context, x base.EngineMigration) error {

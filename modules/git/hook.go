@@ -11,8 +11,8 @@ import (
 	"slices"
 	"strings"
 
-	"branchspire/modules/git/gitrepo"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/git/gitrepo"
+	"code.gitea.io/gitea/modules/util"
 )
 
 // hookNames is a list of Git server hooks' name that are supported.

@@ -4,18 +4,18 @@
 package secrets
 
 import (
-	actions_model "branchspire/models/actions"
-	"branchspire/models/db"
-	repo_model "branchspire/models/repo"
-	secret_model "branchspire/models/secret"
-	user_model "branchspire/models/user"
-	"branchspire/modules/log"
-	"branchspire/modules/util"
-	"branchspire/modules/web"
-	"branchspire/services/audit"
-	"branchspire/services/context"
-	"branchspire/services/forms"
-	secret_service "branchspire/services/secrets"
+	actions_model "code.gitea.io/gitea/models/actions"
+	"code.gitea.io/gitea/models/db"
+	repo_model "code.gitea.io/gitea/models/repo"
+	secret_model "code.gitea.io/gitea/models/secret"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/modules/web"
+	"code.gitea.io/gitea/services/audit"
+	"code.gitea.io/gitea/services/context"
+	"code.gitea.io/gitea/services/forms"
+	secret_service "code.gitea.io/gitea/services/secrets"
 )
 
 func SetSecretsContext(ctx *context.Context, scope actions_model.BelongingScope) {

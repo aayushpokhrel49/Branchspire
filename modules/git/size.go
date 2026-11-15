@@ -7,7 +7,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"branchspire/modules/git/gitrepo"
+	"code.gitea.io/gitea/modules/git/gitrepo"
 )
 
 const notRegularFileMode = os.ModeSymlink | os.ModeNamedPipe | os.ModeSocket | os.ModeDevice | os.ModeCharDevice | os.ModeIrregular

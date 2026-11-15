@@ -12,8 +12,8 @@ import (
 	"io"
 	"strings"
 
-	"branchspire/modules/log"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/util"
 )
 
 // Name returns name of the tree entry this blob object was created from (or empty string)

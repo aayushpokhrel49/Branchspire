@@ -6,7 +6,7 @@ package user
 import (
 	"testing"
 
-	"branchspire/models/user"
+	"code.gitea.io/gitea/models/user"
 
 	"github.com/stretchr/testify/assert"
 )

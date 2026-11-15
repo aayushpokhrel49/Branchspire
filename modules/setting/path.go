@@ -10,9 +10,9 @@ import (
 	"path/filepath"
 	"strings"
 
-	"branchspire/modules/consts"
-	"branchspire/modules/log"
-	"branchspire/modules/tempdir"
+	"code.gitea.io/gitea/modules/consts"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/tempdir"
 )
 
 var (

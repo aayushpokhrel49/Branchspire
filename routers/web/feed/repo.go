@@ -6,10 +6,10 @@ package feed
 import (
 	"time"
 
-	activities_model "branchspire/models/activities"
-	repo_model "branchspire/models/repo"
-	"branchspire/services/context"
-	feed_service "branchspire/services/feed"
+	activities_model "code.gitea.io/gitea/models/activities"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/services/context"
+	feed_service "code.gitea.io/gitea/services/feed"
 
 	"github.com/gorilla/feeds"
 )

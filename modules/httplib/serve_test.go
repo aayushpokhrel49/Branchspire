@@ -12,7 +12,7 @@ import (
 	"strings"
 	"testing"
 
-	"branchspire/modules/typesniffer"
+	"code.gitea.io/gitea/modules/typesniffer"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

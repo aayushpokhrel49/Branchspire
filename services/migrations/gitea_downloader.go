@@ -13,10 +13,10 @@ import (
 	"strings"
 	"time"
 
-	"branchspire/modules/container"
-	"branchspire/modules/log"
-	base "branchspire/modules/migration"
-	"branchspire/modules/structs"
+	"code.gitea.io/gitea/modules/container"
+	"code.gitea.io/gitea/modules/log"
+	base "code.gitea.io/gitea/modules/migration"
+	"code.gitea.io/gitea/modules/structs"
 	gitea_sdk "gitea.dev/sdk"
 )
 

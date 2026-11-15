@@ -4,10 +4,10 @@
 package setting
 
 import (
-	user_model "branchspire/models/user"
-	"branchspire/modules/setting"
-	"branchspire/modules/templates"
-	"branchspire/services/context"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/templates"
+	"code.gitea.io/gitea/services/context"
 )
 
 const (

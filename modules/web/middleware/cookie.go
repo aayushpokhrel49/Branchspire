@@ -9,10 +9,10 @@ import (
 	"net/url"
 	"strings"
 
-	"branchspire/modules/httplib"
-	"branchspire/modules/session"
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/httplib"
+	"code.gitea.io/gitea/modules/session"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/util"
 )
 
 const (

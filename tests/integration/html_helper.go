@@ -7,7 +7,7 @@ import (
 	"io"
 	"testing"
 
-	"branchspire/modules/test"
+	"code.gitea.io/gitea/modules/test"
 
 	"github.com/PuerkitoBio/goquery"
 	"github.com/stretchr/testify/assert"

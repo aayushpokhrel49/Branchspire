@@ -17,11 +17,11 @@ import (
 	"sync/atomic"
 	texttemplate "text/template"
 
-	"branchspire/modules/assetfs"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
-	"branchspire/modules/templates/scopedtmpl"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/assetfs"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/templates/scopedtmpl"
+	"code.gitea.io/gitea/modules/util"
 )
 
 type TemplateExecutor scopedtmpl.TemplateExecutor

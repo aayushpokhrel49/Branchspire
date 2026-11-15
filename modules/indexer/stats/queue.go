@@ -6,11 +6,11 @@ package stats
 import (
 	"errors"
 
-	repo_model "branchspire/models/repo"
-	"branchspire/modules/graceful"
-	"branchspire/modules/log"
-	"branchspire/modules/queue"
-	"branchspire/modules/setting"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/modules/graceful"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/queue"
+	"code.gitea.io/gitea/modules/setting"
 )
 
 // statsQueue represents a queue to handle repository stats updates

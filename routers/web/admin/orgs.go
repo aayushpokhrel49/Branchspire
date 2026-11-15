@@ -5,13 +5,13 @@
 package admin
 
 import (
-	"branchspire/models/db"
-	user_model "branchspire/models/user"
-	"branchspire/modules/setting"
-	"branchspire/modules/structs"
-	"branchspire/modules/templates"
-	"branchspire/routers/web/explore"
-	"branchspire/services/context"
+	"code.gitea.io/gitea/models/db"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/modules/templates"
+	"code.gitea.io/gitea/routers/web/explore"
+	"code.gitea.io/gitea/services/context"
 )
 
 const (

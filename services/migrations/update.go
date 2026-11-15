@@ -6,11 +6,11 @@ package migrations
 import (
 	"context"
 
-	"branchspire/models/db"
-	user_model "branchspire/models/user"
-	"branchspire/modules/log"
-	"branchspire/modules/structs"
-	"branchspire/services/externalaccount"
+	"code.gitea.io/gitea/models/db"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/services/externalaccount"
 )
 
 // UpdateMigrationPosterID updates all migrated repositories' issues and comments posterID

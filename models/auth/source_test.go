@@ -7,9 +7,9 @@ import (
 	"strings"
 	"testing"
 
-	auth_model "branchspire/models/auth"
-	"branchspire/models/unittest"
-	"branchspire/modules/json"
+	auth_model "code.gitea.io/gitea/models/auth"
+	"code.gitea.io/gitea/models/unittest"
+	"code.gitea.io/gitea/modules/json"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

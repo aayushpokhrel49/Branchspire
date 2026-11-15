@@ -8,8 +8,8 @@ import (
 	"strings"
 	"unicode"
 
-	"branchspire/modules/git"
-	"branchspire/modules/git/attribute"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/git/attribute"
 )
 
 const (

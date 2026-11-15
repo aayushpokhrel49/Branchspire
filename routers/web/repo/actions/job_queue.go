@@ -6,9 +6,9 @@ package actions
 import (
 	"errors"
 
-	"branchspire/modules/util"
-	shared_actions "branchspire/routers/web/shared/actions"
-	"branchspire/services/context"
+	"code.gitea.io/gitea/modules/util"
+	shared_actions "code.gitea.io/gitea/routers/web/shared/actions"
+	"code.gitea.io/gitea/services/context"
 )
 
 // JobQueue renders this repository's Actions job queue.

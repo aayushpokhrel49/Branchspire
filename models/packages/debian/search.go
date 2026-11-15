@@ -7,9 +7,9 @@ import (
 	"context"
 	"strconv"
 
-	"branchspire/models/db"
-	"branchspire/models/packages"
-	debian_module "branchspire/modules/packages/debian"
+	"code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/models/packages"
+	debian_module "code.gitea.io/gitea/modules/packages/debian"
 
 	"xorm.io/builder"
 )

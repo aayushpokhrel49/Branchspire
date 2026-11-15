@@ -11,10 +11,10 @@ import (
 	"strings"
 	"testing"
 
-	auth_model "branchspire/models/auth"
-	"branchspire/modules/git"
-	"branchspire/modules/git/gitcmd"
-	"branchspire/tests"
+	auth_model "code.gitea.io/gitea/models/auth"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/git/gitcmd"
+	"code.gitea.io/gitea/tests"
 
 	"github.com/PuerkitoBio/goquery"
 	"github.com/stretchr/testify/assert"

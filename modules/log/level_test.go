@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"testing"
 
-	"branchspire/modules/json"
+	"code.gitea.io/gitea/modules/json"
 
 	"github.com/stretchr/testify/assert"
 )

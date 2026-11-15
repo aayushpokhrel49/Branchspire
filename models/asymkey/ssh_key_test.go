@@ -12,8 +12,8 @@ import (
 	"strings"
 	"testing"
 
-	"branchspire/models/unittest"
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/models/unittest"
+	"code.gitea.io/gitea/modules/setting"
 
 	"github.com/42wim/sshsig"
 	"github.com/stretchr/testify/assert"

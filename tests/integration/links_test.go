@@ -9,12 +9,12 @@ import (
 	"path"
 	"testing"
 
-	"branchspire/models/actions"
-	"branchspire/models/db"
-	"branchspire/modules/setting"
-	api "branchspire/modules/structs"
-	"branchspire/modules/test"
-	"branchspire/tests"
+	"code.gitea.io/gitea/models/actions"
+	"code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/modules/setting"
+	api "code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/modules/test"
+	"code.gitea.io/gitea/tests"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

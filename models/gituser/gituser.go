@@ -7,9 +7,9 @@ import (
 	"context"
 	"net/url"
 
-	"branchspire/models/user"
-	"branchspire/modules/container"
-	"branchspire/modules/git"
+	"code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/container"
+	"code.gitea.io/gitea/modules/git"
 )
 
 // CommitParticipant is one participant of a commit (its author or a co-author):

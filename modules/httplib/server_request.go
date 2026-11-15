@@ -12,9 +12,9 @@ import (
 	"net/url"
 	"strings"
 
-	"branchspire/modules/reqctx"
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/reqctx"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/util"
 )
 
 type contextKeyType string

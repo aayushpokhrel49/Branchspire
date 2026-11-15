@@ -14,11 +14,11 @@ import (
 	"strings"
 	"time"
 
-	"branchspire/modules/httplib"
-	"branchspire/modules/log"
-	"branchspire/modules/public"
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/httplib"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/public"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/util"
 )
 
 // ErrURLNotSupported represents url is not supported

@@ -6,9 +6,9 @@ package actions
 import (
 	"context"
 
-	actions_model "branchspire/models/actions"
-	"branchspire/modules/util"
-	secret_service "branchspire/services/secrets"
+	actions_model "code.gitea.io/gitea/models/actions"
+	"code.gitea.io/gitea/modules/util"
+	secret_service "code.gitea.io/gitea/services/secrets"
 )
 
 func CreateVariable(ctx context.Context, scope actions_model.BelongingScope, name, data, description string) (*actions_model.ActionVariable, error) {

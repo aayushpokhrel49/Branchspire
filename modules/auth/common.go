@@ -4,8 +4,8 @@
 package auth
 
 import (
-	"branchspire/modules/json"
-	"branchspire/modules/log"
+	"code.gitea.io/gitea/modules/json"
+	"code.gitea.io/gitea/modules/log"
 )
 
 func UnmarshalGroupTeamMapping(raw string) (map[string]map[string][]string, error) {

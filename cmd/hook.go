@@ -14,12 +14,12 @@ import (
 	"strings"
 	"time"
 
-	"branchspire/modules/git"
-	"branchspire/modules/git/gitcmd"
-	"branchspire/modules/log"
-	"branchspire/modules/private"
-	repo_module "branchspire/modules/repository"
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/git/gitcmd"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/private"
+	repo_module "code.gitea.io/gitea/modules/repository"
+	"code.gitea.io/gitea/modules/setting"
 
 	"github.com/urfave/cli/v3"
 )

@@ -9,8 +9,8 @@ import (
 	"io"
 	"strings"
 
-	"branchspire/modules/git"
-	"branchspire/modules/git/gitcmd"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/git/gitcmd"
 )
 
 // RevListObjects run rev-list --objects from headSHA to baseSHA

@@ -10,9 +10,9 @@ import (
 	"net/url"
 	"testing"
 
-	"branchspire/models/unittest"
-	"branchspire/modules/reqctx"
-	"branchspire/modules/test"
+	"code.gitea.io/gitea/models/unittest"
+	"code.gitea.io/gitea/modules/reqctx"
+	"code.gitea.io/gitea/modules/test"
 
 	"github.com/stretchr/testify/assert"
 )

@@ -6,7 +6,7 @@ package private
 import (
 	"context"
 
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modules/setting"
 )
 
 // Email structure holds a data for sending general emails

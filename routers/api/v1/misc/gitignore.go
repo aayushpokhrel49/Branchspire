@@ -6,11 +6,11 @@ package misc
 import (
 	"net/http"
 
-	"branchspire/modules/options"
-	repo_module "branchspire/modules/repository"
-	"branchspire/modules/structs"
-	"branchspire/modules/util"
-	"branchspire/services/context"
+	"code.gitea.io/gitea/modules/options"
+	repo_module "code.gitea.io/gitea/modules/repository"
+	"code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/services/context"
 )
 
 // Shows a list of all Gitignore templates

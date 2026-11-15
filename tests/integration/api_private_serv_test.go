@@ -8,10 +8,10 @@ import (
 	"net/url"
 	"testing"
 
-	deploykey_model "branchspire/models/deploykey"
-	"branchspire/models/perm"
-	"branchspire/models/user"
-	"branchspire/modules/private"
+	deploykey_model "code.gitea.io/gitea/models/deploykey"
+	"code.gitea.io/gitea/models/perm"
+	"code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/private"
 
 	"github.com/stretchr/testify/assert"
 )

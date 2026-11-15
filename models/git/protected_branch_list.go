@@ -7,10 +7,10 @@ import (
 	"context"
 	"sort"
 
-	"branchspire/models/db"
-	"branchspire/modules/glob"
-	"branchspire/modules/log"
-	"branchspire/modules/optional"
+	"code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/modules/glob"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/optional"
 )
 
 type ProtectedBranchRules []*ProtectedBranch

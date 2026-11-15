@@ -4,8 +4,8 @@
 package structs
 
 import (
-	"branchspire/modules/translation/i18n"
-	"branchspire/modules/web/binding"
+	"code.gitea.io/gitea/modules/translation/i18n"
+	"code.gitea.io/gitea/modules/web/binding"
 )
 
 // ValidateContext is a special context for form validation middleware

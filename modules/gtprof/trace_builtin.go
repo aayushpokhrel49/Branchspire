@@ -10,7 +10,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"branchspire/modules/tailmsg"
+	"code.gitea.io/gitea/modules/tailmsg"
 )
 
 type traceBuiltinStarter struct{}

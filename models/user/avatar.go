@@ -9,14 +9,14 @@ import (
 	"image/png"
 	"io"
 
-	"branchspire/models/avatars"
-	"branchspire/models/db"
-	"branchspire/modules/avatar"
-	"branchspire/modules/httplib"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
-	"branchspire/modules/storage"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/models/avatars"
+	"code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/modules/avatar"
+	"code.gitea.io/gitea/modules/httplib"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/storage"
+	"code.gitea.io/gitea/modules/util"
 )
 
 // CustomAvatarRelativePath returns user custom avatar relative path.

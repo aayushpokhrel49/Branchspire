@@ -7,8 +7,8 @@ import (
 	"context"
 	"strings"
 
-	"branchspire/models/db"
-	packages_model "branchspire/models/packages"
+	"code.gitea.io/gitea/models/db"
+	packages_model "code.gitea.io/gitea/models/packages"
 
 	"xorm.io/builder"
 )

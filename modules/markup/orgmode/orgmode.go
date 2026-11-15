@@ -9,11 +9,11 @@ import (
 	"io"
 	"strings"
 
-	"branchspire/modules/highlight"
-	"branchspire/modules/htmlutil"
-	"branchspire/modules/log"
-	"branchspire/modules/markup"
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modules/highlight"
+	"code.gitea.io/gitea/modules/htmlutil"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/markup"
+	"code.gitea.io/gitea/modules/setting"
 
 	"github.com/alecthomas/chroma/v2"
 	"github.com/niklasfasching/go-org/org"

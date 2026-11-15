@@ -6,13 +6,13 @@ package user
 import (
 	"net/http"
 
-	access_model "branchspire/models/perm/access"
-	repo_model "branchspire/models/repo"
-	user_model "branchspire/models/user"
-	api "branchspire/modules/structs"
-	"branchspire/routers/api/v1/utils"
-	"branchspire/services/context"
-	"branchspire/services/convert"
+	access_model "code.gitea.io/gitea/models/perm/access"
+	repo_model "code.gitea.io/gitea/models/repo"
+	user_model "code.gitea.io/gitea/models/user"
+	api "code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/routers/api/v1/utils"
+	"code.gitea.io/gitea/services/context"
+	"code.gitea.io/gitea/services/convert"
 )
 
 // listUserRepos - List the repositories owned by the given user.

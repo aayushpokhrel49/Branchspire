@@ -10,15 +10,15 @@ import (
 	"net/http"
 	"strings"
 
-	user_model "branchspire/models/user"
-	"branchspire/modules/httpcache"
-	"branchspire/modules/log"
-	"branchspire/modules/reqctx"
-	"branchspire/modules/setting"
-	"branchspire/modules/templates"
-	"branchspire/modules/web/middleware"
-	"branchspire/modules/web/routing"
-	"branchspire/services/context"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/httpcache"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/reqctx"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/templates"
+	"code.gitea.io/gitea/modules/web/middleware"
+	"code.gitea.io/gitea/modules/web/routing"
+	"code.gitea.io/gitea/services/context"
 )
 
 const (

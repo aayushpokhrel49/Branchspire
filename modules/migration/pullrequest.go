@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"time"
 
-	"branchspire/modules/git"
+	"code.gitea.io/gitea/modules/git"
 )
 
 // PullRequest defines a standard pull request information

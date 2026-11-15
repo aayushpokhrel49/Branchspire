@@ -11,8 +11,8 @@ import (
 	"runtime"
 	"time"
 
-	process_module "branchspire/modules/process"
-	"branchspire/services/context"
+	process_module "code.gitea.io/gitea/modules/process"
+	"code.gitea.io/gitea/services/context"
 )
 
 // Processes prints out the processes

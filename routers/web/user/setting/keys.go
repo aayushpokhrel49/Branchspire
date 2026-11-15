@@ -8,17 +8,17 @@ import (
 	"errors"
 	"net/http"
 
-	asymkey_model "branchspire/models/asymkey"
-	audit_model "branchspire/models/audit"
-	"branchspire/models/db"
-	user_model "branchspire/models/user"
-	"branchspire/modules/setting"
-	"branchspire/modules/templates"
-	"branchspire/modules/web"
-	asymkey_service "branchspire/services/asymkey"
-	"branchspire/services/audit"
-	"branchspire/services/context"
-	"branchspire/services/forms"
+	asymkey_model "code.gitea.io/gitea/models/asymkey"
+	audit_model "code.gitea.io/gitea/models/audit"
+	"code.gitea.io/gitea/models/db"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/templates"
+	"code.gitea.io/gitea/modules/web"
+	asymkey_service "code.gitea.io/gitea/services/asymkey"
+	"code.gitea.io/gitea/services/audit"
+	"code.gitea.io/gitea/services/context"
+	"code.gitea.io/gitea/services/forms"
 )
 
 const (

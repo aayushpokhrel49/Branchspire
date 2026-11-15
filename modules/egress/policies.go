@@ -13,9 +13,9 @@ import (
 	"os"
 	"strings"
 
-	"branchspire/modules/egress/policy"
-	"branchspire/modules/proxy"
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modules/egress/policy"
+	"code.gitea.io/gitea/modules/proxy"
+	"code.gitea.io/gitea/modules/setting"
 
 	"golang.org/x/net/http/httpproxy"
 )

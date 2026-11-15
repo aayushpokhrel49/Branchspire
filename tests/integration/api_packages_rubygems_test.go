@@ -18,11 +18,11 @@ import (
 	"net/http"
 	"testing"
 
-	"branchspire/models/packages"
-	"branchspire/models/unittest"
-	user_model "branchspire/models/user"
-	"branchspire/modules/packages/rubygems"
-	"branchspire/tests"
+	"code.gitea.io/gitea/models/packages"
+	"code.gitea.io/gitea/models/unittest"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/packages/rubygems"
+	"code.gitea.io/gitea/tests"
 
 	"github.com/stretchr/testify/assert"
 )

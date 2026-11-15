@@ -11,9 +11,9 @@ import (
 	"regexp"
 	"strings"
 
-	"branchspire/modules/json"
-	"branchspire/modules/util"
-	"branchspire/modules/validation"
+	"code.gitea.io/gitea/modules/json"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/modules/validation"
 
 	"github.com/hashicorp/go-version"
 )

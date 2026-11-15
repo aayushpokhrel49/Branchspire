@@ -9,13 +9,13 @@ import (
 	"fmt"
 	"slices"
 
-	actions_model "branchspire/models/actions"
-	"branchspire/models/db"
-	"branchspire/modules/actions/jobparser"
-	"branchspire/modules/container"
-	"branchspire/modules/log"
-	"branchspire/modules/timeutil"
-	"branchspire/modules/util"
+	actions_model "code.gitea.io/gitea/models/actions"
+	"code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/modules/actions/jobparser"
+	"code.gitea.io/gitea/modules/container"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/timeutil"
+	"code.gitea.io/gitea/modules/util"
 
 	"xorm.io/builder"
 )

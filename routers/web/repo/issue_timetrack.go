@@ -8,13 +8,13 @@ import (
 	"strings"
 	"time"
 
-	"branchspire/models/db"
-	issues_model "branchspire/models/issues"
-	"branchspire/modules/util"
-	"branchspire/modules/web"
-	"branchspire/services/context"
-	"branchspire/services/forms"
-	issue_service "branchspire/services/issue"
+	"code.gitea.io/gitea/models/db"
+	issues_model "code.gitea.io/gitea/models/issues"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/modules/web"
+	"code.gitea.io/gitea/services/context"
+	"code.gitea.io/gitea/services/forms"
+	issue_service "code.gitea.io/gitea/services/issue"
 )
 
 // AddTimeManually tracks time manually

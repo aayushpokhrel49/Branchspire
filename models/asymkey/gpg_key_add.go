@@ -7,8 +7,8 @@ import (
 	"context"
 	"strings"
 
-	"branchspire/models/db"
-	"branchspire/modules/log"
+	"code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/modules/log"
 
 	"github.com/ProtonMail/go-crypto/openpgp"
 )

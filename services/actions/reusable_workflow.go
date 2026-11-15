@@ -11,24 +11,24 @@ import (
 	"slices"
 	"strings"
 
+	actions_model "code.gitea.io/gitea/models/actions"
+	"code.gitea.io/gitea/models/db"
+	perm_model "code.gitea.io/gitea/models/perm"
+	access_model "code.gitea.io/gitea/models/perm/access"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/models/unit"
+	actions_module "code.gitea.io/gitea/modules/actions"
+	"code.gitea.io/gitea/modules/actions/jobparser"
+	"code.gitea.io/gitea/modules/container"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/httplib"
+	"code.gitea.io/gitea/modules/json"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
+	api "code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/services/convert"
 	"gitea.dev/actionslib/pkg/model"
-	actions_model "branchspire/models/actions"
-	"branchspire/models/db"
-	perm_model "branchspire/models/perm"
-	access_model "branchspire/models/perm/access"
-	repo_model "branchspire/models/repo"
-	"branchspire/models/unit"
-	actions_module "branchspire/modules/actions"
-	"branchspire/modules/actions/jobparser"
-	"branchspire/modules/container"
-	"branchspire/modules/git"
-	"branchspire/modules/httplib"
-	"branchspire/modules/json"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
-	api "branchspire/modules/structs"
-	"branchspire/modules/util"
-	"branchspire/services/convert"
 
 	"go.yaml.in/yaml/v4"
 	"xorm.io/builder"
@@ -492,14 +492,14 @@ func insertCallerChildren(ctx context.Context, run *actions_model.ActionRun, att
 // It first rewrites an absolute URL pointing to this instance into the cross-repo form (rejecting external URLs),
 // then validates the syntax via model.ParseReusableWorkflowUses.
 func ResolveUses(ctx context.Context, uses string) (*model.ReusableWorkflowUses, error) {
-	// Rewrite a local-instance URL to the equivalent cross-repo form "owner/repo/.branchspire/workflows/file.yml@ref".
+	// Rewrite a local-instance URL to the equivalent cross-repo form "owner/repo/.code.gitea.io/gitea/workflows/file.yml@ref".
 	if strings.HasPrefix(uses, "http://") || strings.HasPrefix(uses, "https://") {
 		// ParseGiteaSiteURL returns nil for URLs that do not belong to this instance.
 		gsu := httplib.ParseGiteaSiteURL(ctx, uses)
 		if gsu == nil {
 			return nil, fmt.Errorf("unsupported reusable workflow URL %q: an absolute URL must point to this BranchSpire instance (%s)", uses, setting.AppURL)
 		}
-		// RoutePath is the instance-relative path (AppSubURL already stripped), e.g. "/owner/repo/.branchspire/workflows/file.yml@ref".
+		// RoutePath is the instance-relative path (AppSubURL already stripped), e.g. "/owner/repo/.code.gitea.io/gitea/workflows/file.yml@ref".
 		uses = strings.TrimPrefix(gsu.RoutePath, "/")
 	}
 	ref, err := model.ParseReusableWorkflowUses(uses)

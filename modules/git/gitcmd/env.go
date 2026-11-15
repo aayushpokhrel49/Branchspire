@@ -8,8 +8,8 @@ import (
 	"os/exec"
 	"sync/atomic"
 
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
 )
 
 var GitExecutable = "git" // the command name of git, will be updated to an absolute path during initialization

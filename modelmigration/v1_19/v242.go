@@ -6,8 +6,8 @@ package v1_19
 import (
 	"context"
 
-	"branchspire/modelmigration/base"
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modelmigration/base"
+	"code.gitea.io/gitea/modules/setting"
 )
 
 // AlterPublicGPGKeyImportContentFieldToMediumText: set GPGKeyImport Content field to MEDIUMTEXT

@@ -6,10 +6,10 @@ package repo
 import (
 	"net/http"
 
-	actions_model "branchspire/models/actions"
-	"branchspire/routers/common"
-	actions_service "branchspire/services/actions"
-	"branchspire/services/context"
+	actions_model "code.gitea.io/gitea/models/actions"
+	"code.gitea.io/gitea/routers/common"
+	actions_service "code.gitea.io/gitea/services/actions"
+	"code.gitea.io/gitea/services/context"
 )
 
 func DownloadActionsRunJobLogs(ctx *context.APIContext) {

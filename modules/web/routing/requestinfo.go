@@ -9,8 +9,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
 )
 
 // NewRequestInfoHandler is a handler that saves request info into request context.

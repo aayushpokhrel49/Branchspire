@@ -6,10 +6,10 @@ package internal
 import (
 	"strconv"
 
-	"branchspire/models/db"
-	"branchspire/modules/indexer"
-	"branchspire/modules/optional"
-	"branchspire/modules/timeutil"
+	"code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/modules/indexer"
+	"code.gitea.io/gitea/modules/optional"
+	"code.gitea.io/gitea/modules/timeutil"
 )
 
 // IndexerData data stored in the issue indexer

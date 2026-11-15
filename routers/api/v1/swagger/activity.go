@@ -4,7 +4,7 @@
 package swagger
 
 import (
-	api "branchspire/modules/structs"
+	api "code.gitea.io/gitea/modules/structs"
 )
 
 // ActivityFeedsList

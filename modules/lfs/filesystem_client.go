@@ -10,7 +10,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/util"
 )
 
 // FilesystemClient is used to read LFS data from a filesystem path

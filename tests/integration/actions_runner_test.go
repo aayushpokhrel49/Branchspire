@@ -10,12 +10,12 @@ import (
 	"testing"
 	"time"
 
+	auth_model "code.gitea.io/gitea/models/auth"
+	"code.gitea.io/gitea/modules/setting"
 	pingv1 "gitea.dev/actionslib/ping/v1"
 	"gitea.dev/actionslib/ping/v1/pingv1connect"
 	runnerv1 "gitea.dev/actionslib/runner/v1"
 	"gitea.dev/actionslib/runner/v1/runnerv1connect"
-	auth_model "branchspire/models/auth"
-	"branchspire/modules/setting"
 
 	"connectrpc.com/connect"
 	"github.com/stretchr/testify/assert"

@@ -7,11 +7,11 @@ import (
 	"strings"
 	"testing"
 
-	"branchspire/modules/markup"
-	"branchspire/modules/markup/markdown"
-	"branchspire/modules/setting"
-	"branchspire/modules/svg"
-	"branchspire/modules/test"
+	"code.gitea.io/gitea/modules/markup"
+	"code.gitea.io/gitea/modules/markup/markdown"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/svg"
+	"code.gitea.io/gitea/modules/test"
 
 	"github.com/stretchr/testify/assert"
 	"golang.org/x/text/cases"

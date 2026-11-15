@@ -6,7 +6,7 @@ package db
 import (
 	"context"
 
-	"branchspire/modules/indexer/internal"
+	"code.gitea.io/gitea/modules/indexer/internal"
 )
 
 var _ internal.Indexer = &Indexer{}

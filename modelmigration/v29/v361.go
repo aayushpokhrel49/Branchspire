@@ -6,7 +6,7 @@ package v29
 import (
 	"context"
 
-	"branchspire/modelmigration/base"
+	"code.gitea.io/gitea/modelmigration/base"
 )
 
 func DropCommentCommitID(ctx context.Context, x base.EngineMigration) error {

@@ -9,12 +9,12 @@ import (
 	"reflect"
 	"strings"
 
-	"branchspire/modules/setting"
-	"branchspire/modules/structs"
-	"branchspire/modules/translation"
-	"branchspire/modules/util"
-	"branchspire/modules/validation"
-	"branchspire/modules/web/binding"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/modules/translation"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/modules/validation"
+	"code.gitea.io/gitea/modules/web/binding"
 )
 
 type (

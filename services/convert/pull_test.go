@@ -6,12 +6,12 @@ package convert
 import (
 	"testing"
 
-	issues_model "branchspire/models/issues"
-	"branchspire/models/perm"
-	access_model "branchspire/models/perm/access"
-	repo_model "branchspire/models/repo"
-	"branchspire/models/unittest"
-	"branchspire/modules/structs"
+	issues_model "code.gitea.io/gitea/models/issues"
+	"code.gitea.io/gitea/models/perm"
+	access_model "code.gitea.io/gitea/models/perm/access"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/models/unittest"
+	"code.gitea.io/gitea/modules/structs"
 
 	"github.com/stretchr/testify/assert"
 )

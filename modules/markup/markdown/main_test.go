@@ -6,8 +6,8 @@ package markdown
 import (
 	"testing"
 
-	"branchspire/modules/markup"
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modules/markup"
+	"code.gitea.io/gitea/modules/setting"
 )
 
 func TestMain(m *testing.M) {

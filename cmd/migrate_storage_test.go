@@ -8,13 +8,13 @@ import (
 	"strings"
 	"testing"
 
-	"branchspire/models/packages"
-	"branchspire/models/unittest"
-	user_model "branchspire/models/user"
-	packages_module "branchspire/modules/packages"
-	"branchspire/modules/setting"
-	"branchspire/modules/storage"
-	packages_service "branchspire/services/packages"
+	"code.gitea.io/gitea/models/packages"
+	"code.gitea.io/gitea/models/unittest"
+	user_model "code.gitea.io/gitea/models/user"
+	packages_module "code.gitea.io/gitea/modules/packages"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/storage"
+	packages_service "code.gitea.io/gitea/services/packages"
 
 	"github.com/stretchr/testify/assert"
 )

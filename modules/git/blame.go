@@ -9,8 +9,8 @@ import (
 	"context"
 	"io"
 
-	"branchspire/modules/git/gitcmd"
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modules/git/gitcmd"
+	"code.gitea.io/gitea/modules/setting"
 )
 
 func LineBlame(ctx context.Context, repo RepositoryFacade, revision, file string, line uint) (string, error) {

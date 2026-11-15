@@ -8,16 +8,16 @@ import (
 	"errors"
 	"fmt"
 
-	git_model "branchspire/models/git"
-	issues_model "branchspire/models/issues"
-	access_model "branchspire/models/perm/access"
-	repo_model "branchspire/models/repo"
-	"branchspire/models/unit"
-	user_model "branchspire/models/user"
-	"branchspire/modules/git"
-	"branchspire/modules/globallock"
-	"branchspire/modules/graceful"
-	"branchspire/modules/log"
+	git_model "code.gitea.io/gitea/models/git"
+	issues_model "code.gitea.io/gitea/models/issues"
+	access_model "code.gitea.io/gitea/models/perm/access"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/models/unit"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/globallock"
+	"code.gitea.io/gitea/modules/graceful"
+	"code.gitea.io/gitea/modules/log"
 )
 
 // Update updates pull request with base branch.

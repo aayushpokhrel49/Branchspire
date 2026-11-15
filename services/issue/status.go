@@ -6,11 +6,11 @@ package issue
 import (
 	"context"
 
-	"branchspire/models/db"
-	issues_model "branchspire/models/issues"
-	user_model "branchspire/models/user"
-	"branchspire/modules/log"
-	notify_service "branchspire/services/notify"
+	"code.gitea.io/gitea/models/db"
+	issues_model "code.gitea.io/gitea/models/issues"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/log"
+	notify_service "code.gitea.io/gitea/services/notify"
 )
 
 // CloseIssue close an issue.

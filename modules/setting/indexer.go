@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"branchspire/modules/log"
+	"code.gitea.io/gitea/modules/log"
 )
 
 // Indexer settings

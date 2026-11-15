@@ -8,8 +8,8 @@ package private
 import (
 	"net/http"
 
-	"branchspire/modules/graceful"
-	"branchspire/services/context"
+	"code.gitea.io/gitea/modules/graceful"
+	"code.gitea.io/gitea/services/context"
 )
 
 // Restart causes the server to perform a graceful restart

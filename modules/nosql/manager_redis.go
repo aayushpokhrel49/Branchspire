@@ -11,7 +11,7 @@ import (
 	"strconv"
 	"strings"
 
-	"branchspire/modules/log"
+	"code.gitea.io/gitea/modules/log"
 
 	"github.com/redis/go-redis/v9"
 )

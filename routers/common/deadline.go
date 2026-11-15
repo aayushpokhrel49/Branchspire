@@ -6,8 +6,8 @@ package common
 import (
 	"time"
 
-	"branchspire/modules/setting"
-	"branchspire/modules/timeutil"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/timeutil"
 )
 
 func ParseDeadlineDateToEndOfDay(date string) (timeutil.TimeStamp, error) {

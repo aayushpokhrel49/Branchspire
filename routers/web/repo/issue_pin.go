@@ -6,11 +6,11 @@ package repo
 import (
 	"net/http"
 
-	"branchspire/models/db"
-	issues_model "branchspire/models/issues"
-	"branchspire/modules/json"
-	"branchspire/modules/log"
-	"branchspire/services/context"
+	"code.gitea.io/gitea/models/db"
+	issues_model "code.gitea.io/gitea/models/issues"
+	"code.gitea.io/gitea/modules/json"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/services/context"
 )
 
 // IssuePinOrUnpin pin or unpin a Issue

@@ -12,12 +12,12 @@ import (
 	"testing"
 	"time"
 
-	"branchspire/models/packages"
-	"branchspire/models/unittest"
-	user_model "branchspire/models/user"
-	helm_module "branchspire/modules/packages/helm"
-	"branchspire/modules/setting"
-	"branchspire/tests"
+	"code.gitea.io/gitea/models/packages"
+	"code.gitea.io/gitea/models/unittest"
+	user_model "code.gitea.io/gitea/models/user"
+	helm_module "code.gitea.io/gitea/modules/packages/helm"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/tests"
 
 	"github.com/stretchr/testify/assert"
 	"go.yaml.in/yaml/v4"

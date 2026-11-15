@@ -6,7 +6,7 @@ package auth
 import (
 	"sync"
 
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modules/setting"
 
 	lru "github.com/hashicorp/golang-lru/v2"
 )

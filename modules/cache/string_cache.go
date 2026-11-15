@@ -10,9 +10,9 @@ import (
 	"strings"
 	"time"
 
-	"branchspire/modules/json"
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/json"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/util"
 )
 
 type GetJSONError struct {

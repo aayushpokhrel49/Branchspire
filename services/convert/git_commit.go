@@ -8,13 +8,13 @@ import (
 	"net/url"
 	"time"
 
-	repo_model "branchspire/models/repo"
-	user_model "branchspire/models/user"
-	"branchspire/modules/git"
-	"branchspire/modules/log"
-	api "branchspire/modules/structs"
-	ctx "branchspire/services/context"
-	"branchspire/services/gitdiff"
+	repo_model "code.gitea.io/gitea/models/repo"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/log"
+	api "code.gitea.io/gitea/modules/structs"
+	ctx "code.gitea.io/gitea/services/context"
+	"code.gitea.io/gitea/services/gitdiff"
 )
 
 // ToCommitUser convert a git.Signature to an api.CommitUser

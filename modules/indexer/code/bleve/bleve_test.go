@@ -7,9 +7,9 @@ import (
 	"testing"
 	"time"
 
-	"branchspire/models/db"
-	"branchspire/modules/indexer/code/internal"
-	inner_bleve "branchspire/modules/indexer/internal/bleve"
+	"code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/modules/indexer/code/internal"
+	inner_bleve "code.gitea.io/gitea/modules/indexer/internal/bleve"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

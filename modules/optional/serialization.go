@@ -4,7 +4,7 @@
 package optional
 
 import (
-	"branchspire/modules/json"
+	"code.gitea.io/gitea/modules/json"
 
 	"go.yaml.in/yaml/v4"
 )

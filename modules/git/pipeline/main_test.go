@@ -6,7 +6,7 @@ package pipeline
 import (
 	"testing"
 
-	"branchspire/modules/git"
+	"code.gitea.io/gitea/modules/git"
 )
 
 func TestMain(m *testing.M) {

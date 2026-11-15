@@ -7,8 +7,8 @@ import (
 	"encoding/xml"
 	"io"
 
-	"branchspire/modules/util"
-	"branchspire/modules/validation"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/modules/validation"
 
 	"golang.org/x/net/html/charset"
 )

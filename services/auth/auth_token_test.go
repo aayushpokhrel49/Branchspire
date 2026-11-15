@@ -7,10 +7,10 @@ import (
 	"testing"
 	"time"
 
-	auth_model "branchspire/models/auth"
-	"branchspire/models/unittest"
-	"branchspire/modules/timeutil"
-	"branchspire/modules/util"
+	auth_model "code.gitea.io/gitea/models/auth"
+	"code.gitea.io/gitea/models/unittest"
+	"code.gitea.io/gitea/modules/timeutil"
+	"code.gitea.io/gitea/modules/util"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

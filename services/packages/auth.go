@@ -10,10 +10,10 @@ import (
 	"strings"
 	"time"
 
-	auth_model "branchspire/models/auth"
-	user_model "branchspire/models/user"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
+	auth_model "code.gitea.io/gitea/models/auth"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
 
 	"github.com/golang-jwt/jwt/v5"
 )

@@ -4,9 +4,9 @@
 package pull
 
 import (
-	repo_model "branchspire/models/repo"
-	"branchspire/modules/git/gitcmd"
-	"branchspire/modules/log"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/modules/git/gitcmd"
+	"code.gitea.io/gitea/modules/log"
 )
 
 // doMergeStyleMerge merges the tracking branch into the current HEAD - which is assumed to be the staging branch (equal to the pr.BaseBranch)

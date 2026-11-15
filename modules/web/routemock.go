@@ -6,7 +6,7 @@ package web
 import (
 	"net/http"
 
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modules/setting"
 )
 
 // MockAfterMiddlewares is a general mock point, it's between middlewares and the handler

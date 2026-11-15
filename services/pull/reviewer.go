@@ -6,13 +6,13 @@ package pull
 import (
 	"context"
 
-	"branchspire/models/db"
-	"branchspire/models/organization"
-	"branchspire/models/perm"
-	repo_model "branchspire/models/repo"
-	"branchspire/models/unit"
-	user_model "branchspire/models/user"
-	"branchspire/modules/container"
+	"code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/models/organization"
+	"code.gitea.io/gitea/models/perm"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/models/unit"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/container"
 
 	"xorm.io/builder"
 )

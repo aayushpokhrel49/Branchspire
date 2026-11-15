@@ -9,14 +9,14 @@ import (
 	"slices"
 	"time"
 
-	git_model "branchspire/models/git"
-	issues_model "branchspire/models/issues"
-	org_model "branchspire/models/organization"
-	user_model "branchspire/models/user"
-	"branchspire/modules/git"
-	"branchspire/modules/log"
-	"branchspire/modules/optional"
-	"branchspire/modules/setting"
+	git_model "code.gitea.io/gitea/models/git"
+	issues_model "code.gitea.io/gitea/models/issues"
+	org_model "code.gitea.io/gitea/models/organization"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/optional"
+	"code.gitea.io/gitea/modules/setting"
 )
 
 type ReviewRequestNotifier struct {

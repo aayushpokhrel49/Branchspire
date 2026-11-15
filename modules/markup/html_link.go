@@ -8,8 +8,8 @@ import (
 	"path"
 	"strings"
 
-	"branchspire/modules/markup/common"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/markup/common"
+	"code.gitea.io/gitea/modules/util"
 
 	"golang.org/x/net/html"
 	"golang.org/x/net/html/atom"

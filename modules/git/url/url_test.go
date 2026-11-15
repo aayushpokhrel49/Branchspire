@@ -8,10 +8,10 @@ import (
 	"net/url"
 	"testing"
 
-	"branchspire/modules/httplib"
-	"branchspire/modules/reqctx"
-	"branchspire/modules/setting"
-	"branchspire/modules/test"
+	"code.gitea.io/gitea/modules/httplib"
+	"code.gitea.io/gitea/modules/reqctx"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/test"
 
 	"github.com/stretchr/testify/assert"
 )

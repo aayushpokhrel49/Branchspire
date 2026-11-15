@@ -15,12 +15,12 @@ import (
 	"strings"
 	"time"
 
-	"branchspire/modules/git/gitrepo"
-	"branchspire/modules/git/internal" //nolint:depguard // only this file can use the internal type CmdArg, other files and packages should use AddXxx functions
-	"branchspire/modules/gtprof"
-	"branchspire/modules/log"
-	"branchspire/modules/process"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/git/gitrepo"
+	"code.gitea.io/gitea/modules/git/internal" //nolint:depguard // only this file can use the internal type CmdArg, other files and packages should use AddXxx functions
+	"code.gitea.io/gitea/modules/gtprof"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/process"
+	"code.gitea.io/gitea/modules/util"
 )
 
 // TrustedCmdArgs returns the trusted arguments for git command.

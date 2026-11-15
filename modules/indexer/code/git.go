@@ -8,12 +8,12 @@ import (
 	"strconv"
 	"strings"
 
-	repo_model "branchspire/models/repo"
-	"branchspire/modules/git"
-	"branchspire/modules/git/gitcmd"
-	"branchspire/modules/indexer/code/internal"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/git/gitcmd"
+	"code.gitea.io/gitea/modules/indexer/code/internal"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
 )
 
 func getDefaultBranchSha(ctx context.Context, repo *repo_model.Repository) (string, error) {

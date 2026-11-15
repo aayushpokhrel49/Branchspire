@@ -9,7 +9,7 @@ import (
 	"os/exec"
 	"syscall"
 
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/util"
 )
 
 func setSysProcAttribute(cmd *exec.Cmd) {

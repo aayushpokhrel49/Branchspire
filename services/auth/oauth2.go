@@ -11,16 +11,16 @@ import (
 	"strings"
 	"time"
 
-	actions_model "branchspire/models/actions"
-	auth_model "branchspire/models/auth"
-	user_model "branchspire/models/user"
-	"branchspire/modules/auth/httpauth"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
-	"branchspire/modules/timeutil"
-	"branchspire/modules/util"
-	"branchspire/services/actions"
-	"branchspire/services/oauth2_provider"
+	actions_model "code.gitea.io/gitea/models/actions"
+	auth_model "code.gitea.io/gitea/models/auth"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/auth/httpauth"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/timeutil"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/services/actions"
+	"code.gitea.io/gitea/services/oauth2_provider"
 )
 
 var _ Method = &OAuth2{}

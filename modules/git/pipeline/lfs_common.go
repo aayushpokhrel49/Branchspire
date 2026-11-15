@@ -6,7 +6,7 @@ package pipeline
 import (
 	"time"
 
-	"branchspire/modules/git"
+	"code.gitea.io/gitea/modules/git"
 )
 
 // LFSResult represents commits found using a provided pointer file hash

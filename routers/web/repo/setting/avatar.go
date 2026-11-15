@@ -8,13 +8,13 @@ import (
 	"fmt"
 	"io"
 
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
-	"branchspire/modules/typesniffer"
-	"branchspire/modules/web"
-	"branchspire/services/context"
-	"branchspire/services/forms"
-	repo_service "branchspire/services/repository"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/typesniffer"
+	"code.gitea.io/gitea/modules/web"
+	"code.gitea.io/gitea/services/context"
+	"code.gitea.io/gitea/services/forms"
+	repo_service "code.gitea.io/gitea/services/repository"
 )
 
 // UpdateAvatarSetting update repo's avatar

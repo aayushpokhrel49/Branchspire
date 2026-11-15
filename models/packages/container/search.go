@@ -8,11 +8,11 @@ import (
 	"strings"
 	"time"
 
-	"branchspire/models/db"
-	"branchspire/models/packages"
-	user_model "branchspire/models/user"
-	container_module "branchspire/modules/packages/container"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/models/packages"
+	user_model "code.gitea.io/gitea/models/user"
+	container_module "code.gitea.io/gitea/modules/packages/container"
+	"code.gitea.io/gitea/modules/util"
 
 	"xorm.io/builder"
 )

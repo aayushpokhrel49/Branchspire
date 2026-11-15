@@ -4,10 +4,10 @@
 package label
 
 import (
-	"branchspire/modules/label"
-	"branchspire/modules/web"
-	"branchspire/services/context"
-	"branchspire/services/forms"
+	"code.gitea.io/gitea/modules/label"
+	"code.gitea.io/gitea/modules/web"
+	"code.gitea.io/gitea/services/context"
+	"code.gitea.io/gitea/services/forms"
 )
 
 func GetLabelEditForm(ctx *context.Context) *forms.CreateLabelForm {

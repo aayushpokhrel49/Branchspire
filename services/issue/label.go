@@ -6,11 +6,11 @@ package issue
 import (
 	"context"
 
-	"branchspire/models/db"
-	issues_model "branchspire/models/issues"
-	access_model "branchspire/models/perm/access"
-	user_model "branchspire/models/user"
-	notify_service "branchspire/services/notify"
+	"code.gitea.io/gitea/models/db"
+	issues_model "code.gitea.io/gitea/models/issues"
+	access_model "code.gitea.io/gitea/models/perm/access"
+	user_model "code.gitea.io/gitea/models/user"
+	notify_service "code.gitea.io/gitea/services/notify"
 )
 
 // ClearLabels clears all of an issue's labels

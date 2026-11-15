@@ -7,14 +7,14 @@ import (
 	"fmt"
 	"net/http"
 
-	"branchspire/models/db"
-	git_model "branchspire/models/git"
-	api "branchspire/modules/structs"
-	"branchspire/modules/web"
-	"branchspire/routers/api/v1/utils"
-	"branchspire/services/context"
-	"branchspire/services/convert"
-	commitstatus_service "branchspire/services/repository/commitstatus"
+	"code.gitea.io/gitea/models/db"
+	git_model "code.gitea.io/gitea/models/git"
+	api "code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/modules/web"
+	"code.gitea.io/gitea/routers/api/v1/utils"
+	"code.gitea.io/gitea/services/context"
+	"code.gitea.io/gitea/services/convert"
+	commitstatus_service "code.gitea.io/gitea/services/repository/commitstatus"
 )
 
 // NewCommitStatus creates a new CommitStatus

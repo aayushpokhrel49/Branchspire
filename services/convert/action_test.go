@@ -8,14 +8,14 @@ import (
 	"strings"
 	"testing"
 
-	actions_model "branchspire/models/actions"
-	db "branchspire/models/db"
-	repo_model "branchspire/models/repo"
-	"branchspire/models/unit"
-	"branchspire/models/unittest"
-	"branchspire/modules/git"
-	"branchspire/modules/git/gitcmd"
-	"branchspire/modules/util"
+	actions_model "code.gitea.io/gitea/models/actions"
+	db "code.gitea.io/gitea/models/db"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/models/unit"
+	"code.gitea.io/gitea/models/unittest"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/git/gitcmd"
+	"code.gitea.io/gitea/modules/util"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -44,9 +44,9 @@ func buildWorkflowTestRepo(t *testing.T) string {
 	fmt.Fprintf(&sb, "blob\nmark :2\ndata %d\n%s\n", len(featureWF), featureWF)
 	fmt.Fprintf(&sb, "blob\nmark :3\ndata %d\n%s\n", len(releaseWF), releaseWF)
 	fmt.Fprintf(&sb, "commit refs/heads/main\nmark :4\nauthor Test <test@gitea.com> 1000000000 +0000\ncommitter Test <test@gitea.com> 1000000000 +0000\ndata 14\ninitial commit\nM 100644 :1 README.md\n\n")
-	fmt.Fprintf(&sb, "commit refs/heads/feature\nmark :5\nauthor Test <test@gitea.com> 1000000001 +0000\ncommitter Test <test@gitea.com> 1000000001 +0000\ndata 12\nadd workflow\nfrom :4\nM 100644 :2 .branchspire/workflows/my-workflow.yml\n\n")
+	fmt.Fprintf(&sb, "commit refs/heads/feature\nmark :5\nauthor Test <test@gitea.com> 1000000001 +0000\ncommitter Test <test@gitea.com> 1000000001 +0000\ndata 12\nadd workflow\nfrom :4\nM 100644 :2 .code.gitea.io/gitea/workflows/my-workflow.yml\n\n")
 	fmt.Fprintf(&sb, "reset refs/pull/42/merge\nfrom :5\n\n")
-	fmt.Fprintf(&sb, "commit refs/heads/main\nmark :6\nauthor Test <test@gitea.com> 1000000002 +0000\ncommitter Test <test@gitea.com> 1000000002 +0000\ndata 16\nrelease workflow\nfrom :4\nM 100644 :3 .branchspire/workflows/my-workflow.yml\n\n")
+	fmt.Fprintf(&sb, "commit refs/heads/main\nmark :6\nauthor Test <test@gitea.com> 1000000002 +0000\ncommitter Test <test@gitea.com> 1000000002 +0000\ndata 16\nrelease workflow\nfrom :4\nM 100644 :3 .code.gitea.io/gitea/workflows/my-workflow.yml\n\n")
 	fmt.Fprintf(&sb, "reset refs/tags/release-v1\nfrom :6\n\n")
 	fmt.Fprintf(&sb, "reset refs/heads/main\nfrom :4\n\n")
 	fmt.Fprintf(&sb, "done\n")

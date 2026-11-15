@@ -6,10 +6,10 @@ package v1_26
 import (
 	"testing"
 
-	"branchspire/modelmigration/base"
-	"branchspire/modelmigration/migrationtest"
-	"branchspire/modules/setting"
-	"branchspire/modules/test"
+	"code.gitea.io/gitea/modelmigration/base"
+	"code.gitea.io/gitea/modelmigration/migrationtest"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/test"
 
 	"github.com/stretchr/testify/require"
 )

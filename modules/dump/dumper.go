@@ -16,9 +16,9 @@ import (
 	"slices"
 	"strings"
 
-	"branchspire/modules/consts"
-	"branchspire/modules/log"
-	"branchspire/modules/timeutil"
+	"code.gitea.io/gitea/modules/consts"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/timeutil"
 
 	"github.com/mholt/archives"
 )

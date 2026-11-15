@@ -6,8 +6,8 @@ package math
 import (
 	"html/template"
 
-	"branchspire/modules/markup/internal"
-	giteaUtil "branchspire/modules/util"
+	"code.gitea.io/gitea/modules/markup/internal"
+	giteaUtil "code.gitea.io/gitea/modules/util"
 
 	gast "github.com/yuin/goldmark/ast"
 	"github.com/yuin/goldmark/renderer"

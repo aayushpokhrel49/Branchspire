@@ -6,8 +6,8 @@ package mention
 import (
 	"context"
 
-	"branchspire/models/organization"
-	user_model "branchspire/models/user"
+	"code.gitea.io/gitea/models/organization"
+	user_model "code.gitea.io/gitea/models/user"
 )
 
 // Mention is the JSON structure returned by mention autocomplete endpoints.

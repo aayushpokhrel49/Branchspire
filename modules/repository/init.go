@@ -10,11 +10,11 @@ import (
 	"sort"
 	"strings"
 
-	issues_model "branchspire/models/issues"
-	"branchspire/modules/label"
-	"branchspire/modules/options"
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
+	issues_model "code.gitea.io/gitea/models/issues"
+	"code.gitea.io/gitea/modules/label"
+	"code.gitea.io/gitea/modules/options"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/util"
 )
 
 type OptionFile struct {

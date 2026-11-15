@@ -7,14 +7,14 @@ import (
 	"errors"
 	"net/http"
 
-	issues_model "branchspire/models/issues"
-	user_model "branchspire/models/user"
-	api "branchspire/modules/structs"
-	"branchspire/modules/web"
-	"branchspire/routers/api/v1/utils"
-	"branchspire/services/context"
-	"branchspire/services/convert"
-	issue_service "branchspire/services/issue"
+	issues_model "code.gitea.io/gitea/models/issues"
+	user_model "code.gitea.io/gitea/models/user"
+	api "code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/modules/web"
+	"code.gitea.io/gitea/routers/api/v1/utils"
+	"code.gitea.io/gitea/services/context"
+	"code.gitea.io/gitea/services/convert"
+	issue_service "code.gitea.io/gitea/services/issue"
 )
 
 // GetIssueCommentReactions list reactions of a comment from an issue

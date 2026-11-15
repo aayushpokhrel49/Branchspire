@@ -7,7 +7,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/util"
 )
 
 type FileHelper struct {

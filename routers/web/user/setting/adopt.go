@@ -4,12 +4,12 @@
 package setting
 
 import (
-	repo_model "branchspire/models/repo"
-	"branchspire/modules/git"
-	"branchspire/modules/git/gitrepo"
-	"branchspire/modules/setting"
-	"branchspire/services/context"
-	repo_service "branchspire/services/repository"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/git/gitrepo"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/services/context"
+	repo_service "code.gitea.io/gitea/services/repository"
 )
 
 // AdoptOrDeleteRepository adopts or deletes a repository

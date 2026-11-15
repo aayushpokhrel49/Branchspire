@@ -9,9 +9,9 @@ import (
 	"strings"
 	"time"
 
-	"branchspire/modules/glob"
-	"branchspire/modules/log"
-	"branchspire/modules/structs"
+	"code.gitea.io/gitea/modules/glob"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/structs"
 )
 
 // enumerates all the types of captchas

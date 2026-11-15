@@ -6,12 +6,12 @@ package mailer
 import (
 	"context"
 
-	activities_model "branchspire/models/activities"
-	issues_model "branchspire/models/issues"
-	user_model "branchspire/models/user"
-	"branchspire/modules/container"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
+	activities_model "code.gitea.io/gitea/models/activities"
+	issues_model "code.gitea.io/gitea/models/issues"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/container"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
 )
 
 // MailParticipantsComment sends new comment emails to repository watchers and mentioned people.

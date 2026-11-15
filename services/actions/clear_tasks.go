@@ -9,17 +9,17 @@ import (
 	"slices"
 	"time"
 
-	actions_model "branchspire/models/actions"
-	"branchspire/models/db"
-	repo_model "branchspire/models/repo"
-	unit_model "branchspire/models/unit"
-	"branchspire/modules/actions"
-	"branchspire/modules/git"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
-	"branchspire/modules/timeutil"
-	"branchspire/modules/util"
-	webhook_module "branchspire/modules/webhook"
+	actions_model "code.gitea.io/gitea/models/actions"
+	"code.gitea.io/gitea/models/db"
+	repo_model "code.gitea.io/gitea/models/repo"
+	unit_model "code.gitea.io/gitea/models/unit"
+	"code.gitea.io/gitea/modules/actions"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/timeutil"
+	"code.gitea.io/gitea/modules/util"
+	webhook_module "code.gitea.io/gitea/modules/webhook"
 )
 
 // StopZombieTasks stops tasks in running/cancelling status that haven't been updated for a long time

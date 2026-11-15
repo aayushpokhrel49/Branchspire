@@ -9,12 +9,12 @@ import (
 	"net/http"
 	"reflect"
 
-	issues_model "branchspire/models/issues"
-	api "branchspire/modules/structs"
-	"branchspire/modules/web"
-	"branchspire/services/context"
-	"branchspire/services/convert"
-	issue_service "branchspire/services/issue"
+	issues_model "code.gitea.io/gitea/models/issues"
+	api "code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/modules/web"
+	"code.gitea.io/gitea/services/context"
+	"code.gitea.io/gitea/services/convert"
+	issue_service "code.gitea.io/gitea/services/issue"
 )
 
 // ListIssueLabels list all the labels of an issue

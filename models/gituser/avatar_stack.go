@@ -6,10 +6,10 @@ package gituser
 import (
 	"context"
 
-	"branchspire/models/user"
-	"branchspire/modules/container"
-	"branchspire/modules/git"
-	"branchspire/modules/log"
+	"code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/container"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/log"
 )
 
 // AvatarStackData is the view-model for the AvatarStack render helpers. Participants[0] is

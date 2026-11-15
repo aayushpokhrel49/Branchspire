@@ -15,13 +15,13 @@ import (
 	"strings"
 	"time"
 
-	"branchspire/modules/htmlutil"
-	"branchspire/modules/markup/common"
-	"branchspire/modules/markup/internal"
-	"branchspire/modules/public"
-	"branchspire/modules/setting"
-	"branchspire/modules/typesniffer"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/htmlutil"
+	"code.gitea.io/gitea/modules/markup/common"
+	"code.gitea.io/gitea/modules/markup/internal"
+	"code.gitea.io/gitea/modules/public"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/typesniffer"
+	"code.gitea.io/gitea/modules/util"
 
 	"golang.org/x/sync/errgroup"
 )

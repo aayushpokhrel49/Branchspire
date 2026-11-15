@@ -7,11 +7,11 @@ import (
 	"context"
 	"fmt"
 
+	actions_model "code.gitea.io/gitea/models/actions"
+	"code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/modules/actions/jobparser"
+	"code.gitea.io/gitea/modules/log"
 	"gitea.dev/actionslib/pkg/expreval"
-	actions_model "branchspire/models/actions"
-	"branchspire/models/db"
-	"branchspire/modules/actions/jobparser"
-	"branchspire/modules/log"
 )
 
 // CancelRun cancels a run's cancellable jobs and returns the run's post-cancellation state.

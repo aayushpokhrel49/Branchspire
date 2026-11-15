@@ -6,8 +6,8 @@ package v1_16
 import (
 	"context"
 
-	"branchspire/modelmigration/base"
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modelmigration/base"
+	"code.gitea.io/gitea/modules/setting"
 )
 
 func AlterIssueAndCommentTextFieldsToLongText(_ context.Context, x base.EngineMigration) error {

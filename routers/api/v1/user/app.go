@@ -10,16 +10,16 @@ import (
 	"strconv"
 	"strings"
 
-	audit_model "branchspire/models/audit"
-	auth_model "branchspire/models/auth"
-	"branchspire/models/db"
-	api "branchspire/modules/structs"
-	"branchspire/modules/web"
-	"branchspire/routers/api/v1/utils"
-	"branchspire/services/audit"
-	"branchspire/services/context"
-	"branchspire/services/convert"
-	"branchspire/services/forms"
+	audit_model "code.gitea.io/gitea/models/audit"
+	auth_model "code.gitea.io/gitea/models/auth"
+	"code.gitea.io/gitea/models/db"
+	api "code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/modules/web"
+	"code.gitea.io/gitea/routers/api/v1/utils"
+	"code.gitea.io/gitea/services/audit"
+	"code.gitea.io/gitea/services/context"
+	"code.gitea.io/gitea/services/convert"
+	"code.gitea.io/gitea/services/forms"
 )
 
 // ListAccessTokens list all the access tokens

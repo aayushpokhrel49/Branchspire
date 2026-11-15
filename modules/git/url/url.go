@@ -10,9 +10,9 @@ import (
 	stdurl "net/url"
 	"strings"
 
-	"branchspire/modules/httplib"
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/httplib"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/util"
 )
 
 // ErrWrongURLFormat represents an error with wrong url format

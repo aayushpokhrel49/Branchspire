@@ -6,7 +6,7 @@ package actions
 import (
 	"context"
 
-	"branchspire/models/db"
+	"code.gitea.io/gitea/models/db"
 )
 
 // ActionTaskOutput represents an output of ActionTask.

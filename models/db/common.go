@@ -6,8 +6,8 @@ package db
 import (
 	"strings"
 
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/util"
 
 	"xorm.io/builder"
 )

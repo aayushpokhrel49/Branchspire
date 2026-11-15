@@ -7,9 +7,9 @@ import (
 	"context"
 	"fmt"
 
-	git_model "branchspire/models/git"
-	repo_model "branchspire/models/repo"
-	"branchspire/modules/git"
+	git_model "code.gitea.io/gitea/models/git"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/modules/git"
 )
 
 // UpdateRepoSize updates the repository size, calculating it using getDirectorySize

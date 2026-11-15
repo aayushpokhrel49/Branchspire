@@ -8,14 +8,14 @@ import (
 	"path"
 	"testing"
 
-	activities_model "branchspire/models/activities"
-	"branchspire/models/db"
-	issue_model "branchspire/models/issues"
-	repo_model "branchspire/models/repo"
-	"branchspire/models/unittest"
-	user_model "branchspire/models/user"
-	"branchspire/modules/setting"
-	"branchspire/modules/test"
+	activities_model "code.gitea.io/gitea/models/activities"
+	"code.gitea.io/gitea/models/db"
+	issue_model "code.gitea.io/gitea/models/issues"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/models/unittest"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/test"
 
 	"github.com/stretchr/testify/assert"
 )

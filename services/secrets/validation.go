@@ -8,7 +8,7 @@ import (
 	"strings"
 	"sync"
 
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/util"
 )
 
 // https://docs.github.com/en/actions/learn-github-actions/variables#naming-conventions-for-configuration-variables

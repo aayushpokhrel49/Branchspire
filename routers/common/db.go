@@ -8,13 +8,13 @@ import (
 	"errors"
 	"time"
 
-	"branchspire/modelmigration"
-	"branchspire/models/db"
-	system_model "branchspire/models/system"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
-	"branchspire/modules/setting/config"
-	"branchspire/services/versioned_migration"
+	"code.gitea.io/gitea/modelmigration"
+	"code.gitea.io/gitea/models/db"
+	system_model "code.gitea.io/gitea/models/system"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/setting/config"
+	"code.gitea.io/gitea/services/versioned_migration"
 )
 
 // InitDBEngine In case of problems connecting to DB, retry connection. Eg, PGSQL in Docker Container on Synology

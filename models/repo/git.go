@@ -6,7 +6,7 @@ package repo
 import (
 	"context"
 
-	"branchspire/models/db"
+	"code.gitea.io/gitea/models/db"
 )
 
 // MergeStyle represents the approach to merge commits into base branch.

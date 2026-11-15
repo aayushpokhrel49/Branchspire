@@ -24,10 +24,10 @@ import (
 	"strings"
 	"time"
 
-	user_model "branchspire/models/user"
-	chef_module "branchspire/modules/packages/chef"
-	"branchspire/modules/util"
-	"branchspire/services/auth"
+	user_model "code.gitea.io/gitea/models/user"
+	chef_module "code.gitea.io/gitea/modules/packages/chef"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/services/auth"
 )
 
 const (

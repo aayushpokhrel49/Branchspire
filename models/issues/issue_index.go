@@ -6,7 +6,7 @@ package issues
 import (
 	"context"
 
-	"branchspire/models/db"
+	"code.gitea.io/gitea/models/db"
 )
 
 // RecalculateIssueIndexForRepo create issue_index for repo if not exist and

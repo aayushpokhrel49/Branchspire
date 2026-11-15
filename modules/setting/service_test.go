@@ -6,9 +6,9 @@ package setting
 import (
 	"testing"
 
-	"branchspire/modules/glob"
-	"branchspire/modules/structs"
-	"branchspire/modules/test"
+	"code.gitea.io/gitea/modules/glob"
+	"code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/modules/test"
 
 	"github.com/stretchr/testify/assert"
 )

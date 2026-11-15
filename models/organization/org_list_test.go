@@ -6,11 +6,11 @@ package organization_test
 import (
 	"testing"
 
-	"branchspire/models/db"
-	"branchspire/models/organization"
-	"branchspire/models/unittest"
-	user_model "branchspire/models/user"
-	"branchspire/modules/structs"
+	"code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/models/organization"
+	"code.gitea.io/gitea/models/unittest"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/structs"
 
 	"github.com/stretchr/testify/assert"
 )

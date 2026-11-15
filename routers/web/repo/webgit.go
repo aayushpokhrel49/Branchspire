@@ -4,12 +4,12 @@
 package repo
 
 import (
-	user_model "branchspire/models/user"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
-	"branchspire/services/context"
-	files_service "branchspire/services/repository/files"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/services/context"
+	files_service "code.gitea.io/gitea/services/repository/files"
 )
 
 func WebGitOperationCommonData(ctx *context.Context) {

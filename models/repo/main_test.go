@@ -6,14 +6,14 @@ package repo_test
 import (
 	"testing"
 
-	"branchspire/models/unittest"
+	"code.gitea.io/gitea/models/unittest"
 
-	_ "branchspire/models" // register table model
-	_ "branchspire/models/actions"
-	_ "branchspire/models/activities"
-	_ "branchspire/models/perm/access" // register table model
-	_ "branchspire/models/repo"        // register table model
-	_ "branchspire/models/user"        // register table model
+	_ "code.gitea.io/gitea/models" // register table model
+	_ "code.gitea.io/gitea/models/actions"
+	_ "code.gitea.io/gitea/models/activities"
+	_ "code.gitea.io/gitea/models/perm/access" // register table model
+	_ "code.gitea.io/gitea/models/repo"        // register table model
+	_ "code.gitea.io/gitea/models/user"        // register table model
 )
 
 func TestMain(m *testing.M) {

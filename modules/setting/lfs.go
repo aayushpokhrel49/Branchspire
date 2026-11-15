@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"time"
 
-	"branchspire/modules/generate"
+	"code.gitea.io/gitea/modules/generate"
 )
 
 // LFS represents the server-side configuration for Git LFS.

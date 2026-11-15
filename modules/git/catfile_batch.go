@@ -8,8 +8,8 @@ import (
 	"io"
 	"os"
 
-	"branchspire/modules/git/gitrepo"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/git/gitrepo"
+	"code.gitea.io/gitea/modules/util"
 )
 
 type BufferedReader interface {

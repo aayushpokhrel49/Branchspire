@@ -7,9 +7,9 @@ import (
 	"net/http"
 	"strings"
 
-	repo_model "branchspire/models/repo"
-	"branchspire/modules/log"
-	"branchspire/services/context"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/services/context"
 )
 
 // TopicsPost response for creating repository

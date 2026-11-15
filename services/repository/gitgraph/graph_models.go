@@ -10,16 +10,16 @@ import (
 	"strings"
 	"time"
 
-	asymkey_model "branchspire/models/asymkey"
-	"branchspire/models/db"
-	git_model "branchspire/models/git"
-	"branchspire/models/gituser"
-	repo_model "branchspire/models/repo"
-	user_model "branchspire/models/user"
-	"branchspire/modules/container"
-	"branchspire/modules/git"
-	"branchspire/modules/log"
-	asymkey_service "branchspire/services/asymkey"
+	asymkey_model "code.gitea.io/gitea/models/asymkey"
+	"code.gitea.io/gitea/models/db"
+	git_model "code.gitea.io/gitea/models/git"
+	"code.gitea.io/gitea/models/gituser"
+	repo_model "code.gitea.io/gitea/models/repo"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/container"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/log"
+	asymkey_service "code.gitea.io/gitea/services/asymkey"
 )
 
 // NewGraph creates a basic graph

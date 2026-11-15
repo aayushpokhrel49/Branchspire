@@ -4,7 +4,7 @@
 package setting
 
 import (
-	"branchspire/modules/log"
+	"code.gitea.io/gitea/modules/log"
 
 	"github.com/42wim/httpsig"
 )

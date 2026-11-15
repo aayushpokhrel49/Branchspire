@@ -6,7 +6,7 @@ package v1_10
 import (
 	"context"
 
-	"branchspire/modelmigration/base"
+	"code.gitea.io/gitea/modelmigration/base"
 )
 
 func AddOriginalAuthorOnMigratedReleases(_ context.Context, x base.EngineMigration) error {

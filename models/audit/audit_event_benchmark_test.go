@@ -7,8 +7,8 @@ import (
 	"context"
 	"testing"
 
-	"branchspire/models/unittest"
-	"branchspire/modules/timeutil"
+	"code.gitea.io/gitea/models/unittest"
+	"code.gitea.io/gitea/modules/timeutil"
 )
 
 // BenchmarkInsertEvent measures the synchronous database cost added when audit

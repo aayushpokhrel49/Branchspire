@@ -6,8 +6,8 @@ package terraform
 import (
 	"io"
 
-	"branchspire/modules/json"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/json"
+	"code.gitea.io/gitea/modules/util"
 )
 
 // Note: this is a subset of the Terraform state file format as the full one has two forms.

@@ -10,8 +10,8 @@ import (
 	"regexp"
 	"strings"
 
-	"branchspire/modules/util"
-	"branchspire/modules/validation"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/modules/validation"
 
 	"github.com/hashicorp/go-version"
 	"go.yaml.in/yaml/v4"

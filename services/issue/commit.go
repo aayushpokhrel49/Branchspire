@@ -15,16 +15,16 @@ import (
 	"strings"
 	"time"
 
-	issues_model "branchspire/models/issues"
-	access_model "branchspire/models/perm/access"
-	repo_model "branchspire/models/repo"
-	"branchspire/models/unit"
-	user_model "branchspire/models/user"
-	"branchspire/modules/container"
-	"branchspire/modules/git"
-	"branchspire/modules/log"
-	"branchspire/modules/references"
-	"branchspire/modules/repository"
+	issues_model "code.gitea.io/gitea/models/issues"
+	access_model "code.gitea.io/gitea/models/perm/access"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/models/unit"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/container"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/references"
+	"code.gitea.io/gitea/modules/repository"
 )
 
 const (

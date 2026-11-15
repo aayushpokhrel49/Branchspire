@@ -7,8 +7,8 @@ import (
 	"context"
 	"fmt"
 
-	"branchspire/modelmigration/base"
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modelmigration/base"
+	"code.gitea.io/gitea/modules/setting"
 )
 
 func IncreaseLanguageField(_ context.Context, x base.EngineMigration) error {

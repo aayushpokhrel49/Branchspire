@@ -8,10 +8,10 @@ import (
 	"net/http"
 	"net/url"
 
-	api "branchspire/modules/structs"
-	"branchspire/modules/util"
-	"branchspire/routers/api/v1/utils"
-	"branchspire/services/context"
+	api "code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/routers/api/v1/utils"
+	"code.gitea.io/gitea/services/context"
 )
 
 // GetGitAllRefs get ref or a list of all the refs of a repository

@@ -6,7 +6,7 @@ package setting
 import (
 	"net/url"
 
-	"branchspire/modules/log"
+	"code.gitea.io/gitea/modules/log"
 )
 
 // Proxy settings

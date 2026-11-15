@@ -7,11 +7,11 @@ import (
 	"context"
 	"fmt"
 
-	"branchspire/models/avatars"
-	"branchspire/models/db"
-	"branchspire/modules/log"
-	"branchspire/modules/timeutil"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/models/avatars"
+	"code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/timeutil"
+	"code.gitea.io/gitea/modules/util"
 
 	"xorm.io/builder"
 )

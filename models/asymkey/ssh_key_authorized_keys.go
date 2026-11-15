@@ -14,11 +14,11 @@ import (
 	"strings"
 	"sync"
 
-	"branchspire/models/db"
-	"branchspire/modules/consts"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/modules/consts"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/util"
 
 	"golang.org/x/crypto/ssh"
 	"xorm.io/builder"

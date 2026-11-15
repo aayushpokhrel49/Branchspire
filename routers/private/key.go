@@ -6,9 +6,9 @@ package private
 import (
 	"net/http"
 
-	asymkey_model "branchspire/models/asymkey"
-	deploykey_model "branchspire/models/deploykey"
-	"branchspire/services/context"
+	asymkey_model "code.gitea.io/gitea/models/asymkey"
+	deploykey_model "code.gitea.io/gitea/models/deploykey"
+	"code.gitea.io/gitea/services/context"
 )
 
 // UpdatePublicKeyInRepo update public key and deploy key updates

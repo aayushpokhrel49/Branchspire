@@ -12,14 +12,14 @@ import (
 	"strconv"
 	"strings"
 
-	"branchspire/modules/httplib"
-	"branchspire/modules/json"
-	"branchspire/modules/log"
-	"branchspire/modules/reqctx"
-	"branchspire/modules/setting"
-	"branchspire/modules/translation"
-	"branchspire/modules/util"
-	"branchspire/modules/web/middleware"
+	"code.gitea.io/gitea/modules/httplib"
+	"code.gitea.io/gitea/modules/json"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/reqctx"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/translation"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/modules/web/middleware"
 )
 
 type BaseContextKeyType struct{}

@@ -9,8 +9,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/util"
 )
 
 // SyncFile synchronizes the two files. This is skipped if both files

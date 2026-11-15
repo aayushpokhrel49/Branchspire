@@ -8,10 +8,10 @@ import (
 	"testing"
 	"time"
 
-	actions_model "branchspire/models/actions"
-	"branchspire/models/db"
-	"branchspire/modules/timeutil"
-	"branchspire/tests"
+	actions_model "code.gitea.io/gitea/models/actions"
+	"code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/modules/timeutil"
+	"code.gitea.io/gitea/tests"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

@@ -7,8 +7,8 @@ import (
 	"context"
 	"errors"
 
-	"branchspire/modelmigration/base"
-	"branchspire/modules/timeutil"
+	"code.gitea.io/gitea/modelmigration/base"
+	"code.gitea.io/gitea/modules/timeutil"
 )
 
 func AddBranchTable(ctx context.Context, x base.EngineMigration) error {

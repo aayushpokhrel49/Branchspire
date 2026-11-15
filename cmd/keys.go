@@ -9,8 +9,8 @@ import (
 	"fmt"
 	"strings"
 
-	"branchspire/modules/log"
-	"branchspire/modules/private"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/private"
 
 	"github.com/urfave/cli/v3"
 )

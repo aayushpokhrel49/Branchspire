@@ -9,10 +9,10 @@ import (
 	"strings"
 	"testing"
 
-	"branchspire/modules/htmlutil"
-	"branchspire/modules/markup"
-	"branchspire/modules/markup/markdown"
-	testModule "branchspire/modules/test"
+	"code.gitea.io/gitea/modules/htmlutil"
+	"code.gitea.io/gitea/modules/markup"
+	"code.gitea.io/gitea/modules/markup/markdown"
+	testModule "code.gitea.io/gitea/modules/test"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

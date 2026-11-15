@@ -7,9 +7,9 @@ import (
 	"html/template"
 	"testing"
 
-	issues_model "branchspire/models/issues"
-	"branchspire/modules/reqctx"
-	"branchspire/modules/translation"
+	issues_model "code.gitea.io/gitea/models/issues"
+	"code.gitea.io/gitea/modules/reqctx"
+	"code.gitea.io/gitea/modules/translation"
 
 	"github.com/stretchr/testify/assert"
 )

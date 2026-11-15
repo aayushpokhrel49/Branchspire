@@ -8,7 +8,7 @@ import (
 	"sync"
 	"unicode"
 
-	actions_model "branchspire/models/actions"
+	actions_model "code.gitea.io/gitea/models/actions"
 )
 
 // The Badge layout: |offset|label|message|

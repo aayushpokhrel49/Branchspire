@@ -7,7 +7,7 @@ import (
 	"encoding/base64"
 	"strings"
 
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/util"
 )
 
 type BasicAuth struct {

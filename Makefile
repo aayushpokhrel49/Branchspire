@@ -103,8 +103,8 @@ endif
 LDFLAGS := $(LDFLAGS) -X "main.Version=$(GITEA_VERSION)" -X "main.Tags=$(TAGS)"
 RELEASE_ENV = GO="$(GO)" TAGS="$(TAGS)" LDFLAGS="$(LDFLAGS)" DIST="$(DIST)" VERSION="$(VERSION)"
 
-GO_TEST_PACKAGES ?= $(filter-out $(shell $(GO) list branchspire/modelmigration/...) branchspire/tests/integration/migration-test branchspire/tests branchspire/tests/integration,$(shell $(GO) list ./... | grep -v /vendor/))
-MIGRATE_TEST_PACKAGES ?= $(shell $(GO) list branchspire/modelmigration/...)
+GO_TEST_PACKAGES ?= $(filter-out $(shell $(GO) list code.gitea.io/gitea/modelmigration/...) code.gitea.io/gitea/tests/integration/migration-test code.gitea.io/gitea/tests code.gitea.io/gitea/tests/integration,$(shell $(GO) list ./... | grep -v /vendor/))
+MIGRATE_TEST_PACKAGES ?= $(shell $(GO) list code.gitea.io/gitea/modelmigration/...)
 
 FRONTEND_SOURCES := $(shell find web_src/js web_src/css -type f)
 FRONTEND_CONFIGS := vite.config.ts tailwind.config.ts
@@ -445,23 +445,23 @@ test-integration: $(EXECUTABLE)
 	@# Use a compiled binary: testlogger forwards gitea logs to t.Log, so `go test -v`
 	@# would flood output per passing test. testcache can't help these tests anyway —
 	@# they mutate the work directory, so cache inputs change between runs.
-	$(GO) test $(GOTEST_FLAGS) -tags '$(TAGS)' -c branchspire/tests/integration -o ./test-integration-$(GITEA_TEST_DATABASE).test
+	$(GO) test $(GOTEST_FLAGS) -tags '$(TAGS)' -c code.gitea.io/gitea/tests/integration -o ./test-integration-$(GITEA_TEST_DATABASE).test
 	./tools/test-integration.sh ./test-integration-$(GITEA_TEST_DATABASE).test
 
 .PHONY: test-integration-compile
 test-integration-compile:
-	$(GO) test $(GOTEST_FLAGS) -tags '$(TAGS)' -c -o /dev/null branchspire/tests/integration
+	$(GO) test $(GOTEST_FLAGS) -tags '$(TAGS)' -c -o /dev/null code.gitea.io/gitea/tests/integration
 
 .PHONY: test-integration\#%
 test-integration\#%: $(EXECUTABLE)
-	$(GO) test $(GOTEST_FLAGS) -tags '$(TAGS)' -run '$(subst .,/,$*)' branchspire/tests/integration
+	$(GO) test $(GOTEST_FLAGS) -tags '$(TAGS)' -run '$(subst .,/,$*)' code.gitea.io/gitea/tests/integration
 
 .PHONY: test-migration
 test-migration: migrations.integration.test migrations.individual.test
 
 .PHONY: migrations.integration.test
 migrations.integration.test:
-	$(GO) test $(GOTEST_FLAGS) -tags '$(TAGS)' branchspire/tests/integration/migration-test
+	$(GO) test $(GOTEST_FLAGS) -tags '$(TAGS)' code.gitea.io/gitea/tests/integration/migration-test
 
 .PHONY: migrations.individual.test
 migrations.individual.test:
@@ -470,7 +470,7 @@ migrations.individual.test:
 
 .PHONY: migrations.individual.test\#%
 migrations.individual.test\#%:
-	$(GO) test $(GOTEST_FLAGS) -tags '$(TAGS)' branchspire/modelmigration/$*
+	$(GO) test $(GOTEST_FLAGS) -tags '$(TAGS)' code.gitea.io/gitea/modelmigration/$*
 
 .PHONY: playwright
 playwright: deps-frontend

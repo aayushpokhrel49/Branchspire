@@ -6,11 +6,11 @@ package issues
 import (
 	"strings"
 
-	"branchspire/models/db"
-	issues_model "branchspire/models/issues"
-	"branchspire/modules/indexer/issues/internal"
-	"branchspire/modules/optional"
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/models/db"
+	issues_model "code.gitea.io/gitea/models/issues"
+	"code.gitea.io/gitea/modules/indexer/issues/internal"
+	"code.gitea.io/gitea/modules/optional"
+	"code.gitea.io/gitea/modules/setting"
 )
 
 func ToSearchOptions(keyword string, opts *issues_model.IssuesOptions) *SearchOptions {

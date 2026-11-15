@@ -13,11 +13,11 @@ import (
 	"encoding/hex"
 	"fmt"
 
-	"branchspire/models/db"
-	"branchspire/modules/secret"
-	"branchspire/modules/setting"
-	"branchspire/modules/timeutil"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/modules/secret"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/timeutil"
+	"code.gitea.io/gitea/modules/util"
 
 	"github.com/pquerna/otp/totp"
 	"golang.org/x/crypto/pbkdf2"

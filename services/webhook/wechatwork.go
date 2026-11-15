@@ -9,10 +9,10 @@ import (
 	"net/http"
 	"strings"
 
-	webhook_model "branchspire/models/webhook"
-	"branchspire/modules/git"
-	api "branchspire/modules/structs"
-	webhook_module "branchspire/modules/webhook"
+	webhook_model "code.gitea.io/gitea/models/webhook"
+	"code.gitea.io/gitea/modules/git"
+	api "code.gitea.io/gitea/modules/structs"
+	webhook_module "code.gitea.io/gitea/modules/webhook"
 )
 
 type (

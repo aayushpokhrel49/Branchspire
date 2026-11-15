@@ -4,10 +4,10 @@
 package repo
 
 import (
-	issues_model "branchspire/models/issues"
-	"branchspire/modules/web"
-	"branchspire/services/context"
-	"branchspire/services/forms"
+	issues_model "code.gitea.io/gitea/models/issues"
+	"code.gitea.io/gitea/modules/web"
+	"code.gitea.io/gitea/services/context"
+	"code.gitea.io/gitea/services/forms"
 )
 
 // LockIssue locks an issue. This would limit commenting abilities to

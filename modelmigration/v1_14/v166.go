@@ -8,7 +8,7 @@ import (
 	"crypto/sha256"
 	"encoding/hex"
 
-	"branchspire/modelmigration/base"
+	"code.gitea.io/gitea/modelmigration/base"
 
 	"golang.org/x/crypto/argon2"
 	"golang.org/x/crypto/bcrypt"

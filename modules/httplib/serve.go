@@ -15,12 +15,12 @@ import (
 	"strings"
 	"time"
 
-	charsetModule "branchspire/modules/charset"
-	"branchspire/modules/container"
-	"branchspire/modules/httpcache"
-	"branchspire/modules/setting"
-	"branchspire/modules/typesniffer"
-	"branchspire/modules/util"
+	charsetModule "code.gitea.io/gitea/modules/charset"
+	"code.gitea.io/gitea/modules/container"
+	"code.gitea.io/gitea/modules/httpcache"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/typesniffer"
+	"code.gitea.io/gitea/modules/util"
 
 	"github.com/klauspost/compress/gzhttp"
 )

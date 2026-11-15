@@ -6,13 +6,13 @@ package websocket
 import (
 	"context"
 
-	"branchspire/models/db"
-	issues_model "branchspire/models/issues"
-	user_model "branchspire/models/user"
-	"branchspire/modules/log"
-	"branchspire/modules/util"
-	"branchspire/services/convert"
-	"branchspire/services/pubsub"
+	"code.gitea.io/gitea/models/db"
+	issues_model "code.gitea.io/gitea/models/issues"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/services/convert"
+	"code.gitea.io/gitea/services/pubsub"
 )
 
 func (n *wsNotifier) StopwatchChanged(ctx context.Context, user *user_model.User) {

@@ -11,10 +11,10 @@ import (
 	"net/url"
 	"strings"
 
-	"branchspire/modules/json"
-	"branchspire/modules/proxy"
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/json"
+	"code.gitea.io/gitea/modules/proxy"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/util"
 )
 
 // httpClient returns an HTTP client that honors BranchSpire's proxy configuration.

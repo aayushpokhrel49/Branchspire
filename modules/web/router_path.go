@@ -10,8 +10,8 @@ import (
 	"slices"
 	"strings"
 
-	"branchspire/modules/container"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/container"
+	"code.gitea.io/gitea/modules/util"
 
 	"github.com/go-chi/chi/v5"
 )

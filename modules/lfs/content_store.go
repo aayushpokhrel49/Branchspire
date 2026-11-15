@@ -11,8 +11,8 @@ import (
 	"io"
 	"os"
 
-	"branchspire/modules/log"
-	"branchspire/modules/storage"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/storage"
 )
 
 var (

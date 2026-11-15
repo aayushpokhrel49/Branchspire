@@ -12,9 +12,9 @@ import (
 	"os"
 	"strings"
 
-	"branchspire/modules/markup"
-	"branchspire/modules/process"
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modules/markup"
+	"code.gitea.io/gitea/modules/process"
+	"code.gitea.io/gitea/modules/setting"
 
 	"github.com/kballard/go-shellquote"
 )

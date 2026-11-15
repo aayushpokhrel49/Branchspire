@@ -12,7 +12,7 @@ import (
 	"strconv"
 	"time"
 
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modules/setting"
 )
 
 // Shutdown calls the internal shutdown function

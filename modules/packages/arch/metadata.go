@@ -13,9 +13,9 @@ import (
 	"strconv"
 	"strings"
 
-	"branchspire/modules/packages"
-	"branchspire/modules/util"
-	"branchspire/modules/validation"
+	"code.gitea.io/gitea/modules/packages"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/modules/validation"
 
 	"github.com/klauspost/compress/zstd"
 	"github.com/ulikunitz/xz"

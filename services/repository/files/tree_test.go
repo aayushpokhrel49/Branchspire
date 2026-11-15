@@ -7,11 +7,11 @@ import (
 	"html/template"
 	"testing"
 
-	"branchspire/models/unittest"
-	"branchspire/modules/fileicon"
-	"branchspire/modules/git"
-	api "branchspire/modules/structs"
-	"branchspire/services/contexttest"
+	"code.gitea.io/gitea/models/unittest"
+	"code.gitea.io/gitea/modules/fileicon"
+	"code.gitea.io/gitea/modules/git"
+	api "code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/services/contexttest"
 
 	"github.com/stretchr/testify/assert"
 )

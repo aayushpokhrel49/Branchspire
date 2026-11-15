@@ -6,13 +6,13 @@ package project
 import (
 	"errors"
 
-	issues_model "branchspire/models/issues"
-	project_model "branchspire/models/project"
-	"branchspire/modules/json"
-	"branchspire/modules/web"
-	"branchspire/services/context"
-	"branchspire/services/forms"
-	project_service "branchspire/services/projects"
+	issues_model "code.gitea.io/gitea/models/issues"
+	project_model "code.gitea.io/gitea/models/project"
+	"code.gitea.io/gitea/modules/json"
+	"code.gitea.io/gitea/modules/web"
+	"code.gitea.io/gitea/services/context"
+	"code.gitea.io/gitea/services/forms"
+	project_service "code.gitea.io/gitea/services/projects"
 )
 
 // findProject loads the "id" path param, scoped to whichever owner the route assigned:

@@ -11,13 +11,13 @@ import (
 	"path/filepath"
 	"strings"
 
-	"branchspire/modules/assetfs"
-	"branchspire/modules/glob"
-	"branchspire/modules/log"
-	"branchspire/modules/options"
-	"branchspire/modules/public"
-	"branchspire/modules/setting"
-	"branchspire/modules/templates"
+	"code.gitea.io/gitea/modules/assetfs"
+	"code.gitea.io/gitea/modules/glob"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/options"
+	"code.gitea.io/gitea/modules/public"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/templates"
 
 	"github.com/urfave/cli/v3"
 )

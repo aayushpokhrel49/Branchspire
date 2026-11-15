@@ -7,12 +7,12 @@ import (
 	"context"
 	"slices"
 
-	actions_model "branchspire/models/actions"
-	"branchspire/models/db"
-	repo_model "branchspire/models/repo"
-	"branchspire/models/unit"
-	"branchspire/modules/log"
-	actions_service "branchspire/services/actions"
+	actions_model "code.gitea.io/gitea/models/actions"
+	"code.gitea.io/gitea/models/db"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/models/unit"
+	"code.gitea.io/gitea/modules/log"
+	actions_service "code.gitea.io/gitea/services/actions"
 )
 
 // UpdateRepositoryUnits updates a repository's units

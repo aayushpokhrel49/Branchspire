@@ -4,10 +4,10 @@
 package admin
 
 import (
-	api "branchspire/modules/structs"
-	"branchspire/modules/web"
-	"branchspire/routers/api/v1/repo"
-	"branchspire/services/context"
+	api "code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/modules/web"
+	"code.gitea.io/gitea/routers/api/v1/repo"
+	"code.gitea.io/gitea/services/context"
 )
 
 // CreateRepo api for creating a repository

@@ -7,8 +7,8 @@ import (
 	"context"
 	"strings"
 
-	"branchspire/modelmigration/base"
-	"branchspire/modules/json"
+	"code.gitea.io/gitea/modelmigration/base"
+	"code.gitea.io/gitea/modules/json"
 )
 
 func ChangeContainerMetadataMultiArch(_ context.Context, x base.EngineMigration) error {

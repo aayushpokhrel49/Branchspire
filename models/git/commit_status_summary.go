@@ -6,9 +6,9 @@ package git
 import (
 	"context"
 
-	"branchspire/models/db"
-	"branchspire/modules/commitstatus"
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/modules/commitstatus"
+	"code.gitea.io/gitea/modules/setting"
 
 	"xorm.io/builder"
 )

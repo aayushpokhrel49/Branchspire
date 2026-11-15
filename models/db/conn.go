@@ -13,8 +13,8 @@ import (
 	"slices"
 	"strings"
 
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/util"
 )
 
 type ConnOptions struct {

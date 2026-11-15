@@ -10,9 +10,9 @@ import (
 	"strings"
 	"sync"
 
-	gitea_html "branchspire/modules/htmlutil"
-	"branchspire/modules/log"
-	"branchspire/modules/public"
+	gitea_html "code.gitea.io/gitea/modules/htmlutil"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/public"
 )
 
 type svgIconItem struct {

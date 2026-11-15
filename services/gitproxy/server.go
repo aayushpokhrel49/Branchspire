@@ -24,11 +24,11 @@ import (
 	"strings"
 	"time"
 
-	"branchspire/modules/egress"
-	"branchspire/modules/egress/policy"
-	"branchspire/modules/git/gitcmd"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modules/egress"
+	"code.gitea.io/gitea/modules/egress/policy"
+	"code.gitea.io/gitea/modules/git/gitcmd"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
 
 	"github.com/Azure/go-ntlmssp"
 	"golang.org/x/net/proxy"

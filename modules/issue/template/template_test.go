@@ -7,8 +7,8 @@ import (
 	"net/url"
 	"testing"
 
-	"branchspire/modules/json"
-	api "branchspire/modules/structs"
+	"code.gitea.io/gitea/modules/json"
+	api "code.gitea.io/gitea/modules/structs"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

@@ -7,7 +7,7 @@ package migration
 import (
 	"context"
 
-	"branchspire/modules/structs"
+	"code.gitea.io/gitea/modules/structs"
 )
 
 // Downloader downloads the site repo information

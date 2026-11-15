@@ -6,11 +6,11 @@ package source
 import (
 	"testing"
 
-	"branchspire/models/organization"
-	"branchspire/models/unittest"
-	user_model "branchspire/models/user"
-	"branchspire/modules/container"
-	org_service "branchspire/services/org"
+	"code.gitea.io/gitea/models/organization"
+	"code.gitea.io/gitea/models/unittest"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/container"
+	org_service "code.gitea.io/gitea/services/org"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

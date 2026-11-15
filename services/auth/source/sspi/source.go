@@ -4,8 +4,8 @@
 package sspi
 
 import (
-	"branchspire/models/auth"
-	"branchspire/modules/json"
+	"code.gitea.io/gitea/models/auth"
+	"code.gitea.io/gitea/modules/json"
 )
 
 //   _________ ___________________.___

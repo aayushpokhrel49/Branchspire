@@ -9,15 +9,15 @@ import (
 	"os"
 	"testing"
 
+	actions_model "code.gitea.io/gitea/models/actions"
+	auth_model "code.gitea.io/gitea/models/auth"
+	"code.gitea.io/gitea/models/dbfs"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/models/unittest"
+	user_model "code.gitea.io/gitea/models/user"
+	actions_module "code.gitea.io/gitea/modules/actions"
+	"code.gitea.io/gitea/modules/storage"
 	runnerv1 "gitea.dev/actionslib/runner/v1"
-	actions_model "branchspire/models/actions"
-	auth_model "branchspire/models/auth"
-	"branchspire/models/dbfs"
-	repo_model "branchspire/models/repo"
-	"branchspire/models/unittest"
-	user_model "branchspire/models/user"
-	actions_module "branchspire/modules/actions"
-	"branchspire/modules/storage"
 
 	"connectrpc.com/connect"
 	"github.com/stretchr/testify/assert"
@@ -40,7 +40,7 @@ func TestActionsLogFinalizeWithoutRows(t *testing.T) {
 		runner := newMockRunner()
 		runner.registerAsRepoRunner(t, user2.Name, repo.Name, "mock-runner", []string{"ubuntu-latest"}, false)
 
-		const wfTreePath = ".branchspire/workflows/finalize-no-rows.yml"
+		const wfTreePath = ".code.gitea.io/gitea/workflows/finalize-no-rows.yml"
 		wfFileContent := fmt.Sprintf(`name: finalize-no-rows
 on:
   push:

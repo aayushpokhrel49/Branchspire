@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"strings"
 
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/util"
 )
 
 // ErrNotExist commit not exist error

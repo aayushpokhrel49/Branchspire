@@ -7,8 +7,8 @@ import (
 	"context"
 	"strings"
 
-	"branchspire/modules/private"
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modules/private"
+	"code.gitea.io/gitea/modules/setting"
 
 	"github.com/urfave/cli/v3"
 )

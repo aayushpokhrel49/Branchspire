@@ -4,8 +4,8 @@
 package oauth2
 
 import (
-	"branchspire/models/auth"
-	"branchspire/modules/json"
+	"code.gitea.io/gitea/models/auth"
+	"code.gitea.io/gitea/modules/json"
 )
 
 // Source holds configuration for the OAuth2 login source.

@@ -6,7 +6,7 @@ package v1_27
 import (
 	"testing"
 
-	"branchspire/modelmigration/migrationtest"
+	"code.gitea.io/gitea/modelmigration/migrationtest"
 
 	"github.com/stretchr/testify/require"
 )

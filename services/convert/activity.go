@@ -6,12 +6,12 @@ package convert
 import (
 	"context"
 
-	activities_model "branchspire/models/activities"
-	perm_model "branchspire/models/perm"
-	access_model "branchspire/models/perm/access"
-	user_model "branchspire/models/user"
-	"branchspire/modules/log"
-	api "branchspire/modules/structs"
+	activities_model "code.gitea.io/gitea/models/activities"
+	perm_model "code.gitea.io/gitea/models/perm"
+	access_model "code.gitea.io/gitea/models/perm/access"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/log"
+	api "code.gitea.io/gitea/modules/structs"
 )
 
 func ToActivity(ctx context.Context, ac *activities_model.Action, doer *user_model.User) *api.Activity {

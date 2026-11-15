@@ -11,12 +11,12 @@ import (
 	"strings"
 	"time"
 
-	repo_model "branchspire/models/repo"
-	"branchspire/modules/git"
-	"branchspire/modules/setting"
-	api "branchspire/modules/structs"
-	"branchspire/modules/util"
-	"branchspire/routers/api/v1/utils"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/setting"
+	api "code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/routers/api/v1/utils"
 )
 
 func GetContentsListFromTreePaths(ctx context.Context, repo *repo_model.Repository, gitRepo *git.Repository, refCommit *utils.RefCommit, treePaths []string) (files []*api.ContentsResponse) {

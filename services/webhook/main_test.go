@@ -6,11 +6,11 @@ package webhook
 import (
 	"testing"
 
-	"branchspire/models/unittest"
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/models/unittest"
+	"code.gitea.io/gitea/modules/setting"
 
-	_ "branchspire/models"
-	_ "branchspire/models/actions"
+	_ "code.gitea.io/gitea/models"
+	_ "code.gitea.io/gitea/models/actions"
 )
 
 func TestMain(m *testing.M) {

@@ -6,11 +6,11 @@ package v1_19
 import (
 	"testing"
 
-	"branchspire/modelmigration/migrationtest"
-	"branchspire/modules/json"
-	"branchspire/modules/secret"
-	"branchspire/modules/setting"
-	webhook_module "branchspire/modules/webhook"
+	"code.gitea.io/gitea/modelmigration/migrationtest"
+	"code.gitea.io/gitea/modules/json"
+	"code.gitea.io/gitea/modules/secret"
+	"code.gitea.io/gitea/modules/setting"
+	webhook_module "code.gitea.io/gitea/modules/webhook"
 
 	"github.com/stretchr/testify/assert"
 )

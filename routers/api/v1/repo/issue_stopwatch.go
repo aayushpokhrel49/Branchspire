@@ -6,11 +6,11 @@ package repo
 import (
 	"net/http"
 
-	issues_model "branchspire/models/issues"
-	"branchspire/routers/api/v1/utils"
-	"branchspire/services/context"
-	"branchspire/services/convert"
-	notify_service "branchspire/services/notify"
+	issues_model "code.gitea.io/gitea/models/issues"
+	"code.gitea.io/gitea/routers/api/v1/utils"
+	"code.gitea.io/gitea/services/context"
+	"code.gitea.io/gitea/services/convert"
+	notify_service "code.gitea.io/gitea/services/notify"
 )
 
 // StartIssueStopwatch creates a stopwatch for the given issue.

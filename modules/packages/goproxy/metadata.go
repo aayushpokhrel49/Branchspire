@@ -9,7 +9,7 @@ import (
 	"path"
 	"strings"
 
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/util"
 
 	"golang.org/x/mod/semver"
 )

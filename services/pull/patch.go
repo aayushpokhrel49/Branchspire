@@ -12,14 +12,14 @@ import (
 	"path/filepath"
 	"strings"
 
-	git_model "branchspire/models/git"
-	issues_model "branchspire/models/issues"
-	"branchspire/modules/git"
-	"branchspire/modules/git/gitcmd"
-	"branchspire/modules/glob"
-	"branchspire/modules/log"
-	"branchspire/modules/process"
-	"branchspire/modules/util"
+	git_model "code.gitea.io/gitea/models/git"
+	issues_model "code.gitea.io/gitea/models/issues"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/git/gitcmd"
+	"code.gitea.io/gitea/modules/glob"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/process"
+	"code.gitea.io/gitea/modules/util"
 )
 
 // DownloadDiffOrPatch will write the patch for the pr to the writer

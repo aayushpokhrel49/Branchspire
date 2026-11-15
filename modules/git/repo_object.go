@@ -8,7 +8,7 @@ import (
 	"context"
 	"strings"
 
-	"branchspire/modules/git/gitcmd"
+	"code.gitea.io/gitea/modules/git/gitcmd"
 )
 
 // MaxGitObjectSize is used to avoid OOM when reading a large git object.

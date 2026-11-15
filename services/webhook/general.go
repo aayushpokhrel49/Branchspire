@@ -9,13 +9,13 @@ import (
 	"net/url"
 	"strings"
 
-	user_model "branchspire/models/user"
-	webhook_model "branchspire/models/webhook"
-	"branchspire/modules/base"
-	"branchspire/modules/setting"
-	api "branchspire/modules/structs"
-	"branchspire/modules/util"
-	webhook_module "branchspire/modules/webhook"
+	user_model "code.gitea.io/gitea/models/user"
+	webhook_model "code.gitea.io/gitea/models/webhook"
+	"code.gitea.io/gitea/modules/base"
+	"code.gitea.io/gitea/modules/setting"
+	api "code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/modules/util"
+	webhook_module "code.gitea.io/gitea/modules/webhook"
 )
 
 type linkFormatter = func(string, string) string

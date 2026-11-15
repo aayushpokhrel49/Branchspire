@@ -6,7 +6,7 @@ package v28
 import (
 	"context"
 
-	"branchspire/modelmigration/base"
+	"code.gitea.io/gitea/modelmigration/base"
 )
 
 func RecreateEmailHashTable(_ context.Context, x base.EngineMigration) error {

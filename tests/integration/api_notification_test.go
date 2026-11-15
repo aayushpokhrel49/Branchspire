@@ -8,13 +8,13 @@ import (
 	"net/http"
 	"testing"
 
-	activities_model "branchspire/models/activities"
-	auth_model "branchspire/models/auth"
-	repo_model "branchspire/models/repo"
-	"branchspire/models/unittest"
-	user_model "branchspire/models/user"
-	api "branchspire/modules/structs"
-	"branchspire/tests"
+	activities_model "code.gitea.io/gitea/models/activities"
+	auth_model "code.gitea.io/gitea/models/auth"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/models/unittest"
+	user_model "code.gitea.io/gitea/models/user"
+	api "code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/tests"
 
 	"github.com/stretchr/testify/assert"
 )

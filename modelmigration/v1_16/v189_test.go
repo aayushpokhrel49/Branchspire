@@ -6,8 +6,8 @@ package v1_16
 import (
 	"testing"
 
-	"branchspire/modelmigration/migrationtest"
-	"branchspire/modules/json"
+	"code.gitea.io/gitea/modelmigration/migrationtest"
+	"code.gitea.io/gitea/modules/json"
 
 	"github.com/stretchr/testify/assert"
 )

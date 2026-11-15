@@ -6,11 +6,11 @@ package websocket
 import (
 	"context"
 
-	activities_model "branchspire/models/activities"
-	"branchspire/models/db"
-	"branchspire/modules/log"
-	notify_service "branchspire/services/notify"
-	"branchspire/services/pubsub"
+	activities_model "code.gitea.io/gitea/models/activities"
+	"code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/modules/log"
+	notify_service "code.gitea.io/gitea/services/notify"
+	"code.gitea.io/gitea/services/pubsub"
 )
 
 type notificationCountEventData struct {

@@ -10,8 +10,8 @@ import (
 	"sync"
 	"time"
 
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
 )
 
 // Manager is a manager for the queues created by "CreateXxxQueue" functions, these queues are called "managed queues".

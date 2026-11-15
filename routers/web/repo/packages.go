@@ -6,13 +6,13 @@ package repo
 import (
 	"net/http"
 
-	"branchspire/models/db"
-	"branchspire/models/packages"
-	"branchspire/models/unit"
-	"branchspire/modules/optional"
-	"branchspire/modules/setting"
-	"branchspire/modules/templates"
-	"branchspire/services/context"
+	"code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/models/packages"
+	"code.gitea.io/gitea/models/unit"
+	"code.gitea.io/gitea/modules/optional"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/templates"
+	"code.gitea.io/gitea/services/context"
 )
 
 const (

@@ -7,11 +7,11 @@ import (
 	"net/http"
 	"testing"
 
-	repo_model "branchspire/models/repo"
-	code_indexer "branchspire/modules/indexer/code"
-	"branchspire/modules/setting"
-	"branchspire/modules/test"
-	"branchspire/tests"
+	repo_model "code.gitea.io/gitea/models/repo"
+	code_indexer "code.gitea.io/gitea/modules/indexer/code"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/test"
+	"code.gitea.io/gitea/tests"
 
 	"github.com/PuerkitoBio/goquery"
 	"github.com/stretchr/testify/assert"

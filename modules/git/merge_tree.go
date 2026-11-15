@@ -8,8 +8,8 @@ import (
 	"context"
 	"fmt"
 
-	"branchspire/modules/git/gitcmd"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/git/gitcmd"
+	"code.gitea.io/gitea/modules/util"
 )
 
 const MaxConflictedDetectFiles = 10

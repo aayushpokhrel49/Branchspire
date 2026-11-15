@@ -7,13 +7,13 @@ import (
 	"path"
 	"time"
 
-	repo_model "branchspire/models/repo"
-	"branchspire/modules/git"
-	"branchspire/modules/httpcache"
-	"branchspire/modules/httplib"
-	"branchspire/modules/setting"
-	"branchspire/modules/structs"
-	"branchspire/services/context"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/httpcache"
+	"code.gitea.io/gitea/modules/httplib"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/services/context"
 )
 
 // ServeBlob download a git.Blob

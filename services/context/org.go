@@ -7,14 +7,14 @@ package context
 import (
 	"strings"
 
-	"branchspire/models/organization"
-	"branchspire/models/perm"
-	"branchspire/models/unit"
-	user_model "branchspire/models/user"
-	"branchspire/modules/markup"
-	"branchspire/modules/markup/markdown"
-	"branchspire/modules/setting"
-	"branchspire/modules/structs"
+	"code.gitea.io/gitea/models/organization"
+	"code.gitea.io/gitea/models/perm"
+	"code.gitea.io/gitea/models/unit"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/markup"
+	"code.gitea.io/gitea/modules/markup/markdown"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/structs"
 )
 
 // Organization contains organization context

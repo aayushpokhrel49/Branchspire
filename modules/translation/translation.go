@@ -10,11 +10,11 @@ import (
 	"strings"
 	"sync"
 
-	"branchspire/modules/log"
-	"branchspire/modules/options"
-	"branchspire/modules/setting"
-	"branchspire/modules/translation/i18n"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/options"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/translation/i18n"
+	"code.gitea.io/gitea/modules/util"
 
 	"golang.org/x/text/language"
 	"golang.org/x/text/message"

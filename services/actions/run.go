@@ -8,13 +8,13 @@ import (
 	"errors"
 	"fmt"
 
+	actions_model "code.gitea.io/gitea/models/actions"
+	"code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/modules/actions/jobparser"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/timeutil"
+	"code.gitea.io/gitea/modules/util"
 	act_model "gitea.dev/actionslib/pkg/model"
-	actions_model "branchspire/models/actions"
-	"branchspire/models/db"
-	"branchspire/modules/actions/jobparser"
-	"branchspire/modules/log"
-	"branchspire/modules/timeutil"
-	"branchspire/modules/util"
 
 	"go.yaml.in/yaml/v4"
 )

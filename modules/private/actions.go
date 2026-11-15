@@ -6,7 +6,7 @@ package private
 import (
 	"context"
 
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modules/setting"
 )
 
 type GenerateTokenRequest struct {

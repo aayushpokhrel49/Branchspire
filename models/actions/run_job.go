@@ -10,15 +10,15 @@ import (
 	"slices"
 	"time"
 
+	"code.gitea.io/gitea/models/db"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/modules/actions/jobparser"
+	"code.gitea.io/gitea/modules/container"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/timeutil"
+	"code.gitea.io/gitea/modules/util"
+	webhook_module "code.gitea.io/gitea/modules/webhook"
 	act_model "gitea.dev/actionslib/pkg/model"
-	"branchspire/models/db"
-	repo_model "branchspire/models/repo"
-	"branchspire/modules/actions/jobparser"
-	"branchspire/modules/container"
-	"branchspire/modules/log"
-	"branchspire/modules/timeutil"
-	"branchspire/modules/util"
-	webhook_module "branchspire/modules/webhook"
 
 	"xorm.io/builder"
 )

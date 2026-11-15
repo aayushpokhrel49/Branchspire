@@ -6,9 +6,9 @@ package organization
 import (
 	"context"
 
-	"branchspire/models/db"
-	"branchspire/models/perm"
-	"branchspire/models/unit"
+	"code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/models/perm"
+	"code.gitea.io/gitea/models/unit"
 )
 
 // TeamUnit describes all units of a repository

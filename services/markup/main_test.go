@@ -6,7 +6,7 @@ package markup
 import (
 	"testing"
 
-	"branchspire/models/unittest"
+	"code.gitea.io/gitea/models/unittest"
 )
 
 func TestMain(m *testing.M) {

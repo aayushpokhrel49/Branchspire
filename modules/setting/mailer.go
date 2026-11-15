@@ -11,7 +11,7 @@ import (
 	"text/template"
 	"time"
 
-	"branchspire/modules/log"
+	"code.gitea.io/gitea/modules/log"
 
 	"github.com/kballard/go-shellquote"
 )

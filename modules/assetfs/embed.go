@@ -15,8 +15,8 @@ import (
 	"sync"
 	"time"
 
-	"branchspire/modules/json"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/json"
+	"code.gitea.io/gitea/modules/util"
 )
 
 type EmbeddedFile interface {

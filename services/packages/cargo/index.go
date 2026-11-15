@@ -12,17 +12,17 @@ import (
 	"path"
 	"strconv"
 
-	packages_model "branchspire/models/packages"
-	repo_model "branchspire/models/repo"
-	user_model "branchspire/models/user"
-	"branchspire/modules/git"
-	"branchspire/modules/json"
-	cargo_module "branchspire/modules/packages/cargo"
-	"branchspire/modules/setting"
-	"branchspire/modules/structs"
-	"branchspire/modules/util"
-	repo_service "branchspire/services/repository"
-	files_service "branchspire/services/repository/files"
+	packages_model "code.gitea.io/gitea/models/packages"
+	repo_model "code.gitea.io/gitea/models/repo"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/json"
+	cargo_module "code.gitea.io/gitea/modules/packages/cargo"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/modules/util"
+	repo_service "code.gitea.io/gitea/services/repository"
+	files_service "code.gitea.io/gitea/services/repository/files"
 )
 
 const (

@@ -15,11 +15,11 @@ import (
 	"sync"
 	"time"
 
-	"branchspire/modules/cache"
-	"branchspire/modules/git/gitcmd"
-	"branchspire/modules/git/gitrepo"
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/cache"
+	"code.gitea.io/gitea/modules/git/gitcmd"
+	"code.gitea.io/gitea/modules/git/gitrepo"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/util"
 )
 
 type RepositoryFacade = gitrepo.RepositoryFacade

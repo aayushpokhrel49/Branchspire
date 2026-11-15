@@ -14,11 +14,11 @@ import (
 	"sync"
 	texttmpl "text/template"
 
-	"branchspire/modules/base"
-	"branchspire/modules/graceful"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/base"
+	"code.gitea.io/gitea/modules/graceful"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/util"
 )
 
 type MailRender struct {

@@ -11,9 +11,9 @@ import (
 	"slices"
 	"strconv"
 
-	actions_model "branchspire/models/actions"
-	"branchspire/modules/log"
-	"branchspire/modules/util"
+	actions_model "code.gitea.io/gitea/models/actions"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/util"
 )
 
 const jobSummaryRouteBase = "/_apis/pipelines/workflows/{run_id}/jobs/{job_id}/steps/{step_index}/summary"

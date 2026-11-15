@@ -6,7 +6,7 @@ package v1_21
 import (
 	"context"
 
-	"branchspire/modelmigration/base"
+	"code.gitea.io/gitea/modelmigration/base"
 )
 
 func AddTriggerEventToActionRun(_ context.Context, x base.EngineMigration) error {

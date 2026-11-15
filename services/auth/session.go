@@ -6,9 +6,9 @@ package auth
 import (
 	"net/http"
 
-	user_model "branchspire/models/user"
-	"branchspire/modules/log"
-	"branchspire/modules/session"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/session"
 )
 
 // Ensure the struct implements the interface.

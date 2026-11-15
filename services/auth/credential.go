@@ -6,7 +6,7 @@ package auth
 import (
 	"strconv"
 
-	"branchspire/modules/web/middleware"
+	"code.gitea.io/gitea/modules/web/middleware"
 )
 
 // Credential kinds naming how a request authenticated, recorded so an audit

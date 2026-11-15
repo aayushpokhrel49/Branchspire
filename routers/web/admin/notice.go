@@ -8,12 +8,12 @@ import (
 	"net/http"
 	"strconv"
 
-	"branchspire/models/db"
-	system_model "branchspire/models/system"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
-	"branchspire/modules/templates"
-	"branchspire/services/context"
+	"code.gitea.io/gitea/models/db"
+	system_model "code.gitea.io/gitea/models/system"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/templates"
+	"code.gitea.io/gitea/services/context"
 )
 
 const (

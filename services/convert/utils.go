@@ -7,8 +7,8 @@ package convert
 import (
 	"strings"
 
-	"branchspire/modules/setting"
-	"branchspire/modules/structs"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/structs"
 )
 
 // ToCorrectPageSize makes sure page size is in allowed range.

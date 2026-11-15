@@ -8,9 +8,9 @@ import (
 	"io"
 	"strings"
 
-	"branchspire/modules/htmlutil"
-	"branchspire/modules/setting"
-	"branchspire/modules/translation"
+	"code.gitea.io/gitea/modules/htmlutil"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/translation"
 )
 
 type EscapeOptions struct {

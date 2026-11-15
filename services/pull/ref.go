@@ -7,10 +7,10 @@ import (
 	"context"
 	"errors"
 
-	issues_model "branchspire/models/issues"
-	repo_model "branchspire/models/repo"
-	"branchspire/modules/git"
-	"branchspire/modules/util"
+	issues_model "code.gitea.io/gitea/models/issues"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/util"
 )
 
 func EnumPullRequestsByHeadCommitID(ctx context.Context, repo *repo_model.Repository, commitID string, filter func(*issues_model.PullRequest) bool) (pulls []*issues_model.PullRequest, _ error) {

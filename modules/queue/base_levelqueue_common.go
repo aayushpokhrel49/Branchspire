@@ -11,7 +11,7 @@ import (
 	"sync"
 	"time"
 
-	"branchspire/modules/nosql"
+	"code.gitea.io/gitea/modules/nosql"
 
 	"gitea.com/lunny/levelqueue"
 	"github.com/syndtr/goleveldb/leveldb"

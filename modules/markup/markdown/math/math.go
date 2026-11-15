@@ -4,8 +4,8 @@
 package math
 
 import (
-	"branchspire/modules/markup/internal"
-	giteaUtil "branchspire/modules/util"
+	"code.gitea.io/gitea/modules/markup/internal"
+	giteaUtil "code.gitea.io/gitea/modules/util"
 
 	"github.com/yuin/goldmark"
 	"github.com/yuin/goldmark/parser"

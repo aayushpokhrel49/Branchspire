@@ -7,12 +7,12 @@ package user
 import (
 	"net/http"
 
-	activities_model "branchspire/models/activities"
-	user_model "branchspire/models/user"
-	"branchspire/routers/api/v1/utils"
-	"branchspire/services/context"
-	"branchspire/services/convert"
-	feed_service "branchspire/services/feed"
+	activities_model "code.gitea.io/gitea/models/activities"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/routers/api/v1/utils"
+	"code.gitea.io/gitea/services/context"
+	"code.gitea.io/gitea/services/convert"
+	feed_service "code.gitea.io/gitea/services/feed"
 )
 
 // Search search users

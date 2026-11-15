@@ -6,10 +6,10 @@ package user
 import (
 	"time"
 
-	"branchspire/models/avatars"
-	user_model "branchspire/models/user"
-	"branchspire/modules/httpcache"
-	"branchspire/services/context"
+	"code.gitea.io/gitea/models/avatars"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/httpcache"
+	"code.gitea.io/gitea/services/context"
 )
 
 func cacheableRedirect(ctx *context.Context, location string) {

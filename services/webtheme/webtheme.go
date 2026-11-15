@@ -14,11 +14,11 @@ import (
 	"sync/atomic"
 	"time"
 
-	"branchspire/modules/container"
-	"branchspire/modules/log"
-	"branchspire/modules/public"
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/container"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/public"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/util"
 )
 
 type themeCollectionStruct struct {

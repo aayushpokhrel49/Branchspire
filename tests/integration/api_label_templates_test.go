@@ -9,9 +9,9 @@ import (
 	"strings"
 	"testing"
 
-	repo_module "branchspire/modules/repository"
-	api "branchspire/modules/structs"
-	"branchspire/tests"
+	repo_module "code.gitea.io/gitea/modules/repository"
+	api "code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/tests"
 
 	"github.com/stretchr/testify/assert"
 )

@@ -8,12 +8,12 @@ import (
 	"net/url"
 	"testing"
 
-	"branchspire/models/db"
-	repo_model "branchspire/models/repo"
-	"branchspire/models/unittest"
-	api "branchspire/modules/structs"
-	"branchspire/modules/translation"
-	"branchspire/tests"
+	"code.gitea.io/gitea/models/db"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/models/unittest"
+	api "code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/modules/translation"
+	"code.gitea.io/gitea/tests"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

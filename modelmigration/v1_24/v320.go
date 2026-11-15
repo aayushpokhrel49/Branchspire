@@ -6,8 +6,8 @@ package v1_24
 import (
 	"context"
 
-	"branchspire/modelmigration/base"
-	"branchspire/modules/json"
+	"code.gitea.io/gitea/modelmigration/base"
+	"code.gitea.io/gitea/modules/json"
 
 	"xorm.io/xorm"
 )

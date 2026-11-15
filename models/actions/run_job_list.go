@@ -7,13 +7,13 @@ import (
 	"context"
 	"slices"
 
-	"branchspire/models/db"
-	repo_model "branchspire/models/repo"
-	"branchspire/modules/base"
-	"branchspire/modules/container"
-	"branchspire/modules/optional"
-	"branchspire/modules/timeutil"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/models/db"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/modules/base"
+	"code.gitea.io/gitea/modules/container"
+	"code.gitea.io/gitea/modules/optional"
+	"code.gitea.io/gitea/modules/timeutil"
+	"code.gitea.io/gitea/modules/util"
 
 	"xorm.io/builder"
 )

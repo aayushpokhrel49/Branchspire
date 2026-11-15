@@ -13,19 +13,19 @@ import (
 	"testing"
 	"time"
 
+	actions_model "code.gitea.io/gitea/models/actions"
+	auth_model "code.gitea.io/gitea/models/auth"
+	"code.gitea.io/gitea/models/db"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/models/unittest"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/json"
+	"code.gitea.io/gitea/modules/setting"
+	api "code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/modules/timeutil"
+	actions_service "code.gitea.io/gitea/services/actions"
 	runnerv1 "gitea.dev/actionslib/runner/v1"
-	actions_model "branchspire/models/actions"
-	auth_model "branchspire/models/auth"
-	"branchspire/models/db"
-	repo_model "branchspire/models/repo"
-	"branchspire/models/unittest"
-	user_model "branchspire/models/user"
-	"branchspire/modules/git"
-	"branchspire/modules/json"
-	"branchspire/modules/setting"
-	api "branchspire/modules/structs"
-	"branchspire/modules/timeutil"
-	actions_service "branchspire/services/actions"
 
 	"connectrpc.com/connect"
 	"github.com/stretchr/testify/assert"
@@ -40,12 +40,12 @@ func TestJobWithNeeds(t *testing.T) {
 		expectedStatuses map[string]string
 	}{
 		{
-			treePath: ".branchspire/workflows/job-with-needs.yml",
+			treePath: ".code.gitea.io/gitea/workflows/job-with-needs.yml",
 			fileContent: `name: job-with-needs
 on:
   push:
     paths:
-      - '.branchspire/workflows/job-with-needs.yml'
+      - '.code.gitea.io/gitea/workflows/job-with-needs.yml'
 jobs:
   job1:
     runs-on: ubuntu-latest
@@ -71,12 +71,12 @@ jobs:
 			},
 		},
 		{
-			treePath: ".branchspire/workflows/job-with-needs-fail.yml",
+			treePath: ".code.gitea.io/gitea/workflows/job-with-needs-fail.yml",
 			fileContent: `name: job-with-needs-fail
 on:
   push:
     paths:
-      - '.branchspire/workflows/job-with-needs-fail.yml'
+      - '.code.gitea.io/gitea/workflows/job-with-needs-fail.yml'
 jobs:
   job1:
     runs-on: ubuntu-latest
@@ -99,12 +99,12 @@ jobs:
 			},
 		},
 		{
-			treePath: ".branchspire/workflows/job-with-needs-fail-if.yml",
+			treePath: ".code.gitea.io/gitea/workflows/job-with-needs-fail-if.yml",
 			fileContent: `name: job-with-needs-fail-if
 on:
   push:
     paths:
-      - '.branchspire/workflows/job-with-needs-fail-if.yml'
+      - '.code.gitea.io/gitea/workflows/job-with-needs-fail-if.yml'
 jobs:
   job1:
     runs-on: ubuntu-latest
@@ -180,12 +180,12 @@ func TestJobNeedsMatrix(t *testing.T) {
 		expectedTaskNeeds map[string]*runnerv1.TaskNeed // jobID => TaskNeed
 	}{
 		{
-			treePath: ".branchspire/workflows/jobs-outputs-with-matrix.yml",
+			treePath: ".code.gitea.io/gitea/workflows/jobs-outputs-with-matrix.yml",
 			fileContent: `name: jobs-outputs-with-matrix
 on:
   push:
     paths:
-      - '.branchspire/workflows/jobs-outputs-with-matrix.yml'
+      - '.code.gitea.io/gitea/workflows/jobs-outputs-with-matrix.yml'
 jobs:
   job1:
     runs-on: ubuntu-latest
@@ -246,12 +246,12 @@ jobs:
 			},
 		},
 		{
-			treePath: ".branchspire/workflows/jobs-outputs-with-matrix-failure.yml",
+			treePath: ".code.gitea.io/gitea/workflows/jobs-outputs-with-matrix-failure.yml",
 			fileContent: `name: jobs-outputs-with-matrix-failure
 on:
   push:
     paths:
-      - '.branchspire/workflows/jobs-outputs-with-matrix-failure.yml'
+      - '.code.gitea.io/gitea/workflows/jobs-outputs-with-matrix-failure.yml'
 jobs:
   job1:
     runs-on: ubuntu-latest
@@ -433,7 +433,7 @@ func prepareRunnerDisableEnableTest(t *testing.T, user *user_model.User, authTok
 	runner := newMockRunner()
 	runner.registerAsRepoRunner(t, user.Name, apiRepo.Name, runnerName, []string{"ubuntu-latest"}, false)
 
-	wfTreePath := fmt.Sprintf(".branchspire/workflows/%s.yml", workflowName)
+	wfTreePath := fmt.Sprintf(".code.gitea.io/gitea/workflows/%s.yml", workflowName)
 	wfContent := fmt.Sprintf(`name: %s
 on: [push]
 jobs:
@@ -481,7 +481,7 @@ func TestActionsGiteaContext(t *testing.T) {
 		runner.registerAsRepoRunner(t, baseRepo.OwnerName, baseRepo.Name, "mock-runner", []string{"ubuntu-latest"}, false)
 
 		// init the workflow
-		wfTreePath := ".branchspire/workflows/pull.yml"
+		wfTreePath := ".code.gitea.io/gitea/workflows/pull.yml"
 		wfFileContent := `name: Pull Request
 on: pull_request
 jobs:
@@ -569,7 +569,7 @@ func TestActionsGiteaContextEphemeral(t *testing.T) {
 		assert.NoError(t, err)
 
 		// init the workflow
-		wfTreePath := ".branchspire/workflows/pull.yml"
+		wfTreePath := ".code.gitea.io/gitea/workflows/pull.yml"
 		wfFileContent := `name: Pull Request
 on: pull_request
 jobs:

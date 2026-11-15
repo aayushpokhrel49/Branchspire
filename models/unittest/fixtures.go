@@ -9,10 +9,10 @@ import (
 	"strings"
 	"unicode"
 
-	"branchspire/models/db"
-	"branchspire/modules/auth/password/hash"
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/modules/auth/password/hash"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/util"
 
 	"xorm.io/xorm"
 	"xorm.io/xorm/contexts"

@@ -6,7 +6,7 @@ package internal
 import (
 	"math"
 
-	"branchspire/models/db"
+	"code.gitea.io/gitea/models/db"
 )
 
 // ParsePaginator parses a db.Paginator into a skip and limit

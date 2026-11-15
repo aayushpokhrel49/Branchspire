@@ -8,13 +8,13 @@ import (
 	"html/template"
 	"strings"
 
-	packages_model "branchspire/models/packages"
-	"branchspire/modules/container"
-	"branchspire/modules/htmlutil"
-	"branchspire/modules/httplib"
-	debian_module "branchspire/modules/packages/debian"
-	"branchspire/modules/util"
-	packages_service "branchspire/services/packages"
+	packages_model "code.gitea.io/gitea/models/packages"
+	"code.gitea.io/gitea/modules/container"
+	"code.gitea.io/gitea/modules/htmlutil"
+	"code.gitea.io/gitea/modules/httplib"
+	debian_module "code.gitea.io/gitea/modules/packages/debian"
+	"code.gitea.io/gitea/modules/util"
+	packages_service "code.gitea.io/gitea/services/packages"
 )
 
 type Specialization struct {

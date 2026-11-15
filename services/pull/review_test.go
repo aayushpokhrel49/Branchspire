@@ -8,11 +8,11 @@ import (
 	"strings"
 	"testing"
 
-	issues_model "branchspire/models/issues"
-	"branchspire/models/unittest"
-	user_model "branchspire/models/user"
-	"branchspire/modules/git"
-	pull_service "branchspire/services/pull"
+	issues_model "code.gitea.io/gitea/models/issues"
+	"code.gitea.io/gitea/models/unittest"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/git"
+	pull_service "code.gitea.io/gitea/services/pull"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"branchspire/modules/test"
+	"code.gitea.io/gitea/modules/test"
 
 	"github.com/go-redsync/redsync/v4"
 	"github.com/stretchr/testify/assert"

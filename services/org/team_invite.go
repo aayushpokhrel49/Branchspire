@@ -6,9 +6,9 @@ package org
 import (
 	"context"
 
-	org_model "branchspire/models/organization"
-	user_model "branchspire/models/user"
-	"branchspire/services/mailer"
+	org_model "code.gitea.io/gitea/models/organization"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/services/mailer"
 )
 
 // CreateTeamInvite make a persistent invite in db and mail it

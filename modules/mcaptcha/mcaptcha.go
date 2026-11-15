@@ -14,9 +14,9 @@ import (
 	"net/http"
 	"strings"
 
-	"branchspire/modules/json"
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/json"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/util"
 )
 
 func Verify(ctx context.Context, token string) (bool, error) {

@@ -8,10 +8,10 @@ import (
 	"fmt"
 	"strings"
 
-	"branchspire/models/auth"
-	"branchspire/modules/util"
-	auth_service "branchspire/services/auth"
-	"branchspire/services/auth/source/ldap"
+	"code.gitea.io/gitea/models/auth"
+	"code.gitea.io/gitea/modules/util"
+	auth_service "code.gitea.io/gitea/services/auth"
+	"code.gitea.io/gitea/services/auth/source/ldap"
 
 	"github.com/urfave/cli/v3"
 )

@@ -8,14 +8,14 @@ import (
 	"net/http"
 	"strconv"
 
-	"branchspire/models/db"
-	user_model "branchspire/models/user"
-	"branchspire/modules/json"
-	"branchspire/modules/private"
-	"branchspire/modules/setting"
-	"branchspire/services/context"
-	"branchspire/services/mailer"
-	sender_service "branchspire/services/mailer/sender"
+	"code.gitea.io/gitea/models/db"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/json"
+	"code.gitea.io/gitea/modules/private"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/services/context"
+	"code.gitea.io/gitea/services/mailer"
+	sender_service "code.gitea.io/gitea/services/mailer/sender"
 )
 
 // SendEmail pushes messages to mail queue

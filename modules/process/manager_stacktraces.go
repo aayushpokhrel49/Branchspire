@@ -10,7 +10,7 @@ import (
 	"sort"
 	"time"
 
-	"branchspire/modules/gtprof"
+	"code.gitea.io/gitea/modules/gtprof"
 
 	"github.com/google/pprof/profile"
 )

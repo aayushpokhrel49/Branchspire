@@ -8,12 +8,12 @@ import (
 	"slices"
 	"strings"
 
-	"branchspire/models/db"
-	issues_model "branchspire/models/issues"
-	project_model "branchspire/models/project"
-	user_model "branchspire/models/user"
-	"branchspire/modules/optional"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/models/db"
+	issues_model "code.gitea.io/gitea/models/issues"
+	project_model "code.gitea.io/gitea/models/project"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/optional"
+	"code.gitea.io/gitea/modules/util"
 
 	"xorm.io/builder"
 )

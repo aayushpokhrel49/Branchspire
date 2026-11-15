@@ -7,15 +7,15 @@ import (
 	"context"
 	"time"
 
-	"branchspire/models/db"
-	git_model "branchspire/models/git"
-	"branchspire/models/perm"
-	access_model "branchspire/models/perm/access"
-	repo_model "branchspire/models/repo"
-	unit_model "branchspire/models/unit"
-	"branchspire/modules/log"
-	api "branchspire/modules/structs"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/models/db"
+	git_model "code.gitea.io/gitea/models/git"
+	"code.gitea.io/gitea/models/perm"
+	access_model "code.gitea.io/gitea/models/perm/access"
+	repo_model "code.gitea.io/gitea/models/repo"
+	unit_model "code.gitea.io/gitea/models/unit"
+	"code.gitea.io/gitea/modules/log"
+	api "code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/modules/util"
 )
 
 // ToRepo converts a Repository to api.Repository

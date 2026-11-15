@@ -9,7 +9,7 @@ import (
 	"sync"
 	"time"
 
-	"branchspire/modules/container"
+	"code.gitea.io/gitea/modules/container"
 )
 
 var errChannelClosed = errors.New("channel is closed")

@@ -10,10 +10,10 @@ import (
 	"path/filepath"
 	"time"
 
-	asymkey_model "branchspire/models/asymkey"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
+	asymkey_model "code.gitea.io/gitea/models/asymkey"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/util"
 )
 
 // RewriteAllPublicKeys removes any authorized key and rewrite all keys from database again.

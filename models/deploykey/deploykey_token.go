@@ -7,10 +7,10 @@ import (
 	"context"
 	"strings"
 
-	"branchspire/models/db"
-	"branchspire/models/perm"
-	"branchspire/modules/base"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/models/perm"
+	"code.gitea.io/gitea/modules/base"
+	"code.gitea.io/gitea/modules/util"
 
 	"xorm.io/builder"
 )

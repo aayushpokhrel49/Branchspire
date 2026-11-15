@@ -6,7 +6,7 @@ package v1_14
 import (
 	"context"
 
-	"branchspire/modelmigration/base"
+	"code.gitea.io/gitea/modelmigration/base"
 )
 
 func RecreateUserTableToFixDefaultValues(_ context.Context, _ base.EngineMigration) error {

@@ -6,8 +6,8 @@ package v1_13
 import (
 	"context"
 
-	"branchspire/modelmigration/base"
-	"branchspire/modules/log"
+	"code.gitea.io/gitea/modelmigration/base"
+	"code.gitea.io/gitea/modules/log"
 )
 
 func RecalculateStars(_ context.Context, x base.EngineMigration) (err error) {

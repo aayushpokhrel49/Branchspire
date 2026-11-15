@@ -10,11 +10,11 @@ import (
 	"strings"
 	"unicode"
 
-	packages_model "branchspire/models/packages"
-	packages_module "branchspire/modules/packages"
-	"branchspire/routers/api/packages/helper"
-	"branchspire/services/context"
-	packages_service "branchspire/services/packages"
+	packages_model "code.gitea.io/gitea/models/packages"
+	packages_module "code.gitea.io/gitea/modules/packages"
+	"code.gitea.io/gitea/routers/api/packages/helper"
+	"code.gitea.io/gitea/services/context"
+	packages_service "code.gitea.io/gitea/services/packages"
 )
 
 var (

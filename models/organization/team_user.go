@@ -6,8 +6,8 @@ package organization
 import (
 	"context"
 
-	"branchspire/models/db"
-	user_model "branchspire/models/user"
+	"code.gitea.io/gitea/models/db"
+	user_model "code.gitea.io/gitea/models/user"
 
 	"xorm.io/builder"
 )

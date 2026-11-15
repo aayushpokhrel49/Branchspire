@@ -9,14 +9,14 @@ import (
 	"strings"
 	"time"
 
-	"branchspire/models/db"
-	repo_model "branchspire/models/repo"
-	system_model "branchspire/models/system"
-	user_model "branchspire/models/user"
-	"branchspire/modules/git"
-	"branchspire/modules/git/gitcmd"
-	"branchspire/modules/log"
-	repo_module "branchspire/modules/repository"
+	"code.gitea.io/gitea/models/db"
+	repo_model "code.gitea.io/gitea/models/repo"
+	system_model "code.gitea.io/gitea/models/system"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/git/gitcmd"
+	"code.gitea.io/gitea/modules/log"
+	repo_module "code.gitea.io/gitea/modules/repository"
 
 	"xorm.io/builder"
 )

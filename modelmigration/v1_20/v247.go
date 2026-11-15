@@ -6,8 +6,8 @@ package v1_20
 import (
 	"context"
 
-	"branchspire/modelmigration/base"
-	"branchspire/modules/log"
+	"code.gitea.io/gitea/modelmigration/base"
+	"code.gitea.io/gitea/modules/log"
 )
 
 // FixIncorrectProjectType: set individual project's type from 3(TypeOrganization) to 1(TypeIndividual)

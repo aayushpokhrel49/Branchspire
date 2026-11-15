@@ -8,12 +8,12 @@ import (
 	"io"
 	"strings"
 
-	packages_model "branchspire/models/packages"
-	container_service "branchspire/models/packages/container"
-	user_model "branchspire/models/user"
-	"branchspire/modules/json"
-	"branchspire/modules/packages"
-	container_module "branchspire/modules/packages/container"
+	packages_model "code.gitea.io/gitea/models/packages"
+	container_service "code.gitea.io/gitea/models/packages/container"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/json"
+	"code.gitea.io/gitea/modules/packages"
+	container_module "code.gitea.io/gitea/modules/packages/container"
 
 	v1 "github.com/opencontainers/image-spec/specs-go/v1"
 )

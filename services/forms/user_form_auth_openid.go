@@ -3,7 +3,7 @@
 
 package forms
 
-import "branchspire/modules/web/middleware"
+import "code.gitea.io/gitea/modules/web/middleware"
 
 // SignInOpenIDForm form for signing in with OpenID
 type SignInOpenIDForm struct {

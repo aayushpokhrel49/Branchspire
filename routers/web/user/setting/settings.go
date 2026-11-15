@@ -7,10 +7,10 @@ import (
 	"net/http"
 	"strconv"
 
-	user_model "branchspire/models/user"
-	"branchspire/modules/json"
-	"branchspire/modules/setting"
-	"branchspire/services/context"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/json"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/services/context"
 )
 
 func SettingsCtxData(ctx *context.Context) {

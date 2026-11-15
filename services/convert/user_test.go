@@ -6,9 +6,9 @@ package convert
 import (
 	"testing"
 
-	"branchspire/models/unittest"
-	user_model "branchspire/models/user"
-	api "branchspire/modules/structs"
+	"code.gitea.io/gitea/models/unittest"
+	user_model "code.gitea.io/gitea/models/user"
+	api "code.gitea.io/gitea/modules/structs"
 
 	"github.com/stretchr/testify/assert"
 )

@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"sort"
 
-	"branchspire/models/db"
-	access_model "branchspire/models/perm/access"
-	user_model "branchspire/models/user"
+	"code.gitea.io/gitea/models/db"
+	access_model "code.gitea.io/gitea/models/perm/access"
+	user_model "code.gitea.io/gitea/models/user"
 
 	"xorm.io/builder"
 )

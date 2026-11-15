@@ -7,11 +7,11 @@ import (
 	"strconv"
 	"testing"
 
-	avatars_model "branchspire/models/avatars"
-	system_model "branchspire/models/system"
-	"branchspire/models/unittest"
-	"branchspire/modules/setting"
-	"branchspire/modules/setting/config"
+	avatars_model "code.gitea.io/gitea/models/avatars"
+	system_model "code.gitea.io/gitea/models/system"
+	"code.gitea.io/gitea/models/unittest"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/setting/config"
 
 	"github.com/stretchr/testify/assert"
 )

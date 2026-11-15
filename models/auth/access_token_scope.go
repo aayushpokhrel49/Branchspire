@@ -8,7 +8,7 @@ import (
 	"slices"
 	"strings"
 
-	"branchspire/models/perm"
+	"code.gitea.io/gitea/models/perm"
 )
 
 // AccessTokenScopeCategory represents the scope category for an access token

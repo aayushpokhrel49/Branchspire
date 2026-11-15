@@ -8,7 +8,7 @@ import (
 	"io"
 	"strings"
 
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/util"
 )
 
 // Conaninfo represents infos of a Conan package

@@ -6,13 +6,13 @@ package admin
 import (
 	"testing"
 
-	"branchspire/models/unittest"
-	user_model "branchspire/models/user"
-	"branchspire/modules/setting"
-	api "branchspire/modules/structs"
-	"branchspire/modules/web"
-	"branchspire/services/contexttest"
-	"branchspire/services/forms"
+	"code.gitea.io/gitea/models/unittest"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/setting"
+	api "code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/modules/web"
+	"code.gitea.io/gitea/services/contexttest"
+	"code.gitea.io/gitea/services/forms"
 
 	"github.com/stretchr/testify/assert"
 )

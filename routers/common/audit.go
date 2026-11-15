@@ -6,10 +6,10 @@ package common
 import (
 	"net/http"
 
-	audit_model "branchspire/models/audit"
-	"branchspire/modules/httplib"
-	"branchspire/modules/reqctx"
-	audit_service "branchspire/services/audit"
+	audit_model "code.gitea.io/gitea/models/audit"
+	"code.gitea.io/gitea/modules/httplib"
+	"code.gitea.io/gitea/modules/reqctx"
+	audit_service "code.gitea.io/gitea/services/audit"
 )
 
 // AuditOrigin publishes the origin and the client address of the request, so

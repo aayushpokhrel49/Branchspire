@@ -14,12 +14,12 @@ import (
 	"net/http"
 	"testing"
 
-	"branchspire/models/packages"
-	"branchspire/models/unittest"
-	user_model "branchspire/models/user"
-	alpine_module "branchspire/modules/packages/alpine"
-	alpine_service "branchspire/services/packages/alpine"
-	"branchspire/tests"
+	"code.gitea.io/gitea/models/packages"
+	"code.gitea.io/gitea/models/unittest"
+	user_model "code.gitea.io/gitea/models/user"
+	alpine_module "code.gitea.io/gitea/modules/packages/alpine"
+	alpine_service "code.gitea.io/gitea/services/packages/alpine"
+	"code.gitea.io/gitea/tests"
 
 	"github.com/stretchr/testify/assert"
 )

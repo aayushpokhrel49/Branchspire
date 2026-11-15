@@ -8,8 +8,8 @@ import (
 	"path"
 	"strings"
 
-	"branchspire/modules/setting"
-	"branchspire/modules/typesniffer"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/typesniffer"
 )
 
 // Renderer defines an interface for rendering markup file to HTML

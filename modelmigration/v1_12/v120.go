@@ -6,7 +6,7 @@ package v1_12
 import (
 	"context"
 
-	"branchspire/modelmigration/base"
+	"code.gitea.io/gitea/modelmigration/base"
 )
 
 func AddOwnerNameOnRepository(_ context.Context, x base.EngineMigration) error {

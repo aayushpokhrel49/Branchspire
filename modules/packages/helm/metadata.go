@@ -10,8 +10,8 @@ import (
 	"io"
 	"strings"
 
-	"branchspire/modules/util"
-	"branchspire/modules/validation"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/modules/validation"
 
 	"github.com/ProtonMail/go-crypto/openpgp/clearsign"
 	"github.com/hashicorp/go-version"

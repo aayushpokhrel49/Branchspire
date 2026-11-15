@@ -6,10 +6,10 @@ package auth_test
 import (
 	"testing"
 
-	auth_model "branchspire/models/auth"
-	"branchspire/models/db"
-	"branchspire/models/unittest"
-	"branchspire/modules/util"
+	auth_model "code.gitea.io/gitea/models/auth"
+	"code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/models/unittest"
+	"code.gitea.io/gitea/modules/util"
 
 	"github.com/stretchr/testify/assert"
 )

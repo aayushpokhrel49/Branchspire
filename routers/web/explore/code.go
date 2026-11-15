@@ -7,13 +7,13 @@ import (
 	"net/http"
 	"slices"
 
-	"branchspire/models/db"
-	repo_model "branchspire/models/repo"
-	code_indexer "branchspire/modules/indexer/code"
-	"branchspire/modules/setting"
-	"branchspire/modules/templates"
-	"branchspire/routers/common"
-	"branchspire/services/context"
+	"code.gitea.io/gitea/models/db"
+	repo_model "code.gitea.io/gitea/models/repo"
+	code_indexer "code.gitea.io/gitea/modules/indexer/code"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/templates"
+	"code.gitea.io/gitea/routers/common"
+	"code.gitea.io/gitea/services/context"
 )
 
 const (

@@ -6,12 +6,12 @@ package admin
 import (
 	"net/http"
 
-	"branchspire/models/auth"
-	"branchspire/models/db"
-	"branchspire/modules/setting"
-	"branchspire/modules/templates"
-	user_setting "branchspire/routers/web/user/setting"
-	"branchspire/services/context"
+	"code.gitea.io/gitea/models/auth"
+	"code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/templates"
+	user_setting "code.gitea.io/gitea/routers/web/user/setting"
+	"code.gitea.io/gitea/services/context"
 )
 
 var (

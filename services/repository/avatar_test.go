@@ -9,9 +9,9 @@ import (
 	"image/png"
 	"testing"
 
-	repo_model "branchspire/models/repo"
-	"branchspire/models/unittest"
-	"branchspire/modules/avatar"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/models/unittest"
+	"code.gitea.io/gitea/modules/avatar"
 
 	"github.com/stretchr/testify/assert"
 )

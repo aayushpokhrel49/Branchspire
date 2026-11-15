@@ -11,8 +11,8 @@ import (
 	"image/color"
 	"image/png"
 
-	"branchspire/modules/avatar/identicon"
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modules/avatar/identicon"
+	"code.gitea.io/gitea/modules/setting"
 
 	_ "golang.org/x/image/webp" // for processing webp images
 	_ "image/gif"               // for processing gif images

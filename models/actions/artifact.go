@@ -10,10 +10,10 @@ import (
 	"context"
 	"slices"
 
-	"branchspire/models/db"
-	"branchspire/modules/optional"
-	"branchspire/modules/setting"
-	"branchspire/modules/timeutil"
+	"code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/modules/optional"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/timeutil"
 
 	"xorm.io/builder"
 )

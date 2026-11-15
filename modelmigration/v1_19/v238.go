@@ -6,8 +6,8 @@ package v1_19
 import (
 	"context"
 
-	"branchspire/modelmigration/base"
-	"branchspire/modules/timeutil"
+	"code.gitea.io/gitea/modelmigration/base"
+	"code.gitea.io/gitea/modules/timeutil"
 )
 
 // AddUpdatedUnixToLFSMetaObject adds an updated column to the LFSMetaObject to allow for garbage collection

@@ -10,8 +10,8 @@ import (
 	"io"
 	"strings"
 
-	"branchspire/modules/git/gitcmd"
-	"branchspire/modules/log"
+	"code.gitea.io/gitea/modules/git/gitcmd"
+	"code.gitea.io/gitea/modules/log"
 )
 
 // BranchPrefix base dir of the branch information file store on git

@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"regexp"
 
-	"branchspire/modelmigration/base"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modelmigration/base"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
 )
 
 func FixPostgresIDSequences(_ context.Context, x base.EngineMigration) error {

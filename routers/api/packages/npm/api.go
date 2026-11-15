@@ -13,8 +13,8 @@ import (
 	"sort"
 	"time"
 
-	packages_model "branchspire/models/packages"
-	npm_module "branchspire/modules/packages/npm"
+	packages_model "code.gitea.io/gitea/models/packages"
+	npm_module "code.gitea.io/gitea/modules/packages/npm"
 )
 
 func createPackageMetadataResponse(registryURL string, pds []*packages_model.PackageDescriptor) *npm_module.PackageMetadata {

@@ -6,9 +6,9 @@ package fileicon_test
 import (
 	"testing"
 
-	"branchspire/models/unittest"
-	"branchspire/modules/fileicon"
-	"branchspire/modules/git"
+	"code.gitea.io/gitea/models/unittest"
+	"code.gitea.io/gitea/modules/fileicon"
+	"code.gitea.io/gitea/modules/git"
 
 	"github.com/stretchr/testify/assert"
 )

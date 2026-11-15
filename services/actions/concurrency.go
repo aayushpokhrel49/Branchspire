@@ -7,11 +7,11 @@ import (
 	"context"
 	"fmt"
 
+	actions_model "code.gitea.io/gitea/models/actions"
+	"code.gitea.io/gitea/modules/actions/jobparser"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/util"
 	act_model "gitea.dev/actionslib/pkg/model"
-	actions_model "branchspire/models/actions"
-	"branchspire/modules/actions/jobparser"
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
 
 	"go.yaml.in/yaml/v4"
 )

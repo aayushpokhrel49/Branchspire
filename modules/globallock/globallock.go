@@ -8,7 +8,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modules/setting"
 )
 
 var (

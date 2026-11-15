@@ -9,10 +9,10 @@ import (
 	"fmt"
 	"strings"
 
+	"code.gitea.io/gitea/modules/util"
 	"gitea.dev/actionslib/pkg/expreval"
 	"gitea.dev/actionslib/pkg/exprparser"
 	"gitea.dev/actionslib/pkg/model"
-	"branchspire/modules/util"
 
 	"github.com/robfig/cron/v3"
 	"go.yaml.in/yaml/v4"

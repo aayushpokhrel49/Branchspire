@@ -9,8 +9,8 @@ import (
 	"strings"
 	"time"
 
-	"branchspire/modules/json"
-	"branchspire/modules/log"
+	"code.gitea.io/gitea/modules/json"
+	"code.gitea.io/gitea/modules/log"
 
 	"github.com/santhosh-tekuri/jsonschema/v6"
 	"go.yaml.in/yaml/v4"

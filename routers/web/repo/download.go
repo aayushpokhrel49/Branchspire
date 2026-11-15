@@ -7,16 +7,16 @@ package repo
 import (
 	"time"
 
-	auth_model "branchspire/models/auth"
-	git_model "branchspire/models/git"
-	"branchspire/modules/git"
-	"branchspire/modules/httpcache"
-	"branchspire/modules/httplib"
-	"branchspire/modules/lfs"
-	"branchspire/modules/setting"
-	"branchspire/modules/storage"
-	"branchspire/routers/common"
-	"branchspire/services/context"
+	auth_model "code.gitea.io/gitea/models/auth"
+	git_model "code.gitea.io/gitea/models/git"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/httpcache"
+	"code.gitea.io/gitea/modules/httplib"
+	"code.gitea.io/gitea/modules/lfs"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/storage"
+	"code.gitea.io/gitea/routers/common"
+	"code.gitea.io/gitea/services/context"
 )
 
 func checkDownloadTokenScope(ctx *context.Context) bool {

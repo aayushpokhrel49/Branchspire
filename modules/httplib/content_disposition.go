@@ -7,7 +7,7 @@ import (
 	"mime"
 	"strings"
 
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modules/setting"
 )
 
 type ContentDispositionType string

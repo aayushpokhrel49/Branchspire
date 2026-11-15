@@ -6,8 +6,8 @@ package v1_20
 import (
 	"context"
 
-	"branchspire/modelmigration/base"
-	"branchspire/modules/timeutil"
+	"code.gitea.io/gitea/modelmigration/base"
+	"code.gitea.io/gitea/modules/timeutil"
 )
 
 func AddArchivedUnixToRepository(_ context.Context, x base.EngineMigration) error {

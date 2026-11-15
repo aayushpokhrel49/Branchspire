@@ -7,11 +7,11 @@ import (
 	"bytes"
 	"net/http"
 
-	"branchspire/modules/git"
-	"branchspire/modules/util"
-	"branchspire/services/context"
-	"branchspire/services/forms"
-	"branchspire/services/repository/files"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/services/context"
+	"code.gitea.io/gitea/services/forms"
+	"code.gitea.io/gitea/services/repository/files"
 )
 
 func CherryPick(ctx *context.Context) {

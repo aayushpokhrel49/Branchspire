@@ -9,7 +9,7 @@ import (
 	"sort"
 	"strings"
 
-	"branchspire/modules/json"
+	"code.gitea.io/gitea/modules/json"
 
 	"github.com/getkin/kin-openapi/openapi2"
 	"github.com/getkin/kin-openapi/openapi2conv"

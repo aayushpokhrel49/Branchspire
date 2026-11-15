@@ -10,11 +10,11 @@ import (
 	"net/http"
 	"net/url"
 
-	packages_model "branchspire/models/packages"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
-	"branchspire/services/context"
+	packages_model "code.gitea.io/gitea/models/packages"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/services/context"
 )
 
 // PackageErrorStatus returns the status to report for a package lookup error

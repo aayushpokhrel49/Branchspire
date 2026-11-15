@@ -6,7 +6,7 @@ package gitrepo
 import (
 	"strings"
 
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/util"
 )
 
 func RepoCodeGitRepoRelativePath(ownerName, repoName string) string {

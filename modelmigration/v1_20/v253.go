@@ -6,8 +6,8 @@ package v1_20
 import (
 	"context"
 
-	"branchspire/modelmigration/base"
-	"branchspire/modules/log"
+	"code.gitea.io/gitea/modelmigration/base"
+	"code.gitea.io/gitea/modules/log"
 )
 
 func FixExternalTrackerAndExternalWikiAccessModeInOwnerAndAdminTeam(_ context.Context, x base.EngineMigration) error {

@@ -6,9 +6,9 @@ package auth
 import (
 	"net/http"
 
-	deploykey_model "branchspire/models/deploykey"
-	user_model "branchspire/models/user"
-	"branchspire/modules/log"
+	deploykey_model "code.gitea.io/gitea/models/deploykey"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/log"
 )
 
 var _ Method = &DeployToken{}

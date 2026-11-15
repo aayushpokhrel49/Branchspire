@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"branchspire/modules/optional"
+	"code.gitea.io/gitea/modules/optional"
 )
 
 // GitPushOptions is a wrapper around a map[string]string

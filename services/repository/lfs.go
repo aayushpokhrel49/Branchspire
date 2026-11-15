@@ -9,14 +9,14 @@ import (
 	"fmt"
 	"time"
 
-	git_model "branchspire/models/git"
-	repo_model "branchspire/models/repo"
-	"branchspire/modules/git"
-	"branchspire/modules/lfs"
-	"branchspire/modules/log"
-	repo_module "branchspire/modules/repository"
-	"branchspire/modules/setting"
-	"branchspire/modules/timeutil"
+	git_model "code.gitea.io/gitea/models/git"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/lfs"
+	"code.gitea.io/gitea/modules/log"
+	repo_module "code.gitea.io/gitea/modules/repository"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/timeutil"
 )
 
 // GarbageCollectLFSMetaObjectsOptions provides options for GarbageCollectLFSMetaObjects function

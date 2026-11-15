@@ -6,7 +6,7 @@ package actions
 import (
 	"testing"
 
-	"branchspire/models/unittest"
+	"code.gitea.io/gitea/models/unittest"
 
 	"github.com/stretchr/testify/assert"
 )

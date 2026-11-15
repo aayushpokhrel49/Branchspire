@@ -7,11 +7,11 @@ import (
 	"net/http"
 	"testing"
 
-	auth_model "branchspire/models/auth"
-	"branchspire/models/unittest"
-	user_model "branchspire/models/user"
-	api "branchspire/modules/structs"
-	"branchspire/tests"
+	auth_model "code.gitea.io/gitea/models/auth"
+	"code.gitea.io/gitea/models/unittest"
+	user_model "code.gitea.io/gitea/models/user"
+	api "code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/tests"
 
 	"github.com/stretchr/testify/require"
 )

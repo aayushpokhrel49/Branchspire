@@ -7,14 +7,14 @@ import (
 	"context"
 	"fmt"
 
-	actions_model "branchspire/models/actions"
-	"branchspire/models/db"
-	"branchspire/models/unit"
-	"branchspire/modules/commitstatus"
-	"branchspire/modules/git"
-	"branchspire/modules/log"
-	"branchspire/modules/timeutil"
-	"branchspire/modules/util"
+	actions_model "code.gitea.io/gitea/models/actions"
+	"code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/models/unit"
+	"code.gitea.io/gitea/modules/commitstatus"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/timeutil"
+	"code.gitea.io/gitea/modules/util"
 )
 
 func handleInvalidWorkflows(ctx context.Context, input *notifyInput, ref git.RefName, commit *git.Commit, invalid map[string]error) {

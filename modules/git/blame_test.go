@@ -6,7 +6,7 @@ package git
 import (
 	"testing"
 
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modules/setting"
 
 	"github.com/stretchr/testify/assert"
 )

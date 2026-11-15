@@ -13,10 +13,10 @@ import (
 	"testing"
 	"time"
 
-	"branchspire/models/db"
-	"branchspire/modules/indexer/issues/internal"
-	"branchspire/modules/optional"
-	"branchspire/modules/timeutil"
+	"code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/modules/indexer/issues/internal"
+	"code.gitea.io/gitea/modules/optional"
+	"code.gitea.io/gitea/modules/timeutil"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

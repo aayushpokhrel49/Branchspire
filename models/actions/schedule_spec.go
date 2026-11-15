@@ -8,9 +8,9 @@ import (
 	"strings"
 	"time"
 
-	"branchspire/models/db"
-	repo_model "branchspire/models/repo"
-	"branchspire/modules/timeutil"
+	"code.gitea.io/gitea/models/db"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/modules/timeutil"
 
 	"github.com/robfig/cron/v3"
 )

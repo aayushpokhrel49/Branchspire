@@ -12,14 +12,14 @@ import (
 	"path"
 	"strings"
 
-	"branchspire/modules/assetfs"
-	"branchspire/modules/avatar"
-	"branchspire/modules/httpcache"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
-	"branchspire/modules/storage"
-	"branchspire/modules/util"
-	"branchspire/modules/web/routing"
+	"code.gitea.io/gitea/modules/assetfs"
+	"code.gitea.io/gitea/modules/avatar"
+	"code.gitea.io/gitea/modules/httpcache"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/storage"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/modules/web/routing"
 )
 
 func avatarStorageHandler(storageSetting *setting.Storage, prefix string, objStore storage.ObjectStorage) http.HandlerFunc {

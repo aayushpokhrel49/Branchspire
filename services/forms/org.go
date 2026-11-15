@@ -5,8 +5,8 @@
 package forms
 
 import (
-	"branchspire/modules/structs"
-	"branchspire/modules/web/middleware"
+	"code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/modules/web/middleware"
 )
 
 // ________                            .__                __  .__

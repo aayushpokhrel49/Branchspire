@@ -10,8 +10,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"branchspire/modules/git/gitcmd"
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modules/git/gitcmd"
+	"code.gitea.io/gitea/modules/setting"
 )
 
 // ReadTreeToIndex reads a treeish to the index

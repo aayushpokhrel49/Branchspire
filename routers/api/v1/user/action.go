@@ -7,17 +7,17 @@ import (
 	"errors"
 	"net/http"
 
-	actions_model "branchspire/models/actions"
-	"branchspire/models/db"
-	api "branchspire/modules/structs"
-	"branchspire/modules/util"
-	"branchspire/modules/web"
-	"branchspire/routers/api/v1/shared"
-	"branchspire/routers/api/v1/utils"
-	actions_service "branchspire/services/actions"
-	"branchspire/services/audit"
-	"branchspire/services/context"
-	secret_service "branchspire/services/secrets"
+	actions_model "code.gitea.io/gitea/models/actions"
+	"code.gitea.io/gitea/models/db"
+	api "code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/modules/web"
+	"code.gitea.io/gitea/routers/api/v1/shared"
+	"code.gitea.io/gitea/routers/api/v1/utils"
+	actions_service "code.gitea.io/gitea/services/actions"
+	"code.gitea.io/gitea/services/audit"
+	"code.gitea.io/gitea/services/context"
+	secret_service "code.gitea.io/gitea/services/secrets"
 )
 
 // create or update one secret of the user scope

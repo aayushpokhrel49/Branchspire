@@ -7,8 +7,8 @@ import (
 	"context"
 	"errors"
 
-	"branchspire/modules/indexer"
-	"branchspire/modules/indexer/internal"
+	"code.gitea.io/gitea/modules/indexer"
+	"code.gitea.io/gitea/modules/indexer/internal"
 )
 
 // Indexer defines an interface to indexer issues contents

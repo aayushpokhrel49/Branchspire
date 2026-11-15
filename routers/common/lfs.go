@@ -6,8 +6,8 @@ package common
 import (
 	"net/http"
 
-	"branchspire/modules/web"
-	"branchspire/services/lfs"
+	"code.gitea.io/gitea/modules/web"
+	"code.gitea.io/gitea/services/lfs"
 )
 
 const RouterMockPointCommonLFS = "common-lfs"

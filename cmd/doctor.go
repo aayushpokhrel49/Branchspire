@@ -12,13 +12,13 @@ import (
 	"strings"
 	"text/tabwriter"
 
-	"branchspire/modelmigration"
-	"branchspire/modelmigration/base"
-	"branchspire/models/db"
-	"branchspire/modules/container"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
-	"branchspire/services/doctor"
+	"code.gitea.io/gitea/modelmigration"
+	"code.gitea.io/gitea/modelmigration/base"
+	"code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/modules/container"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/services/doctor"
 
 	"github.com/urfave/cli/v3"
 )

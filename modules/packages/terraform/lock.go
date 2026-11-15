@@ -9,10 +9,10 @@ import (
 	"io"
 	"time"
 
-	"branchspire/models/db"
-	packages_model "branchspire/models/packages"
-	"branchspire/modules/json"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/models/db"
+	packages_model "code.gitea.io/gitea/models/packages"
+	"code.gitea.io/gitea/modules/json"
+	"code.gitea.io/gitea/modules/util"
 
 	"xorm.io/builder"
 )

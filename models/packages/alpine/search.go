@@ -6,8 +6,8 @@ package alpine
 import (
 	"context"
 
-	packages_model "branchspire/models/packages"
-	alpine_module "branchspire/modules/packages/alpine"
+	packages_model "code.gitea.io/gitea/models/packages"
+	alpine_module "code.gitea.io/gitea/modules/packages/alpine"
 )
 
 // GetBranches gets all available branches

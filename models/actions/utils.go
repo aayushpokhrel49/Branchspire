@@ -12,10 +12,10 @@ import (
 	"io"
 	"time"
 
-	auth_model "branchspire/models/auth"
-	"branchspire/modules/log"
-	"branchspire/modules/timeutil"
-	"branchspire/modules/util"
+	auth_model "code.gitea.io/gitea/models/auth"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/timeutil"
+	"code.gitea.io/gitea/modules/util"
 )
 
 func generateSaltedToken() (string, string, string, string) {

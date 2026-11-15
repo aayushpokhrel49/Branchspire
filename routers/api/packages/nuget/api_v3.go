@@ -7,8 +7,8 @@ import (
 	"sort"
 	"time"
 
-	packages_model "branchspire/models/packages"
-	nuget_module "branchspire/modules/packages/nuget"
+	packages_model "code.gitea.io/gitea/models/packages"
+	nuget_module "code.gitea.io/gitea/modules/packages/nuget"
 
 	"golang.org/x/text/collate"
 	"golang.org/x/text/language"

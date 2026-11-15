@@ -7,11 +7,11 @@ import (
 	"errors"
 	"strings"
 
-	git_model "branchspire/models/git"
-	repo_model "branchspire/models/repo"
-	"branchspire/modules/git"
-	"branchspire/modules/reqctx"
-	"branchspire/services/context"
+	git_model "code.gitea.io/gitea/models/git"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/reqctx"
+	"code.gitea.io/gitea/services/context"
 )
 
 type RefCommit struct {

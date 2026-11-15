@@ -9,9 +9,9 @@ import (
 	"os"
 	"strings"
 
-	"branchspire/modules/graceful"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modules/graceful"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
 )
 
 var tlsVersionStringMap = map[string]uint16{

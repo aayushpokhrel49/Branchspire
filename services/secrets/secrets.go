@@ -6,9 +6,9 @@ package secrets
 import (
 	"context"
 
-	actions_model "branchspire/models/actions"
-	"branchspire/models/db"
-	secret_model "branchspire/models/secret"
+	actions_model "code.gitea.io/gitea/models/actions"
+	"code.gitea.io/gitea/models/db"
+	secret_model "code.gitea.io/gitea/models/secret"
 )
 
 func CreateOrUpdateSecret(ctx context.Context, scope actions_model.BelongingScope, name, data, description string) (*secret_model.Secret, bool, error) {

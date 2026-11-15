@@ -6,7 +6,7 @@ package migrations
 import (
 	"context"
 
-	base "branchspire/modules/migration"
+	base "code.gitea.io/gitea/modules/migration"
 )
 
 var _ base.Downloader = &PlainGitDownloader{}

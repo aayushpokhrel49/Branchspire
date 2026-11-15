@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"os"
 
-	"branchspire/modules/private"
+	"code.gitea.io/gitea/modules/private"
 
 	"github.com/urfave/cli/v3"
 )

@@ -14,7 +14,7 @@ import (
 	"strings"
 	"sync"
 
-	"branchspire/modules/consts"
+	"code.gitea.io/gitea/modules/consts"
 )
 
 var PathNameValidator = sync.OnceValue(func() (ret struct {

@@ -10,17 +10,17 @@ import (
 	"strings"
 	"time"
 
-	"branchspire/cmd"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
-	"branchspire/services/gitproxy"
+	"code.gitea.io/gitea/cmd"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/services/gitproxy"
 
 	// register supported doc types
-	_ "branchspire/modules/markup/console"
-	_ "branchspire/modules/markup/csv"
-	_ "branchspire/modules/markup/jupyter"
-	_ "branchspire/modules/markup/markdown"
-	_ "branchspire/modules/markup/orgmode"
+	_ "code.gitea.io/gitea/modules/markup/console"
+	_ "code.gitea.io/gitea/modules/markup/csv"
+	_ "code.gitea.io/gitea/modules/markup/jupyter"
+	_ "code.gitea.io/gitea/modules/markup/markdown"
+	_ "code.gitea.io/gitea/modules/markup/orgmode"
 
 	"github.com/urfave/cli/v3"
 )

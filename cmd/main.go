@@ -12,8 +12,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
 
 	"github.com/urfave/cli/v3"
 )

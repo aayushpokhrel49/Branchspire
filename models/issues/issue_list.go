@@ -7,11 +7,11 @@ import (
 	"context"
 	"fmt"
 
-	"branchspire/models/db"
-	project_model "branchspire/models/project"
-	repo_model "branchspire/models/repo"
-	user_model "branchspire/models/user"
-	"branchspire/modules/container"
+	"code.gitea.io/gitea/models/db"
+	project_model "code.gitea.io/gitea/models/project"
+	repo_model "code.gitea.io/gitea/models/repo"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/container"
 
 	"xorm.io/builder"
 )

@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"branchspire/modules/log"
+	"code.gitea.io/gitea/modules/log"
 )
 
 const (
@@ -49,8 +49,8 @@ var (
 		Enabled:                true,
 		DefaultActionsURL:      defaultActionsURLGitHub,
 		SkipWorkflowStrings:    []string{"[skip ci]", "[ci skip]", "[no ci]", "[skip actions]", "[actions skip]"},
-		WorkflowDirs:           []string{".branchspire/workflows", ".github/workflows"},
-		ScopedWorkflowDirs:     []string{".branchspire/scoped_workflows"},
+		WorkflowDirs:           []string{".code.gitea.io/gitea/workflows", ".github/workflows"},
+		ScopedWorkflowDirs:     []string{".code.gitea.io/gitea/scoped_workflows"},
 		MaxRerunAttempts:       defaultMaxRerunAttempts,
 		MaxConcurrentTaskPicks: defaultMaxConcurrentTaskPicks,
 		ArtifactPreviewMaxSize: 10 * 1024 * 1024,

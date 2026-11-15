@@ -7,7 +7,7 @@ import (
 	"context"
 	"fmt"
 
-	"branchspire/modelmigration/base"
+	"code.gitea.io/gitea/modelmigration/base"
 )
 
 // AddGitSizeAndLFSSizeToRepositoryTable: add GitSize and LFSSize columns to Repository

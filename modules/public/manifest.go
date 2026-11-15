@@ -13,9 +13,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	"branchspire/modules/json"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modules/json"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
 )
 
 // https://vite.dev/guide/backend-integration

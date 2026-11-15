@@ -5,10 +5,10 @@ package feed_test
 import (
 	"testing"
 
-	"branchspire/models/unittest"
-	user_model "branchspire/models/user"
-	"branchspire/routers/web/feed"
-	"branchspire/services/contexttest"
+	"code.gitea.io/gitea/models/unittest"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/routers/web/feed"
+	"code.gitea.io/gitea/services/contexttest"
 
 	"github.com/stretchr/testify/assert"
 )

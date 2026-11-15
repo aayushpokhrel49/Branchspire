@@ -6,10 +6,10 @@ package repo
 import (
 	"html/template"
 
-	"branchspire/modules/htmlutil"
-	"branchspire/modules/svg"
-	"branchspire/modules/util"
-	"branchspire/services/context"
+	"code.gitea.io/gitea/modules/htmlutil"
+	"code.gitea.io/gitea/modules/svg"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/services/context"
 )
 
 type pullMergeBoxInfoItem struct {

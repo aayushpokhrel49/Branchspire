@@ -6,14 +6,14 @@ package feed
 import (
 	"time"
 
-	activities_model "branchspire/models/activities"
-	"branchspire/models/organization"
-	"branchspire/models/renderhelper"
-	user_model "branchspire/models/user"
-	"branchspire/modules/markup/markdown"
-	"branchspire/modules/setting"
-	"branchspire/services/context"
-	feed_service "branchspire/services/feed"
+	activities_model "code.gitea.io/gitea/models/activities"
+	"code.gitea.io/gitea/models/organization"
+	"code.gitea.io/gitea/models/renderhelper"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/markup/markdown"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/services/context"
+	feed_service "code.gitea.io/gitea/services/feed"
 
 	"github.com/gorilla/feeds"
 )

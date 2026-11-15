@@ -8,11 +8,11 @@ import (
 	"maps"
 	"slices"
 
-	actions_model "branchspire/models/actions"
-	"branchspire/models/db"
-	git_model "branchspire/models/git"
-	repo_model "branchspire/models/repo"
-	"branchspire/modules/log"
+	actions_model "code.gitea.io/gitea/models/actions"
+	"code.gitea.io/gitea/models/db"
+	git_model "code.gitea.io/gitea/models/git"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/modules/log"
 )
 
 // CommitActionsStatusMap maps CommitStatus.ID to the live ActionRunJob status

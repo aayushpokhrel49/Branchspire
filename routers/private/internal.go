@@ -10,16 +10,16 @@ import (
 	"net/http"
 	"strings"
 
-	audit_model "branchspire/models/audit"
-	"branchspire/modules/log"
-	"branchspire/modules/private"
-	"branchspire/modules/setting"
-	"branchspire/modules/validation"
-	"branchspire/modules/web"
-	"branchspire/modules/web/middleware"
-	"branchspire/routers/common"
-	"branchspire/routers/web/misc"
-	"branchspire/services/context"
+	audit_model "code.gitea.io/gitea/models/audit"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/private"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/validation"
+	"code.gitea.io/gitea/modules/web"
+	"code.gitea.io/gitea/modules/web/middleware"
+	"code.gitea.io/gitea/routers/common"
+	"code.gitea.io/gitea/routers/web/misc"
+	"code.gitea.io/gitea/services/context"
 )
 
 func authInternal(next http.Handler) http.Handler {

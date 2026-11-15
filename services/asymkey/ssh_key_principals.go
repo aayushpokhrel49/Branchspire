@@ -7,9 +7,9 @@ import (
 	"context"
 	"fmt"
 
-	asymkey_model "branchspire/models/asymkey"
-	"branchspire/models/db"
-	"branchspire/models/perm"
+	asymkey_model "code.gitea.io/gitea/models/asymkey"
+	"code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/models/perm"
 )
 
 // AddPrincipalKey adds new principal to database and authorized_principals file.

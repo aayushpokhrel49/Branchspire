@@ -9,7 +9,7 @@ import (
 	"net/url"
 	"os"
 
-	"branchspire/modules/lfstransfer/backend"
+	"code.gitea.io/gitea/modules/lfstransfer/backend"
 
 	"github.com/charmbracelet/git-lfs-transfer/transfer"
 )

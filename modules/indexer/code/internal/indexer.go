@@ -7,10 +7,10 @@ import (
 	"context"
 	"errors"
 
-	"branchspire/models/db"
-	repo_model "branchspire/models/repo"
-	"branchspire/modules/indexer"
-	"branchspire/modules/indexer/internal"
+	"code.gitea.io/gitea/models/db"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/modules/indexer"
+	"code.gitea.io/gitea/modules/indexer/internal"
 )
 
 // Indexer defines an interface to index and search code contents

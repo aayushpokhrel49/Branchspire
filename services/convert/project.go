@@ -8,13 +8,13 @@ import (
 	"fmt"
 	"time"
 
-	project_model "branchspire/models/project"
-	user_model "branchspire/models/user"
-	"branchspire/modules/container"
-	"branchspire/modules/httplib"
-	"branchspire/modules/log"
-	api "branchspire/modules/structs"
-	"branchspire/modules/timeutil"
+	project_model "code.gitea.io/gitea/models/project"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/container"
+	"code.gitea.io/gitea/modules/httplib"
+	"code.gitea.io/gitea/modules/log"
+	api "code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/modules/timeutil"
 )
 
 func projectTemplateTypeToString(t project_model.TemplateType) string {

@@ -7,13 +7,13 @@ import (
 	"strconv"
 	"testing"
 
-	"branchspire/models/db"
-	issues_model "branchspire/models/issues"
-	org_model "branchspire/models/organization"
-	project_model "branchspire/models/project"
-	repo_model "branchspire/models/repo"
-	"branchspire/models/unittest"
-	user_model "branchspire/models/user"
+	"code.gitea.io/gitea/models/db"
+	issues_model "code.gitea.io/gitea/models/issues"
+	org_model "code.gitea.io/gitea/models/organization"
+	project_model "code.gitea.io/gitea/models/project"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/models/unittest"
+	user_model "code.gitea.io/gitea/models/user"
 
 	"github.com/stretchr/testify/assert"
 )

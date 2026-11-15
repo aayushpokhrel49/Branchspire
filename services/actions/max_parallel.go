@@ -6,9 +6,9 @@ package actions
 import (
 	"strings"
 
+	actions_model "code.gitea.io/gitea/models/actions"
+	"code.gitea.io/gitea/modules/log"
 	"gitea.dev/actionslib/pkg/model"
-	actions_model "branchspire/models/actions"
-	"branchspire/modules/log"
 )
 
 // parseMaxParallel returns strategy.max-parallel for a job, 0 meaning unlimited.

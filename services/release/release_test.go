@@ -8,17 +8,17 @@ import (
 	"testing"
 	"time"
 
-	repo_model "branchspire/models/repo"
-	"branchspire/models/unittest"
-	user_model "branchspire/models/user"
-	"branchspire/modules/git"
-	"branchspire/modules/setting"
-	"branchspire/modules/test"
-	"branchspire/modules/timeutil"
-	"branchspire/services/attachment"
-	"branchspire/services/context/upload"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/models/unittest"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/test"
+	"code.gitea.io/gitea/modules/timeutil"
+	"code.gitea.io/gitea/services/attachment"
+	"code.gitea.io/gitea/services/context/upload"
 
-	_ "branchspire/models/actions"
+	_ "code.gitea.io/gitea/models/actions"
 
 	"github.com/stretchr/testify/assert"
 )

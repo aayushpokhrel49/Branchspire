@@ -8,8 +8,8 @@ import (
 	"errors"
 	"fmt"
 
-	auth_model "branchspire/models/auth"
-	user_model "branchspire/models/user"
+	auth_model "code.gitea.io/gitea/models/auth"
+	user_model "code.gitea.io/gitea/models/user"
 
 	"github.com/urfave/cli/v3"
 )

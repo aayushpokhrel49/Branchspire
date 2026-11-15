@@ -9,8 +9,8 @@ import (
 	"strings"
 	"sync"
 
-	"branchspire/modules/charset"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/charset"
+	"code.gitea.io/gitea/modules/util"
 )
 
 // CoAuthoredByTrailer is the canonical token for the `Co-authored-by:` git trailer.

@@ -7,10 +7,10 @@ import (
 	"strings"
 	"testing"
 
-	"branchspire/modules/htmlutil"
-	"branchspire/modules/setting"
-	"branchspire/modules/test"
-	"branchspire/modules/translation"
+	"code.gitea.io/gitea/modules/htmlutil"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/test"
+	"code.gitea.io/gitea/modules/translation"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

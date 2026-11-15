@@ -13,8 +13,8 @@ import (
 	"strings"
 	"sync"
 
-	"branchspire/modules/setting"
-	"branchspire/modules/translation"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/translation"
 )
 
 var (

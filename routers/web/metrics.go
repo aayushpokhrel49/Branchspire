@@ -7,7 +7,7 @@ import (
 	"crypto/subtle"
 	"net/http"
 
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modules/setting"
 
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 )

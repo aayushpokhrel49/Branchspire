@@ -6,13 +6,13 @@ package issues_test
 import (
 	"testing"
 
-	"branchspire/models/db"
-	issues_model "branchspire/models/issues"
-	"branchspire/models/perm"
-	"branchspire/models/perm/access"
-	repo_model "branchspire/models/repo"
-	"branchspire/models/unittest"
-	user_model "branchspire/models/user"
+	"code.gitea.io/gitea/models/db"
+	issues_model "code.gitea.io/gitea/models/issues"
+	"code.gitea.io/gitea/models/perm"
+	"code.gitea.io/gitea/models/perm/access"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/models/unittest"
+	user_model "code.gitea.io/gitea/models/user"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

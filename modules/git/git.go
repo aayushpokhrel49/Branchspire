@@ -12,13 +12,13 @@ import (
 	"path/filepath"
 	"strings"
 
-	"branchspire/modules/cache"
-	"branchspire/modules/git/gitcmd"
-	"branchspire/modules/globallock"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
-	"branchspire/modules/tempdir"
-	"branchspire/modules/testlogger"
+	"code.gitea.io/gitea/modules/cache"
+	"code.gitea.io/gitea/modules/git/gitcmd"
+	"code.gitea.io/gitea/modules/globallock"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/tempdir"
+	"code.gitea.io/gitea/modules/testlogger"
 
 	"github.com/hashicorp/go-version"
 )

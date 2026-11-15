@@ -14,7 +14,7 @@ import (
 	"strings"
 	"time"
 
-	"branchspire/models/db"
+	"code.gitea.io/gitea/models/db"
 )
 
 var defaultFileBlockSize int64 = 32 * 1024

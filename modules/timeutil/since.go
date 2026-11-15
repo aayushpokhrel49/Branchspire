@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"branchspire/modules/translation"
+	"code.gitea.io/gitea/modules/translation"
 )
 
 // Seconds-based time units

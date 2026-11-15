@@ -6,14 +6,14 @@ package notify
 import (
 	"context"
 
-	actions_model "branchspire/models/actions"
-	git_model "branchspire/models/git"
-	issues_model "branchspire/models/issues"
-	packages_model "branchspire/models/packages"
-	repo_model "branchspire/models/repo"
-	user_model "branchspire/models/user"
-	"branchspire/modules/git"
-	"branchspire/modules/repository"
+	actions_model "code.gitea.io/gitea/models/actions"
+	git_model "code.gitea.io/gitea/models/git"
+	issues_model "code.gitea.io/gitea/models/issues"
+	packages_model "code.gitea.io/gitea/models/packages"
+	repo_model "code.gitea.io/gitea/models/repo"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/repository"
 )
 
 // Notifier defines an interface to notify receiver

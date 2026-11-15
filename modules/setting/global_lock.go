@@ -4,8 +4,8 @@
 package setting
 
 import (
-	"branchspire/modules/log"
-	"branchspire/modules/nosql"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/nosql"
 )
 
 // GlobalLock represents configuration of global lock

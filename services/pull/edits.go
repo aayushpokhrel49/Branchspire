@@ -8,10 +8,10 @@ import (
 	"context"
 	"errors"
 
-	issues_model "branchspire/models/issues"
-	access_model "branchspire/models/perm/access"
-	unit_model "branchspire/models/unit"
-	user_model "branchspire/models/user"
+	issues_model "code.gitea.io/gitea/models/issues"
+	access_model "code.gitea.io/gitea/models/perm/access"
+	unit_model "code.gitea.io/gitea/models/unit"
+	user_model "code.gitea.io/gitea/models/user"
 )
 
 var ErrUserHasNoPermissionForAction = errors.New("user not allowed to do this action")

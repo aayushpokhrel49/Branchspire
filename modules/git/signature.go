@@ -11,8 +11,8 @@ import (
 	"strings"
 	"time"
 
-	"branchspire/modules/log"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/util"
 )
 
 // Helper to get a signature from the commit line, which looks like:

@@ -13,10 +13,10 @@ import (
 	"strings"
 	"time"
 
-	"branchspire/modules/git/foreachref"
-	"branchspire/modules/git/gitcmd"
-	"branchspire/modules/log"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/git/foreachref"
+	"code.gitea.io/gitea/modules/git/gitcmd"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/util"
 )
 
 // TagPrefix tags prefix path on the repository

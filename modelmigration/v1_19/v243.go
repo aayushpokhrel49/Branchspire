@@ -6,7 +6,7 @@ package v1_19
 import (
 	"context"
 
-	"branchspire/modelmigration/base"
+	"code.gitea.io/gitea/modelmigration/base"
 )
 
 func AddExclusiveLabel(_ context.Context, x base.EngineMigration) error {

@@ -8,17 +8,17 @@ import (
 	"net/http"
 	"strings"
 
-	"branchspire/models/organization"
-	"branchspire/models/perm"
-	"branchspire/models/perm/access"
-	repo_model "branchspire/models/repo"
-	unit_model "branchspire/models/unit"
-	user_model "branchspire/models/user"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
-	"branchspire/services/context"
-	"branchspire/services/mailer"
-	repo_service "branchspire/services/repository"
+	"code.gitea.io/gitea/models/organization"
+	"code.gitea.io/gitea/models/perm"
+	"code.gitea.io/gitea/models/perm/access"
+	repo_model "code.gitea.io/gitea/models/repo"
+	unit_model "code.gitea.io/gitea/models/unit"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/services/context"
+	"code.gitea.io/gitea/services/mailer"
+	repo_service "code.gitea.io/gitea/services/repository"
 )
 
 // Collaboration render a repository's collaboration page

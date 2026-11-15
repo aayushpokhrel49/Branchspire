@@ -15,11 +15,11 @@ import (
 	"strings"
 	"testing"
 
-	"branchspire/cmd"
-	"branchspire/models/unittest"
-	"branchspire/modules/setting"
-	"branchspire/modules/test"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/cmd"
+	"code.gitea.io/gitea/models/unittest"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/test"
+	"code.gitea.io/gitea/modules/util"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/urfave/cli/v3"

@@ -7,12 +7,12 @@ import (
 	"context"
 	"fmt"
 
-	asymkey_model "branchspire/models/asymkey"
-	audit_model "branchspire/models/audit"
-	"branchspire/models/db"
-	deploykey_model "branchspire/models/deploykey"
-	repo_model "branchspire/models/repo"
-	"branchspire/services/audit"
+	asymkey_model "code.gitea.io/gitea/models/asymkey"
+	audit_model "code.gitea.io/gitea/models/audit"
+	"code.gitea.io/gitea/models/db"
+	deploykey_model "code.gitea.io/gitea/models/deploykey"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/services/audit"
 )
 
 // DeleteRepoDeployKeys deletes all deploy keys of a repository. permissions check should be done outside

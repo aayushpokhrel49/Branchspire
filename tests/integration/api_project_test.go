@@ -10,12 +10,12 @@ import (
 	"strconv"
 	"testing"
 
-	auth_model "branchspire/models/auth"
-	issues_model "branchspire/models/issues"
-	project_model "branchspire/models/project"
-	"branchspire/models/unittest"
-	api "branchspire/modules/structs"
-	"branchspire/tests"
+	auth_model "code.gitea.io/gitea/models/auth"
+	issues_model "code.gitea.io/gitea/models/issues"
+	project_model "code.gitea.io/gitea/models/project"
+	"code.gitea.io/gitea/models/unittest"
+	api "code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/tests"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

@@ -6,10 +6,10 @@ package convert
 import (
 	"context"
 
-	"branchspire/models/packages"
-	access_model "branchspire/models/perm/access"
-	user_model "branchspire/models/user"
-	api "branchspire/modules/structs"
+	"code.gitea.io/gitea/models/packages"
+	access_model "code.gitea.io/gitea/models/perm/access"
+	user_model "code.gitea.io/gitea/models/user"
+	api "code.gitea.io/gitea/modules/structs"
 )
 
 // ToPackage convert a packages.PackageDescriptor to api.Package

@@ -7,9 +7,9 @@ import (
 	"path/filepath"
 	"runtime"
 
-	"branchspire/modules/json"
-	"branchspire/modules/log"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/json"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/util"
 )
 
 // QueueSettings represent the settings for a queue from the ini

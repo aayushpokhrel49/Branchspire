@@ -8,8 +8,8 @@ import (
 	"regexp"
 	"strings"
 
-	"branchspire/modules/log"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/util"
 )
 
 const (

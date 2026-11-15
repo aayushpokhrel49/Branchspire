@@ -15,10 +15,10 @@ import (
 	"testing"
 	"time"
 
-	auth_model "branchspire/models/auth"
-	"branchspire/modules/git"
-	"branchspire/modules/setting"
-	api "branchspire/modules/structs"
+	auth_model "code.gitea.io/gitea/models/auth"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/setting"
+	api "code.gitea.io/gitea/modules/structs"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

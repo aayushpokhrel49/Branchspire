@@ -10,7 +10,7 @@ import (
 	"strings"
 	"sync/atomic"
 
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modules/setting"
 )
 
 type RepositoryFacade interface {

@@ -7,12 +7,12 @@ import (
 	"errors"
 	"net/http"
 
-	auth_model "branchspire/models/auth"
-	user_model "branchspire/models/user"
-	"branchspire/modules/auth/httpauth"
-	api "branchspire/modules/structs"
-	"branchspire/modules/util"
-	"branchspire/services/context"
+	auth_model "code.gitea.io/gitea/models/auth"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/auth/httpauth"
+	api "code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/services/context"
 )
 
 // GetCurrentToken returns metadata about the currently authenticated token.

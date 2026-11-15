@@ -8,8 +8,8 @@ import (
 	"net/http"
 	"sync"
 
-	"branchspire/modules/egress"
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modules/egress"
+	"code.gitea.io/gitea/modules/setting"
 )
 
 // getMigrationHTTPClient returns the shared migration client, so downloads from one host reuse its connections

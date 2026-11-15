@@ -7,13 +7,13 @@ import (
 	"testing"
 	"time"
 
-	repo_model "branchspire/models/repo"
-	"branchspire/models/unittest"
-	"branchspire/modules/json"
-	"branchspire/modules/util"
-	"branchspire/services/contexttest"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/models/unittest"
+	"code.gitea.io/gitea/modules/json"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/services/contexttest"
 
-	_ "branchspire/models/actions"
+	_ "code.gitea.io/gitea/models/actions"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

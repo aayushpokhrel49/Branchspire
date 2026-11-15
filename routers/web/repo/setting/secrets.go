@@ -7,14 +7,14 @@ import (
 	"errors"
 	"net/http"
 
-	actions_model "branchspire/models/actions"
-	repo_model "branchspire/models/repo"
-	user_model "branchspire/models/user"
-	"branchspire/modules/setting"
-	"branchspire/modules/templates"
-	shared "branchspire/routers/web/shared/secrets"
-	shared_user "branchspire/routers/web/shared/user"
-	"branchspire/services/context"
+	actions_model "code.gitea.io/gitea/models/actions"
+	repo_model "code.gitea.io/gitea/models/repo"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/templates"
+	shared "code.gitea.io/gitea/routers/web/shared/secrets"
+	shared_user "code.gitea.io/gitea/routers/web/shared/user"
+	"code.gitea.io/gitea/services/context"
 )
 
 const (

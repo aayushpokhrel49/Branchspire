@@ -8,12 +8,12 @@ import (
 	"net/http"
 	"time"
 
-	audit_model "branchspire/models/audit"
-	"branchspire/modules/httplib"
-	"branchspire/modules/log"
-	shared_audit "branchspire/routers/web/shared/audit"
-	"branchspire/services/audit"
-	"branchspire/services/context"
+	audit_model "code.gitea.io/gitea/models/audit"
+	"code.gitea.io/gitea/modules/httplib"
+	"code.gitea.io/gitea/modules/log"
+	shared_audit "code.gitea.io/gitea/routers/web/shared/audit"
+	"code.gitea.io/gitea/services/audit"
+	"code.gitea.io/gitea/services/context"
 )
 
 const auditExportPageSize = 1000

@@ -13,9 +13,9 @@ import (
 	"testing"
 	"time"
 
-	"branchspire/modules/log"
-	"branchspire/modules/queue"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/queue"
+	"code.gitea.io/gitea/modules/util"
 )
 
 var (

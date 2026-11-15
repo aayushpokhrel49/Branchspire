@@ -13,16 +13,16 @@ import (
 	"strings"
 	"time"
 
-	"branchspire/models/db"
-	packages_model "branchspire/models/packages"
-	"branchspire/modules/optional"
-	packages_module "branchspire/modules/packages"
-	chef_module "branchspire/modules/packages/chef"
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
-	"branchspire/routers/api/packages/helper"
-	"branchspire/services/context"
-	packages_service "branchspire/services/packages"
+	"code.gitea.io/gitea/models/db"
+	packages_model "code.gitea.io/gitea/models/packages"
+	"code.gitea.io/gitea/modules/optional"
+	packages_module "code.gitea.io/gitea/modules/packages"
+	chef_module "code.gitea.io/gitea/modules/packages/chef"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/routers/api/packages/helper"
+	"code.gitea.io/gitea/services/context"
+	packages_service "code.gitea.io/gitea/services/packages"
 )
 
 func apiError(ctx *context.Context, status int, obj any) {

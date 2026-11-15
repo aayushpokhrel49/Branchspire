@@ -17,7 +17,7 @@ import (
 	"slices"
 	"strings"
 
-	"branchspire/modules/json"
+	"code.gitea.io/gitea/modules/json"
 )
 
 const (

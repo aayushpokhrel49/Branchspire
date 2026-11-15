@@ -7,9 +7,9 @@ import (
 	"fmt"
 	"testing"
 
-	"branchspire/modelmigration/migrationtest"
-	"branchspire/modules/json"
-	"branchspire/modules/timeutil"
+	"code.gitea.io/gitea/modelmigration/migrationtest"
+	"code.gitea.io/gitea/modules/json"
+	"code.gitea.io/gitea/modules/timeutil"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

@@ -14,10 +14,10 @@ import (
 	"strings"
 	"time"
 
-	"branchspire/modules/container"
-	"branchspire/modules/log"
-	"branchspire/modules/process"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/container"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/process"
+	"code.gitea.io/gitea/modules/util"
 
 	"github.com/fsnotify/fsnotify"
 )

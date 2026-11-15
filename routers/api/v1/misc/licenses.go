@@ -8,12 +8,12 @@ import (
 	"net/http"
 	"net/url"
 
-	"branchspire/modules/options"
-	repo_module "branchspire/modules/repository"
-	"branchspire/modules/setting"
-	api "branchspire/modules/structs"
-	"branchspire/modules/util"
-	"branchspire/services/context"
+	"code.gitea.io/gitea/modules/options"
+	repo_module "code.gitea.io/gitea/modules/repository"
+	"code.gitea.io/gitea/modules/setting"
+	api "code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/services/context"
 )
 
 // Returns a list of all License templates

@@ -3,7 +3,7 @@
 
 package setting
 
-import "branchspire/modules/log"
+import "code.gitea.io/gitea/modules/log"
 
 type OtherConfig struct {
 	ShowFooterVersion          bool

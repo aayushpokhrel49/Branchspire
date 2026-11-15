@@ -10,14 +10,14 @@ import (
 	"reflect"
 	"strings"
 
-	"branchspire/modules/htmlutil"
-	"branchspire/modules/public"
-	"branchspire/modules/reqctx"
-	"branchspire/modules/setting"
-	"branchspire/modules/translation"
-	"branchspire/modules/validation"
-	"branchspire/modules/web/middleware"
-	"branchspire/modules/web/types"
+	"code.gitea.io/gitea/modules/htmlutil"
+	"code.gitea.io/gitea/modules/public"
+	"code.gitea.io/gitea/modules/reqctx"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/translation"
+	"code.gitea.io/gitea/modules/validation"
+	"code.gitea.io/gitea/modules/web/middleware"
+	"code.gitea.io/gitea/modules/web/types"
 
 	"github.com/go-chi/chi/v5"
 )

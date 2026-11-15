@@ -6,8 +6,8 @@ package db
 import (
 	"context"
 
-	"branchspire/models/auth"
-	user_model "branchspire/models/user"
+	"code.gitea.io/gitea/models/auth"
+	user_model "code.gitea.io/gitea/models/user"
 )
 
 // Source is a password authentication service

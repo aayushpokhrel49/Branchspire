@@ -7,10 +7,10 @@ import (
 	"context"
 	"strconv"
 
-	"branchspire/models/db"
-	"branchspire/models/renderhelper"
-	user_model "branchspire/models/user"
-	"branchspire/modules/markup/markdown"
+	"code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/models/renderhelper"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/markup/markdown"
 
 	"xorm.io/builder"
 )

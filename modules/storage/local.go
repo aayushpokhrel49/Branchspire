@@ -13,9 +13,9 @@ import (
 	"os"
 	"path/filepath"
 
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/util"
 )
 
 var _ ObjectStorage = &LocalStorage{}

@@ -7,11 +7,11 @@ import (
 	"fmt"
 	"net/http"
 
-	"branchspire/modules/setting"
-	"branchspire/modules/templates"
-	shared "branchspire/routers/web/shared/packages"
-	shared_user "branchspire/routers/web/shared/user"
-	"branchspire/services/context"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/templates"
+	shared "code.gitea.io/gitea/routers/web/shared/packages"
+	shared_user "code.gitea.io/gitea/routers/web/shared/user"
+	"code.gitea.io/gitea/services/context"
 )
 
 const (

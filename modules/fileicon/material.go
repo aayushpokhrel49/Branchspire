@@ -8,12 +8,12 @@ import (
 	"strings"
 	"sync"
 
-	"branchspire/modules/json"
-	"branchspire/modules/log"
-	"branchspire/modules/options"
-	"branchspire/modules/setting"
-	"branchspire/modules/svg"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/json"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/options"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/svg"
+	"code.gitea.io/gitea/modules/util"
 )
 
 type materialIconRulesData struct {

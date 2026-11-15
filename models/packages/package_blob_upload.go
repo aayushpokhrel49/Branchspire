@@ -8,9 +8,9 @@ import (
 	"strings"
 	"time"
 
-	"branchspire/models/db"
-	"branchspire/modules/timeutil"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/modules/timeutil"
+	"code.gitea.io/gitea/modules/util"
 )
 
 // ErrPackageBlobUploadNotExist indicates a package blob upload not exist error

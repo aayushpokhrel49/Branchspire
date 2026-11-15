@@ -10,14 +10,14 @@ import (
 	"path"
 	"strings"
 
-	"branchspire/models/renderhelper"
-	"branchspire/models/repo"
-	"branchspire/modules/log"
-	"branchspire/modules/markup"
-	"branchspire/modules/markup/markdown"
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
-	"branchspire/services/context"
+	"code.gitea.io/gitea/models/renderhelper"
+	"code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/markup"
+	"code.gitea.io/gitea/modules/markup/markdown"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/services/context"
 )
 
 // RenderMarkup renders markup text for the /markup and /markdown endpoints

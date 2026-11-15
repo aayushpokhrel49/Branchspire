@@ -7,15 +7,15 @@ import (
 	"net/http"
 	"time"
 
-	"branchspire/models/db"
-	"branchspire/modules/graceful"
-	"branchspire/modules/graceful/releasereopen"
-	"branchspire/modules/log"
-	"branchspire/modules/private"
-	"branchspire/modules/queue"
-	"branchspire/modules/templates"
-	"branchspire/modules/web"
-	"branchspire/services/context"
+	"code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/modules/graceful"
+	"code.gitea.io/gitea/modules/graceful/releasereopen"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/private"
+	"code.gitea.io/gitea/modules/queue"
+	"code.gitea.io/gitea/modules/templates"
+	"code.gitea.io/gitea/modules/web"
+	"code.gitea.io/gitea/services/context"
 )
 
 // ReloadTemplates reloads all the templates

@@ -6,7 +6,7 @@ package oauth2_provider
 import (
 	"context"
 
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modules/setting"
 )
 
 // Init initializes the oauth source

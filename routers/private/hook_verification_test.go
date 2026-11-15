@@ -6,8 +6,8 @@ package private
 import (
 	"testing"
 
-	"branchspire/models/unittest"
-	"branchspire/modules/git"
+	"code.gitea.io/gitea/models/unittest"
+	"code.gitea.io/gitea/modules/git"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

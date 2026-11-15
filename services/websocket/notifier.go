@@ -4,8 +4,8 @@
 package websocket
 
 import (
-	notify_service "branchspire/services/notify"
-	"branchspire/services/pubsub"
+	notify_service "code.gitea.io/gitea/services/notify"
+	"code.gitea.io/gitea/services/pubsub"
 )
 
 func Init() error {

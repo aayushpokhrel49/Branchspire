@@ -12,9 +12,9 @@ import (
 	"path/filepath"
 	"strings"
 
-	"branchspire/modules/git/gitcmd"
-	"branchspire/modules/git/gitrepo"
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modules/git/gitcmd"
+	"code.gitea.io/gitea/modules/git/gitrepo"
+	"code.gitea.io/gitea/modules/setting"
 )
 
 // CreateArchive create archive content to the target path

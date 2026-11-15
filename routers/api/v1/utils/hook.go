@@ -8,17 +8,17 @@ import (
 	"strconv"
 	"strings"
 
-	"branchspire/models/db"
-	user_model "branchspire/models/user"
-	"branchspire/models/webhook"
-	"branchspire/modules/json"
-	"branchspire/modules/setting"
-	api "branchspire/modules/structs"
-	"branchspire/modules/util"
-	"branchspire/modules/validation"
-	webhook_module "branchspire/modules/webhook"
-	"branchspire/services/context"
-	webhook_service "branchspire/services/webhook"
+	"code.gitea.io/gitea/models/db"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/models/webhook"
+	"code.gitea.io/gitea/modules/json"
+	"code.gitea.io/gitea/modules/setting"
+	api "code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/modules/validation"
+	webhook_module "code.gitea.io/gitea/modules/webhook"
+	"code.gitea.io/gitea/services/context"
+	webhook_service "code.gitea.io/gitea/services/webhook"
 )
 
 // ListOwnerHooks lists the webhooks of the provided owner

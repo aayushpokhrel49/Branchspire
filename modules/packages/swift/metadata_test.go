@@ -10,7 +10,7 @@ import (
 	"strings"
 	"testing"
 
-	"branchspire/modules/test"
+	"code.gitea.io/gitea/modules/test"
 
 	"github.com/hashicorp/go-version"
 	"github.com/stretchr/testify/assert"

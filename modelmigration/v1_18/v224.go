@@ -6,7 +6,7 @@ package v1_18
 import (
 	"context"
 
-	"branchspire/modelmigration/base"
+	"code.gitea.io/gitea/modelmigration/base"
 )
 
 func CreateUserBadgesTable(_ context.Context, x base.EngineMigration) error {

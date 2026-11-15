@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"strings"
 
-	"branchspire/modules/container"
-	"branchspire/modules/log"
-	"branchspire/modules/setting"
+	"code.gitea.io/gitea/modules/container"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/setting"
 
 	"xorm.io/xorm/schemas"
 )

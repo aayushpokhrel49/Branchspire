@@ -6,10 +6,10 @@ package stats
 import (
 	"context"
 
-	"branchspire/models/db"
-	repo_model "branchspire/models/repo"
-	"branchspire/modules/graceful"
-	"branchspire/modules/log"
+	"code.gitea.io/gitea/models/db"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/modules/graceful"
+	"code.gitea.io/gitea/modules/log"
 )
 
 // Indexer defines an interface to index repository stats

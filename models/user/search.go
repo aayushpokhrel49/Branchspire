@@ -8,10 +8,10 @@ import (
 	"fmt"
 	"strings"
 
-	"branchspire/models/db"
-	"branchspire/modules/container"
-	"branchspire/modules/optional"
-	"branchspire/modules/structs"
+	"code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/modules/container"
+	"code.gitea.io/gitea/modules/optional"
+	"code.gitea.io/gitea/modules/structs"
 
 	"xorm.io/builder"
 )

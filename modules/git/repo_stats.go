@@ -12,8 +12,8 @@ import (
 	"strings"
 	"time"
 
-	"branchspire/modules/container"
-	"branchspire/modules/git/gitcmd"
+	"code.gitea.io/gitea/modules/container"
+	"code.gitea.io/gitea/modules/git/gitcmd"
 )
 
 // CodeActivityStats represents git statistics data

@@ -10,10 +10,10 @@ import (
 	"strconv"
 	"testing"
 
-	auth_model "branchspire/models/auth"
-	"branchspire/models/unittest"
-	"branchspire/modules/test"
-	"branchspire/tests"
+	auth_model "code.gitea.io/gitea/models/auth"
+	"code.gitea.io/gitea/models/unittest"
+	"code.gitea.io/gitea/modules/test"
+	"code.gitea.io/gitea/tests"
 
 	"github.com/go-webauthn/webauthn/protocol"
 	"github.com/go-webauthn/webauthn/webauthn"

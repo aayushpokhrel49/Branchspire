@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"strings"
 
-	"branchspire/modules/options"
+	"code.gitea.io/gitea/modules/options"
 
 	"go.yaml.in/yaml/v4"
 )

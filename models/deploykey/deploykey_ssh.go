@@ -6,10 +6,10 @@ package deploykey
 import (
 	"context"
 
-	"branchspire/models/asymkey"
-	"branchspire/models/db"
-	"branchspire/models/perm"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/models/asymkey"
+	"code.gitea.io/gitea/models/db"
+	"code.gitea.io/gitea/models/perm"
+	"code.gitea.io/gitea/modules/util"
 
 	"xorm.io/builder"
 )

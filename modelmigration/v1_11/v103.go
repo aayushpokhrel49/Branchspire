@@ -6,7 +6,7 @@ package v1_11
 import (
 	"context"
 
-	"branchspire/modelmigration/base"
+	"code.gitea.io/gitea/modelmigration/base"
 )
 
 func AddWhitelistDeployKeysToBranches(_ context.Context, x base.EngineMigration) error {

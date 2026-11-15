@@ -6,9 +6,9 @@ package context
 import (
 	"testing"
 
-	repo_model "branchspire/models/repo"
-	"branchspire/modules/setting"
-	"branchspire/modules/test"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/test"
 
 	"github.com/stretchr/testify/assert"
 )

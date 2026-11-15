@@ -8,10 +8,10 @@ import (
 	"fmt"
 	"net/url"
 
-	asymkey_model "branchspire/models/asymkey"
-	"branchspire/models/perm"
-	user_model "branchspire/models/user"
-	"branchspire/modules/setting"
+	asymkey_model "code.gitea.io/gitea/models/asymkey"
+	"code.gitea.io/gitea/models/perm"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/setting"
 )
 
 // KeyAndOwner is the response from ServNoCommand

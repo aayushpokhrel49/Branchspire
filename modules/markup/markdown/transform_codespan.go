@@ -7,7 +7,7 @@ import (
 	"bytes"
 	"strings"
 
-	"branchspire/modules/markup"
+	"code.gitea.io/gitea/modules/markup"
 
 	"github.com/microcosm-cc/bluemonday/css"
 	"github.com/yuin/goldmark/ast"

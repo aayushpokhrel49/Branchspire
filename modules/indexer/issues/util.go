@@ -8,12 +8,12 @@ import (
 	"errors"
 	"fmt"
 
-	"branchspire/models/db"
-	issue_model "branchspire/models/issues"
-	"branchspire/modules/container"
-	"branchspire/modules/indexer/issues/internal"
-	"branchspire/modules/log"
-	"branchspire/modules/queue"
+	"code.gitea.io/gitea/models/db"
+	issue_model "code.gitea.io/gitea/models/issues"
+	"code.gitea.io/gitea/modules/container"
+	"code.gitea.io/gitea/modules/indexer/issues/internal"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/queue"
 )
 
 // getIssueIndexerData returns the indexer data of an issue and a bool value indicating whether the issue exists.

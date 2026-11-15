@@ -6,8 +6,8 @@ package packages
 import (
 	"io"
 
-	"branchspire/modules/setting"
-	"branchspire/modules/util/filebuffer"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/util/filebuffer"
 )
 
 // HashedSizeReader provide methods to read, sum hashes and a Size method

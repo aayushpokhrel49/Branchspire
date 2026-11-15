@@ -10,7 +10,7 @@ import (
 	"path"
 	"time"
 
-	"branchspire/models/db"
+	"code.gitea.io/gitea/models/db"
 )
 
 /*

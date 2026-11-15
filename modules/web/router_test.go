@@ -11,10 +11,10 @@ import (
 	"strings"
 	"testing"
 
-	"branchspire/modules/setting"
-	"branchspire/modules/test"
-	"branchspire/modules/util"
-	"branchspire/modules/web/types"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/test"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/modules/web/types"
 
 	"github.com/go-chi/chi/v5"
 	"github.com/stretchr/testify/assert"

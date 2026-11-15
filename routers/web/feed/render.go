@@ -4,8 +4,8 @@
 package feed
 
 import (
-	auth_model "branchspire/models/auth"
-	"branchspire/services/context"
+	auth_model "code.gitea.io/gitea/models/auth"
+	"code.gitea.io/gitea/services/context"
 )
 
 // checkRepoFeedTokenScope ensures an API token has repository read scope before a

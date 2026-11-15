@@ -4,7 +4,7 @@
 package actions
 
 import (
-	webhook_module "branchspire/modules/webhook"
+	webhook_module "code.gitea.io/gitea/modules/webhook"
 )
 
 const (

@@ -7,13 +7,13 @@ import (
 	"net/http"
 	"strings"
 
-	user_model "branchspire/models/user"
-	chef_module "branchspire/modules/packages/chef"
-	"branchspire/modules/setting"
-	"branchspire/modules/templates"
-	"branchspire/modules/util"
-	shared "branchspire/routers/web/shared/packages"
-	"branchspire/services/context"
+	user_model "code.gitea.io/gitea/models/user"
+	chef_module "code.gitea.io/gitea/modules/packages/chef"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/templates"
+	"code.gitea.io/gitea/modules/util"
+	shared "code.gitea.io/gitea/routers/web/shared/packages"
+	"code.gitea.io/gitea/services/context"
 )
 
 const (

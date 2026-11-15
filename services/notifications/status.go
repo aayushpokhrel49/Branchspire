@@ -8,9 +8,9 @@ package notifications
 import (
 	"context"
 
-	activities_model "branchspire/models/activities"
-	user_model "branchspire/models/user"
-	notify_service "branchspire/services/notify"
+	activities_model "code.gitea.io/gitea/models/activities"
+	user_model "code.gitea.io/gitea/models/user"
+	notify_service "code.gitea.io/gitea/services/notify"
 )
 
 func SetIssueReadBy(ctx context.Context, issueID, userID int64) error {

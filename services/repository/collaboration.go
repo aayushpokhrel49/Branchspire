@@ -8,14 +8,14 @@ import (
 	"context"
 	"fmt"
 
-	audit_model "branchspire/models/audit"
-	"branchspire/models/db"
-	issues_model "branchspire/models/issues"
-	"branchspire/models/perm"
-	access_model "branchspire/models/perm/access"
-	repo_model "branchspire/models/repo"
-	user_model "branchspire/models/user"
-	"branchspire/services/audit"
+	audit_model "code.gitea.io/gitea/models/audit"
+	"code.gitea.io/gitea/models/db"
+	issues_model "code.gitea.io/gitea/models/issues"
+	"code.gitea.io/gitea/models/perm"
+	access_model "code.gitea.io/gitea/models/perm/access"
+	repo_model "code.gitea.io/gitea/models/repo"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/services/audit"
 
 	"xorm.io/builder"
 )

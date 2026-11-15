@@ -6,7 +6,7 @@ package avatar_test
 import (
 	"testing"
 
-	"branchspire/modules/avatar"
+	"code.gitea.io/gitea/modules/avatar"
 
 	"github.com/stretchr/testify/assert"
 )

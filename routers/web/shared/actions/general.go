@@ -8,13 +8,13 @@ import (
 	"slices"
 	"strconv"
 
-	actions_model "branchspire/models/actions"
-	"branchspire/models/perm"
-	repo_model "branchspire/models/repo"
-	"branchspire/models/unit"
-	"branchspire/modules/templates"
-	"branchspire/modules/util"
-	"branchspire/services/context"
+	actions_model "code.gitea.io/gitea/models/actions"
+	"code.gitea.io/gitea/models/perm"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/models/unit"
+	"code.gitea.io/gitea/modules/templates"
+	"code.gitea.io/gitea/modules/util"
+	"code.gitea.io/gitea/services/context"
 )
 
 const (

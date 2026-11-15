@@ -8,9 +8,9 @@ import (
 	"net/url"
 	"testing"
 
-	"branchspire/cmd"
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/cmd"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/util"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/urfave/cli/v3"

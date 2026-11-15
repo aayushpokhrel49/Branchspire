@@ -10,11 +10,11 @@ import (
 	"net/url"
 	"strings"
 
-	webhook_model "branchspire/models/webhook"
-	"branchspire/modules/git"
-	api "branchspire/modules/structs"
-	"branchspire/modules/util"
-	webhook_module "branchspire/modules/webhook"
+	webhook_model "code.gitea.io/gitea/models/webhook"
+	"code.gitea.io/gitea/modules/git"
+	api "code.gitea.io/gitea/modules/structs"
+	"code.gitea.io/gitea/modules/util"
+	webhook_module "code.gitea.io/gitea/modules/webhook"
 
 	dingtalk "gitea.com/lunny/dingtalk_webhook"
 )

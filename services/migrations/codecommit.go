@@ -16,11 +16,11 @@ import (
 	"strings"
 	"time"
 
-	git_module "branchspire/modules/git"
-	"branchspire/modules/json"
-	"branchspire/modules/log"
-	base "branchspire/modules/migration"
-	"branchspire/modules/structs"
+	git_module "code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/json"
+	"code.gitea.io/gitea/modules/log"
+	base "code.gitea.io/gitea/modules/migration"
+	"code.gitea.io/gitea/modules/structs"
 )
 
 var (

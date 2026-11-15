@@ -18,13 +18,13 @@ import (
 	"sync"
 	"syscall"
 
-	asymkey_model "branchspire/models/asymkey"
-	"branchspire/modules/generate"
-	"branchspire/modules/graceful"
-	"branchspire/modules/log"
-	"branchspire/modules/process"
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
+	asymkey_model "code.gitea.io/gitea/models/asymkey"
+	"code.gitea.io/gitea/modules/generate"
+	"code.gitea.io/gitea/modules/graceful"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/process"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/util"
 
 	gossh "golang.org/x/crypto/ssh"
 )

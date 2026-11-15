@@ -10,7 +10,7 @@ import (
 	"io"
 	"testing"
 
-	"branchspire/modules/zstd"
+	"code.gitea.io/gitea/modules/zstd"
 
 	"github.com/dsnet/compress/bzip2"
 	"github.com/stretchr/testify/assert"

@@ -6,11 +6,11 @@ package private
 import (
 	"net/http"
 
-	"branchspire/modules/log"
-	"branchspire/modules/private"
-	"branchspire/modules/setting"
-	"branchspire/modules/web"
-	"branchspire/services/context"
+	"code.gitea.io/gitea/modules/log"
+	"code.gitea.io/gitea/modules/private"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/web"
+	"code.gitea.io/gitea/services/context"
 )
 
 // SSHLog hook to response ssh log

@@ -6,8 +6,8 @@ package payload
 import (
 	"context"
 
-	issues_model "branchspire/models/issues"
-	"branchspire/modules/util"
+	issues_model "code.gitea.io/gitea/models/issues"
+	"code.gitea.io/gitea/modules/util"
 )
 
 const replyPayloadVersion1 byte = 1

@@ -13,8 +13,8 @@ import (
 	"strconv"
 	"strings"
 
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/util"
 )
 
 // spec: https://github.com/git-lfs/git-lfs/blob/master/docs/spec.md

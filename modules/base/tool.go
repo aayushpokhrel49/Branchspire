@@ -14,8 +14,8 @@ import (
 	"strconv"
 	"time"
 
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/util"
 )
 
 // EncodeSha256 string to sha256 hex value.

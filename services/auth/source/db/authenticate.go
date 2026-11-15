@@ -7,9 +7,9 @@ import (
 	"context"
 	"fmt"
 
-	user_model "branchspire/models/user"
-	"branchspire/modules/setting"
-	"branchspire/modules/util"
+	user_model "code.gitea.io/gitea/models/user"
+	"code.gitea.io/gitea/modules/setting"
+	"code.gitea.io/gitea/modules/util"
 )
 
 // ErrUserPasswordNotSet represents a "ErrUserPasswordNotSet" kind of error.

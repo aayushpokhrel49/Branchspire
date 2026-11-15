@@ -10,16 +10,16 @@ import (
 	"fmt"
 	"slices"
 
-	actions_model "branchspire/models/actions"
-	"branchspire/models/db"
-	git_model "branchspire/models/git"
-	issues_model "branchspire/models/issues"
-	repo_model "branchspire/models/repo"
-	"branchspire/modules/commitstatus"
-	"branchspire/modules/container"
-	"branchspire/modules/git"
-	"branchspire/modules/glob"
-	"branchspire/modules/log"
+	actions_model "code.gitea.io/gitea/models/actions"
+	"code.gitea.io/gitea/models/db"
+	git_model "code.gitea.io/gitea/models/git"
+	issues_model "code.gitea.io/gitea/models/issues"
+	repo_model "code.gitea.io/gitea/models/repo"
+	"code.gitea.io/gitea/modules/commitstatus"
+	"code.gitea.io/gitea/modules/container"
+	"code.gitea.io/gitea/modules/git"
+	"code.gitea.io/gitea/modules/glob"
+	"code.gitea.io/gitea/modules/log"
 )
 
 // MergeRequiredContextsCommitStatus returns a commit status state for given required contexts
