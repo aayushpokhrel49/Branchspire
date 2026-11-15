@@ -9,6 +9,7 @@ import (
 	"strconv"
 
 	"gitea.dev/models/db"
+	"gitea.dev/models/organization"
 	repo_model "gitea.dev/models/repo"
 	user_model "gitea.dev/models/user"
 	"gitea.dev/modules/log"
@@ -46,7 +47,42 @@ func Home(ctx *context.Context) {
 
 	ctx.Data["PageIsHome"] = true
 	ctx.Data["IsRepoIndexerEnabled"] = setting.Indexer.RepoIndexerEnabled
+	ctx.Data["AppVer"] = setting.AppVer
+	ctx.Data["NumUsers"] = user_model.CountUsers(ctx, &user_model.CountUserFilter{IsActive: optional.Some(true)})
+	numRepos, _ := repo_model.CountRepositories(ctx, repo_model.CountRepositoryOptions{})
+	ctx.Data["NumRepos"] = numRepos
+	numOrgs, _ := db.Count[organization.Organization](ctx, organization.FindOrgOptions{IncludeVisibility: structs.VisibleTypePrivate})
+	ctx.Data["NumOrgs"] = numOrgs
 	ctx.HTML(http.StatusOK, tplHome)
+}
+
+func About(ctx *context.Context) {
+	ctx.Data["PageIsAbout"] = true
+	ctx.Data["AppVer"] = setting.AppVer
+	ctx.Data["NumUsers"] = user_model.CountUsers(ctx, &user_model.CountUserFilter{IsActive: optional.Some(true)})
+	numRepos, _ := repo_model.CountRepositories(ctx, repo_model.CountRepositoryOptions{})
+	ctx.Data["NumRepos"] = numRepos
+	numOrgs, _ := db.Count[organization.Organization](ctx, organization.FindOrgOptions{IncludeVisibility: structs.VisibleTypePrivate})
+	ctx.Data["NumOrgs"] = numOrgs
+	ctx.HTML(http.StatusOK, "about")
+}
+
+// Legal renders the terms and privacy pages for this instance.
+func Legal(ctx *context.Context) {
+	page := ctx.PathParam("page")
+	switch page {
+	case "terms", "privacy":
+		ctx.Data["PageIsLegal"] = page
+	default:
+		ctx.NotFound()
+		return
+	}
+	ctx.HTML(http.StatusOK, "legal")
+}
+
+// Docs renders the BranchSpire documentation page for this instance.
+func Docs(ctx *context.Context) {
+	ctx.HTML(http.StatusOK, "docs")
 }
 
 // HomeSitemap renders the main sitemap

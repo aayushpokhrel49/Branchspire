@@ -535,6 +535,7 @@ func prepareSignUpPageData(ctx *context.Context) bool {
 
 	// Show Disabled Registration message if DisableRegistration or AllowOnlyExternalRegistration options are true
 	ctx.Data["DisableRegistration"] = setting.Service.DisableRegistration || setting.Service.AllowOnlyExternalRegistration
+	ctx.Data["PasswordLengthMin"] = setting.MinPasswordLength
 
 	return true
 }

@@ -146,7 +146,7 @@ func loadServerDomainAndURL(sec ConfigSection, protocol string) {
 
 func loadServerFrom(rootCfg ConfigProvider) {
 	sec := rootCfg.Section("server")
-	AppName = rootCfg.Section("").Key("APP_NAME").MustString("Gitea: Git with a cup of tea")
+	AppName = rootCfg.Section("").Key("APP_NAME").MustString("BranchSpire")
 
 	HTTPAddr = sec.Key("HTTP_ADDR").MustString("0.0.0.0")
 	HTTPPort = sec.Key("HTTP_PORT").MustString("3000")

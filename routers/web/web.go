@@ -516,6 +516,9 @@ func registerWebRoutes(m *web.Router, webAuth *AuthMiddleware) {
 	// Especially some AJAX requests, we can reduce middleware number to improve performance.
 
 	m.Get("/", optSignInHome, Home)
+	m.Get("/about", optSignInHome, About)
+	m.Get("/legal/{page}", optSignInHome, Legal)
+	m.Get("/docs", optSignInHome, Docs)
 	m.Get("/sitemap.xml", sitemapEnabled, optExploreSignIn, HomeSitemap)
 	m.Group("/.well-known", func() {
 		m.Get("/openid-configuration", auth.OIDCWellKnown)

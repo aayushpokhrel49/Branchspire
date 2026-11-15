@@ -37,6 +37,7 @@ func prepareLinkAccountPageData(ctx *context.Context) {
 	ctx.Data["SignUpLink"] = setting.AppSubURL + "/user/link_account_signup"
 	ctx.Data["ShowRegistrationButton"] = false
 	ctx.Data["DisableRegistration"] = setting.Service.DisableRegistration
+	ctx.Data["PasswordLengthMin"] = setting.MinPasswordLength
 
 	// FIXME: this logic is not right: captcha is enabled, but LinkAccountPostSignIn never checks for captcha
 	prepareCommonAuthPageData(ctx, CommonAuthOptions{
