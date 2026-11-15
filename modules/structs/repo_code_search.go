@@ -19,7 +19,7 @@ type CodeSearchResultItem struct {
 	URL string `json:"url"`
 	// File URL at the searched commit
 	HTMLURL string `json:"html_url"`
-	// Programming language (Gitea extension)
+	// Programming language (BranchSpire extension)
 	Language    string                 `json:"language,omitempty"`
 	Repository  *Repository            `json:"repository"`
 	TextMatches []*CodeSearchTextMatch `json:"text_matches"`

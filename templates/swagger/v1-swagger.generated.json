@@ -11,8 +11,8 @@
   ],
   "swagger": "2.0",
   "info": {
-    "description": "This documentation describes the Gitea API.",
-    "title": "Gitea API",
+    "description": "This documentation describes the BranchSpire API.",
+    "title": "BranchSpire API",
     "license": {
       "name": "MIT",
       "url": "http://opensource.org/licenses/MIT"
@@ -24182,7 +24182,7 @@
         "tags": [
           "miscellaneous"
         ],
-        "summary": "Returns the version of the Gitea application",
+        "summary": "Returns the version of the BranchSpire application",
         "operationId": "getVersion",
         "responses": {
           "200": {
@@ -25637,7 +25637,7 @@
           "x-go-name": "HTMLURL"
         },
         "language": {
-          "description": "Programming language (Gitea extension)",
+          "description": "Programming language (BranchSpire extension)",
           "type": "string",
           "x-go-name": "Language"
         },
@@ -33521,7 +33521,7 @@
           "x-go-name": "FullName"
         },
         "html_url": {
-          "description": "URL to the user's gitea page",
+          "description": "URL to the user's BranchSpire page",
           "type": "string",
           "x-go-name": "HTMLURL"
         },
@@ -35003,7 +35003,7 @@
   },
   "securityDefinitions": {
     "AccessToken": {
-      "description": "This authentication option is deprecated for removal in Gitea 1.23. Please use AuthorizationHeaderToken instead.",
+      "description": "This authentication option is deprecated for removal in BranchSpire 1.23. Please use AuthorizationHeaderToken instead.",
       "type": "apiKey",
       "name": "access_token",
       "in": "query"
@@ -35036,7 +35036,7 @@
       "in": "header"
     },
     "Token": {
-      "description": "This authentication option is deprecated for removal in Gitea 1.23. Please use AuthorizationHeaderToken instead.",
+      "description": "This authentication option is deprecated for removal in BranchSpire 1.23. Please use AuthorizationHeaderToken instead.",
       "type": "apiKey",
       "name": "token",
       "in": "query"

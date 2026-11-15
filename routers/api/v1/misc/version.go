@@ -11,11 +11,11 @@ import (
 	"gitea.dev/services/context"
 )
 
-// Version shows the version of the Gitea server
+// Version shows the version of the BranchSpire server
 func Version(ctx *context.APIContext) {
 	// swagger:operation GET /version miscellaneous getVersion
 	// ---
-	// summary: Returns the version of the Gitea application
+	// summary: Returns the version of the BranchSpire application
 	// produces:
 	// - application/json
 	// responses:

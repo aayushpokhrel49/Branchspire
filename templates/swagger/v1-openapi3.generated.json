@@ -3166,7 +3166,7 @@
             "x-go-name": "HTMLURL"
           },
           "language": {
-            "description": "Programming language (Gitea extension)",
+            "description": "Programming language (BranchSpire extension)",
             "type": "string",
             "x-go-name": "Language"
           },
@@ -11072,7 +11072,7 @@
             "x-go-name": "FullName"
           },
           "html_url": {
-            "description": "URL to the user's gitea page",
+            "description": "URL to the user's BranchSpire page",
             "format": "uri",
             "type": "string",
             "x-go-name": "HTMLURL"
@@ -11475,7 +11475,7 @@
     },
     "securitySchemes": {
       "AccessToken": {
-        "description": "This authentication option is deprecated for removal in Gitea 1.23. Please use AuthorizationHeaderToken instead.",
+        "description": "This authentication option is deprecated for removal in BranchSpire 1.23. Please use AuthorizationHeaderToken instead.",
         "in": "query",
         "name": "access_token",
         "type": "apiKey"
@@ -11509,7 +11509,7 @@
         "type": "apiKey"
       },
       "Token": {
-        "description": "This authentication option is deprecated for removal in Gitea 1.23. Please use AuthorizationHeaderToken instead.",
+        "description": "This authentication option is deprecated for removal in BranchSpire 1.23. Please use AuthorizationHeaderToken instead.",
         "in": "query",
         "name": "token",
         "type": "apiKey"
@@ -11517,12 +11517,12 @@
     }
   },
   "info": {
-    "description": "This documentation describes the Gitea API.",
+    "description": "This documentation describes the BranchSpire API.",
     "license": {
       "name": "MIT",
       "url": "http://opensource.org/licenses/MIT"
     },
-    "title": "Gitea API",
+    "title": "BranchSpire API",
     "version": "0.0.0+GITEA-API-APP-VERSION"
   },
   "openapi": "3.0.3",
@@ -37484,7 +37484,7 @@
             "$ref": "#/components/responses/ServerVersion"
           }
         },
-        "summary": "Returns the version of the Gitea application",
+        "summary": "Returns the version of the BranchSpire application",
         "tags": [
           "miscellaneous"
         ]

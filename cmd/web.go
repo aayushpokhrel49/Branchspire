@@ -114,7 +114,7 @@ func createPIDFile(pidPath string) {
 }
 
 func showWebStartupMessage(msg string) {
-	log.Info("Gitea version: %s%s", setting.AppVer, setting.AppBuiltWith)
+	log.Info("BranchSpire version: %s%s", setting.AppVer, setting.AppBuiltWith)
 	log.Info("* RunMode: %s", setting.RunMode)
 	log.Info("* AppPath: %s", setting.AppPath)
 	log.Info("* WorkPath: %s", setting.AppWorkPath)
