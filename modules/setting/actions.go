@@ -45,8 +45,14 @@ var (
 		MaxConcurrentTaskPicks int `ini:"MAX_CONCURRENT_TASK_PICKS"`
 
 		ArtifactPreviewMaxSize int64 `ini:"ARTIFACT_PREVIEW_MAX_SIZE"`
+		// EmbeddedRunner runs a BranchSpire Runner inside the web process for
+		// zero-setup workflow execution. It only self-registers when the
+		// instance has no runners, so operators with external runners are
+		// unaffected unless they explicitly enable it.
+		EmbeddedRunner bool `ini:"EMBEDDED_RUNNER"`
 	}{
-		Enabled:                true,
+		Enabled:        true,
+		EmbeddedRunner: true,
 		DefaultActionsURL:      defaultActionsURLGitHub,
 		SkipWorkflowStrings:    []string{"[skip ci]", "[ci skip]", "[no ci]", "[skip actions]", "[actions skip]"},
 		WorkflowDirs:           []string{".branchspire/workflows", ".github/workflows"},

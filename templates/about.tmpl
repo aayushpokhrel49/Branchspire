@@ -112,6 +112,7 @@
 		<div class="about-wrap about-anywhere-grid">
 			<div class="about-anywhere-copy">
 				<h2 id="about-stack-heading">{{ctx.Locale.Tr "about.stack_heading"}}</h2>
+				<p class="help">{{ctx.Locale.Tr "about.stack_ci_note"}}</p>
 			</div>
 			<dl class="about-anywhere-list is-2x2">
 				<div>
@@ -128,7 +129,9 @@
 				</div>
 				<div>
 					<dt>{{ctx.Locale.Tr "about.stack_ci_label"}}</dt>
-					<dd>{{ctx.Locale.Tr "about.stack_ci"}}</dd>
+					<dd>{{ctx.Locale.Tr "about.stack_ci"}}
+						<span class="about-ui-pill is-ok" style="margin-left: 0.5rem; font-size: 0.75rem;">{{ctx.Locale.Tr "about.stack_ci_badge"}}</span>
+					</dd>
 				</div>
 			</dl>
 		</div>

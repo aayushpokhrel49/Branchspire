@@ -44,7 +44,7 @@
 							</ul>
 						</details>
 						<div class="item-body">
-							<i>{{ctx.Locale.Tr "settings.added_on" (DateUtils.AbsoluteShort $token.CreatedUnix)}} — {{svg "octicon-info"}} {{if $token.HasUsed}}{{ctx.Locale.Tr "settings.last_used"}} <span {{if $token.HasRecentActivity}}class="tw-text-green"{{end}}>{{DateUtils.AbsoluteShort $token.UpdatedUnix}}</span>{{else}}{{ctx.Locale.Tr "settings.no_activity"}}{{end}}</i>
+							<i>{{ctx.Locale.Tr "settings.added_on" (DateUtils.AbsoluteShort $token.CreatedUnix)}}; {{svg "octicon-info"}} {{if $token.HasUsed}}{{ctx.Locale.Tr "settings.last_used"}} <span {{if $token.HasRecentActivity}}class="tw-text-green"{{end}}>{{DateUtils.AbsoluteShort $token.UpdatedUnix}}</span>{{else}}{{ctx.Locale.Tr "settings.no_activity"}}{{end}}</i>
 						</div>
 					</div>
 					<div class="item-trailing">

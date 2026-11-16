@@ -297,6 +297,26 @@
 		</div>
 
 		<h4 class="ui top attached header">
+			{{ctx.Locale.Tr "admin.config.actions_config"}}
+		</h4>
+		<div class="ui attached table segment">
+			<dl class="admin-dl-horizontal">
+				<dt>{{ctx.Locale.Tr "admin.config.actions_enabled"}}</dt>
+				<dd>{{svg (Iif .Actions.Enabled "octicon-check" "octicon-x")}}</dd>
+				<dt>{{ctx.Locale.Tr "admin.config.actions_embedded_runner"}}</dt>
+				<dd>{{svg (Iif .Actions.EmbeddedRunner "octicon-check" "octicon-x")}}</dd>
+				{{if .Actions.EmbeddedRunner}}
+					<dt>{{ctx.Locale.Tr "admin.config.actions_embedded_runner_desc"}}</dt>
+					<dd class="help">{{ctx.Locale.Tr "admin.config.actions_embedded_runner_desc"}}</dd>
+				{{end}}
+				<dt>{{ctx.Locale.Tr "admin.config.actions_workflow_dirs"}}</dt>
+				<dd>{{range $i, $dir := .Actions.WorkflowDirs}}{{if $i}}, {{end}}{{$dir}}{{end}}</dd>
+				<dt>{{ctx.Locale.Tr "admin.config.actions_default_actions_url"}}</dt>
+				<dd>{{.Actions.DefaultActionsURL}}</dd>
+			</dl>
+		</div>
+
+		<h4 class="ui top attached header">
 			{{ctx.Locale.Tr "admin.config.log_config"}}
 		</h4>
 		<div class="ui attached table segment">

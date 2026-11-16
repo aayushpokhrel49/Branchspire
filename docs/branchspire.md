@@ -122,6 +122,41 @@ there are thrown away on the next sync. New UI strings must define the
 `en-US` key, or the raw key name leaks into rendered pages (this is exactly
 how `repo.migrate.branchspire.description` surfaced).
 
+## Embedded BranchSpire Runner (zero-setup CI)
+
+BranchSpire bundles a workflow runner directly into the binary. On first
+start (or whenever the instance has zero runners), it automatically
+registers **"BranchSpire Runner (embedded)"** with the host-exec label
+`ubuntu-latest:host://-`. Jobs run as processes of the BranchSpire service
+account — no Docker, no separate registration, no runner process to manage.
+
+- Configuration: `[actions] EMBEDDED_RUNNER = true` (default). Set to
+  `false` and restart to disable.
+- The runner only activates when `CountRunners() == 0`. If you register an
+  external runner (Docker, Kubernetes, remote), the embedded runner stays
+  inactive — no conflict.
+- Identity persists in `data/runner/runner.json` across restarts.
+- Admin visibility: the config summary page (`/-/admin/config`) shows
+  "Embedded Runner ✓" with a tooltip explaining the behavior.
+- Host exec security note: workflow steps run with the BranchSpire service
+  account's privileges. For multi-tenant or public instances, disable the
+  embedded runner and register isolated external runners (Docker/Kubernetes).
+
+Example workflow (lives in `.branchspire/workflows/ci.yml`):
+
+```yaml
+name: ci
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: make test
+```
+
+Push it, open the Actions tab — it runs immediately.
+
 ## Upstream reference
 
 BranchSpire's behavior outside the customization list above follows the

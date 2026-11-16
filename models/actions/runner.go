@@ -395,6 +395,10 @@ func CreateRunner(ctx context.Context, t *ActionRunner) error {
 	return db.Insert(ctx, t)
 }
 
+func CountRunners(ctx context.Context) (int64, error) {
+	return db.GetEngine(ctx).Table("action_runner").Count(new(ActionRunner))
+}
+
 func CountRunnersWithoutBelongingOwner(ctx context.Context) (int64, error) {
 	// Only affect action runners were a owner ID is set, as actions runners
 	// could also be created on a repository.

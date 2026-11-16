@@ -27,6 +27,7 @@ import (
 	"gitea.dev/modules/util"
 	"gitea.dev/routers"
 	"gitea.dev/routers/install"
+	"gitea.dev/services/actions"
 	"gitea.dev/services/audit"
 
 	"github.com/felixge/fgprof"
@@ -232,6 +233,11 @@ func serveInstalled(c *cli.Command) error {
 	auditCtx := cliAuditContext(context.Background())
 	log.Info("Audit record output: %s", setting.Audit.RecordOutput)
 	audit.Record(auditCtx, audit_model.SystemStartup, nil, "version", setting.AppVer)
+
+	// Start the embedded BranchSpire Runner so workflows can execute
+	// without any extra setup. This runs in the web process as a
+	// background goroutine managed by the graceful shutdown framework.
+	actions.StartEmbeddedRunner()
 
 	err := listen(webRoutes, true)
 
