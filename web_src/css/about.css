@@ -1040,6 +1040,10 @@ body:has(.page-content.about-home) .home-footer-base {
   margin-top: 22px;
 }
 
+.about-anywhere-list.is-2x2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .about-anywhere-list dt {
   margin-bottom: 4px;
   color: rgb(244 244 244 / 52%);
@@ -1302,6 +1306,10 @@ body:has(.page-content.about-home) .home-footer-base {
     gap: 14px;
   }
 
+  .about-anywhere-list.is-2x2 {
+    grid-template-columns: 1fr;
+  }
+
   .about-colophon-links {
     grid-template-columns: 1fr;
     gap: 2px;
@@ -1417,7 +1425,7 @@ body:has(.page-content.about-home) .home-footer-base {
 
 .about-page:not(.about-home) {
   padding-block: clamp(40px, 6vw, 80px) var(--page-space-bottom);
-  color: var(--color-text);
+  color: var(--about-ink);
 }
 
 .about-page:not(.about-home) .about-container {
@@ -1458,15 +1466,19 @@ body:has(.page-content.about-home) .home-footer-base {
 
 .about-page:not(.about-home) .about-section-title {
   margin: 0 0 10px;
-  color: var(--color-text);
+  color: var(--about-ink);
   font-size: 1.5rem;
   line-height: 1.3;
 }
 
 .about-page:not(.about-home) .about-section p {
   margin: 0 0 12px;
-  color: var(--color-text);
+  color: var(--about-muted);
   line-height: 1.7;
+}
+
+.about-page:not(.about-home) .about-section p a {
+  color: var(--about-ui-blue-text);
 }
 
 .about-page:not(.about-home) .about-section pre {
@@ -1524,6 +1536,28 @@ body:has(.page-content.about-page:not(.about-home)) .page-footer {
 
 body:has(.page-content.about-page:not(.about-home)) .page-footer a {
   color: var(--about-ui-muted, var(--color-text-light-2));
+}
+
+/* the link-column footer keeps the paper treatment on these pages in every theme */
+body:has(.page-content.about-page:not(.about-home)) .home-footer {
+  background: var(--about-paper);
+  border-top-color: var(--about-ui-line);
+  color: var(--about-muted);
+}
+
+body:has(.page-content.about-page:not(.about-home)) .home-footer .home-brand-name,
+body:has(.page-content.about-page:not(.about-home)) .home-footer h3 {
+  color: var(--about-ink);
+}
+
+body:has(.page-content.about-page:not(.about-home)) .home-footer-brand p,
+body:has(.page-content.about-page:not(.about-home)) .home-footer nav a {
+  color: var(--about-muted);
+}
+
+body:has(.page-content.about-page:not(.about-home)) .home-footer nav a:hover,
+body:has(.page-content.about-page:not(.about-home)) .home-footer nav a:focus-visible {
+  color: var(--about-ink);
 }
 
 /* page switcher / table of contents pills */
@@ -1622,6 +1656,97 @@ body:has(.page-content.about-page:not(.about-home)) .page-footer a {
   color: var(--about-ui-muted);
   font-size: 14.5px;
   line-height: 1.6;
+}
+
+/* four-card variant (who it is for) */
+.about-principles-grid.is-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+/* about page: how it got here */
+.about-timeline {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.about-timeline-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: clamp(22px, 3vw, 30px);
+  border: 1px solid var(--about-ui-line);
+  border-radius: var(--about-radius);
+  background: var(--about-white);
+}
+
+.about-timeline-item .about-timeline-step {
+  color: var(--about-ui-icon);
+  font-family: var(--fonts-monospace);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+
+.about-timeline-item h3 {
+  color: var(--about-ink);
+  font-size: 1.4rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.about-timeline-item p {
+  color: var(--about-ui-muted);
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+
+/* why page: straight answers */
+.about-faq {
+  display: grid;
+  gap: 12px;
+  max-width: 760px;
+}
+
+.about-faq details {
+  border: 1px solid var(--about-ui-line);
+  border-radius: var(--about-radius);
+  background: var(--about-white);
+}
+
+.about-faq summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 18px;
+  color: var(--about-ink);
+  font-size: 15.5px;
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  list-style: none;
+}
+
+.about-faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.about-faq summary::after {
+  content: "+";
+  color: var(--about-ui-icon);
+  font-size: 20px;
+  line-height: 1;
+}
+
+.about-faq details[open] summary::after {
+  content: "−";
+}
+
+.about-faq details p {
+  padding: 0 18px 16px;
+  color: var(--about-muted);
+  font-size: 14.5px;
+  line-height: 1.65;
 }
 
 /* fork honesty note on the about page */
@@ -1730,6 +1855,15 @@ body:has(.page-content.about-page:not(.about-home)) .page-footer a {
     gap: 14px;
   }
 
+  .about-principles-grid.is-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-timeline {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
   .about-feature.is-reverse .about-feature-copy {
     order: 1;
   }
@@ -1757,5 +1891,9 @@ body:has(.page-content.about-page:not(.about-home)) .page-footer a {
 
   .about-legal-nav a {
     flex: 0 0 auto;
+  }
+
+  .about-principles-grid.is-4 {
+    grid-template-columns: 1fr;
   }
 }

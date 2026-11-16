@@ -8,9 +8,14 @@
 				<a href="#docs-start">{{ctx.Locale.Tr "docs.start.title"}}</a>
 				<a href="#docs-branches">{{ctx.Locale.Tr "docs.branches.title"}}</a>
 				<a href="#docs-ci">{{ctx.Locale.Tr "docs.ci.title"}}</a>
+				<a href="#docs-ssh">{{ctx.Locale.Tr "docs.ssh.title"}}</a>
+				<a href="#docs-issues">{{ctx.Locale.Tr "docs.issues.title"}}</a>
 				<a href="#docs-packages">{{ctx.Locale.Tr "docs.packages.title"}}</a>
+				<a href="#docs-webhooks">{{ctx.Locale.Tr "docs.webhooks.title"}}</a>
 				<a href="#docs-security">{{ctx.Locale.Tr "docs.security.title"}}</a>
 				<a href="#docs-api">{{ctx.Locale.Tr "docs.api.title"}}</a>
+				<a href="#docs-backup">{{ctx.Locale.Tr "docs.backup.title"}}</a>
+				<a href="#docs-migrate">{{ctx.Locale.Tr "docs.migrate.title"}}</a>
 				<a href="#docs-admin">{{ctx.Locale.Tr "docs.admin.title"}}</a>
 			</nav>
 		</header>
@@ -43,9 +48,23 @@ jobs:
       - uses: actions/checkout@v4
       - run: make test</code></pre>
 			</section>
+			<section class="about-section" id="docs-ssh">
+				<h2 class="about-section-title">{{ctx.Locale.Tr "docs.ssh.title"}}</h2>
+				<p>{{ctx.Locale.Tr "docs.ssh.desc"}}</p>
+				<pre><code>{{ctx.Locale.Tr "docs.ssh.cmd"}}</code></pre>
+			</section>
+			<section class="about-section" id="docs-issues">
+				<h2 class="about-section-title">{{ctx.Locale.Tr "docs.issues.title"}}</h2>
+				<p>{{ctx.Locale.Tr "docs.issues.desc"}}</p>
+			</section>
 			<section class="about-section" id="docs-packages">
 				<h2 class="about-section-title">{{ctx.Locale.Tr "docs.packages.title"}}</h2>
 				<p>{{ctx.Locale.Tr "docs.packages.desc"}}</p>
+			</section>
+			<section class="about-section" id="docs-webhooks">
+				<h2 class="about-section-title">{{ctx.Locale.Tr "docs.webhooks.title"}}</h2>
+				<p>{{ctx.Locale.Tr "docs.webhooks.desc"}}</p>
+				<pre><code>{{ctx.Locale.Tr "docs.webhooks.cmd"}}</code></pre>
 			</section>
 			<section class="about-section" id="docs-security">
 				<h2 class="about-section-title">{{ctx.Locale.Tr "docs.security.title"}}</h2>
@@ -56,6 +75,15 @@ jobs:
 				<p>{{ctx.Locale.Tr "docs.api.desc"}}</p>
 				<pre><code>{{ctx.Locale.Tr "docs.api.example"}}</code></pre>
 				<p><a href="{{AppSubUrl}}/api/swagger">{{ctx.Locale.Tr "docs.api.browse"}}</a></p>
+			</section>
+			<section class="about-section" id="docs-backup">
+				<h2 class="about-section-title">{{ctx.Locale.Tr "docs.backup.title"}}</h2>
+				<p>{{ctx.Locale.Tr "docs.backup.desc"}}</p>
+				<pre><code>{{ctx.Locale.Tr "docs.backup.cmd"}}</code></pre>
+			</section>
+			<section class="about-section" id="docs-migrate">
+				<h2 class="about-section-title">{{ctx.Locale.Tr "docs.migrate.title"}}</h2>
+				<p>{{ctx.Locale.Tr "docs.migrate.desc"}}</p>
 			</section>
 			<section class="about-section" id="docs-admin">
 				<h2 class="about-section-title">{{ctx.Locale.Tr "docs.admin.title"}}</h2>
