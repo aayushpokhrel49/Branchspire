@@ -1,0 +1,154 @@
+{{template "base/head" .}}
+<div role="main" aria-label="{{ctx.Locale.Tr "why.title"}}" class="page-content about-page about-home why-page">
+	<section class="about-hero" aria-labelledby="why-hero-title">
+		<div class="about-wrap about-hero-grid">
+			<div class="about-hero-copy">
+				<h1 id="why-hero-title" class="about-hero-title">{{ctx.Locale.Tr "why.title"}}</h1>
+				<p class="about-hero-lede">{{ctx.Locale.Tr "why.lede"}}</p>
+				<div class="about-hero-actions">
+					<a class="about-button" href="{{AppSubUrl}}/explore/repos">{{ctx.Locale.Tr "about.cta_explore"}}</a>
+					<a class="about-link" href="{{AppSubUrl}}/about">{{ctx.Locale.Tr "about"}}</a>
+				</div>
+			</div>
+
+			<div class="about-hero-ui" aria-hidden="true">
+				<div class="about-ui about-ui-duo" data-ui>
+					<div class="about-duo-card">
+						<strong>{{ctx.Locale.Tr "why.duo_hosted_title"}}</strong>
+						<ul>
+							<li>{{svg "octicon-x" 13}} {{ctx.Locale.Tr "why.duo_hosted_1"}}</li>
+							<li>{{svg "octicon-x" 13}} {{ctx.Locale.Tr "why.duo_hosted_2"}}</li>
+							<li>{{svg "octicon-x" 13}} {{ctx.Locale.Tr "why.duo_hosted_3"}}</li>
+						</ul>
+					</div>
+					<div class="about-duo-card is-own">
+						<strong>{{ctx.Locale.Tr "why.duo_self_title"}}</strong>
+						<ul>
+							<li>{{svg "octicon-check" 13}} {{ctx.Locale.Tr "why.duo_self_1"}}</li>
+							<li>{{svg "octicon-check" 13}} {{ctx.Locale.Tr "why.duo_self_2"}}</li>
+							<li>{{svg "octicon-check" 13}} {{ctx.Locale.Tr "why.duo_self_3"}}</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="about-anywhere" aria-labelledby="why-light-heading">
+		<div class="about-wrap about-anywhere-grid">
+			<div class="about-anywhere-copy">
+				<h2 id="why-light-heading">{{ctx.Locale.Tr "why.light_heading"}}</h2>
+				<p>{{ctx.Locale.Tr "why.light_text"}}</p>
+			</div>
+			<div class="about-anywhere-panel">
+				<div class="about-ui about-ui-terminal" data-ui aria-hidden="true">
+					<div class="about-ui-terminal-label">Terminal</div>
+					<pre><code><span class="about-terminal-prompt">$</span> ./branchspire web
+<span class="about-terminal-ok">[ok]</span> listening on http://localhost:3000
+<span class="about-terminal-ok">[ok]</span> database: sqlite3<span class="about-terminal-cursor"></span></code></pre>
+				</div>
+				<dl class="about-anywhere-list">
+					<div>
+						<dt>{{ctx.Locale.Tr "why.light_binary_label"}}</dt>
+						<dd>{{ctx.Locale.Tr "why.light_binary"}}</dd>
+					</div>
+					<div>
+						<dt>{{ctx.Locale.Tr "why.light_db_label"}}</dt>
+						<dd>{{ctx.Locale.Tr "why.light_db"}}</dd>
+					</div>
+					<div>
+						<dt>{{ctx.Locale.Tr "why.light_backup_label"}}</dt>
+						<dd>{{ctx.Locale.Tr "why.light_backup"}}</dd>
+					</div>
+				</dl>
+			</div>
+		</div>
+	</section>
+
+	<section class="about-capabilities" aria-labelledby="why-familiar-heading">
+		<div class="about-wrap">
+			<h2 id="why-familiar-heading" class="tw-hidden">{{ctx.Locale.Tr "why.familiar_heading"}}</h2>
+			<div class="about-feature-list">
+				<article class="about-feature">
+					<div class="about-feature-copy">
+						<h3>{{ctx.Locale.Tr "why.familiar_heading"}}</h3>
+						<p>{{ctx.Locale.Tr "why.familiar_text"}}</p>
+					</div>
+					<div class="about-feature-ui">
+						<div class="about-ui about-ui-review" data-ui aria-hidden="true">
+							<div class="about-ui-review-head">
+								<span class="about-ui-status">Open</span>
+								<strong>Harden webhook delivery</strong>
+								<span>#128</span>
+							</div>
+							<div class="about-ui-review-branches">
+								<span>{{svg "octicon-git-branch" 13}} fix/webhook-retry</span>
+								<span>→</span>
+								<span>main</span>
+							</div>
+							<div class="about-ui-checks">
+								<span>{{svg "octicon-check-circle-fill" 13}} Tests</span>
+								<span>{{svg "octicon-check-circle-fill" 13}} Build</span>
+								<span>{{svg "octicon-check-circle-fill" 13}} Lint</span>
+							</div>
+							<div class="about-ui-diff">
+								<div><span class="about-diff-del">−</span><code>queue: retry after 30s</code></div>
+								<div class="is-add"><span class="about-diff-add">+</span><code>queue: retry with backoff</code></div>
+							</div>
+							<div class="about-ui-comment">
+								<span class="about-ui-avatar">AP</span>
+								<p><strong>Aayush</strong> Requested changes — add the backoff test.</p>
+							</div>
+						</div>
+					</div>
+				</article>
+			</div>
+		</div>
+	</section>
+
+	<section class="about-capabilities is-last" aria-labelledby="why-fork-heading">
+		<div class="about-wrap">
+			<div class="about-feature-list">
+				<article class="about-feature is-reverse">
+					<div class="about-feature-copy">
+						<h3>{{ctx.Locale.Tr "why.fork_heading"}}</h3>
+						<p>{{ctx.Locale.Tr "why.fork_text"}}</p>
+					</div>
+					<div class="about-feature-ui">
+						<div class="about-ui about-ui-code" data-ui aria-hidden="true">
+							<div class="about-ui-code-head">
+								<span>upstream → branchspire</span>
+								<span class="about-ui-branch">{{svg "octicon-git-branch" 13}} main</span>
+							</div>
+							<div class="about-ui-code-body">
+								<div class="about-ui-code-line"><code><span class="about-diff-del">−</span> default landing and pages</code></div>
+								<div class="about-ui-code-line is-add"><code><span class="about-diff-add">+</span> BranchSpire landing, about, docs</code></div>
+								<div class="about-ui-code-line"><code><span class="about-diff-del">−</span> default mark and favicon</code></div>
+								<div class="about-ui-code-line is-add"><code><span class="about-diff-add">+</span> BranchSpire mark and favicon</code></div>
+							</div>
+						</div>
+					</div>
+				</article>
+			</div>
+			<div class="about-fork-actions">
+				<a class="about-button" href="https://github.com/aayushpokhrel49/Branchspire" target="_blank" rel="noopener noreferrer">{{ctx.Locale.Tr "why.fork_link"}}</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="about-cta" aria-labelledby="why-cta-heading">
+		<div class="about-wrap about-cta-inner">
+			<h2 id="why-cta-heading">{{ctx.Locale.Tr "why.cta_heading"}}</h2>
+			<p>{{ctx.Locale.Tr "why.cta_desc"}}</p>
+			<div class="about-cta-actions">
+				<a class="about-button" href="{{AppSubUrl}}/explore/repos">{{ctx.Locale.Tr "about.cta_explore"}}</a>
+				{{if .ShowRegistrationButton}}
+					<a class="about-link" href="{{AppSubUrl}}/user/sign_up">{{ctx.Locale.Tr "sign_up"}}</a>
+				{{else}}
+					<a class="about-link" href="{{AppSubUrl}}/user/login">{{ctx.Locale.Tr "sign_in"}}</a>
+				{{end}}
+			</div>
+		</div>
+	</section>
+</div>
+{{template "base/footer" .}}

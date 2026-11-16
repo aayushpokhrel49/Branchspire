@@ -547,3 +547,100 @@
     padding: 32px 16px;
   }
 }
+
+/* ==== mobile: repository pages and app chrome ==== */
+
+@media (max-width: 767.98px) {
+  /* section tabs: scroll in one row instead of wrapping into cramped lines */
+  .secondary-nav .ui.secondary.pointing.menu {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .secondary-nav .ui.secondary.pointing.menu::-webkit-scrollbar {
+    display: none;
+  }
+
+  .secondary-nav .ui.secondary.pointing.menu .item {
+    flex: 0 0 auto;
+  }
+
+  /* summary ribbon scrolls instead of wrapping */
+  .repository .repository-summary .sub-menu {
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .repository .repository-summary .sub-menu::-webkit-scrollbar {
+    display: none;
+  }
+
+  .repository .repository-summary .sub-menu .item {
+    flex: 0 0 auto;
+  }
+
+  /* action bar wraps; the file search takes its own full row */
+  .repository .repo-button-row {
+    flex-wrap: wrap;
+  }
+
+  .repository .repo-button-row .repo-file-search-container {
+    flex: 1 0 100%;
+  }
+
+  /* clone combo spans the panel width */
+  .clone-buttons-combo {
+    width: 100%;
+  }
+
+  .clone-buttons-combo .repo-clone-url {
+    min-width: 0;
+    flex: 1;
+  }
+
+  /* long repo names wrap instead of pushing the action buttons out */
+  .secondary-nav .repo-header .tw-text-18 {
+    overflow-wrap: anywhere;
+  }
+
+  .repository #diff-file-boxes .diff-file-box .ui.attached.header {
+    flex-wrap: wrap;
+    gap: 4px 10px;
+  }
+}
+
+@media (max-width: 620px) {
+  /* file list: drop the commit-message column, keep name + age readable */
+  #repo-files-table {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  #repo-files-table .repo-file-line {
+    grid-column: 1 / span 2;
+  }
+
+  #repo-files-table .repo-file-cell.message {
+    display: none;
+  }
+
+  #repo-files-table .repo-file-cell.name {
+    max-width: none;
+  }
+
+  #repo-files-table .repo-file-last-commit {
+    flex-wrap: wrap;
+    row-gap: 2px;
+  }
+
+  /* code view: tighter type on phones */
+  .file-view.code-view,
+  .file-view.code-view table {
+    font-size: 12px;
+  }
+
+  /* dashboard heatmap: scroll horizontally rather than overflow */
+  .dashboard .activity-heatmap-container {
+    overflow-x: auto;
+  }
+}

@@ -517,6 +517,7 @@ func registerWebRoutes(m *web.Router, webAuth *AuthMiddleware) {
 
 	m.Get("/", optSignInHome, Home)
 	m.Get("/about", optSignInHome, About)
+	m.Get("/why", optSignInHome, Why)
 	m.Get("/legal/{page}", optSignInHome, Legal)
 	m.Get("/docs", optSignInHome, Docs)
 	m.Get("/sitemap.xml", sitemapEnabled, optExploreSignIn, HomeSitemap)

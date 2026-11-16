@@ -82,7 +82,14 @@ func Legal(ctx *context.Context) {
 
 // Docs renders the BranchSpire documentation page for this instance.
 func Docs(ctx *context.Context) {
+	ctx.Data["PageIsDocs"] = true
 	ctx.HTML(http.StatusOK, "docs")
+}
+
+// Why renders the "Why BranchSpire" page for this instance.
+func Why(ctx *context.Context) {
+	ctx.Data["PageIsWhy"] = true
+	ctx.HTML(http.StatusOK, "why")
 }
 
 // HomeSitemap renders the main sitemap

@@ -30,6 +30,8 @@
 
 		{{if not (and .IsSigned .MustChangePassword)}}
 			<a class="item{{if .PageIsAbout}} active{{end}}" href="{{AppSubUrl}}/about">{{ctx.Locale.Tr "about"}}</a>
+			<a class="item{{if .PageIsWhy}} active{{end}}" href="{{AppSubUrl}}/why">{{ctx.Locale.Tr "why.nav"}}</a>
+			<a class="item{{if .PageIsDocs}} active{{end}}" href="{{AppSubUrl}}/docs">{{ctx.Locale.Tr "docs.nav"}}</a>
 		{{end}}
 
 		{{template "custom/extra_links" .}}

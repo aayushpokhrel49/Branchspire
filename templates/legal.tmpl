@@ -4,11 +4,15 @@
 		<header class="about-hero">
 			{{if eq .PageIsLegal "terms"}}
 				<h1 class="about-title">{{ctx.Locale.Tr "legal.terms.title"}}</h1>
-				<p class="about-lede">{{ctx.Locale.Tr "legal.intro"}}</p>
 			{{else}}
 				<h1 class="about-title">{{ctx.Locale.Tr "legal.privacy.title"}}</h1>
-				<p class="about-lede">{{ctx.Locale.Tr "legal.intro"}}</p>
 			{{end}}
+			<p class="about-lede">{{ctx.Locale.Tr "legal.intro"}}</p>
+			<nav class="about-legal-nav" aria-label="{{ctx.Locale.Tr "legal.privacy.title"}}">
+				<a href="{{AppSubUrl}}/legal/terms"{{if eq .PageIsLegal "terms"}} class="is-active" aria-current="page"{{end}}>{{ctx.Locale.Tr "legal.terms.title"}}</a>
+				<a href="{{AppSubUrl}}/legal/privacy"{{if ne .PageIsLegal "terms"}} class="is-active" aria-current="page"{{end}}>{{ctx.Locale.Tr "legal.privacy.title"}}</a>
+			</nav>
+			<p class="about-updated">{{ctx.Locale.Tr "legal.updated"}}</p>
 		</header>
 		<div class="about-sections">
 			{{if eq .PageIsLegal "terms"}}

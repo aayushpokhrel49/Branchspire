@@ -4,22 +4,33 @@
 		<header class="about-hero">
 			<h1 class="about-title">{{ctx.Locale.Tr "docs.title"}}</h1>
 			<p class="about-lede">{{ctx.Locale.Tr "docs.intro"}}</p>
+			<nav class="about-legal-nav docs-toc" aria-label="{{ctx.Locale.Tr "docs.toc_label"}}">
+				<a href="#docs-start">{{ctx.Locale.Tr "docs.start.title"}}</a>
+				<a href="#docs-branches">{{ctx.Locale.Tr "docs.branches.title"}}</a>
+				<a href="#docs-ci">{{ctx.Locale.Tr "docs.ci.title"}}</a>
+				<a href="#docs-packages">{{ctx.Locale.Tr "docs.packages.title"}}</a>
+				<a href="#docs-security">{{ctx.Locale.Tr "docs.security.title"}}</a>
+				<a href="#docs-api">{{ctx.Locale.Tr "docs.api.title"}}</a>
+				<a href="#docs-admin">{{ctx.Locale.Tr "docs.admin.title"}}</a>
+			</nav>
 		</header>
 		<div class="about-sections">
-			<section class="about-section">
+			<section class="about-section" id="docs-start">
 				<h2 class="about-section-title">{{ctx.Locale.Tr "docs.start.title"}}</h2>
 				<p>{{ctx.Locale.Tr "docs.start.desc"}}</p>
-				<pre><code>git clone https://your-server/owner/repo.git
-cd repo
-echo "# My project" &gt; README.md
-git add . &amp;&amp; git commit -m "First commit"
-git push origin main</code></pre>
+				<div class="about-ui about-ui-terminal" data-ui aria-hidden="true">
+					<div class="about-ui-terminal-label">Terminal</div>
+					<pre><code><span class="about-terminal-prompt">$</span> git clone https://your-server/owner/repo.git
+<span class="about-terminal-prompt">$</span> cd repo &amp;&amp; echo "# My project" &gt; README.md
+<span class="about-terminal-prompt">$</span> git add . &amp;&amp; git commit -m "First commit"
+<span class="about-terminal-prompt">$</span> git push origin main<span class="about-terminal-cursor"></span></code></pre>
+				</div>
 			</section>
-			<section class="about-section">
+			<section class="about-section" id="docs-branches">
 				<h2 class="about-section-title">{{ctx.Locale.Tr "docs.branches.title"}}</h2>
 				<p>{{ctx.Locale.Tr "docs.branches.desc"}}</p>
 			</section>
-			<section class="about-section">
+			<section class="about-section" id="docs-ci">
 				<h2 class="about-section-title">{{ctx.Locale.Tr "docs.ci.title"}}</h2>
 				<p>{{ctx.Locale.Tr "docs.ci.desc"}}</p>
 				<p>{{ctx.Locale.Tr "docs.steps.title"}}</p>
@@ -32,15 +43,23 @@ jobs:
       - uses: actions/checkout@v4
       - run: make test</code></pre>
 			</section>
-			<section class="about-section">
+			<section class="about-section" id="docs-packages">
+				<h2 class="about-section-title">{{ctx.Locale.Tr "docs.packages.title"}}</h2>
+				<p>{{ctx.Locale.Tr "docs.packages.desc"}}</p>
+			</section>
+			<section class="about-section" id="docs-security">
 				<h2 class="about-section-title">{{ctx.Locale.Tr "docs.security.title"}}</h2>
 				<p>{{ctx.Locale.Tr "docs.security.desc"}}</p>
 			</section>
-			<section class="about-section">
+			<section class="about-section" id="docs-api">
 				<h2 class="about-section-title">{{ctx.Locale.Tr "docs.api.title"}}</h2>
 				<p>{{ctx.Locale.Tr "docs.api.desc"}}</p>
 				<pre><code>{{ctx.Locale.Tr "docs.api.example"}}</code></pre>
 				<p><a href="{{AppSubUrl}}/api/swagger">{{ctx.Locale.Tr "docs.api.browse"}}</a></p>
+			</section>
+			<section class="about-section" id="docs-admin">
+				<h2 class="about-section-title">{{ctx.Locale.Tr "docs.admin.title"}}</h2>
+				<p>{{ctx.Locale.Tr "docs.admin.desc"}}</p>
 			</section>
 		</div>
 	</div>
