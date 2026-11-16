@@ -83,7 +83,7 @@ func Test_WorkflowDirs(t *testing.T) {
 		{
 			name:     "default",
 			iniStr:   `[actions]`,
-			wantDirs: []string{".gitea/workflows", ".github/workflows"},
+			wantDirs: []string{".branchspire/workflows", ".github/workflows"},
 		},
 		{
 			name:     "single dir",

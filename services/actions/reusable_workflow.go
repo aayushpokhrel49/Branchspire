@@ -542,14 +542,14 @@ func insertCallerChildren(ctx context.Context, run *actions_model.ActionRun, att
 // It first rewrites an absolute URL pointing to this instance into the cross-repo form (rejecting external URLs),
 // then validates the syntax via model.ParseReusableWorkflowUses.
 func ResolveUses(ctx context.Context, uses string) (*model.ReusableWorkflowUses, error) {
-	// Rewrite a local-instance URL to the equivalent cross-repo form "owner/repo/.gitea/workflows/file.yml@ref".
+	// Rewrite a local-instance URL to the equivalent cross-repo form "owner/repo/.branchspire/workflows/file.yml@ref".
 	if strings.HasPrefix(uses, "http://") || strings.HasPrefix(uses, "https://") {
 		// ParseGiteaSiteURL returns nil for URLs that do not belong to this instance.
 		gsu := httplib.ParseGiteaSiteURL(ctx, uses)
 		if gsu == nil {
 			return nil, fmt.Errorf("unsupported reusable workflow URL %q: an absolute URL must point to this Gitea instance (%s)", uses, setting.AppURL)
 		}
-		// RoutePath is the instance-relative path (AppSubURL already stripped), e.g. "/owner/repo/.gitea/workflows/file.yml@ref".
+		// RoutePath is the instance-relative path (AppSubURL already stripped), e.g. "/owner/repo/.branchspire/workflows/file.yml@ref".
 		uses = strings.TrimPrefix(gsu.RoutePath, "/")
 	}
 	ref, err := model.ParseReusableWorkflowUses(uses)
