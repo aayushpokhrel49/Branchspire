@@ -82,3 +82,19 @@ export function initRepoFileSearch() {
     }).mount(el);
   });
 }
+
+export function initRepoFileSearchMobile() {
+  registerGlobalInitFunc('initRepoFileSearchMobile', (el) => {
+    el.addEventListener('click', () => {
+      const row = el.closest('.repo-button-row');
+      const container = row?.querySelector('.repo-file-search-container');
+      if (!row || !container) return;
+
+      const open = row.classList.toggle('mobile-file-search-open');
+      if (open) {
+        // the dropdown closes after this click, focus once the search row is visible
+        requestAnimationFrame(() => container.querySelector('input')?.focus());
+      }
+    });
+  });
+}

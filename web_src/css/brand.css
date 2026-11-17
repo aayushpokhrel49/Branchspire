@@ -580,13 +580,46 @@
     flex: 0 0 auto;
   }
 
-  /* action bar wraps; the file search takes its own full row */
+  /* action bar: branch and Code share a row; file actions move into the overflow menu */
   .repository .repo-button-row {
     flex-wrap: wrap;
   }
 
-  .repository .repo-button-row .repo-file-search-container {
+  .repository .repo-button-row-right {
+    display: contents;
+  }
+
+  /* pages with a path: keep branch and actions on one line, put the path below */
+  .repository .repo-button-row-left:has(.breadcrumb) {
+    display: contents;
+  }
+
+  .repository .repo-button-row-left .breadcrumb {
+    order: 10;
     flex: 1 0 100%;
+  }
+
+  .repository .repo-button-row .repo-file-search-container {
+    display: none;
+    order: 20;
+    flex: 1 0 100%;
+  }
+
+  .repository .repo-button-row.mobile-file-search-open .repo-file-search-container {
+    display: block;
+  }
+
+  .repository .repo-button-row .repo-file-search-container .ui.input {
+    width: 100%;
+  }
+
+  .repository .repo-button-row .repo-mobile-actions {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    order: 5;
+    width: 34px;
+    padding: 0;
   }
 
   /* clone combo spans the panel width */

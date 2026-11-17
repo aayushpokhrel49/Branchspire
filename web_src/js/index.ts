@@ -15,7 +15,7 @@ import {initMarkupAnchors} from './markup/anchors.ts';
 import {initNotificationCount} from './features/notification.ts';
 import {initRepoIssueContentHistory} from './features/repo-issue-content.ts';
 import {initStopwatch} from './features/stopwatch.ts';
-import {initRepoFileSearch} from './features/repo-findfile.ts';
+import {initRepoFileSearch, initRepoFileSearchMobile} from './features/repo-findfile.ts';
 import {initMarkupContent} from './markup/content.ts';
 import {initRepoFileView} from './features/file-view.ts';
 import {initUserExternalLogins, initUserCheckAppUrl, initUserAuthPasswordToggle} from './features/user-auth.ts';
@@ -108,6 +108,7 @@ const initPerformanceTracer = callInitFunctions([
   initStopwatch,
   initTableSort,
   initRepoFileSearch,
+  initRepoFileSearchMobile,
   initCopyContent,
   initPackagesView,
 
