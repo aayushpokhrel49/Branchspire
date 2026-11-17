@@ -9,8 +9,6 @@ import (
 )
 
 // A Client manages communication with the runner.
-//
-//go:generate mockery --name Client
 type Client interface {
 	pingv1connect.PingServiceClient
 	runnerv1connect.RunnerServiceClient
