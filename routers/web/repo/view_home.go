@@ -220,6 +220,32 @@ func prepareHomeSidebarLatestRelease(ctx *context.Context) {
 	}
 }
 
+func prepareHomeSidebarContributors(ctx *context.Context) {
+	if ctx.Repo.Commit == nil {
+		return
+	}
+
+	contributors, err := repo_service.GetRepoContributors(ctx, ctx.Cache, ctx.Repo.Repository, ctx.Repo.Commit.ID.String())
+	if err != nil {
+		if !errors.Is(err, repo_service.ErrAwaitGeneration) {
+			log.Error("prepareHomeSidebarContributors: %v", err)
+		}
+		return
+	}
+
+	const avatarLimit = 8
+	displayed := contributors.Top
+	if contributors.Total > avatarLimit && len(displayed) >= avatarLimit {
+		displayed = displayed[:avatarLimit-1]
+	}
+	if len(displayed) == 0 {
+		return
+	}
+
+	ctx.Data["RepoContributors"] = displayed
+	ctx.Data["RepoContributorOverflow"] = contributors.Total - len(displayed)
+}
+
 func prepareUpstreamDivergingInfo(ctx *context.Context) {
 	if !ctx.Repo.Repository.IsFork || !ctx.Repo.RefFullName.IsBranch() || ctx.Repo.TreePath != "" {
 		return
@@ -489,6 +515,7 @@ func Home(ctx *context.Context) {
 			prepareHomeSidebarCitationFile,
 			prepareHomeSidebarLanguageStats,
 			prepareHomeSidebarLatestRelease,
+			prepareHomeSidebarContributors,
 		)
 	}
 

@@ -129,6 +129,45 @@
   color: var(--color-primary);
 }
 
+/* ---- repository page: contributors ---- */
+.repository .repo-contributors {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.repository .repo-contributor-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  overflow: hidden;
+  border: 1px solid var(--color-secondary-alpha-50);
+  border-radius: 50%;
+  background: var(--color-card);
+  color: var(--color-text-light-2);
+  font-size: 11px;
+  font-weight: var(--font-weight-semibold);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.repository a.repo-contributor-avatar:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px var(--color-primary-alpha-20);
+}
+
+.repository .repo-contributor-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.repository .repo-contributor-more {
+  font-variant-numeric: tabular-nums;
+}
+
 /* ---- repository page: button row / action bar ---- */
 .repository .repo-button-row {
   margin: 12px 0 10px;

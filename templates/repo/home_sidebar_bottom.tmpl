@@ -19,6 +19,33 @@
 		</div>
 	{{end}}
 
+	{{if .RepoContributors}}
+		<div class="divider"></div>
+		<div class="repo-home-sidebar-header">
+			<a class="item muted" href="{{.RepoLink}}/activity/contributors">
+				{{ctx.Locale.Tr "repo.activity.navbar.contributors"}}
+			</a>
+		</div>
+		<div class="repo-contributors">
+			{{range .RepoContributors}}
+				{{if .HomeLink}}
+					<a class="repo-contributor-avatar" href="{{.HomeLink}}" data-tooltip-content="{{.Name}}">
+						<img src="{{.AvatarLink}}" width="28" height="28" loading="lazy" alt="{{.Name}}">
+					</a>
+				{{else}}
+					<span class="repo-contributor-avatar" data-tooltip-content="{{.Name}}">
+						<img src="{{.AvatarLink}}" width="28" height="28" loading="lazy" alt="{{.Name}}">
+					</span>
+				{{end}}
+			{{end}}
+			{{if gt .RepoContributorOverflow 0}}
+				<a class="repo-contributor-avatar repo-contributor-more" href="{{.RepoLink}}/activity/contributors" aria-label="{{ctx.Locale.Tr "repo.contributors.view_all"}}" data-tooltip-content="{{ctx.Locale.Tr "repo.contributors.view_all"}}">
+					+{{.RepoContributorOverflow}}
+				</a>
+			{{end}}
+		</div>
+	{{end}}
+
 	{{if and (not .IsEmptyRepo) .LanguageStats}}
 		<div class="divider"></div>
 		<div class="repo-home-sidebar-header">
