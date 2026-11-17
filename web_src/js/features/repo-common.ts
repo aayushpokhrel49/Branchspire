@@ -59,7 +59,9 @@ function initRepoCloneButtonsCombo(parent: Element) {
 
   const tabHttps = parent.querySelector('.repo-clone-https');
   const tabSsh = parent.querySelector('.repo-clone-ssh');
-  const tabCli = parent.querySelector('.repo-clone-cli');
+  const tabCliEl = parent.querySelector<HTMLElement>('.repo-clone-cli');
+  // the CLI tab is hidden for now, so don't let a stored preference select it
+  const tabCli = tabCliEl && getComputedStyle(tabCliEl).display !== 'none' ? tabCliEl : null;
   const listOpenWithEditorApps = parent.querySelector('.repo-clone-with-apps');
 
   // not every tab exists in every panel, eg: the admin may disable HTTP/SSH, and the empty repo page has no Gitea CLI tab

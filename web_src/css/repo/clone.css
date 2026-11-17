@@ -30,6 +30,11 @@
   border-bottom: 3px solid currentcolor;
 }
 
+/* CLI clone is hidden for now; keep the markup for a future return */
+.repo-clone-cli {
+  display: none;
+}
+
 .clone-panel-tab + .divider {
   margin: -1px 0 0;
 }

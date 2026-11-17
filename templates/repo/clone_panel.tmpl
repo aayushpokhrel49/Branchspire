@@ -17,9 +17,7 @@
 			{{if $cloneLink.SupportHTTPS}}
 				<button type="button" class="item repo-clone-https" data-link="{{$cloneLink.HTTPS}}">HTTPS</button>
 			{{end}}
-			{{if $cloneLink.SupportSSH}}
-				<button type="button" class="item repo-clone-ssh" data-link="{{$cloneLink.SSH}}">SSH</button>
-			{{end}}
+			<button type="button" class="item repo-clone-ssh" data-link="{{$cloneLink.SSH}}">SSH</button>
 			{{if not $cloneLink.IsWikiRepo}}
 				<button type="button" class="item repo-clone-cli" data-link="{{$cloneLink.CLI}}">BranchSpire CLI</button>
 			{{end}}
