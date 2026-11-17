@@ -12,8 +12,11 @@ RUN make frontend
 FROM --platform=$BUILDPLATFORM docker.io/library/golang:1.27-alpine3.24 AS build-env
 
 ARG GITEA_VERSION
+ARG GITHUB_REF_TYPE=branch
+ARG GITHUB_REF_NAME=main
 ARG TAGS=""
 ENV TAGS="bindata timetzdata $TAGS"
+ENV GITEA_VERSION=${GITEA_VERSION:-dev}
 ARG CGO_EXTRA_CFLAGS
 
 # Build deps
@@ -25,7 +28,7 @@ WORKDIR ${GOPATH}/src/gitea.dev
 COPY go.mod go.sum ./
 RUN go mod download
 # Use COPY instead of bind mount as read-only one breaks makefile state tracking and read-write one needs binary to be moved as it's discarded.
-# ".git" directory is mounted separately later only for version data extraction.
+# Version metadata is supplied via build args, so .git is not needed in the context.
 COPY --exclude=.git/ . .
 COPY --from=frontend-build /src/public/assets public/assets
 RUN --mount=type=cache,target="/root/.cache/go-build" make generate-backend
@@ -33,9 +36,8 @@ RUN --mount=type=cache,target="/root/.cache/go-build" make generate-backend
 ARG TARGETOS
 ARG TARGETARCH
 ARG TARGETVARIANT
-# Build gitea, .git mount is required for version data
+# Build gitea; version metadata comes from build args, not a .git bind mount
 RUN --mount=type=cache,target="/root/.cache/go-build" \
-    --mount=type=bind,source=".git/",target=".git/" \
     GOOS=${TARGETOS} GOARCH=${TARGETARCH} GOARM=${TARGETVARIANT#v} make gitea
 
 COPY docker/root /tmp/local
