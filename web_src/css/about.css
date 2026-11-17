@@ -1572,6 +1572,27 @@ body:has(.page-content.about-page:not(.about-home)) .home-footer nav a:focus-vis
   color: var(--about-ink);
 }
 
+/* the docs footer follows the active theme instead of staying on paper */
+body:has(.page-content.about-page.docs-page:not(.about-home)) .page-footer,
+body:has(.page-content.about-page.docs-page:not(.about-home)) .home-footer {
+  background: var(--color-footer, var(--about-paper));
+  border-top-color: var(--color-secondary, var(--about-ui-line));
+  color: var(--color-text-light-2, var(--about-muted));
+}
+
+body:has(.page-content.about-page.docs-page:not(.about-home)) .page-footer a,
+body:has(.page-content.about-page.docs-page:not(.about-home)) .home-footer-brand p,
+body:has(.page-content.about-page.docs-page:not(.about-home)) .home-footer nav a {
+  color: var(--color-text-light-2, var(--about-muted));
+}
+
+body:has(.page-content.about-page.docs-page:not(.about-home)) .home-footer .home-brand-name,
+body:has(.page-content.about-page.docs-page:not(.about-home)) .home-footer h3,
+body:has(.page-content.about-page.docs-page:not(.about-home)) .home-footer nav a:hover,
+body:has(.page-content.about-page.docs-page:not(.about-home)) .home-footer nav a:focus-visible {
+  color: var(--color-text, var(--about-ink));
+}
+
 /* page switcher / table of contents pills */
 .about-legal-nav {
   display: flex;
