@@ -12,7 +12,7 @@ body:has(.page-content.home) {
   --home-border-subtle: rgb(244 244 244 / 8%);
   --home-green: #3fb950;
   --home-green-bg: rgb(63 185 80 / 15%);
-  --home-blue: #58a6ff;
+  --home-blue: #4361ee;
   --home-red: #f85149;
   --home-radius: 10px;
 }
@@ -559,8 +559,8 @@ body:has(.page-content.home) .page-content {
 .home-ui-pkg-tag {
   padding: 2px 6px;
   border-radius: 4px;
-  background: rgb(88 166 255 / 15%);
-  color: var(--home-blue);
+  background: color-mix(in srgb, var(--home-blue) 15%, transparent);
+  color: color-mix(in srgb, var(--home-blue) 55%, white);
   font-size: 11px;
   font-weight: var(--font-weight-semibold);
 }

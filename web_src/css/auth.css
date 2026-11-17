@@ -9,7 +9,7 @@
   --auth-line: rgb(244 244 244 / 14%);
   --auth-line-soft: rgb(244 244 244 / 8%);
   --auth-green: #3fb950;
-  --auth-blue: #58a6ff;
+  --auth-blue: #4361ee;
   --auth-pad: clamp(20px, 3vw, 44px);
   --auth-radius: 10px;
 
@@ -135,7 +135,7 @@
   align-items: center;
   gap: 5px;
   margin-left: auto;
-  color: var(--auth-blue);
+  color: color-mix(in srgb, var(--auth-blue) 55%, white);
   font-size: 11.5px;
 }
 
@@ -254,7 +254,7 @@
 
 .auth-commit-list code {
   flex: none;
-  color: var(--auth-blue);
+  color: color-mix(in srgb, var(--auth-blue) 55%, white);
   font-family: var(--fonts-monospace);
   font-size: 10.5px;
   line-height: 1.6;

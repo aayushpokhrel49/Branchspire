@@ -5,7 +5,7 @@ gitea-theme-meta-info {
 
 :root {
   --is-dark-theme: false;
-  --color-primary: #4183c4;
+  --color-primary: #4361ee;
   --color-primary-contrast: #ffffff;
   --color-primary-dark-1: color-mix(in srgb, var(--color-primary) 90%, black);
   --color-primary-dark-2: color-mix(in srgb, var(--color-primary) 80%, black);
