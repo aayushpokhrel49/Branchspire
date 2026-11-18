@@ -9,7 +9,7 @@ BranchSpire is a fork of [Gitea](https://github.com/go-gitea/gitea). It keeps
 Gitea's architecture, data model and configuration, so existing Gitea
 deployments can be migrated with minimal changes.
 
-As it is written in Go, it works across **all** the platforms and
+As it is written in Go, it works on **all** the platforms and
 architectures supported by Go, including Linux, macOS, FreeBSD/OpenBSD and
 Windows on x86, amd64, ARM, RISC-V 64 and PowerPC architectures.
 
