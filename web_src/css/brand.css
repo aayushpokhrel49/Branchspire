@@ -129,6 +129,89 @@
   color: var(--color-primary);
 }
 
+/* ---- repository page: watchers and stargazers ---- */
+.repository.watchers .user-cards > ul {
+  grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
+  gap: 12px;
+}
+
+.repository.watchers .user-cards > ul > li.ui.segment {
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  border-color: var(--color-secondary-alpha-50);
+  border-radius: 10px;
+  background: var(--color-card);
+  box-shadow: 0 1px 3px -1px var(--color-shadow);
+  transition: border-color 0.16s ease, box-shadow 0.16s ease, transform 0.16s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.repository.watchers .user-cards > ul > li.ui.segment:focus-within {
+  border-color: var(--color-primary);
+}
+
+@media (hover: hover) {
+  .repository.watchers .user-cards > ul > li.ui.segment:hover {
+    border-color: var(--color-secondary-dark-1);
+    box-shadow: 0 8px 24px -14px var(--color-shadow);
+    transform: translateY(-2px);
+  }
+}
+
+.repository.watchers .user-cards .flex-text-block {
+  min-width: 0;
+  gap: 4px;
+}
+
+.repository.watchers .user-cards a > img {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--border-radius-full);
+}
+
+.repository.watchers .user-cards .item.tw-text-xl a {
+  color: var(--color-text);
+  font-size: 15px;
+  font-weight: var(--font-weight-semibold);
+}
+
+.repository.watchers .user-cards .item.tw-text-xl a:hover {
+  color: var(--color-primary);
+}
+
+.repository.watchers .user-cards .item.flex-text-inline {
+  color: var(--color-text-light-2);
+  font-size: 12px;
+}
+
+.repository.watchers .user-cards .item.flex-text-inline .svg {
+  width: 14px;
+  height: 14px;
+  color: var(--color-text-light-2);
+}
+
+@media (max-width: 767.98px) {
+  .repository.watchers .user-cards > ul > li.ui.segment {
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .repository.watchers .user-cards a > img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .repository.watchers .user-cards > ul > li.ui.segment {
+    transition: none;
+  }
+
+  .repository.watchers .user-cards > ul > li.ui.segment:hover {
+    transform: none;
+  }
+}
+
 /* ---- repository page: contributors ---- */
 .repository .repo-contributors {
   display: flex;
@@ -590,17 +673,7 @@
 /* ==== mobile: repository pages and app chrome ==== */
 
 @media (max-width: 767.98px) {
-  /* section tabs: scroll in one row instead of wrapping into cramped lines */
-  .secondary-nav .ui.secondary.pointing.menu {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    scrollbar-width: none;
-  }
-
-  .secondary-nav .ui.secondary.pointing.menu::-webkit-scrollbar {
-    display: none;
-  }
-
+  /* <overflow-menu> collapses section tabs into its popup; scrolling the host would clip it */
   .secondary-nav .ui.secondary.pointing.menu .item {
     flex: 0 0 auto;
   }
