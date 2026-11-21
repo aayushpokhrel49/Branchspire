@@ -9,9 +9,9 @@ import (
 	"sort"
 	"strings"
 
+	runnerv1 "gitea.dev/actionslib/runner/v1"
 	"gitea.dev/internal/runner/act/model"
 
-	runnerv1 "gitea.dev/actionslib/runner/v1"
 	"go.yaml.in/yaml/v4"
 )
 

@@ -308,6 +308,8 @@
 				{{if .Actions.EmbeddedRunner}}
 					<dt>{{ctx.Locale.Tr "admin.config.actions_embedded_runner_desc"}}</dt>
 					<dd class="help">{{ctx.Locale.Tr "admin.config.actions_embedded_runner_desc"}}</dd>
+					<dt>{{ctx.Locale.Tr "admin.config.actions_embedded_runner_labels"}}</dt>
+					<dd>{{range $i, $label := .Actions.EmbeddedRunnerLabels}}{{if $i}}, {{end}}{{$label}}{{end}}</dd>
 				{{end}}
 				<dt>{{ctx.Locale.Tr "admin.config.actions_workflow_dirs"}}</dt>
 				<dd>{{range $i, $dir := .Actions.WorkflowDirs}}{{if $i}}, {{end}}{{$dir}}{{end}}</dd>

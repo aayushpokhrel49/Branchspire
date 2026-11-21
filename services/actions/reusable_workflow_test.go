@@ -32,14 +32,14 @@ func TestCheckCallerChain_Cycle(t *testing.T) {
 		error        string
 	}{
 		// A -> A: leaf's CallUses matches its direct parent's.
-		{"DirectCycle", []string{"./.gitea/workflows/a.yml", "./.gitea/workflows/a.yml"}, 0, "cycle detected"},
+		{"DirectCycle", []string{"./.branchspire/workflows/a.yml", "./.branchspire/workflows/a.yml"}, 0, "cycle detected"},
 		// A -> B -> A: leaf's CallUses matches its grandparent's.
-		{"IndirectCycle", []string{"./.gitea/workflows/a.yml", "./.gitea/workflows/b.yml", "./.gitea/workflows/a.yml"}, 0, "cycle detected"},
+		{"IndirectCycle", []string{"./.branchspire/workflows/a.yml", "./.branchspire/workflows/b.yml", "./.branchspire/workflows/a.yml"}, 0, "cycle detected"},
 		// A -> A written with both same-repo prefixes: they name the same file.
-		{"MixedPrefixCycle", []string{"./.gitea/workflows/a.yml", "$/.gitea/workflows/a.yml"}, 0, "cycle detected"},
+		{"MixedPrefixCycle", []string{"./.branchspire/workflows/a.yml", "$/.branchspire/workflows/a.yml"}, 0, "cycle detected"},
 		// Sanity: linear chain with distinct CallUses must not trip cycle detection.
-		{"NoCycle", []string{"./.gitea/workflows/a.yml", "./.gitea/workflows/b.yml", "./.gitea/workflows/c.yml"}, 0, ""},
-		{"SameLocalPathInOtherRepo", []string{"./.gitea/workflows/a.yml", "owner/lib/.gitea/workflows/lib.yml@v1", "./.gitea/workflows/a.yml"}, 2, ""},
+		{"NoCycle", []string{"./.branchspire/workflows/a.yml", "./.branchspire/workflows/b.yml", "./.branchspire/workflows/c.yml"}, 0, ""},
+		{"SameLocalPathInOtherRepo", []string{"./.branchspire/workflows/a.yml", "owner/lib/.branchspire/workflows/lib.yml@v1", "./.branchspire/workflows/a.yml"}, 2, ""},
 	} {
 		t.Run(testCase.name, func(t *testing.T) {
 			require.NoError(t, unittest.PrepareTestDatabase())
@@ -53,7 +53,7 @@ func TestCheckCallerChain_Cycle(t *testing.T) {
 				assert.ErrorContains(t, err, testCase.error)
 			}
 			if testCase.name == "MixedPrefixCycle" {
-				assert.Equal(t, canonicalCallUses(&actions_model.ActionRunJob{CallUses: "owner/repo/.gitea/workflows/a.yml@v1"}), canonicalCallUses(&actions_model.ActionRunJob{CallUses: "self:owner/repo/.gitea/workflows/a.yml@v1"}))
+				assert.Equal(t, canonicalCallUses(&actions_model.ActionRunJob{CallUses: "owner/repo/.branchspire/workflows/a.yml@v1"}), canonicalCallUses(&actions_model.ActionRunJob{CallUses: "self:owner/repo/.branchspire/workflows/a.yml@v1"}))
 			}
 		})
 	}
@@ -61,9 +61,9 @@ func TestCheckCallerChain_Cycle(t *testing.T) {
 	t.Run("ResolvedIdentityCycle", func(t *testing.T) {
 		require.NoError(t, unittest.PrepareTestDatabase())
 		chain := buildCallerChain(t,
-			"./.gitea/workflows/a.yml",
-			"owner/repo/.gitea/workflows/b.yml@v1",
-			"owner/repo/.gitea/workflows/a.yml@v1",
+			"./.branchspire/workflows/a.yml",
+			"owner/repo/.branchspire/workflows/b.yml@v1",
+			"owner/repo/.branchspire/workflows/a.yml@v1",
 		)
 		chain[1].WorkflowSourceRepoID = 4
 		chain[1].WorkflowSourceCommitSHA = "first-commit"
@@ -73,8 +73,8 @@ func TestCheckCallerChain_Cycle(t *testing.T) {
 		chain[2].WorkflowSourceCommitSHA = "second-commit"
 
 		require.NoError(t, checkCallerChain(t.Context(), chain[2]))
-		require.ErrorContains(t, checkResolvedCallerCycle(t.Context(), chain[2], 4, "first-commit", ".gitea/workflows/a.yml"), "cycle detected")
-		require.NoError(t, checkResolvedCallerCycle(t.Context(), chain[2], 4, "other-commit", ".gitea/workflows/a.yml"))
+		require.ErrorContains(t, checkResolvedCallerCycle(t.Context(), chain[2], 4, "first-commit", ".branchspire/workflows/a.yml"), "cycle detected")
+		require.NoError(t, checkResolvedCallerCycle(t.Context(), chain[2], 4, "other-commit", ".branchspire/workflows/a.yml"))
 	})
 }
 
@@ -83,7 +83,7 @@ func TestCheckCallerChain_DepthLimit(t *testing.T) {
 	makeDistinctUses := func(n int) []string {
 		out := make([]string, n)
 		for i := range out {
-			out[i] = fmt.Sprintf("./.gitea/workflows/level%d.yml", i)
+			out[i] = fmt.Sprintf("./.branchspire/workflows/level%d.yml", i)
 		}
 		return out
 	}
@@ -413,4 +413,23 @@ func TestQualifyRef(t *testing.T) {
 	assert.Equal(t, masterSHA, qualifyRef(t.Context(), repo, gitRepo, masterSHA, masterSHA))
 	assert.Equal(t, masterSHA, qualifyRef(t.Context(), repo, gitRepo, "refs/heads/master~0", masterSHA))
 	assert.Equal(t, "other-sha", qualifyRef(t.Context(), repo, gitRepo, "master", "other-sha"))
+}
+
+func TestChildCacheMode(t *testing.T) {
+	for _, tc := range []struct {
+		caller, workflow, job, want string
+		denied                      bool
+	}{
+		{"", "read", "write", "write", false},
+		{"", "read", "", "read", false},
+		{"write", "read", "", "read", false},
+		{"read", "read", "none", "none", false},
+		{"none", "", "read", "", true},
+		{"read", "", "write", "", true},
+		{"write-only", "", "read", "", true},
+	} {
+		got, err := childCacheMode(tc.caller, tc.workflow, "build", tc.job)
+		assert.Equal(t, tc.want, got, tc)
+		assert.Equal(t, tc.denied, err != nil, tc)
+	}
 }

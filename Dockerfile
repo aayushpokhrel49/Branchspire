@@ -36,9 +36,9 @@ RUN --mount=type=cache,target="/root/.cache/go-build" make generate-backend
 ARG TARGETOS
 ARG TARGETARCH
 ARG TARGETVARIANT
-# Build gitea; version metadata comes from build args, not a .git bind mount
+# Build branchspire; version metadata comes from build args, not a .git bind mount
 RUN --mount=type=cache,target="/root/.cache/go-build" \
-    GOOS=${TARGETOS} GOARCH=${TARGETARCH} GOARM=${TARGETVARIANT#v} make gitea
+    GOOS=${TARGETOS} GOARCH=${TARGETARCH} GOARM=${TARGETVARIANT#v} make branchspire
 
 COPY docker/root /tmp/local
 
@@ -48,7 +48,7 @@ RUN chmod 755 /tmp/local/usr/bin/entrypoint \
               /tmp/local/etc/s6/gitea/* \
               /tmp/local/etc/s6/openssh/* \
               /tmp/local/etc/s6/.s6-svscan/* \
-              /go/src/gitea.dev/gitea
+              /go/src/gitea.dev/branchspire
 
 FROM docker.io/library/alpine:3.24 AS gitea
 
@@ -80,7 +80,7 @@ RUN addgroup \
   echo "git:*" | chpasswd -e
 
 COPY --from=build-env /tmp/local /
-COPY --from=build-env /go/src/gitea.dev/gitea /app/gitea/gitea
+COPY --from=build-env /go/src/gitea.dev/branchspire /app/gitea/branchspire
 
 ENV USER=git
 ENV GITEA_CUSTOM=/data/gitea

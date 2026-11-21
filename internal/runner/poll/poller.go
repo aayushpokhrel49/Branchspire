@@ -12,11 +12,11 @@ import (
 	"sync/atomic"
 	"time"
 
+	runnerv1 "gitea.dev/actionslib/runner/v1"
 	"gitea.dev/internal/runner/pkg/client"
 	"gitea.dev/internal/runner/pkg/config"
 	"gitea.dev/internal/runner/pkg/metrics"
 
-	runnerv1 "gitea.dev/actionslib/runner/v1"
 	log "github.com/sirupsen/logrus"
 )
 

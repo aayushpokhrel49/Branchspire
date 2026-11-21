@@ -7,7 +7,7 @@
 # It assumes that you place this script as gitea in /usr/local/bin
 #
 # And place the original in /usr/lib/gitea with working files in /data/gitea
-GITEA="/app/gitea/gitea"
+GITEA="/app/gitea/branchspire"
 WORK_DIR="/var/lib/gitea"
 APP_INI="/etc/gitea/app.ini"
 

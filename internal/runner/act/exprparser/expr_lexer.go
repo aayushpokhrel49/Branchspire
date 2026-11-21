@@ -148,10 +148,12 @@ func isAlnum(r rune) bool {
 	return isAlpha(r) || isNum(r)
 }
 
-const expectedPunctChars = "''', '}', '(', ')', '[', ']', '.', '!', '<', '>', '=', '&', '|', '*', ',', ' '"
-const expectedDigitChars = "'0'..'9'"
-const expectedAlphaChars = "'a'..'z', 'A'..'Z', '_'"
-const expectedAllChars = expectedAlphaChars + ", " + expectedDigitChars + ", " + expectedPunctChars
+const (
+	expectedPunctChars = "''', '}', '(', ')', '[', ']', '.', '!', '<', '>', '=', '&', '|', '*', ',', ' '"
+	expectedDigitChars = "'0'..'9'"
+	expectedAlphaChars = "'a'..'z', 'A'..'Z', '_'"
+	expectedAllChars   = expectedAlphaChars + ", " + expectedDigitChars + ", " + expectedPunctChars
+)
 
 // ExprLexer is a struct to lex expression syntax. To know the syntax, see
 // https://docs.github.com/en/actions/learn-github-actions/expressions
@@ -230,7 +232,7 @@ func (lex *ExprLexer) skipWhite() {
 	}
 }
 
-func (lex *ExprLexer) unexpected(r rune, where string, expected string) *Token {
+func (lex *ExprLexer) unexpected(r rune, where, expected string) *Token {
 	var what string
 	if r == scanner.EOF {
 		what = "EOF"

@@ -13,7 +13,8 @@ particular to BranchSpire.
 
 | Thing | Value |
 | --- | --- |
-| Binary and module path | `branchspire` |
+| Binary | `branchspire` |
+| Module path | `gitea.dev` |
 | Configuration directory | `custom/` (`custom/conf/app.ini`) |
 | Web UI and instance name | `BranchSpire` (`APP_NAME`) |
 | Built-in self-migration service | `BranchSpire` |
@@ -126,12 +127,19 @@ how `repo.migrate.branchspire.description` surfaced).
 
 BranchSpire bundles a workflow runner directly into the binary. On first
 start (or whenever the instance has zero runners), it automatically
-registers **"BranchSpire Runner (embedded)"** with the host-exec label
-`ubuntu-latest:host://-`. Jobs run as processes of the BranchSpire service
-account — no Docker, no separate registration, no runner process to manage.
+registers **"BranchSpire Runner (embedded)"** with host-exec labels derived
+from the server's OS. On Linux the defaults are `ubuntu-latest`,
+`ubuntu-24.04`, `ubuntu-22.04`, `linux`, `self-hosted` and the CPU
+architecture label (for example `X64`). A job is picked up when every label
+in its `runs-on` is advertised here. Steps run as processes of the BranchSpire
+service account — no Docker, no separate registration, no runner process to
+manage.
 
 - Configuration: `[actions] EMBEDDED_RUNNER = true` (default). Set to
   `false` and restart to disable.
+- Custom labels: `[actions] EMBEDDED_RUNNER_LABELS = linux,self-hosted,X64`.
+  Labels are refreshed on restart. Keep them truthful for the host OS: steps
+  execute directly on the server, not in a matching container.
 - The runner only activates when `CountRunners() == 0`. If you register an
   external runner (Docker, Kubernetes, remote), the embedded runner stays
   inactive — no conflict.
