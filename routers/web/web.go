@@ -713,6 +713,7 @@ func registerWebRoutes(m *web.Router, webAuth *AuthMiddleware) {
 			addWebhookAddRoutes()
 			m.Group("/{id}", func() {
 				m.Get("", repo_setting.WebHooksEdit)
+				m.Get("/history", repo_setting.WebhookHistory)
 				m.Post("/replay/{uuid}", repo_setting.ReplayWebhook)
 			})
 			addWebhookEditRoutes()
@@ -835,6 +836,7 @@ func registerWebRoutes(m *web.Router, webAuth *AuthMiddleware) {
 			m.Post("/delete", admin.DeleteDefaultOrSystemWebhook)
 			m.Group("/{id}", func() {
 				m.Get("", repo_setting.WebHooksEdit)
+				m.Get("/history", repo_setting.WebhookHistory)
 				m.Post("/replay/{uuid}", repo_setting.ReplayWebhook)
 			})
 			addWebhookEditRoutes()
@@ -1013,6 +1015,7 @@ func registerWebRoutes(m *web.Router, webAuth *AuthMiddleware) {
 					addWebhookAddRoutes()
 					m.Group("/{id}", func() {
 						m.Get("", repo_setting.WebHooksEdit)
+						m.Get("/history", repo_setting.WebhookHistory)
 						m.Post("/replay/{uuid}", repo_setting.ReplayWebhook)
 					})
 					addWebhookEditRoutes()
@@ -1211,6 +1214,7 @@ func registerWebRoutes(m *web.Router, webAuth *AuthMiddleware) {
 			addWebhookAddRoutes()
 			m.Group("/{id}", func() {
 				m.Get("", repo_setting.WebHooksEdit)
+				m.Get("/history", repo_setting.WebhookHistory)
 				m.Post("/test", repo_setting.TestWebhook)
 				m.Post("/replay/{uuid}", repo_setting.ReplayWebhook)
 			})
@@ -1638,7 +1642,7 @@ func registerWebRoutes(m *web.Router, webAuth *AuthMiddleware) {
 				m.Get("/{sha:[a-f0-9]{7,64}}", repo.SetEditorconfigIfExists, repo.SetDiffViewStyle, repo.SetWhitespaceBehavior, repo.SetShowOutdatedComments, repo.ViewPullFilesForSingleCommit)
 			})
 			m.Post("/merge", context.RepoMustNotBeArchived(), web.Bind[*forms.MergePullRequestForm](), repo.MergePullRequest)
-			m.Post("/cancel_auto_merge", context.RepoMustNotBeArchived(), repo.CancelAutoMergePullRequest)
+			m.Post("/cancel_auto_merge", reqSignIn, context.RepoMustNotBeArchived(), repo.CancelAutoMergePullRequest)
 			m.Post("/update", repo.UpdatePullRequest)
 			m.Post("/set_allow_maintainer_edit", web.Bind[*forms.UpdateAllowEditsForm](), repo.SetAllowEdits)
 			m.Post("/cleanup", context.RepoMustNotBeArchived(), repo.CleanUpPullRequest)
@@ -1778,6 +1782,7 @@ func registerWebRoutes(m *web.Router, webAuth *AuthMiddleware) {
 			m.Any("/mail-preview", devtest.MailPreview)
 			m.Any("/mail-preview/*", devtest.MailPreviewRender)
 			m.Any("/mail-preview-embed/*", devtest.MailPreviewEmbed)
+			m.Get("/pull-merge-box", repo.DevtestPullMergeBox)
 			m.Any("/{sub}", devtest.TmplCommon)
 			m.Get("/repo-action-view/runs/{run}", devtest.MockActionsView)
 			m.Get("/repo-action-view/artifacts/{artifact_name}/preview", devtest.MockActionsArtifactPreview)

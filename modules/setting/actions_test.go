@@ -213,8 +213,8 @@ DEFAULT_ACTIONS_URL = gitea
 func Test_ScopedWorkflowDirs(t *testing.T) {
 	defer test.MockVariableValue(&Actions)()
 
-	defaultWorkflowDirs := []string{".gitea/workflows", ".github/workflows"}
-	defaultScopedDirs := []string{".gitea/scoped_workflows"}
+	defaultWorkflowDirs := []string{".branchspire/workflows", ".github/workflows"}
+	defaultScopedDirs := []string{".branchspire/scoped_workflows"}
 
 	tests := []struct {
 		name       string

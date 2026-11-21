@@ -15,7 +15,7 @@ import (
 
 func TestJobWorkflowFile_LocalCallsInheritCallerRefs(t *testing.T) {
 	require.NoError(t, unittest.PrepareTestDatabase())
-	chain := buildCallerChain(t, "./.gitea/workflows/a.yml", "user2/repo1/.gitea/workflows/b.yml@master", "./.gitea/workflows/c.yml")
+	chain := buildCallerChain(t, "./.branchspire/workflows/a.yml", "user2/repo1/.branchspire/workflows/b.yml@master", "./.branchspire/workflows/c.yml")
 	chain[1].ReusableWorkflowRef = "refs/heads/master"
 	for _, job := range chain[1:] {
 		job.WorkflowSourceRepoID, job.WorkflowSourceCommitSHA = 1, "lib-sha"
@@ -26,9 +26,9 @@ func TestJobWorkflowFile_LocalCallsInheritCallerRefs(t *testing.T) {
 
 	file, err := jobWorkflowFile(t.Context(), chain[1], root)
 	require.NoError(t, err)
-	assert.Equal(t, "user2/repo1/.gitea/workflows/a.yml@refs/heads/main", file.String())
+	assert.Equal(t, "user2/repo1/.branchspire/workflows/a.yml@refs/heads/main", file.String())
 
 	file, err = jobWorkflowFile(t.Context(), &actions_model.ActionRunJob{RunID: chain[2].RunID, ParentJobID: chain[2].ID, WorkflowSourceRepoID: 1, WorkflowSourceCommitSHA: "lib-sha"}, root)
 	require.NoError(t, err)
-	assert.Equal(t, workflowFile{repo: "user2/repo1", path: ".gitea/workflows/c.yml", ref: "refs/heads/master", sha: "lib-sha"}, file)
+	assert.Equal(t, workflowFile{repo: "user2/repo1", path: ".branchspire/workflows/c.yml", ref: "refs/heads/master", sha: "lib-sha"}, file)
 }
