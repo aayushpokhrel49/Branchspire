@@ -3732,6 +3732,7 @@
   "admin.config.actions_enabled": "Enabled",
   "admin.config.actions_embedded_runner": "Embedded Runner",
   "admin.config.actions_embedded_runner_desc": "When enabled and no external runners exist, a built-in BranchSpire Runner runs workflows in host mode. No Docker or extra setup required. Disable to rely solely on external runners.",
+  "admin.config.actions_embedded_runner_labels": "Embedded Runner Labels",
   "admin.config.actions_workflow_dirs": "Workflow Directories",
   "admin.config.actions_default_actions_url": "Default Actions URL",
   "admin.config.log_config": "Log Configuration",

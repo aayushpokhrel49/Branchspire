@@ -5,6 +5,7 @@ package setting
 
 import (
 	"path/filepath"
+	"runtime"
 	"slices"
 	"testing"
 
@@ -275,5 +276,40 @@ func Test_ScopedWorkflowDirs(t *testing.T) {
 			require.NoError(t, err)
 			assert.Equal(t, tt.wantScoped, Actions.ScopedWorkflowDirs)
 		})
+	}
+}
+
+func Test_EmbeddedRunnerLabels(t *testing.T) {
+	old := slices.Clone(Actions.EmbeddedRunnerLabels)
+	t.Cleanup(func() { Actions.EmbeddedRunnerLabels = old })
+
+	assert.Equal(t, []string{"ubuntu-latest", "linux", "X64"},
+		normalizeEmbeddedRunnerLabels([]string{" ubuntu-latest ", "ubuntu-latest:host://-", "", "linux", "X64", "LINUX"}))
+
+	defaults := defaultEmbeddedRunnerLabels()
+	assert.Contains(t, defaults, "self-hosted")
+	if arch := embeddedRunnerArchLabel(); arch != "" {
+		assert.Contains(t, defaults, arch)
+	}
+	switch runtime.GOOS {
+	case "linux":
+		assert.Contains(t, defaults, "ubuntu-latest")
+	case "windows":
+		assert.Contains(t, defaults, "windows-latest")
+	case "darwin":
+		assert.Contains(t, defaults, "macos-latest")
+	}
+
+	for _, tc := range []struct {
+		iniStr string
+		want   []string
+	}{
+		{"[actions]\nEMBEDDED_RUNNER_LABELS =", defaults},
+		{"[actions]\nEMBEDDED_RUNNER_LABELS = linux, self-hosted, X64", []string{"linux", "self-hosted", "X64"}},
+	} {
+		cfg, err := NewConfigProviderFromData(tc.iniStr)
+		require.NoError(t, err)
+		require.NoError(t, loadActionsFrom(cfg))
+		assert.Equal(t, tc.want, Actions.EmbeddedRunnerLabels)
 	}
 }

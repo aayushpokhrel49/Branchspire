@@ -6,6 +6,7 @@ package setting
 import (
 	"errors"
 	"fmt"
+	"runtime"
 	"strings"
 	"time"
 
@@ -20,6 +21,60 @@ const (
 	defaultLogRetentionDays       = 365
 	defaultRunRetentionDays       = 400
 )
+
+// defaultEmbeddedRunnerLabels matches the common hosted-runner labels for the
+// server's OS, plus generic labels that always describe a self-hosted host.
+func defaultEmbeddedRunnerLabels() []string {
+	labels := []string{"self-hosted"}
+	switch runtime.GOOS {
+	case "linux":
+		labels = append([]string{"ubuntu-latest", "ubuntu-24.04", "ubuntu-22.04", "linux"}, labels...)
+	case "windows":
+		labels = append([]string{"windows-latest", "windows-2022", "windows"}, labels...)
+	case "darwin":
+		labels = append([]string{"macos-latest", "macos-14", "macos"}, labels...)
+	default:
+		labels = append([]string{runtime.GOOS}, labels...)
+	}
+	if arch := embeddedRunnerArchLabel(); arch != "" {
+		labels = append(labels, arch)
+	}
+	return labels
+}
+
+func embeddedRunnerArchLabel() string {
+	switch runtime.GOARCH {
+	case "amd64":
+		return "X64"
+	case "arm64":
+		return "ARM64"
+	case "386":
+		return "X86"
+	default:
+		return ""
+	}
+}
+
+// normalizeEmbeddedRunnerLabels keeps label names, drops executor suffixes
+// such as ":host://-", and removes empty or duplicate entries.
+func normalizeEmbeddedRunnerLabels(labels []string) []string {
+	normalized := make([]string, 0, len(labels))
+	seen := make(map[string]bool, len(labels))
+	for _, label := range labels {
+		name, _, _ := strings.Cut(label, ":")
+		name = strings.TrimSpace(name)
+		if name == "" {
+			continue
+		}
+		key := strings.ToLower(name)
+		if seen[key] {
+			continue
+		}
+		seen[key] = true
+		normalized = append(normalized, name)
+	}
+	return normalized
+}
 
 // Actions settings
 var (
@@ -50,9 +105,13 @@ var (
 		// instance has no runners, so operators with external runners are
 		// unaffected unless they explicitly enable it.
 		EmbeddedRunner bool `ini:"EMBEDDED_RUNNER"`
+		// EmbeddedRunnerLabels are the runs-on labels the embedded runner
+		// advertises. Defaults to labels for the host OS and architecture.
+		EmbeddedRunnerLabels []string `ini:"EMBEDDED_RUNNER_LABELS"`
 	}{
 		Enabled:                true,
 		EmbeddedRunner:         true,
+		EmbeddedRunnerLabels:   defaultEmbeddedRunnerLabels(),
 		DefaultActionsURL:      defaultActionsURLGitHub,
 		SkipWorkflowStrings:    []string{"[skip ci]", "[ci skip]", "[no ci]", "[skip actions]", "[actions skip]"},
 		WorkflowDirs:           []string{".branchspire/workflows", ".github/workflows"},
@@ -108,6 +167,11 @@ func loadActionsFrom(rootCfg ConfigProvider) error {
 	err := sec.MapTo(&Actions)
 	if err != nil {
 		return fmt.Errorf("failed to map Actions settings: %v", err)
+	}
+
+	Actions.EmbeddedRunnerLabels = normalizeEmbeddedRunnerLabels(Actions.EmbeddedRunnerLabels)
+	if len(Actions.EmbeddedRunnerLabels) == 0 {
+		Actions.EmbeddedRunnerLabels = defaultEmbeddedRunnerLabels()
 	}
 
 	if urls := string(Actions.DefaultActionsURL); urls != defaultActionsURLGitHub && urls != defaultActionsURLSelf {

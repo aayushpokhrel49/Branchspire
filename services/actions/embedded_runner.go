@@ -9,6 +9,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"slices"
 	"time"
 
 	runner_client "gitea.dev/internal/runner/pkg/client"
@@ -37,9 +38,29 @@ func runnerRegistrationFile() string {
 
 const embeddedRunnerName = "BranchSpire Runner (embedded)"
 
-// embeddedRunnerLabels declares host execution: jobs run as processes of the
-// BranchSpire service account, no Docker is required.
-const embeddedRunnerLabels = "ubuntu-latest:host://-"
+// embeddedRunnerLabelSpecs declares host execution for every configured label:
+// jobs run as processes of the BranchSpire service account, no Docker required.
+func embeddedRunnerLabelSpecs() []string {
+	names := setting.Actions.EmbeddedRunnerLabels
+	specs := make([]string, 0, len(names))
+	for _, name := range names {
+		specs = append(specs, name+":host://-")
+	}
+	return specs
+}
+
+func parseEmbeddedRunnerLabels() (runner_labels.Labels, error) {
+	specs := embeddedRunnerLabelSpecs()
+	ls := make(runner_labels.Labels, 0, len(specs))
+	for _, spec := range specs {
+		label, err := runner_labels.Parse(spec)
+		if err != nil {
+			return nil, fmt.Errorf("parse embedded runner label %q: %w", spec, err)
+		}
+		ls = append(ls, label)
+	}
+	return ls, nil
+}
 
 var errEmbeddedRunnerSkipped = errors.New("runners are already registered")
 
@@ -122,8 +143,21 @@ func (l *embeddedRunnerLifecycle) Cancel() {
 func loadOrCreateEmbeddedRunnerRegistration() (*runner_config.Registration, error) {
 	ctx := context.Background()
 	regFile := runnerRegistrationFile()
+	names := slices.Clone(setting.Actions.EmbeddedRunnerLabels)
+	specs := embeddedRunnerLabelSpecs()
 	if reg, err := runner_config.LoadRegistration(regFile); err == nil {
-		if _, err := actions_model.GetRunnerByUUID(ctx, reg.UUID); err == nil {
+		if runner, err := actions_model.GetRunnerByUUID(ctx, reg.UUID); err == nil {
+			if !slices.Equal(reg.Labels, specs) || !slices.Equal(runner.AgentLabels, names) {
+				runner.AgentLabels = names
+				if err := actions_model.UpdateRunner(ctx, runner, "agent_labels"); err != nil {
+					return nil, fmt.Errorf("update embedded runner labels: %w", err)
+				}
+				reg.Labels = specs
+				if err := runner_config.SaveRegistration(regFile, reg); err != nil {
+					return nil, fmt.Errorf("save runner registration file: %w", err)
+				}
+				log.Info("%s labels refreshed: %v", embeddedRunnerName, names)
+			}
 			return reg, nil
 		}
 		// The database was reset after the registration file was written, so
@@ -145,7 +179,7 @@ func loadOrCreateEmbeddedRunnerRegistration() (*runner_config.Registration, erro
 		UUID:        uuid.New().String(),
 		Name:        embeddedRunnerName,
 		Version:     "embedded",
-		AgentLabels: []string{"ubuntu-latest"},
+		AgentLabels: names,
 	}
 	runner.GenerateAndFillToken()
 	if err := actions_model.CreateRunner(ctx, runner); err != nil {
@@ -158,7 +192,7 @@ func loadOrCreateEmbeddedRunnerRegistration() (*runner_config.Registration, erro
 		Name:    runner.Name,
 		Token:   runner.Token,
 		Address: setting.AppURL,
-		Labels:  runner.AgentLabels,
+		Labels:  specs,
 	}
 	if err := os.MkdirAll(filepath.Dir(regFile), os.ModePerm); err != nil {
 		return nil, fmt.Errorf("create runner data directory: %w", err)
@@ -179,9 +213,9 @@ func embeddedRunnerConfig(reg *runner_config.Registration) (*runner_config.Confi
 	cfg.Host.WorkdirParent = filepath.Join(setting.AppDataPath, "runner", "workdir")
 	cfg.Cache.Dir = filepath.Join(setting.AppDataPath, "runner", "cache")
 
-	ls, err := runner_labels.Parse(embeddedRunnerLabels)
+	ls, err := parseEmbeddedRunnerLabels()
 	if err != nil {
-		return nil, nil, fmt.Errorf("parse embedded runner label: %w", err)
+		return nil, nil, err
 	}
-	return cfg, runner_labels.Labels{ls}, nil
+	return cfg, ls, nil
 }
