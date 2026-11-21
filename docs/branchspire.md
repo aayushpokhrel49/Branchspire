@@ -13,7 +13,8 @@ particular to BranchSpire.
 
 | Thing | Value |
 | --- | --- |
-| Binary and module path | `branchspire` |
+| Binary | `branchspire` |
+| Module path | `gitea.dev` |
 | Configuration directory | `custom/` (`custom/conf/app.ini`) |
 | Web UI and instance name | `BranchSpire` (`APP_NAME`) |
 | Built-in self-migration service | `BranchSpire` |

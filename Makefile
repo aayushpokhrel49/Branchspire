@@ -52,9 +52,9 @@ else ifeq ($(patsubst Windows%,Windows,$(OS)),Windows)
 endif
 
 ifeq ($(IS_WINDOWS),yes)
-	EXECUTABLE ?= gitea.exe
+	EXECUTABLE ?= branchspire.exe
 else
-	EXECUTABLE ?= gitea
+	EXECUTABLE ?= branchspire
 endif
 
 # EXTRA_GOFLAGS is for the 'go build' command only
@@ -637,10 +637,10 @@ generate-codemirror-languages: | node_modules ## generate codemirror languages
 
 .PHONY: generate-manpage
 generate-manpage: ## generate manpage
-	@[ -f gitea ] || make backend
+	@[ -f $(EXECUTABLE) ] || make backend
 	@mkdir -p man/man1/ man/man5
-	@./gitea docs --man > man/man1/gitea.1
-	@gzip -9 man/man1/gitea.1 && echo man/man1/gitea.1.gz created
+	@./$(EXECUTABLE) docs --man > man/man1/branchspire.1
+	@gzip -9 man/man1/branchspire.1 && echo man/man1/branchspire.1.gz created
 	@#TODO A small script that formats config-cheat-sheet.en-us.md nicely for use as a config man page
 
 # Disable parallel execution because it would break some targets that don't
