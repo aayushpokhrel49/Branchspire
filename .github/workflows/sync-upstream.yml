@@ -1,0 +1,75 @@
+name: sync-upstream
+
+on:
+  schedule:
+    - cron: "0 6 * * 1" # Mondays 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: sync-upstream
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: identify the merge author
+        run: |
+          git config user.name "branchspire-sync-bot[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: fetch upstream
+        run: |
+          git remote add upstream https://github.com/go-gitea/gitea.git
+          git fetch upstream main --no-tags
+
+      - name: merge upstream/main into main
+        id: merge
+        run: |
+          if ! git merge upstream/main --no-edit; then
+            # policy: .github/workflows holds only container.yml, so upstream
+            # workflow churn is deleted outright, anything else needs a human
+            git diff --name-only --diff-filter=U | grep '^\.github/workflows/' | while read -r f; do git rm -q "$f"; done
+            if git diff --name-only --diff-filter=U | grep -q .; then
+              echo "::error::Upstream merge conflicts needing manual resolution:"
+              git diff --name-only --diff-filter=U
+              exit 1
+            fi
+            git commit --no-edit
+          fi
+          count="$(git rev-list --count HEAD^1..HEAD^2 2>/dev/null || echo 0)"
+          if [ "$count" = "0" ]; then
+            echo "no new upstream commits, nothing to do"
+            exit 0
+          fi
+          echo "count=$count" >> "$GITHUB_OUTPUT"
+
+      - name: push sync branch
+        if: steps.merge.outputs.count != '0'
+        run: git push --force-with-lease origin HEAD:refs/heads/sync/upstream
+
+      - name: open or refresh the PR
+        if: steps.merge.outputs.count != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          body="$(cat <<EOF
+          Automated weekly merge of [go-gitea/gitea@main](https://github.com/go-gitea/gitea) - ${{ steps.merge.outputs.count }} new commits.
+
+          Merging this triggers the container pipeline and publishes a fresh image. Review the diff for touchpoints with BranchSpire customizations (dashboard, login/signup pages, about page, locale strings).
+          EOF
+          )"
+          title="Sync upstream go-gitea/gitea@main"
+          if gh pr view sync/upstream --json state --jq .state 2>/dev/null | grep -q OPEN; then
+            gh pr edit sync/upstream --title "$title" --body "$body"
+          else
+            gh pr create --base main --head sync/upstream --title "$title" --body "$body"
+          fi
