@@ -13,7 +13,6 @@ import (
 	"strings"
 
 	"gitea.dev/internal/runner/act/model"
-
 )
 
 type EvaluationEnvironment struct {

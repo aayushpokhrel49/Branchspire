@@ -51,8 +51,8 @@ var (
 		// unaffected unless they explicitly enable it.
 		EmbeddedRunner bool `ini:"EMBEDDED_RUNNER"`
 	}{
-		Enabled:        true,
-		EmbeddedRunner: true,
+		Enabled:                true,
+		EmbeddedRunner:         true,
 		DefaultActionsURL:      defaultActionsURLGitHub,
 		SkipWorkflowStrings:    []string{"[skip ci]", "[ci skip]", "[no ci]", "[skip actions]", "[actions skip]"},
 		WorkflowDirs:           []string{".branchspire/workflows", ".github/workflows"},

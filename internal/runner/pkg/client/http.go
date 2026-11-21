@@ -12,6 +12,7 @@ import (
 
 	"gitea.dev/actionslib/ping/v1/pingv1connect"
 	"gitea.dev/actionslib/runner/v1/runnerv1connect"
+
 	"connectrpc.com/connect/v2"
 	"connectrpc.com/connect/v2/connecthttp"
 )

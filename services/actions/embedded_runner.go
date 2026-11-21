@@ -11,12 +11,12 @@ import (
 	"path/filepath"
 	"time"
 
-	actions_model "gitea.dev/models/actions"
 	runner_client "gitea.dev/internal/runner/pkg/client"
 	runner_config "gitea.dev/internal/runner/pkg/config"
 	runner_labels "gitea.dev/internal/runner/pkg/labels"
 	runner_poll "gitea.dev/internal/runner/poll"
 	runner_run "gitea.dev/internal/runner/run"
+	actions_model "gitea.dev/models/actions"
 	"gitea.dev/modules/graceful"
 	"gitea.dev/modules/log"
 	"gitea.dev/modules/setting"

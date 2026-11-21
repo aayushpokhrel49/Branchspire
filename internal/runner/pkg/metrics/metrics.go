@@ -8,6 +8,7 @@ import (
 	"time"
 
 	runnerv1 "gitea.dev/actionslib/runner/v1"
+
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/collectors"
 )

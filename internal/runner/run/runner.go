@@ -20,6 +20,7 @@ import (
 	"sync/atomic"
 	"time"
 
+	runnerv1 "gitea.dev/actionslib/runner/v1"
 	"gitea.dev/internal/runner/act/artifactcache"
 	"gitea.dev/internal/runner/act/common"
 	"gitea.dev/internal/runner/act/model"
@@ -31,7 +32,6 @@ import (
 	"gitea.dev/internal/runner/pkg/report"
 	"gitea.dev/internal/runner/pkg/ver"
 
-	runnerv1 "gitea.dev/actionslib/runner/v1"
 	"github.com/moby/moby/api/types/container"
 	log "github.com/sirupsen/logrus"
 )

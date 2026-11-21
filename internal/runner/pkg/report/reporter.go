@@ -13,12 +13,12 @@ import (
 	"sync/atomic"
 	"time"
 
+	runnerv1 "gitea.dev/actionslib/runner/v1"
 	"gitea.dev/internal/runner/act/runner"
 	"gitea.dev/internal/runner/pkg/client"
 	"gitea.dev/internal/runner/pkg/config"
 	"gitea.dev/internal/runner/pkg/metrics"
 
-	runnerv1 "gitea.dev/actionslib/runner/v1"
 	"github.com/avast/retry-go/v5"
 	log "github.com/sirupsen/logrus"
 	"google.golang.org/protobuf/proto"
