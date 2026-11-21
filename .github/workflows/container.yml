@@ -63,4 +63,5 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           push: ${{ github.event_name != 'pull_request' }}
           cache-from: type=gha
-          cache-to: type=gha,mode=max
+          # PR tokens are read-only; only push events may write the Actions cache
+          cache-to: ${{ github.event_name != 'pull_request' && 'type=gha,mode=max' || '' }}
