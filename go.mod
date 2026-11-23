@@ -9,7 +9,7 @@ require (
 	dario.cat/mergo v1.0.0
 	gitea.com/lunny/dingtalk_webhook v0.0.0-20171025031554-e3534c89ef96
 	gitea.com/lunny/levelqueue v0.5.1
-	gitea.dev/actionslib v1.6.0
+	gitea.dev/actionslib v1.7.0
 	gitea.dev/sdk v1.5.1
 	github.com/42wim/httpsig v1.3.0
 	github.com/42wim/sshsig v0.0.0-20260317195500-b9f38cf0d432
